@@ -1,0 +1,1173 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`tool-schemas > tool count > should report the exact count for documentation purposes 1`] = `69`;
+
+exports[`tool-schemas > tool inventory > lists all registered tool names 1`] = `
+[
+  "add_navigation_tab",
+  "add_visit_engagement_sidebar_item",
+  "assign_permission_set",
+  "assign_presentation_content",
+  "audit_mobile_config",
+  "bulk_create_records",
+  "bulk_update_records",
+  "check_account_config",
+  "check_activity_plan_config",
+  "check_briefings_config",
+  "check_lsc_setup",
+  "check_mobile_cache_status",
+  "check_sample_config",
+  "check_territory_config",
+  "check_user_config",
+  "check_visit_config",
+  "create_admin_setting",
+  "create_custom_action",
+  "create_db_schema",
+  "create_quick_action",
+  "create_record",
+  "delete_lsc_action",
+  "delete_record",
+  "deploy_metadata",
+  "describe_sobject",
+  "diagnose_lsc_issue",
+  "diff_orgs",
+  "distribute_presentation",
+  "explain_lsc_concept",
+  "export_config",
+  "generate_mobile_metadata_cache",
+  "get_db_schema",
+  "get_lsc_admin_setup",
+  "get_lsc_exercise",
+  "get_lsc_guide",
+  "get_lsc_help_doc",
+  "get_lsc_module_docs",
+  "get_lsc_troubleshooting",
+  "get_org_status",
+  "get_record",
+  "get_release_notes",
+  "health_check",
+  "import_config",
+  "install_sf_cli",
+  "list_admin_settings",
+  "list_db_schema",
+  "list_lsc_actions",
+  "list_lsc_help_docs",
+  "list_lsc_modules",
+  "list_navigation_tabs",
+  "list_permission_sets",
+  "list_sf_orgs",
+  "list_trigger_handlers",
+  "list_users",
+  "list_validation_groups",
+  "open_org",
+  "retrieve_metadata",
+  "run_apex",
+  "run_soql",
+  "search_lsc_knowledge",
+  "set_target_org",
+  "toggle_db_schema",
+  "toggle_trigger_handler",
+  "unassign_permission_set",
+  "update_admin_setting",
+  "update_db_schema",
+  "update_lsc_action",
+  "update_record",
+  "upload_presentation",
+]
+`;
+
+exports[`tool-schemas > tool schema snapshot > should match the snapshot of all tool names and their parameter shapes 1`] = `
+[
+  {
+    "name": "list_lsc_modules",
+    "params": {},
+  },
+  {
+    "name": "get_lsc_module_docs",
+    "params": {
+      "module": {
+        "optional": false,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "search_lsc_knowledge",
+    "params": {
+      "maxResults": {
+        "optional": true,
+        "type": "ZodNumber",
+      },
+      "query": {
+        "optional": false,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "explain_lsc_concept",
+    "params": {
+      "concept": {
+        "optional": false,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "get_lsc_admin_setup",
+    "params": {
+      "feature": {
+        "optional": false,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "list_lsc_help_docs",
+    "params": {},
+  },
+  {
+    "name": "get_lsc_help_doc",
+    "params": {
+      "slug": {
+        "optional": false,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "get_lsc_guide",
+    "params": {
+      "slug": {
+        "optional": false,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "get_lsc_troubleshooting",
+    "params": {
+      "topic": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "get_lsc_exercise",
+    "params": {
+      "slug": {
+        "optional": false,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "check_lsc_setup",
+    "params": {},
+  },
+  {
+    "name": "install_sf_cli",
+    "params": {},
+  },
+  {
+    "name": "list_sf_orgs",
+    "params": {},
+  },
+  {
+    "name": "set_target_org",
+    "params": {
+      "org": {
+        "optional": false,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "open_org",
+    "params": {
+      "path": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "run_soql",
+    "params": {
+      "query": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "describe_sobject",
+    "params": {
+      "objectName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "get_record",
+    "params": {
+      "fields": {
+        "optional": false,
+        "type": "ZodArray",
+      },
+      "objectName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "recordId": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "create_record",
+    "params": {
+      "objectName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "values": {
+        "optional": false,
+        "type": "ZodRecord",
+      },
+    },
+  },
+  {
+    "name": "update_record",
+    "params": {
+      "objectName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "recordId": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "values": {
+        "optional": false,
+        "type": "ZodRecord",
+      },
+    },
+  },
+  {
+    "name": "delete_record",
+    "params": {
+      "objectName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "recordId": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "generate_mobile_metadata_cache",
+    "params": {
+      "apiVersion": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "prefix": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "profileNames": {
+        "optional": false,
+        "type": "ZodArray",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "list_lsc_actions",
+    "params": {
+      "actionType": {
+        "optional": true,
+        "type": "ZodEnum",
+      },
+      "activeOnly": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "delete_lsc_action",
+    "params": {
+      "actionId": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "actionName": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "update_lsc_action",
+    "params": {
+      "actionId": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "fieldValues": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "isActive": {
+        "optional": true,
+        "type": "ZodBoolean",
+      },
+      "label": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "create_quick_action",
+    "params": {
+      "actionName": {
+        "optional": false,
+        "type": "ZodEnum",
+      },
+      "developerName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "isActive": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "label": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "location": {
+        "optional": false,
+        "type": "ZodEnum",
+      },
+      "profiles": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "sortOrder": {
+        "optional": false,
+        "type": "ZodNumber",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "create_custom_action",
+    "params": {
+      "actionTarget": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "actionType": {
+        "optional": false,
+        "type": "ZodEnum",
+      },
+      "developerName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "entityName": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "entityType": {
+        "optional": false,
+        "type": "ZodEnum",
+      },
+      "isActive": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "label": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "profiles": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "targetParameters": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "targetType": {
+        "optional": true,
+        "type": "ZodEnum",
+      },
+    },
+  },
+  {
+    "name": "check_mobile_cache_status",
+    "params": {
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "list_trigger_handlers",
+    "params": {
+      "objectName": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "toggle_trigger_handler",
+    "params": {
+      "active": {
+        "optional": false,
+        "type": "ZodBoolean",
+      },
+      "handlerName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "list_admin_settings",
+    "params": {
+      "category": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "update_admin_setting",
+    "params": {
+      "fieldValues": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "fields": {
+        "optional": true,
+        "type": "ZodRecord",
+      },
+      "recordId": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "create_admin_setting",
+    "params": {
+      "category": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "developerName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "fields": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "isActive": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "isOrgLevel": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "label": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "check_visit_config",
+    "params": {
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "check_sample_config",
+    "params": {
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "check_account_config",
+    "params": {
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "check_activity_plan_config",
+    "params": {
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "check_territory_config",
+    "params": {
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "check_user_config",
+    "params": {
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "add_visit_engagement_sidebar_item",
+    "params": {
+      "layoutName": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "objectName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "audit_mobile_config",
+    "params": {
+      "group": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "list_validation_groups",
+    "params": {},
+  },
+  {
+    "name": "diagnose_lsc_issue",
+    "params": {
+      "symptom": {
+        "optional": false,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "list_db_schema",
+    "params": {
+      "filter": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "get_db_schema",
+    "params": {
+      "name": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "create_db_schema",
+    "params": {
+      "attachmentsSupport": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "isActive": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "objectName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "oneWaySync": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "profiles": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "type": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "whereSoql": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "update_db_schema",
+    "params": {
+      "attachmentsSupport": {
+        "optional": true,
+        "type": "ZodEnum",
+      },
+      "deltaDateField": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "isActive": {
+        "optional": true,
+        "type": "ZodBoolean",
+      },
+      "mandatoryFields": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "name": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "oneWaySync": {
+        "optional": true,
+        "type": "ZodBoolean",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "whereSoql": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "toggle_db_schema",
+    "params": {
+      "active": {
+        "optional": false,
+        "type": "ZodBoolean",
+      },
+      "name": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "list_navigation_tabs",
+    "params": {
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "add_navigation_tab",
+    "params": {
+      "developerName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "isActive": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "label": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "profiles": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "tabName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "tabOrder": {
+        "optional": false,
+        "type": "ZodNumber",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "upload_presentation",
+    "params": {
+      "activationDate": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "conversionEngine": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "deactivationDate": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "enableDoubleTapZoom": {
+        "optional": true,
+        "type": "ZodBoolean",
+      },
+      "enablePinchZoom": {
+        "optional": true,
+        "type": "ZodBoolean",
+      },
+      "filePath": {
+        "optional": false,
+        "type": "ZodUnion",
+      },
+      "playerGesture": {
+        "optional": true,
+        "type": "ZodEnum",
+      },
+      "presentationId": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "presentationName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "sendByEmail": {
+        "optional": true,
+        "type": "ZodBoolean",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "topics": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+    },
+  },
+  {
+    "name": "distribute_presentation",
+    "params": {
+      "includeChildren": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "presentationId": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "presentationName": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "territoryIds": {
+        "optional": false,
+        "type": "ZodArray",
+      },
+    },
+  },
+  {
+    "name": "assign_presentation_content",
+    "params": {
+      "presentationId": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "presentationName": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "productIdForAllPages": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "products": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "topicIds": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "topicNames": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+    },
+  },
+  {
+    "name": "diff_orgs",
+    "params": {
+      "scope": {
+        "optional": true,
+        "type": "ZodEnum",
+      },
+      "sourceOrg": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": false,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "list_users",
+    "params": {
+      "filterBy": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "filterValue": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "list_permission_sets",
+    "params": {
+      "includeAllNamespaces": {
+        "optional": true,
+        "type": "ZodOptional",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "assign_permission_set",
+    "params": {
+      "permissionSetName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "userIds": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "usernames": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+    },
+  },
+  {
+    "name": "unassign_permission_set",
+    "params": {
+      "permissionSetName": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "userIds": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "usernames": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+    },
+  },
+  {
+    "name": "health_check",
+    "params": {
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "get_org_status",
+    "params": {
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "export_config",
+    "params": {
+      "categories": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "import_config",
+    "params": {
+      "configJson": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "dryRun": {
+        "optional": true,
+        "type": "ZodBoolean",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "get_release_notes",
+    "params": {
+      "release": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "run_apex",
+    "params": {
+      "code": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "bulk_create_records",
+    "params": {
+      "records": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "sobjectType": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "bulk_update_records",
+    "params": {
+      "records": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "sobjectType": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "deploy_metadata",
+    "params": {
+      "sourcePath": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "retrieve_metadata",
+    "params": {
+      "metadata": {
+        "optional": false,
+        "type": "ZodString",
+      },
+      "outputDir": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+  {
+    "name": "check_briefings_config",
+    "params": {
+      "targetOrg": {
+        "optional": true,
+        "type": "ZodString",
+      },
+      "username": {
+        "optional": true,
+        "type": "ZodString",
+      },
+    },
+  },
+]
+`;

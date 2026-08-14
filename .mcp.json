@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "afls": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/index.js"],
+      "cwd": "${CLAUDE_PLUGIN_ROOT}"
+    },
+    "salesforce-docs": {
+      "url": "https://salesforce-docs-76258744c9d7.herokuapp.com/api/mcp"
+    }
+  }
+}

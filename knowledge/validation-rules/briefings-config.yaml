@@ -1,0 +1,347 @@
+# Briefings (Daily Podcasts) Configuration Validation Rules
+# =========================================================
+# Rules for validating Briefings setup in an AFLS org.
+# Covers toggle, permissions, flows, content definitions, DB Schema, and mobile cache.
+
+schema_version: "1.0"
+category_name: "Briefings Configuration"
+description: |
+  Validation rules for Briefings (Daily Podcasts) configuration.
+  Covers feature toggle, permission sets, account summarization,
+  content definitions, scheduled flows, DB Schema records, and mobile cache.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Feature Toggle
+  # ===========================================================================
+
+  - id: briefings-001
+    name: Briefings toggle is enabled
+    description: |
+      When the Briefings toggle is ON, the PresentationContent object becomes
+      accessible. When OFF, all Briefings objects are inaccessible and Field
+      Insights flows don't appear. This is a prerequisite for all other checks.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM PresentationContent
+      expect: "count >= 0"
+    symptoms:
+      - "sObject type 'PresentationContent' is not supported"
+      - "Briefings icon not showing"
+      - "Field Insights flows missing"
+    resolution:
+      steps:
+        - "Navigate to Setup → Life Sciences for Customer Engagement Setup"
+        - "Scroll to 'Configure Briefings' section"
+        - "Toggle Briefings ON"
+      ui_path: "Setup > Life Sciences for Customer Engagement Setup > Configure Briefings"
+    tags: [briefings, toggle, configuration]
+
+  # ===========================================================================
+  # SECTION 2: Account Summarization
+  # ===========================================================================
+
+  - id: briefings-002
+    name: Account Summarization flow is active
+    description: |
+      The "Generate Provider Account Territory Summary" flow must be active.
+      Account Summarization is the data source for Briefings — without it,
+      no podcast text is generated.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM FlowDefinitionView
+        WHERE Label = 'Generate Provider Account Territory Summary'
+        AND ActiveVersionId != null
+      expect: "count > 0"
+    symptoms:
+      - "No briefings generated"
+      - "PresentationContent records empty"
+    resolution:
+      steps:
+        - "Navigate to Setup → Life Sciences for Customer Engagement Setup"
+        - "Go to Configure Account Summarization"
+        - "Enable the toggle and complete configuration"
+      ui_path: "Setup > Life Sciences for Customer Engagement Setup > Configure Account Summarization"
+    tags: [briefings, account-summarization, flow]
+
+  - id: briefings-003
+    name: Account summary records exist
+    description: |
+      PrvdAccountTerritorySummary records must exist, proving that
+      Account Summarization has run at least once.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM PrvdAccountTerritorySummary
+      expect: "count > 0"
+    symptoms:
+      - "No briefings generated"
+      - "PresentationContent records empty"
+    resolution:
+      steps:
+        - "Verify Account Summarization is configured and the flow has run"
+        - "Check Setup → Life Sciences for Customer Engagement Setup → Configure Account Summarization"
+    tags: [briefings, account-summarization, data]
+
+  # ===========================================================================
+  # SECTION 3: Content Definition & Assignments
+  # ===========================================================================
+
+  - id: briefings-004
+    name: Presentation Content Definition exists
+    description: |
+      A PrstContentDefinition record must exist. This is created via
+      Configure Briefings → Manage Assignments in Setup.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM PrstContentDefinition
+        WHERE IsActive = true
+      expect: "count > 0"
+    symptoms:
+      - "Briefings icon not showing"
+      - "No audio briefings"
+    resolution:
+      steps:
+        - "Navigate to Setup → Life Sciences for Customer Engagement Setup"
+        - "Scroll to Configure Briefings section"
+        - "Click Manage Assignments"
+        - "Select user profiles that should receive briefings"
+        - "Save"
+      ui_path: "Setup > Life Sciences for Customer Engagement Setup > Configure Briefings > Manage Assignments"
+    tags: [briefings, content-definition, configuration]
+
+  - id: briefings-005
+    name: Content Definition Assignments exist
+    description: |
+      At least one active PrstCntntDefAssignment must exist.
+      Profile assignments determine which users receive daily audio briefings.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM PrstCntntDefAssignment
+        WHERE IsActive = true
+      expect: "count > 0"
+    symptoms:
+      - "Briefings icon not showing for specific users"
+      - "No briefings generated for user"
+    resolution:
+      steps:
+        - "Navigate to Configure Briefings → Manage Assignments"
+        - "Add user profiles that should receive briefings"
+      ui_path: "Setup > Life Sciences for Customer Engagement Setup > Configure Briefings > Manage Assignments"
+    tags: [briefings, assignments, permissions]
+
+  # ===========================================================================
+  # SECTION 4: Scheduled Flows
+  # ===========================================================================
+
+  - id: briefings-006
+    name: Text generation flow is active
+    description: |
+      The "Generate Daily Briefings Text" flow must be active.
+      This is a managed package flow (ApiName: GenDailyBriefingsText) that appears
+      after the Briefings toggle is enabled.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM FlowDefinitionView
+        WHERE ApiName IN ('GenDailyBriefingsText', 'stories__GenDailyBriefingsText')
+        AND ActiveVersionId != null
+      expect: "count > 0"
+    symptoms:
+      - "No briefings generated"
+      - "PresentationContent records not created"
+    resolution:
+      steps:
+        - "This flow should be active automatically from the managed package"
+        - "If missing, verify the Briefings toggle is ON and the lsc4ce package is installed"
+    tags: [briefings, flow, managed-package]
+
+  - id: briefings-007
+    name: Scheduling flow template exists
+    description: |
+      The original scheduling flow template (ApiName: SchdDlyBriefingsOfPrvdAcct)
+      should exist from the managed package. The admin must clone it and activate
+      the clone with Daily frequency. The clone cannot be detected by name since
+      admins can use any label — pipeline outcome (PresentationContent records)
+      is used to verify the clone is running.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM FlowDefinitionView
+        WHERE ApiName IN ('SchdDlyBriefingsOfPrvdAcct', 'stories__SchdDlyBriefingsOfPrvdAcct')
+      expect: "count > 0"
+    symptoms:
+      - "No PresentationContent records generated"
+      - "Briefings flow not running"
+    resolution:
+      steps:
+        - "Navigate to Setup → Flows"
+        - "Open the scheduling flow template (ApiName: SchdDlyBriefingsOfPrvdAcct)"
+        - "Set start date/time (e.g., 6:00 AM) and frequency to Daily"
+        - "Click 'Save As New Flow' → enter a label → Save"
+        - "Activate the cloned flow"
+      ui_path: "Setup > Flows"
+    tags: [briefings, flow, scheduling]
+
+  # ===========================================================================
+  # SECTION 5: DB Schema Records
+  # ===========================================================================
+
+  - id: briefings-008
+    name: DbSchema PresentationContent exists and is active
+    description: |
+      The DbSchema_PresentationContent record must exist and be active
+      for the mobile app to sync briefing content.
+    category: metadata-cache
+    severity: error
+    check:
+      type: tooling_soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciConfigRecord
+        WHERE DeveloperName = 'DbSchema_PresentationContent'
+        AND IsActive = true
+      expect: "count > 0"
+    symptoms:
+      - "Briefings not appearing on iPad"
+      - "No briefing data after sync"
+    resolution:
+      steps:
+        - "Navigate to Admin Console → Mobile → Object Metadata Cache Configuration"
+        - "Create DbSchema_PresentationContent with Object = PresentationContent, Type = Data, Sync = Unidirectional"
+        - "Set WHERE clause for date and user filtering"
+        - "Regenerate metadata cache"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [briefings, db-schema, mobile]
+
+  - id: briefings-009
+    name: DbSchema PrstCntntUsageSummary exists and is active
+    description: |
+      The DbSchema_PrstCntntUsageSummary record must exist and be active
+      for tracking briefing playback on mobile.
+    category: metadata-cache
+    severity: error
+    check:
+      type: tooling_soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciConfigRecord
+        WHERE DeveloperName = 'DbSchema_PrstCntntUsageSummary'
+        AND IsActive = true
+      expect: "count > 0"
+    symptoms:
+      - "Briefings playback not tracked"
+      - "Usage summary not syncing"
+    resolution:
+      steps:
+        - "Navigate to Admin Console → Mobile → Object Metadata Cache Configuration"
+        - "Create DbSchema_PrstCntntUsageSummary with Object = PrstCntntUsageSummary, Type = Data, Sync = Bidirectional"
+        - "Regenerate metadata cache"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [briefings, db-schema, mobile]
+
+  - id: briefings-010
+    name: DbSchema PrstCntntDefAssignment exists and is active
+    description: |
+      The DbSchema_PrstCntntDefAssignment record must exist and be active
+      for mobile to know which profiles receive briefings.
+    category: metadata-cache
+    severity: error
+    check:
+      type: tooling_soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciConfigRecord
+        WHERE DeveloperName = 'DbSchema_PrstCntntDefAssignment'
+        AND IsActive = true
+      expect: "count > 0"
+    symptoms:
+      - "Briefings not appearing on iPad"
+      - "Profile assignments not syncing to mobile"
+    resolution:
+      steps:
+        - "Navigate to Admin Console → Mobile → Object Metadata Cache Configuration"
+        - "Create DbSchema_PrstCntntDefAssignment with Object = PrstCntntDefAssignment, Type = Configuration, Sync = Unidirectional"
+        - "Regenerate metadata cache"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [briefings, db-schema, mobile]
+
+  - id: briefings-011
+    name: DbSchema PrstContentDefinition exists and is active
+    description: |
+      The DbSchema_PrstContentDefinition record must exist and be active
+      for mobile to access content definition metadata.
+    category: metadata-cache
+    severity: error
+    check:
+      type: tooling_soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciConfigRecord
+        WHERE DeveloperName = 'DbSchema_PrstContentDefinition'
+        AND IsActive = true
+      expect: "count > 0"
+    symptoms:
+      - "Briefings not appearing on iPad"
+      - "Content definition not syncing to mobile"
+    resolution:
+      steps:
+        - "Navigate to Admin Console → Mobile → Object Metadata Cache Configuration"
+        - "Create DbSchema_PrstContentDefinition with Object = PrstContentDefinition, Type = Configuration, Sync = Bidirectional"
+        - "Regenerate metadata cache"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [briefings, db-schema, mobile]
+
+  # ===========================================================================
+  # SECTION 6: PresentationContent Read Access
+  # ===========================================================================
+
+  - id: briefings-012
+    name: PresentationContent read access granted
+    description: |
+      At least one permission set must grant read access to PresentationContent.
+      The Briefings icon requires BOTH profile in Content Definition Assignment
+      AND read access to PresentationContent.
+    category: permissions
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ObjectPermissions
+        WHERE SobjectType = 'PresentationContent'
+        AND PermissionsRead = true
+      expect: "count > 0"
+    symptoms:
+      - "Briefings icon not showing despite correct permission sets"
+    resolution:
+      steps:
+        - "Verify the user's permission set grants read access to PresentationContent"
+        - "The base AFLS permission sets (Commercial Admin, Field Sales Rep) grant this by default"
+        - "If using custom permission sets, add PresentationContent read access"
+    tags: [briefings, permissions, object-access]

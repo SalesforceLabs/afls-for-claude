@@ -1,0 +1,15 @@
+{
+  "name": "afls",
+  "description": "AFLS plugins for Claude Code",
+  "owner": {
+    "name": "Joe Ferraro"
+  },
+  "plugins": [
+    {
+      "name": "afls",
+      "source": ".",
+      "description": "AFLS for Customer Engagement - Knowledge, guidance, and Salesforce org tools for AFLS implementations",
+      "version": "0.1.0"
+    }
+  ]
+}

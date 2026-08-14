@@ -1,0 +1,375 @@
+# AFLS Key Account Management (KAM) Configuration Validation Rules
+# ===================================================================
+# Rules to validate KAM configuration including goal definition templates,
+# action plan templates, account plans, objectives, stakeholders,
+# assessment tasks, and mobile cache.
+#
+# Verified object names:
+#   - KamAccountPlan (standard)
+#   - KamAccountPlanObjective (standard)
+#   - KamAccountPlanStakeholder (standard)
+#   - KamAccountPlanParticipant (standard)
+#   - GoalDefinition (standard)
+#   - ActionPlanTemplate (standard)
+#   - ActionPlanTemplateAssignment (standard)
+#   - AssessmentTask (standard)
+#   - LifeSciMobileMetadataRecord (standard)
+
+schema_version: "1.0"
+category_name: "Key Account Management Configuration"
+description: |
+  Validation rules for AFLS Key Account Management (KAM) configuration.
+  Covers goal definition templates, action plan templates, account plans,
+  objectives, stakeholders, participants, assessment tasks, and mobile cache requirements.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Goal Definition Templates
+  # ===========================================================================
+
+  - id: kam-001
+    name: GoalDefinition templates exist for account plans
+    description: |
+      Verifies that at least one GoalDefinition template exists with the correct
+      configuration for use in Key Account Management. GoalDefinition templates must have
+      Type='Affiliate', Status='Active', and Category='Library' to be importable into
+      account plans. Without templates, key account managers cannot import pre-configured
+      objectives into account plans, requiring all objectives to be created manually.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM GoalDefinition
+        WHERE Type = 'Affiliate'
+        AND Status = 'Active'
+        AND Category = 'Library'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Type, Status, Category, Description
+        FROM GoalDefinition
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "No templates available when clicking Import Template"
+      - "GoalDefinition not appearing in account plan import dialog"
+      - "Cannot import objectives into account plans"
+      - "All objectives must be created manually"
+    resolution:
+      steps:
+        - "Navigate to App Launcher > Goal Definitions"
+        - "Click New to create a goal definition template"
+        - "Set Type = Affiliate (REQUIRED for KAM templates)"
+        - "Set Status = Active"
+        - "Set Category = Library"
+        - "Enter descriptive Name and Description"
+        - "Optionally link to Products for filtering"
+        - "Save the record"
+      ui_path: "App Launcher > Goal Definitions"
+    tags: [kam, configuration, template, goal-definition]
+
+  # ===========================================================================
+  # SECTION 2: Action Plan Templates
+  # ===========================================================================
+
+  - id: kam-002
+    name: ActionPlanTemplate records exist for account plans
+    description: |
+      Verifies that at least one ActionPlanTemplate exists with Type='Key Account Management'
+      and TargetObjectiveType='Account Plan Objective'. Action plan templates define the tactics
+      and assessment tasks that can be imported into account plan objectives. Without templates,
+      key account managers must manually create all action plans and tasks, significantly
+      increasing implementation time and reducing standardization.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ActionPlanTemplate
+        WHERE Type = 'Key Account Management'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Type, TargetObjectiveType, AllowAddingItems
+        FROM ActionPlanTemplate
+        WHERE Type = 'Key Account Management'
+        ORDER BY Name
+        LIMIT 10
+    symptoms:
+      - "No action plan templates available when importing"
+      - "ActionPlanTemplate not appearing in import dialog"
+      - "Cannot import tactics into account plan objectives"
+      - "All action plans must be created manually"
+    resolution:
+      steps:
+        - "Navigate to App Launcher > Action Plan Templates"
+        - "Click New to create an action plan template"
+        - "Set Type = Key Account Management (REQUIRED)"
+        - "Set Target Objective = Account Plan Objective (REQUIRED)"
+        - "Enable 'Allow users to add items' if KAMs should add custom tasks"
+        - "Add assessment task templates to the template"
+        - "Save the record"
+        - "Link to GoalDefinitions via ActionPlanTemplateAssignment"
+      ui_path: "App Launcher > Action Plan Templates"
+    tags: [kam, configuration, template, action-plan]
+
+  # ===========================================================================
+  # SECTION 3: Account Plans
+  # ===========================================================================
+
+  - id: kam-003
+    name: KamAccountPlan records exist
+    description: |
+      Checks whether KamAccountPlan records exist in the org. This indicates whether
+      key account managers have started creating account plans. If no account plans exist,
+      this could indicate that KAM is not yet in use, templates are missing, or users
+      need training on creating account plans. This is a warning-level check as absence
+      of plans may be expected during initial setup or pilot phases.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM KamAccountPlan
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, AccountId, Account.Name, Status, OwnerId, Owner.Name, CreatedDate
+        FROM KamAccountPlan
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "No account plans visible in AFLS4CE app"
+      - "Account Plans tab is empty"
+      - "KAM features not being used"
+    resolution:
+      steps:
+        - "Navigate to AFLS4CE App > Account Plans"
+        - "Click New to create an account plan"
+        - "Enter Name and select Account"
+        - "Enter Account Vision, SWOT Analysis, Customer Landscape"
+        - "Save the record"
+        - "Import templates to add objectives and action plans"
+      ui_path: "AFLS4CE App > Account Plans"
+    tags: [kam, configuration, account-plan]
+
+  # ===========================================================================
+  # SECTION 4: Account Plan Objectives
+  # ===========================================================================
+
+  - id: kam-004
+    name: KamAccountPlanObjective records exist
+    description: |
+      Checks whether KamAccountPlanObjective records exist. Objectives are the first level
+      of the KAM hierarchy (Objectives > Action Plans > Tasks). If account plans exist but
+      no objectives exist, this indicates that plans may be incomplete or templates have not
+      been imported. This is a warning-level check as empty plans may exist during setup.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM KamAccountPlanObjective
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, KamAccountPlanId, KamAccountPlan.Name, Status, CompletionPercentage
+        FROM KamAccountPlanObjective
+        ORDER BY KamAccountPlanId, Name
+        LIMIT 10
+    symptoms:
+      - "Account plan objectives section is empty"
+      - "Cannot import templates into account plan"
+      - "No objectives showing in account plan"
+    resolution:
+      steps:
+        - "Open an existing KamAccountPlan record"
+        - "Navigate to Account Plan Objectives related list"
+        - "Click Import Template to import from GoalDefinitions"
+        - "Or click New to manually create an objective"
+        - "Fill in Name, Status, and other fields"
+        - "Save the record"
+      ui_path: "Account Plan > Account Plan Objectives > Import Template or New"
+    tags: [kam, configuration, objective]
+
+  # ===========================================================================
+  # SECTION 5: Account Plan Stakeholders
+  # ===========================================================================
+
+  - id: kam-005
+    name: KamAccountPlanStakeholder records exist
+    description: |
+      Checks whether KamAccountPlanStakeholder records exist. Stakeholders represent
+      the key decision-makers, influencers, and contacts at the account. If no stakeholders
+      exist, account plans may be incomplete or users may need guidance on stakeholder
+      management. This is an info-level check as stakeholder data may take time to populate.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM KamAccountPlanStakeholder
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, KamAccountPlanId, KamAccountPlan.Name, AccountId, Account.Name, ContactId, Contact.Name, Role, InfluenceLevel
+        FROM KamAccountPlanStakeholder
+        ORDER BY KamAccountPlanId, Account.Name
+        LIMIT 10
+    symptoms:
+      - "No stakeholders showing in account plan"
+      - "Stakeholder section is empty"
+      - "Cannot see key decision-makers in account plan"
+    resolution:
+      steps:
+        - "Open an existing KamAccountPlan record"
+        - "Navigate to Account Plan Stakeholders related list"
+        - "Click New to manually add stakeholders"
+        - "Search for existing Accounts (HCPs/HCOs) or Contacts"
+        - "Define Role and Influence Level (High/Medium/Low)"
+        - "Or click Import Stakeholders to import from previous plans"
+        - "Save the record"
+      ui_path: "Account Plan > Account Plan Stakeholders > New or Import Stakeholders"
+    tags: [kam, configuration, stakeholder]
+
+  # ===========================================================================
+  # SECTION 6: Assessment Tasks
+  # ===========================================================================
+
+  - id: kam-006
+    name: AssessmentTask records exist for KAM action plans
+    description: |
+      Checks whether AssessmentTask records exist for Key Account Management action plans.
+      Assessment tasks are the third level of the KAM hierarchy (Objectives > Action Plans > Tasks).
+      Tasks represent specific to-dos that can be assigned to users and visits. If no tasks exist,
+      action plans may be incomplete or templates may not include tasks. This is an info-level check
+      as task population may occur gradually during plan execution.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM AssessmentTask
+        WHERE ActionPlan.Type = 'Key Account Management'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, ActionPlanId, ActionPlan.Name, Status, DueDate, AssignedToId, AssignedTo.Name, VisitId
+        FROM AssessmentTask
+        WHERE ActionPlan.Type = 'Key Account Management'
+        ORDER BY DueDate, ActionPlan.Name
+        LIMIT 10
+    symptoms:
+      - "No tasks showing in action plans"
+      - "Assessment tasks section is empty"
+      - "Cannot assign tasks to users or visits"
+      - "Tasks not appearing in calendar"
+    resolution:
+      steps:
+        - "Open an existing action plan within an account plan"
+        - "Navigate to Assessment Tasks related list"
+        - "Click Add Assessment Task to create a new task"
+        - "Or click Import Assessment Task to import from templates"
+        - "Enter Name, Due Date, and Assigned To"
+        - "Optionally link to Visit record for integrated tracking"
+        - "Save the record"
+      ui_path: "Action Plan > Assessment Tasks > Add Assessment Task or Import"
+    tags: [kam, configuration, assessment-task]
+
+  # ===========================================================================
+  # SECTION 7: Mobile Metadata Cache for KAM
+  # ===========================================================================
+
+  - id: kam-007
+    name: Mobile metadata cache active for KAM objects
+    description: |
+      Verifies that mobile metadata cache is active. Key Account Management on mobile
+      requires an active metadata cache that includes KamAccountPlan, KamAccountPlanObjective,
+      KamAccountPlanStakeholder, KamAccountPlanParticipant, GoalDefinition, ActionPlanTemplate,
+      and AssessmentTask objects. Without active cache, KAM data will not sync to mobile devices
+      and key account managers will not be able to manage account plans on iPad.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Account plans not syncing to mobile"
+      - "KAM features not available on iPad"
+      - "Cannot import templates on mobile"
+      - "Stakeholders not showing on mobile"
+      - "Device sync transaction record was not found"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify the following objects are included in DB Schema:"
+        - "  - KamAccountPlan"
+        - "  - KamAccountPlanObjective"
+        - "  - KamAccountPlanStakeholder"
+        - "  - KamAccountPlanParticipant"
+        - "  - GoalDefinition"
+        - "  - ActionPlanTemplate"
+        - "  - AssessmentTask"
+        - "  - Account, Contact, Visit (supporting objects)"
+        - "Regenerate metadata cache for affected profiles"
+        - "Have users sync their mobile devices"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [kam, mobile, cache]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  kam-config-check:
+    name: "KAM Configuration Check"
+    description: "Full KAM configuration check - templates, account plans, objectives, stakeholders, tasks, and cache"
+    rules:
+      - kam-001
+      - kam-002
+      - kam-003
+      - kam-004
+      - kam-005
+      - kam-006
+      - kam-007
+
+  kam-templates:
+    name: "KAM Templates Check"
+    description: "Verify that goal definition and action plan templates are configured"
+    rules:
+      - kam-001
+      - kam-002
+
+  kam-plans:
+    name: "KAM Plans Check"
+    description: "Verify that account plans, objectives, stakeholders, and tasks exist"
+    rules:
+      - kam-003
+      - kam-004
+      - kam-005
+      - kam-006
+
+  kam-mobile:
+    name: "KAM Mobile Check"
+    description: "Mobile-specific KAM checks - metadata cache and sync requirements"
+    rules:
+      - kam-007
+
+  pre-deployment-kam:
+    name: "Pre-Deployment KAM Check"
+    description: "Run before deploying KAM to users - all critical checks"
+    rules:
+      - kam-001
+      - kam-002
+      - kam-007

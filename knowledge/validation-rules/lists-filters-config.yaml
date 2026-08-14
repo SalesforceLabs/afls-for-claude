@@ -1,0 +1,270 @@
+# AFLS Lists & Filters Configuration Validation Rules
+# ===================================================
+# Rules to validate Lists & Filters configuration including
+# account data, territory info, record types, addresses,
+# and mobile cache.
+#
+# Verified object names:
+#   - Account (standard)
+#   - ProviderAcctTerritoryInfo (standard)
+#   - TerritoryAccountScore (standard)
+#   - RecordType (standard Salesforce)
+#   - ContactPointAddress (standard)
+#   - LifeSciMobileMetadataRecord (standard)
+
+schema_version: "1.0"
+category_name: "Lists & Filters Configuration"
+description: |
+  Validation rules for AFLS Lists & Filters configuration.
+  Covers account data, territory info, record types, addresses
+  for map view, and mobile cache requirements.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Account Data
+  # ===========================================================================
+
+  - id: lists-001
+    name: Account records exist in the org
+    description: |
+      Verifies that Account records exist. Account lists cannot function
+      without accounts to display. This is a fundamental requirement for
+      Lists & Filters functionality. Without accounts, users will see
+      empty lists, and all filtering capabilities will be non-functional.
+    category: data
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Account
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, RecordTypeId, IsPersonAccount
+        FROM Account
+        LIMIT 10
+    symptoms:
+      - "Account lists are empty"
+      - "No accounts available to filter"
+      - "All Aligned Accounts shows no results"
+      - "Search returns no accounts"
+    resolution:
+      steps:
+        - "Import account data using Data Import Wizard or Data Loader"
+        - "Ensure accounts are assigned to territories if using territory-based lists"
+        - "Verify user has sharing access to accounts"
+        - "Check that accounts have required fields populated"
+      ui_path: "Setup > Data Import Wizard or Setup > Data Loader"
+    tags: [lists, data, accounts]
+
+  # ===========================================================================
+  # SECTION 2: Territory Info for List Views
+  # ===========================================================================
+
+  - id: lists-002
+    name: ProviderAcctTerritoryInfo records exist for list views
+    description: |
+      Checks whether ProviderAcctTerritoryInfo records exist. This object
+      is the primary data source for account lists in AFLS. It contains
+      territory-level account tracking including visit counts, last visit
+      dates, and next visit dates. Without these records, account lists
+      will not display properly, and territory-based filtering will not work.
+      ProviderAcctTerritoryInfo records are created automatically when accounts
+      are assigned to territories.
+    category: data
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ProviderAcctTerritoryInfo
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, AccountId, Account.Name, Territory2Id, Territory2.Name,
+               LastProviderVisitDate, NextProviderVisitDate
+        FROM ProviderAcctTerritoryInfo
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "All Aligned Accounts list is empty"
+      - "Account list not showing territory-aligned accounts"
+      - "Visit counts not displaying on accounts"
+      - "Territory filters not working"
+    resolution:
+      steps:
+        - "Verify accounts are assigned to territories via Territory2"
+        - "Check that territory assignment is active"
+        - "Run territory alignment job if using Territory Management"
+        - "Verify ProviderAcctTerritoryInfo records are being created by triggers"
+        - "Check that user is assigned to a territory"
+      ui_path: "Setup > Territory Management or Admin Console > Territory Alignment"
+    tags: [lists, territory, data]
+
+  # ===========================================================================
+  # SECTION 3: Record Type Configuration
+  # ===========================================================================
+
+  - id: lists-003
+    name: Account record types configured for filtering
+    description: |
+      Verifies that active Account record types exist. Record types allow
+      users to filter accounts by type (e.g., HCP, HCO, Institution) and
+      enable different page layouts and processes per account type.
+      While not strictly required for basic list functionality, record types
+      are commonly used for filtering and segmentation. Admin can also
+      configure list column settings per record type.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, DeveloperName, IsActive
+        FROM RecordType
+        WHERE SobjectType = 'Account'
+        AND IsActive = true
+      expect: "records.length > 0"
+    symptoms:
+      - "Cannot filter accounts by type"
+      - "All accounts showing same page layout"
+      - "Record type filter not available"
+      - "Account List configuration by record type not working"
+    resolution:
+      steps:
+        - "Navigate to Setup > Object Manager > Account > Record Types"
+        - "Create record types for different account types (HCP, HCO, etc.)"
+        - "Assign record types to user profiles"
+        - "Configure account list settings per record type if needed"
+        - "Test filtering by record type in account list"
+      ui_path: "Setup > Object Manager > Account > Record Types"
+    tags: [lists, configuration, record-type]
+
+  # ===========================================================================
+  # SECTION 4: Map View Support
+  # ===========================================================================
+
+  - id: lists-004
+    name: ContactPointAddress records exist for map view
+    description: |
+      Checks whether ContactPointAddress records exist. These records
+      provide address and geolocation data for the map view feature in
+      account lists. ContactPointAddress is displayed in Column 1 of
+      account lists and enables map-based visualization. Without these
+      records, map view will not function, and address information will
+      not display in account lists. This is informational as map view
+      is an optional feature.
+    category: data
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ContactPointAddress
+        WHERE ParentId != null
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, ParentId, Name, Street, City, State, PostalCode,
+               Latitude, Longitude
+        FROM ContactPointAddress
+        WHERE ParentId != null
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Map view not showing accounts"
+      - "Address not displaying in Column 1 of account list"
+      - "Cannot visualize accounts by location"
+      - "Map view shows empty map"
+    resolution:
+      steps:
+        - "Import address data using Data Import Wizard or Data Loader"
+        - "Ensure ContactPointAddress records are linked to Account via ParentId"
+        - "Populate Latitude and Longitude fields for map view functionality"
+        - "Enable Map View in Admin Console > Account Management"
+        - "Verify ContactPointAddress is included in mobile DB schema"
+      ui_path: "Setup > Data Import Wizard or Admin Console > Account Management"
+    tags: [lists, map-view, data, address]
+
+  # ===========================================================================
+  # SECTION 5: Mobile Metadata Cache for Lists & Filters
+  # ===========================================================================
+
+  - id: lists-005
+    name: Mobile metadata cache active for list objects
+    description: |
+      Verifies that mobile metadata cache is active. Lists & Filters on mobile
+      requires an active metadata cache that includes Account, ProviderAcctTerritoryInfo,
+      ContactPointAddress, TerritoryAccountScore (for NBC), and related objects.
+      Without active cache, account lists will not sync to mobile devices, and
+      filtering, sorting, and bulk actions will not work offline. Users will
+      see sync errors and empty lists on iPad.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Account lists not syncing to mobile"
+      - "Empty account list on iPad"
+      - "Filter not working on mobile"
+      - "Device sync transaction record was not found"
+      - "Account data not available offline"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify required objects are included in DB Schema:"
+        - "  - Account"
+        - "  - ProviderAcctTerritoryInfo (REQUIRED)"
+        - "  - ContactPointAddress (for map view and Column 1)"
+        - "  - TerritoryAccountScore (for NBC filter)"
+        - "  - ProviderAcctProductInfo (for product filtering)"
+        - "  - HealthcareProvider (for provider fields)"
+        - "Regenerate metadata cache for affected profiles"
+        - "Have users sync their mobile devices"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [lists, mobile, cache]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  lists-filters-config-check:
+    name: "Lists & Filters Configuration Check"
+    description: "Full Lists & Filters configuration check - account data, territory info, record types, addresses, and cache"
+    rules:
+      - lists-001
+      - lists-002
+      - lists-003
+      - lists-004
+      - lists-005
+
+  lists-filters-core:
+    name: "Lists & Filters Core Data Check"
+    description: "Core data checks - accounts and territory info required for basic list functionality"
+    rules:
+      - lists-001
+      - lists-002
+
+  lists-filters-mobile:
+    name: "Lists & Filters Mobile Check"
+    description: "Mobile-specific checks - metadata cache and required objects for iPad functionality"
+    rules:
+      - lists-005
+
+  pre-deployment-lists-filters:
+    name: "Pre-Deployment Lists & Filters Check"
+    description: "Run before deploying Lists & Filters to users - all critical checks"
+    rules:
+      - lists-001
+      - lists-002
+      - lists-003
+      - lists-005

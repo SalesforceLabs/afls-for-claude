@@ -1,0 +1,354 @@
+# AFLS Sample Management Configuration Validation Rules
+# ====================================================
+# Rules validate sample inventory, production batches, sample limits,
+# and related configuration to prevent common issues.
+#
+# CORRECT object names used in queries:
+#   - Product2 (standard Salesforce)
+#   - LifeSciMarketableProduct (AFLS standard)
+#   - Location (standard Salesforce)
+#   - ProductionBatch (AFLS standard)
+#   - ProductItem (standard Salesforce)
+#   - ProductBatchItem (AFLS standard)
+#   - ProviderSampleLimit (AFLS standard)
+#   - LifeSciMobileMetadataRecord (AFLS standard)
+
+schema_version: "1.0"
+category_name: "Sample Management Configuration"
+description: |
+  Validation rules for AFLS Sample Management configuration.
+  Covers product setup, inventory locations, production batches,
+  inventory initialization, sample limits, and mobile cache.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Product Setup
+  # ===========================================================================
+
+  - id: sample-001
+    name: Sample products exist
+    description: |
+      Verifies that Product2 records exist with an active status.
+      Sample products are the foundation of all sample management
+      operations. Without products, no inventory or sample drops
+      can be configured.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Product2
+        WHERE IsActive = true
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, ProductCode, IsActive, RecordType.Name
+        FROM Product2
+        ORDER BY Name
+        LIMIT 20
+    symptoms:
+      - "No products available for sample drops"
+      - "Cannot create inventory operations"
+      - "Product list is empty"
+    resolution:
+      steps:
+        - "Navigate to Setup > Object Manager > Product2"
+        - "Create Product records with the record type mapped to LS Sample Product Specification Type"
+        - "Ensure products are set to Active"
+        - "Create corresponding LifeSciMarketableProduct records"
+      ui_path: "Setup > Object Manager > Product2"
+    tags: [sample, inventory, products]
+
+  - id: sample-002
+    name: Marketable product records exist
+    description: |
+      Verifies that LifeSciMarketableProduct records exist. These
+      wrapper records define distribution methods (Drop, Drop and Ship)
+      and are required for products to appear in sample management UIs.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMarketableProduct
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, ProductId, Product.Name
+        FROM LifeSciMarketableProduct
+        ORDER BY Name
+        LIMIT 20
+    symptoms:
+      - "Products not appearing in sample drop UI"
+      - "Cannot select products for disbursement"
+      - "Product list empty during visit"
+    resolution:
+      steps:
+        - "Navigate to LifeSciMarketableProduct object"
+        - "Create records for each sample product"
+        - "Set distribution method to 'Drop' or 'Drop and Ship'"
+        - "Link to the corresponding Product2 record"
+      ui_path: "Admin Console > Sample Management"
+    tags: [sample, inventory, products]
+
+  # ===========================================================================
+  # SECTION 2: Inventory Setup
+  # ===========================================================================
+
+  - id: sample-003
+    name: User inventory locations exist
+    description: |
+      Verifies that Location records with type 'User Inventory' exist.
+      Each sales rep needs a User Inventory location to hold their
+      sample inventory. Without locations, inventory operations fail.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Location
+        WHERE LocationType = 'User Inventory'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, LocationType, PrimaryUserId, PrimaryUser.Name
+        FROM Location
+        WHERE LocationType = 'User Inventory'
+        LIMIT 20
+    symptoms:
+      - "Cannot perform inventory operations"
+      - "No inventory location found for user"
+      - "Inventory transfer fails"
+    resolution:
+      steps:
+        - "Create Location records with LocationType = 'User Inventory'"
+        - "Assign a Primary User to each location (one per rep)"
+        - "Verify the PrimaryUserId field is populated"
+      ui_path: "Setup > Object Manager > Location"
+    tags: [sample, inventory, locations]
+
+  - id: sample-004
+    name: Active production batches exist
+    description: |
+      Verifies that active, non-expired ProductionBatch records exist.
+      Production batches represent lot numbers with expiration dates.
+      Expired or missing batches prevent sample drops and inventory
+      operations.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, ExpirationDate, IsActive
+        FROM ProductionBatch
+        WHERE IsActive = true
+        ORDER BY ExpirationDate
+        LIMIT 20
+      expect: "records.length > 0"
+    symptoms:
+      - "No active batches available"
+      - "Cannot select batch for sample drop"
+      - "All batches expired"
+    resolution:
+      steps:
+        - "Create new ProductionBatch records with future expiration dates"
+        - "Set UniqueIdentificationNumber (lot number)"
+        - "Set UOM to 'Each' for sample products"
+        - "Ensure IsActive = true"
+        - "Create ProductBatchItem records linking batches to inventory locations"
+      ui_path: "Setup > Object Manager > ProductionBatch"
+    tags: [sample, inventory, batches]
+
+  - id: sample-005
+    name: Product inventory initialized
+    description: |
+      Verifies that ProductItem records exist, indicating that inventory
+      has been initialized. ProductItem records track quantity-on-hand
+      per product per location. Without them, reps have no inventory.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ProductItem
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Product2Id, Product2.Name, QuantityOnHand, Location.Name
+        FROM ProductItem
+        ORDER BY Product2.Name
+        LIMIT 20
+    symptoms:
+      - "Rep inventory shows zero for all products"
+      - "No inventory available"
+      - "ProductItem records not found"
+    resolution:
+      steps:
+        - "Create ProductItem records (one per location-product pair)"
+        - "Set initial QuantityOnHand to 0"
+        - "Use InventoryOperation (Transfer In) to set actual quantities"
+        - "Follow data setup chain: Product2 > LifeSciMarketableProduct > Location > ProductionBatch > ProductItem"
+      ui_path: "Admin Console > Sample Management"
+    tags: [sample, inventory, initialization]
+
+  - id: sample-006
+    name: Product batch item allocations exist
+    description: |
+      Verifies that active ProductBatchItem records exist. These records
+      link production batches to inventory locations and track remaining
+      quantities per batch. Without them, batch-level tracking fails.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ProductBatchItem
+        WHERE IsActive = true
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, ProductItemId, ProductionBatchId, ProductionBatch.Name, RemainingQuantity, IsActive
+        FROM ProductBatchItem
+        WHERE IsActive = true
+        LIMIT 20
+    symptoms:
+      - "Batch information not showing in inventory"
+      - "Cannot select batch for sample operation"
+      - "Remaining quantity not tracking"
+    resolution:
+      steps:
+        - "Create ProductBatchItem records linking ProductionBatch to ProductItem"
+        - "Set RemainingQuantity to the allocated amount"
+        - "Ensure the linked ProductionBatch is active and not expired"
+        - "Ensure the linked ProductItem exists"
+      ui_path: "Admin Console > Sample Management"
+    tags: [sample, inventory, batches]
+
+  # ===========================================================================
+  # SECTION 3: Sample Limits
+  # ===========================================================================
+
+  - id: sample-007
+    name: Sample limit records exist
+    description: |
+      Checks whether ProviderSampleLimit records exist. Sample limits
+      enforce PDMA compliance rules. This is informational - limits
+      are optional but recommended for regulatory compliance.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ProviderSampleLimit
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, AccountId, Account.Name, ProductId, Product.Name
+        FROM ProviderSampleLimit
+        ORDER BY Account.Name
+        LIMIT 20
+    symptoms:
+      - "Sample limits not enforced"
+      - "Reps can distribute unlimited samples"
+      - "PDMA compliance not configured"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Sample Limits"
+        - "Create ProviderSampleLimit records per account and product"
+        - "Set enforcement type (Error = blocking, Warning = non-blocking)"
+        - "Set period type (Rolling Start, Fixed Start, Date Range, Calendar Year)"
+        - "Configure TerritoryProductQtyAllocation for territory-level limits if needed"
+      ui_path: "Admin Console > Sample Limits"
+    tags: [sample, limits, compliance]
+
+  # ===========================================================================
+  # SECTION 4: Mobile Cache
+  # ===========================================================================
+
+  - id: sample-008
+    name: Mobile metadata cache active for sample objects
+    description: |
+      Verifies that an active mobile metadata cache exists. Sample
+      management on mobile requires metadata cache to include sample
+      objects (ProductItem, ProductBatchItem, InventoryOperation,
+      ProductDisbursement, etc.).
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Sample management not available on mobile"
+      - "Cannot view inventory on iPad"
+      - "Sample drop not working on mobile"
+      - "Device sync transaction record was not found"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify sample objects are included in DB Schema configuration"
+        - "Generate or regenerate metadata cache for affected profiles"
+        - "Verify cache status is Active or Published"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [sample, mobile, cache]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+
+groups:
+  sample-config-check:
+    name: "Full Sample Configuration Check"
+    description: "Comprehensive check of all sample management configuration"
+    rules:
+      - sample-001
+      - sample-002
+      - sample-003
+      - sample-004
+      - sample-005
+      - sample-006
+      - sample-007
+      - sample-008
+
+  sample-inventory-check:
+    name: "Sample Inventory Check"
+    description: "Validate inventory-specific configuration (products, locations, batches, items)"
+    rules:
+      - sample-001
+      - sample-002
+      - sample-003
+      - sample-004
+      - sample-005
+      - sample-006
+
+  sample-limits-check:
+    name: "Sample Limits Check"
+    description: "Validate sample limits and PDMA compliance configuration"
+    rules:
+      - sample-007
+
+  sample-mobile:
+    name: "Sample Mobile Check"
+    description: "Validate mobile configuration for sample management"
+    rules:
+      - sample-008
+
+  pre-deployment-sample:
+    name: "Pre-Deployment Sample Check"
+    description: "Run before go-live to verify sample management readiness"
+    rules:
+      - sample-001
+      - sample-002
+      - sample-003
+      - sample-004
+      - sample-005
+      - sample-006
+      - sample-008

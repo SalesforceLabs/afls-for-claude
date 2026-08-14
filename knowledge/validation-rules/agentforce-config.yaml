@@ -1,0 +1,483 @@
+# AFLS Agentforce Configuration Validation Rules
+# ===================================================
+# Rules to validate Agentforce for AFLS configuration
+# including agent definitions, topics, actions, plugins, and data context.
+#
+# Verified object names:
+#   - BotDefinition (standard)
+#   - BotVersion (standard)
+#   - mlDomain (standard - agent topics)
+#   - GenAiFunction (standard - agent actions)
+#   - GenAiPlugin (standard - agent plugins)
+#   - AIApplication (standard)
+#   - Account (standard - PersonAccount for HCPs)
+#   - Visit (standard)
+#   - ProviderVisit (standard)
+#   - Product2 (standard)
+#   - ProviderAcctTerritoryInfo (standard)
+#
+# Note: Agentforce is a Winter '26 feature. Some objects may not be
+# queryable in preview environments or orgs without Agentforce enabled.
+
+schema_version: "1.0"
+category_name: "Agentforce Configuration"
+description: |
+  Validation rules for AFLS Agentforce configuration.
+  Covers agent definitions, bot versions, topics (mlDomain), actions (GenAiFunction),
+  plugins, and underlying AFLS data model required for agent functionality.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Agent Definitions (BotDefinition)
+  # ===========================================================================
+
+  - id: agentforce-001
+    name: Life Sciences Field Sales Agent exists
+    description: |
+      Verifies that at least one BotDefinition record exists for Life Sciences.
+      The Life Sciences Field Sales Agent is the primary out-of-the-box agent
+      for field sales reps. Without an agent definition, Agentforce functionality
+      will not be available. This agent provides daily briefings, HCP summarization,
+      next best action predictions, and voice-based visit logging.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM BotDefinition
+        WHERE DeveloperName LIKE '%LifeSciences%'
+        OR MasterLabel LIKE '%Life Sciences%'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, DeveloperName, MasterLabel, Description, IsActive
+        FROM BotDefinition
+        WHERE IsActive = true
+    symptoms:
+      - "Agentforce not available in org"
+      - "Cannot access Life Sciences Field Sales Agent"
+      - "Agent Builder shows no agents"
+      - "User cannot find Agentforce chat interface"
+    resolution:
+      steps:
+        - "Navigate to Setup > Einstein Setup Assistant"
+        - "Enable Agentforce (may require license activation)"
+        - "Navigate to Setup > Agent Builder"
+        - "Install 'Life Sciences Field Sales Agent' from AppExchange or package"
+        - "Verify agent is Active"
+        - "Assign 'Agentforce User' permission set to field reps"
+      ui_path: "Setup > Agent Builder"
+    tags: [agentforce, configuration, agent-definition]
+
+  - id: agentforce-002
+    name: Agent definition is active
+    description: |
+      Checks that at least one BotDefinition record is marked as Active.
+      An inactive agent will not respond to user utterances. This is a common
+      issue after initial installation when the agent needs to be activated
+      manually in Agent Builder.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM BotDefinition
+        WHERE IsActive = true
+        AND (DeveloperName LIKE '%LifeSciences%' OR MasterLabel LIKE '%Life Sciences%')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, DeveloperName, MasterLabel, IsActive
+        FROM BotDefinition
+    symptoms:
+      - "Agent not responding to utterances"
+      - "Agentforce chat interface shows 'Agent unavailable'"
+      - "User gets no response from agent"
+    resolution:
+      steps:
+        - "Navigate to Setup > Agent Builder"
+        - "Select the Life Sciences Field Sales Agent"
+        - "Click 'Activate' to enable the agent"
+        - "Verify Active Status is checked"
+      ui_path: "Setup > Agent Builder > [Agent Name] > Activate"
+    tags: [agentforce, configuration, agent-definition]
+
+  # ===========================================================================
+  # SECTION 2: Bot Versions (BotVersion)
+  # ===========================================================================
+
+  - id: agentforce-003
+    name: Active bot version exists
+    description: |
+      Verifies that at least one BotVersion record with Active status exists.
+      Bot versions represent different iterations of the agent configuration.
+      Users interact with the active version. If no active version exists,
+      the agent will not function even if the BotDefinition is active.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM BotVersion
+        WHERE Status = 'Active'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, BotDefinitionId, VersionNumber, Status, Description, LastModifiedDate
+        FROM BotVersion
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Agent not responding despite being active"
+      - "Changes to agent not taking effect"
+      - "Agent shows old configuration"
+    resolution:
+      steps:
+        - "Navigate to Setup > Agent Builder > [Agent Name]"
+        - "Review Bot Versions section"
+        - "If no active version, click 'Activate' on the latest version"
+        - "If multiple active versions exist, deactivate old versions"
+      ui_path: "Setup > Agent Builder > [Agent Name] > Versions"
+    tags: [agentforce, configuration, bot-version]
+
+  # ===========================================================================
+  # SECTION 3: Agent Topics (mlDomain)
+  # ===========================================================================
+
+  - id: agentforce-004
+    name: Agent topics exist for Life Sciences
+    description: |
+      Checks whether mlDomain records exist for Life Sciences agent topics.
+      Topics classify user utterances and route them to appropriate actions.
+      Without topics, the agent cannot understand user intent. Pre-built topics
+      include Daily Briefing, HCP Summarization, Next Best Action, Visit Logging.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM mlDomain
+        WHERE DeveloperName LIKE '%LifeSciences%'
+        OR Label LIKE '%Life Sciences%'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Label, DeveloperName, ActionGroupId
+        FROM mlDomain
+        WHERE DeveloperName LIKE '%LifeSciences%'
+        OR Label LIKE '%Life Sciences%'
+        ORDER BY Label
+    symptoms:
+      - "Agent does not respond to any utterances"
+      - "All user inputs result in 'I don't understand'"
+      - "Agent Builder shows no topics"
+    resolution:
+      steps:
+        - "Navigate to Setup > Agent Builder > [Agent Name] > Topics"
+        - "Verify pre-built topics are present (Daily Briefing, HCP Summarization, etc.)"
+        - "If topics are missing, reinstall the Life Sciences Field Sales Agent package"
+        - "Add custom topics as needed for organization-specific scenarios"
+      ui_path: "Setup > Agent Builder > [Agent Name] > Topics"
+    tags: [agentforce, configuration, topics]
+
+  # ===========================================================================
+  # SECTION 4: Agent Actions (GenAiFunction)
+  # ===========================================================================
+
+  - id: agentforce-005
+    name: Agent actions exist in lsc4ce namespace
+    description: |
+      Verifies that GenAiFunction records exist in the lsc4ce namespace.
+      Agent actions are Apex classes, Flows, or Prompt Templates that perform
+      work for the agent. Pre-built actions include Generate Complete Daily Briefing,
+      NBA Prediction, Visit Logging Orchestrator, HCP Summary. Without actions,
+      topics cannot execute and the agent cannot perform any tasks.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM GenAiFunction
+        WHERE NamespacePrefix = 'lsc4ce'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Type, NamespacePrefix, DeveloperName
+        FROM GenAiFunction
+        WHERE NamespacePrefix = 'lsc4ce'
+        ORDER BY Name
+    symptoms:
+      - "Agent responds but says 'I cannot complete that action'"
+      - "Topic classification works but action fails"
+      - "Agent actions timeout or error"
+    resolution:
+      steps:
+        - "Navigate to Setup > Agent Builder > [Agent Name] > Actions"
+        - "Verify pre-built actions are present and linked to topics"
+        - "Check Apex class permissions for action classes (Setup > Apex Classes)"
+        - "Verify 'Agentforce User' permission set includes Apex class access"
+        - "If actions are missing, reinstall the Life Sciences Field Sales Agent package"
+      ui_path: "Setup > Agent Builder > [Agent Name] > Actions"
+    tags: [agentforce, configuration, actions]
+
+  # ===========================================================================
+  # SECTION 5: Agent Plugins (GenAiPlugin)
+  # ===========================================================================
+
+  - id: agentforce-006
+    name: Agent plugins configured for external integrations
+    description: |
+      Checks whether GenAiPlugin records exist. Plugins enable external integrations
+      such as Data Cloud for real-time predictions, Einstein Studio for NBA models,
+      or third-party APIs for clinical trial data. Plugins are optional but
+      required for advanced features like predictive models and external data sources.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM GenAiPlugin
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, DeveloperName, MasterLabel, PluginType
+        FROM GenAiPlugin
+        ORDER BY MasterLabel
+    symptoms:
+      - "Next Best Action predictions not showing"
+      - "External data not available in agent responses"
+      - "Real-time predictions failing"
+    resolution:
+      steps:
+        - "Navigate to Setup > Einstein Studio > Models"
+        - "Verify predictive models are deployed and active"
+        - "Navigate to Setup > Data Cloud > Predictions"
+        - "Verify Data Cloud connection is active"
+        - "Configure GenAiPlugin records to connect external systems"
+      ui_path: "Setup > Agent Builder > [Agent Name] > Plugins"
+    tags: [agentforce, configuration, plugins, integration]
+
+  # ===========================================================================
+  # SECTION 6: AI Application Configuration
+  # ===========================================================================
+
+  - id: agentforce-007
+    name: AI Application configured for Life Sciences
+    description: |
+      Verifies that AIApplication records exist for Life Sciences. AIApplication
+      defines the AI application configuration including planner instructions,
+      model settings, and application-level behavior. This is required for
+      the agent to understand how to behave and respond to user queries.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM AIApplication
+        WHERE DeveloperName LIKE '%LifeSciences%'
+        OR MasterLabel LIKE '%Life Sciences%'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, DeveloperName, MasterLabel, Status
+        FROM AIApplication
+        WHERE DeveloperName LIKE '%LifeSciences%'
+        OR MasterLabel LIKE '%Life Sciences%'
+    symptoms:
+      - "Agent behavior inconsistent"
+      - "Agent does not follow planner instructions"
+      - "Agent personality not matching expected style"
+    resolution:
+      steps:
+        - "Navigate to Setup > AI Application"
+        - "Verify Life Sciences AI Application exists"
+        - "Review planner instructions to define agent personality and guidelines"
+        - "Configure model settings for response generation"
+      ui_path: "Setup > AI Application"
+    tags: [agentforce, configuration, ai-application]
+
+  # ===========================================================================
+  # SECTION 7: Data Context - Account (PersonAccount)
+  # ===========================================================================
+
+  - id: agentforce-008
+    name: PersonAccount records exist for HCP summarization
+    description: |
+      Checks whether PersonAccount records exist. PersonAccount (Account with
+      IsPersonAccount = true) represents Healthcare Providers (HCPs) in AFLS.
+      Agentforce uses account data for HCP summarization, daily briefings,
+      and next best action predictions. Without HCP account data, these features
+      will return empty results.
+    category: data-context
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Account
+        WHERE IsPersonAccount = true
+      expect: "count > 0"
+    symptoms:
+      - "HCP summarization returns no data"
+      - "Daily briefing shows no priority accounts"
+      - "Account recommendations empty"
+    resolution:
+      steps:
+        - "Verify PersonAccount record type is enabled in org"
+        - "Navigate to Setup > Object Manager > Account > Record Types"
+        - "Ensure 'PersonAccount' record type is active"
+        - "Load HCP data (via data import, integration, or manual entry)"
+        - "Verify HealthcareProvider object records exist for professional information"
+      ui_path: "Setup > Object Manager > Account > Record Types"
+    tags: [agentforce, data-context, account, hcp]
+
+  # ===========================================================================
+  # SECTION 8: Data Context - Visit and ProviderVisit
+  # ===========================================================================
+
+  - id: agentforce-009
+    name: Visit records exist for daily briefing
+    description: |
+      Checks whether Visit records exist. Visit data is used in daily briefings
+      to show scheduled visits and visit history. Without visit data, the daily
+      briefing will be incomplete and voice-based visit logging will have no
+      historical context.
+    category: data-context
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Visit
+      expect: "count > 0"
+    symptoms:
+      - "Daily briefing shows no scheduled visits"
+      - "Visit history empty in HCP summaries"
+      - "Voice-based visit logging has no context"
+    resolution:
+      steps:
+        - "Verify Visit Management module is configured"
+        - "Navigate to Admin Console > Visit Settings"
+        - "Verify visit record types are configured"
+        - "Create test visits or import historical visit data"
+        - "Ensure users have access to Visit and ProviderVisit objects"
+      ui_path: "Admin Console > Visit Settings"
+    tags: [agentforce, data-context, visit]
+
+  # ===========================================================================
+  # SECTION 9: Data Context - Product
+  # ===========================================================================
+
+  - id: agentforce-010
+    name: Product records exist for detailing capture
+    description: |
+      Checks whether Product2 records exist. Product data is required for
+      voice-based visit logging to parse product discussions and create
+      ProviderVisitPrdDetailing records. Without product data, the agent
+      cannot recognize product names in natural language input.
+    category: data-context
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Product2
+        WHERE IsActive = true
+      expect: "count > 0"
+    symptoms:
+      - "Voice-based visit logging does not recognize product names"
+      - "Product detailing not captured correctly"
+      - "Agent says 'I cannot find that product'"
+    resolution:
+      steps:
+        - "Navigate to Product Management in AFLS"
+        - "Verify Product2 records exist and are Active"
+        - "Ensure product names match terminology used by field reps"
+        - "Consider adding product aliases or synonyms in configuration"
+      ui_path: "App Launcher > Products"
+    tags: [agentforce, data-context, product]
+
+  # ===========================================================================
+  # SECTION 10: Data Context - Territory Info
+  # ===========================================================================
+
+  - id: agentforce-011
+    name: ProviderAcctTerritoryInfo records exist for recommendations
+    description: |
+      Checks whether ProviderAcctTerritoryInfo records exist. These records
+      track visit counts, last visit date, and territory-level account metrics.
+      They are used for account recommendations, priority account identification,
+      and next best action predictions. Without territory info, daily briefings
+      will lack priority account recommendations.
+    category: data-context
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ProviderAcctTerritoryInfo
+      expect: "count > 0"
+    symptoms:
+      - "Daily briefing shows no priority accounts"
+      - "Account recommendations empty"
+      - "Visit rollup counts not showing"
+    resolution:
+      steps:
+        - "Verify Visit Rollup Job is scheduled and active"
+        - "Navigate to Admin Console > Visit Settings > Visit Jobs"
+        - "Verify territory alignment is configured"
+        - "Ensure trigger handlers for visit rollups are active"
+      ui_path: "Admin Console > Visit Settings > Visit Jobs"
+    tags: [agentforce, data-context, territory]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  agentforce-config-check:
+    name: "Agentforce Configuration Check"
+    description: "Full Agentforce configuration check - agent definitions, topics, actions, plugins, and data context"
+    rules:
+      - agentforce-001
+      - agentforce-002
+      - agentforce-003
+      - agentforce-004
+      - agentforce-005
+      - agentforce-006
+      - agentforce-007
+      - agentforce-008
+      - agentforce-009
+      - agentforce-010
+      - agentforce-011
+
+  agentforce-core:
+    name: "Agentforce Core Configuration"
+    description: "Essential agent configuration - definitions, versions, topics, and actions"
+    rules:
+      - agentforce-001
+      - agentforce-002
+      - agentforce-003
+      - agentforce-004
+      - agentforce-005
+
+  agentforce-actions:
+    name: "Agentforce Actions and Plugins"
+    description: "Agent actions and external integrations - GenAiFunction, GenAiPlugin, AI Application"
+    rules:
+      - agentforce-005
+      - agentforce-006
+      - agentforce-007
+
+  pre-deployment-agentforce:
+    name: "Pre-Deployment Agentforce Check"
+    description: "Run before deploying Agentforce to users - critical configuration and data context"
+    rules:
+      - agentforce-001
+      - agentforce-002
+      - agentforce-004
+      - agentforce-005
+      - agentforce-008
+      - agentforce-009
+      - agentforce-010

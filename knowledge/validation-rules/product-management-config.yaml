@@ -1,0 +1,443 @@
+# AFLS Product Management Configuration Validation Rules
+# ===================================================
+# Rules to validate Product Management configuration including
+# Product2 records, LifeSciMarketableProduct hierarchy, ProductGuidance,
+# product territory alignment, and mobile cache.
+#
+# Verified object names:
+#   - Product2 (standard Salesforce)
+#   - LifeSciMarketableProduct (standard)
+#   - ProductGuidance (standard)
+#   - LifeSciTerritoryProductPriority (standard)
+#   - LifeSciProductAccountRestriction (standard)
+#   - TerritoryProductQtyAllocation (standard)
+#   - LifeSciMobileMetadataRecord (standard)
+
+schema_version: "1.0"
+category_name: "Product Management Configuration"
+description: |
+  Validation rules for AFLS Product Management configuration.
+  Covers Product2 records, LifeSciMarketableProduct hierarchy, ProductGuidance,
+  product territory alignment, product restrictions, and mobile cache requirements.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Product2 Base Records
+  # ===========================================================================
+
+  - id: product-001
+    name: Product2 records exist in the org
+    description: |
+      Verifies that at least one Product2 record exists. Product2 is the base
+      Salesforce product object that underlies all AFLS product management.
+      Without Product2 records, no products can be configured for detailing,
+      sample management, or content delivery. Each LifeSciMarketableProduct
+      must link to a Product2 record.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Product2
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, IsActive, ProductCode, RecordTypeId
+        FROM Product2
+        LIMIT 10
+    symptoms:
+      - "No products available in Admin Console"
+      - "Cannot create LifeSciMarketableProduct"
+      - "Product selection is empty during visit"
+    resolution:
+      steps:
+        - "Navigate to Setup > Object Manager > Product2"
+        - "Create Product2 records for each product in your catalog"
+        - "Set ProductCode, IsActive = true, and appropriate RecordType"
+        - "Link Product2 records to LifeSciMarketableProduct records"
+      ui_path: "Setup > Object Manager > Product2"
+    tags: [product, configuration, product2]
+
+  - id: product-002
+    name: Active Product2 records exist
+    description: |
+      Checks whether active Product2 records exist. Inactive products are not
+      available for detailing, sample management, or content delivery. Field
+      reps will not see inactive products in their product lists during visits.
+      This is a warning because organizations may have product records that are
+      intentionally inactive (archived products, discontinued lines, etc.).
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Product2
+        WHERE IsActive = true
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, IsActive, ProductCode
+        FROM Product2
+        ORDER BY IsActive DESC, Name
+        LIMIT 20
+    symptoms:
+      - "No products showing in product lists"
+      - "Field reps cannot detail any products"
+      - "Product selection empty in mobile app"
+    resolution:
+      steps:
+        - "Navigate to Setup > Object Manager > Product2"
+        - "Query for inactive products: SELECT Id, Name FROM Product2 WHERE IsActive = false"
+        - "Update IsActive = true for products that should be available"
+        - "Verify products appear in Admin Console > Product Hierarchy"
+      ui_path: "Setup > Object Manager > Product2"
+    tags: [product, configuration, product2, active]
+
+  # ===========================================================================
+  # SECTION 2: LifeSciMarketableProduct (AFLS Product Wrapper)
+  # ===========================================================================
+
+  - id: product-003
+    name: LifeSciMarketableProduct records exist
+    description: |
+      Verifies that at least one LifeSciMarketableProduct record exists.
+      LifeSciMarketableProduct is the AFLS product wrapper that carries product
+      type, hierarchy, territory alignment, and metadata. It is the entity used
+      throughout AFLS for product management, detailing, sample management, and
+      content delivery. Without LifeSciMarketableProduct records, no products
+      are available in AFLS modules.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Type, ParentProductId, IsActive
+        FROM LifeSciMarketableProduct
+      expect: "records.length > 0"
+    symptoms:
+      - "Product hierarchy empty in Admin Console"
+      - "No products available during visits"
+      - "Product management module not working"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Product Hierarchy"
+        - "Create LifeSciMarketableProduct records for each product"
+        - "Set Type (Therapeutic Area, Indication, Marketable Product, Tangible Product)"
+        - "Set ParentProductId to build hierarchy (NULL for top-level)"
+        - "Link to base Product2 record (ProductId)"
+      ui_path: "Admin Console > Product Hierarchy"
+    tags: [product, configuration, lifescimarketableproduct]
+
+  - id: product-004
+    name: Active LifeSciMarketableProduct records exist
+    description: |
+      Checks whether active LifeSciMarketableProduct records exist. Inactive
+      LifeSciMarketableProduct records are not available in AFLS modules even if
+      the underlying Product2 record is active. Field reps will not see inactive
+      products in their detailing lists, and these products will not appear in
+      sample management or activity planning.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Type, ParentProductId, Product2Id
+        FROM LifeSciMarketableProduct
+        WHERE IsActive = true
+      expect: "records.length > 0"
+      error_detail_query: >
+        SELECT Id, Name, Type, IsActive, Product2.Name
+        FROM LifeSciMarketableProduct
+        ORDER BY IsActive DESC, Type, Name
+        LIMIT 20
+    symptoms:
+      - "Products not appearing in mobile app"
+      - "Field reps cannot detail products"
+      - "Sample management products missing"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Product Hierarchy"
+        - "Query inactive products: SELECT Id, Name FROM LifeSciMarketableProduct WHERE IsActive = false"
+        - "Update IsActive = true for products that should be available"
+        - "Verify products appear in product lists"
+      ui_path: "Admin Console > Product Hierarchy"
+    tags: [product, configuration, lifescimarketableproduct, active]
+
+  # ===========================================================================
+  # SECTION 3: Product Guidance (Messages and Objectives)
+  # ===========================================================================
+
+  - id: product-005
+    name: ProductGuidance records exist (messages and objectives)
+    description: |
+      Checks whether ProductGuidance records exist. ProductGuidance records
+      represent product messages and objectives linked to products. Messages
+      guide reps on what to discuss during detailing, and objectives define
+      engagement goals. Without ProductGuidance, reps have no guidance on what
+      to communicate about products during visits. This is an informational
+      check because not all organizations use product messages and objectives.
+    category: configuration
+    severity: info
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Type, ProductId, IsActive, StartDate, EndDate
+        FROM ProductGuidance
+      expect: "records.length > 0"
+    symptoms:
+      - "No messages or objectives available during visits"
+      - "Field reps lack guidance on product detailing"
+      - "Content not linked to products"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Product Hierarchy > [Product] > Messages & Objectives"
+        - "Create ProductGuidance records for each product"
+        - "Set Type (Message or Objective)"
+        - "Set IsActive = true"
+        - "Set StartDate and EndDate (effectivity dates)"
+        - "Optionally map to specific territories"
+      ui_path: "Admin Console > Product Hierarchy > [Product] > Messages & Objectives"
+    tags: [product, configuration, productguidance, messages, objectives]
+
+  - id: product-006
+    name: Active ProductGuidance records exist
+    description: |
+      Checks whether active ProductGuidance records exist. Inactive or expired
+      ProductGuidance records are not available during visits. Field reps will
+      not see messages or objectives that are inactive or outside their
+      effectivity date range (StartDate to EndDate). This is an informational
+      check because organizations may intentionally have no active guidance
+      during certain periods.
+    category: configuration
+    severity: info
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Type, ProductId, LifeSciMarketableProduct.Name
+        FROM ProductGuidance
+        WHERE IsActive = true
+        AND StartDate <= TODAY
+        AND (EndDate = null OR EndDate >= TODAY)
+      expect: "records.length >= 0"
+      error_detail_query: >
+        SELECT Id, Name, Type, IsActive, StartDate, EndDate, ProductId
+        FROM ProductGuidance
+        ORDER BY IsActive DESC, StartDate DESC
+        LIMIT 20
+    symptoms:
+      - "Messages not appearing during visits"
+      - "Objectives not showing for products"
+      - "Content not linked to current products"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Product Hierarchy > [Product] > Messages & Objectives"
+        - "Review ProductGuidance records for effectivity dates"
+        - "Update StartDate and EndDate to include current date"
+        - "Set IsActive = true for guidance that should be available"
+      ui_path: "Admin Console > Product Hierarchy > [Product] > Messages & Objectives"
+    tags: [product, configuration, productguidance, active, effectivity]
+
+  # ===========================================================================
+  # SECTION 4: Product Hierarchy
+  # ===========================================================================
+
+  - id: product-007
+    name: Product hierarchy configured (ParentProductId set)
+    description: |
+      Checks whether product hierarchy is configured using ParentProductId.
+      Product hierarchy defines the relationship between Therapeutic Areas,
+      Indications, Marketable Products, and Tangible Products. A well-structured
+      hierarchy improves navigation, reporting, and content organization. This
+      is an informational check because flat product lists are valid for some
+      organizations.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMarketableProduct
+        WHERE ParentProductId != null
+      expect: "count >= 0"
+      error_detail_query: >
+        SELECT Id, Name, Type, ParentProductId
+        FROM LifeSciMarketableProduct
+        ORDER BY Type, Name
+        LIMIT 50
+    symptoms:
+      - "Product hierarchy appears flat"
+      - "Cannot navigate product tree"
+      - "Products not grouped by therapeutic area or indication"
+    resolution:
+      steps:
+        - "Plan product hierarchy: Therapeutic Area → Indication → Marketable Product → Tangible Product"
+        - "Navigate to Admin Console > Product Hierarchy"
+        - "Set ParentProductId for each product to build hierarchy"
+        - "Top-level products (Therapeutic Areas) should have ParentProductId = NULL"
+        - "Child products should reference their parent's ID in ParentProductId"
+      ui_path: "Admin Console > Product Hierarchy"
+    tags: [product, configuration, hierarchy, parentproductid]
+
+  # ===========================================================================
+  # SECTION 5: Product Territory Alignment
+  # ===========================================================================
+
+  - id: product-008
+    name: Territory product priorities configured
+    description: |
+      Checks whether LifeSciTerritoryProductPriority records exist. These
+      records control the detailing priority order of products within territories.
+      Without priorities, products appear in arbitrary order during visits, which
+      can confuse reps and reduce effectiveness. This is an informational check
+      because not all organizations use priority-based product detailing.
+    category: configuration
+    severity: info
+    check:
+      type: soql
+      query: >
+        SELECT Id, Territory2Id, LifeSciMarketableProductId, Priority
+        FROM LifeSciTerritoryProductPriority
+      expect: "records.length >= 0"
+    symptoms:
+      - "Products not appearing in correct order during visits"
+      - "Reps unsure which products to detail first"
+      - "Product priorities not respected in UI"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Product Hierarchy > [Territory] > Product Priorities"
+        - "Set priority order (1 = highest priority)"
+        - "Ensure each product has a unique priority value within the territory"
+        - "Verify reps see products in correct order"
+      ui_path: "Admin Console > Product Hierarchy > [Territory] > Product Priorities"
+    tags: [product, configuration, territory, priority]
+
+  - id: product-009
+    name: Product account restrictions configured (if applicable)
+    description: |
+      Checks whether LifeSciProductAccountRestriction records exist. These
+      records prevent reps from detailing restricted products to specific accounts
+      or HCPs, ensuring compliance. Without restrictions, reps may inadvertently
+      discuss products with accounts that should not receive that information.
+      This is an informational check because not all organizations require
+      account-level product restrictions.
+    category: configuration
+    severity: info
+    check:
+      type: soql
+      query: >
+        SELECT Id, LifeSciMarketableProductId, AccountId, RestrictionType
+        FROM LifeSciProductAccountRestriction
+      expect: "records.length >= 0"
+    symptoms:
+      - "Rep blocked from detailing product to account"
+      - "Product restriction warnings during visits"
+      - "Compliance issues with product detailing"
+    resolution:
+      steps:
+        - "Identify accounts that should be restricted from specific products"
+        - "Create LifeSciProductAccountRestriction records"
+        - "Set RestrictionType (Block or Warn)"
+        - "Test restriction behavior from rep's perspective"
+      ui_path: "Admin Console or data import via LifeSciProductAccountRestriction"
+    tags: [product, configuration, restriction, compliance]
+
+  # ===========================================================================
+  # SECTION 6: Mobile Metadata Cache for Products
+  # ===========================================================================
+
+  - id: product-010
+    name: Mobile metadata cache active for product objects
+    description: |
+      Verifies that mobile metadata cache is active. Product management on mobile
+      requires an active metadata cache that includes LifeSciMarketableProduct,
+      ProductGuidance, and related objects. Without active cache, product data
+      will not sync to mobile devices and product detailing will not work offline.
+      Field reps will not see products, messages, or objectives on their iPads.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Products not syncing to mobile"
+      - "Product detailing not available offline"
+      - "Device sync transaction record was not found"
+      - "Messages and objectives missing on mobile"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify LifeSciMarketableProduct, ProductGuidance, and related objects are included in DB Schema"
+        - "Regenerate metadata cache for affected profiles"
+        - "Have users sync their mobile devices"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [product, mobile, cache]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  product-config-check:
+    name: "Product Configuration Check"
+    description: "Full product management configuration check - Product2, LifeSciMarketableProduct, ProductGuidance, hierarchy, territory alignment, and mobile cache"
+    rules:
+      - product-001
+      - product-002
+      - product-003
+      - product-004
+      - product-005
+      - product-006
+      - product-007
+      - product-008
+      - product-009
+      - product-010
+
+  product-core:
+    name: "Product Core Check"
+    description: "Core product checks - Product2 and LifeSciMarketableProduct records"
+    rules:
+      - product-001
+      - product-002
+      - product-003
+      - product-004
+
+  product-guidance:
+    name: "Product Guidance Check"
+    description: "Product messages and objectives checks - ProductGuidance records"
+    rules:
+      - product-005
+      - product-006
+
+  product-hierarchy:
+    name: "Product Hierarchy Check"
+    description: "Product hierarchy and territory alignment checks"
+    rules:
+      - product-007
+      - product-008
+      - product-009
+
+  product-mobile:
+    name: "Product Mobile Check"
+    description: "Mobile-specific product checks - metadata cache requirements"
+    rules:
+      - product-010
+
+  pre-deployment-product:
+    name: "Pre-Deployment Product Check"
+    description: "Run before deploying product management to users - all critical checks"
+    rules:
+      - product-001
+      - product-002
+      - product-003
+      - product-004
+      - product-010

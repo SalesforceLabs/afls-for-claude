@@ -1,0 +1,200 @@
+# AFLS Validation Rules Schema
+# This file documents the format for validation rules used by the audit system.
+
+# Rule Structure
+# ==============
+# Each rule validates a specific aspect of AFLS configuration.
+# Rules are grouped by category (e.g., mobile-login, metadata-cache, sync).
+
+schema_version: "1.0"
+
+# Field Definitions
+# =================
+fields:
+  id:
+    type: string
+    required: true
+    description: |
+      Unique identifier for the rule. Format: {category}-{number}
+      Examples: mobile-001, cache-001, sync-001
+
+  name:
+    type: string
+    required: true
+    description: Short, descriptive name for the rule (max 60 chars)
+
+  description:
+    type: string
+    required: true
+    description: Detailed explanation of what this rule validates and why it matters
+
+  category:
+    type: string
+    required: true
+    enum:
+      - mobile-login        # Login and authentication issues
+      - metadata-cache      # Metadata cache generation issues
+      - sync                # Device sync and data synchronization
+      - permissions         # Permission sets and access
+      - configuration       # General configuration settings
+      - territory           # Territory alignment
+      - deployment          # Package installation and deployment
+    description: Category for grouping related rules
+
+  severity:
+    type: string
+    required: true
+    enum:
+      - error    # Blocks functionality, must fix
+      - warning  # May cause issues, should fix
+      - info     # Best practice, consider fixing
+    description: How critical is this issue if the check fails
+
+  check:
+    type: object
+    required: true
+    description: How to validate this rule
+    properties:
+      type:
+        type: string
+        enum:
+          - soql              # Run a SOQL query
+          - soql_count        # Run a SOQL count query
+          - tooling_soql      # Run a Tooling API SOQL query
+          - tooling_soql_count # Run a Tooling API count query
+          - metadata          # Check metadata/describe
+          - api               # Call a REST API endpoint
+          - cli               # Run SF CLI command
+          - composite         # Multiple checks combined
+        description: Type of check to perform
+
+      query:
+        type: string
+        description: SOQL query to run (for soql/soql_count types)
+
+      object:
+        type: string
+        description: Object API name (for metadata type)
+
+      endpoint:
+        type: string
+        description: API endpoint (for api type)
+
+      command:
+        type: string
+        description: SF CLI command (for cli type)
+
+      checks:
+        type: array
+        description: Array of sub-checks (for composite type)
+
+      expect:
+        type: string
+        required: true
+        description: |
+          Expected result condition. Available variables:
+          - count: Number of records (for soql_count)
+          - records: Array of records (for soql)
+          - result: API/CLI response
+          Examples:
+          - "count > 0"
+          - "count == 0"
+          - "records.length > 0"
+          - "records.every(r => r.Status == 'Active')"
+          - "result.isActive == true"
+
+      error_detail_query:
+        type: string
+        description: |
+          Optional SOQL query to run when check fails, to provide detailed
+          information about the specific issues found.
+
+  symptoms:
+    type: array
+    items:
+      type: string
+    description: |
+      Error messages or symptoms users see when this issue occurs.
+      Used for matching user-reported problems to validation rules.
+
+  resolution:
+    type: object
+    required: true
+    description: How to fix the issue
+    properties:
+      steps:
+        type: array
+        items:
+          type: string
+        description: Step-by-step instructions to resolve
+
+      ui_path:
+        type: string
+        description: Navigation path in Salesforce UI (e.g., "Admin Console > Mobile > Metadata Cache")
+
+      documentation:
+        type: string
+        description: Link to relevant documentation
+
+      auto_fix:
+        type: object
+        description: Optional automated fix (if safe to auto-remediate)
+        properties:
+          available:
+            type: boolean
+            description: Whether auto-fix is available
+          type:
+            type: string
+            enum: [soql_update, api_call, cli_command, apex]
+          action:
+            type: string
+            description: The fix action to perform
+          requires_confirmation:
+            type: boolean
+            default: true
+            description: Whether to prompt user before applying fix
+
+  issue_ref:
+    type: string
+    description: Reference to common_issues.md section (e.g., "1.1", "2.3")
+
+  prerequisites:
+    type: array
+    items:
+      type: string
+    description: Rule IDs that must pass before this rule is checked
+
+  tags:
+    type: array
+    items:
+      type: string
+    description: Additional tags for filtering (e.g., ["ipad", "sandbox", "production"])
+
+# Example Rule
+# ============
+example:
+  id: mobile-001
+  name: Metadata cache exists for profiles
+  description: |
+    Verifies that at least one Object Metadata Cache Configuration exists
+    and is active. Without this, mobile users cannot sync data.
+  category: metadata-cache
+  severity: error
+  check:
+    type: soql_count
+    query: "SELECT COUNT() FROM LifeSciMobileMetadataRecord WHERE Status IN ('Active', 'Published')"
+    expect: "count > 0"
+  symptoms:
+    - "Device sync transaction record was not found"
+    - "Error while trying to access Salesforce"
+  resolution:
+    steps:
+      - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+      - "Create a new metadata cache configuration"
+      - "Assign profiles that need mobile access"
+      - "Generate the metadata cache"
+    ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+  issue_ref: "1.1"
+  tags:
+    - ipad
+    - mobile

@@ -1,0 +1,305 @@
+# AFLS Calendar, TOT & Routine Configuration Validation Rules
+# ==========================================================
+# Rules to validate Calendar, Time Off Territory, and Routine configuration
+# including calendar events, TOT records, business hours, holidays,
+# visit records, and mobile cache.
+#
+# Verified object names:
+#   - Event (standard)
+#   - TimeSheetEntry (standard)
+#   - Visit (standard)
+#   - BusinessHours (standard)
+#   - Holiday (standard)
+#   - Territory2 (standard)
+#   - LifeSciMobileMetadataRecord (standard)
+
+schema_version: "1.0"
+category_name: "Calendar, TOT & Routine Configuration"
+description: |
+  Validation rules for AFLS Calendar, Time Off Territory, and Routine configuration.
+  Covers calendar events, TOT records, business hours, holidays, visit records,
+  and mobile cache requirements.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Calendar Events
+  # ===========================================================================
+
+  - id: calendar-001
+    name: Calendar events exist in org
+    description: |
+      Checks whether Event records exist in the org. Events represent general
+      calendar activities such as meetings, appointments, and non-visit activities.
+      If no Event records exist, the calendar may appear empty except for visits
+      and TOT. This is an informational check - a calendar can function with
+      only visits and TOT, but general events provide additional scheduling flexibility.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Event
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Subject, StartDateTime, EndDateTime, OwnerId, Owner.Name
+        FROM Event
+        ORDER BY StartDateTime DESC
+        LIMIT 10
+    symptoms:
+      - "Calendar only showing visits and TOT"
+      - "No general events visible on calendar"
+      - "Cannot create meetings or appointments"
+    resolution:
+      steps:
+        - "Verify users have Event object access"
+        - "Check Admin Console > Planner Administration > Calendar Event tab"
+        - "Ensure General Events activity type is enabled"
+        - "Create test Event record to verify calendar functionality"
+      ui_path: "Admin Console > Planner Administration > Calendar Event"
+    tags: [calendar, configuration, events]
+
+  # ===========================================================================
+  # SECTION 2: Time Off Territory (TOT)
+  # ===========================================================================
+
+  - id: calendar-002
+    name: Time Off Territory records exist
+    description: |
+      Checks whether TimeSheetEntry records exist with Type = 'TimeOffTerritory'.
+      TOT records track when sales reps are out of territory for vacation, training,
+      or other reasons. If no TOT records exist, this is informational - it may
+      indicate the org has not started using TOT yet, or reps have not created
+      any TOT entries. TOT is critical for compliance and activity plan calculations.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM TimeSheetEntry
+        WHERE Type = 'TimeOffTerritory'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, StartDateTime, EndDateTime, OwnerId, Owner.Name, Reason, Type
+        FROM TimeSheetEntry
+        WHERE Type = 'TimeOffTerritory'
+        ORDER BY StartDateTime DESC
+        LIMIT 10
+    symptoms:
+      - "No TOT blocks showing on calendar"
+      - "Cannot track rep time off"
+      - "Activity plan not accounting for out-of-territory time"
+    resolution:
+      steps:
+        - "Verify users have TimeSheetEntry object access"
+        - "Check Admin Console > Planner Administration > Calendar Event tab"
+        - "Ensure Time Off Territory activity type is enabled"
+        - "Navigate to Admin Console > Time Off Territory to configure settings"
+        - "Create test TOT record to verify functionality"
+      ui_path: "Admin Console > Time Off Territory"
+    tags: [calendar, configuration, tot, time-off-territory]
+
+  # ===========================================================================
+  # SECTION 3: Business Hours
+  # ===========================================================================
+
+  - id: calendar-003
+    name: Business hours configured and active
+    description: |
+      Verifies that at least one active BusinessHours record exists. Business hours
+      define working time periods and are used to display background shading on the
+      calendar during drag-and-drop scheduling. They guide reps to schedule visits
+      during appropriate times and are required for TOT validation (TOT not allowed
+      during non-business hours). Without business hours, the calendar lacks visual
+      guidance and TOT validation may not work correctly.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM BusinessHours
+        WHERE IsActive = true
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, IsActive, IsDefault, TimeZoneSidKey
+        FROM BusinessHours
+    symptoms:
+      - "No business hours background on calendar"
+      - "Visits being scheduled outside working hours"
+      - "TOT validation not working correctly"
+    resolution:
+      steps:
+        - "Navigate to Setup > Business Hours"
+        - "Create at least one BusinessHours record with appropriate time slots"
+        - "Mark as Active"
+        - "Navigate to Admin Console > Planner Administration > Business Hours section"
+        - "Register business hours globally or separately for visits and general events"
+      ui_path: "Setup > Business Hours"
+    tags: [calendar, configuration, business-hours]
+
+  # ===========================================================================
+  # SECTION 4: Holidays
+  # ===========================================================================
+
+  - id: calendar-004
+    name: Holidays configured for calendar
+    description: |
+      Checks whether Holiday records exist. Holidays are mapped to business hours
+      and displayed on the calendar to prevent scheduling during closed periods
+      (e.g., company holidays, national holidays). If no holidays exist, this is
+      informational - the calendar will function normally but may allow scheduling
+      on dates when the organization is closed. Holidays improve scheduling accuracy
+      and compliance.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Holiday
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, ActivityDate, IsRecurring
+        FROM Holiday
+        ORDER BY ActivityDate
+        LIMIT 10
+    symptoms:
+      - "No holidays showing on calendar"
+      - "Visits being scheduled on company holidays"
+      - "Calendar not blocking closed dates"
+    resolution:
+      steps:
+        - "Navigate to Setup > Holidays"
+        - "Create Holiday records for company and national holidays"
+        - "Navigate to Admin Console > Planner Administration > Holiday Mapping"
+        - "Map each holiday to the appropriate business hours"
+      ui_path: "Setup > Holidays"
+    tags: [calendar, configuration, holidays]
+
+  # ===========================================================================
+  # SECTION 5: Visit Records for Calendar
+  # ===========================================================================
+
+  - id: calendar-005
+    name: Visit records exist for calendar display
+    description: |
+      Checks whether Visit records exist in the org. Visits are the primary activity
+      type displayed on the calendar. If no Visit records exist, this is informational -
+      it may indicate a new implementation or that visits have not been created yet.
+      The calendar can function with only general events and TOT, but visits are
+      typically the core use case for AFLS Calendar. Visits with PlannedVisitStartTime
+      and PlannedVisitEndTime appear as scheduled activities on the calendar.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Visit
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, PlannedVisitStartTime, PlannedVisitEndTime, Status, AccountId, Account.Name
+        FROM Visit
+        ORDER BY PlannedVisitStartTime DESC
+        LIMIT 10
+    symptoms:
+      - "Calendar only showing general events and TOT"
+      - "No visits visible on calendar"
+      - "Cannot schedule visits from calendar"
+    resolution:
+      steps:
+        - "Verify users have Visit object access"
+        - "Check Admin Console > Planner Administration > Calendar Event tab"
+        - "Ensure Visits activity type is enabled"
+        - "Create test Visit record with PlannedVisitStartTime and PlannedVisitEndTime"
+        - "Verify visit appears on calendar"
+      ui_path: "Admin Console > Planner Administration > Calendar Event"
+    tags: [calendar, configuration, visits]
+
+  # ===========================================================================
+  # SECTION 6: Mobile Metadata Cache for Calendar
+  # ===========================================================================
+
+  - id: calendar-006
+    name: Mobile metadata cache active for calendar objects
+    description: |
+      Verifies that mobile metadata cache is active. Calendar functionality on mobile
+      requires an active metadata cache that includes Event, Visit, TimeSheetEntry,
+      and related objects. Without active cache, calendar data will not sync to mobile
+      devices and calendar features (drag-and-drop scheduling, routines, TOT creation)
+      will not work on iPad. This is a critical check for mobile users.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Calendar not loading on mobile"
+      - "Events/visits not syncing to iPad"
+      - "Cannot create TOT on mobile"
+      - "Routines not working on iPad"
+      - "Device sync transaction record was not found"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify Event, Visit, TimeSheetEntry, and Account objects are included in DB Schema"
+        - "Regenerate metadata cache for affected profiles"
+        - "Have users sync their mobile devices"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [calendar, mobile, cache]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  calendar-config-check:
+    name: "Calendar Configuration Check"
+    description: "Full calendar configuration check - events, TOT, business hours, holidays, visits, and cache"
+    rules:
+      - calendar-001
+      - calendar-002
+      - calendar-003
+      - calendar-004
+      - calendar-005
+      - calendar-006
+
+  calendar-core:
+    name: "Calendar Core Check"
+    description: "Core calendar configuration - events, business hours, and holidays"
+    rules:
+      - calendar-001
+      - calendar-003
+      - calendar-004
+
+  calendar-tot:
+    name: "Time Off Territory Check"
+    description: "TOT-specific checks - TimeSheetEntry records and business hours"
+    rules:
+      - calendar-002
+      - calendar-003
+
+  calendar-mobile:
+    name: "Calendar Mobile Check"
+    description: "Mobile-specific calendar checks - metadata cache and sync requirements"
+    rules:
+      - calendar-006
+
+  pre-deployment-calendar:
+    name: "Pre-Deployment Calendar Check"
+    description: "Run before deploying calendar to users - critical business hours and cache checks"
+    rules:
+      - calendar-003
+      - calendar-006

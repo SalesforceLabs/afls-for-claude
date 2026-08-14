@@ -1,0 +1,575 @@
+{
+  "guideTitle": "AFLS Developer Guide",
+  "guideSlug": "dev-guide",
+  "pdfFileName": "life_sciences_dev_guide.pdf",
+  "totalPages": 1978,
+  "sections": [
+    {
+      "slug": "introduction",
+      "title": "Introduction",
+      "startPage": 1,
+      "endPage": 4,
+      "file": "001-introduction.md"
+    },
+    {
+      "slug": "life-sciences-cloud-overview",
+      "title": "AFLS Overview",
+      "startPage": 5,
+      "endPage": 5,
+      "file": "002-life-sciences-cloud-overview.md"
+    },
+    {
+      "slug": "life-sciences-cloud-data-model",
+      "title": "AFLS Data Model",
+      "startPage": 6,
+      "endPage": 6,
+      "file": "003-life-sciences-cloud-data-model.md"
+    },
+    {
+      "slug": "clinical-engagement",
+      "title": "Clinical Engagement",
+      "startPage": 7,
+      "endPage": 146,
+      "file": "004-clinical-engagement.md"
+    },
+    {
+      "slug": "customer-engagement",
+      "title": "Customer Engagement",
+      "startPage": 147,
+      "endPage": 717,
+      "file": "005-customer-engagement.md"
+    },
+    {
+      "slug": "patient-engagement",
+      "title": "Patient Engagement",
+      "startPage": 718,
+      "endPage": 1369,
+      "file": "006-patient-engagement.md"
+    },
+    {
+      "slug": "medtech-commercial-engagement",
+      "title": "MedTech Commercial Engagement",
+      "startPage": 1370,
+      "endPage": 1429,
+      "file": "007-medtech-commercial-engagement.md"
+    },
+    {
+      "slug": "life-sciences-cloud-associated-objects",
+      "title": "AFLS Associated Objects",
+      "startPage": 1430,
+      "endPage": 1430,
+      "file": "008-life-sciences-cloud-associated-objects.md"
+    },
+    {
+      "slug": "standardobjectnamechangeevent",
+      "title": "StandardObjectNameChangeEvent",
+      "startPage": 1431,
+      "endPage": 1432,
+      "file": "009-standardobjectnamechangeevent.md"
+    },
+    {
+      "slug": "standardobjectnamefeed",
+      "title": "StandardObjectNameFeed",
+      "startPage": 1433,
+      "endPage": 1437,
+      "file": "010-standardobjectnamefeed.md"
+    },
+    {
+      "slug": "standardobjectnamehistory",
+      "title": "StandardObjectNameHistory",
+      "startPage": 1438,
+      "endPage": 1439,
+      "file": "011-standardobjectnamehistory.md"
+    },
+    {
+      "slug": "standardobjectnameownersharingrule",
+      "title": "StandardObjectNameOwnerSharingRule",
+      "startPage": 1440,
+      "endPage": 1441,
+      "file": "012-standardobjectnameownersharingrule.md"
+    },
+    {
+      "slug": "standardobjectnameshare",
+      "title": "StandardObjectNameShare",
+      "startPage": 1442,
+      "endPage": 1442,
+      "file": "013-standardobjectnameshare.md"
+    },
+    {
+      "slug": "visitedpartyfeed",
+      "title": "VisitedPartyFeed",
+      "startPage": 1443,
+      "endPage": 1447,
+      "file": "014-visitedpartyfeed.md"
+    },
+    {
+      "slug": "visitorfeed",
+      "title": "VisitorFeed",
+      "startPage": 1448,
+      "endPage": 1451,
+      "file": "015-visitorfeed.md"
+    },
+    {
+      "slug": "life-sciences-cloud-fields-on-standard-objects",
+      "title": "AFLS Fields on Standard Objects",
+      "startPage": 1452,
+      "endPage": 1452,
+      "file": "016-life-sciences-cloud-fields-on-standard-objects.md"
+    },
+    {
+      "slug": "fields-on-account",
+      "title": "Fields on Account",
+      "startPage": 1453,
+      "endPage": 1453,
+      "file": "017-fields-on-account.md"
+    },
+    {
+      "slug": "accountplan",
+      "title": "AccountPlan",
+      "startPage": 1454,
+      "endPage": 1456,
+      "file": "018-accountplan.md"
+    },
+    {
+      "slug": "accountplanobjective",
+      "title": "AccountPlanObjective",
+      "startPage": 1457,
+      "endPage": 1457,
+      "file": "019-accountplanobjective.md"
+    },
+    {
+      "slug": "actionplan",
+      "title": "ActionPlan",
+      "startPage": 1458,
+      "endPage": 1460,
+      "file": "020-actionplan.md"
+    },
+    {
+      "slug": "actionplanitem",
+      "title": "ActionPlanItem",
+      "startPage": 1461,
+      "endPage": 1461,
+      "file": "021-actionplanitem.md"
+    },
+    {
+      "slug": "actionplantemplateitemvalue",
+      "title": "ActionPlanTemplateItemValue",
+      "startPage": 1462,
+      "endPage": 1462,
+      "file": "022-actionplantemplateitemvalue.md"
+    },
+    {
+      "slug": "fields-on-actionplantemplate",
+      "title": "Fields on ActionPlanTemplate",
+      "startPage": 1463,
+      "endPage": 1463,
+      "file": "023-fields-on-actionplantemplate.md"
+    },
+    {
+      "slug": "fields-on-actionplantemplateitem",
+      "title": "Fields on ActionPlanTemplateItem",
+      "startPage": 1464,
+      "endPage": 1464,
+      "file": "024-fields-on-actionplantemplateitem.md"
+    },
+    {
+      "slug": "actionplantemplateversion",
+      "title": "ActionPlanTemplateVersion",
+      "startPage": 1465,
+      "endPage": 1465,
+      "file": "025-actionplantemplateversion.md"
+    },
+    {
+      "slug": "fields-on-contact",
+      "title": "Fields on Contact",
+      "startPage": 1466,
+      "endPage": 1466,
+      "file": "026-fields-on-contact.md"
+    },
+    {
+      "slug": "fields-on-contactpointaddress",
+      "title": "Fields on ContactPointAddress",
+      "startPage": 1467,
+      "endPage": 1469,
+      "file": "027-fields-on-contactpointaddress.md"
+    },
+    {
+      "slug": "fields-on-event",
+      "title": "Fields on Event",
+      "startPage": 1470,
+      "endPage": 1471,
+      "file": "028-fields-on-event.md"
+    },
+    {
+      "slug": "fields-on-event-relation",
+      "title": "Fields on Event Relation",
+      "startPage": 1472,
+      "endPage": 1473,
+      "file": "029-fields-on-event-relation.md"
+    },
+    {
+      "slug": "fields-on-productrequest",
+      "title": "Fields on ProductRequest",
+      "startPage": 1474,
+      "endPage": 1474,
+      "file": "030-fields-on-productrequest.md"
+    },
+    {
+      "slug": "fields-on-producttransfer",
+      "title": "Fields on ProductTransfer",
+      "startPage": 1475,
+      "endPage": 1475,
+      "file": "031-fields-on-producttransfer.md"
+    },
+    {
+      "slug": "standardvalueset-names-and-standard-picklist-fields",
+      "title": "StandardValueSet Names and Standard Picklist Fields",
+      "startPage": 1476,
+      "endPage": 1479,
+      "file": "032-standardvalueset-names-and-standard-picklist-fields.md"
+    },
+    {
+      "slug": "life-sciences-cloud-platform-events",
+      "title": "AFLS Platform Events",
+      "startPage": 1480,
+      "endPage": 1480,
+      "file": "033-life-sciences-cloud-platform-events.md"
+    },
+    {
+      "slug": "carebnftvrfyrqststschgevent",
+      "title": "CareBnftVrfyRqstStsChgEvent",
+      "startPage": 1481,
+      "endPage": 1481,
+      "file": "034-carebnftvrfyrqststschgevent.md"
+    },
+    {
+      "slug": "working-with-electronic-health-records",
+      "title": "Working With Electronic Health Records",
+      "startPage": 1482,
+      "endPage": 1482,
+      "file": "035-working-with-electronic-health-records.md"
+    },
+    {
+      "slug": "mapping-fhir-v4-0-to-salesforce-standard-objects",
+      "title": "Mapping FHIR v4.0 to Salesforce Standard Objects",
+      "startPage": 1483,
+      "endPage": 1587,
+      "file": "036-mapping-fhir-v4-0-to-salesforce-standard-objects.md"
+    },
+    {
+      "slug": "store-hl7-v2-3-messages-in-salesforce-standard-objects",
+      "title": "Store HL7 v2.3 Messages in Salesforce Standard Objects",
+      "startPage": 1588,
+      "endPage": 1605,
+      "file": "037-store-hl7-v2-3-messages-in-salesforce-standard-objects.md"
+    },
+    {
+      "slug": "life-sciences-cloud-business-apis",
+      "title": "AFLS Business APIs",
+      "startPage": 1606,
+      "endPage": 1606,
+      "file": "038-life-sciences-cloud-business-apis.md"
+    },
+    {
+      "slug": "resources",
+      "title": "Resources",
+      "startPage": 1607,
+      "endPage": 1692,
+      "file": "039-resources.md"
+    },
+    {
+      "slug": "request-bodies",
+      "title": "Request Bodies",
+      "startPage": 1693,
+      "endPage": 1784,
+      "file": "040-request-bodies.md"
+    },
+    {
+      "slug": "response-bodies",
+      "title": "Response Bodies",
+      "startPage": 1785,
+      "endPage": 1852,
+      "file": "041-response-bodies.md"
+    },
+    {
+      "slug": "apex-reference",
+      "title": "Apex Reference",
+      "startPage": 1853,
+      "endPage": 1853,
+      "file": "042-apex-reference.md"
+    },
+    {
+      "slug": "embeddedai-namespace",
+      "title": "embeddedai Namespace",
+      "startPage": 1854,
+      "endPage": 1858,
+      "file": "043-embeddedai-namespace.md"
+    },
+    {
+      "slug": "connectapi-namespace",
+      "title": "ConnectApi Namespace",
+      "startPage": 1859,
+      "endPage": 1869,
+      "file": "044-connectapi-namespace.md"
+    },
+    {
+      "slug": "life-sciences-cloud-standard-invocable-actions",
+      "title": "AFLS Standard Invocable Actions",
+      "startPage": 1870,
+      "endPage": 1870,
+      "file": "045-life-sciences-cloud-standard-invocable-actions.md"
+    },
+    {
+      "slug": "assign-candidate-to-research-study-group-action",
+      "title": "Assign Candidate to Research Study Group Action",
+      "startPage": 1871,
+      "endPage": 1872,
+      "file": "046-assign-candidate-to-research-study-group-action.md"
+    },
+    {
+      "slug": "build-product-territory-detailed-availability-action",
+      "title": "Build Product Territory Detailed Availability Action",
+      "startPage": 1873,
+      "endPage": 1873,
+      "file": "047-build-product-territory-detailed-availability-action.md"
+    },
+    {
+      "slug": "generate-research-study-blocks-action",
+      "title": "Generate Research Study Blocks Action",
+      "startPage": 1874,
+      "endPage": 1875,
+      "file": "048-generate-research-study-blocks-action.md"
+    },
+    {
+      "slug": "get-context-data-action",
+      "title": "Get Context Data Action",
+      "startPage": 1876,
+      "endPage": 1878,
+      "file": "049-get-context-data-action.md"
+    },
+    {
+      "slug": "get-life-sciences-configuration-field-names-and-values",
+      "title": "Get Life Sciences Configuration Field Names and Values",
+      "startPage": 1879,
+      "endPage": 1880,
+      "file": "050-get-life-sciences-configuration-field-names-and-values.md"
+    },
+    {
+      "slug": "process-criteria-matching-response",
+      "title": "Process Criteria Matching Response",
+      "startPage": 1881,
+      "endPage": 1882,
+      "file": "051-process-criteria-matching-response.md"
+    },
+    {
+      "slug": "serialize-hierarchical-context-data",
+      "title": "Serialize Hierarchical Context Data",
+      "startPage": 1883,
+      "endPage": 1884,
+      "file": "052-serialize-hierarchical-context-data.md"
+    },
+    {
+      "slug": "life-sciences-cloud-tooling-api-objects",
+      "title": "AFLS Tooling API Objects",
+      "startPage": 1885,
+      "endPage": 1885,
+      "file": "053-life-sciences-cloud-tooling-api-objects.md"
+    },
+    {
+      "slug": "assessmentconfiguration",
+      "title": "AssessmentConfiguration",
+      "startPage": 1886,
+      "endPage": 1888,
+      "file": "054-assessmentconfiguration.md"
+    },
+    {
+      "slug": "carebenefitverifysettings",
+      "title": "CareBenefitVerifySettings",
+      "startPage": 1889,
+      "endPage": 1891,
+      "file": "055-carebenefitverifysettings.md"
+    },
+    {
+      "slug": "carelimittype",
+      "title": "CareLimitType",
+      "startPage": 1892,
+      "endPage": 1895,
+      "file": "056-carelimittype.md"
+    },
+    {
+      "slug": "careproviderafflroleconfig",
+      "title": "CareProviderAfflRoleConfig",
+      "startPage": 1896,
+      "endPage": 1897,
+      "file": "057-careproviderafflroleconfig.md"
+    },
+    {
+      "slug": "careprovidersearchconfig",
+      "title": "CareProviderSearchConfig",
+      "startPage": 1898,
+      "endPage": 1900,
+      "file": "058-careprovidersearchconfig.md"
+    },
+    {
+      "slug": "carerequestconfiguration",
+      "title": "CareRequestConfiguration",
+      "startPage": 1901,
+      "endPage": 1905,
+      "file": "059-carerequestconfiguration.md"
+    },
+    {
+      "slug": "caresystemfieldmapping",
+      "title": "CareSystemFieldMapping",
+      "startPage": 1906,
+      "endPage": 1909,
+      "file": "060-caresystemfieldmapping.md"
+    },
+    {
+      "slug": "timelineobjectdefinition",
+      "title": "TimelineObjectDefinition",
+      "startPage": 1910,
+      "endPage": 1910,
+      "file": "061-timelineobjectdefinition.md"
+    },
+    {
+      "slug": "customer-engagement-tooling-api-objects",
+      "title": "Customer Engagement Tooling API Objects",
+      "startPage": 1911,
+      "endPage": 1927,
+      "file": "062-customer-engagement-tooling-api-objects.md"
+    },
+    {
+      "slug": "searchableobjdatasyncinfo",
+      "title": "SearchableObjDataSyncInfo",
+      "startPage": 1928,
+      "endPage": 1929,
+      "file": "063-searchableobjdatasyncinfo.md"
+    },
+    {
+      "slug": "searchcriteriaconfiguration",
+      "title": "SearchCriteriaConfiguration",
+      "startPage": 1930,
+      "endPage": 1934,
+      "file": "064-searchcriteriaconfiguration.md"
+    },
+    {
+      "slug": "searchresultactionconfig",
+      "title": "SearchResultActionConfig",
+      "startPage": 1935,
+      "endPage": 1937,
+      "file": "065-searchresultactionconfig.md"
+    },
+    {
+      "slug": "life-sciences-cloud-metadata-types",
+      "title": "AFLS Metadata Types",
+      "startPage": 1938,
+      "endPage": 1938,
+      "file": "066-life-sciences-cloud-metadata-types.md"
+    },
+    {
+      "slug": "carebenefitverifysettings-2",
+      "title": "CareBenefitVerifySettings",
+      "startPage": 1939,
+      "endPage": 1940,
+      "file": "067-carebenefitverifysettings-2.md"
+    },
+    {
+      "slug": "carelimittype-2",
+      "title": "CareLimitType",
+      "startPage": 1941,
+      "endPage": 1942,
+      "file": "068-carelimittype-2.md"
+    },
+    {
+      "slug": "carerequestconfiguration-2",
+      "title": "CareRequestConfiguration",
+      "startPage": 1943,
+      "endPage": 1945,
+      "file": "069-carerequestconfiguration-2.md"
+    },
+    {
+      "slug": "caresystemfieldmapping-2",
+      "title": "CareSystemFieldMapping",
+      "startPage": 1946,
+      "endPage": 1947,
+      "file": "070-caresystemfieldmapping-2.md"
+    },
+    {
+      "slug": "careprovidersearchconfig-2",
+      "title": "CareProviderSearchConfig",
+      "startPage": 1948,
+      "endPage": 1948,
+      "file": "071-careprovidersearchconfig-2.md"
+    },
+    {
+      "slug": "flow-for-life-sciences-cloud",
+      "title": "Flow for AFLS",
+      "startPage": 1949,
+      "endPage": 1949,
+      "file": "072-flow-for-life-sciences-cloud.md"
+    },
+    {
+      "slug": "industriessettings",
+      "title": "IndustriesSettings",
+      "startPage": 1950,
+      "endPage": 1952,
+      "file": "073-industriessettings.md"
+    },
+    {
+      "slug": "industriesunifiedinventorysettings",
+      "title": "IndustriesUnifiedInventorySettings",
+      "startPage": 1953,
+      "endPage": 1954,
+      "file": "074-industriesunifiedinventorysettings.md"
+    },
+    {
+      "slug": "lifesciconfigcategory",
+      "title": "LifeSciConfigCategory",
+      "startPage": 1955,
+      "endPage": 1957,
+      "file": "075-lifesciconfigcategory.md"
+    },
+    {
+      "slug": "lifesciconfigrecord",
+      "title": "LifeSciConfigRecord",
+      "startPage": 1958,
+      "endPage": 1962,
+      "file": "076-lifesciconfigrecord.md"
+    },
+    {
+      "slug": "searchresultactionconfig-2",
+      "title": "SearchResultActionConfig",
+      "startPage": 1963,
+      "endPage": 1964,
+      "file": "077-searchresultactionconfig-2.md"
+    },
+    {
+      "slug": "timelineobjectdefinition-2",
+      "title": "TimelineObjectDefinition",
+      "startPage": 1965,
+      "endPage": 1966,
+      "file": "078-timelineobjectdefinition-2.md"
+    },
+    {
+      "slug": "uiobjectrelationconfig",
+      "title": "UIObjectRelationConfig",
+      "startPage": 1967,
+      "endPage": 1971,
+      "file": "079-uiobjectrelationconfig.md"
+    },
+    {
+      "slug": "customer-engagement-metadata-type",
+      "title": "Customer Engagement Metadata Type",
+      "startPage": 1972,
+      "endPage": 1977,
+      "file": "080-customer-engagement-metadata-type.md"
+    },
+    {
+      "slug": "api-end-of-life-policy",
+      "title": "API End-of-Life Policy",
+      "startPage": 1978,
+      "endPage": 1978,
+      "file": "081-api-end-of-life-policy.md"
+    }
+  ]
+}

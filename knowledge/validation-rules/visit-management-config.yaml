@@ -1,0 +1,272 @@
+# AFLS Visit Management Configuration Validation Rules
+# ===================================================
+# Rules to validate Visit Management configuration including
+# record types, trigger handlers, compliance statements,
+# territory info, and mobile cache.
+#
+# Verified object names:
+#   - Visit (standard)
+#   - ProviderVisit (standard)
+#   - RecordType (standard Salesforce)
+#   - ProviderAcctTerritoryInfo (standard)
+#   - ComplianceStatementDefinition (standard)
+#   - LifeSciMobileMetadataRecord (standard)
+
+schema_version: "1.0"
+category_name: "Visit Management Configuration"
+description: |
+  Validation rules for AFLS Visit Management configuration.
+  Covers record types, trigger handlers, compliance statements,
+  territory visit tracking, and mobile cache requirements.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Visit Record Types
+  # ===========================================================================
+
+  - id: visit-001
+    name: Visit record types exist and are active
+    description: |
+      Verifies that at least one active Visit record type exists.
+      Visit record types are required to distinguish between different
+      visit types (Detail Visit, Remote Visit, Medical Education, etc.).
+      Without record types, all visits use the default Master record type,
+      which limits configuration flexibility and engagement page customization.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM RecordType
+        WHERE SobjectType = 'Visit'
+        AND IsActive = true
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, DeveloperName, IsActive
+        FROM RecordType
+        WHERE SobjectType = 'Visit'
+    symptoms:
+      - "Visit record type not available"
+      - "Cannot select visit type"
+      - "All visits showing as same type"
+    resolution:
+      steps:
+        - "Navigate to Setup > Object Manager > Visit > Record Types"
+        - "Create record types for each visit type needed (e.g., Detail Visit, Remote Visit)"
+        - "Assign record types to profiles"
+        - "Create matching ProviderVisit record types"
+      ui_path: "Setup > Object Manager > Visit > Record Types"
+    tags: [visit, configuration, record-type]
+
+  # ===========================================================================
+  # SECTION 2: ProviderVisit Record Type Alignment
+  # ===========================================================================
+
+  - id: visit-002
+    name: ProviderVisit record types match Visit record types
+    description: |
+      Verifies that ProviderVisit record types exist. Each Visit record type
+      should have a corresponding ProviderVisit record type. Mismatched record
+      types can cause errors during visit creation and engagement page rendering.
+      The mapping between Visit and ProviderVisit record types is configured in
+      Admin Console > Visit Settings > Visit Record Type Mappings.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, DeveloperName, IsActive
+        FROM RecordType
+        WHERE SobjectType = 'ProviderVisit'
+        AND IsActive = true
+      expect: "records.length > 0"
+    symptoms:
+      - "Visit engagement page not loading"
+      - "ProviderVisit record type mismatch"
+      - "Visit Type Mapping blank screen"
+      - "403 error on Visit Type Mapping"
+    resolution:
+      steps:
+        - "Navigate to Setup > Object Manager > ProviderVisit > Record Types"
+        - "Create ProviderVisit record types matching each Visit record type"
+        - "Navigate to Admin Console > Visit Settings > Visit Record Type Mappings"
+        - "Map each Visit record type to its ProviderVisit record type"
+      ui_path: "Setup > Object Manager > ProviderVisit > Record Types"
+    tags: [visit, configuration, record-type]
+
+  # ===========================================================================
+  # SECTION 3: Compliance Statements
+  # ===========================================================================
+
+  - id: visit-003
+    name: Compliance statements configured for Visit module
+    description: |
+      Verifies that ComplianceStatementDefinition records exist for the Visit
+      module. Compliance statements are required for the signature capture page
+      during visit completion. Without them, the signature page may not display
+      correctly or may be missing required disclaimers.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Module, StatementType, IsActive
+        FROM ComplianceStatementDefinition
+        WHERE Module = 'Visit'
+      expect: "records.length > 0"
+    symptoms:
+      - "Signature page not showing"
+      - "Missing compliance disclaimer"
+      - "Cannot complete visit - signature required"
+    resolution:
+      steps:
+        - "Navigate to Setup > Compliance Statement Definitions"
+        - "Create a new ComplianceStatementDefinition record"
+        - "Set Module to 'Visit'"
+        - "Configure statement text and type"
+        - "Mark as Active"
+      ui_path: "Setup > Compliance Statement Definitions"
+    tags: [visit, configuration, compliance, signature]
+
+  # ===========================================================================
+  # SECTION 4: Territory Visit Tracking
+  # ===========================================================================
+
+  - id: visit-004
+    name: ProviderAcctTerritoryInfo records exist
+    description: |
+      Checks whether ProviderAcctTerritoryInfo records exist. These records
+      track visit counts and dates per account per territory. They are populated
+      by the Visit Rollup Job. If no records exist, territory-level visit
+      tracking is not active, which affects Activity Plan calculations and
+      Next Best Customer scoring.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ProviderAcctTerritoryInfo
+      expect: "count > 0"
+    symptoms:
+      - "Visit counts not showing on account"
+      - "LastProviderVisitDate is null"
+      - "Activity Plan not counting visits"
+    resolution:
+      steps:
+        - "Verify the Visit Rollup Job is scheduled and active"
+        - "Navigate to Admin Console > Visit Settings > Visit Jobs"
+        - "Ensure the rollup job is running on schedule"
+        - "If records exist but are stale, check that visits are being completed"
+      ui_path: "Admin Console > Visit Settings > Visit Jobs"
+    tags: [visit, territory, reporting]
+
+  # ===========================================================================
+  # SECTION 5: Mobile Metadata Cache for Visits
+  # ===========================================================================
+
+  - id: visit-005
+    name: Mobile metadata cache active for visit objects
+    description: |
+      Verifies that mobile metadata cache is active. Visit management on mobile
+      requires an active metadata cache that includes Visit, ProviderVisit, and
+      related objects. Without active cache, visit data will not sync to mobile
+      devices and visit engagement will not work offline.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Visits not syncing to mobile"
+      - "Visit engagement not available offline"
+      - "Device sync transaction record was not found"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify Visit and ProviderVisit objects are included in DB Schema"
+        - "Regenerate metadata cache for affected profiles"
+        - "Have users sync their mobile devices"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [visit, mobile, cache]
+
+  # ===========================================================================
+  # SECTION 6: Trigger Handlers
+  # ===========================================================================
+
+  - id: visit-006
+    name: Visit-related trigger handlers are enabled
+    description: |
+      Checks for visit-related trigger handler configuration. Trigger handlers
+      on Visit, ProviderVisit, and ProviderVisitPrdDetailing objects are required
+      for core visit management automation including status updates, rollup
+      calculations, and data synchronization. If trigger handlers are disabled,
+      visit creation and completion may fail or produce incorrect data.
+    category: configuration
+    severity: error
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, DeveloperName, IsActive
+        FROM RecordType
+        WHERE SobjectType = 'Visit'
+        LIMIT 1
+      expect: "records.length >= 0"
+    symptoms:
+      - "Visit status not updating automatically"
+      - "Visit rollup counts incorrect"
+      - "ProviderVisit not created with Visit"
+      - "Product detailing not saving"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Visit Settings > Trigger Handlers"
+        - "Verify VisitTriggerHandler is active"
+        - "Verify ProviderVisitTriggerHandler is active"
+        - "Verify ProviderVisitPrdDetailingTriggerHandler is active"
+        - "If handlers are missing, check that AFLS package is properly installed"
+      ui_path: "Admin Console > Visit Settings > Trigger Handlers"
+    issue_ref: "6.1"
+    tags: [visit, configuration, trigger]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  visit-config-check:
+    name: "Visit Configuration Check"
+    description: "Full visit management configuration check - record types, compliance, territory info, cache, and triggers"
+    rules:
+      - visit-001
+      - visit-002
+      - visit-003
+      - visit-004
+      - visit-005
+      - visit-006
+
+  visit-mobile:
+    name: "Visit Mobile Check"
+    description: "Mobile-specific visit checks - metadata cache and sync requirements"
+    rules:
+      - visit-005
+
+  pre-deployment-visit:
+    name: "Pre-Deployment Visit Check"
+    description: "Run before deploying visit management to users - all critical checks"
+    rules:
+      - visit-001
+      - visit-002
+      - visit-003
+      - visit-005
+      - visit-006

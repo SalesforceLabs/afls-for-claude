@@ -1,0 +1,19 @@
+Here is the transcription of the provided video excerpt \"Ratings-Final.MP4\":
+
+\"Let\'s walk through the ratings feature within the AFLS mobile app. A powerful tool designed to help fieldbased users better segment and engage their customers. **Ratings allow users like sales reps, MSLs, and key account managers to categorize and analyze ATCP data based on business relevant criteria**. Whether you\'re evaluating prescription volume, prior engagement, or influence, ratings help you focus is where it counts. Let\'s start by opening the profile for Dr. Morita and navigating to the ratings tab. At the top, you\'ll see three types of ratings. Let\'s explore them one by one.
+
+**General ratings**. These are applied directly at the account level and are universal, meaning they\'re not tied to any specific territory or product. Some examples include digital engagement readiness or engagement level.
+
+**Influence rating**. These custom fields are created directly on the account object based on your organization\'s need. For example, after a recent visit with Dr. Marita, I felt the engagement was strong and he clearly holds influence among his peers. So, I updated both his engagement level and influence rating to high. I can also see a history of changes and whether any of my colleagues have rated him previously. This helps ensure transparency and shared context across the team. You may have noticed the color change when I updated the rating from medium to high. This visual cue helps quickly indicate whether a rating is positive, neutral, or negative at a glance. It\'s also fully configurable based on the rating type and specific business needs. You\'ll also see that each section header within the rating view can be expanded or collapsed for easier navigation. The section names are fully configurable and additional sections can be added as needed. All of this is managed through the ratings layout configuration accessible via the ratings admin console.
+
+**Territory level ratings**. These ratings are account and territory specific. Only the user assigned to the territory will see and edit these val values. This is especially useful when segmenting accounts for targeting or alignment strategies as prescriptions or engagement strategies may vary regionally.
+
+**Account address level ratings**. These ratings apply to the ACP\'s affiliated organizations or practice locations. I can select a specific address for Dr. Morita and manage ratings that reflect things like time at that location or access rating indicating how easy or difficult it is to reach this HCP at that site. This information is essential for planning physical visits and understanding local access dynamics.
+
+Not shown here are product level ratings and team level ratings.
+
+**Product level ratings** are tied to the account, product, and territory relationship. The products are displayed here based on product alignment with the user\'s territory. Once a product level rating is captured, a provider account product information record is created.
+
+**Team level ratings**. These are shared among crossf functional users aligned to the same account. These ratings help teams align on a collaborative strategy across sales, medical, and access roles. Teams are configured in the admin console and ratings are visible only within the team providing focused collaboration on high valued accounts.
+
+Again, since ratings are custom fields that you can create yourself on the applicable object, they offer a high degree of flexibility. **Ratings can also feed into data cloud segmentation**, helping control teams create dynamic customer lists and campaigns that reflect real world field insights and **ratings can also be included in next best customer logic**, allowing the system to prioritize HCPs not just by volume or activity but by strategy potential influence or access level.\"

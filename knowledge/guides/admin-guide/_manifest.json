@@ -1,0 +1,309 @@
+{
+  "guideTitle": "Administer AFLS",
+  "guideSlug": "admin-guide",
+  "pdfFileName": "administer_life_sciences_cloud_3-3-2026.pdf",
+  "totalPages": 1263,
+  "sections": [
+    {
+      "slug": "introduction",
+      "title": "Introduction",
+      "startPage": 1,
+      "endPage": 3,
+      "file": "001-introduction.md"
+    },
+    {
+      "slug": "1244",
+      "title": "1244",
+      "startPage": 4,
+      "endPage": 8,
+      "file": "002-1244.md"
+    },
+    {
+      "slug": "set-up-customer-engagement-basics",
+      "title": "Set Up Customer Engagement Basics",
+      "startPage": 9,
+      "endPage": 9,
+      "file": "003-set-up-customer-engagement-basics.md"
+    },
+    {
+      "slug": "set-up-life-sciences-cloud-for-customer-engagement-basics",
+      "title": "Set Up AFLS for Customer Engagement Basics",
+      "startPage": 10,
+      "endPage": 26,
+      "file": "004-set-up-life-sciences-cloud-for-customer-engagement-basics.md"
+    },
+    {
+      "slug": "set-up-the-life-sciences-cloud-mobile-app",
+      "title": "Set Up the AFLS Mobile App",
+      "startPage": 27,
+      "endPage": 58,
+      "file": "005-set-up-the-life-sciences-cloud-mobile-app.md"
+    },
+    {
+      "slug": "set-up-account-management-features",
+      "title": "Set Up Account Management Features",
+      "startPage": 59,
+      "endPage": 174,
+      "file": "006-set-up-account-management-features.md"
+    },
+    {
+      "slug": "set-up-engagement-planning-features",
+      "title": "Set Up Engagement Planning Features",
+      "startPage": 175,
+      "endPage": 236,
+      "file": "007-set-up-engagement-planning-features.md"
+    },
+    {
+      "slug": "set-up-engagement-execution-features",
+      "title": "Set Up Engagement Execution Features",
+      "startPage": 237,
+      "endPage": 309,
+      "file": "008-set-up-engagement-execution-features.md"
+    },
+    {
+      "slug": "set-up-intelligent-content-features",
+      "title": "Set Up Intelligent Content Features",
+      "startPage": 310,
+      "endPage": 431,
+      "file": "009-set-up-intelligent-content-features.md"
+    },
+    {
+      "slug": "set-up-product-management-features",
+      "title": "Set Up Product Management Features",
+      "startPage": 432,
+      "endPage": 446,
+      "file": "010-set-up-product-management-features.md"
+    },
+    {
+      "slug": "set-up-sample-management-features",
+      "title": "Set Up Sample Management Features",
+      "startPage": 447,
+      "endPage": 480,
+      "file": "011-set-up-sample-management-features.md"
+    },
+    {
+      "slug": "set-up-common-customer-engagement-components",
+      "title": "Set Up Common Customer Engagement Components",
+      "startPage": 481,
+      "endPage": 637,
+      "file": "012-set-up-common-customer-engagement-components.md"
+    },
+    {
+      "slug": "integrate-data-360-and-tableau-next-with-customer-engagement",
+      "title": "Integrate Data 360 and Tableau Next with Customer Engagement",
+      "startPage": 638,
+      "endPage": 643,
+      "file": "013-integrate-data-360-and-tableau-next-with-customer-engagement.md"
+    },
+    {
+      "slug": "use-life-sciences-cloud-for-customer-engagement-features",
+      "title": "Use AFLS for Customer Engagement Features",
+      "startPage": 644,
+      "endPage": 717,
+      "file": "014-use-life-sciences-cloud-for-customer-engagement-features.md"
+    },
+    {
+      "slug": "leverage-customer-engagement-best-practices",
+      "title": "Leverage Customer Engagement Best Practices",
+      "startPage": 718,
+      "endPage": 733,
+      "file": "015-leverage-customer-engagement-best-practices.md"
+    },
+    {
+      "slug": "life-sciences-cloud-for-customer-engagement-patch-releases",
+      "title": "AFLS for Customer Engagement Patch Releases",
+      "startPage": 734,
+      "endPage": 768,
+      "file": "016-life-sciences-cloud-for-customer-engagement-patch-releases.md"
+    },
+    {
+      "slug": "get-started-with-clinical-engagement",
+      "title": "Get Started with Clinical Engagement",
+      "startPage": 769,
+      "endPage": 769,
+      "file": "017-get-started-with-clinical-engagement.md"
+    },
+    {
+      "slug": "sign-up-for-a-life-sciences-trial-org",
+      "title": "Sign Up for a Life Sciences Trial Org",
+      "startPage": 770,
+      "endPage": 770,
+      "file": "018-sign-up-for-a-life-sciences-trial-org.md"
+    },
+    {
+      "slug": "plan-and-prepare-for-clinical-engagement",
+      "title": "Plan and Prepare for Clinical Engagement",
+      "startPage": 771,
+      "endPage": 775,
+      "file": "019-plan-and-prepare-for-clinical-engagement.md"
+    },
+    {
+      "slug": "set-up-clinical-engagement-basics",
+      "title": "Set Up Clinical Engagement Basics",
+      "startPage": 776,
+      "endPage": 790,
+      "file": "020-set-up-clinical-engagement-basics.md"
+    },
+    {
+      "slug": "set-up-participant-management",
+      "title": "Set Up Participant Management",
+      "startPage": 791,
+      "endPage": 852,
+      "file": "021-set-up-participant-management.md"
+    },
+    {
+      "slug": "set-up-site-management",
+      "title": "Set Up Site Management",
+      "startPage": 853,
+      "endPage": 891,
+      "file": "022-set-up-site-management.md"
+    },
+    {
+      "slug": "set-up-advanced-therapy-management",
+      "title": "Set Up Advanced Therapy Management",
+      "startPage": 892,
+      "endPage": 976,
+      "file": "023-set-up-advanced-therapy-management.md"
+    },
+    {
+      "slug": "set-up-benefit-verification",
+      "title": "Set Up Benefit Verification",
+      "startPage": 977,
+      "endPage": 977,
+      "file": "024-set-up-benefit-verification.md"
+    },
+    {
+      "slug": "set-up-care-programs",
+      "title": "Set Up Care Programs",
+      "startPage": 978,
+      "endPage": 993,
+      "file": "025-set-up-care-programs.md"
+    },
+    {
+      "slug": "set-up-financial-assistance-programs",
+      "title": "Set Up Financial Assistance Programs",
+      "startPage": 994,
+      "endPage": 1038,
+      "file": "026-set-up-financial-assistance-programs.md"
+    },
+    {
+      "slug": "set-up-patient-program-outcome-management",
+      "title": "Set Up Patient Program Outcome Management",
+      "startPage": 1039,
+      "endPage": 1063,
+      "file": "027-set-up-patient-program-outcome-management.md"
+    },
+    {
+      "slug": "set-up-patient-support-programs-analytics-for-life-sciences-cloud",
+      "title": "Set Up Patient Support Programs Analytics for AFLS",
+      "startPage": 1064,
+      "endPage": 1074,
+      "file": "028-set-up-patient-support-programs-analytics-for-life-sciences-cloud.md"
+    },
+    {
+      "slug": "description",
+      "title": "description",
+      "startPage": 1075,
+      "endPage": 1075,
+      "file": "029-description.md"
+    },
+    {
+      "slug": "set-up-patient-support-programs-analytics-for-life-sciences-cloud-2",
+      "title": "Set Up Patient Support Programs Analytics for AFLS",
+      "startPage": 1076,
+      "endPage": 1082,
+      "file": "030-set-up-patient-support-programs-analytics-for-life-sciences-cloud-2.md"
+    },
+    {
+      "slug": "set-up-pharmacy-benefits-verification",
+      "title": "Set Up Pharmacy Benefits Verification",
+      "startPage": 1083,
+      "endPage": 1151,
+      "file": "031-set-up-pharmacy-benefits-verification.md"
+    },
+    {
+      "slug": "set-up-provider-relationship-cards",
+      "title": "Set Up Provider Relationship Cards",
+      "startPage": 1152,
+      "endPage": 1153,
+      "file": "032-set-up-provider-relationship-cards.md"
+    },
+    {
+      "slug": "get-started-with-medtech-commercial-engagement",
+      "title": "Get Started with MedTech Commercial Engagement",
+      "startPage": 1154,
+      "endPage": 1154,
+      "file": "033-get-started-with-medtech-commercial-engagement.md"
+    },
+    {
+      "slug": "set-up-commercial-excellence-features",
+      "title": "Set Up Commercial Excellence Features",
+      "startPage": 1155,
+      "endPage": 1161,
+      "file": "034-set-up-commercial-excellence-features.md"
+    },
+    {
+      "slug": "set-up-intelligent-sales",
+      "title": "Set Up Intelligent Sales",
+      "startPage": 1162,
+      "endPage": 1223,
+      "file": "035-set-up-intelligent-sales.md"
+    },
+    {
+      "slug": "agentforce-for-pharmacy-benefits-reverification",
+      "title": "Agentforce for Pharmacy Benefits Reverification",
+      "startPage": 1224,
+      "endPage": 1236,
+      "file": "036-agentforce-for-pharmacy-benefits-reverification.md"
+    },
+    {
+      "slug": "agentforce-for-site-management",
+      "title": "Agentforce for Site Management",
+      "startPage": 1237,
+      "endPage": 1247,
+      "file": "037-agentforce-for-site-management.md"
+    },
+    {
+      "slug": "advanced-patient-card",
+      "title": "Advanced Patient Card",
+      "startPage": 1248,
+      "endPage": 1248,
+      "file": "038-advanced-patient-card.md"
+    },
+    {
+      "slug": "electronic-signatures",
+      "title": "Electronic Signatures",
+      "startPage": 1249,
+      "endPage": 1254,
+      "file": "039-electronic-signatures.md"
+    },
+    {
+      "slug": "hls-accelerators",
+      "title": "HLS Accelerators",
+      "startPage": 1255,
+      "endPage": 1255,
+      "file": "040-hls-accelerators.md"
+    },
+    {
+      "slug": "intelligent-document-automation",
+      "title": "Intelligent Document Automation",
+      "startPage": 1256,
+      "endPage": 1256,
+      "file": "041-intelligent-document-automation.md"
+    },
+    {
+      "slug": "product-catalog-management-in-life-sciences-cloud",
+      "title": "Product Catalog Management in AFLS",
+      "startPage": 1257,
+      "endPage": 1258,
+      "file": "042-product-catalog-management-in-life-sciences-cloud.md"
+    },
+    {
+      "slug": "view-events-using-enhanced-timeline-in-life-sciences-cloud",
+      "title": "View Events Using Enhanced Timeline in AFLS",
+      "startPage": 1259,
+      "endPage": 1263,
+      "file": "043-view-events-using-enhanced-timeline-in-life-sciences-cloud.md"
+    }
+  ]
+}

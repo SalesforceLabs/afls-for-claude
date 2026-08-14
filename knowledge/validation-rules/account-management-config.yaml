@@ -1,0 +1,378 @@
+# AFLS Account Management Configuration Validation Rules
+# =====================================================
+# Rules to validate Account Management configuration including
+# accounts, healthcare providers, addresses, business licenses,
+# affiliations, territory info, DCR managed fields, and mobile cache.
+#
+# Verified object names:
+#   - Account (standard)
+#   - HealthcareProvider (standard)
+#   - ContactPointAddress (standard)
+#   - BusinessLicense (standard)
+#   - ProviderAffiliation (standard)
+#   - ProviderAcctTerritoryInfo (standard)
+#   - LifeSciDataChgDefMngFld (standard)
+#   - LifeSciMobileMetadataRecord (standard)
+
+schema_version: "1.0"
+category_name: "Account Management Configuration"
+description: |
+  Validation rules for AFLS Account Management configuration.
+  Covers accounts, healthcare providers, addresses, business licenses,
+  affiliations, territory info, DCR managed fields, and mobile cache.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Account Records
+  # ===========================================================================
+
+  - id: acct-001
+    name: Account records exist
+    description: |
+      Verifies that Account records exist in the org. Accounts are the
+      foundational object in AFLS — nearly every other module depends on
+      accounts being configured. Most AFLS implementations use PersonAccount
+      for HCPs (Healthcare Professionals) and standard accounts for HCOs
+      (Healthcare Organizations).
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Account
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, RecordType.Name, IsPersonAccount
+        FROM Account
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "No accounts visible in the application"
+      - "Cannot search for providers"
+      - "Account list is empty"
+    resolution:
+      steps:
+        - "Verify PersonAccount is enabled in Setup > Company Information"
+        - "Create Account records with appropriate record types"
+        - "For HCPs, create PersonAccount records"
+        - "For HCOs, create standard business Account records"
+      ui_path: "Setup > Object Manager > Account"
+    tags: [account, configuration, core]
+
+  # ===========================================================================
+  # SECTION 2: Healthcare Provider Records
+  # ===========================================================================
+
+  - id: acct-002
+    name: HealthcareProvider records exist
+    description: |
+      Verifies that HealthcareProvider records exist. HealthcareProvider extends
+      Account with professional details (title, status, specialties). It has a
+      1:1 relationship with Account. Without HealthcareProvider records, provider-
+      specific functionality like specialties, NPI tracking, and professional
+      details will not be available.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM HealthcareProvider
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, AccountId, Account.Name, Status
+        FROM HealthcareProvider
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Provider details not showing on account"
+      - "Professional title missing"
+      - "Specialties section empty"
+      - "Provider card incomplete"
+    resolution:
+      steps:
+        - "Create HealthcareProvider records linked to Account records"
+        - "Set Status, ProfessionalTitle, and other required fields"
+        - "Ensure each HCP Account has a corresponding HealthcareProvider record"
+      ui_path: "Setup > Object Manager > HealthcareProvider"
+    tags: [account, configuration, provider]
+
+  # ===========================================================================
+  # SECTION 3: Contact Point Address Records
+  # ===========================================================================
+
+  - id: acct-003
+    name: ContactPointAddress records exist
+    description: |
+      Verifies that ContactPointAddress records exist. Addresses are critical
+      for account management — they drive visit planning, territory alignment,
+      and compliance validation. Each account should have at least one address,
+      and a primary address should be designated via IsPrimary field or through
+      ProviderAcctTerritoryInfo preferred address logic.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ContactPointAddress
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, ParentId, City, State, PostalCode, Country, IsPrimary
+        FROM ContactPointAddress
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "No addresses showing on account"
+      - "Address section empty on provider card"
+      - "Cannot plan visits — no address available"
+      - "Territory alignment missing address data"
+    resolution:
+      steps:
+        - "Create ContactPointAddress records linked to Account records via ParentId"
+        - "Set City, State, PostalCode, and Country fields"
+        - "Mark at least one address as IsPrimary = true per account"
+        - "Configure address formula field in Admin Console > Account Management > Address Administration & Setup"
+      ui_path: "Admin Console > Account Management > Address Administration & Setup"
+    tags: [account, configuration, address]
+
+  # ===========================================================================
+  # SECTION 4: Business License Records
+  # ===========================================================================
+
+  - id: acct-004
+    name: BusinessLicense records exist
+    description: |
+      Checks whether BusinessLicense records exist. Business licenses track
+      state licenses, DEA numbers, and state distributor licenses (SDL) for
+      healthcare providers. They include validation formulas (IsLicenseValidated)
+      and compliance scope settings. Not all implementations require business
+      licenses, but they are needed for sample management compliance.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM BusinessLicense
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, AccountId, Account.Name, LicenseNumber, Status, ExpirationDate
+        FROM BusinessLicense
+        ORDER BY Account.Name
+        LIMIT 10
+    symptoms:
+      - "License section empty on account"
+      - "Cannot validate provider licenses"
+      - "Sample compliance checks failing"
+    resolution:
+      steps:
+        - "Create BusinessLicense records linked to Account records"
+        - "Set LicenseNumber, Status, and ExpirationDate"
+        - "Configure ComplianceScope field (Jurisdiction State, Address/DEA, or SDL)"
+        - "Configure validation in Admin Console > License Management"
+      ui_path: "Admin Console > License Management"
+    tags: [account, configuration, license, compliance]
+
+  # ===========================================================================
+  # SECTION 5: Provider Affiliation Records
+  # ===========================================================================
+
+  - id: acct-005
+    name: ProviderAffiliation records exist
+    description: |
+      Checks whether ProviderAffiliation records exist. Affiliations define
+      relationships between HCPs and HCOs (e.g., a doctor affiliated with a
+      hospital). They support network view, table view, and hierarchy view
+      visualizations. Trigger handlers (HardAffiliationHandler,
+      AffiliationReciprocalHandler) automate affiliation management.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ProviderAffiliation
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, AccountFromId, AccountFrom.Name, AccountToId, AccountTo.Name, Role
+        FROM ProviderAffiliation
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Affiliation section empty on account"
+      - "Network view shows no connections"
+      - "Cannot see provider-organization relationships"
+    resolution:
+      steps:
+        - "Create ProviderAffiliation records linking HCPs to HCOs"
+        - "Set AccountFromId (HCP), AccountToId (HCO), and Role"
+        - "Activate trigger handlers: HardAffiliationHandler, AffiliationReciprocalHandler"
+        - "Configure affiliation settings in Admin Console > Account Management > Affiliations"
+      ui_path: "Admin Console > Account Management > Affiliations"
+    tags: [account, configuration, affiliation]
+
+  # ===========================================================================
+  # SECTION 6: Territory Info Records
+  # ===========================================================================
+
+  - id: acct-006
+    name: ProviderAcctTerritoryInfo records exist
+    description: |
+      Checks whether ProviderAcctTerritoryInfo records exist. These records
+      store territory-specific account information including preferred address,
+      last visit date, year-to-date visit count, and territory-level ratings.
+      They are essential for territory alignment, visit tracking, and activity
+      plan calculations.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ProviderAcctTerritoryInfo
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, AccountId, Account.Name, LastProviderVisitDate, YearToDateProviderVisitCount
+        FROM ProviderAcctTerritoryInfo
+        ORDER BY Account.Name
+        LIMIT 10
+    symptoms:
+      - "Territory info missing on account"
+      - "Visit counts not showing"
+      - "Preferred address not set"
+      - "Activity plan calculations incorrect"
+    resolution:
+      steps:
+        - "ProviderAcctTerritoryInfo records are typically created by territory alignment"
+        - "Verify territory alignment has been run for the target territories"
+        - "Check that the Visit Rollup Job is active for visit count updates"
+        - "Records can also be created manually for testing"
+      ui_path: "Admin Console > Territory Alignment"
+    tags: [account, configuration, territory]
+
+  # ===========================================================================
+  # SECTION 7: DCR Managed Fields
+  # ===========================================================================
+
+  - id: acct-007
+    name: DCR managed fields configured (if DCR is used)
+    description: |
+      Checks whether LifeSciDataChgDefMngFld records exist. These records
+      define which fields on which objects require Data Change Request (DCR)
+      approval before changes are applied. DCR is optional — only needed when
+      data governance workflows are required. If no managed field records exist,
+      DCR functionality will not be active.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciDataChgDefMngFld
+      expect: "count >= 0"
+    symptoms:
+      - "DCR not triggering on field changes"
+      - "Data changes applied immediately without approval"
+      - "DCR workflow not starting"
+    resolution:
+      steps:
+        - "If DCR is required, create LifeSciDataChgDefMngFld records"
+        - "Set ObjectApiName and FieldApiName for each managed field"
+        - "Set ApplyChangeImmediately based on governance requirements"
+        - "Activate DCRHandler trigger"
+        - "Configure DCR settings in Admin Console > Account Management > Data Change Request"
+      ui_path: "Admin Console > Account Management > Data Change Request"
+    tags: [account, configuration, dcr]
+
+  # ===========================================================================
+  # SECTION 8: Mobile Metadata Cache
+  # ===========================================================================
+
+  - id: acct-008
+    name: Mobile metadata cache active for account objects
+    description: |
+      Verifies that mobile metadata cache is active. Account management on
+      mobile requires an active metadata cache that includes Account,
+      HealthcareProvider, ContactPointAddress, BusinessLicense, and related
+      objects. Without active cache, account data will not sync to mobile
+      devices and the Provider Card will not work offline.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Accounts not syncing to mobile"
+      - "Provider Card not available offline"
+      - "Address data missing on iPad"
+      - "Device sync transaction record was not found"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify Account, HealthcareProvider, ContactPointAddress, BusinessLicense objects are in DB Schema"
+        - "Regenerate metadata cache for affected profiles"
+        - "Have users sync their mobile devices"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [account, mobile, cache]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  account-config-check:
+    name: "Full Account Configuration Check"
+    description: "Comprehensive check of all account management configuration - accounts, providers, addresses, licenses, affiliations, DCR, and cache"
+    rules:
+      - acct-001
+      - acct-002
+      - acct-003
+      - acct-004
+      - acct-005
+      - acct-006
+      - acct-007
+      - acct-008
+
+  account-core-check:
+    name: "Core Account Data Check"
+    description: "Check core account data - accounts, providers, and addresses"
+    rules:
+      - acct-001
+      - acct-002
+      - acct-003
+
+  account-features-check:
+    name: "Account Features Data Check"
+    description: "Check feature-specific account data - licenses, affiliations, territory info, and DCR"
+    rules:
+      - acct-004
+      - acct-005
+      - acct-006
+      - acct-007
+
+  account-mobile:
+    name: "Account Mobile Check"
+    description: "Mobile-specific account checks - metadata cache and sync requirements"
+    rules:
+      - acct-008
+
+  pre-deployment-account:
+    name: "Pre-Deployment Account Check"
+    description: "Run before deploying account management to users - core data and mobile cache"
+    rules:
+      - acct-001
+      - acct-002
+      - acct-003
+      - acct-008

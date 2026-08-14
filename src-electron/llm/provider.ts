@@ -1,0 +1,52 @@
+export interface Message {
+  role: "user" | "assistant" | "system";
+  content: string | ContentBlock[];
+}
+
+export interface ContentBlock {
+  type: "text" | "image" | "tool_use" | "tool_result";
+  text?: string;
+  source?: { type: string; media_type: string; data: string };
+  id?: string;
+  name?: string;
+  input?: Record<string, unknown>;
+  tool_use_id?: string;
+  content?: string;
+  is_error?: boolean;
+}
+
+export interface ToolDefinition {
+  name: string;
+  description: string;
+  input_schema: Record<string, unknown>;
+}
+
+export interface StreamChunk {
+  type: "text_delta" | "tool_use_start" | "tool_use_delta" | "tool_use_end" | "message_stop" | "error";
+  text?: string;
+  id?: string;
+  name?: string;
+  input_json?: string;
+  error?: string;
+}
+
+export interface LLMProviderConfig {
+  model?: string;
+  maxTokens?: number;
+  temperature?: number;
+}
+
+export interface LLMProvider {
+  id: string;
+  name: string;
+  chat(
+    systemPrompt: string,
+    messages: Message[],
+    tools: ToolDefinition[],
+    config?: LLMProviderConfig,
+    onChunk?: (chunk: StreamChunk) => void
+  ): Promise<Message>;
+  validateCredentials(): Promise<boolean>;
+}
+
+export type ProviderType = "api-key" | "sf-gateway";

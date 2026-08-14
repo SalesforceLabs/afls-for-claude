@@ -1,0 +1,439 @@
+# AFLS Consent Management Configuration Validation Rules
+# =====================================================
+# Rules to validate Consent Management configuration including
+# communication subscriptions, channel types, consent records,
+# contact points, and mobile cache.
+#
+# Verified object names:
+#   - CommunicationSubscription (standard)
+#   - CommunicationSubscriptionConsent (standard)
+#   - CommunicationSubscriptionChannelType (standard)
+#   - EngagementChannelType (standard)
+#   - ContactPointEmail (standard)
+#   - ContactPointPhone (standard)
+#   - ContactPointAddress (standard)
+#   - ComplianceStatementDefinition (standard)
+#   - DigitalSignature (standard)
+#   - LifeSciMobileMetadataRecord (standard)
+
+schema_version: "1.0"
+category_name: "Consent Management Configuration"
+description: |
+  Validation rules for AFLS Consent Management configuration.
+  Covers communication subscriptions, engagement channel types,
+  consent records, contact points, compliance statements,
+  digital signatures, and mobile cache requirements.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Communication Subscriptions
+  # ===========================================================================
+
+  - id: consent-001
+    name: Communication subscriptions exist and are active
+    description: |
+      Verifies that at least one active CommunicationSubscription record exists.
+      Communication subscriptions define the topics for which consent is collected
+      (e.g., "Email Access", "Product Updates", "Event Invitations").
+      Without subscriptions, reps cannot capture consent preferences, and the
+      consent capture screen will be blank or non-functional.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM CommunicationSubscription
+        WHERE Status = 'Active'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, DataUsePurposeId, CreatedDate
+        FROM CommunicationSubscription
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Consent screen is blank"
+      - "No subscriptions available for consent capture"
+      - "Cannot capture consent preferences"
+    resolution:
+      steps:
+        - "Navigate to App Launcher > Communication Subscriptions"
+        - "Create new Communication Subscription records"
+        - "Set Name (e.g., 'Product Updates', 'Email Newsletter')"
+        - "Link to Data Use Purpose if mapping to a product"
+        - "Set Status to 'Active'"
+      ui_path: "App Launcher > Communication Subscriptions"
+    tags: [consent, configuration, subscription]
+
+  # ===========================================================================
+  # SECTION 2: Engagement Channel Types
+  # ===========================================================================
+
+  - id: consent-002
+    name: Engagement channel types exist and are active
+    description: |
+      Verifies that at least one active EngagementChannelType record exists.
+      Engagement channel types define communication channels (Email, SMS,
+      Direct Mail, Phone, etc.) for which consent can be captured.
+      Without channel types, reps cannot specify which channels an HCP
+      has consented to, limiting consent granularity.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, ContactPointType, IsActive
+        FROM EngagementChannelType
+        WHERE IsActive = true
+      expect: "records.length > 0"
+    symptoms:
+      - "No channels available for consent"
+      - "Cannot specify Email vs. SMS consent"
+      - "Consent capture shows no channel options"
+    resolution:
+      steps:
+        - "Navigate to App Launcher > Engagement Channel Types"
+        - "Create new Engagement Channel Type records"
+        - "Set Name (e.g., 'Email', 'SMS', 'Direct Mail')"
+        - "Set Contact Point Type (Email, Phone, Address, Social)"
+        - "Set Is Active to true"
+      ui_path: "App Launcher > Engagement Channel Types"
+    tags: [consent, configuration, channel]
+
+  # ===========================================================================
+  # SECTION 3: Channel-to-Subscription Mappings
+  # ===========================================================================
+
+  - id: consent-003
+    name: Channels are mapped to subscriptions
+    description: |
+      Verifies that CommunicationSubscriptionChannelType records exist.
+      These junction records link engagement channels to communication
+      subscriptions, defining which channels are available for consent
+      on each subscription. Without these mappings, the consent screen
+      may not display channels correctly or may allow consent for
+      invalid channel/subscription combinations.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM CommunicationSubscriptionChannelType
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, CommunicationSubscriptionId, CommunicationSubscription.Name,
+               EngagementChannelTypeId, EngagementChannelType.Name
+        FROM CommunicationSubscriptionChannelType
+        ORDER BY CommunicationSubscription.Name
+        LIMIT 20
+    symptoms:
+      - "Channels not showing for subscription"
+      - "Cannot select channel on consent screen"
+      - "Subscription has no available channels"
+    resolution:
+      steps:
+        - "Create CommunicationSubscriptionChannelType records"
+        - "Link each Communication Subscription to relevant Engagement Channel Types"
+        - "Example: 'Product Updates' subscription mapped to Email and SMS channels"
+        - "Use Data Loader or Apex if bulk creation is needed"
+      ui_path: "App Launcher > Communication Subscription Channel Types"
+    tags: [consent, configuration, mapping]
+
+  # ===========================================================================
+  # SECTION 4: Consent Records
+  # ===========================================================================
+
+  - id: consent-004
+    name: Consent records exist for HCPs
+    description: |
+      Checks whether CommunicationSubscriptionConsent records exist.
+      These records represent HCP consent preferences for specific
+      subscriptions and channels (Opt-In, Opt-Out, Not Asked).
+      If no consent records exist, consent capture may not be functioning,
+      or reps have not started capturing consent yet. This is informational
+      only, as absence of consent records is expected in new implementations.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM CommunicationSubscriptionConsent
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, AccountId, Account.Name, CommunicationSubscriptionId,
+               CommunicationSubscription.Name, Status, ChannelType, CreatedDate
+        FROM CommunicationSubscriptionConsent
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "No consent records found"
+      - "Consent capture may not be functioning"
+      - "Field Email cannot check consent status"
+    resolution:
+      steps:
+        - "Navigate to an HCP Account > Consent tab"
+        - "Click 'Capture Consent' or 'Edit'"
+        - "Select consent preferences for subscriptions and channels"
+        - "Save to create CommunicationSubscriptionConsent records"
+        - "If consent tab is missing, add Consent component to Account page layout"
+      ui_path: "Account > Consent tab"
+    tags: [consent, data, consent-record]
+
+  # ===========================================================================
+  # SECTION 5: Contact Point Email
+  # ===========================================================================
+
+  - id: consent-005
+    name: Contact Point Email records exist
+    description: |
+      Checks whether ContactPointEmail records exist. These records store
+      HCP email addresses and can be linked to consent records for channel
+      mapping. Without email contact points, reps cannot map consent to
+      specific email addresses, and Field Email integration may not work
+      correctly. This is informational only, as absence of email records
+      is expected if email consent is not used.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ContactPointEmail
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, EmailAddress, IsPrimary, ParentId, CreatedDate
+        FROM ContactPointEmail
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "No email addresses available for consent"
+      - "Cannot map consent to specific email"
+      - "Field Email cannot send to consented addresses"
+    resolution:
+      steps:
+        - "Navigate to Account > Consent tab"
+        - "Click 'Manage Channels'"
+        - "Add email addresses as ContactPointEmail records"
+        - "Link email addresses to consent channel mappings"
+        - "Alternatively, create ContactPointEmail records via Data Loader or Apex"
+      ui_path: "Account > Consent tab > Manage Channels"
+    tags: [consent, data, contact-point, email]
+
+  # ===========================================================================
+  # SECTION 6: Contact Point Phone
+  # ===========================================================================
+
+  - id: consent-006
+    name: Contact Point Phone records exist
+    description: |
+      Checks whether ContactPointPhone records exist. These records store
+      HCP phone numbers and can be linked to consent records for SMS or
+      phone call channel mapping. Without phone contact points, reps cannot
+      map consent to specific phone numbers for SMS or call channels.
+      This is informational only, as absence of phone records is expected
+      if phone/SMS consent is not used.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ContactPointPhone
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, TelephoneNumber, IsPrimary, ParentId, CreatedDate
+        FROM ContactPointPhone
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "No phone numbers available for consent"
+      - "Cannot map consent to specific phone number"
+      - "SMS or phone call consent cannot be captured"
+    resolution:
+      steps:
+        - "Navigate to Account > Consent tab"
+        - "Click 'Manage Channels'"
+        - "Add phone numbers as ContactPointPhone records"
+        - "Link phone numbers to consent channel mappings"
+        - "Alternatively, create ContactPointPhone records via Data Loader or Apex"
+      ui_path: "Account > Consent tab > Manage Channels"
+    tags: [consent, data, contact-point, phone]
+
+  # ===========================================================================
+  # SECTION 7: Compliance Statements
+  # ===========================================================================
+
+  - id: consent-007
+    name: Compliance statements configured for Consent module
+    description: |
+      Verifies that ComplianceStatementDefinition records exist for the
+      Consent module. Compliance statements provide disclaimer and terms &
+      conditions text shown on the consent capture screen. Without them,
+      the consent screen may not display required legal disclaimers,
+      which could lead to non-compliant consent capture.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Module, StatementType, IsActive
+        FROM ComplianceStatementDefinition
+        WHERE Module = 'Consent'
+      expect: "records.length > 0"
+    symptoms:
+      - "No disclaimer text on consent screen"
+      - "Missing terms and conditions"
+      - "Consent capture not compliant with GDPR/CCPA"
+    resolution:
+      steps:
+        - "Navigate to Setup > Compliance Statement Definitions"
+        - "Create a new ComplianceStatementDefinition record"
+        - "Set Module to 'Consent'"
+        - "Set Statement Type (e.g., 'Disclaimer', 'Terms and Conditions')"
+        - "Enter statement text"
+        - "Set Is Active to true"
+      ui_path: "Setup > Compliance Statement Definitions"
+    tags: [consent, configuration, compliance, legal]
+
+  # ===========================================================================
+  # SECTION 8: Digital Signatures
+  # ===========================================================================
+
+  - id: consent-008
+    name: Digital signatures captured for consent records
+    description: |
+      Checks whether DigitalSignature records exist. These records store
+      HCP digital signatures captured during face-to-face consent on iPad.
+      If no digital signatures exist, consent capture on mobile may not be
+      functioning, or signature requirements are not configured in Admin Console.
+      This is informational only, as absence of signatures is expected if
+      signature capture is not required or if consent is captured via web only.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM DigitalSignature
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, CreatedDate, CreatedBy.Name, SignatureType
+        FROM DigitalSignature
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "No digital signatures captured"
+      - "Mobile signature screen not working"
+      - "Signature requirement not enforced"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Consent Management > General Settings"
+        - "Set Signature requirement to 'Required' or 'Optional'"
+        - "Ensure Consent component is added to Account page layout"
+        - "Test consent capture on iPad"
+        - "Verify screen lock engages during signature capture"
+      ui_path: "Admin Console > Consent Management > General Settings"
+    tags: [consent, mobile, signature]
+
+  # ===========================================================================
+  # SECTION 9: Mobile Metadata Cache for Consent
+  # ===========================================================================
+
+  - id: consent-009
+    name: Mobile metadata cache active for consent objects
+    description: |
+      Verifies that mobile metadata cache is active. Consent management on
+      mobile requires an active metadata cache that includes consent-related
+      objects (CommunicationSubscription, CommunicationSubscriptionConsent,
+      EngagementChannelType, ContactPointEmail, etc.). Without active cache,
+      consent data will not sync to mobile devices and consent capture will
+      not work offline.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Consent not syncing to mobile"
+      - "Consent capture not available offline"
+      - "Subscriptions not showing on iPad"
+      - "Device sync transaction record was not found"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify consent objects are included in DB Schema:"
+        - "  - CommunicationSubscription"
+        - "  - CommunicationSubscriptionConsent"
+        - "  - CommunicationSubscriptionChannelType"
+        - "  - EngagementChannelType"
+        - "  - ContactPointEmail, ContactPointPhone, ContactPointAddress"
+        - "  - ComplianceStatementDefinition"
+        - "  - DigitalSignature"
+        - "Regenerate metadata cache for affected profiles"
+        - "Have users sync their mobile devices"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [consent, mobile, cache]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  consent-config-check:
+    name: "Consent Configuration Check"
+    description: "Full consent management configuration check - subscriptions, channels, consent records, contact points, compliance statements, and cache"
+    rules:
+      - consent-001
+      - consent-002
+      - consent-003
+      - consent-004
+      - consent-005
+      - consent-006
+      - consent-007
+      - consent-008
+      - consent-009
+
+  consent-subscriptions:
+    name: "Consent Subscriptions Check"
+    description: "Check subscription and channel configuration"
+    rules:
+      - consent-001
+      - consent-002
+      - consent-003
+
+  consent-channels:
+    name: "Consent Channels Check"
+    description: "Check engagement channel types and contact points"
+    rules:
+      - consent-002
+      - consent-005
+      - consent-006
+
+  consent-mobile:
+    name: "Consent Mobile Check"
+    description: "Mobile-specific consent checks - metadata cache, digital signatures, and sync requirements"
+    rules:
+      - consent-008
+      - consent-009
+
+  pre-deployment-consent:
+    name: "Pre-Deployment Consent Check"
+    description: "Run before deploying consent management to users - all critical checks"
+    rules:
+      - consent-001
+      - consent-002
+      - consent-003
+      - consent-007
+      - consent-009

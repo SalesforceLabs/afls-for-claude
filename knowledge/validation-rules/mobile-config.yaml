@@ -1,0 +1,330 @@
+# AFLS Mobile Configuration Validation Rules
+# ==========================================
+# Rules extracted from common_issues.md sections 1, 2, 3, 5, 6, 9
+# These rules validate mobile app configuration to prevent common issues.
+#
+# NOTE: Only rules using verified object names are included.
+# Objects verified from documentation:
+#   - LifeSciMobileMetadataRecord (common_issues.md)
+#   - FlowDefinitionView (standard Salesforce)
+#   - PermissionSet (standard Salesforce)
+
+schema_version: "1.0"
+category_name: "Mobile Configuration"
+description: |
+  Validation rules for AFLS Mobile (iPad) app configuration.
+  Covers login/auth, metadata cache, sync, and device requirements.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Mobile App Login & Authentication Issues
+  # ===========================================================================
+
+  - id: mobile-001
+    name: Active metadata cache exists
+    description: |
+      Verifies that at least one Object Metadata Cache Configuration exists
+      and is in Active or Published status. Without active metadata cache,
+      mobile users cannot sync data and will see "Device sync transaction
+      record was not found" errors.
+    category: metadata-cache
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Device sync transaction record was not found"
+      - "Error while trying to access Salesforce"
+      - "Invalid Configuration"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify metadata cache records exist"
+        - "If records exist but are not Active, regenerate the cache"
+        - "If no records exist, create new configuration and generate cache"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    issue_ref: "1.1"
+    tags: [ipad, mobile, login]
+
+  - id: mobile-003
+    name: Sync Processor Scheduler flow is active
+    description: |
+      Verifies the Sync Processor Scheduler flow template is cloned and activated.
+      This flow processes device sync transactions. Without it, mobile sync
+      operations may queue up but never process.
+    category: sync
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, ApiName, ActiveVersionId
+        FROM FlowDefinitionView
+        WHERE ApiName LIKE '%Sync%'
+        OR ApiName LIKE '%ProcessSyncData%'
+      expect: "records.length > 0 && records.some(r => r.ActiveVersionId <> null)"
+    symptoms:
+      - "Device sync transaction record was not found"
+      - "Sync transactions stuck in New status"
+      - "Mobile data not updating"
+    resolution:
+      steps:
+        - "Navigate to Setup > Flows"
+        - "Search for 'Sync Processor Scheduler' template"
+        - "Clone the template if not already done"
+        - "Activate the cloned flow"
+      ui_path: "Setup > Process Automation > Flows"
+    issue_ref: "1.1"
+    tags: [ipad, mobile, sync, flow]
+
+  - id: mobile-004
+    name: Users have required AFLS permission sets
+    description: |
+      Checks that mobile users have the Life Sciences Field Sales Representative
+      permission set (or equivalent role-based permission set) assigned.
+      Missing permission sets cause 400/403 errors on login.
+    category: permissions
+    severity: error
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name
+        FROM PermissionSet
+        WHERE Name LIKE '%LifeSciences%'
+        OR Name LIKE '%Life_Sciences%'
+        OR Name LIKE '%AFLS%'
+      expect: "records.length > 0"
+    symptoms:
+      - "Unknown Error. The operation couldn't be completed. (com.salesforce.RestAPI.ErrorDomain error 400)"
+      - "Unknown Error. The operation couldn't be completed. (com.salesforce.RestAPI.ErrorDomain error 403)"
+      - "Configuration Error. Failed to load app configuration"
+    resolution:
+      steps:
+        - "Navigate to Setup > Permission Sets"
+        - "Find 'Life Sciences Field Sales Representative' permission set"
+        - "Assign to users who need mobile access"
+        - "Verify API access is enabled in the permission set"
+      ui_path: "Setup > Users > Permission Sets"
+    issue_ref: "1.2"
+    tags: [ipad, mobile, permissions, login]
+
+  - id: mobile-005
+    name: Mobile app version number is correct
+    description: |
+      Verifies the Application Version Number in LifeSciMobileMetadataRecord
+      matches the org's API version. Incorrect version numbers cause login
+      failures for non-admin users.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, ApplicationVersionNumber
+        FROM LifeSciMobileMetadataRecord
+        WHERE ApplicationVersionNumber <> null
+        LIMIT 10
+      expect: "records.length > 0"
+    symptoms:
+      - "Unknown Error. The operation couldn't be completed. (com.salesforce.RestAPI.ErrorDomain error 400)"
+      - "Non-admin users receive errors when logging in"
+    resolution:
+      steps:
+        - "Query current org API version"
+        - "Navigate to Admin Console > Mobile > Application Settings"
+        - "Update Application Version Number to match org version (e.g., 65.0)"
+        - "Regenerate metadata cache"
+      ui_path: "Admin Console > Mobile > Application Settings"
+    issue_ref: "1.2"
+    tags: [ipad, mobile, configuration]
+
+  # ===========================================================================
+  # SECTION 2: Metadata Cache Generation Issues
+  # ===========================================================================
+
+  - id: cache-002
+    name: No metadata cache stuck in processing
+    description: |
+      Checks for metadata cache records stuck in 'New', 'Validating', or
+      'Processing' status for extended periods. Stuck records indicate
+      backend processing issues.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Status, CreatedDate, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('New', 'Validating', 'Processing')
+        AND LastModifiedDate < TODAY
+      expect: "records.length == 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, CreatedDate, LastModifiedDate,
+               IntegrationStatus, IntegrationErrorMessage
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('New', 'Validating', 'Processing')
+    symptoms:
+      - "Metadata cache stuck in New status"
+      - "Metadata cache stuck in Validating status"
+      - "Metadata cache generation never completes"
+    resolution:
+      steps:
+        - "Check validation status via Setup > Application Test Execution"
+        - "Look for latest run of lsc4ce.DbSchemaValidatorTestSuite"
+        - "If stuck for extended period, abort and retry"
+        - "Verify all DBSchema records are valid before regenerating"
+        - "If issue persists, contact Salesforce Support with org ID"
+      ui_path: "Setup > Application Test Execution"
+    issue_ref: "2.2"
+    tags: [ipad, mobile, cache]
+
+  - id: cache-003
+    name: No metadata cache with errors
+    description: |
+      Checks for metadata cache records with Error status or integration
+      errors. These need to be investigated and regenerated.
+    category: metadata-cache
+    severity: error
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Status, IntegrationStatus, IntegrationErrorMessage
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status = 'Error'
+        OR IntegrationStatus = 'Error'
+      expect: "records.length == 0"
+    symptoms:
+      - "Metadata cache generation failed"
+      - "STORAGE_LIMIT_EXCEEDED"
+      - "Mobile app shows stale data"
+    resolution:
+      steps:
+        - "Review IntegrationErrorMessage for specific error"
+        - "For STORAGE_LIMIT_EXCEEDED: Delete unnecessary records, empty recycle bin"
+        - "For other errors: Review DBSchema configuration"
+        - "Regenerate metadata cache after fixing issues"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    issue_ref: "2.1"
+    tags: [ipad, mobile, cache, error]
+
+  # ===========================================================================
+  # SECTION 3: Device Sync Transaction Failures
+  # ===========================================================================
+
+  - id: sync-003
+    name: Object Metadata Cache assigned to profiles
+    description: |
+      Verifies that Object Metadata Cache Configurations are assigned to
+      user profiles. Without profile assignment, objects won't sync to
+      mobile devices for those users.
+    category: metadata-cache
+    severity: error
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, ProfileId, Profile.Name, Status
+        FROM LifeSciMobileMetadataRecord
+        WHERE ProfileId <> null
+        AND Status IN ('Active', 'Published')
+      expect: "records.length > 0"
+    symptoms:
+      - "Objects not syncing to iPad app"
+      - "Sync status does not update to Valid"
+      - "Mobile app shows empty data"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Select existing cache configuration"
+        - "Assign profiles that need mobile access"
+        - "Regenerate metadata cache for affected profiles"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    issue_ref: "3.2"
+    tags: [ipad, mobile, profile, sync]
+
+  # ===========================================================================
+  # SECTION 6: Configuration & Setup Problems
+  # ===========================================================================
+
+  - id: config-002
+    name: View Setup Configuration permission enabled
+    description: |
+      Checks if the View Setup Configuration permission is available.
+      This permission is required for proper mobile app functionality
+      and API access.
+    category: permissions
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name
+        FROM PermissionSet
+        WHERE Name LIKE '%LifeSciences%'
+        OR Name LIKE '%Life_Sciences%'
+      expect: "records.length > 0"
+    symptoms:
+      - "403 error on mobile login"
+      - "Configuration error"
+    resolution:
+      steps:
+        - "Navigate to Setup > Permission Sets"
+        - "Edit the AFLS permission set"
+        - "Enable 'View Setup Configuration' under System Permissions"
+        - "Save and reassign to users if needed"
+      ui_path: "Setup > Permission Sets"
+    issue_ref: "1.2"
+    tags: [ipad, mobile, permissions]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+# NOTE: Groups updated to only include rules with verified object names
+
+groups:
+  mobile-login-check:
+    name: "Mobile Login Validation"
+    description: "Run these checks when users cannot log into the mobile app"
+    rules:
+      - mobile-001
+      - mobile-003
+      - mobile-004
+      - mobile-005
+
+  pre-deployment:
+    name: "Pre-Deployment Validation"
+    description: "Run before deploying mobile app to users"
+    rules:
+      - mobile-001
+      - mobile-003
+      - mobile-004
+      - cache-003
+      - sync-003
+
+  sync-troubleshooting:
+    name: "Sync Troubleshooting"
+    description: "Run when mobile sync is not working"
+    rules:
+      - mobile-003
+      - cache-002
+      - cache-003
+      - sync-003
+
+  full-mobile-audit:
+    name: "Full Mobile Configuration Audit"
+    description: "Comprehensive check of all mobile configuration"
+    rules:
+      - mobile-001
+      - mobile-003
+      - mobile-004
+      - mobile-005
+      - cache-002
+      - cache-003
+      - sync-003
+      - config-002

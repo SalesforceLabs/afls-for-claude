@@ -1,0 +1,351 @@
+# AFLS Territory Alignment Configuration Validation Rules
+# ======================================================
+# Rules to validate Territory Alignment configuration including
+# territory models, territory records, explicit assignments,
+# geo rules, affiliation rules, territory info, and mobile cache.
+#
+# Verified object names:
+#   - Territory2Model (standard Salesforce)
+#   - Territory2 (standard Salesforce)
+#   - ObjectTerritory2Association (standard Salesforce)
+#   - TerritoryGeoAssignmentRule (standard)
+#   - TerritoryProviderAffiliationAlignmentRule (standard)
+#   - ProviderAcctTerritoryInfo (standard)
+#   - LifeSciMobileMetadataRecord (standard)
+
+schema_version: "1.0"
+category_name: "Territory Alignment Configuration"
+description: |
+  Validation rules for AFLS Territory Alignment configuration.
+  Covers territory models, territories, explicit assignments,
+  geo-based alignment rules, affiliation rules, territory info
+  records, and mobile cache requirements.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Territory Model Setup
+  # ===========================================================================
+
+  - id: territory-001
+    name: Active Territory2Model exists
+    description: |
+      Verifies that an active Territory2Model exists. The Territory2Model is
+      the container for the territory hierarchy. AFLS extends Enterprise Territory
+      Management, which requires an active model before territories can be created.
+      Without an active model, territory assignments and alignment will not function.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Territory2Model
+        WHERE State = 'Active'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, DeveloperName, State, Description
+        FROM Territory2Model
+    symptoms:
+      - "Territory Management not available"
+      - "Cannot create territories"
+      - "Territory model is inactive"
+    resolution:
+      steps:
+        - "Navigate to Setup > Territory Models"
+        - "Create a new Territory2Model or activate an existing one"
+        - "Build the territory hierarchy (National > Region > District > Territory)"
+        - "Assign users to territories"
+      ui_path: "Setup > Territory Models"
+    tags: [territory, configuration, model]
+
+  # ===========================================================================
+  # SECTION 2: Territory Records
+  # ===========================================================================
+
+  - id: territory-002
+    name: Territory2 records exist
+    description: |
+      Verifies that Territory2 records exist in the active model. Territory2
+      records represent individual territories in the hierarchy (e.g., Northeast
+      Region, Boston District). Without territories, account alignment and
+      user assignments cannot be configured. Each territory can have child
+      territories forming a hierarchical structure.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Territory2
+        WHERE Territory2Model.State = 'Active'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, DeveloperName, Territory2TypeId, Territory2Type.Name,
+               ParentTerritory2Id, Description
+        FROM Territory2
+        WHERE Territory2Model.State = 'Active'
+        ORDER BY Name
+        LIMIT 20
+    symptoms:
+      - "No territories available"
+      - "Cannot assign accounts to territory"
+      - "Territory hierarchy is empty"
+    resolution:
+      steps:
+        - "Navigate to Setup > Territory Models > [Your Model] > View Hierarchy"
+        - "Create Territory2 records for your organization's structure"
+        - "Assign Territory2Types (e.g., District, Region)"
+        - "Build parent-child relationships for hierarchy"
+        - "Assign users to each territory"
+      ui_path: "Setup > Territory Models > [Model] > View Hierarchy"
+    tags: [territory, configuration]
+
+  # ===========================================================================
+  # SECTION 3: Explicit Account Assignments
+  # ===========================================================================
+
+  - id: territory-003
+    name: ObjectTerritory2Association records exist for accounts
+    description: |
+      Checks whether explicit account-to-territory assignments exist via
+      ObjectTerritory2Association records. These records are the foundation
+      for manual/explicit territory assignment. They are created manually in
+      the UI or loaded from an external system. Without these records, the
+      Align Account to Territory batch job has no assignments to process.
+      Missing assignments mean accounts won't be shared with territory users
+      and ProviderAcctTerritoryInfo records won't be generated.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ObjectTerritory2Association
+        WHERE SobjectType = 'Account'
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, SobjectId, Territory2Id, Territory2.Name, AssociationType, IsDeleted
+        FROM ObjectTerritory2Association
+        WHERE SobjectType = 'Account'
+        ORDER BY Territory2.Name
+        LIMIT 20
+    symptoms:
+      - "Accounts not appearing in territory"
+      - "Territory users cannot see accounts"
+      - "No account sharing rules applied"
+      - "ProviderAcctTerritoryInfo records missing"
+    resolution:
+      steps:
+        - "Create ObjectTerritory2Association records linking accounts to territories"
+        - "Set AssociationType to 'Manual' for explicit assignments"
+        - "Records can be created in UI or loaded via data import"
+        - "Navigate to Admin Console > Territory Management Jobs"
+        - "Run 'Align Account to Territory' batch job to process assignments"
+      ui_path: "Admin Console > Territory Management Jobs"
+    tags: [territory, configuration, assignment]
+
+  # ===========================================================================
+  # SECTION 4: Geo-Based Alignment Rules
+  # ===========================================================================
+
+  - id: territory-004
+    name: Geo-based alignment rules configured (if using geo alignment)
+    description: |
+      Checks whether TerritoryGeoAssignmentRule records exist for geo-based
+      alignment. These rules enable automatic account-to-territory assignment
+      based on zip codes or brick codes from ContactPointAddress records.
+      If your implementation uses geographic territory alignment (common in
+      pharma sales), these rules should exist. Missing rules means geo-based
+      alignment cannot be processed by the Align Zip to Territory or Align
+      Brick to Territory batch jobs.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Territory2Id, Territory2.Name, UsageType, IsActive
+        FROM TerritoryGeoAssignmentRule
+        WHERE IsActive = true
+        ORDER BY UsageType, Territory2.Name
+        LIMIT 20
+      expect: "records.length > 0"
+    symptoms:
+      - "Zip code alignment not working"
+      - "Brick code alignment not working"
+      - "Accounts not assigned by geography"
+      - "Geo-based batch jobs have no effect"
+    resolution:
+      steps:
+        - "Determine if your implementation uses geographic alignment"
+        - "If yes, create TerritoryGeoAssignmentRule records"
+        - "Set UsageType to 'ZipToTerritory' for zip code alignment"
+        - "Set UsageType to 'BrickToTerritory' for brick code alignment"
+        - "Rules can be created in Admin Console or loaded via data import"
+        - "Run Align Zip to Territory or Align Brick to Territory job"
+      ui_path: "Admin Console > Territory Management Jobs"
+    tags: [territory, configuration, geo-alignment]
+
+  # ===========================================================================
+  # SECTION 5: Affiliation-Based Alignment Rules
+  # ===========================================================================
+
+  - id: territory-005
+    name: Affiliation alignment rules configured (if using affiliation alignment)
+    description: |
+      Checks whether TerritoryProviderAffiliationAlignmentRule records exist.
+      These rules enable automatic territory assignment for affiliated accounts
+      based on ProviderAffiliation records (e.g., HCP working at an HCO).
+      Affiliation alignment is optional but common in complex territory models
+      where HCPs should inherit territory assignments from their affiliated HCOs.
+      The affiliation alignment job runs automatically after other alignment
+      jobs complete, but only if these rules exist.
+    category: configuration
+    severity: info
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Territory2Id, Territory2.Name, AccountType, AffiliationRole, IsActive
+        FROM TerritoryProviderAffiliationAlignmentRule
+        WHERE IsActive = true
+        ORDER BY Territory2.Name
+        LIMIT 20
+      expect: "records.length > 0"
+    symptoms:
+      - "Affiliated HCPs not assigned to territory"
+      - "HCP territory doesn't match HCO territory"
+      - "Affiliation alignment job not running"
+    resolution:
+      steps:
+        - "Determine if your implementation uses affiliation-based alignment"
+        - "If yes, verify affiliation role picklist values match between objects"
+        - "Navigate to Setup > Object Manager > TerritoryProviderAffiliationAlignmentRule > Fields > AffiliationRole"
+        - "Add picklist values matching ProviderAffiliation.Role values"
+        - "Navigate to Admin Console > Territories > Affiliation Rules"
+        - "Create rules selecting territory, account types, and affiliation roles"
+        - "Run alignment jobs (affiliation runs automatically after account/zip/brick jobs)"
+      ui_path: "Admin Console > Territories > Affiliation Rules"
+    tags: [territory, configuration, affiliation]
+
+  # ===========================================================================
+  # SECTION 6: Territory Info Records
+  # ===========================================================================
+
+  - id: territory-006
+    name: ProviderAcctTerritoryInfo records exist
+    description: |
+      Checks whether ProviderAcctTerritoryInfo records exist. These records
+      are generated by territory alignment batch jobs and contain territory-
+      specific information for each account (visit counts, last visit date, etc.).
+      They are essential for Activity Plan calculations, Next Best Customer
+      scoring, and territory reporting. Missing records indicate alignment jobs
+      have not been run or there are no account-to-territory assignments.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ProviderAcctTerritoryInfo
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, AccountId, Account.Name, Territory2Id, Territory2.Name,
+               LastProviderVisitDate, YearToDateProviderVisitCount
+        FROM ProviderAcctTerritoryInfo
+        ORDER BY Account.Name
+        LIMIT 20
+    symptoms:
+      - "Territory visit counts not showing"
+      - "Activity Plan not calculating correctly"
+      - "Next Best Customer scoring incorrect"
+      - "Territory reporting data missing"
+    resolution:
+      steps:
+        - "Verify ObjectTerritory2Association records exist (territory-003)"
+        - "Navigate to Admin Console > Territory Management Jobs"
+        - "Run 'Align Account to Territory' batch job"
+        - "Verify ProviderAcctTerritoryInfo records are created after job completes"
+        - "Schedule job to run nightly (recommended: 2 AM)"
+      ui_path: "Admin Console > Territory Management Jobs"
+    tags: [territory, reporting, batch-job]
+
+  # ===========================================================================
+  # SECTION 7: Mobile Metadata Cache for Territory Objects
+  # ===========================================================================
+
+  - id: territory-007
+    name: Mobile metadata cache active for territory objects
+    description: |
+      Verifies that mobile metadata cache is active. Territory management on
+      mobile requires an active metadata cache that includes Territory2,
+      ProviderAcctTerritoryInfo, and related objects. Without active cache,
+      territory data will not sync to mobile devices and territory-based
+      features (visit tracking, account lists) will not work properly.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Territory data not syncing to mobile"
+      - "Account lists by territory not working"
+      - "Territory visit counts not showing on mobile"
+      - "Device sync transaction record was not found"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify Territory2 and ProviderAcctTerritoryInfo objects are included in DB Schema"
+        - "Regenerate metadata cache for affected profiles"
+        - "Have users sync their mobile devices"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [territory, mobile, cache]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  territory-config-check:
+    name: "Territory Configuration Check"
+    description: "Full territory alignment configuration check - model, territories, assignments, rules, territory info, and cache"
+    rules:
+      - territory-001
+      - territory-002
+      - territory-003
+      - territory-004
+      - territory-005
+      - territory-006
+      - territory-007
+
+  territory-core-check:
+    name: "Territory Core Configuration"
+    description: "Essential territory setup - model, territories, and explicit assignments only"
+    rules:
+      - territory-001
+      - territory-002
+      - territory-003
+
+  territory-mobile:
+    name: "Territory Mobile Check"
+    description: "Mobile-specific territory checks - metadata cache and sync requirements"
+    rules:
+      - territory-007
+
+  pre-deployment-territory:
+    name: "Pre-Deployment Territory Check"
+    description: "Run before deploying territory management to users - all critical checks"
+    rules:
+      - territory-001
+      - territory-002
+      - territory-003
+      - territory-006
+      - territory-007

@@ -1,0 +1,323 @@
+# AFLS Activity Plan Configuration Validation Rules
+# =================================================
+# Rules to validate Activity Plan configuration including
+# time periods, plans, territories, goals, measures,
+# product goals, and mobile cache.
+#
+# Verified object names:
+#   - ActivityPlan (standard)
+#   - ActivityPlanTerritory (standard)
+#   - TimePeriod (standard)
+#   - ProviderActivityGoal (standard)
+#   - ProviderActivityGoalMeasure (standard)
+#   - PrvdActvtyGoalMeasurePrdct (standard)
+#   - ProviderAcctTerritoryInfo (standard)
+#   - LifeSciMobileMetadataRecord (standard)
+
+schema_version: "1.0"
+category_name: "Activity Plan Configuration"
+description: |
+  Validation rules for AFLS Activity Plan configuration.
+  Covers time periods, plans, territory assignments, account goals,
+  goal measures, product goals, and mobile cache requirements.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Time Periods
+  # ===========================================================================
+
+  - id: actplan-001
+    name: TimePeriod records exist
+    description: |
+      Verifies that TimePeriod records exist. Time periods define the duration
+      of activity plans (H1, H2, Q1, etc.) with start and end dates. Activity
+      plans reference TimePeriod records to determine when the plan is valid.
+      Without time periods, activity plans cannot be created or activated.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM TimePeriod
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, StartDate, EndDate
+        FROM TimePeriod
+        ORDER BY StartDate DESC
+        LIMIT 10
+    symptoms:
+      - "Cannot create activity plan — no time period available"
+      - "Activity plan time period picklist is empty"
+    resolution:
+      steps:
+        - "Navigate to App Launcher > Time Periods"
+        - "Create TimePeriod records with Name, StartDate, and EndDate"
+        - "Example: H1 2026 with StartDate = 2026-01-01, EndDate = 2026-06-30"
+      ui_path: "App Launcher > Time Periods"
+    tags: [activity-plan, configuration, time-period]
+
+  # ===========================================================================
+  # SECTION 2: Activity Plans
+  # ===========================================================================
+
+  - id: actplan-002
+    name: ActivityPlan records exist
+    description: |
+      Verifies that ActivityPlan records exist. Activity plans are the master
+      records that define goal types (Account Goal, Weighted Territory Goals,
+      Account Goal Shared), status, review details, and adjustment thresholds.
+      They reference a TimePeriod and are linked to territories via
+      ActivityPlanTerritory records.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ActivityPlan
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IsActive, PlanType
+        FROM ActivityPlan
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "No activity plans visible"
+      - "Activity plan section empty"
+      - "Cannot assign goals to accounts"
+    resolution:
+      steps:
+        - "Navigate to App Launcher > Activity Plans"
+        - "Create an ActivityPlan with Name, Status, TimePeriod, and PlanType"
+        - "Set Usage Type to 'Provider Plan Cycle'"
+        - "Choose PlanType: Account Goal, Weighted Territory Goals, or Account Goal Shared"
+      ui_path: "App Launcher > Activity Plans"
+    tags: [activity-plan, configuration, core]
+
+  # ===========================================================================
+  # SECTION 3: Activity Plan Territory Links
+  # ===========================================================================
+
+  - id: actplan-003
+    name: ActivityPlanTerritory records exist
+    description: |
+      Verifies that ActivityPlanTerritory records exist. These junction records
+      link activity plans to territories. Without them, plans are not associated
+      with any territory and goals cannot be assigned to accounts within
+      territories. Each plan needs at least one territory assignment.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ActivityPlanTerritory
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, ActivityPlanId, ActivityPlan.Name, TerritoryId
+        FROM ActivityPlanTerritory
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Activity plan not linked to territory"
+      - "Goals not showing for territory accounts"
+      - "Plan exists but territory section is empty"
+    resolution:
+      steps:
+        - "Navigate to App Launcher > Activity Plan Territories"
+        - "Create ActivityPlanTerritory records linking plans to territories"
+        - "Select the territory and the activity plan"
+      ui_path: "App Launcher > Activity Plan Territories"
+    tags: [activity-plan, configuration, territory]
+
+  # ===========================================================================
+  # SECTION 4: Provider Activity Goals
+  # ===========================================================================
+
+  - id: actplan-004
+    name: ProviderActivityGoal records exist
+    description: |
+      Verifies that ProviderActivityGoal records exist. These records define
+      account-level goals within an activity plan, including the overall goal,
+      product-level goal, and non-product-level goal for each target account.
+      Without goals, the activity plan has no targets to track against.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ProviderActivityGoal
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, ActivityPlanId, ActivityPlan.Name, AccountId, Account.Name, OverallGoal
+        FROM ProviderActivityGoal
+        ORDER BY Account.Name
+        LIMIT 10
+    symptoms:
+      - "No goals set for accounts"
+      - "Activity plan chart shows zero targets"
+      - "Provider activity goals section is empty"
+    resolution:
+      steps:
+        - "Navigate to App Launcher > Provider Activity Goals"
+        - "Create records linking an ActivityPlan to target Accounts"
+        - "Set OverallGoal, ProductLevelGoal, and NonProductLevelGoal"
+        - "Create one record per target account per plan"
+      ui_path: "App Launcher > Provider Activity Goals"
+    tags: [activity-plan, configuration, goals]
+
+  # ===========================================================================
+  # SECTION 5: Provider Activity Goal Measures
+  # ===========================================================================
+
+  - id: actplan-005
+    name: ProviderActivityGoalMeasure records exist
+    description: |
+      Checks whether ProviderActivityGoalMeasure records exist. These records
+      define specific activity type targets per account goal (e.g., 7 phone
+      visits, 8 product detailing visits). They reference Provider Activity
+      Measure Types configured in Admin Console. For weighted plans, the Type
+      must be "Weighted Goal" with an Activity Weight Value.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ProviderActivityGoalMeasure
+      expect: "count > 0"
+    symptoms:
+      - "No activity type targets defined"
+      - "Goal measures section empty"
+      - "Cannot track attainment by activity type"
+    resolution:
+      steps:
+        - "Navigate to App Launcher > Provider Activity Goal Measures"
+        - "Create records linking ProviderActivityGoal to measure types"
+        - "Set GoalCount and Type (Goal or Weighted Goal)"
+        - "For weighted plans, set Activity Weight Value (0.01 to 9.99)"
+      ui_path: "App Launcher > Provider Activity Goal Measures"
+    tags: [activity-plan, configuration, measures]
+
+  # ===========================================================================
+  # SECTION 6: Territory Info
+  # ===========================================================================
+
+  - id: actplan-006
+    name: ProviderAcctTerritoryInfo records exist for activity plan tracking
+    description: |
+      Checks whether ProviderAcctTerritoryInfo records exist. These records
+      store territory-level account data including scheduled activity counts,
+      goal counts, and actual activity counts. They are populated by the
+      Calculate Provider Activity Goal Measures batch job. Without them,
+      territory-level attainment tracking will not work.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM ProviderAcctTerritoryInfo
+      expect: "count > 0"
+    symptoms:
+      - "Territory-level activity counts not showing"
+      - "Scheduled/actual counts always zero"
+      - "Activity plan calculations incomplete"
+    resolution:
+      steps:
+        - "ProviderAcctTerritoryInfo records are created by territory alignment"
+        - "Verify territory alignment has been run"
+        - "Ensure the Calculate Provider Activity Goal Measures batch job is scheduled"
+        - "Check that Provider Activity Measure Types map ProviderAcctTerritoryInfo fields"
+      ui_path: "Admin Console > Activity Plans > Activity Plan Jobs"
+    tags: [activity-plan, territory, reporting]
+
+  # ===========================================================================
+  # SECTION 7: Mobile Metadata Cache
+  # ===========================================================================
+
+  - id: actplan-007
+    name: Mobile metadata cache active for activity plan objects
+    description: |
+      Verifies that mobile metadata cache is active. Activity plans on mobile
+      require an active metadata cache that includes ActivityPlan,
+      ProviderActivityGoal, ProviderActivityGoalMeasure, and related objects.
+      Without active cache, activity plan data will not sync to mobile devices.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Activity plan data not syncing to mobile"
+      - "Activity plan chart not available offline"
+      - "Device sync transaction record was not found"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify ActivityPlan, ProviderActivityGoal, and related objects are in DB Schema"
+        - "Regenerate metadata cache for affected profiles"
+        - "Have users sync their mobile devices"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [activity-plan, mobile, cache]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  activity-plan-config-check:
+    name: "Full Activity Plan Configuration Check"
+    description: "Comprehensive check of all activity plan configuration - time periods, plans, territories, goals, measures, and cache"
+    rules:
+      - actplan-001
+      - actplan-002
+      - actplan-003
+      - actplan-004
+      - actplan-005
+      - actplan-006
+      - actplan-007
+
+  activity-plan-core-check:
+    name: "Core Activity Plan Check"
+    description: "Check core plan data - time periods, plans, and territory assignments"
+    rules:
+      - actplan-001
+      - actplan-002
+      - actplan-003
+
+  activity-plan-goals-check:
+    name: "Activity Plan Goals Check"
+    description: "Check goal configuration - account goals, measures, and territory info"
+    rules:
+      - actplan-004
+      - actplan-005
+      - actplan-006
+
+  activity-plan-mobile:
+    name: "Activity Plan Mobile Check"
+    description: "Mobile-specific activity plan checks - metadata cache and sync requirements"
+    rules:
+      - actplan-007
+
+  pre-deployment-activity-plan:
+    name: "Pre-Deployment Activity Plan Check"
+    description: "Run before deploying activity plans to users - core data, goals, and mobile cache"
+    rules:
+      - actplan-001
+      - actplan-002
+      - actplan-003
+      - actplan-004
+      - actplan-007

@@ -1,0 +1,296 @@
+# AFLS App Alerts & Notifications Configuration Validation Rules
+# ==============================================================
+# Rules to validate App Alerts and Notifications configuration including
+# alerts, territory assignments, user responses, announcements, and mobile cache.
+#
+# Verified object names:
+#   - AppAlert (standard)
+#   - AppAlertTerritory (standard)
+#   - AppAlertUserResponse (standard)
+#   - RecordAlert (standard Salesforce)
+#   - LifeSciMobileMetadataRecord (standard)
+
+schema_version: "1.0"
+category_name: "App Alerts & Notifications Configuration"
+description: |
+  Validation rules for AFLS App Alerts and Notifications configuration.
+  Covers app alerts, territory assignments, user responses, home office
+  announcements, and mobile cache requirements.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: App Alert Records
+  # ===========================================================================
+
+  - id: app-alert-001
+    name: AppAlert records exist in the org
+    description: |
+      Verifies that at least one AppAlert record exists. AppAlert records
+      deliver timely, contextual messages directly where field reps work.
+      Without any alerts, the notification pane will be empty and the bell
+      icon badge count will remain at zero. This check ensures that the
+      App Alerts framework has been initialized with at least one alert.
+    category: configuration
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM AppAlert
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Subject, Type, DisplayContextType, EffectiveDate, ValidUntilDate
+        FROM AppAlert
+        LIMIT 10
+    symptoms:
+      - "No alerts showing in notification pane"
+      - "Bell icon badge count always zero"
+      - "App Alerts menu empty"
+    resolution:
+      steps:
+        - "Navigate to App Launcher > App Alerts"
+        - "Create a new AppAlert record"
+        - "Populate Subject (required) and Message (required)"
+        - "Set Type (Notification, Recommendation, Guided Action, or Announcement)"
+        - "Configure DisplayContextType and DisplayContextName if needed"
+        - "Set EffectiveDate and ValidUntilDate"
+        - "Add AppAlertTerritory records to control visibility"
+      ui_path: "App Launcher > App Alerts > New"
+    tags: [app-alerts, configuration]
+
+  - id: app-alert-002
+    name: Active AppAlert records exist with valid date ranges
+    description: |
+      Verifies that at least one AppAlert record is currently active (EffectiveDate <= TODAY
+      and ValidUntilDate >= TODAY). Alerts outside their date range will not be visible
+      to users. This check ensures that users have current, relevant alerts available.
+      Without active alerts, the notification pane will appear empty even if alert
+      records exist in the org.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Subject, Type, DisplayContextType, EffectiveDate, ValidUntilDate
+        FROM AppAlert
+        WHERE EffectiveDate <= TODAY
+        AND ValidUntilDate >= TODAY
+      expect: "records.length > 0"
+    symptoms:
+      - "Alerts not showing despite being created"
+      - "Notification pane empty for all users"
+      - "Bell icon badge count zero despite existing alerts"
+    resolution:
+      steps:
+        - "Navigate to App Launcher > App Alerts"
+        - "Review existing alerts and check EffectiveDate and ValidUntilDate fields"
+        - "Ensure at least one alert has EffectiveDate <= TODAY and ValidUntilDate >= TODAY"
+        - "Update dates on existing alerts or create new alerts with current dates"
+        - "For Notification and Recommendation on mobile: ValidUntilDate - EffectiveDate < 7 days = expires on ValidUntilDate; otherwise shows for max 7 days"
+      ui_path: "App Launcher > App Alerts"
+    tags: [app-alerts, configuration, dates]
+
+  # ===========================================================================
+  # SECTION 2: Territory Assignment
+  # ===========================================================================
+
+  - id: app-alert-003
+    name: AppAlertTerritory records exist for alert distribution
+    description: |
+      Checks whether AppAlertTerritory records exist. AppAlertTerritory records
+      link alerts to territories and control which users see which alerts.
+      Without territory assignments, alerts will not reach any users, even if
+      the alert is active and within its date range. This is a common configuration
+      oversight that causes alerts to be invisible to all users.
+    category: configuration
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM AppAlertTerritory
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, AppAlertId, AppAlert.Subject, Territory2Id, Territory2.Name
+        FROM AppAlertTerritory
+        LIMIT 10
+    symptoms:
+      - "Alert created but not visible to any users"
+      - "All users report not seeing alerts"
+      - "Bell icon badge count zero despite active alerts"
+    resolution:
+      steps:
+        - "Open an existing AppAlert record"
+        - "Navigate to the AppAlertTerritory related list"
+        - "Click New to create AppAlertTerritory records"
+        - "Select territories that should see this alert"
+        - "Save and verify territory assignments"
+        - "Test with a pilot user in the assigned territory"
+      ui_path: "AppAlert Record > AppAlertTerritory Related List > New"
+    tags: [app-alerts, territory, configuration]
+
+  # ===========================================================================
+  # SECTION 3: User Response Tracking
+  # ===========================================================================
+
+  - id: app-alert-004
+    name: AppAlertUserResponse records exist for user interaction tracking
+    description: |
+      Checks whether AppAlertUserResponse records exist. AppAlertUserResponse records
+      capture user interactions with alerts including read, dismissed, resolved, and
+      feedback. If no user responses exist, it indicates either that no users have
+      interacted with alerts yet (expected for new implementations) or that trigger
+      handlers are not properly configured. This is an informational check to help
+      assess alert adoption and engagement.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM AppAlertUserResponse
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, AppAlertId, AppAlert.Subject, UserId, User.Name, ResponseType, CreatedDate
+        FROM AppAlertUserResponse
+        ORDER BY CreatedDate DESC
+        LIMIT 10
+    symptoms:
+      - "No user engagement data available"
+      - "Cannot track which alerts users have seen"
+      - "Alert dismissal not working"
+    resolution:
+      steps:
+        - "Verify that alerts are visible to users (check territory assignments)"
+        - "Confirm that users have accessed the notification pane"
+        - "Check that AppAlertTriggerHandler is active in Admin Console > Trigger Handlers"
+        - "Verify mobile DB schemas include AppAlertUserResponse for target profiles"
+        - "Have test users interact with alerts (read, dismiss, resolve)"
+        - "Query AppAlertUserResponse to verify records are being created"
+      ui_path: "Admin Console > Trigger Handlers"
+    tags: [app-alerts, user-response, reporting]
+
+  # ===========================================================================
+  # SECTION 4: Home Office Announcements
+  # ===========================================================================
+
+  - id: app-alert-005
+    name: Announcement-type alerts exist for Home Office Announcements
+    description: |
+      Checks whether AppAlert records with Type = 'Announcement' exist.
+      Announcements appear in the Home Office Announcements widget on the Home page,
+      NOT in the notification pane. This is an informational check to identify
+      whether Home Office Announcements are being used. If no announcements exist,
+      the Home Office Announcements widget will be empty.
+    category: configuration
+    severity: info
+    check:
+      type: soql
+      query: >
+        SELECT Id, Subject, Message, ImageURL, EffectiveDate, ValidUntilDate
+        FROM AppAlert
+        WHERE Type = 'Announcement'
+      expect: "records.length > 0"
+    symptoms:
+      - "Home Office Announcements widget empty"
+      - "No announcements visible on Home page"
+      - "Marketing campaigns not showing"
+    resolution:
+      steps:
+        - "Navigate to App Launcher > App Alerts > New"
+        - "Set Type to 'Announcement'"
+        - "Populate Subject, Message, and ImageURL (optional)"
+        - "Set EffectiveDate and ValidUntilDate"
+        - "Add AppAlertTerritory records to control visibility"
+        - "Verify the Home Office Announcements widget is added to the Home page layout"
+        - "Test by viewing the Home page as a target user"
+      ui_path: "App Launcher > App Alerts > New"
+    tags: [app-alerts, announcements, home-page]
+
+  # ===========================================================================
+  # SECTION 5: Mobile Metadata Cache
+  # ===========================================================================
+
+  - id: app-alert-006
+    name: Mobile metadata cache active for app alerts
+    description: |
+      Verifies that mobile metadata cache is active. App Alerts on mobile require
+      an active metadata cache that includes AppAlert, AppAlertTerritory, and
+      AppAlertUserResponse objects. Without active cache, alerts will not sync
+      to mobile devices and users will not see alerts in the notification pane.
+      The bell icon badge count will remain at zero on mobile even if active
+      alerts exist.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "Alerts not syncing to mobile devices"
+      - "Bell icon badge count zero on mobile despite active alerts"
+      - "Notification pane empty on mobile app"
+      - "Device sync transaction record was not found"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify AppAlert, AppAlertTerritory, and AppAlertUserResponse are enabled in DB Schema"
+        - "Regenerate metadata cache for affected profiles using generate_mobile_metadata_cache tool"
+        - "Have users force sync on their mobile devices"
+        - "Verify badge count appears after sync completes"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [app-alerts, mobile, cache]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  app-alerts-config-check:
+    name: "App Alerts Configuration Check"
+    description: "Full app alerts configuration check - alerts, territory assignments, user responses, announcements, and mobile cache"
+    rules:
+      - app-alert-001
+      - app-alert-002
+      - app-alert-003
+      - app-alert-004
+      - app-alert-005
+      - app-alert-006
+
+  alerts-core:
+    name: "Core App Alerts Check"
+    description: "Core checks for app alerts existence and active status"
+    rules:
+      - app-alert-001
+      - app-alert-002
+
+  alerts-distribution:
+    name: "Alert Distribution Check"
+    description: "Checks for territory assignments and user response tracking"
+    rules:
+      - app-alert-003
+      - app-alert-004
+
+  alerts-mobile:
+    name: "App Alerts Mobile Check"
+    description: "Mobile-specific app alerts checks - metadata cache and sync requirements"
+    rules:
+      - app-alert-006
+
+  pre-deployment-alerts:
+    name: "Pre-Deployment App Alerts Check"
+    description: "Run before deploying app alerts to users - all critical checks"
+    rules:
+      - app-alert-001
+      - app-alert-002
+      - app-alert-003
+      - app-alert-006

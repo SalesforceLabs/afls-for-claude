@@ -1,0 +1,481 @@
+# AFLS Next Best Configuration Validation Rules
+# ===================================================
+# Rules to validate Next Best Customer (NBC), Next Best Action (NBA),
+# and Next Best Message (NBM) configuration including data, territory
+# alignment, ProductGuidance setup, and mobile cache.
+#
+# Verified object names:
+#   - TerritoryAccountScore (standard)
+#   - TerritoryAcctRcmdAction (standard)
+#   - TerritoryAcctProdMsgScore (standard)
+#   - ProductGuidance (standard)
+#   - Territory2 (standard)
+#   - Account (standard)
+#   - HealthcareProvider (standard)
+#   - Product2 (standard)
+#   - LifeSciMobileMetadataRecord (standard)
+
+schema_version: "1.0"
+category_name: "Next Best Configuration"
+description: |
+  Validation rules for AFLS Next Best Customer (NBC), Next Best Action (NBA),
+  and Next Best Message (NBM) configuration. Covers data requirements,
+  territory alignment, ProductGuidance setup, and mobile cache.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Next Best Customer (NBC) Configuration
+  # ===========================================================================
+
+  - id: nbc-001
+    name: TerritoryAccountScore records exist for NBC
+    description: |
+      Verifies that TerritoryAccountScore records exist. These records power
+      the Next Best Customer (NBC) feature, providing predictive scoring to
+      identify high-priority accounts for reps. Without these records, the
+      NBC widget on the Home page will be empty and the NBC filter will
+      return no results. TerritoryAccountScore records contain TotalScore,
+      Rank, and optional ScoreExplainabilityInfo to show why an account is
+      recommended.
+    category: data
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM TerritoryAccountScore
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, AccountId, Account.Name, Territory2Id, Territory2.Name, TotalScore, Rank
+        FROM TerritoryAccountScore
+        ORDER BY Rank ASC
+        LIMIT 10
+    symptoms:
+      - "NBC widget on Home page is empty"
+      - "NBC filter shows no results"
+      - "Top 5 NBC list not displaying"
+      - "Next Best Customer not working"
+    resolution:
+      steps:
+        - "Create TerritoryAccountScore records via Data Cloud Einstein Studio or manual data load"
+        - "Ensure each record has Account, Territory2, TotalScore, and Rank populated"
+        - "Verify Territory2Id matches users' active territory assignments"
+        - "Optional: Populate ScoreExplainabilityInfo with valid JSON for score factors"
+      ui_path: "Setup > Object Manager > TerritoryAccountScore"
+    tags: [next-best, nbc, data]
+
+  - id: nbc-002
+    name: TerritoryAccountScore records include ScoreExplainabilityInfo
+    description: |
+      Checks whether TerritoryAccountScore records include ScoreExplainabilityInfo
+      data. This field provides transparency into why an account is recommended,
+      showing the factors that contributed to the score. When populated with
+      valid JSON, reps can see score factors in the NBC popup. This builds
+      trust and helps reps understand which accounts to prioritize. The JSON
+      should include three sections: scores, metrics, and customLabels.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM TerritoryAccountScore
+        WHERE ScoreExplainabilityInfo != null
+      expect: "count > 0"
+    symptoms:
+      - "NBC popup shows score but no factors"
+      - "See Why button not showing details"
+      - "Score factors section empty"
+    resolution:
+      steps:
+        - "Update TerritoryAccountScore records with ScoreExplainabilityInfo JSON"
+        - "Use format: {\"scores\": {\"metric1\": 40}, \"metrics\": {\"metric1\": \"Description\"}, \"customLabels\": {\"metric1\": \"Label\"}}"
+        - "Ensure sum of scores values equals TotalScore"
+        - "Validate JSON syntax before saving"
+      ui_path: "Setup > Object Manager > TerritoryAccountScore > Fields"
+    tags: [next-best, nbc, explainability]
+
+  # ===========================================================================
+  # SECTION 2: Next Best Action (NBA) Configuration
+  # ===========================================================================
+
+  - id: nba-001
+    name: TerritoryAcctRcmdAction records exist for NBA
+    description: |
+      Verifies that TerritoryAcctRcmdAction records exist. These
+      records power the Next Best Action (NBA) feature, recommending a weekly
+      sequence of actions (visit or email) to help reps maintain consistent
+      engagement with priority accounts. Without these records, the NBA widget
+      on the Account page will be empty. Each record must include Account,
+      Territory2, ActionType (Visit or Email), and DueDate.
+    category: data
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM TerritoryAcctRcmdAction
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, AccountId, Account.Name, Territory2Id, Territory2.Name, ActionType, DueDate
+        FROM TerritoryAcctRcmdAction
+        ORDER BY DueDate ASC
+        LIMIT 10
+    symptoms:
+      - "NBA widget on Account page is empty"
+      - "No recommended actions showing"
+      - "Weekly sequence not displaying"
+      - "Next Best Action not working"
+    resolution:
+      steps:
+        - "Create TerritoryAcctRcmdAction records via Data Cloud Einstein Studio or manual data load"
+        - "Ensure each record has Account, Territory2, ActionType, and DueDate populated"
+        - "Use ActionType values: Visit or Email (Managed Event NOT supported)"
+        - "Verify Territory2Id matches users' active territory assignments"
+        - "Set DueDate to current or future dates for recommendations to appear"
+      ui_path: "Setup > Object Manager > TerritoryAcctRcmdAction"
+    tags: [next-best, nba, data]
+
+  # ===========================================================================
+  # SECTION 3: Next Best Message (NBM) Configuration
+  # ===========================================================================
+
+  - id: nbm-001
+    name: TerritoryAcctProdMsgScore records exist for NBM
+    description: |
+      Verifies that TerritoryAcctProdMsgScore records exist. These records
+      power the Next Best Message (NBM) feature, recommending product messages
+      to deliver during a visit. Without these records, the Recommendation
+      section on the Visit Edit page will not appear. Each record must include
+      Account, Territory2, ProductGuidance (type = message), TotalScore, and
+      Rank. Records must be shared with users to appear in the UI.
+    category: data
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM TerritoryAcctProdMsgScore
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, AccountId, Account.Name, Territory2Id, Territory2.Name, ProductGuidanceId, ProductGuidance.Name, TotalScore, Rank
+        FROM TerritoryAcctProdMsgScore
+        ORDER BY Rank ASC
+        LIMIT 10
+    symptoms:
+      - "NBM recommendations not showing on Visit Edit page"
+      - "Recommendation section missing from visit"
+      - "Product message recommendations empty"
+      - "Next Best Message not working"
+    resolution:
+      steps:
+        - "Create TerritoryAcctProdMsgScore records via Data Cloud Einstein Studio or manual data load"
+        - "Ensure each record has Account, Territory2, ProductGuidance, TotalScore, and Rank populated"
+        - "Verify ProductGuidance Type is 'message' (not 'objective')"
+        - "Verify Territory2Id matches users' active territory assignments"
+        - "Configure sharing rules to share records with target users"
+      ui_path: "Setup > Object Manager > TerritoryAcctProdMsgScore"
+    tags: [next-best, nbm, data]
+
+  - id: nbm-002
+    name: ProductGuidance records exist with Type = message
+    description: |
+      Checks whether ProductGuidance records exist with Type = 'message'.
+      ProductGuidance records are required for NBM recommendations. The Type
+      must be 'message' (not 'objective') for NBM to work correctly. Each
+      ProductGuidance record links to a Product2 record, which is auto-populated
+      when ProductGuidance is selected. Without message-type ProductGuidance,
+      TerritoryAcctProdMsgScore records cannot be created correctly.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Type, Description
+        FROM ProductGuidance
+        WHERE Type = 'message'
+      expect: "records.length > 0"
+    symptoms:
+      - "Cannot create TerritoryAcctProdMsgScore records"
+      - "ProductGuidance lookup shows no results"
+      - "NBM recommendations not linking to products"
+    resolution:
+      steps:
+        - "Navigate to Setup > Object Manager > ProductGuidance"
+        - "Create ProductGuidance records with Type = 'message'"
+        - "Link each ProductGuidance to a Product2 record"
+        - "Populate Name and Description fields"
+        - "Ensure ProductGuidance records are active"
+      ui_path: "Setup > Object Manager > ProductGuidance"
+    tags: [next-best, nbm, product-guidance]
+
+  - id: nbm-003
+    name: Product2 records exist for NBM product linking
+    description: |
+      Verifies that Product2 records exist. NBM recommendations link to products
+      via ProductGuidance, which in turn links to Product2. Without Product2
+      records, ProductGuidance cannot be created, and NBM recommendations cannot
+      include product information. Product2 is a standard Salesforce object
+      extended by LifeSciMarketableProduct in AFLS.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Product2
+      expect: "count > 0"
+    symptoms:
+      - "Cannot create ProductGuidance records"
+      - "Product lookup shows no results"
+      - "NBM recommendations missing product information"
+    resolution:
+      steps:
+        - "Navigate to Setup > Object Manager > Product2"
+        - "Create Product2 records for each product to be recommended"
+        - "Extend products with LifeSciMarketableProduct if needed"
+        - "Ensure products are active"
+      ui_path: "Setup > Object Manager > Product2"
+    tags: [next-best, nbm, product]
+
+  # ===========================================================================
+  # SECTION 4: Territory Alignment
+  # ===========================================================================
+
+  - id: next-best-001
+    name: Territory2 assignments exist for users
+    description: |
+      Checks whether Territory2 assignments exist. Next Best features (NBC,
+      NBA, NBM) are territory-scoped. Users must be assigned to territories,
+      and recommendation records (TerritoryAccountScore, TerritoryAcctRcmdAction,
+      TerritoryAcctProdMsgScore) must match those territory assignments.
+      Without proper territory alignment, reps will not see recommendations
+      even if data exists.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM UserTerritory2Association
+      expect: "count > 0"
+    symptoms:
+      - "Reps not seeing any Next Best recommendations"
+      - "NBC/NBA/NBM widgets empty for all users"
+      - "Recommendations exist in org but not visible to users"
+    resolution:
+      steps:
+        - "Navigate to Setup > Territory Models"
+        - "Assign users to appropriate territories via UserTerritory2Association"
+        - "Verify recommendation records have Territory2Id matching user assignments"
+        - "Check that territory assignments are active"
+      ui_path: "Setup > Territory Models"
+    tags: [next-best, territory]
+
+  # ===========================================================================
+  # SECTION 5: Account and Provider Data
+  # ===========================================================================
+
+  - id: next-best-002
+    name: Account records exist
+    description: |
+      Verifies that Account records exist. Next Best recommendations reference
+      Account records. Without accounts, no recommendations can be created.
+      Accounts in AFLS are typically PersonAccounts representing Healthcare
+      Providers (HCPs) or Business Accounts representing Healthcare Organizations (HCOs).
+    category: data
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM Account
+      expect: "count > 0"
+    symptoms:
+      - "Cannot create TerritoryAccountScore records"
+      - "Cannot create TerritoryAcctRcmdAction records"
+      - "Cannot create TerritoryAcctProdMsgScore records"
+      - "Account lookup shows no results"
+    resolution:
+      steps:
+        - "Navigate to Setup > Object Manager > Account"
+        - "Create Account records for HCPs and HCOs"
+        - "Enable PersonAccount if needed for individual providers"
+        - "Verify accounts are active and assigned to territories"
+      ui_path: "Setup > Object Manager > Account"
+    tags: [next-best, account, data]
+
+  - id: next-best-003
+    name: HealthcareProvider records exist for HCP targeting
+    description: |
+      Checks whether HealthcareProvider records exist. HealthcareProvider is
+      the Industry Cloud object representing individual healthcare practitioners.
+      While not directly required for Next Best features, HealthcareProvider
+      records are typically the target of NBC/NBA/NBM recommendations in AFLS
+      implementations. This check provides awareness of whether HCP data exists.
+    category: data
+    severity: error
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM HealthcareProvider
+      expect: "count > 0"
+    symptoms:
+      - "No HCP data available for Next Best recommendations"
+      - "NBC recommendations not targeting individual providers"
+    resolution:
+      steps:
+        - "Navigate to Setup > Object Manager > HealthcareProvider"
+        - "Create HealthcareProvider records for individual practitioners"
+        - "Link HealthcareProvider to Account records"
+        - "Verify provider data is complete and up-to-date"
+      ui_path: "Setup > Object Manager > HealthcareProvider"
+    tags: [next-best, healthcare-provider, data]
+
+  # ===========================================================================
+  # SECTION 6: Mobile Metadata Cache
+  # ===========================================================================
+
+  - id: next-best-004
+    name: Mobile metadata cache active for Next Best objects
+    description: |
+      Verifies that mobile metadata cache is active. Next Best features on mobile
+      require an active metadata cache that includes TerritoryAccountScore,
+      TerritoryAcctRcmdAction, TerritoryAcctProdMsgScore, ProductGuidance,
+      and related objects. Without active cache, Next Best data will not sync to
+      mobile devices and NBC/NBA/NBM widgets will not work offline. Cache must
+      be regenerated after any Next Best configuration changes.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+      expect: "count > 0"
+      error_detail_query: >
+        SELECT Id, Name, Status, IntegrationStatus, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+    symptoms:
+      - "NBC widget empty on mobile Home page"
+      - "NBA recommendations not showing on mobile Account page"
+      - "NBM recommendations not appearing in mobile Visit Edit"
+      - "Next Best data not syncing to mobile devices"
+      - "Device sync transaction record was not found"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify TerritoryAccountScore, TerritoryAcctRcmdAction, and TerritoryAcctProdMsgScore objects are included in DB Schema"
+        - "Verify ProductGuidance and related objects are included"
+        - "Regenerate metadata cache for affected profiles"
+        - "Have users sync their mobile devices"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [next-best, mobile, cache]
+
+  # ===========================================================================
+  # SECTION 7: Email Template for NBA
+  # ===========================================================================
+
+  - id: nba-002
+    name: LifeSciEmailTemplate records exist for NBA email actions
+    description: |
+      Checks whether LifeSciEmailTemplate records exist. NBA email action
+      recommendations allow reps to send emails from the NBA widget on mobile.
+      LifeSciEmailTemplate records provide pre-built email templates that
+      reps can use when acting on email recommendations. While not strictly
+      required, templates improve the NBA email experience by providing
+      consistent messaging. This is an informational check.
+    category: configuration
+    severity: info
+    check:
+      type: soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciEmailTemplate
+      expect: "count > 0"
+    symptoms:
+      - "NBA email recommendations work but no templates available"
+      - "Reps must compose emails from scratch"
+    resolution:
+      steps:
+        - "Navigate to Setup > Object Manager > LifeSciEmailTemplate"
+        - "Create email templates for common NBA email scenarios"
+        - "Configure template content, subject, and HTML body"
+        - "Ensure templates are active and assigned to profiles"
+      ui_path: "Setup > Object Manager > LifeSciEmailTemplate"
+    tags: [next-best, nba, email]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  next-best-config-check:
+    name: "Next Best Configuration Check"
+    description: "Full Next Best configuration check - NBC, NBA, NBM data, territory alignment, ProductGuidance, and mobile cache"
+    rules:
+      - nbc-001
+      - nbc-002
+      - nba-001
+      - nbm-001
+      - nbm-002
+      - nbm-003
+      - next-best-001
+      - next-best-002
+      - next-best-003
+      - next-best-004
+      - nba-002
+
+  nbc-check:
+    name: "Next Best Customer Check"
+    description: "NBC-specific checks - TerritoryAccountScore data, explainability, and territory alignment"
+    rules:
+      - nbc-001
+      - nbc-002
+      - next-best-001
+      - next-best-002
+      - next-best-003
+
+  nba-check:
+    name: "Next Best Action Check"
+    description: "NBA-specific checks - TerritoryAcctRcmdAction data, email templates, and territory alignment"
+    rules:
+      - nba-001
+      - nba-002
+      - next-best-001
+      - next-best-002
+      - next-best-003
+
+  nbm-check:
+    name: "Next Best Message Check"
+    description: "NBM-specific checks - TerritoryAcctProdMsgScore data, ProductGuidance, products, and territory alignment"
+    rules:
+      - nbm-001
+      - nbm-002
+      - nbm-003
+      - next-best-001
+      - next-best-002
+
+  next-best-mobile:
+    name: "Next Best Mobile Check"
+    description: "Mobile-specific Next Best checks - metadata cache and sync requirements for NBC, NBA, NBM"
+    rules:
+      - next-best-004
+
+  pre-deployment-next-best:
+    name: "Pre-Deployment Next Best Check"
+    description: "Run before deploying Next Best features to users - all critical checks for NBC, NBA, NBM"
+    rules:
+      - nbc-001
+      - nba-001
+      - nbm-001
+      - nbm-002
+      - next-best-001
+      - next-best-002
+      - next-best-003
+      - next-best-004

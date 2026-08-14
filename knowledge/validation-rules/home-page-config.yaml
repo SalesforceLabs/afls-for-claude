@@ -1,0 +1,317 @@
+# AFLS Home Page Configuration Validation Rules
+# =============================================
+# Rules to validate home page configuration for web and mobile apps.
+# Covers Lightning pages, announcements, quick actions, NBC, and metadata cache.
+#
+# Objects verified from documentation:
+#   - FlexiPage (standard Salesforce)
+#   - AppAlert (AFLS announcements)
+#   - QuickActionDefinition (standard Salesforce)
+#   - TerritoryAccountScore (NBC data)
+#   - LifeSciMobileMetadataRecord (mobile metadata cache)
+#   - ActivityPlan (activity planning)
+
+schema_version: "1.0"
+category_name: "Home Page Configuration"
+description: |
+  Validation rules for AFLS Home Page configuration on web and mobile.
+  Covers Lightning App Builder setup, announcements, quick actions,
+  Next Best Customer, activity plans, and metadata cache requirements.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Home Page Lightning Page Setup
+  # ===========================================================================
+
+  - id: homepage-001
+    name: Default home page Lightning page exists
+    description: |
+      Verifies that an AFLS-configured Home Page Lightning page exists.
+      The home page is configured using Lightning App Builder and serves
+      as the central hub for sales reps. Without a properly configured
+      home page, users will see the default Salesforce home.
+    category: configuration
+    severity: error
+    check:
+      type: soql
+      query: >
+        SELECT Id, MasterLabel, PageType
+        FROM FlexiPage
+        WHERE PageType = 'HomePage'
+        ORDER BY LastModifiedDate DESC
+        LIMIT 10
+      expect: "records.length > 0"
+    symptoms:
+      - "Home page is blank"
+      - "AFLS widgets not showing on home page"
+      - "Default Salesforce home page appearing instead of AFLS"
+    resolution:
+      steps:
+        - "Navigate to Setup > Lightning App Builder"
+        - "Create or edit a Home Page type Lightning page"
+        - "Add AFLS components (Announcements, NBC, Up Next, Activity Plan, etc.)"
+        - "Activate the page for the AFLS app and user profiles"
+      ui_path: "Setup > Lightning App Builder"
+    tags: [home-page, web, mobile, configuration]
+
+  # ===========================================================================
+  # SECTION 2: Home Office Announcements
+  # ===========================================================================
+
+  - id: homepage-002
+    name: Active announcements exist
+    description: |
+      Checks for active Home Office Announcements (AppAlert records with
+      Type='Announcement'). Announcements keep sales reps informed about
+      product launches, compliance reminders, and territory changes.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, EffectiveDate, ExpirationDate
+        FROM AppAlert
+        WHERE Type = 'Announcement'
+        AND ExpirationDate >= TODAY
+        ORDER BY EffectiveDate DESC
+        LIMIT 10
+      expect: "records.length > 0"
+    symptoms:
+      - "No announcements showing on home page"
+      - "Home Office Announcements widget is empty"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > App Alerts > Announcements"
+        - "Create a new announcement with Effective and Expiration dates"
+        - "Set the target audience (profiles or all users)"
+        - "Publish the announcement"
+      ui_path: "Admin Console > App Alerts > Announcements"
+    tags: [home-page, web, mobile, announcements]
+
+  - id: homepage-003
+    name: No expired announcements configured as active
+    description: |
+      Checks for announcements with past expiration dates that may indicate
+      stale content. While not critical, expired announcements should be
+      reviewed and either updated or removed.
+    category: configuration
+    severity: info
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, ExpirationDate
+        FROM AppAlert
+        WHERE Type = 'Announcement'
+        AND ExpirationDate < TODAY
+        AND ExpirationDate >= LAST_N_DAYS:30
+        ORDER BY ExpirationDate DESC
+      expect: "records.length == 0"
+      error_detail_query: >
+        SELECT Id, Name, EffectiveDate, ExpirationDate
+        FROM AppAlert
+        WHERE Type = 'Announcement'
+        AND ExpirationDate < TODAY
+        ORDER BY ExpirationDate DESC
+        LIMIT 10
+    symptoms:
+      - "Old announcements still visible"
+      - "Outdated information in announcements widget"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > App Alerts > Announcements"
+        - "Review expired announcements"
+        - "Either extend expiration date or archive/delete old announcements"
+      ui_path: "Admin Console > App Alerts > Announcements"
+    tags: [home-page, announcements, cleanup]
+
+  # ===========================================================================
+  # SECTION 3: Mobile Quick Actions
+  # ===========================================================================
+
+  - id: homepage-004
+    name: Quick actions count is optimal for mobile
+    description: |
+      Verifies that the number of active quick actions is 5 or fewer.
+      Only five quick actions can be displayed on the mobile Home Page
+      floating action button, so having more than 5 means some won't be
+      easily accessible. Uses Tooling API to query LifeSciConfigRecord.
+    category: configuration
+    severity: warning
+    check:
+      type: tooling_soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciConfigRecord
+        WHERE LifeSciConfigCategoryId IN (
+          SELECT Id FROM LifeSciConfigCategory WHERE Category = 'QuickAction'
+        )
+        AND IsActive = true
+      expect: "count <= 5"
+      error_detail_query: >
+        SELECT Id, MasterLabel, IsActive
+        FROM LifeSciConfigRecord
+        WHERE LifeSciConfigCategoryId IN (
+          SELECT Id FROM LifeSciConfigCategory WHERE Category = 'QuickAction'
+        )
+        AND IsActive = true
+        ORDER BY MasterLabel
+    symptoms:
+      - "Not all quick actions visible on mobile home page"
+      - "Quick actions missing on iPad floating button"
+      - "Only 5 actions showing on mobile"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Quick and Custom Action Administration > Quick Actions"
+        - "Review quick actions assigned to Home location"
+        - "Keep only the 5 most important actions active for mobile"
+        - "Consider moving less-used actions to Account or Visit locations"
+        - "Regenerate metadata cache after changes"
+      ui_path: "Admin Console > Quick and Custom Action Administration > Quick Actions"
+    tags: [home-page, mobile, quick-actions]
+
+  # ===========================================================================
+  # SECTION 4: Next Best Customer (NBC) Configuration
+  # ===========================================================================
+
+  - id: homepage-005
+    name: Next Best Customer data exists
+    description: |
+      Checks for TerritoryAccountScore records that power the Next Best
+      Customer widget. NBC provides a prioritized view of which accounts
+      to engage with based on scoring algorithms.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Score
+        FROM TerritoryAccountScore
+        WHERE Score != null
+        LIMIT 5
+      expect: "records.length > 0"
+    symptoms:
+      - "Next Best Customer widget is empty"
+      - "No account scores displayed"
+      - "NBC showing 'No data available'"
+    resolution:
+      steps:
+        - "Verify NBC is enabled in Admin Console > Next Best"
+        - "Check that territory alignment has been run"
+        - "Verify scoring model is configured and active"
+        - "Run NBC batch job to calculate scores"
+      ui_path: "Admin Console > Next Best > Next Best Customer"
+    tags: [home-page, web, mobile, nbc]
+
+  # ===========================================================================
+  # SECTION 5: Metadata Cache for Mobile
+  # ===========================================================================
+
+  - id: homepage-006
+    name: Metadata cache is current for home page
+    description: |
+      Verifies that the mobile metadata cache has been recently updated.
+      Home page components require fresh metadata to display correctly
+      on mobile. Stale cache can cause widgets to not appear or
+      show outdated data.
+    category: metadata-cache
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Status, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+        ORDER BY LastModifiedDate DESC
+        LIMIT 1
+      expect: "records.length > 0"
+    symptoms:
+      - "Home page widgets not appearing on mobile"
+      - "Mobile app showing stale home page"
+      - "New components not visible on iPad"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Select the cache configuration for mobile profiles"
+        - "Regenerate the metadata cache"
+        - "Verify status changes to Active/Published"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    issue_ref: "2.1"
+    tags: [home-page, mobile, cache]
+
+  # ===========================================================================
+  # SECTION 6: Activity Plans
+  # ===========================================================================
+
+  - id: homepage-007
+    name: Activity plans exist for home page widget
+    description: |
+      Checks for ActivityPlan records that appear in the Activity Plan
+      widget on the home page. Activity plans give reps visibility into
+      their progress toward activity goals and targets.
+    category: configuration
+    severity: info
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name
+        FROM ActivityPlan
+        WHERE IsActive = true
+        LIMIT 5
+      expect: "records.length > 0"
+    symptoms:
+      - "Activity Plan widget is empty"
+      - "No goals showing on home page"
+      - "Activity progress not displayed"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Activity Plan"
+        - "Create activity plans with goals and targets"
+        - "Assign plans to users or territories"
+        - "Verify plans are active"
+      ui_path: "Admin Console > Activity Plan"
+    tags: [home-page, web, mobile, activity-plan]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+
+groups:
+  home-page-check:
+    name: "Full Home Page Validation"
+    description: "Comprehensive check of all home page configuration"
+    rules:
+      - homepage-001
+      - homepage-002
+      - homepage-003
+      - homepage-004
+      - homepage-005
+      - homepage-006
+      - homepage-007
+
+  home-page-mobile:
+    name: "Mobile Home Page Validation"
+    description: "Checks specific to mobile/iPad home page"
+    rules:
+      - homepage-001
+      - homepage-002
+      - homepage-004
+      - homepage-006
+      - homepage-007
+
+  home-page-announcements:
+    name: "Announcements Troubleshooting"
+    description: "Run when announcements are not appearing or working"
+    rules:
+      - homepage-002
+      - homepage-003
+
+  pre-deployment-home:
+    name: "Pre-Deployment Home Page Check"
+    description: "Run before go-live to validate home page setup"
+    rules:
+      - homepage-001
+      - homepage-002
+      - homepage-004
+      - homepage-005
+      - homepage-006
+      - homepage-007

@@ -1,0 +1,18 @@
+{
+  "name": "afls",
+  "version": "0.1.0",
+  "description": "AFLS for Customer Engagement - Knowledge, guidance, and Salesforce org tools for AFLS implementations",
+  "author": {
+    "name": "Joe Ferraro"
+  },
+  "keywords": [
+    "salesforce",
+    "life-sciences-cloud",
+    "afls",
+    "pharma",
+    "healthcare",
+    "crm"
+  ],
+  "repository": "https://github.com/SalesforceLabs/AFLS-for-Claude",
+  "license": "MIT"
+}

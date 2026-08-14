@@ -1,0 +1,298 @@
+# AFLS Quick Actions and Custom Actions Configuration Validation Rules
+# ====================================================================
+# Rules to validate quick action and custom action configuration for web and mobile apps.
+#
+# Quick Actions and Custom Actions are stored in LifeSciConfigRecord (Tooling API object).
+# These rules use tooling_soql and tooling_soql_count types which query via Tooling API.
+#
+# Objects (Tooling API):
+#   - LifeSciConfigRecord (main config records)
+#   - LifeSciConfigCategory (categories: QuickAction, CustomAction)
+#   - LifeSciConfigAssignment (profile/user assignments)
+#   - LifeSciConfigFieldValue (field values: location, sortOrder, etc.)
+#
+# Objects (Standard SOQL):
+#   - LifeSciMobileMetadataRecord (mobile metadata cache)
+
+schema_version: "1.0"
+category_name: "Quick Actions Configuration"
+description: |
+  Validation rules for AFLS Quick Actions and Custom Actions configuration.
+  Quick actions provide direct access to core functionalities on Account, Visit,
+  Search, NBC, and Home Page locations. Custom actions invoke Lightning components,
+  flows, Visualforce pages, or canvas apps with custom functionality.
+
+rules:
+  # ===========================================================================
+  # SECTION 1: Quick Actions Validation (Tooling API)
+  # ===========================================================================
+
+  - id: quickaction-001
+    name: Quick actions are configured
+    description: |
+      Verifies that at least one QuickAction configuration exists in the org.
+      Quick actions are configured via Admin Console and stored as
+      LifeSciConfigRecord metadata with category QuickAction.
+    category: configuration
+    severity: info
+    check:
+      type: tooling_soql
+      query: >
+        SELECT Id, MasterLabel, IsActive
+        FROM LifeSciConfigRecord
+        WHERE LifeSciConfigCategoryId IN (
+          SELECT Id FROM LifeSciConfigCategory WHERE Category = 'QuickAction'
+        )
+        LIMIT 20
+      expect: "records.length > 0"
+    symptoms:
+      - "No quick actions available"
+      - "Floating action button missing"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Quick and Custom Action Administration > Quick Actions"
+        - "Create quick actions for desired locations (Home, Account, Visit, etc.)"
+        - "Assign profiles to the actions"
+        - "Regenerate metadata cache for mobile"
+      ui_path: "Admin Console > Quick and Custom Action Administration > Quick Actions"
+    tags: [quick-actions, configuration]
+
+  - id: quickaction-002
+    name: Active quick actions exist
+    description: |
+      Verifies that at least one active quick action exists. Inactive actions
+      won't be visible to users.
+    category: configuration
+    severity: warning
+    check:
+      type: tooling_soql
+      query: >
+        SELECT Id, MasterLabel
+        FROM LifeSciConfigRecord
+        WHERE LifeSciConfigCategoryId IN (
+          SELECT Id FROM LifeSciConfigCategory WHERE Category = 'QuickAction'
+        )
+        AND IsActive = true
+        LIMIT 10
+      expect: "records.length > 0"
+    symptoms:
+      - "Quick actions not visible"
+      - "No actions on floating button"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Quick and Custom Action Administration > Quick Actions"
+        - "Review the list of quick actions"
+        - "Activate actions that should be visible to users"
+      ui_path: "Admin Console > Quick and Custom Action Administration > Quick Actions"
+    tags: [quick-actions, configuration]
+
+  - id: quickaction-003
+    name: Home quick actions count optimal for mobile
+    description: |
+      Checks the total number of active quick actions. Only 5 quick actions
+      can be displayed on the mobile Home Page floating action button.
+      Having more than 5 active Home actions means some won't be visible.
+    category: configuration
+    severity: warning
+    check:
+      type: tooling_soql_count
+      query: >
+        SELECT COUNT()
+        FROM LifeSciConfigRecord
+        WHERE LifeSciConfigCategoryId IN (
+          SELECT Id FROM LifeSciConfigCategory WHERE Category = 'QuickAction'
+        )
+        AND IsActive = true
+      expect: "count <= 5"
+      error_detail_query: >
+        SELECT Id, MasterLabel, IsActive
+        FROM LifeSciConfigRecord
+        WHERE LifeSciConfigCategoryId IN (
+          SELECT Id FROM LifeSciConfigCategory WHERE Category = 'QuickAction'
+        )
+        AND IsActive = true
+        ORDER BY MasterLabel
+    symptoms:
+      - "Not all quick actions visible on mobile home page"
+      - "Quick actions missing on iPad floating button"
+      - "Only 5 actions showing on mobile"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Quick and Custom Action Administration > Quick Actions"
+        - "Review quick actions assigned to Home location"
+        - "Keep only the 5 most important actions active for mobile"
+        - "Consider moving less-used actions to Account or Visit locations"
+        - "Regenerate metadata cache after changes"
+      ui_path: "Admin Console > Quick and Custom Action Administration > Quick Actions"
+    tags: [quick-actions, mobile, home-page]
+
+  # ===========================================================================
+  # SECTION 2: Custom Actions Validation (Tooling API)
+  # ===========================================================================
+
+  - id: customaction-001
+    name: Custom actions are configured
+    description: |
+      Checks if custom actions are configured. Custom actions invoke Lightning
+      components, flows, Visualforce pages, or external URLs with custom
+      functionality defined by the administrator.
+    category: configuration
+    severity: info
+    check:
+      type: tooling_soql
+      query: >
+        SELECT Id, MasterLabel, IsActive
+        FROM LifeSciConfigRecord
+        WHERE LifeSciConfigCategoryId IN (
+          SELECT Id FROM LifeSciConfigCategory WHERE Category = 'CustomAction'
+        )
+        LIMIT 20
+      expect: "records.length >= 0"
+    symptoms:
+      - "No custom actions available"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Quick and Custom Action Administration > Custom Actions"
+        - "Create custom actions if needed"
+        - "Select entity type (Home Page, SObject, Stage Path, Visit)"
+        - "Select action type (App, URL, Utterance)"
+      ui_path: "Admin Console > Quick and Custom Action Administration > Custom Actions"
+    tags: [custom-actions, configuration]
+
+  # ===========================================================================
+  # SECTION 3: Metadata Cache Requirements (Standard SOQL)
+  # ===========================================================================
+
+  - id: quickaction-004
+    name: Metadata cache active for quick actions
+    description: |
+      Verifies that a mobile metadata cache exists and is active. Quick actions
+      configured in Admin Console require an active metadata cache to be visible
+      on mobile devices. Without metadata cache, quick actions won't sync to iPad.
+    category: metadata-cache
+    severity: error
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Status, LastModifiedDate
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status IN ('Active', 'Published')
+        ORDER BY LastModifiedDate DESC
+        LIMIT 5
+      expect: "records.length > 0"
+    symptoms:
+      - "Quick actions not visible on mobile"
+      - "Floating action button empty on iPad"
+      - "Quick actions missing after configuration"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Verify a cache configuration exists"
+        - "If no active cache, create one and assign profiles"
+        - "Generate the metadata cache"
+        - "Verify status changes to Active/Published"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [quick-actions, mobile, cache]
+
+  - id: quickaction-005
+    name: No metadata cache errors
+    description: |
+      Verifies there are no metadata cache records in Error status. Cache errors
+      prevent quick actions and other mobile features from working correctly.
+    category: metadata-cache
+    severity: error
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, Status, IntegrationStatus, IntegrationErrorMessage
+        FROM LifeSciMobileMetadataRecord
+        WHERE Status = 'Error'
+        OR IntegrationStatus = 'Error'
+      expect: "records.length == 0"
+    symptoms:
+      - "Mobile app not loading correctly"
+      - "Quick actions not working"
+      - "Sync failures on mobile"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Review any cache records in Error status"
+        - "Check IntegrationErrorMessage for specific error details"
+        - "Fix underlying issues (permissions, object access, etc.)"
+        - "Regenerate the metadata cache"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [quick-actions, mobile, cache, error]
+
+  - id: quickaction-006
+    name: Metadata cache has profile assignments
+    description: |
+      Verifies that metadata cache configurations have profiles assigned.
+      Quick actions will only be visible to users whose profiles are assigned
+      to an active metadata cache configuration.
+    category: configuration
+    severity: warning
+    check:
+      type: soql
+      query: >
+        SELECT Id, Name, ProfileId, Profile.Name, Status
+        FROM LifeSciMobileMetadataRecord
+        WHERE ProfileId != null
+        AND Status IN ('Active', 'Published')
+      expect: "records.length > 0"
+    symptoms:
+      - "Some users cannot see quick actions"
+      - "Quick actions work for admins but not field users"
+      - "Mobile app shows different actions for different users"
+    resolution:
+      steps:
+        - "Navigate to Admin Console > Mobile > Object Metadata Cache Configuration"
+        - "Select the active cache configuration"
+        - "Verify profiles are assigned that need mobile access"
+        - "Add missing profiles if needed"
+        - "Regenerate cache after profile changes"
+      ui_path: "Admin Console > Mobile > Object Metadata Cache Configuration"
+    tags: [quick-actions, mobile, profile]
+
+# ===========================================================================
+# Validation Groups
+# ===========================================================================
+# Groups define which rules to run together for specific scenarios
+
+groups:
+  quick-actions-check:
+    name: "Full Quick Actions Validation"
+    description: "Comprehensive check of quick action and metadata cache configuration"
+    rules:
+      - quickaction-001
+      - quickaction-002
+      - quickaction-003
+      - quickaction-004
+      - quickaction-005
+      - quickaction-006
+
+  custom-actions-check:
+    name: "Custom Actions Validation"
+    description: "Check custom action configuration"
+    rules:
+      - customaction-001
+
+  quick-actions-mobile:
+    name: "Mobile Quick Actions Validation"
+    description: "Checks specific to mobile/iPad quick actions"
+    rules:
+      - quickaction-003
+      - quickaction-004
+      - quickaction-005
+      - quickaction-006
+
+  pre-deployment-actions:
+    name: "Pre-Deployment Actions Check"
+    description: "Run before go-live to validate quick action configuration"
+    rules:
+      - quickaction-001
+      - quickaction-002
+      - quickaction-003
+      - quickaction-004
+      - quickaction-005
+      - quickaction-006
+      - customaction-001

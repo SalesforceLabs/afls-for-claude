@@ -1,0 +1,21 @@
+Imagine a scenario where Dr. Abinovsa, a key opinion leader and HCP, works in both a New York and a New Jersey territory. He spends equal amounts of time in both territories, so we want him to be visited equally in both, and his activity to be shared across the two territories, regardless of who and which territory is actually conducting the different activities.
+
+So here we\'re going to create a setup so that the desired users and accounts are aligned with the correct territories. So, for the New Jersey territory, I\'m making sure that Greg Thornton, a sales rep, is assigned to this New Jersey territory. And I\'m also going to make sure that our key account, in this case, Abino Senna, is also part of this New Jersey territory. I\'m going to do the same thing for New York, where Evan Casto is going to be our user, sales rep user, and again making sure that Abinosa is also aligned to this New York territory.
+
+So we can do this manually, the way that I\'m doing it right now, or we can do this automatically if, you know, you have territory rules configured and so on. So most of the times this will be configured and there won\'t be any changes, but since we are in a trial, I\'m going to be doing this manually, just so we can demonstrate this.
+
+So once you found and aligned both the accounts and the sales rep users to both the territories, you\'re about ready to go. You can verify that both of them have been added, and then you can quickly run to the Admin Console, and under the Territory Management tile, you can go and make sure that you run the territory management jobs, and then you run the visit management jobs to ensure that all of the accounts have been properly aligned, everything that needs to be aligned has been aligned, including those visits. So through these different steps, we can make sure that we have our shared activity plan set up, ready to go. And we\'ll configure a visit, and then once that\'s run, we\'ll be ready to go.
+
+All right. So once that\'s done, we\'ll go in and create a specific activity plan. So this activity plan is going to be for this region of the two territories, New York and New Jersey, which we\'ll call New England. We\'ll put it into progress and make sure that we assign a time period already created to it. And we\'ll make sure that the type is \"Account Goal Shared.\" Once that\'s done, there\'s nothing else that we really need to do here, so we\'ll just go ahead and save it.
+
+Then, the next step is actually linking this activity plan to the two territories that we\'re going to take into account. So, in our case, we\'re looking at New York and New Jersey. So I\'ll add both New York and New Jersey as new activity plan territory records in the junction object and make sure that they\'re both linked to that activity plan that I just created.
+
+So at this point, we\'ve made sure that we have an activity plan for this duration of H1 2026 for the combination of New York and New Jersey. But what are the actual goals that we want to set here? Right? So that\'s where we are going to, and who is this for? So we pick \"Activity Plan,\" and here is where we pick our Dr. Abinosa, and we can add the overall goal here if we desire, or not. These can be calculated and will be overwritten based on what we do in our next step. So here we\'re giving it at an overall level what that might look like. But under \"Provider Activity Goal Measures,\" this is where we actually specify the type of interaction that we\'re setting our goal for.
+
+So in this case, I want this to be done via remote visits only. So I have a goal of 10 remote visits assigned to AbinSina. We\'re going to pick the provider activity goal that\'s linked to Abina over there, \"007,\" and then we\'re going to make sure that the overall goal for these remote engagements, remote visits for Abhinavsa, in these, the combination of these two territories is 10.
+
+So once this is done, your shared goals across territories is set up. Make sure that you run all of the jobs within the activity plan admin console. You know, set up all of the rest required jobs before you run this so that the calculations run smoothly, and you should be ready to go. Thank you.
+
+Sources:
+
+- [[Account Goal Shared.mp4]{.underline}](https://drive.google.com/open?id=1U_xbEExS862w0S4yQ3gSOj4wSgPBY_eG)

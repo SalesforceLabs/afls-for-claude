@@ -1,0 +1,27 @@
+appId: com.salesforce.afls-assistant
+productName: AFLS Assistant
+directories:
+  output: release
+files:
+  - dist-electron/**/*
+  - dist-renderer/**/*
+  - dist/**/*
+  - knowledge/**/*
+  - skills/**/*
+  - commands/**/*
+  - agents/**/*
+  - CLAUDE.md
+  - package.json
+mac:
+  category: public.app-category.developer-tools
+  target:
+    - dmg
+    - zip
+win:
+  target:
+    - nsis
+    - zip
+linux:
+  target:
+    - AppImage
+    - deb
