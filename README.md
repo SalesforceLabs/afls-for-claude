@@ -830,4 +830,4 @@ Key test files:
 
 ## License
 
-MIT
+MIT — see [LICENSE.txt](LICENSE.txt).
