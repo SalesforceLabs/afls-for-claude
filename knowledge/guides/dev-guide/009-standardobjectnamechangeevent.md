@@ -26,7 +26,7 @@ The following example is an event message in JSON format for a new account recor
 ],
 "changeType": "CREATE",
 "changeOrigin": "com/salesforce/api/soap/51.0;client=SfdcInternalAPI/",
-"transactionKey": "0002343d-9d90-e395-ed20-cf416ba652ad",
+"transactionKey": "<transaction_key>",
 "sequenceNumber": 1,
 "commitTimestamp": 1612912679000,
 "commitNumber": 10716283339728,
