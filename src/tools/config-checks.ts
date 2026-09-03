@@ -1566,7 +1566,9 @@ server.tool(
 
       // 4. Check Active Users by Profile
       message += "## Active Users by Profile\n\n";
-      const profileQuery = `SELECT Profile.Name, COUNT(Id) userCount FROM User WHERE IsActive = true GROUP BY Profile.Name ORDER BY COUNT(Id) DESC`;
+      // Alias Profile.Name explicitly: aggregate (GROUP BY) queries return
+      // relationship fields as a flat aliased column, NOT as a nested object.
+      const profileQuery = `SELECT Profile.Name profileName, COUNT(Id) userCount FROM User WHERE IsActive = true GROUP BY Profile.Name ORDER BY COUNT(Id) DESC`;
       const profileResult = await runSoqlQuery(profileQuery, effectiveOrg);
 
       if (profileResult.success && profileResult.data?.records) {
@@ -1574,8 +1576,8 @@ server.tool(
         message += `| Profile | Active Users |\n|---------|--------------|\n`;
         for (const record of records) {
           const rec = record as Record<string, unknown>;
-          const profile = rec.Profile as Record<string, unknown> | null;
-          message += `| ${profile?.Name || "Unknown"} | ${rec.userCount} |\n`;
+          const profileName = rec.profileName as string | null;
+          message += `| ${profileName || "Unknown"} | ${rec.userCount} |\n`;
         }
         message += "\n";
       } else {
