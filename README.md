@@ -828,6 +828,10 @@ Key test files:
 - [Claude Code Plugin Documentation](https://code.claude.com/docs/en/plugins)
 - [MCP Specification](https://modelcontextprotocol.io/)
 
+## Acknowledgments
+
+This project was originally created by **Joe Ferraro**, GM of Agentforce for Life Sciences. It exists thanks to his vision for bringing AFLS implementation expertise directly into the hands of consultants, developers, and administrators. The community is grateful for that foundation and continues to build on it.
+
 ## License
 
 MIT — see [LICENSE.txt](LICENSE.txt).
