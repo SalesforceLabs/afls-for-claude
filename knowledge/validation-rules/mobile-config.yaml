@@ -55,36 +55,6 @@ rules:
     issue_ref: "1.1"
     tags: [ipad, mobile, login]
 
-  - id: mobile-003
-    name: Sync Processor Scheduler flow is active
-    description: |
-      Verifies the Sync Processor Scheduler flow template is cloned and activated.
-      This flow processes device sync transactions. Without it, mobile sync
-      operations may queue up but never process.
-    category: sync
-    severity: warning
-    check:
-      type: soql
-      query: >
-        SELECT Id, ApiName, ActiveVersionId
-        FROM FlowDefinitionView
-        WHERE ApiName LIKE '%Sync%'
-        OR ApiName LIKE '%ProcessSyncData%'
-      expect: "records.length > 0 && records.some(r => r.ActiveVersionId <> null)"
-    symptoms:
-      - "Device sync transaction record was not found"
-      - "Sync transactions stuck in New status"
-      - "Mobile data not updating"
-    resolution:
-      steps:
-        - "Navigate to Setup > Flows"
-        - "Search for 'Sync Processor Scheduler' template"
-        - "Clone the template if not already done"
-        - "Activate the cloned flow"
-      ui_path: "Setup > Process Automation > Flows"
-    issue_ref: "1.1"
-    tags: [ipad, mobile, sync, flow]
-
   - id: mobile-004
     name: Users have required AFLS permission sets
     description: |
@@ -293,7 +263,6 @@ groups:
     description: "Run these checks when users cannot log into the mobile app"
     rules:
       - mobile-001
-      - mobile-003
       - mobile-004
       - mobile-005
 
@@ -302,7 +271,6 @@ groups:
     description: "Run before deploying mobile app to users"
     rules:
       - mobile-001
-      - mobile-003
       - mobile-004
       - cache-003
       - sync-003
@@ -311,7 +279,6 @@ groups:
     name: "Sync Troubleshooting"
     description: "Run when mobile sync is not working"
     rules:
-      - mobile-003
       - cache-002
       - cache-003
       - sync-003
@@ -321,7 +288,6 @@ groups:
     description: "Comprehensive check of all mobile configuration"
     rules:
       - mobile-001
-      - mobile-003
       - mobile-004
       - mobile-005
       - cache-002
