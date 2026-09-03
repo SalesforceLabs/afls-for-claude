@@ -93,9 +93,16 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-# dist - intentionally tracked for plugin distribution
+# Build output
+dist*/
 dist-electron/
 dist-renderer/
+
+# AFLS config exports (generated JSON + HTML snapshots)
+exports/
+
+# Scratch / temporary working directories
+tmp*/
 
 # Gatsby files
 .cache/
