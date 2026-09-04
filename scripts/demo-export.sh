@@ -27,10 +27,11 @@ rule() { printf '%b\n' "${FAINT}────────────────
 
 clear
 
-# ---- header (logo + model/context/cwd) -------------------------------------
-printf '%b   %b%bClaude Code%b %bv2.1.236%b\n'  "${LOGO}▗█████▖${RST}" "" "${BOLD}${WHITE}" "${RST}" "${DIM}" "${RST}"
-printf '%b   %bOpus 4.8 (1M context) with high effort · Amazon Bedrock%b\n' "${LOGO}█ ▀ ▀ █${RST}" "${DIM}" "${RST}"
-printf '%b   %b~/claude_code/afls-for-claude%b\n' "${LOGO}▝█████▘${RST}" "${DIM}" "${RST}"
+# ---- header (pixel-robot logo + model/context/cwd) -------------------------
+# Coral robot rendered with half-block chars: ears on top, two eyes, a body.
+printf '%b▄██▄▄██▄%b   %b%bClaude Code%b %bv2.1.236%b\n'  "${LOGO}" "${RST}" "" "${BOLD}${WHITE}" "${RST}" "${DIM}" "${RST}"
+printf '%b██▄██▄██%b   %bOpus 4.8 (1M context) with high effort · Amazon Bedrock%b\n' "${LOGO}" "${RST}" "${DIM}" "${RST}"
+printf '%b ██▀▀██ %b   %b~/claude_code/afls-for-claude%b\n' "${LOGO}" "${RST}" "${DIM}" "${RST}"
 printf '\n'
 pause 1.2
 
