@@ -2,6 +2,12 @@
 
 A [Claude Code](https://claude.ai/code) plugin that brings expert AFLS knowledge, Salesforce org tools, and implementation guidance directly into your terminal.
 
+<p align="center">
+  <img src="docs/media/export-config-demo.gif" alt="Exporting AFLS DB Schema configuration from the terminal and generating a browsable HTML report" width="820">
+</p>
+
+<p align="center"><sub><code>/afls:export-config</code> — snapshot org configuration and generate a browsable HTML report in one step</sub></p>
+
 ## What It Does
 
 This plugin gives Claude deep expertise in Salesforce AFLS for Customer Engagement (AFLS4CE), enabling it to:
