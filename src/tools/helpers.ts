@@ -123,10 +123,23 @@ export function getValueColumn(dataType: string): string {
 
 /**
  * Extract value from a field value record.
- * Checks all 12 Tooling API value columns in priority order.
+ *
+ * The row's `DataType` tells us which of the 12 typed value columns actually
+ * holds the value, so we read that column directly. This matters because the
+ * Tooling API returns `HasBooleanValue` as `false` (not null) even for
+ * non-boolean fields — a blind coalesce would then report every empty TEXT /
+ * LONGTEXT field as `false` (e.g. `WhereSoql: false`, `Category: false`).
+ *
+ * When the row carries no `DataType` (legacy callers), fall back to coalescing
+ * across the columns, but never let the phantom `HasBooleanValue=false` win.
  */
 export function extractFieldValue(f: Record<string, unknown>): unknown {
-  return f.TextValue ?? f.PicklistValue ?? f.IntegerValue ?? f.LongTextValue ?? f.ObjectValue ?? f.FieldValue ?? f.UrlValue ?? f.NumberValue ?? f.PhoneValue ?? f.DateTimeValue ?? f.DateValue ?? (f.HasBooleanValue !== null && f.HasBooleanValue !== undefined ? f.HasBooleanValue : null);
+  const dataType = f.DataType as string | undefined;
+  if (dataType) {
+    const v = f[getValueColumn(dataType)];
+    return v === undefined ? null : v;
+  }
+  return f.TextValue ?? f.PicklistValue ?? f.IntegerValue ?? f.LongTextValue ?? f.ObjectValue ?? f.FieldValue ?? f.UrlValue ?? f.NumberValue ?? f.PhoneValue ?? f.DateTimeValue ?? f.DateValue ?? null;
 }
 
 /**

@@ -88,6 +88,7 @@ This is a **Claude Code Plugin** providing an all-in-one AFLS solution:
 | `afls-data-model` | Expert knowledge of the AFLS data model |
 | `afls-health-check` | Guides org health assessment and configuration verification |
 | `afls-data-migration` | Guides data loading and migration (account hierarchies, territory assignments, Veeva CRM migration) |
+| `afls-config-migration` | Guides configuration migration between orgs (export → diff → selective import of admin settings, DB Schema, trigger handlers, actions; create + update-only safe apply) |
 | `afls-demo-data-loading` | Guides loading demo data into AFLS orgs (territories, accounts, HCPs, NPIs, contact points, PATI/PATS, business licenses, therapy-area scenarios, localization) |
 | `afls-integration-patterns` | Guides integration patterns (MDM, ERP, IQVIA, email providers, video platforms) |
 | `afls-reporting-analytics` | Guides CRM Analytics, reports, dashboards, and KPI configuration |
@@ -321,7 +322,7 @@ The plugin includes an MCP server that provides these tools:
 | `health_check` | Run a comprehensive AFLS org health check (trigger handlers, PSLs, territory model, DB Schema, mobile cache) |
 | `get_org_status` | Get a single dashboard view of the connected AFLS org (packages, features, territory model, user count) |
 | `export_config` | Export AFLS configuration (Admin Console settings, DB Schema, trigger handlers, actions) as JSON |
-| `import_config` | Import AFLS configuration from a JSON export into a target org (preview mode by default) |
+| `import_config` | Import AFLS configuration from a snapshot into a target org. Diff-driven, create + update-only (safe). Modes: `report` (diff summary, default), `ui` (local browser review/apply UI on 127.0.0.1 with checkboxes + live progress), `apply` (headless apply of a selection). Auto-backs-up the target first; never deletes/deactivates target-only records |
 | `get_release_notes` | Get AFLS release notes for a specific Salesforce release (Spring '26, Winter '26, etc.) |
 
 #### Developer & Integrator Tools
