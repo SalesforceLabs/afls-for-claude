@@ -1,0 +1,141 @@
+/**
+ * collectConfig() — read AFLS configuration from a live org into a ConfigSnapshot.
+ *
+ * This is the single source of truth for what "export" captures. It is reused by:
+ *   - the export_config tool (writes the snapshot to disk),
+ *   - import_config when the source is a live org (`sourceOrg`),
+ *   - import_config's auto-backup of the target before applying.
+ *
+ * v1.1 additions over the original inline export logic:
+ *   - every record carries its `category` (so actions know QuickAction vs CustomAction),
+ *   - every record carries `fieldTypes` (FieldName → DataType) for faithful re-creation,
+ *   - adminSettings now capture `assignments` too.
+ */
+
+import { runToolingQuery } from "../salesforce/cli.js";
+import { queryFieldValues, queryAssignments, extractFieldValue } from "../tools/helpers.js";
+import type {
+  ConfigSnapshot,
+  ConfigRecord,
+  TriggerHandlerRecord,
+  ExportCategory,
+} from "./types.js";
+import { SNAPSHOT_VERSION } from "./types.js";
+
+/** Build a record's fields + fieldTypes maps from its field-value rows. */
+function buildFields(fvs: Array<Record<string, unknown>>): {
+  fields: Record<string, unknown>;
+  fieldTypes: Record<string, string>;
+} {
+  const fields: Record<string, unknown> = {};
+  const fieldTypes: Record<string, string> = {};
+  for (const fv of fvs) {
+    const name = fv.FieldName as string;
+    fields[name] = extractFieldValue(fv);
+    if (fv.DataType) fieldTypes[name] = fv.DataType as string;
+  }
+  return { fields, fieldTypes };
+}
+
+export async function collectConfig(
+  org: string,
+  categories?: ExportCategory[],
+): Promise<ConfigSnapshot> {
+  const want = categories || ["trigger_handlers", "admin_settings", "db_schema", "actions"];
+  const snapshot: ConfigSnapshot = {
+    exportedAt: new Date().toISOString(),
+    sourceOrg: org,
+    version: SNAPSHOT_VERSION,
+  };
+
+  // 1. Trigger handlers (regular SObject).
+  if (want.includes("trigger_handlers")) {
+    const query = `SELECT Id, DeveloperName, MasterLabel, IsActive FROM LifeScienceTriggerHandler ORDER BY DeveloperName`;
+    const result = await runToolingQuery(query, org);
+    const handlers: TriggerHandlerRecord[] = [];
+    if (result.success && result.data?.records) {
+      for (const r of result.data.records as Array<Record<string, unknown>>) {
+        handlers.push({
+          developerName: r.DeveloperName as string,
+          label: r.MasterLabel as string,
+          isActive: r.IsActive as boolean,
+        });
+      }
+    }
+    snapshot.triggerHandlers = handlers;
+  }
+
+  // 2. Admin settings (every category except DbSchema / actions).
+  if (want.includes("admin_settings")) {
+    snapshot.adminSettings = await collectCategoryRecords(
+      org,
+      `SELECT Id, DeveloperName, Category, MasterLabel FROM LifeSciConfigCategory WHERE Category NOT IN ('DbSchema', 'QuickAction', 'CustomAction') ORDER BY Category`,
+    );
+  }
+
+  // 3. DB Schema.
+  if (want.includes("db_schema")) {
+    snapshot.dbSchema = await collectCategoryRecords(
+      org,
+      `SELECT Id, DeveloperName, Category, MasterLabel FROM LifeSciConfigCategory WHERE Category = 'DbSchema'`,
+    );
+  }
+
+  // 4. Actions (QuickAction + CustomAction).
+  if (want.includes("actions")) {
+    snapshot.actions = await collectCategoryRecords(
+      org,
+      `SELECT Id, DeveloperName, Category, MasterLabel FROM LifeSciConfigCategory WHERE Category IN ('QuickAction', 'CustomAction') ORDER BY Category`,
+    );
+  }
+
+  return snapshot;
+}
+
+/**
+ * Collect every LifeSciConfigRecord under the categories returned by `catQuery`,
+ * tagging each with its category name and capturing fields, fieldTypes, and assignments.
+ */
+async function collectCategoryRecords(
+  org: string,
+  catQuery: string,
+): Promise<ConfigRecord[]> {
+  const out: ConfigRecord[] = [];
+  const catResult = await runToolingQuery(catQuery, org);
+  if (!catResult.success || !catResult.data?.records?.length) return out;
+
+  for (const cat of catResult.data.records as Array<Record<string, unknown>>) {
+    const catId = cat.Id as string;
+    // Category name — prefer the `Category` field, fall back to DeveloperName.
+    const catName = (cat.Category as string) || (cat.DeveloperName as string);
+
+    const recQuery = `SELECT Id, DeveloperName, MasterLabel, IsActive, IsOrgLevel FROM LifeSciConfigRecord WHERE LifeSciConfigCategoryId = '${catId}' ORDER BY DeveloperName`;
+    const recResult = await runToolingQuery(recQuery, org);
+    if (!recResult.success || !recResult.data?.records?.length) continue;
+
+    const records = recResult.data.records as Array<Record<string, unknown>>;
+    const recordIds = records.map((r) => r.Id as string);
+    const { fieldValuesByRecord } = await queryFieldValues(recordIds, org, true);
+    const assignmentMap = await queryAssignments(recordIds, org);
+
+    for (const rec of records) {
+      const recId = rec.Id as string;
+      const { fields, fieldTypes } = buildFields(fieldValuesByRecord.get(recId) || []);
+      const assignments = (assignmentMap.get(recId) || []).map((a) => ({
+        name: a.name,
+        level: a.level,
+      }));
+      out.push({
+        category: catName,
+        developerName: rec.DeveloperName as string,
+        label: rec.MasterLabel as string,
+        isActive: rec.IsActive as boolean,
+        isOrgLevel: rec.IsOrgLevel as boolean,
+        fields,
+        fieldTypes,
+        assignments,
+      });
+    }
+  }
+  return out;
+}
