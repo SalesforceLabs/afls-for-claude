@@ -6,6 +6,7 @@
       "cwd": "${CLAUDE_PLUGIN_ROOT}"
     },
     "salesforce-docs": {
+      "type": "http",
       "url": "https://salesforce-docs-76258744c9d7.herokuapp.com/api/mcp"
     }
   }

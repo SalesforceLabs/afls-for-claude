@@ -66,6 +66,25 @@ The plugin will guide you through:
 2. Authenticating to your AFLS org
 3. Selecting a target org for queries
 
+### Bundled MCP Servers
+
+The plugin ships two MCP servers, both declared in [`.mcp.json`](.mcp.json):
+
+| Server | Transport | Purpose |
+|--------|-----------|---------|
+| `afls` | local (`node dist/index.js`) | The plugin's own 60+ tools — knowledge base, org/Tooling operations, config import/export |
+| `salesforce-docs` | remote (HTTP) | Live official Salesforce Help documentation search, used by the `afls-docs-researcher` agent |
+
+**Enabling the remote docs server:** Because `salesforce-docs` is declared in a project-scoped `.mcp.json`, Claude Code asks you to **approve** it the first time you open the project. If you dismissed that prompt (or started the session before the entry existed), the server stays disabled and the `afls-docs-researcher` agent will fail to spawn with a "zero tools" error.
+
+To check status or enable it, run:
+
+```
+/mcp
+```
+
+Select `salesforce-docs` and enable/reconnect it, then restart the session if needed. The server requires no API keys or authentication — if it still won't connect, confirm you're on Claude Code 1.0.33+ (remote MCP support) and that `https://salesforce-docs-76258744c9d7.herokuapp.com/api/mcp` is reachable from your network.
+
 ## Commands
 
 | Command | Description |
