@@ -306,5 +306,5 @@ This runs all account-specific validation rules automatically.
 - Use `ProviderAffiliation` NOT `ProviderAffiliation__c` or `AccountAffiliation__c`
 - Use `ProviderAcctTerritoryInfo` NOT `ProviderAccountTerritoryInfo__c`
 - Use `LifeSciDataChgDefMngFld` NOT `DataChangeRequest__c` or `ManagedField__c`
-- Use `ProviderAccountProductInformation` NOT `ProviderAccountProductInformation__c`
+- Use `ProviderAcctProductInfo` NOT `ProviderAcctProductInfo__c`
 - Admin Console settings are in `LifeSciConfigRecord` (Tooling API only)

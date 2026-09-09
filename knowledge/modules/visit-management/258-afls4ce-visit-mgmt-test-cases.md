@@ -201,7 +201,7 @@ The product selection for discussions follows the same patterns as product detai
 | 2 | Signature is required when samples are included (if configured) | Admin Console > Visit Settings > Require Signature for Samples |
 | 3 | Inventory is decremented upon submission | ProductItem quantity updated |
 | 4 | Provider sample limits are updated | ProviderSampleLimit remaining updated |
-| 5 | Compliance statement is displayed (if configured) | ComplianceStatementDefinition where Module = 'Visit' |
+| 5 | Compliance statement is displayed (if configured) | ComplianceStatementDef where ModuleType = 'Visit' |
 | 6 | InventoryOperation record is created for each sample drop | Audit trail for inventory changes |
 | 7 | ProductDisbursement records are finalized | Status updated to reflect completion |
 
@@ -223,7 +223,7 @@ The product selection for discussions follows the same patterns as product detai
 | `ProductionBatch` | Batch/lot information (expiration, etc.) |
 | `ProviderSampleLimit` | Provider-level sample limits |
 | `InventoryOperation` | Inventory audit trail records |
-| `ComplianceStatementDefinition` | Signature disclaimers |
+| `ComplianceStatementDef` | Signature disclaimers |
 | `Product2` | Product master (Brand, Indication, Therapeutic Area) |
 | `LifeSciMarketableProduct` | Marketable product with territory assignment |
 

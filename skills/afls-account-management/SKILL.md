@@ -69,7 +69,7 @@ Re-run `check_account_config()` to confirm everything is configured correctly.
 | `BusinessLicense` | `BusinessLicense__c`, `AccountLicense__c` |
 | `ProviderAffiliation` | `ProviderAffiliation__c`, `AccountAffiliation__c` |
 | `ProviderAcctTerritoryInfo` | — |
-| `ProviderAccountProductInformation` | `ProviderAccountProductInformation__c` |
+| `ProviderAcctProductInfo` | `ProviderAcctProductInfo__c` |
 | `LifeSciDataChgDefMngFld` | `LifeSciDataChgDefMngFld__c`, `ManagedField__c` |
 | `UserAdditionalInfo` | — |
 

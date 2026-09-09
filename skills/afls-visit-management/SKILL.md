@@ -68,7 +68,7 @@ Re-run `check_visit_config()` to confirm everything is configured correctly.
 | `ProviderVisitProdDetailing` | `ProviderVisitProductDetailing__c` |
 | `ProviderVisitProdDiscussion` | `ProviderVisitProductDiscussion__c` |
 | `ProviderAcctTerritoryInfo` | — |
-| `ComplianceStatementDefinition` | — |
+| `ComplianceStatementDef` | — |
 
 ### Tool Restrictions
 - **DO NOT** use `run_soql` for Admin Console settings — use `list_admin_settings` / `check_visit_config`

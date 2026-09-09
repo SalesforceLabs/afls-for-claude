@@ -12,7 +12,7 @@ Product Management in AFLS handles the setup and configuration of pharmaceutical
 | `LifeSciMarketableProduct` | AFLS marketable product linking to Product2 with commercial attributes |
 | `ProviderProductGuidance` | Messages/objectives attached to products for detailing |
 | `ProductRestriction` | Account-level product restrictions (compliance) |
-| `PrvdActvtyGoalMeasurePrdct` | Product-level activity goal measures |
+| `PrvdActvtyGoalMeasureProdt` | Product-level activity goal measures |
 | `ProviderVisitProdDetailing` | Product detailing records on visits |
 | `ProviderVisitProdDiscussion` | Product discussion records on visits |
 

@@ -311,7 +311,6 @@ Re-run `check_sample_config()` to confirm everything is configured correctly.
 | `InventoryCountAssessment` | `SampleCount__c`, `InventoryCount__c` |
 | `ProductDisbursement` | `SampleDrop__c` |
 | `ProviderSampleLimit` | `SampleLimit__c` |
-| `ProviderVisitSampleLimitTransaction` | — |
 | `ProviderSampleLimitTemplate` | — |
 | `ProviderSmplLmtTmplAssignment` | — (Private OWD — must share with rep users) |
 | `ProviderSmplLmtTmplAssignmentShare` | — (sharing object for template assignments) |

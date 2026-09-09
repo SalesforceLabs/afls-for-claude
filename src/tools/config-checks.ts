@@ -6,7 +6,7 @@ import { validateOrgConnection } from "../salesforce/auth.js";
 export function register(server: McpServer) {
   server.tool(
     "check_visit_config",
-    "Check AFLS Visit Management configuration. Queries visit record types, ProviderVisit record types, trigger handlers, compliance statements, territory info, and Admin Console settings. CORRECT object names: Visit, ProviderVisit, ProviderVisitProdDetailing, ProviderVisitProdDiscussion, ProviderAcctTerritoryInfo, ComplianceStatementDefinition. WRONG names (DO NOT USE): Visit__c, ProviderVisit__c, VisitSetting__c, VisitConfiguration__mdt, VisitRecordType__c, VisitType__c.",
+    "Check AFLS Visit Management configuration. Queries visit record types, ProviderVisit record types, trigger handlers, compliance statements, territory info, and Admin Console settings. CORRECT object names: Visit, ProviderVisit, ProviderVisitProdDetailing, ProviderVisitProdDiscussion, ProviderAcctTerritoryInfo, ComplianceStatementDef. WRONG names (DO NOT USE): Visit__c, ProviderVisit__c, VisitSetting__c, VisitConfiguration__mdt, VisitRecordType__c, VisitType__c.",
     {
       targetOrg: z
         .string()
@@ -155,7 +155,7 @@ export function register(server: McpServer) {
 
         // 4. Check Compliance Statement Definitions
         message += "## Compliance Statements\n\n";
-        const complianceQuery = `SELECT Id, Name, Module, StatementType, IsActive FROM ComplianceStatementDefinition WHERE Module = 'Visit'`;
+        const complianceQuery = `SELECT Id, Name, ModuleType, StatementType FROM ComplianceStatementDef WHERE ModuleType = 'Visit'`;
         const complianceResult = await runSoqlQuery(complianceQuery, effectiveOrg);
 
         if (complianceResult.success && complianceResult.data?.records) {
@@ -165,19 +165,19 @@ export function register(server: McpServer) {
             message += "**No compliance statements found for Visit module.**\n\n";
             issues.push("No compliance statements configured for Visit module");
             recommendations.push(
-              "Create ComplianceStatementDefinition records with Module = 'Visit' for signature capture"
+              "Create ComplianceStatementDef records with ModuleType = 'Visit' for signature capture"
             );
           } else {
-            message += `| Name | Statement Type | Active |\n`;
-            message += `|------|----------------|--------|\n`;
+            message += `| Name | Statement Type |\n`;
+            message += `|------|----------------|\n`;
             for (const record of records) {
               const rec = record as Record<string, unknown>;
-              message += `| ${rec.Name} | ${rec.StatementType || "-"} | ${rec.IsActive ? "Yes" : "No"} |\n`;
+              message += `| ${rec.Name} | ${rec.StatementType || "-"} |\n`;
             }
             message += `\n**Total:** ${records.length}\n\n`;
           }
         } else {
-          // ComplianceStatementDefinition may not exist in all orgs
+          // ComplianceStatementDef may not exist in all orgs
           message += `Could not query compliance statements: ${complianceResult.error}\n\n`;
           message += "This object may not be available in the org.\n\n";
         }
@@ -998,7 +998,7 @@ export function register(server: McpServer) {
   );
   server.tool(
     "check_activity_plan_config",
-    "Check AFLS Activity Plan configuration. Queries time periods, activity plans, territory assignments, provider activity goals, goal measures, product goals, territory info, and mobile cache. CORRECT object names: ActivityPlan, ActivityPlanTerritory, TimePeriod, ProviderActivityGoal, ProviderActivityGoalMeasure, PrvdActvtyGoalMeasurePrdct, ProviderAcctTerritoryInfo. WRONG names (DO NOT USE): ActivityPlan__c, ProviderActivityGoal__c, AccountGoal__c, TimePeriod__c, GoalMeasure__c.",
+    "Check AFLS Activity Plan configuration. Queries time periods, activity plans, territory assignments, provider activity goals, goal measures, product goals, territory info, and mobile cache. CORRECT object names: ActivityPlan, ActivityPlanTerritory, TimePeriod, ProviderActivityGoal, ProviderActivityGoalMeasure, PrvdActvtyGoalMeasureProdt, ProviderAcctTerritoryInfo. WRONG names (DO NOT USE): ActivityPlan__c, ProviderActivityGoal__c, AccountGoal__c, TimePeriod__c, GoalMeasure__c.",
     {
       targetOrg: z
         .string()
@@ -1207,14 +1207,14 @@ export function register(server: McpServer) {
           message += "This object may not be available in the org.\n\n";
         }
 
-        // 6. Check PrvdActvtyGoalMeasurePrdct records
+        // 6. Check PrvdActvtyGoalMeasureProdt records
         message += "## Product Goal Measures\n\n";
-        const prodMeasureQuery = `SELECT COUNT() FROM PrvdActvtyGoalMeasurePrdct`;
+        const prodMeasureQuery = `SELECT COUNT() FROM PrvdActvtyGoalMeasureProdt`;
         const prodMeasureResult = await runSoqlQuery(prodMeasureQuery, effectiveOrg);
 
         if (prodMeasureResult.success && prodMeasureResult.data) {
           const count = prodMeasureResult.data.totalSize;
-          message += `**PrvdActvtyGoalMeasurePrdct records:** ${count}\n\n`;
+          message += `**PrvdActvtyGoalMeasureProdt records:** ${count}\n\n`;
 
           if (count === 0) {
             message += "No product goal measures found. Product-level tracking is optional.\n\n";
@@ -1302,7 +1302,7 @@ export function register(server: McpServer) {
         message += "3. ActivityPlanTerritory (link plan to territories)\n";
         message += "4. ProviderActivityGoal (account-level goals per target HCP)\n";
         message += "5. ProviderActivityGoalMeasure (activity type targets per goal)\n";
-        message += "6. PrvdActvtyGoalMeasurePrdct (optional: product-specific targets)\n";
+        message += "6. PrvdActvtyGoalMeasureProdt (optional: product-specific targets)\n";
         message += "\n### Trigger Handler Reminder\n\n";
         message += "Ensure these trigger handlers are active:\n";
         message += "1. ActivityPlanTerritoryValidationHandler\n";

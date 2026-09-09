@@ -67,7 +67,7 @@ Re-run `check_activity_plan_config()` to confirm everything is configured correc
 | `TimePeriod` | `TimePeriod__c`, `PlanCycle__c` |
 | `ProviderActivityGoal` | `ProviderActivityGoal__c`, `AccountGoal__c` |
 | `ProviderActivityGoalMeasure` | `ProviderActivityGoalMeasure__c`, `GoalMeasure__c` |
-| `PrvdActvtyGoalMeasurePrdct` | `PrvdActvtyGoalMeasurePrdct__c`, `GoalMeasureProduct__c` |
+| `PrvdActvtyGoalMeasureProdt` | `PrvdActvtyGoalMeasureProdt__c`, `GoalMeasureProduct__c` |
 | `ProviderAcctTerritoryInfo` | — |
 
 ### Tool Restrictions
