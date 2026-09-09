@@ -97,6 +97,7 @@ out
 dist*/
 dist-electron/
 dist-renderer/
+release/
 
 # AFLS config exports (generated JSON + HTML snapshots)
 exports/

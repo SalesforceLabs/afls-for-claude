@@ -1,0 +1,49 @@
+name: Build Desktop App
+
+# Package the AFLS Assistant desktop app and upload the installers as
+# per-run workflow artifacts (downloadable from the run summary page).
+# Runs on CI pushes and PRs, plus on-demand via the Actions tab.
+on:
+  push:
+    branches: ["main", "feature/**"]
+  pull_request:
+  workflow_dispatch:
+
+# One in-flight build per ref; cancel superseded runs to save minutes.
+concurrency:
+  group: build-app-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Package desktop app (macOS)
+        # electron:pack = build MCP server -> build Electron main+renderer ->
+        # electron-builder. On a macOS runner electron-builder emits the mac
+        # targets from electron-builder.yml (dmg + zip) and rebuilds the
+        # better-sqlite3 native module for Electron's ABI.
+        run: npm run electron:pack
+        env:
+          # No signing certs in CI — produce an unsigned build instead of failing.
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
+
+      - name: Upload installers
+        uses: actions/upload-artifact@v4
+        with:
+          name: afls-assistant-macos
+          path: |
+            release/*.dmg
+            release/*.zip
+          if-no-files-found: error
