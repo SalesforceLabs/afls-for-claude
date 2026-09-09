@@ -203,7 +203,7 @@ In Admin Console > Visit Settings > Product Detailing:
 - Set: Default Detailing Mode = "Standard"
 
 ## 3. Signature Capture
-Create a ComplianceStatementDefinition record:
+Create a ComplianceStatementDef record:
   Module:        Visit
   StatementType: Pre-Call
   IsActive:      true
@@ -238,7 +238,7 @@ After all settings are saved, regenerate the cache for affected profiles:
 - Status: ✓ Configured
 
 ### Signature Configuration
-- ComplianceStatementDefinitions: 0 (Visit module)
+- ComplianceStatementDefs: 0 (Visit module)
 - Status: ⚠️  NOT CONFIGURED — signature page requires at least one active statement
 
 ### Mobile Metadata Cache
@@ -253,7 +253,7 @@ After all settings are saved, regenerate the cache for affected profiles:
 
 ### Recommendations
 1. Create "Remote Visit" record type in ProviderVisit to match Visit
-2. Create at least one ComplianceStatementDefinition with Module = 'Visit'
+2. Create at least one ComplianceStatementDef with ModuleType = 'Visit'
 3. Regenerate mobile metadata cache after fixing above items
 
 Want me to fix any of these now? [Yes / No / Show details]
@@ -284,10 +284,10 @@ FAILED
    Actual:   Detail Visit only
    Fix: Create "Remote Visit" record type in ProviderVisit
 
-✗  ComplianceStatementDefinition exists for Visit module
+✗  ComplianceStatementDef exists for Visit module
    Expected: ≥1 active record
    Actual: 0 records
-   Fix: Create a ComplianceStatementDefinition with Module='Visit' and IsActive=true
+   Fix: Create a ComplianceStatementDef with ModuleType='Visit'
 
 ─────────────────────────────────────────
 WARNINGS

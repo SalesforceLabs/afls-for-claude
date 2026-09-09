@@ -1,6 +1,6 @@
 ---
 name: afls-key-account-management
-description: Guides AFLS Key Account Management (KAM) configuration for web and mobile apps. Use when user asks about account plans, KAM account plan templates, goal definitions, action plan templates, assessment tasks, account plan stakeholders, account plan participants, SWOT analysis, territory business plans, or KamAccountPlan/GoalDefinition/ActionPlanTemplate/KamAccountPlanObjective/KamAccountPlanStakeholder objects.
+description: Guides AFLS Key Account Management (KAM) configuration for web and mobile apps. Use when user asks about account plans, KAM account plan templates, goal definitions, action plan templates, assessment tasks, account plan stakeholders, account plan participants, SWOT analysis, territory business plans, or AccountPlan/GoalDefinition/ActionPlanTemplate/AccountPlanObjective/AccountPlanStakeholder objects.
 ---
 
 ## How to Answer KAM Questions
@@ -13,8 +13,8 @@ description: Guides AFLS Key Account Management (KAM) configuration for web and 
 | Specific KAM topic (templates, stakeholders, etc.) | `search_afls_knowledge({ query: "<topic>" })` |
 | Admin Console KAM settings | `list_admin_settings({ category: "KAM" })` |
 | Trigger handler status | `list_trigger_handlers()` |
-| Object fields and relationships | `describe_sobject({ sobject: "KamAccountPlan" })` |
-| KAM data in the org | `run_soql({ query: "SELECT ... FROM KamAccountPlan ..." })` |
+| Object fields and relationships | `describe_sobject({ sobject: "AccountPlan" })` |
+| KAM data in the org | `run_soql({ query: "SELECT ... FROM AccountPlan ..." })` |
 | Goal definition templates | `run_soql({ query: "SELECT ... FROM GoalDefinition WHERE Category = 'Library' AND Status = 'Active' AND Type = 'Affiliate'" })` |
 | Action plan templates | `run_soql({ query: "SELECT ... FROM ActionPlanTemplate WHERE Type = 'Key Account Management'" })` |
 | Mobile cache status | `check_mobile_cache_status()` |
@@ -62,16 +62,16 @@ Re-run checks from Step 1 to confirm everything is configured correctly.
 ### Correct Object Names
 | Correct | Wrong (NEVER use) |
 |---------|-------------------|
-| `KamAccountPlan` | `AccountPlan__c`, `KAMPlan__c`, `KeyAccountPlan__c` |
-| `KamAccountPlanObjective` | `AccountObjective__c`, `PlanObjective__c`, `KAMObjective__c` |
+| `AccountPlan` | `KamAccountPlan`, `AccountPlan__c`, `KAMPlan__c`, `KeyAccountPlan__c` |
+| `AccountPlanObjective` | `KamAccountPlanObjective`, `AccountObjective__c`, `PlanObjective__c`, `KAMObjective__c` |
 | `GoalDefinition` | `GoalTemplate__c`, `ObjectiveTemplate__c`, `GoalDefinition__c` |
 | `ActionPlanTemplate` | `TacticTemplate__c`, `ActionTemplate__c`, `ActionPlanTemplate__c` |
 | `AssessmentTask` | `Task__c`, `AssessmentTask__c`, `Todo__c` |
-| `KamAccountPlanStakeholder` | `KAMStakeholder__c`, `AccountPlanStakeholder__c` |
-| `KamAccountPlanParticipant` | `PlanParticipant__c`, `TeamMember__c` |
-| `KamAccountPlanProduct` | `AccountPlanProduct__c`, `KAMProduct__c` |
-| `KamRelatedAccountPlan` | — |
-| `KamAccountPlanObjectAnalysis` | — |
+| `AccountPlanStakeholder` | `KamAccountPlanStakeholder`, `KAMStakeholder__c`, `AccountPlanStakeholder__c` |
+| `AccountPlanParticipant` | `KamAccountPlanParticipant`, `PlanParticipant__c`, `TeamMember__c` |
+| `AccountPlanProduct` | `KamAccountPlanProduct`, `KAMProduct__c` |
+| `AccountPlanRelationship` | `KamRelatedAccountPlan` |
+| `AccountPlanRelaObjAnalysis` | `KamAccountPlanObjectAnalysis` |
 | `ActionPlanTemplateAssignment` | — |
 
 ### Tool Restrictions

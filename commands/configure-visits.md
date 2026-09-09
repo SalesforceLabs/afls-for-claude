@@ -38,7 +38,7 @@ This queries:
 - ProviderVisit record types
 - Record type alignment between Visit and ProviderVisit
 - ProviderAcctTerritoryInfo records
-- ComplianceStatementDefinition records for Visit module
+- ComplianceStatementDef records for Visit module
 - Visit-related Admin Console settings via Tooling API
 
 Report the summary from the tool output.
@@ -87,9 +87,9 @@ Report:
 Verify compliance statements for the Visit module:
 
 ```sql
-SELECT Id, Name, Module, StatementType, IsActive
-FROM ComplianceStatementDefinition
-WHERE Module = 'Visit'
+SELECT Id, Name, ModuleType, StatementType
+FROM ComplianceStatementDef
+WHERE ModuleType = 'Visit'
 ```
 
 Report:
@@ -163,7 +163,7 @@ Based on findings, offer to fix issues directly using programmatic tools:
 - Guide to Setup > Object Manager > ProviderVisit > Record Types
 
 **If no compliance statements:**
-- Guide to creating ComplianceStatementDefinition records
+- Guide to creating ComplianceStatementDef records
 - Explain signature page requirements
 
 **If trigger handlers inactive:**
@@ -227,6 +227,6 @@ This runs all visit-specific validation rules automatically.
 - Use `ProviderVisit` NOT `ProviderVisit__c`
 - Use `ProviderVisitProdDetailing` NOT `ProviderVisitProductDetailing__c`
 - Use `ProviderVisitProdDiscussion` NOT `ProviderVisitProductDiscussion__c`
-- Use `ComplianceStatementDefinition` NOT `ComplianceStatement__c`
+- Use `ComplianceStatementDef` NOT `ComplianceStatement__c`
 - Use `ProviderAcctTerritoryInfo` NOT `ProviderAccountTerritoryInfo__c`
 - Admin Console settings are in `LifeSciConfigRecord` (Tooling API only)

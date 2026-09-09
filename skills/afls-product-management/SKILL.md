@@ -1,6 +1,6 @@
 ---
 name: afls-product-management
-description: Guides AFLS Product Management configuration. Use when user asks about product hierarchy, LifeSciMarketableProduct, product territory alignment, product messages, product objectives, product restrictions, product account restrictions, territory product priorities, ProductGuidance, TerritoryProductQtyAllocation, or Admin Console > Product Hierarchy.
+description: Guides AFLS Product Management configuration. Use when user asks about product hierarchy, LifeSciMarketableProduct, product territory alignment, product messages, product objectives, product restrictions, product account restrictions, territory product priorities, ProductGuidance, TerritoryProdtQtyAllocation, or Admin Console > Product Hierarchy.
 ---
 
 ## How to Answer Product Management Questions
@@ -63,8 +63,8 @@ Re-run the checks from Step 1 to confirm everything is configured correctly.
 | `LifeSciMarketableProduct` | `MarketableProduct__c`, `ProductHierarchy__c` |
 | `ProductGuidance` | `ProductMessage__c`, `ProductObjective__c` |
 | `LifeSciTerritoryProductPriority` | `ProductPriority__c`, `TerritoryProduct__c` |
-| `LifeSciProductAccountRestriction` | `ProductRestriction__c`, `ProductAlignment__c` |
-| `TerritoryProductQtyAllocation` | — |
+| `LifeSciProductAcctRstrc` | `ProductRestriction__c`, `ProductAlignment__c` |
+| `TerritoryProdtQtyAllocation` | — |
 | `ProductTerritoryAvailability` | `ProductAlignment__c` |
 | `ProductTerrDtlAvailability` | — (read-only, created by alignment batch job only) |
 | `ProductSpecificationType` | — |

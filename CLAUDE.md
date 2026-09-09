@@ -255,7 +255,7 @@ The plugin includes an MCP server that provides these tools:
 | `check_visit_config` | Check Visit Management configuration (record types, settings, compliance, territory info, mobile cache) |
 | `add_visit_engagement_sidebar_item` | Add a custom object as a related list on a Visit page layout so it appears in the visit engagement sidebar on mobile. Retrieves the layout XML, inserts the related list, and deploys it back. |
 
-**CORRECT object names:** `Visit`, `ProviderVisit`, `ProviderVisitProdDetailing`, `ProviderVisitProdDiscussion`, `ProviderAcctTerritoryInfo`, `ComplianceStatementDefinition`.
+**CORRECT object names:** `Visit`, `ProviderVisit`, `ProviderVisitProdDetailing`, `ProviderVisitProdDiscussion`, `ProviderAcctTerritoryInfo`, `ComplianceStatementDef`.
 **WRONG names (DO NOT USE):** `Visit__c`, `ProviderVisit__c`, `VisitSetting__c`, `VisitConfiguration__mdt`, `VisitRecordType__c`, `VisitType__c`.
 
 #### Sample Management Tools
@@ -283,7 +283,7 @@ The plugin includes an MCP server that provides these tools:
 | `check_activity_plan_config` | Check Activity Plan configuration (time periods, plans, territories, goals, measures, product goals, mobile cache) |
 | `check_briefings_config` | Check Briefings (Daily Podcasts) configuration (toggle, permissions, flows, content definitions, DB Schema, mobile cache) |
 
-**CORRECT object names:** `ActivityPlan`, `ActivityPlanTerritory`, `TimePeriod`, `ProviderActivityGoal`, `ProviderActivityGoalMeasure`, `PrvdActvtyGoalMeasurePrdct`, `ProviderAcctTerritoryInfo`.
+**CORRECT object names:** `ActivityPlan`, `ActivityPlanTerritory`, `TimePeriod`, `ProviderActivityGoal`, `ProviderActivityGoalMeasure`, `PrvdActvtyGoalMeasureProdt`, `ProviderAcctTerritoryInfo`.
 **WRONG names (DO NOT USE):** `ActivityPlan__c`, `ProviderActivityGoal__c`, `AccountGoal__c`, `TimePeriod__c`, `GoalMeasure__c`.
 
 #### Territory Alignment Tools

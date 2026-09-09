@@ -9,8 +9,8 @@
 **Fix:** Admin Console > Visit Settings > Product Detailing > Enable Product Detailing Enabled = true. Regenerate metadata cache.
 
 ## "Signature page not appearing"
-**Cause:** No ComplianceStatementDefinition records for the Visit module
-**Fix:** Create at least one ComplianceStatementDefinition with Module = 'Visit' and IsActive = true.
+**Cause:** No ComplianceStatementDef records for the Visit module
+**Fix:** Create at least one ComplianceStatementDef with ModuleType = 'Visit'.
 
 ## "Visit not appearing in rep's calendar"
 **Cause:** Missing Event record linked to the Visit, or rep not assigned to the account's territory

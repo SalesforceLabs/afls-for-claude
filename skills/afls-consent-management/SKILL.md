@@ -67,7 +67,7 @@ Re-run the queries from Step 1 to confirm everything is configured correctly.
 | `CommunicationSubscriptionComplianceSnapshot` | `ConsentSnapshot__c`, `ConsentCompliance__c` |
 | `EngagementChannelType` | `ConsentChannelType__c` |
 | `DataUsePurpose` | — |
-| `ComplianceStatementDefinition` | — |
+| `ComplianceStatementDef` | — |
 | `DigitalSignature` | — |
 | `ContactPointEmail` | — |
 | `ContactPointPhone` | — |

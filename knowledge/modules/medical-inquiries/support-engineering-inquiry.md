@@ -180,7 +180,7 @@ Field Sales App submit
 2. Confirm the user had **Account field access** when the inquiry was created.
 
 ### "No disclaimer text shows during signature"
-1. Verify `ComplianceStatementDefinition` exists with `ModuleType = Medical Inquiry`, `StatementType = Disclaimer`.
+1. Verify `ComplianceStatementDef` exists with `ModuleType = Medical Inquiry`, `StatementType = Disclaimer`.
 2. Check **record-level sharing** — the Sales Rep needs access to this record.
 3. Confirm Module Type and Statement Type are EXACTLY those strings.
 
