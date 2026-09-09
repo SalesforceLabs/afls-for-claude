@@ -1,16 +1,9 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import {
-  getModuleList,
-  getModuleContent,
-  searchKnowledge,
-} from "../knowledge-loader.js";
+import { getModuleList, getModuleContent, searchKnowledge } from "../knowledge-loader.js";
 
 export function register(server: McpServer) {
-server.resource(
-  "afls://modules",
-  "List of all AFLS4CE modules with documentation",
-  async () => {
+  server.resource("afls://modules", "List of all AFLS4CE modules with documentation", async () => {
     const modules = getModuleList();
 
     const moduleTable = modules
@@ -32,14 +25,10 @@ Use the \`get_afls_module_docs\` tool with a slug to get detailed documentation.
         },
       ],
     };
-  }
-);
+  });
 
-// Resource: AFLS Overview
-server.resource(
-  "afls://overview",
-  "Overview of AFLS for Customer Engagement",
-  async () => ({
+  // Resource: AFLS Overview
+  server.resource("afls://overview", "Overview of AFLS for Customer Engagement", async () => ({
     contents: [
       {
         uri: "afls://overview",
@@ -109,43 +98,42 @@ Use the tools provided:
 - \`get_afls_admin_setup\` - Get admin configuration guidance`,
       },
     ],
-  })
-);
+  }));
 
-// ============================================================================
-// PROMPTS
-// ============================================================================
+  // ============================================================================
+  // PROMPTS
+  // ============================================================================
 
-// Prompt: Implementation Checklist
-server.prompt(
-  "afls_implementation_checklist",
-  "Generate an implementation checklist for an AFLS module",
-  {
-    module: z
-      .enum([
-        "account-management",
-        "visit-management",
-        "sample-management",
-        "territory-alignment",
-        "activity-plan",
-        "intelligent-content",
-        "consent-management",
-        "field-email",
-        "full",
-      ])
-      .describe("The AFLS module to generate a checklist for"),
-  },
-  async ({ module }) => {
-    // Get the module documentation to include context
-    const moduleContent = getModuleContent(module);
+  // Prompt: Implementation Checklist
+  server.prompt(
+    "afls_implementation_checklist",
+    "Generate an implementation checklist for an AFLS module",
+    {
+      module: z
+        .enum([
+          "account-management",
+          "visit-management",
+          "sample-management",
+          "territory-alignment",
+          "activity-plan",
+          "intelligent-content",
+          "consent-management",
+          "field-email",
+          "full",
+        ])
+        .describe("The AFLS module to generate a checklist for"),
+    },
+    async ({ module }) => {
+      // Get the module documentation to include context
+      const moduleContent = getModuleContent(module);
 
-    return {
-      messages: [
-        {
-          role: "user",
-          content: {
-            type: "text",
-            text: `Generate a detailed implementation checklist for the AFLS ${module} module.
+      return {
+        messages: [
+          {
+            role: "user",
+            content: {
+              type: "text",
+              text: `Generate a detailed implementation checklist for the AFLS ${module} module.
 
 Here is the available documentation for this module:
 
@@ -161,44 +149,41 @@ Based on this documentation, create a comprehensive checklist including:
 7. Post-implementation validation
 
 Format as a structured checklist with clear categories and actionable items.`,
+            },
           },
-        },
-      ],
-    };
-  }
-);
-
-// Prompt: Troubleshooting Guide
-server.prompt(
-  "afls_troubleshoot",
-  "Get help troubleshooting an AFLS issue",
-  {
-    issue: z.string().describe("Description of the issue or error"),
-    module: z
-      .string()
-      .optional()
-      .describe("The module where the issue is occurring"),
-  },
-  async ({ issue, module }) => {
-    let moduleContent = "";
-    if (module) {
-      moduleContent = getModuleContent(module) || "";
+        ],
+      };
     }
+  );
 
-    // Also search for relevant content
-    const searchResults = searchKnowledge(issue);
-    const relevantContent = searchResults
-      .slice(0, 3)
-      .map((r) => `### ${r.title}\n${r.excerpt}`)
-      .join("\n\n");
+  // Prompt: Troubleshooting Guide
+  server.prompt(
+    "afls_troubleshoot",
+    "Get help troubleshooting an AFLS issue",
+    {
+      issue: z.string().describe("Description of the issue or error"),
+      module: z.string().optional().describe("The module where the issue is occurring"),
+    },
+    async ({ issue, module }) => {
+      let moduleContent = "";
+      if (module) {
+        moduleContent = getModuleContent(module) || "";
+      }
 
-    return {
-      messages: [
-        {
-          role: "user",
-          content: {
-            type: "text",
-            text: `Help troubleshoot this AFLS issue:
+      // Also search for relevant content
+      const searchResults = searchKnowledge(issue);
+      const relevantContent = searchResults
+        .slice(0, 3)
+        .map((r) => `### ${r.title}\n${r.excerpt}`)
+        .join("\n\n");
+
+      return {
+        messages: [
+          {
+            role: "user",
+            content: {
+              type: "text",
+              text: `Help troubleshoot this AFLS issue:
 
 **Issue:** ${issue}
 ${module ? `**Module:** ${module}` : ""}
@@ -214,11 +199,10 @@ Based on the documentation and common AFLS patterns, please:
 2. Suggest diagnostic steps
 3. Provide resolution steps
 4. Mention any related configuration that might need checking`,
+            },
           },
-        },
-      ],
-    };
-  }
-);
+        ],
+      };
+    }
+  );
 }
-

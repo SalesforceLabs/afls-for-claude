@@ -117,7 +117,11 @@ export async function startImportUiServer(opts: StartOptions): Promise<ImportUiS
     if (req.method === "POST" && url.pathname === "/apply") {
       if (applyStarted) {
         res.writeHead(409, { "content-type": "application/json" });
-        res.end(JSON.stringify({ error: "Apply already ran for this session. Re-run import_config to start a new one." }));
+        res.end(
+          JSON.stringify({
+            error: "Apply already ran for this session. Re-run import_config to start a new one.",
+          })
+        );
         return;
       }
       applyStarted = true;
@@ -155,7 +159,7 @@ export async function startImportUiServer(opts: StartOptions): Promise<ImportUiS
           const safeOrg = opts.targetOrg.replace(/[^a-zA-Z0-9._-]/g, "_");
           const resultPath = await writeExport(
             `import-result-${safeOrg}-${fileStamp(result.appliedAt)}.json`,
-            result,
+            result
           );
           send({ type: "done", result, resultPath, backupPath: backup.path });
         } catch (err) {

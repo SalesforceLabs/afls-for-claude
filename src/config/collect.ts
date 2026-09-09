@@ -39,7 +39,7 @@ function buildFields(fvs: Array<Record<string, unknown>>): {
 
 export async function collectConfig(
   org: string,
-  categories?: ExportCategory[],
+  categories?: ExportCategory[]
 ): Promise<ConfigSnapshot> {
   const want = categories || ["trigger_handlers", "admin_settings", "db_schema", "actions"];
   const snapshot: ConfigSnapshot = {
@@ -69,7 +69,7 @@ export async function collectConfig(
   if (want.includes("admin_settings")) {
     snapshot.adminSettings = await collectCategoryRecords(
       org,
-      `SELECT Id, DeveloperName, Category, MasterLabel FROM LifeSciConfigCategory WHERE Category NOT IN ('DbSchema', 'QuickAction', 'CustomAction') ORDER BY Category`,
+      `SELECT Id, DeveloperName, Category, MasterLabel FROM LifeSciConfigCategory WHERE Category NOT IN ('DbSchema', 'QuickAction', 'CustomAction') ORDER BY Category`
     );
   }
 
@@ -77,7 +77,7 @@ export async function collectConfig(
   if (want.includes("db_schema")) {
     snapshot.dbSchema = await collectCategoryRecords(
       org,
-      `SELECT Id, DeveloperName, Category, MasterLabel FROM LifeSciConfigCategory WHERE Category = 'DbSchema'`,
+      `SELECT Id, DeveloperName, Category, MasterLabel FROM LifeSciConfigCategory WHERE Category = 'DbSchema'`
     );
   }
 
@@ -85,7 +85,7 @@ export async function collectConfig(
   if (want.includes("actions")) {
     snapshot.actions = await collectCategoryRecords(
       org,
-      `SELECT Id, DeveloperName, Category, MasterLabel FROM LifeSciConfigCategory WHERE Category IN ('QuickAction', 'CustomAction') ORDER BY Category`,
+      `SELECT Id, DeveloperName, Category, MasterLabel FROM LifeSciConfigCategory WHERE Category IN ('QuickAction', 'CustomAction') ORDER BY Category`
     );
   }
 
@@ -96,10 +96,7 @@ export async function collectConfig(
  * Collect every LifeSciConfigRecord under the categories returned by `catQuery`,
  * tagging each with its category name and capturing fields, fieldTypes, and assignments.
  */
-async function collectCategoryRecords(
-  org: string,
-  catQuery: string,
-): Promise<ConfigRecord[]> {
+async function collectCategoryRecords(org: string, catQuery: string): Promise<ConfigRecord[]> {
   const out: ConfigRecord[] = [];
   const catResult = await runToolingQuery(catQuery, org);
   if (!catResult.success || !catResult.data?.records?.length) return out;

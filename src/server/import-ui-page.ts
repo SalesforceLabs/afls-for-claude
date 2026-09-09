@@ -240,5 +240,8 @@ load().catch(e=>{ document.getElementById("main").innerHTML='<div class="sub" st
 }
 
 function escapeHtml(s: string): string {
-  return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c] as string));
+  return String(s).replace(
+    /[&<>"]/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c] as string
+  );
 }

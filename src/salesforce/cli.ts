@@ -9,12 +9,7 @@ import * as fs from "fs";
 import * as path from "path";
 import * as crypto from "crypto";
 import * as os from "os";
-import {
-  cacheGet,
-  cacheSet,
-  queryCacheKey,
-  describeCacheKey,
-} from "../cache.js";
+import { cacheGet, cacheSet, queryCacheKey, describeCacheKey } from "../cache.js";
 
 const execAsync = promisify(exec);
 
@@ -265,9 +260,7 @@ export async function listOrgs(): Promise<CliResult<SfOrgListResult>> {
 /**
  * Get details about a specific org
  */
-export async function getOrgDisplay(
-  targetOrg: string
-): Promise<CliResult<SfOrg>> {
+export async function getOrgDisplay(targetOrg: string): Promise<CliResult<SfOrg>> {
   return execSfCommand<SfOrg>("org", ["display"], { targetOrg });
 }
 
@@ -393,11 +386,9 @@ export async function describeSObject(
   objectName: string,
   targetOrg: string
 ): Promise<CliResult<SObjectDescribeResult>> {
-  return execSfCommand<SObjectDescribeResult>(
-    "sobject",
-    ["describe", "--sobject", objectName],
-    { targetOrg }
-  );
+  return execSfCommand<SObjectDescribeResult>("sobject", ["describe", "--sobject", objectName], {
+    targetOrg,
+  });
 }
 
 /**
@@ -459,16 +450,7 @@ export async function updateRecord(
 
   return execSfCommand<{ id: string }>(
     "data",
-    [
-      "update",
-      "record",
-      "--sobject",
-      objectName,
-      "--record-id",
-      recordId,
-      "--values",
-      valuesStr,
-    ],
+    ["update", "record", "--sobject", objectName, "--record-id", recordId, "--values", valuesStr],
     { targetOrg }
   );
 }
@@ -497,11 +479,11 @@ export async function deployMetadata(
   targetOrg: string
 ): Promise<CliResult<unknown>> {
   const cwd = ensureTmpSfdxProject();
-  return execSfCommand(
-    "project",
-    ["deploy", "start", "--source-dir", sourcePath],
-    { targetOrg, timeout: 300000, cwd }
-  );
+  return execSfCommand("project", ["deploy", "start", "--source-dir", sourcePath], {
+    targetOrg,
+    timeout: 300000,
+    cwd,
+  });
 }
 
 /**
@@ -565,7 +547,11 @@ export async function runAnonymousApex(
     );
     return result;
   } finally {
-    try { fs.unlinkSync(tmpFile); } catch { /* ignore */ }
+    try {
+      fs.unlinkSync(tmpFile);
+    } catch {
+      /* ignore */
+    }
   }
 }
 
@@ -655,9 +641,12 @@ export async function apiRequest<T>(
           try {
             const errorResult = JSON.parse(stdout);
             if (Array.isArray(errorResult) && errorResult.length > 0) {
-              errorMessage = errorResult.map((e: { message?: string; errorCode?: string }) =>
-                `${e.errorCode || "ERROR"}: ${e.message || "Unknown"}`
-              ).join("; ");
+              errorMessage = errorResult
+                .map(
+                  (e: { message?: string; errorCode?: string }) =>
+                    `${e.errorCode || "ERROR"}: ${e.message || "Unknown"}`
+                )
+                .join("; ");
             } else if (errorResult.message) {
               errorMessage = errorResult.message;
             } else {
@@ -672,7 +661,9 @@ export async function apiRequest<T>(
         if (errorMessage === "Unknown error") {
           const filteredStderr = stderr
             .split("\n")
-            .filter((line: string) => !line.includes("beta") && !line.includes("Warning") && line.trim())
+            .filter(
+              (line: string) => !line.includes("beta") && !line.includes("Warning") && line.trim()
+            )
             .join("\n")
             .trim();
           errorMessage = filteredStderr || "Unknown error";
@@ -722,9 +713,7 @@ export interface OrgCredentials {
 /**
  * Get access token and instance URL for a target org via `sf org display`
  */
-export async function getOrgCredentials(
-  targetOrg: string
-): Promise<CliResult<OrgCredentials>> {
+export async function getOrgCredentials(targetOrg: string): Promise<CliResult<OrgCredentials>> {
   const result = await execSfCommand<Record<string, unknown>>("org", ["display"], {
     targetOrg,
   });
@@ -739,7 +728,8 @@ export async function getOrgCredentials(
   if (!accessToken || !instanceUrl) {
     return {
       success: false,
-      error: "Org credentials missing accessToken or instanceUrl. Re-authenticate with: sf org login web",
+      error:
+        "Org credentials missing accessToken or instanceUrl. Re-authenticate with: sf org login web",
     };
   }
 
@@ -804,10 +794,10 @@ export async function uploadContentVersion(
   parts.push(
     Buffer.from(
       `--${boundary}\r\n` +
-      `Content-Disposition: form-data; name="entity_content"\r\n` +
-      `Content-Type: application/json\r\n\r\n` +
-      entityJson +
-      `\r\n`
+        `Content-Disposition: form-data; name="entity_content"\r\n` +
+        `Content-Type: application/json\r\n\r\n` +
+        entityJson +
+        `\r\n`
     )
   );
 
@@ -815,8 +805,8 @@ export async function uploadContentVersion(
   parts.push(
     Buffer.from(
       `--${boundary}\r\n` +
-      `Content-Disposition: form-data; name="VersionData"; filename="${fileName}"\r\n` +
-      `Content-Type: ${contentType || detectContentType(filePath)}\r\n\r\n`
+        `Content-Disposition: form-data; name="VersionData"; filename="${fileName}"\r\n` +
+        `Content-Type: ${contentType || detectContentType(filePath)}\r\n\r\n`
     )
   );
   parts.push(fileBuffer);
@@ -910,8 +900,7 @@ export async function createBulkPresentation(
   payload: BulkPresentationPayload,
   targetOrg: string
 ): Promise<CliResult<unknown>> {
-  const endpoint =
-    "/services/data/v66.0/connect/life-sciences/commercial/bulk-presentation";
+  const endpoint = "/services/data/v66.0/connect/life-sciences/commercial/bulk-presentation";
 
   const presentation: Record<string, unknown> = {
     name: payload.name,
@@ -921,7 +910,8 @@ export async function createBulkPresentation(
   if (payload.activationDate) presentation.activationDate = payload.activationDate;
   if (payload.deactivationDate) presentation.deactivationDate = payload.deactivationDate;
   if (payload.playerGesture) presentation.playerGesture = payload.playerGesture;
-  if (payload.enableDoubleTapZoom !== undefined) presentation.enableDoubleTapZoom = payload.enableDoubleTapZoom;
+  if (payload.enableDoubleTapZoom !== undefined)
+    presentation.enableDoubleTapZoom = payload.enableDoubleTapZoom;
   if (payload.enablePinchZoom !== undefined) presentation.enablePinchZoom = payload.enablePinchZoom;
   if (payload.topics && payload.topics.length > 0) presentation.topics = payload.topics;
   if (payload.sendByEmail !== undefined) presentation.sendByEmail = payload.sendByEmail;
@@ -952,9 +942,7 @@ export async function openOrg(
     args.push("--path", pagePath);
   }
 
-  return execSfCommand<{ url: string; orgId: string; username: string }>(
-    "org",
-    args,
-    { targetOrg }
-  );
+  return execSfCommand<{ url: string; orgId: string; username: string }>("org", args, {
+    targetOrg,
+  });
 }

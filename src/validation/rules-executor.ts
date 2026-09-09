@@ -5,15 +5,8 @@
  */
 
 import { runSoqlQuery, runToolingQuery } from "../salesforce/cli.js";
-import {
-  ValidationRule,
-  CheckResult,
-  AuditResult,
-  RuleCheck,
-  getAllRules,
-  getRulesByGroup,
-  getValidationGroups,
-} from "./rules-loader.js";
+import type { ValidationRule, CheckResult, AuditResult, RuleCheck } from "./rules-loader.js";
+import { getAllRules, getRulesByGroup, getValidationGroups } from "./rules-loader.js";
 
 // ============================================================================
 // CHECK EXECUTOR
@@ -84,10 +77,7 @@ async function executeSoqlCheck(
 
   if (!result.success) {
     // Check if it's an object not found error (object doesn't exist)
-    if (
-      result.error?.includes("sObject type") &&
-      result.error?.includes("is not supported")
-    ) {
+    if (result.error?.includes("sObject type") && result.error?.includes("is not supported")) {
       return {
         passed: false,
         message: `Object not found in org - this feature may not be installed`,
@@ -136,10 +126,7 @@ async function executeSoqlCountCheck(
 
   if (!result.success) {
     // Check if it's an object not found error
-    if (
-      result.error?.includes("sObject type") &&
-      result.error?.includes("is not supported")
-    ) {
+    if (result.error?.includes("sObject type") && result.error?.includes("is not supported")) {
       return {
         passed: false,
         message: `Object not found in org - this feature may not be installed`,
@@ -286,9 +273,7 @@ function evaluateExpectCondition(
       if (expect.includes("ActiveVersionId != null")) {
         // Check if any record has a non-null ActiveVersionId
         return (
-          records?.some(
-            (r) => (r as Record<string, unknown>).ActiveVersionId != null
-          ) ?? false
+          records?.some((r) => (r as Record<string, unknown>).ActiveVersionId != null) ?? false
         );
       }
     }
@@ -357,9 +342,7 @@ export async function runAudit(
   for (const rule of rulesToRun) {
     // Check prerequisites
     if (rule.prerequisites && rule.prerequisites.length > 0) {
-      const prereqResults = results.filter((r) =>
-        rule.prerequisites!.includes(r.rule.id)
-      );
+      const prereqResults = results.filter((r) => rule.prerequisites!.includes(r.rule.id));
       const prereqsFailed = prereqResults.some((r) => !r.passed);
 
       if (prereqsFailed) {

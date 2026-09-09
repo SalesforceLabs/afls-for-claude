@@ -44,7 +44,7 @@ export function cacheSet<T>(
   org: string,
   key: string,
   value: T,
-  ttlMs: number = DEFAULT_TTL_MS,
+  ttlMs: number = DEFAULT_TTL_MS
 ): void {
   const ck = compositeKey(org, key);
   store.set(ck, { value, expiresAt: Date.now() + ttlMs });
