@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Cancel superseded runs on the same ref (e.g. rapid PR pushes).
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Check formatting
+        run: npx prettier --check "src/**/*.ts"
+
+      - name: Typecheck (MCP server)
+        run: npx tsc --noEmit
+
+      - name: Typecheck (Electron main)
+        run: npx tsc -p tsconfig.electron.json --noEmit
+
+      - name: Typecheck (renderer)
+        run: npx tsc -p tsconfig.renderer.json --noEmit
+
+      - name: Run tests
+        run: npx vitest run
+
+      # The plugin installs and runs the *committed* bundle at
+      # mcp-server/index.mjs, so a source change must never ship without a
+      # matching bundle. Skips automatically until the bundle is committed to
+      # this branch (it lives on the marketplace branch today).
+      - name: Verify MCP bundle is in sync
+        run: |
+          if [ ! -f mcp-server/index.mjs ]; then
+            echo "No committed bundle on this branch; skipping bundle-drift check."
+            exit 0
+          fi
+          npm run bundle
+          if ! git diff --quiet -- mcp-server/index.mjs; then
+            echo "::error::mcp-server/index.mjs is out of date. Run 'npm run bundle' and commit the result."
+            git diff --stat -- mcp-server/index.mjs
+            exit 1
+          fi
