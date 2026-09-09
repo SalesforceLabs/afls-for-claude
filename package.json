@@ -13,7 +13,7 @@
     "format": "prettier --write src/",
     "test": "vitest",
     "electron:build": "tsc -p tsconfig.electron.json && vite build --config vite.renderer.config.ts",
-    "electron:dev": "concurrently -k -n tsc,vite,electron \"tsc -p tsconfig.electron.json --watch --preserveWatchOutput\" \"vite --config vite.renderer.config.ts\" \"wait-on tcp:5173 && electron dist-electron/main.js\"",
+    "electron:dev": "concurrently -k -n tsc,vite,electron \"tsc -p tsconfig.electron.json --watch --preserveWatchOutput\" \"vite --config vite.renderer.config.ts\" \"wait-on tcp:5173 && AFLS_RENDERER_URL=http://localhost:5173 electron dist-electron/main.js\"",
     "electron:start": "electron dist-electron/main.js",
     "electron:pack": "npm run build && npm run electron:build && electron-builder",
     "process-guides": "tsx scripts/process-pdf-sections.ts"
