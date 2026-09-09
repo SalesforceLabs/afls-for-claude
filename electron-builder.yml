@@ -17,6 +17,15 @@ mac:
   target:
     - dmg
     - zip
+  # Signing + notarization. Active only when the CI env provides a cert
+  # (CSC_LINK/CSC_KEY_PASSWORD) and Apple creds (APPLE_ID /
+  # APPLE_APP_SPECIFIC_PASSWORD / APPLE_TEAM_ID). Without them electron-builder
+  # produces an unsigned build and skips notarization — CI still passes.
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  notarize: true
 win:
   target:
     - nsis
