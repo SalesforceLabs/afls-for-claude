@@ -708,6 +708,10 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
         "optional": true,
         "type": "ZodOptional",
       },
+      "permissionSets": {
+        "optional": true,
+        "type": "ZodArray",
+      },
       "profiles": {
         "optional": true,
         "type": "ZodArray",
@@ -752,6 +756,10 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
       "oneWaySync": {
         "optional": true,
         "type": "ZodBoolean",
+      },
+      "permissionSets": {
+        "optional": true,
+        "type": "ZodArray",
       },
       "targetOrg": {
         "optional": true,
