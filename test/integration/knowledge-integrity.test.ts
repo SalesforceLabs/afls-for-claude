@@ -11,6 +11,39 @@ const CLAUDE_MD_PATH = path.join(ROOT, 'CLAUDE.md');
 
 const claudeMd = fs.readFileSync(CLAUDE_MD_PATH, 'utf-8');
 
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * Count occurrences of a wrong object name used as a *standalone object
+ * reference*. Ignores:
+ *   - matches inside a longer identifier (e.g. "Visit__c" within
+ *     "ProviderVisit__c" or "RelatedVisit__c"), which would otherwise
+ *     double-count names that are checked separately, and
+ *   - lines that reference the name as a required field API-name *suffix*
+ *     (e.g. "lookup field name must end in `Visit__c`"). This is legitimate
+ *     documentation of a naming rule, not a wrong object reference.
+ */
+function countWrongObjectNameUses(content: string, wrongName: string): number {
+  const tokenRe = new RegExp(
+    `(?<![A-Za-z0-9_])${escapeRegExp(wrongName)}(?![A-Za-z0-9_])`,
+    'g'
+  );
+  // Phrases that indicate the token is being documented as a field-name suffix.
+  const fieldSuffixContext =
+    /end(s|ing)?\s+(in|with)|lookup field|field\s+(api\s+)?name|test cases?:/i;
+
+  let count = 0;
+  for (const line of content.split('\n')) {
+    const matches = line.match(tokenRe);
+    if (!matches) continue;
+    if (fieldSuffixContext.test(line)) continue;
+    count += matches.length;
+  }
+  return count;
+}
+
 /** Recursively collect all .md files under a directory. */
 function collectMdFiles(dir: string): string[] {
   const results: string[] = [];
@@ -324,12 +357,12 @@ describe('Knowledge Base Integrity', () => {
 
         for (const filePath of allMdFiles) {
           const content = fs.readFileSync(filePath, 'utf-8');
-          // Use word-boundary-like matching to avoid false positives inside other words.
-          // We check for the exact wrong name as a standalone token.
-          if (content.includes(wrongName)) {
+          // Match the wrong name only as a standalone object reference — not
+          // inside a longer identifier and not when documented as a required
+          // field API-name suffix (see countWrongObjectNameUses).
+          const count = countWrongObjectNameUses(content, wrongName);
+          if (count > 0) {
             const relPath = path.relative(ROOT, filePath);
-            // Count occurrences
-            const count = content.split(wrongName).length - 1;
             violations.push(`${relPath} (${count} occurrence${count > 1 ? 's' : ''})`);
           }
         }
