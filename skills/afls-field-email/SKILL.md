@@ -61,7 +61,7 @@ Re-run the checks from Step 1 to confirm everything is configured correctly.
 |---------|-------------------|
 | `LifeSciEmailTemplate` | `EmailTemplate__c`, `LifeSciEmailTemplate__c` |
 | `CommunicationSubscription` | `CommunicationSubscription__c`, `ConsentTopic__c` |
-| `CommunicationSubscriptionConsent` | `Consent__c`, `EmailConsent__c` |
+| `CommSubscriptionConsent` | `CommunicationSubscriptionConsent`, `Consent__c`, `EmailConsent__c` |
 | `ContactPointEmail` | — |
 | `LifeSciEmailJob` | `EmailJob__c` |
 | `LifeSciEmailQueue` | `EmailQueue__c` |

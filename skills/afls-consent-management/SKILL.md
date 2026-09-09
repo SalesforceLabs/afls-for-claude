@@ -1,6 +1,6 @@
 ---
 name: afls-consent-management
-description: Guides AFLS Consent Management configuration for web and mobile apps. Use when user asks about consent capture, communication subscriptions, opt-in, opt-out, engagement channel types, compliance statements for consent, digital signatures, consent history, contact point consent, or CommunicationSubscription/CommunicationSubscriptionConsent objects.
+description: Guides AFLS Consent Management configuration for web and mobile apps. Use when user asks about consent capture, communication subscriptions, opt-in, opt-out, engagement channel types, compliance statements for consent, digital signatures, consent history, contact point consent, or CommunicationSubscription/CommSubscriptionConsent objects.
 ---
 
 ## How to Answer Consent Management Questions
@@ -13,8 +13,8 @@ description: Guides AFLS Consent Management configuration for web and mobile app
 | Specific consent topic (digital signatures, compliance snapshots, etc.) | `search_afls_knowledge({ query: "<topic>" })` |
 | Admin Console consent settings | `list_admin_settings({ category: "ConsentManagement" })` |
 | Trigger handler status | `list_trigger_handlers()` |
-| Object fields and relationships | `describe_sobject({ sobject: "CommunicationSubscriptionConsent" })` |
-| Consent data in the org | `run_soql({ query: "SELECT ... FROM CommunicationSubscriptionConsent ..." })` |
+| Object fields and relationships | `describe_sobject({ sobject: "CommSubscriptionConsent" })` |
+| Consent data in the org | `run_soql({ query: "SELECT ... FROM CommSubscriptionConsent ..." })` |
 | Mobile cache status | `check_mobile_cache_status()` |
 | Validation / audit | `audit_mobile_config({ group: "consent-config-check" })` |
 
@@ -62,7 +62,7 @@ Re-run the queries from Step 1 to confirm everything is configured correctly.
 | Correct | Wrong (NEVER use) |
 |---------|-------------------|
 | `CommunicationSubscription` | `Subscription__c`, `ConsentSubscription__c` |
-| `CommunicationSubscriptionConsent` | `ConsentRecord__c`, `Consent__c` |
+| `CommSubscriptionConsent` | `CommunicationSubscriptionConsent`, `ConsentRecord__c`, `Consent__c` |
 | `CommunicationSubscriptionChannelType` | `Channel__c`, `ConsentChannel__c` |
 | `CommunicationSubscriptionComplianceSnapshot` | `ConsentSnapshot__c`, `ConsentCompliance__c` |
 | `EngagementChannelType` | `ConsentChannelType__c` |
