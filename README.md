@@ -724,7 +724,7 @@ The plugin includes skills, documentation, and validation rules for all major AF
 │  │                            │                             │ │
 │  │  Knowledge Base            │  Citation System            │ │
 │  │  • 29 modules (86 files)  │  • 106 citation entries    │ │
-│  │  • 15 help docs + URLs    │  • File paths + URLs       │ │
+│  │  • live help via MCP      │  • File paths + URLs       │ │
 │  │  • 2 guides, 2 exercises  │  • Blockquote format       │ │
 │  └─────────────────────────────────────────────────────────┘ │
 │                           │                                  │
@@ -746,8 +746,8 @@ All knowledge tool responses include source citations with links:
 > 📂 **File:** /path/to/knowledge/modules/visit-management/admin-console-transcript.md
 ```
 
-- **106 citation entries** covering 86 PM Enablement files, 15 Official Help docs, 2 guides, 2 exercises, 1 troubleshooting doc
-- Official Help docs include Salesforce help URLs
+- **106 citation entries** covering 86 PM Enablement files, 2 guides, 2 exercises, 1 troubleshooting doc
+- Official Salesforce help documentation is served live via the `salesforce-docs` MCP server (not bundled locally)
 - All citations include local file paths for quick access
 - Citations are returned in blockquote format by MCP tools
 - Skills delegate to tools (rather than embedding knowledge inline) to ensure citations always flow through
@@ -794,7 +794,7 @@ AFLS-for-Claude/
 │   └── validation/            # YAML rule engine (151 rules)
 ├── knowledge/                # Processed knowledge base (markdown)
 │   ├── modules/              # 29 module directories (86 files)
-│   ├── help/                 # 15 Official Salesforce help docs
+│   ├── help/                 # (official help served live via salesforce-docs MCP)
 │   ├── guides/               # Dev guide, mobile setup guide
 │   ├── exercises/            # Hands-on training (2 files)
 │   ├── troubleshooting/      # Common issues (4 files)
