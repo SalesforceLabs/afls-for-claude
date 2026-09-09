@@ -15,6 +15,8 @@ interface AflsApi {
   getSettings(): Promise<{
     providerType: string;
     apiKey?: string;
+    baseUrl?: string;
+    authToken?: string;
     gatewayUrl?: string;
     gatewayToken?: string;
     model?: string;

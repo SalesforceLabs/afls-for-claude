@@ -7,7 +7,9 @@ on:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    # macOS runner so electron-builder can produce the signed-capable mac
+    # installers (.dmg/.zip) alongside the release.
+    runs-on: macos-latest
     permissions:
       contents: write
 
@@ -20,8 +22,20 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Verify version matches tag
+        # Lockstep guard: the tag must equal the version in package.json,
+        # plugin.json, and marketplace.json. Fail fast before the long build.
+        env:
+          TAG: ${{ github.ref_name }}
+        run: node scripts/check-version.mjs "$TAG"
+
       - name: Install dependencies
-        run: npm ci
+        # --ignore-scripts skips native install scripts (better-sqlite3's
+        # node-gyp rebuild) that otherwise crash `npm ci` on the macOS runner
+        # ("Exit handler never called!"). electron-builder rebuilds native
+        # modules against the Electron ABI during packaging anyway. Bin links
+        # (tsc, vite) are still created.
+        run: npm ci --ignore-scripts
 
       - name: Build
         run: npm run build
@@ -29,7 +43,26 @@ jobs:
       - name: Run tests
         run: npx vitest run
 
+      - name: Package desktop app (macOS)
+        # Builds the MCP server + Electron bundles, then electron-builder emits
+        # the mac dmg/zip into release/ and rebuilds native modules for Electron.
+        # When the signing/notarization secrets are configured the build is
+        # signed with the Developer ID cert and notarized; when they're empty
+        # electron-builder finds no identity and produces an unsigned build.
+        run: npm run electron:pack
+        env:
+          # Developer ID Application cert: base64 .p12 + its export password.
+          CSC_LINK: ${{ secrets.CSC_LINK }}
+          CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+          # Notarization via notarytool (app-specific password route).
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           generate_release_notes: true
+          files: |
+            release/*.dmg
+            release/*.zip

@@ -6,7 +6,10 @@ import { registerIpcHandlers } from "./ipc/handlers.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const isDev = !app.isPackaged;
+// Only load the Vite dev server when explicitly told to (set by `electron:dev`).
+// Running the built app (`electron:start`) leaves this unset so we load the
+// bundled renderer directly instead of probing a dev server that isn't running.
+const rendererDevUrl = process.env.AFLS_RENDERER_URL;
 
 // Register a custom protocol to serve local files (PDFs, etc.) to the renderer.
 // This avoids file:// security restrictions in iframes.
@@ -51,9 +54,9 @@ function createWindow(): void {
   // Register IPC handlers
   registerIpcHandlers(mainWindow);
 
-  if (isDev) {
-    // Try Vite dev server first, fall back to production build
-    mainWindow.loadURL("http://localhost:5173").catch(() => {
+  if (rendererDevUrl) {
+    // Dev mode: try the Vite dev server, fall back to the built bundle if it's down.
+    mainWindow.loadURL(rendererDevUrl).catch(() => {
       mainWindow!.loadFile(
         path.join(__dirname, "..", "dist-renderer", "index.html")
       );

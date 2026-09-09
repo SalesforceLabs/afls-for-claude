@@ -8,13 +8,13 @@ interface SetupScreenProps {
   error: string | null;
 }
 
+type ProviderType = "api-key" | "bedrock-gateway";
+
 export default function SetupScreen({ onConnect, error }: SetupScreenProps) {
-  const [providerType, setProviderType] = useState<"api-key" | "sf-gateway">(
-    "api-key"
-  );
+  const [providerType, setProviderType] = useState<ProviderType>("api-key");
   const [apiKey, setApiKey] = useState("");
-  const [gatewayUrl, setGatewayUrl] = useState("");
-  const [gatewayToken, setGatewayToken] = useState("");
+  const [baseUrl, setBaseUrl] = useState("");
+  const [authToken, setAuthToken] = useState("");
   const [connecting, setConnecting] = useState(false);
   const [localError, setLocalError] = useState<string | null>(null);
 
@@ -25,7 +25,7 @@ export default function SetupScreen({ onConnect, error }: SetupScreenProps) {
     const credentials =
       providerType === "api-key"
         ? { apiKey }
-        : { accessToken: gatewayToken, gatewayUrl: gatewayUrl || undefined };
+        : { authToken, baseUrl };
 
     const result = await onConnect(providerType, credentials);
     if (!result.ok) {
@@ -35,6 +35,11 @@ export default function SetupScreen({ onConnect, error }: SetupScreenProps) {
   };
 
   const displayError = localError || error;
+
+  const canConnect =
+    providerType === "api-key"
+      ? !!apiKey
+      : !!authToken && !!baseUrl;
 
   return (
     <div className="setup-screen no-drag">
@@ -46,30 +51,31 @@ export default function SetupScreen({ onConnect, error }: SetupScreenProps) {
 
         <div className="settings-panel">
           <div className="form-group">
-            <label>LLM Provider</label>
+            <label>How do you want to connect to Claude?</label>
             <select
               value={providerType}
-              onChange={(e) =>
-                setProviderType(e.target.value as "api-key" | "sf-gateway")
-              }
+              onChange={(e) => {
+                setProviderType(e.target.value as ProviderType);
+                setLocalError(null);
+              }}
             >
-              <option value="api-key">Anthropic API Key</option>
-              <option value="sf-gateway">Salesforce LLM Gateway</option>
+              <option value="api-key">Anthropic API key</option>
+              <option value="bedrock-gateway">Bedrock / custom gateway</option>
             </select>
           </div>
 
           {providerType === "api-key" && (
             <div className="form-group">
-              <label>API Key</label>
+              <label>API key</label>
               <input
                 type="password"
                 placeholder="sk-ant-..."
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && handleConnect()}
+                onKeyDown={(e) => e.key === "Enter" && canConnect && handleConnect()}
               />
               <p className="setup-hint">
-                Get your API key from{" "}
+                Get a key from{" "}
                 <a
                   href="https://console.anthropic.com/settings/keys"
                   target="_blank"
@@ -77,50 +83,56 @@ export default function SetupScreen({ onConnect, error }: SetupScreenProps) {
                 >
                   console.anthropic.com
                 </a>
+                . Your key is stored locally and only sent to Anthropic.
               </p>
             </div>
           )}
 
-          {providerType === "sf-gateway" && (
+          {providerType === "bedrock-gateway" && (
             <>
               <div className="form-group">
-                <label>Gateway URL (optional)</label>
+                <label>Gateway base URL</label>
                 <input
                   type="text"
-                  placeholder="https://your-llm-gateway.example.com"
-                  value={gatewayUrl}
-                  onChange={(e) => setGatewayUrl(e.target.value)}
+                  placeholder="https://your-gateway.example.com"
+                  value={baseUrl}
+                  onChange={(e) => setBaseUrl(e.target.value)}
                 />
+                <p className="setup-hint">
+                  An Anthropic-compatible endpoint (e.g. an Amazon Bedrock proxy or
+                  internal LLM gateway). Requests go to <code>/v1/messages</code>.
+                </p>
               </div>
               <div className="form-group">
-                <label>Access Token</label>
+                <label>API key / token</label>
                 <input
                   type="password"
-                  placeholder="Bearer token from SSO"
-                  value={gatewayToken}
-                  onChange={(e) => setGatewayToken(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && handleConnect()}
+                  placeholder="Sent as the x-api-key header"
+                  value={authToken}
+                  onChange={(e) => setAuthToken(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && canConnect && handleConnect()}
                 />
               </div>
             </>
           )}
 
-          {displayError && (
-            <div className="setup-error">{displayError}</div>
-          )}
+          {displayError && <div className="setup-error">{displayError}</div>}
 
           <button
             className="btn-primary"
             style={{ width: "100%", marginTop: 4 }}
             onClick={handleConnect}
-            disabled={
-              connecting ||
-              (providerType === "api-key" && !apiKey) ||
-              (providerType === "sf-gateway" && !gatewayToken)
-            }
+            disabled={connecting || !canConnect}
           >
             {connecting ? "Connecting..." : "Connect"}
           </button>
+
+          <p className="setup-hint" style={{ marginTop: 12, textAlign: "center" }}>
+            Tip: set <code>ANTHROPIC_API_KEY</code>, or{" "}
+            <code>ANTHROPIC_AUTH_TOKEN</code> +{" "}
+            <code>ANTHROPIC_BEDROCK_BASE_URL</code>, and the app connects
+            automatically next time.
+          </p>
         </div>
       </div>
     </div>

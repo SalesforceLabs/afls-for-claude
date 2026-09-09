@@ -51,6 +51,15 @@ export default function App() {
         if (settings.providerType === "api-key" && settings.apiKey) {
           await engine.start("api-key", { apiKey: settings.apiKey });
         } else if (
+          settings.providerType === "bedrock-gateway" &&
+          settings.authToken &&
+          settings.baseUrl
+        ) {
+          await engine.start("bedrock-gateway", {
+            authToken: settings.authToken,
+            baseUrl: settings.baseUrl,
+          });
+        } else if (
           settings.providerType === "sf-gateway" &&
           settings.gatewayToken
         ) {
@@ -106,6 +115,11 @@ export default function App() {
               providerType,
               ...(providerType === "api-key"
                 ? { apiKey: credentials.apiKey }
+                : providerType === "bedrock-gateway"
+                ? {
+                    authToken: credentials.authToken,
+                    baseUrl: credentials.baseUrl,
+                  }
                 : {
                     gatewayToken: credentials.accessToken,
                     gatewayUrl: credentials.gatewayUrl,

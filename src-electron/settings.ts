@@ -3,8 +3,12 @@ import path from "path";
 import { app } from "electron";
 
 export interface Settings {
-  providerType: "api-key" | "sf-gateway" | "";
+  providerType: "api-key" | "bedrock-gateway" | "sf-gateway" | "";
   apiKey?: string;
+  // Bedrock / custom Anthropic-compatible gateway
+  baseUrl?: string;
+  authToken?: string;
+  // Salesforce LLM Gateway (internal; kept for back-compat)
   gatewayUrl?: string;
   gatewayToken?: string;
   model?: string;
@@ -14,7 +18,7 @@ export interface Settings {
 
 const DEFAULT_SETTINGS: Settings = {
   providerType: "",
-  model: "claude-opus-4-6-v1",
+  model: "claude-sonnet-5",
   theme: "system",
 };
 

@@ -124,6 +124,7 @@ This is a **Claude Code Plugin** providing an all-in-one AFLS solution:
 | `/afls:configure-briefings` | Interactive wizard to configure and validate Briefings (Daily Podcasts) |
 | `/afls:diagnose-briefings` | Diagnose why Briefings isn't working — validates toggle, permissions, flows, DB Schema |
 | `/afls:getting-started` | Interactive onboarding — check setup, discover capabilities, get started |
+| `/afls:launch-app` | Build (first run) and launch the AFLS Assistant desktop app (Electron) |
 
 ### Agents (Specialized subagents)
 | Agent | Description |
