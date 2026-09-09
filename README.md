@@ -109,6 +109,26 @@ bash scripts/launch-electron-app.sh
 npm run electron:dev
 ```
 
+### Prebuilt downloads (macOS)
+
+CI also packages the app as a `.dmg`/`.zip` — download the installers from a
+tagged **Release**, or from the **Build Desktop App** workflow run (Actions tab →
+run → Artifacts) for any commit.
+
+These builds are currently **unsigned and not notarized**, so macOS Gatekeeper
+blocks them on first open. To open an unsigned build:
+
+- **Right-click the app → Open**, then confirm (only needed the first time), or
+- strip the download-quarantine flag:
+  ```bash
+  xattr -dr com.apple.quarantine "/Applications/AFLS Assistant.app"
+  ```
+
+The quarantine flag is only applied to files downloaded via a browser — an app
+built locally with `/afls:launch-app` isn't affected. Once a Developer ID
+certificate is configured in the repo's CI secrets, Release builds are signed
+and notarized and open with no prompt.
+
 ### First-run onboarding
 
 The first time the app opens, it asks how to connect to Claude:
