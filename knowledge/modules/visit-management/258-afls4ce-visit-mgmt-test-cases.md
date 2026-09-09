@@ -38,7 +38,7 @@ This document provides comprehensive test cases for AFLS Visit Management, cover
 | 1 | New Visit Engagement page sidebar shows "Product Detailing" menu option | |
 | 2 | Tap on Product Detailing shows the Product Selection screen | |
 | 3 | Products displayed based on product selection pattern configuration | See Product Selection Test Patterns below |
-| 4 | Select a product to begin detailing | Creates a ProviderVisitPrdDetailing record |
+| 4 | Select a product to begin detailing | Creates a ProviderVisitProdDetailing record |
 | 5 | Multiple products can be selected and ordered | Detail order tracked |
 | 6 | Can remove products from the detailing list | |
 
@@ -213,7 +213,7 @@ The product selection for discussions follows the same patterns as product detai
 |--------|--------------------------|
 | `Visit` | Base visit record |
 | `ProviderVisit` | AFLS visit extension (1:1 with Visit) |
-| `ProviderVisitPrdDetailing` | Product detailing records |
+| `ProviderVisitProdDetailing` | Product detailing records |
 | `ProviderVisitDtlProductMsg` | Product messages during detailing |
 | `ProviderVisitProdDiscussion` | Product discussion records |
 | `ProviderVisitMarketingItem` | Marketing items presented |
@@ -235,7 +235,7 @@ Before running these test cases, ensure:
 
 1. **Visit Management enabled** — Admin Console > Visit Settings
 2. **Record types created** — Both Visit and ProviderVisit record types configured and mapped
-3. **Trigger handlers active** — VisitTriggerHandler, ProviderVisitTriggerHandler, ProviderVisitPrdDetailingTriggerHandler
+3. **Trigger handlers active** — VisitTriggerHandler, ProviderVisitTriggerHandler, ProviderVisitProdDetailingTriggerHandler
 4. **Products assigned to territories** — LifeSciMarketableProduct records linked to Territory2
 5. **Sample inventory loaded** — ProductItem records with quantity > 0 for the rep's Location
 6. **Sample limits configured** — ProviderSampleLimit records for target providers (if limit enforcement is needed)

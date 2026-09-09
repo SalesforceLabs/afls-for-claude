@@ -332,6 +332,12 @@ export function register(server: McpServer) {
         .describe(
           "Optional: profile names to assign (e.g., ['Field Sales Representative', 'System Administrator'])"
         ),
+      permissionSets: z
+        .array(z.string())
+        .optional()
+        .describe(
+          "Optional: permission set API names (NOT labels) that gate this object's sync (e.g., ['LSC_Field_Sales']). Stored as a semicolon-delimited list in the PermissionSets field. The mobile app syncs the object for users who hold any listed permission set, in addition to the assigned profiles."
+        ),
       isActive: z
         .boolean()
         .optional()
@@ -346,6 +352,7 @@ export function register(server: McpServer) {
       oneWaySync,
       attachmentsSupport,
       profiles,
+      permissionSets,
       isActive,
       targetOrg,
     }) => {
@@ -432,7 +439,11 @@ export function register(server: McpServer) {
           { name: "AttachmentsSupport", dataType: "PICKLIST", value: attachmentsSupport || "" },
           { name: "Status", dataType: "PICKLIST", value: "VALID" },
           { name: "MandatoryFields", dataType: "LONGTEXT", value: "" },
-          { name: "PermissionSets", dataType: "LONGTEXT", value: "" },
+          {
+            name: "PermissionSets",
+            dataType: "LONGTEXT",
+            value: permissionSets && permissionSets.length ? permissionSets.join("; ") : "",
+          },
         ];
 
         const fieldErrors: string[] = [];
@@ -508,6 +519,8 @@ export function register(server: McpServer) {
         message += `- **OneWaySync:** ${oneWaySync ?? false}\n`;
         if (whereSoql) message += `- **SOQL Filter:** ${whereSoql}\n`;
         if (attachmentsSupport) message += `- **Attachments:** ${attachmentsSupport}\n`;
+        if (permissionSets && permissionSets.length)
+          message += `- **PermissionSets:** ${permissionSets.join("; ")}\n`;
 
         const totalFields = fieldDefs.length;
         const successFields = totalFields - fieldErrors.length;
@@ -576,6 +589,12 @@ export function register(server: McpServer) {
         .string()
         .optional()
         .describe("Field used for delta sync (e.g., 'LastModifiedDate')"),
+      permissionSets: z
+        .array(z.string())
+        .optional()
+        .describe(
+          "Permission set API names (NOT labels) that gate this object's sync. Stored as a semicolon-delimited list in the PermissionSets field. Pass an empty array to clear."
+        ),
       targetOrg: z.string().optional().describe("Optional: specific org to update"),
     },
     async ({
@@ -586,6 +605,7 @@ export function register(server: McpServer) {
       attachmentsSupport,
       mandatoryFields,
       deltaDateField,
+      permissionSets,
       targetOrg,
     }) => {
       const validation = await validateOrgConnection();
@@ -681,6 +701,12 @@ export function register(server: McpServer) {
             value: deltaDateField,
             dataType: "FIELD",
           });
+        if (permissionSets !== undefined)
+          fieldUpdates.push({
+            fieldName: "PermissionSets",
+            value: permissionSets.join("; "),
+            dataType: "LONGTEXT",
+          });
 
         for (const update of fieldUpdates) {
           const existing = existingFVs.get(update.fieldName);
@@ -730,7 +756,7 @@ export function register(server: McpServer) {
             content: [
               {
                 type: "text",
-                text: `# Nothing to Update\n\nNo changes specified. Provide at least one field to update (whereSoql, oneWaySync, isActive, attachmentsSupport, mandatoryFields, deltaDateField).`,
+                text: `# Nothing to Update\n\nNo changes specified. Provide at least one field to update (whereSoql, oneWaySync, isActive, attachmentsSupport, mandatoryFields, deltaDateField, permissionSets).`,
               },
             ],
           };
@@ -840,6 +866,10 @@ export function register(server: McpServer) {
         let message = `# DB Schema Record ${active ? "Enabled" : "Disabled"}\n\n`;
         message += `**Record:** ${fullName}\n`;
         message += `**Status:** ${wasActive ? "Active" : "Inactive"} → ${active ? "Active" : "Inactive"}\n`;
+        if (!active) {
+          message += `\n## ⚠️ Destructive to Local Mobile Data\n\n`;
+          message += `Disabling a DB Schema record is **not** just a visibility toggle. On each device's next sync, the mobile app runs \`DELETE FROM <table>\` for any object that is no longer in the metadata — so **all locally cached records for \`${record.MasterLabel ?? fullName}\` on the iPad are wiped**. Any unsynced offline edits to that object are lost. Re-enabling later re-syncs from the server, but local-only/unsynced data does not come back. Only disable when you intend to remove the object from mobile entirely.\n`;
+        }
         message += `\n## Next Steps\n\n`;
         message += `**Regenerate the mobile metadata cache** for changes to take effect on the iPad app.\n`;
         message += `Use \`generate_mobile_metadata_cache\` with the relevant profile names.`;

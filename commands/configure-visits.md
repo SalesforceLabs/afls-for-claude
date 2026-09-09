@@ -70,7 +70,7 @@ Report:
 Query product detailing and discussion records:
 
 ```sql
-SELECT COUNT() FROM ProviderVisitPrdDetailing
+SELECT COUNT() FROM ProviderVisitProdDetailing
 ```
 
 ```sql
@@ -225,7 +225,7 @@ This runs all visit-specific validation rules automatically.
 
 - Use `Visit` NOT `Visit__c`
 - Use `ProviderVisit` NOT `ProviderVisit__c`
-- Use `ProviderVisitPrdDetailing` NOT `ProviderVisitProductDetailing__c`
+- Use `ProviderVisitProdDetailing` NOT `ProviderVisitProductDetailing__c`
 - Use `ProviderVisitProdDiscussion` NOT `ProviderVisitProductDiscussion__c`
 - Use `ComplianceStatementDefinition` NOT `ComplianceStatement__c`
 - Use `ProviderAcctTerritoryInfo` NOT `ProviderAccountTerritoryInfo__c`

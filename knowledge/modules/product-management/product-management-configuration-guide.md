@@ -13,7 +13,7 @@ Product Management in AFLS handles the setup and configuration of pharmaceutical
 | `ProviderProductGuidance` | Messages/objectives attached to products for detailing |
 | `ProductRestriction` | Account-level product restrictions (compliance) |
 | `PrvdActvtyGoalMeasurePrdct` | Product-level activity goal measures |
-| `ProviderVisitPrdDetailing` | Product detailing records on visits |
+| `ProviderVisitProdDetailing` | Product detailing records on visits |
 | `ProviderVisitProdDiscussion` | Product discussion records on visits |
 
 ## Product Hierarchy
@@ -130,7 +130,7 @@ Ensure these objects are in DB Schema for mobile product features:
 - `LifeSciMarketableProduct` (one-way sync)
 - `ProviderProductGuidance` (one-way sync)
 - `ProductRestriction` (one-way sync)
-- `ProviderVisitPrdDetailing` (bidirectional)
+- `ProviderVisitProdDetailing` (bidirectional)
 - `ProviderVisitProdDiscussion` (bidirectional)
 
 ### Product Display on Mobile

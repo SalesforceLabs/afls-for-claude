@@ -167,6 +167,6 @@ User: `/afls:configure-custom-scripts debug`
 
 - Use `LifeScienceCustomScript` NOT `CustomScript__c`
 - Use `ProviderVisit` NOT `ProviderVisit__c`
-- Use `ProviderVisitPrdDetailing` NOT `ProviderVisitProductDetailing__c`
+- Use `ProviderVisitProdDetailing` NOT `ProviderVisitProductDetailing__c`
 - Use `ProductDisbursement` NOT `SampleDrop__c`
 - `CodeText` is read-only via API — only updateable through the Refresh button

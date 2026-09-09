@@ -10,7 +10,7 @@ For data migration guidance, call `search_afls_knowledge({ query: "data migratio
 | Affiliation_vod__c | ProviderAffiliation |
 | Territory2 | Territory2 (same) |
 | Call2_vod__c | Visit + ProviderVisit |
-| Call2_Detail_vod__c | ProviderVisitPrdDetailing |
+| Call2_Detail_vod__c | ProviderVisitProdDetailing |
 | Sample_Transaction_vod__c | InventoryOperation + ProductDisbursement |
 | Product_vod__c | Product2 + LifeSciMarketableProduct |
 

@@ -255,7 +255,7 @@ The plugin includes an MCP server that provides these tools:
 | `check_visit_config` | Check Visit Management configuration (record types, settings, compliance, territory info, mobile cache) |
 | `add_visit_engagement_sidebar_item` | Add a custom object as a related list on a Visit page layout so it appears in the visit engagement sidebar on mobile. Retrieves the layout XML, inserts the related list, and deploys it back. |
 
-**CORRECT object names:** `Visit`, `ProviderVisit`, `ProviderVisitPrdDetailing`, `ProviderVisitProdDiscussion`, `ProviderAcctTerritoryInfo`, `ComplianceStatementDefinition`.
+**CORRECT object names:** `Visit`, `ProviderVisit`, `ProviderVisitProdDetailing`, `ProviderVisitProdDiscussion`, `ProviderAcctTerritoryInfo`, `ComplianceStatementDefinition`.
 **WRONG names (DO NOT USE):** `Visit__c`, `ProviderVisit__c`, `VisitSetting__c`, `VisitConfiguration__mdt`, `VisitRecordType__c`, `VisitType__c`.
 
 #### Sample Management Tools
