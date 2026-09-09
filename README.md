@@ -1,5 +1,10 @@
 # Claude for AFLS
 
+[![Version](https://img.shields.io/github/package-json/v/SalesforceLabs/afls-for-claude?label=version)](https://github.com/SalesforceLabs/afls-for-claude/releases)
+[![CI](https://github.com/SalesforceLabs/afls-for-claude/actions/workflows/ci.yml/badge.svg)](https://github.com/SalesforceLabs/afls-for-claude/actions/workflows/ci.yml)
+[![Build Desktop App](https://github.com/SalesforceLabs/afls-for-claude/actions/workflows/build-app.yml/badge.svg)](https://github.com/SalesforceLabs/afls-for-claude/actions/workflows/build-app.yml)
+[![Release](https://github.com/SalesforceLabs/afls-for-claude/actions/workflows/release.yml/badge.svg)](https://github.com/SalesforceLabs/afls-for-claude/actions/workflows/release.yml)
+
 A [Claude Code](https://claude.ai/code) plugin that brings expert AFLS knowledge, Salesforce org tools, and implementation guidance directly into your terminal.
 
 <p align="center">
