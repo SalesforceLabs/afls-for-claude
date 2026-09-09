@@ -127,9 +127,7 @@ export function loadAllRules(): ValidationRuleFile[] {
     return ruleFiles;
   }
 
-  const files = readdirSync(RULES_DIR).filter(
-    (f) => f.endsWith(".yaml") || f.endsWith(".yml")
-  );
+  const files = readdirSync(RULES_DIR).filter((f) => f.endsWith(".yaml") || f.endsWith(".yml"));
 
   for (const file of files) {
     // Skip schema file

@@ -30,7 +30,12 @@ export function register(server: McpServer) {
     "export_config",
     "Export AFLS configuration (Admin Console settings, DB Schema, trigger handlers, actions) as JSON. Captures per-field DataType and profile assignments (format v1.1) so the snapshot can be faithfully re-applied with import_config. Use this to snapshot org configuration for comparison, migration, or backup.",
     {
-      targetOrg: z.string().optional().describe("Optional: specific org to export from. Uses current target org if not specified."),
+      targetOrg: z
+        .string()
+        .optional()
+        .describe(
+          "Optional: specific org to export from. Uses current target org if not specified."
+        ),
       categories: z
         .array(z.enum(["trigger_handlers", "admin_settings", "db_schema", "actions"]))
         .optional()
@@ -41,38 +46,78 @@ export function register(server: McpServer) {
       const effectiveOrg = targetOrg || validation.targetOrg;
       if (!effectiveOrg) {
         return {
-          content: [{ type: "text", text: `# Cannot Export Configuration\n\n${validation.error}\n\nPlease connect to a Salesforce org first.` }],
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Export Configuration\n\n${validation.error}\n\nPlease connect to a Salesforce org first.`,
+            },
+          ],
         };
       }
 
-      const exportCategories = (categories || ["trigger_handlers", "admin_settings", "db_schema", "actions"]) as ExportCategory[];
+      const exportCategories = (categories || [
+        "trigger_handlers",
+        "admin_settings",
+        "db_schema",
+        "actions",
+      ]) as ExportCategory[];
       const snapshot = await collectConfig(effectiveOrg, exportCategories);
       const json = JSON.stringify(snapshot, null, 2);
 
       return {
-        content: [{
-          type: "text",
-          text: `# AFLS Configuration Export\n\n**Org:** ${effectiveOrg}\n**Exported:** ${snapshot.exportedAt}\n**Format:** v${snapshot.version}\n**Categories:** ${exportCategories.join(", ")}\n\n\`\`\`json\n${json}\n\`\`\`\n\nSave this JSON (see /afls:export-config for the exports/ convention) and use \`import_config\` to review + apply it to another org.`,
-        }],
+        content: [
+          {
+            type: "text",
+            text: `# AFLS Configuration Export\n\n**Org:** ${effectiveOrg}\n**Exported:** ${snapshot.exportedAt}\n**Format:** v${snapshot.version}\n**Categories:** ${exportCategories.join(", ")}\n\n\`\`\`json\n${json}\n\`\`\`\n\nSave this JSON (see /afls:export-config for the exports/ convention) and use \`import_config\` to review + apply it to another org.`,
+          },
+        ],
       };
-    },
+    }
   );
 
   server.tool(
     "import_config",
     "Import AFLS configuration from a snapshot into a target org, diff-driven and create + update-only (safe). Modes: 'report' (default) computes a diff and summarizes what would change; 'ui' opens a local browser review-and-apply UI on 127.0.0.1 with per-record checkboxes and live progress; 'apply' applies a specific selection headlessly. The target org is auto-backed-up to exports/ before any write. Never deletes or deactivates records that exist only in the target.",
     {
-      source: z.string().optional().describe("Source snapshot: inline JSON, or a path to an exports/*.json file. Omit to snapshot a live source org instead (see sourceOrg)."),
-      sourceOrg: z.string().optional().describe("Optional: snapshot this live org as the source instead of passing a file/JSON."),
-      targetOrg: z.string().optional().describe("Target org to import into. Uses the current target org if not specified."),
-      mode: z.enum(["report", "ui", "apply"]).optional().describe("report (default): diff summary. ui: open the local review/apply web UI. apply: apply the given selection."),
-      selection: z.array(z.string()).optional().describe("For mode 'apply': record keys to apply (as shown in the report/UI, e.g. 'record:DbSchema_Visit')."),
+      source: z
+        .string()
+        .optional()
+        .describe(
+          "Source snapshot: inline JSON, or a path to an exports/*.json file. Omit to snapshot a live source org instead (see sourceOrg)."
+        ),
+      sourceOrg: z
+        .string()
+        .optional()
+        .describe("Optional: snapshot this live org as the source instead of passing a file/JSON."),
+      targetOrg: z
+        .string()
+        .optional()
+        .describe("Target org to import into. Uses the current target org if not specified."),
+      mode: z
+        .enum(["report", "ui", "apply"])
+        .optional()
+        .describe(
+          "report (default): diff summary. ui: open the local review/apply web UI. apply: apply the given selection."
+        ),
+      selection: z
+        .array(z.string())
+        .optional()
+        .describe(
+          "For mode 'apply': record keys to apply (as shown in the report/UI, e.g. 'record:DbSchema_Visit')."
+        ),
     },
     async ({ source, sourceOrg, targetOrg, mode = "report", selection }) => {
       const validation = await validateOrgConnection();
       const effectiveTarget = targetOrg || validation.targetOrg;
       if (!effectiveTarget) {
-        return { content: [{ type: "text", text: `# Cannot Import Configuration\n\n${validation.error}\n\nConnect to a Salesforce org first.` }] };
+        return {
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Import Configuration\n\n${validation.error}\n\nConnect to a Salesforce org first.`,
+            },
+          ],
+        };
       }
 
       // Resolve the source snapshot.
@@ -83,14 +128,32 @@ export function register(server: McpServer) {
         } else if (sourceOrg) {
           sourceSnapshot = await collectConfig(sourceOrg);
         } else {
-          return { content: [{ type: "text", text: "# Import Error\n\nProvide a `source` (file path or JSON) or a `sourceOrg` to snapshot." }] };
+          return {
+            content: [
+              {
+                type: "text",
+                text: "# Import Error\n\nProvide a `source` (file path or JSON) or a `sourceOrg` to snapshot.",
+              },
+            ],
+          };
         }
       } catch (err) {
-        return { content: [{ type: "text", text: `# Import Error\n\nCould not load source snapshot: ${err instanceof Error ? err.message : String(err)}` }] };
+        return {
+          content: [
+            {
+              type: "text",
+              text: `# Import Error\n\nCould not load source snapshot: ${err instanceof Error ? err.message : String(err)}`,
+            },
+          ],
+        };
       }
 
       if (sourceOrg && sourceOrg === effectiveTarget) {
-        return { content: [{ type: "text", text: "# Import Error\n\nSource and target org are the same." }] };
+        return {
+          content: [
+            { type: "text", text: "# Import Error\n\nSource and target org are the same." },
+          ],
+        };
       }
 
       const categories = categoriesInSnapshot(sourceSnapshot);
@@ -108,33 +171,60 @@ export function register(server: McpServer) {
             categories,
           });
           return {
-            content: [{
-              type: "text",
-              text: uiMessage(session.url, diff, effectiveTarget),
-            }],
+            content: [
+              {
+                type: "text",
+                text: uiMessage(session.url, diff, effectiveTarget),
+              },
+            ],
           };
         } catch (err) {
-          return { content: [{ type: "text", text: `# Could Not Start Import UI\n\n${err instanceof Error ? err.message : String(err)}\n\nUse \`mode: "report"\` to see the diff, or \`mode: "apply"\` with a selection.` }] };
+          return {
+            content: [
+              {
+                type: "text",
+                text: `# Could Not Start Import UI\n\n${err instanceof Error ? err.message : String(err)}\n\nUse \`mode: "report"\` to see the diff, or \`mode: "apply"\` with a selection.`,
+              },
+            ],
+          };
         }
       }
 
       if (mode === "apply") {
         const sel = selection || [];
         if (!sel.length) {
-          return { content: [{ type: "text", text: "# Nothing to Apply\n\nmode 'apply' requires a non-empty `selection`. Run mode 'report' or 'ui' first to choose record keys." }] };
+          return {
+            content: [
+              {
+                type: "text",
+                text: "# Nothing to Apply\n\nmode 'apply' requires a non-empty `selection`. Run mode 'report' or 'ui' first to choose record keys.",
+              },
+            ],
+          };
         }
         const backup = await backupTarget(effectiveTarget, categories);
-        const result = await applyConfig({ targetOrg: effectiveTarget, source: sourceSnapshot, diff, selection: sel });
+        const result = await applyConfig({
+          targetOrg: effectiveTarget,
+          source: sourceSnapshot,
+          diff,
+          selection: sel,
+        });
         const safeOrg = effectiveTarget.replace(/[^a-zA-Z0-9._-]/g, "_");
-        const resultPath = await writeExport(`import-result-${safeOrg}-${fileStamp(result.appliedAt)}.json`, result);
+        const resultPath = await writeExport(
+          `import-result-${safeOrg}-${fileStamp(result.appliedAt)}.json`,
+          result
+        );
         return { content: [{ type: "text", text: applyMessage(result, backup.path, resultPath) }] };
       }
 
       // mode === "report"
       const safeOrg = effectiveTarget.replace(/[^a-zA-Z0-9._-]/g, "_");
-      const diffPath = await writeExport(`import-diff-${safeOrg}-${fileStamp(diff.generatedAt)}.json`, diff);
+      const diffPath = await writeExport(
+        `import-diff-${safeOrg}-${fileStamp(diff.generatedAt)}.json`,
+        diff
+      );
       return { content: [{ type: "text", text: reportMessage(diff, effectiveTarget, diffPath) }] };
-    },
+    }
   );
 }
 
@@ -149,7 +239,9 @@ function reportMessage(diff: ConfigDiff, target: string, diffPath: string): stri
   m += `| Status | Count |\n|--------|-------|\n`;
   m += `| 🟢 New (will create) | ${c.new} |\n| 🟡 Changed (will update) | ${c.changed} |\n| ⚪ Identical | ${c.identical} |\n| 🟣 Only in target (untouched) | ${c.targetOnly} |\n\n`;
 
-  const actionable = diff.records.filter((r) => (r.status === "NEW" || r.status === "CHANGED") && r.applicable);
+  const actionable = diff.records.filter(
+    (r) => (r.status === "NEW" || r.status === "CHANGED") && r.applicable
+  );
   if (!actionable.length) {
     m += `**✅ Target is already in sync** for the exported categories — nothing to apply.\n`;
   } else {
@@ -167,7 +259,8 @@ function reportMessage(diff: ConfigDiff, target: string, diffPath: string): stri
         if (r.activeChange) changes.push(`IsActive ${r.activeChange.from} → ${r.activeChange.to}`);
         const fc = r.fieldDiffs.filter((f) => f.willApply).length;
         if (fc) changes.push(`${fc} field${fc > 1 ? "s" : ""}`);
-        if (r.assignmentDiff.added.length) changes.push(`+${r.assignmentDiff.added.length} assignment(s)`);
+        if (r.assignmentDiff.added.length)
+          changes.push(`+${r.assignmentDiff.added.length} assignment(s)`);
         m += `- **${r.developerName}** \`${r.status}\` — ${changes.join(", ") || "create"} · key: \`${r.key}\`\n`;
       }
       m += `\n`;
@@ -179,14 +272,30 @@ function reportMessage(diff: ConfigDiff, target: string, diffPath: string): stri
   return m;
 }
 
-function applyMessage(result: { applied: number; failed: number; skipped: number; items: Array<{ developerName: string; action: string; ok: boolean; message?: string; warnings?: string[] }> }, backupPath: string, resultPath: string): string {
+function applyMessage(
+  result: {
+    applied: number;
+    failed: number;
+    skipped: number;
+    items: Array<{
+      developerName: string;
+      action: string;
+      ok: boolean;
+      message?: string;
+      warnings?: string[];
+    }>;
+  },
+  backupPath: string,
+  resultPath: string
+): string {
   let m = `# Import Applied\n\n`;
   m += `**${result.applied} applied · ${result.failed} failed · ${result.skipped} skipped**\n\n`;
   m += `_Target backed up to \`${backupPath}\` before applying._\n\n`;
   const failures = result.items.filter((i) => !i.ok);
   if (failures.length) {
     m += `## Failures\n\n`;
-    for (const f of failures) m += `- **${f.developerName}** (${f.action}): ${f.message || "unknown error"}\n`;
+    for (const f of failures)
+      m += `- **${f.developerName}** (${f.action}): ${f.message || "unknown error"}\n`;
     m += `\n`;
   }
   const withWarnings = result.items.filter((i) => i.warnings && i.warnings.length);

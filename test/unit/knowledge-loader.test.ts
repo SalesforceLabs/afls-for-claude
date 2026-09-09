@@ -157,7 +157,8 @@ describe("knowledge-loader.ts", () => {
       mockReaddirSync.mockImplementation((_path: any, options?: any) => {
         if (options?.withFileTypes) {
           return [
-            { name: "mod", isDirectory: () => true },
+            { name: "mod", isDirectory: () => true, isFile: () => false },
+            { name: "doc.md", isDirectory: () => false, isFile: () => true },
           ] as any;
         }
         return ["doc.md"] as any;
@@ -174,7 +175,8 @@ describe("knowledge-loader.ts", () => {
       mockReaddirSync.mockImplementation((_path: any, options?: any) => {
         if (options?.withFileTypes) {
           return [
-            { name: "visits", isDirectory: () => true },
+            { name: "visits", isDirectory: () => true, isFile: () => false },
+            { name: "doc.md", isDirectory: () => false, isFile: () => true },
           ] as any;
         }
         return ["doc.md"] as any;
@@ -232,7 +234,10 @@ describe("knowledge-loader.ts", () => {
 
     it("getGuideList returns guides", () => {
       mockExistsSync.mockReturnValue(true);
-      mockReaddirSync.mockReturnValue(["dev-guide.md"] as any);
+      // getGuideList reads with { withFileTypes: true } and filters on isFile()
+      mockReaddirSync.mockReturnValue([
+        { name: "dev-guide.md", isFile: () => true, isDirectory: () => false },
+      ] as any);
       expect(getGuideList().length).toBe(1);
     });
 

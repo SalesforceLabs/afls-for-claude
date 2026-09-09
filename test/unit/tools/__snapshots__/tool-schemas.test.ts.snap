@@ -13,8 +13,8 @@ exports[`tool-schemas > tool inventory > lists all registered tool names 1`] = `
   "bulk_update_records",
   "check_account_config",
   "check_activity_plan_config",
+  "check_afls_setup",
   "check_briefings_config",
-  "check_lsc_setup",
   "check_mobile_cache_status",
   "check_sample_config",
   "check_territory_config",
@@ -25,23 +25,23 @@ exports[`tool-schemas > tool inventory > lists all registered tool names 1`] = `
   "create_db_schema",
   "create_quick_action",
   "create_record",
-  "delete_lsc_action",
+  "delete_afls_action",
   "delete_record",
   "deploy_metadata",
   "describe_sobject",
-  "diagnose_lsc_issue",
+  "diagnose_afls_issue",
   "diff_orgs",
   "distribute_presentation",
-  "explain_lsc_concept",
+  "explain_afls_concept",
   "export_config",
   "generate_mobile_metadata_cache",
+  "get_afls_admin_setup",
+  "get_afls_exercise",
+  "get_afls_guide",
+  "get_afls_help_doc",
+  "get_afls_module_docs",
+  "get_afls_troubleshooting",
   "get_db_schema",
-  "get_lsc_admin_setup",
-  "get_lsc_exercise",
-  "get_lsc_guide",
-  "get_lsc_help_doc",
-  "get_lsc_module_docs",
-  "get_lsc_troubleshooting",
   "get_org_status",
   "get_record",
   "get_release_notes",
@@ -49,10 +49,10 @@ exports[`tool-schemas > tool inventory > lists all registered tool names 1`] = `
   "import_config",
   "install_sf_cli",
   "list_admin_settings",
+  "list_afls_actions",
+  "list_afls_help_docs",
+  "list_afls_modules",
   "list_db_schema",
-  "list_lsc_actions",
-  "list_lsc_help_docs",
-  "list_lsc_modules",
   "list_navigation_tabs",
   "list_permission_sets",
   "list_sf_orgs",
@@ -63,14 +63,14 @@ exports[`tool-schemas > tool inventory > lists all registered tool names 1`] = `
   "retrieve_metadata",
   "run_apex",
   "run_soql",
-  "search_lsc_knowledge",
+  "search_afls_knowledge",
   "set_target_org",
   "toggle_db_schema",
   "toggle_trigger_handler",
   "unassign_permission_set",
   "update_admin_setting",
+  "update_afls_action",
   "update_db_schema",
-  "update_lsc_action",
   "update_record",
   "upload_presentation",
 ]
@@ -79,11 +79,11 @@ exports[`tool-schemas > tool inventory > lists all registered tool names 1`] = `
 exports[`tool-schemas > tool schema snapshot > should match the snapshot of all tool names and their parameter shapes 1`] = `
 [
   {
-    "name": "list_lsc_modules",
+    "name": "list_afls_modules",
     "params": {},
   },
   {
-    "name": "get_lsc_module_docs",
+    "name": "get_afls_module_docs",
     "params": {
       "module": {
         "optional": false,
@@ -92,7 +92,7 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
     },
   },
   {
-    "name": "search_lsc_knowledge",
+    "name": "search_afls_knowledge",
     "params": {
       "maxResults": {
         "optional": true,
@@ -105,7 +105,7 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
     },
   },
   {
-    "name": "explain_lsc_concept",
+    "name": "explain_afls_concept",
     "params": {
       "concept": {
         "optional": false,
@@ -114,7 +114,7 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
     },
   },
   {
-    "name": "get_lsc_admin_setup",
+    "name": "get_afls_admin_setup",
     "params": {
       "feature": {
         "optional": false,
@@ -123,11 +123,11 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
     },
   },
   {
-    "name": "list_lsc_help_docs",
+    "name": "list_afls_help_docs",
     "params": {},
   },
   {
-    "name": "get_lsc_help_doc",
+    "name": "get_afls_help_doc",
     "params": {
       "slug": {
         "optional": false,
@@ -136,7 +136,7 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
     },
   },
   {
-    "name": "get_lsc_guide",
+    "name": "get_afls_guide",
     "params": {
       "slug": {
         "optional": false,
@@ -145,7 +145,7 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
     },
   },
   {
-    "name": "get_lsc_troubleshooting",
+    "name": "get_afls_troubleshooting",
     "params": {
       "topic": {
         "optional": true,
@@ -154,7 +154,7 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
     },
   },
   {
-    "name": "get_lsc_exercise",
+    "name": "get_afls_exercise",
     "params": {
       "slug": {
         "optional": false,
@@ -163,7 +163,7 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
     },
   },
   {
-    "name": "check_lsc_setup",
+    "name": "check_afls_setup",
     "params": {},
   },
   {
@@ -316,7 +316,7 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
     },
   },
   {
-    "name": "list_lsc_actions",
+    "name": "list_afls_actions",
     "params": {
       "actionType": {
         "optional": true,
@@ -333,7 +333,7 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
     },
   },
   {
-    "name": "delete_lsc_action",
+    "name": "delete_afls_action",
     "params": {
       "actionId": {
         "optional": false,
@@ -350,7 +350,7 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
     },
   },
   {
-    "name": "update_lsc_action",
+    "name": "update_afls_action",
     "params": {
       "actionId": {
         "optional": false,
@@ -655,7 +655,7 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
     "params": {},
   },
   {
-    "name": "diagnose_lsc_issue",
+    "name": "diagnose_afls_issue",
     "params": {
       "symptom": {
         "optional": false,
@@ -1056,13 +1056,21 @@ exports[`tool-schemas > tool schema snapshot > should match the snapshot of all 
   {
     "name": "import_config",
     "params": {
-      "configJson": {
-        "optional": false,
+      "mode": {
+        "optional": true,
+        "type": "ZodEnum",
+      },
+      "selection": {
+        "optional": true,
+        "type": "ZodArray",
+      },
+      "source": {
+        "optional": true,
         "type": "ZodString",
       },
-      "dryRun": {
+      "sourceOrg": {
         "optional": true,
-        "type": "ZodBoolean",
+        "type": "ZodString",
       },
       "targetOrg": {
         "optional": true,

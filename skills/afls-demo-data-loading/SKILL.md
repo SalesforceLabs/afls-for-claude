@@ -14,6 +14,7 @@ description: Guides loading demo data into AFLS orgs. Covers territory hierarchi
 | Existing HCPs | `run_soql({ query: "SELECT COUNT() FROM HealthcareProvider" })` |
 | Object fields | `describe_sobject({ sobject: "Account" })` or any target object |
 | Territory assignments | `run_soql({ query: "SELECT COUNT() FROM ObjectTerritory2Association" })` |
+| Therapy-area scenarios, demo concepts, related guidance | `search_afls_knowledge({ query: "..." })` (returns cited source content) |
 
 ---
 

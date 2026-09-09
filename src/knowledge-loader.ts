@@ -63,9 +63,7 @@ function slugToTitle(slug: string): string {
  * Load all markdown files from a module directory
  */
 function loadModuleContent(modulePath: string): string {
-  const files = readdirSync(modulePath).filter(
-    (f) => f.endsWith(".md") && f !== "_index.md"
-  );
+  const files = readdirSync(modulePath).filter((f) => f.endsWith(".md") && f !== "_index.md");
 
   let content = "";
   for (const file of files) {
@@ -98,9 +96,7 @@ export function loadKnowledgeBase(): KnowledgeBase {
     const modulePath = join(KNOWLEDGE_BASE_PATH, moduleSlug);
     const title = slugToTitle(moduleSlug);
 
-    const files = readdirSync(modulePath).filter(
-      (f) => f.endsWith(".md") && f !== "_index.md"
-    );
+    const files = readdirSync(modulePath).filter((f) => f.endsWith(".md") && f !== "_index.md");
 
     const content = loadModuleContent(modulePath);
 
@@ -131,9 +127,7 @@ export function getModuleList(): { slug: string; title: string; fileCount: numbe
 
   return moduleDirs.map((slug) => {
     const modulePath = join(KNOWLEDGE_BASE_PATH, slug);
-    const files = readdirSync(modulePath).filter(
-      (f) => f.endsWith(".md") && f !== "_index.md"
-    );
+    const files = readdirSync(modulePath).filter((f) => f.endsWith(".md") && f !== "_index.md");
     return {
       slug,
       title: slugToTitle(slug),
@@ -173,9 +167,7 @@ export function searchKnowledge(query: string): SearchResult[] {
 
     for (const moduleSlug of moduleDirs) {
       const modulePath = join(KNOWLEDGE_BASE_PATH, moduleSlug);
-      const files = readdirSync(modulePath).filter(
-        (f) => f.endsWith(".md") && f !== "_index.md"
-      );
+      const files = readdirSync(modulePath).filter((f) => f.endsWith(".md") && f !== "_index.md");
 
       for (const file of files) {
         const filePath = join(modulePath, file);
@@ -223,13 +215,7 @@ export function searchKnowledge(query: string): SearchResult[] {
   }
 
   // Search troubleshooting
-  searchDirectory(
-    TROUBLESHOOTING_PATH,
-    queryLower,
-    query.length,
-    "troubleshooting",
-    results
-  );
+  searchDirectory(TROUBLESHOOTING_PATH, queryLower, query.length, "troubleshooting", results);
 
   // Sort by relevance: title matches first, then guide-section boost
   results.sort((a, b) => {
@@ -471,9 +457,7 @@ export function formatGuideSectionCitation(result: SearchResult): string {
   const { guideSlug, sectionSlug, matchPage, startPage, endPage, pdfFileName } = result;
   if (!guideSlug || !sectionSlug) return "";
 
-  const guideLabel = guideSlug === "admin-guide"
-    ? "Administer AFLS"
-    : "AFLS Developer Guide";
+  const guideLabel = guideSlug === "admin-guide" ? "Administer AFLS" : "AFLS Developer Guide";
 
   const pageInfo = matchPage ? ` (page ${matchPage})` : "";
   const sectionUrl = `afls-section://${guideSlug}/${sectionSlug}?page=${matchPage || startPage}&highlight=${encodeURIComponent(result.title)}`;

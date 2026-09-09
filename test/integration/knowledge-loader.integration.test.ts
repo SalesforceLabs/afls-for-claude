@@ -34,9 +34,12 @@ describe("knowledge-loader integration (real filesystem)", () => {
     }
   });
 
-  it("getHelpDocList() returns at least one doc", () => {
+  it("getHelpDocList() returns well-formed entries (Official Help now served live via MCP)", () => {
+    // Official Help docs are served live via the salesforce-docs MCP server
+    // and are no longer bundled locally, so this list may be empty. Any
+    // entries that ARE present must still be well-formed.
     const docs = getHelpDocList();
-    expect(docs.length).toBeGreaterThan(0);
+    expect(Array.isArray(docs)).toBe(true);
 
     for (const doc of docs) {
       expect(doc.slug).toBeTruthy();

@@ -88,10 +88,19 @@ function extractRegisteredToolNames(source: string): string[] {
   const tools: string[] = [];
   const lines = source.split("\n");
 
-  for (let i = 0; i < lines.length - 1; i++) {
-    if (/server\.tool\(\s*$/.test(lines[i])) {
-      const nextLine = lines[i + 1];
-      const match = nextLine.match(/^\s*"([^"]+)"/);
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    // Single-line form: server.tool("tool_name", ...)
+    const inline = line.match(/server\.tool\(\s*"([^"]+)"/);
+    if (inline) {
+      tools.push(inline[1]);
+      continue;
+    }
+
+    // Multi-line form: server.tool( \n "tool_name",
+    if (/server\.tool\(\s*$/.test(line) && i + 1 < lines.length) {
+      const match = lines[i + 1].match(/^\s*"([^"]+)"/);
       if (match) {
         tools.push(match[1]);
       }

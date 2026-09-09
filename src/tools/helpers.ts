@@ -1,5 +1,3 @@
-
-
 /**
  * Shared helper functions used by multiple tool modules.
  * Extracted from the original monolithic index.ts during the Phase 2 refactor.
@@ -9,9 +7,18 @@ import { runToolingQuery, cachedToolingQuery } from "../salesforce/cli.js";
 
 // All 12 value columns on LifeSciConfigFieldValue (per the Life Sciences Developer Guide)
 const FV_VALUE_COLUMNS = [
-  "TextValue", "IntegerValue", "PicklistValue", "HasBooleanValue",
-  "LongTextValue", "ObjectValue", "FieldValue",
-  "UrlValue", "NumberValue", "PhoneValue", "DateTimeValue", "DateValue",
+  "TextValue",
+  "IntegerValue",
+  "PicklistValue",
+  "HasBooleanValue",
+  "LongTextValue",
+  "ObjectValue",
+  "FieldValue",
+  "UrlValue",
+  "NumberValue",
+  "PhoneValue",
+  "DateTimeValue",
+  "DateValue",
 ];
 
 /**
@@ -20,15 +27,16 @@ const FV_VALUE_COLUMNS = [
  */
 export async function queryAssignments(
   recordIds: string[],
-  targetOrg: string,
+  targetOrg: string
 ): Promise<Map<string, Array<{ id: string; name: string; level: string }>>> {
   const result = new Map<string, Array<{ id: string; name: string; level: string }>>();
 
   if (recordIds.length === 0) return result;
 
-  const idFilter = recordIds.length === 1
-    ? `LifeSciConfigRecordId = '${recordIds[0]}'`
-    : `LifeSciConfigRecordId IN (${recordIds.map(id => `'${id}'`).join(",")})`;
+  const idFilter =
+    recordIds.length === 1
+      ? `LifeSciConfigRecordId = '${recordIds[0]}'`
+      : `LifeSciConfigRecordId IN (${recordIds.map((id) => `'${id}'`).join(",")})`;
 
   const assignQuery = `SELECT Id, LifeSciConfigRecordId, AssignedToId, AssignmentLevel FROM LifeSciConfigAssignment WHERE ${idFilter}`;
   const assignResult = await runToolingQuery(assignQuery, targetOrg);
@@ -48,7 +56,7 @@ export async function queryAssignments(
 
   const nameMap = new Map<string, string>();
   if (assignedToIds.size > 0) {
-    const idList = [...assignedToIds].map(id => `'${id}'`).join(",");
+    const idList = [...assignedToIds].map((id) => `'${id}'`).join(",");
 
     const profileQuery = `SELECT Id, Name FROM Profile WHERE Id IN (${idList})`;
     const profileResult = await cachedToolingQuery(profileQuery, targetOrg);
@@ -59,9 +67,9 @@ export async function queryAssignments(
       }
     }
 
-    const unresolvedIds = [...assignedToIds].filter(id => !nameMap.has(id));
+    const unresolvedIds = [...assignedToIds].filter((id) => !nameMap.has(id));
     if (unresolvedIds.length > 0) {
-      const psIdList = unresolvedIds.map(id => `'${id}'`).join(",");
+      const psIdList = unresolvedIds.map((id) => `'${id}'`).join(",");
       const psQuery = `SELECT Id, Name FROM PermissionSet WHERE Id IN (${psIdList})`;
       const psResult = await cachedToolingQuery(psQuery, targetOrg);
       if (psResult.success && psResult.data?.records) {
@@ -91,7 +99,10 @@ export async function queryAssignments(
 /**
  * Look up a Profile ID by name via the Tooling API.
  */
-export async function resolveProfileId(profileName: string, targetOrg: string): Promise<string | null> {
+export async function resolveProfileId(
+  profileName: string,
+  targetOrg: string
+): Promise<string | null> {
   const query = `SELECT Id FROM Profile WHERE Name = '${profileName.replace(/'/g, "\\'")}' LIMIT 1`;
   const result = await cachedToolingQuery(query, targetOrg);
   if (result.success && result.data?.records?.length) {
@@ -105,19 +116,32 @@ export async function resolveProfileId(profileName: string, targetOrg: string): 
  */
 export function getValueColumn(dataType: string): string {
   switch (dataType) {
-    case "TEXT": return "TextValue";
-    case "INTEGER": return "IntegerValue";
-    case "PICKLIST": return "PicklistValue";
-    case "BOOLEAN": return "HasBooleanValue";
-    case "LONGTEXT": return "LongTextValue";
-    case "OBJECT": return "ObjectValue";
-    case "FIELD": return "FieldValue";
-    case "URL": return "UrlValue";
-    case "NUMBER": return "NumberValue";
-    case "PHONE": return "PhoneValue";
-    case "MULTIPICKLIST": return "LongTextValue";
-    case "RECORDREFERENCE": return "TextValue";
-    default: return "TextValue";
+    case "TEXT":
+      return "TextValue";
+    case "INTEGER":
+      return "IntegerValue";
+    case "PICKLIST":
+      return "PicklistValue";
+    case "BOOLEAN":
+      return "HasBooleanValue";
+    case "LONGTEXT":
+      return "LongTextValue";
+    case "OBJECT":
+      return "ObjectValue";
+    case "FIELD":
+      return "FieldValue";
+    case "URL":
+      return "UrlValue";
+    case "NUMBER":
+      return "NumberValue";
+    case "PHONE":
+      return "PhoneValue";
+    case "MULTIPICKLIST":
+      return "LongTextValue";
+    case "RECORDREFERENCE":
+      return "TextValue";
+    default:
+      return "TextValue";
   }
 }
 
@@ -139,7 +163,20 @@ export function extractFieldValue(f: Record<string, unknown>): unknown {
     const v = f[getValueColumn(dataType)];
     return v === undefined ? null : v;
   }
-  return f.TextValue ?? f.PicklistValue ?? f.IntegerValue ?? f.LongTextValue ?? f.ObjectValue ?? f.FieldValue ?? f.UrlValue ?? f.NumberValue ?? f.PhoneValue ?? f.DateTimeValue ?? f.DateValue ?? null;
+  return (
+    f.TextValue ??
+    f.PicklistValue ??
+    f.IntegerValue ??
+    f.LongTextValue ??
+    f.ObjectValue ??
+    f.FieldValue ??
+    f.UrlValue ??
+    f.NumberValue ??
+    f.PhoneValue ??
+    f.DateTimeValue ??
+    f.DateValue ??
+    null
+  );
 }
 
 /**
@@ -156,8 +193,11 @@ export function normalizeDbSchemaName(name: string): string {
 export async function queryFieldValues(
   recordIds: string[],
   targetOrg: string,
-  includeParentId: boolean = false,
-): Promise<{ fieldValuesByRecord: Map<string, Array<Record<string, unknown>>>; queryError?: string }> {
+  includeParentId: boolean = false
+): Promise<{
+  fieldValuesByRecord: Map<string, Array<Record<string, unknown>>>;
+  queryError?: string;
+}> {
   const columns = FV_VALUE_COLUMNS;
   const fieldValuesByRecord = new Map<string, Array<Record<string, unknown>>>();
 

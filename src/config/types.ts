@@ -49,11 +49,7 @@ export interface ConfigSnapshot {
   [key: string]: unknown;
 }
 
-export type ExportCategory =
-  | "trigger_handlers"
-  | "admin_settings"
-  | "db_schema"
-  | "actions";
+export type ExportCategory = "trigger_handlers" | "admin_settings" | "db_schema" | "actions";
 
 /** Current export-format version. Bumped to 1.1 when per-field DataType was added. */
 export const SNAPSHOT_VERSION = "1.1";

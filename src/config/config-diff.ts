@@ -17,12 +17,7 @@
  *   TARGET_ONLY — in target only; never touched (create + update-only safe policy)
  */
 
-import type {
-  ConfigSnapshot,
-  ConfigRecord,
-  TriggerHandlerRecord,
-  AssignmentRef,
-} from "./types.js";
+import type { ConfigSnapshot, ConfigRecord, TriggerHandlerRecord, AssignmentRef } from "./types.js";
 
 export type RecordStatus = "NEW" | "CHANGED" | "IDENTICAL" | "TARGET_ONLY";
 
@@ -261,8 +256,7 @@ export function computeConfigDiff(source: ConfigSnapshot, target: ConfigSnapshot
     const added = srcRec.assignments.filter((a) => !tgtAssignKeys.has(assignmentKey(a)));
     const onlyInTarget = tgtRec.assignments.filter((a) => !srcAssignKeys.has(assignmentKey(a)));
 
-    const willApplyAny =
-      !!activeChange || fieldDiffs.some((f) => f.willApply) || added.length > 0;
+    const willApplyAny = !!activeChange || fieldDiffs.some((f) => f.willApply) || added.length > 0;
     // Trigger handlers: the only applicable change is IsActive.
     const applicable = srcRec.kind === "record" ? willApplyAny : !!activeChange;
 

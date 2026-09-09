@@ -1,11 +1,6 @@
 export interface CitationInfo {
   label: string;
-  category:
-    | "Official Help"
-    | "PM Enablement"
-    | "Guide"
-    | "Exercise"
-    | "Troubleshooting";
+  category: "Official Help" | "PM Enablement" | "Guide" | "Exercise" | "Troubleshooting";
   url?: string;
 }
 
@@ -29,16 +24,14 @@ export const citationMap: Record<string, CitationInfo> = {
   },
 
   // ── Exercises (2 files) ─────────────────────────────────────────────
-  "life-sciences-cloud-partner-enablement-hands-on-exercises-day-1-foundations":
-    {
-      label: "Partner Enablement Hands-On Exercises — Day 1 Foundations",
-      category: "Exercise",
-    },
-  "life-sciences-cloud-partner-enablement-hands-on-exercises-day-2-field-sales-rep":
-    {
-      label: "Partner Enablement Hands-On Exercises — Day 2 Field Sales Rep",
-      category: "Exercise",
-    },
+  "life-sciences-cloud-partner-enablement-hands-on-exercises-day-1-foundations": {
+    label: "Partner Enablement Hands-On Exercises — Day 1 Foundations",
+    category: "Exercise",
+  },
+  "life-sciences-cloud-partner-enablement-hands-on-exercises-day-2-field-sales-rep": {
+    label: "Partner Enablement Hands-On Exercises — Day 2 Field Sales Rep",
+    category: "Exercise",
+  },
 
   // ── Troubleshooting (1 file) ────────────────────────────────────────
   "common-issues": {
@@ -102,11 +95,10 @@ export const moduleCitationMap: Record<string, CitationInfo> = {
     label: "Activity Plan",
     category: "PM Enablement",
   },
-  "activity-plan:activity-plan-setup-account-goals__activity-plan-setup-transcript":
-    {
-      label: "Activity Plan Setup — Account Goals Transcript",
-      category: "PM Enablement",
-    },
+  "activity-plan:activity-plan-setup-account-goals__activity-plan-setup-transcript": {
+    label: "Activity Plan Setup — Account Goals Transcript",
+    category: "PM Enablement",
+  },
   "activity-plan:activity-plan-setup-account-goals-activity-plan-by-product-administration__activity-plan-by-product-administration":
     {
       label: "Activity Plan by Product Administration",
@@ -117,11 +109,10 @@ export const moduleCitationMap: Record<string, CitationInfo> = {
       label: "Shared Territory Goals Transcript",
       category: "PM Enablement",
     },
-  "activity-plan:activity-plan-setup-weighted-activity-plans__weighted-activity-plan-transcript":
-    {
-      label: "Weighted Activity Plan Transcript",
-      category: "PM Enablement",
-    },
+  "activity-plan:activity-plan-setup-weighted-activity-plans__weighted-activity-plan-transcript": {
+    label: "Weighted Activity Plan Transcript",
+    category: "PM Enablement",
+  },
   "activity-plan:activity-plan-setup-weighted-activity-plans-activity-plan-by-product-administration__activity-plan-by-product-administration":
     {
       label: "Weighted Plan — Product Administration",
@@ -193,21 +184,19 @@ export const moduleCitationMap: Record<string, CitationInfo> = {
   },
 
   // ── Data Cloud, Singularity & TabNext Metrics ─────────────────────
-  "data-cloud-singularity-and-tabnext-metrics:data-cloud-singularity-and-tabnext-metrics":
-    {
-      label: "Data Cloud, Singularity & TabNext Metrics",
-      category: "PM Enablement",
-    },
+  "data-cloud-singularity-and-tabnext-metrics:data-cloud-singularity-and-tabnext-metrics": {
+    label: "Data Cloud, Singularity & TabNext Metrics",
+    category: "PM Enablement",
+  },
   "data-cloud-singularity-and-tabnext-metrics:data-cloud-singularity-and-tableau-next-metrics-demo":
     {
       label: "Data Cloud, Singularity & Tableau Next Metrics Demo",
       category: "PM Enablement",
     },
-  "data-cloud-singularity-and-tabnext-metrics:next-best-customer-predictive-model-demo":
-    {
-      label: "Next Best Customer Predictive Model Demo",
-      category: "PM Enablement",
-    },
+  "data-cloud-singularity-and-tabnext-metrics:next-best-customer-predictive-model-demo": {
+    label: "Next Best Customer Predictive Model Demo",
+    category: "PM Enablement",
+  },
 
   // ── Field Email ───────────────────────────────────────────────────
   "field-email:field-email": {
@@ -232,11 +221,10 @@ export const moduleCitationMap: Record<string, CitationInfo> = {
     label: "Field Sales Rep E2E Demo Flow",
     category: "PM Enablement",
   },
-  "field-sales-rep-e2e-demo-flow:field-sales-representative-e2e-demo-transcript":
-    {
-      label: "Field Sales Representative E2E Demo Transcript",
-      category: "PM Enablement",
-    },
+  "field-sales-rep-e2e-demo-flow:field-sales-representative-e2e-demo-transcript": {
+    label: "Field Sales Representative E2E Demo Transcript",
+    category: "PM Enablement",
+  },
 
   // ── Generic Workflow ──────────────────────────────────────────────
   "generic-workflow:generic-workflow": {
@@ -453,16 +441,14 @@ export const moduleCitationMap: Record<string, CitationInfo> = {
     label: "Visit Management Test Cases",
     category: "PM Enablement",
   },
-  "visit-management:258-lsc4ce-visit-mgmt-visit-page-layout-configuration-transcript":
-    {
-      label: "Visit Management Page Layout Configuration Transcript",
-      category: "PM Enablement",
-    },
-  "visit-management:258-lsc4ce-visit-mgmt-web-release-enablement-demo-transcript":
-    {
-      label: "Visit Management Web Release Enablement Demo Transcript",
-      category: "PM Enablement",
-    },
+  "visit-management:258-lsc4ce-visit-mgmt-visit-page-layout-configuration-transcript": {
+    label: "Visit Management Page Layout Configuration Transcript",
+    category: "PM Enablement",
+  },
+  "visit-management:258-lsc4ce-visit-mgmt-web-release-enablement-demo-transcript": {
+    label: "Visit Management Web Release Enablement Demo Transcript",
+    category: "PM Enablement",
+  },
 };
 
 /**
@@ -474,10 +460,7 @@ export const moduleCitationMap: Record<string, CitationInfo> = {
  *
  * Falls back to the base citationMap for help docs, guides, exercises, etc.
  */
-export function getCitation(
-  slug: string,
-  moduleName?: string,
-): CitationInfo | undefined {
+export function getCitation(slug: string, moduleName?: string): CitationInfo | undefined {
   if (moduleName) {
     const moduleKey = `${moduleName}:${slug}`;
     const moduleInfo = moduleCitationMap[moduleKey];
