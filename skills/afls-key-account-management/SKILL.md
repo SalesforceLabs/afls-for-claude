@@ -90,3 +90,7 @@ For an ActionPlanTemplate to appear in account plan import:
 - **Type = Key Account Management**
 - **Target Objective = Account Plan Objective** (NOT Territory Business Plan Objective)
 - Must be linked to a GoalDefinition via `ActionPlanTemplateAssignment`
+
+## Troubleshooting
+
+- **Related Account Plans (or any KAM related list) renders blank on mobile** — On the iPad app a related-list tab shows no card header, no New button, and no rows once the parent has ≥1 child, and often reproduces on one record but not another. This is a page-layout issue, not a data or cache issue: `force:relatedListSingleContainer` with `relatedListComponentOverride = NONE` inherits its columns from the parent's **RecordType page layout**, and a record type whose layout omits that related list blanks the whole container. See the **"Mobile Related List Renders Blank (force:relatedListSingleContainer)"** section in the `afls-troubleshoot` skill for the full diagnose steps and both fixes.

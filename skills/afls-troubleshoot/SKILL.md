@@ -249,6 +249,70 @@ bl.IssueDate = Date.newInstance(2025, 1, 1);
 - User not seeing accounts: Verify Territory2 membership, sharing rules
 - Territory jobs failing: Check Admin Console > Territories > Jobs
 
+### Mobile Related List Renders Blank (force:relatedListSingleContainer)
+
+**Symptom:** On the AFLS iPad app, a related-list tab on a record page renders **completely blank** — no "(N)" card header, no **New** button, no rows — even though the child records exist and synced. Classic tell: the SAME list renders its empty "(0)" card + New button fine when the parent has **0** children, but blanks the entire container the moment there is **≥1** child. It also often reproduces on one record but not another of the same object.
+
+**Component involved:** the related list is rendered by the FlexiPage component `force:relatedListSingleContainer`, configured with these `componentInstanceProperties`:
+- `relatedListApiName` — e.g. `AccountPlanRelationship_AccountPlan` (`<Child>_<ParentLookup>`)
+- `parentFieldApiName` — e.g. `AccountPlan.Id`
+- `relatedListComponentOverride` = **`NONE`** ← this is the key
+- `rowsToDisplay`, `showActionBar`
+
+When `relatedListComponentOverride = NONE`, the component does **not** define its own columns. It **inherits the column set from the related-list definition on the parent record's RECORD-TYPE page layout**. If that record type's layout has **no related list** for the child object, there are no columns to draw, and the app blanks the whole container instead of degrading gracefully.
+
+**Why it reproduces on one record and not another:** Different **record types** resolve to different **page layouts**. A record whose record type maps to a layout that *includes* the child related list renders fine; a record with **no record type (Master)** — or a record type whose layout omits that related list — blanks. Same child object, same device, same cache. So the differentiator is the parent record's **RecordType → page layout**, not the child object or row count.
+
+#### Diagnose
+1. Compare two parent records — one that renders, one that blanks — and get their record types:
+   ```sql
+   SELECT Id, Name, RecordType.DeveloperName FROM AccountPlan WHERE Id IN ('<good>','<blank>')
+   ```
+2. Get the layout Ids for the object, then inspect each record type's page layout for the related-list field set via the Tooling API:
+   ```bash
+   # Get layout Ids
+   sf data query --use-tooling-api -q "SELECT Id, Name FROM Layout WHERE TableEnumOrId='AccountPlan'" --json
+   # Inspect a layout's related lists
+   sf data query --use-tooling-api -q "SELECT Metadata FROM Layout WHERE Id='<layoutId>'" --json
+   # In result.records[0].Metadata.relatedLists[], look for the child object.
+   #   Present (renders):  relatedList=RelatedAccountPlanRelationships fields=[Name, AccountPlan, RelatedAccountPlan]
+   #   Missing (blanks):   no entry whose relatedList references the child object
+   ```
+
+The layout that **has** the related list = the working record type; the one that **lacks** it = the blank record type. That confirms the root cause.
+
+#### Fix A — add the related list to the deficient page layout (permanent, deployable)
+Retrieve the layout, add a `<relatedLists>` block, and deploy (page layouts deploy reliably):
+```xml
+<relatedLists>
+    <fields>Name</fields>
+    <fields>AccountPlan</fields>
+    <fields>RelatedAccountPlan</fields>
+    <relatedList>RelatedAccountPlanRelationships</relatedList>
+</relatedLists>
+```
+- `<relatedList>` is the layout's related-list name (e.g. `RelatedAccountPlanRelationships`), which is **not** the same string as the FlexiPage's `relatedListApiName` (`AccountPlanRelationship_AccountPlan`) — both point to the same child→parent relationship.
+- `<fields>` uses **relationship/field names**, not Id fields (`AccountPlan`, not `AccountPlanId`).
+- After deploy, regenerate the mobile metadata cache for the affected profile(s) and re-sync the device.
+
+#### Fix B — give the record the working record type (fast data fix)
+If the record simply has no/wrong record type, set it to the one whose layout already has the related list:
+```apex
+AccountPlan p = [SELECT Id FROM AccountPlan WHERE Id='<id>'];
+p.RecordTypeId = '<recordTypeId of the working layout>';
+update p;
+```
+No cache regen needed — just re-sync the device so the new record type's layout takes effect.
+
+#### Do NOT chase these dead ends
+- **The child object's `searchLayouts`** in `sobjects.json` is *not* the driver — records render fine even when the child object has no `searchLayouts` entry.
+- **Deploying `<searchLayouts>` to a STANDARD object via the Metadata API silently fails** — the deploy reports `success: true / changed: true` but re-retrieval shows the block was dropped. Don't rely on it.
+- **Verify you're inspecting the LIVE simulator.** Multiple sims can be booted; find the active cache by mtime:
+  ```bash
+  find ~/Library/Developer/CoreSimulator/Devices/*/data/Containers/Data/Application/*/Documents/.Data \
+    -name ui.json -mtime -2 -exec stat -f '%Sm %N' {} \;
+  ```
+
 ## Resolution Steps
 
 1. Identify the root cause category
