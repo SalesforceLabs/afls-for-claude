@@ -35,13 +35,15 @@ This plugin gives Claude deep expertise in Salesforce AFLS for Customer Engageme
 
 ### Installation
 
-**Option 1: Plugin Marketplace (NOT AVAILABLE YET)**
+**Option 1: Plugin Marketplace (Recommended)**
 
 In Claude Code, run:
 ```
 /plugin marketplace add SalesforceLabs/AFLS-for-Claude
-/plugin install afls
+/plugin install afls@afls
 ```
+
+This installs the plugin directly — no `npm install` or build step needed. The bundled MCP server ships in `mcp-server/index.mjs`.
 
 **Option 2: Local Development (Recommended)**
 
