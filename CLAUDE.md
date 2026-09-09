@@ -58,6 +58,7 @@ This is a **Claude Code Plugin** providing an all-in-one AFLS solution:
 | Skill | Description |
 |-------|-------------|
 | `afls-implementation` | Guides module implementations with best practices |
+| `afls-implementation-review` | Reviews an implementation/design against field-observed anti-patterns (sharing model, sample/inventory, mobile sync, over-customization, territory, MDM, Agentforce, UAT/go-live discipline) — proactively flags known-bad decisions before go-live |
 | `afls-troubleshoot` | Diagnoses and resolves AFLS issues |
 | `afls-mobile-validation` | Validates mobile app configuration (DB Schema, sync settings) |
 | `afls-home-page-configuration` | Guides home page setup for web and mobile apps |
