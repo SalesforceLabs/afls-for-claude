@@ -444,14 +444,14 @@ AFLS-for-Claude/
 │   └── process-pdfs.sh       # Convert PDFs to markdown
 ├── documentation/            # Source documentation
 │   ├── pm enablement materials/  # PM enablement (.docx files)
-│   ├── official help documentation/  # Salesforce help PDFs (15 files)
+│   ├── official help documentation/  # Salesforce help PDFs (served live via MCP, not bundled)
 │   ├── hands-on exercises/   # Training exercises (2 PDFs)
 │   ├── life_sciences_dev_guide.pdf  # Developer guide (27MB)
 │   ├── SE AFLS Mobile Setup and Configuration Guide.pdf  # Mobile setup (7.6MB)
 │   └── common_issues.md      # Troubleshooting guide
 ├── knowledge/                # Processed knowledge base (markdown)
 │   ├── modules/              # PM enablement content (28 module directories)
-│   ├── help/                 # Official Salesforce help docs (15 files)
+│   ├── help/                 # Official help served live via salesforce-docs MCP (not bundled)
 │   ├── guides/               # Dev guide, mobile setup guide (2 files)
 │   ├── exercises/            # Hands-on training (2 files)
 │   ├── troubleshooting/      # Common issues (1 file)
