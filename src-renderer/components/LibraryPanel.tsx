@@ -9,6 +9,7 @@ interface LibraryItem {
   content: string;
   contentType: "response" | "code" | "diagram" | "table";
   svg?: string;
+  sourceConversationId?: string;
   sourceConversationTitle?: string;
   tags: string[];
   createdAt: string;

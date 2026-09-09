@@ -650,23 +650,27 @@ describe("cli.ts", () => {
   // retrieveMetadata
   // ==========================================================================
   describe("retrieveMetadata()", () => {
-    it("passes metadata type and output-dir", async () => {
+    it("invokes 'sf project retrieve start' with the metadata type", async () => {
       const promise = retrieveMetadata("/output", "ApexClass", "my-org");
       simulateSfSuccess(mockProc, {});
-      await promise;
+      const result = await promise;
 
+      // Output must live inside the temp SFDX project, so the caller's path is
+      // ignored and a timestamped retrieve-output subdir is used instead.
       expect(mockSpawn).toHaveBeenCalledWith(
         "sf",
         expect.arrayContaining([
+          "project",
           "retrieve",
           "start",
           "--metadata",
           "ApexClass",
           "--output-dir",
-          "/output",
         ]),
         expect.any(Object)
       );
+      expect(result.success).toBe(true);
+      expect(result.data?.outputDir).toContain("retrieve-output");
     });
   });
 

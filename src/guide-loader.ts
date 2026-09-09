@@ -65,9 +65,7 @@ export function loadGuideManifests(): GuideManifest[] {
     if (!existsSync(manifestPath)) continue;
 
     try {
-      const manifest: GuideManifest = JSON.parse(
-        readFileSync(manifestPath, "utf-8")
-      );
+      const manifest: GuideManifest = JSON.parse(readFileSync(manifestPath, "utf-8"));
       manifestCache.set(manifest.guideSlug, manifest);
     } catch {
       // Skip invalid manifests
@@ -107,9 +105,7 @@ export function getGuideSection(
 /**
  * List sections for a guide.
  */
-export function listGuideSections(
-  guideSlug: string
-): ManifestSection[] | null {
+export function listGuideSections(guideSlug: string): ManifestSection[] | null {
   const manifests = loadGuideManifests();
   const manifest = manifests.find((m) => m.guideSlug === guideSlug);
   return manifest?.sections ?? null;

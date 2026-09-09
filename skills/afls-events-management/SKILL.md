@@ -244,6 +244,26 @@ Without them the deploy fails with:
 
 ---
 
+## Trigger Handlers (Field Events)
+
+Events Management ships these `LifeScienceTriggerHandler` records (DeveloperNames confirmed against source). They must be **active** for participant, attendee-quota, TOT, date/time, and expense automation to work. List them with `list_trigger_handlers()` and enable with `toggle_trigger_handler({ handlerName: "<name>", active: true })`.
+
+| Handler DeveloperName | Purpose |
+|---|---|
+| `CreateMngEventPtcpHandler` | Creates event participant records |
+| `MngEventParticipantDuplicateHandler` | Prevents duplicate participants |
+| `MngEventPartTOTValidationHandler` | Time-Off-Territory validation for participants |
+| `MngEventDateTimeValidationHandler` | Event date/time validation |
+| `WriteInToAttendeeHandler` | Converts write-in entries to attendees |
+| `MngEventPtcpSetAttendeeQuotaHandler` | Sets the attendee quota |
+| `AttendeeQuotaCountOfAttendeesHandler` | Counts attendees against the quota |
+| `MngEventParticipantInvitedByHandler` | Sets the "invited by" relationship |
+| `EstimatedExpenseHandler` | Estimated-expense automation |
+
+> These are activated as part of the Field Events setup script. If event participants aren't being created, quotas aren't enforced, or estimated expenses don't roll up, verify the relevant handler above is active.
+
+---
+
 ## Page Layout & FlexiPage gotchas
 
 ### MngEvent Page Layout

@@ -58,6 +58,7 @@ This is a **Claude Code Plugin** providing an all-in-one AFLS solution:
 | Skill | Description |
 |-------|-------------|
 | `afls-implementation` | Guides module implementations with best practices |
+| `afls-implementation-review` | Reviews an implementation/design against field-observed anti-patterns (sharing model, sample/inventory, mobile sync, over-customization, territory, MDM, Agentforce, UAT/go-live discipline) — proactively flags known-bad decisions before go-live |
 | `afls-troubleshoot` | Diagnoses and resolves AFLS issues |
 | `afls-mobile-validation` | Validates mobile app configuration (DB Schema, sync settings) |
 | `afls-home-page-configuration` | Guides home page setup for web and mobile apps |
@@ -255,7 +256,7 @@ The plugin includes an MCP server that provides these tools:
 | `check_visit_config` | Check Visit Management configuration (record types, settings, compliance, territory info, mobile cache) |
 | `add_visit_engagement_sidebar_item` | Add a custom object as a related list on a Visit page layout so it appears in the visit engagement sidebar on mobile. Retrieves the layout XML, inserts the related list, and deploys it back. |
 
-**CORRECT object names:** `Visit`, `ProviderVisit`, `ProviderVisitPrdDetailing`, `ProviderVisitProdDiscussion`, `ProviderAcctTerritoryInfo`, `ComplianceStatementDefinition`.
+**CORRECT object names:** `Visit`, `ProviderVisit`, `ProviderVisitProdDetailing`, `ProviderVisitProdDiscussion`, `ProviderAcctTerritoryInfo`, `ComplianceStatementDef`.
 **WRONG names (DO NOT USE):** `Visit__c`, `ProviderVisit__c`, `VisitSetting__c`, `VisitConfiguration__mdt`, `VisitRecordType__c`, `VisitType__c`.
 
 #### Sample Management Tools
@@ -283,7 +284,7 @@ The plugin includes an MCP server that provides these tools:
 | `check_activity_plan_config` | Check Activity Plan configuration (time periods, plans, territories, goals, measures, product goals, mobile cache) |
 | `check_briefings_config` | Check Briefings (Daily Podcasts) configuration (toggle, permissions, flows, content definitions, DB Schema, mobile cache) |
 
-**CORRECT object names:** `ActivityPlan`, `ActivityPlanTerritory`, `TimePeriod`, `ProviderActivityGoal`, `ProviderActivityGoalMeasure`, `PrvdActvtyGoalMeasurePrdct`, `ProviderAcctTerritoryInfo`.
+**CORRECT object names:** `ActivityPlan`, `ActivityPlanTerritory`, `TimePeriod`, `ProviderActivityGoal`, `ProviderActivityGoalMeasure`, `PrvdActvtyGoalMeasureProdt`, `ProviderAcctTerritoryInfo`.
 **WRONG names (DO NOT USE):** `ActivityPlan__c`, `ProviderActivityGoal__c`, `AccountGoal__c`, `TimePeriod__c`, `GoalMeasure__c`.
 
 #### Territory Alignment Tools
@@ -445,14 +446,14 @@ AFLS-for-Claude/
 │   └── process-pdfs.sh       # Convert PDFs to markdown
 ├── documentation/            # Source documentation
 │   ├── pm enablement materials/  # PM enablement (.docx files)
-│   ├── official help documentation/  # Salesforce help PDFs (15 files)
+│   ├── official help documentation/  # Salesforce help PDFs (served live via MCP, not bundled)
 │   ├── hands-on exercises/   # Training exercises (2 PDFs)
 │   ├── life_sciences_dev_guide.pdf  # Developer guide (27MB)
 │   ├── SE AFLS Mobile Setup and Configuration Guide.pdf  # Mobile setup (7.6MB)
 │   └── common_issues.md      # Troubleshooting guide
 ├── knowledge/                # Processed knowledge base (markdown)
 │   ├── modules/              # PM enablement content (28 module directories)
-│   ├── help/                 # Official Salesforce help docs (15 files)
+│   ├── help/                 # Official help served live via salesforce-docs MCP (not bundled)
 │   ├── guides/               # Dev guide, mobile setup guide (2 files)
 │   ├── exercises/            # Hands-on training (2 files)
 │   ├── troubleshooting/      # Common issues (1 file)

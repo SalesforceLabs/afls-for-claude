@@ -39,7 +39,7 @@ This queries:
 - ActivityPlanTerritory records
 - ProviderActivityGoal records (account goals)
 - ProviderActivityGoalMeasure records
-- PrvdActvtyGoalMeasurePrdct records (product goals)
+- PrvdActvtyGoalMeasureProdt records (product goals)
 - ProviderAcctTerritoryInfo records
 - Mobile metadata cache status
 
@@ -133,7 +133,7 @@ Report:
 Query product-specific goals:
 
 ```sql
-SELECT COUNT() FROM PrvdActvtyGoalMeasurePrdct
+SELECT COUNT() FROM PrvdActvtyGoalMeasureProdt
 ```
 
 Report:
@@ -299,7 +299,7 @@ This runs all activity plan-specific validation rules automatically.
 - Use `TimePeriod` NOT `TimePeriod__c` or `PlanCycle__c`
 - Use `ProviderActivityGoal` NOT `ProviderActivityGoal__c` or `AccountGoal__c`
 - Use `ProviderActivityGoalMeasure` NOT `ProviderActivityGoalMeasure__c` or `GoalMeasure__c`
-- Use `PrvdActvtyGoalMeasurePrdct` NOT `PrvdActvtyGoalMeasurePrdct__c` or `GoalMeasureProduct__c`
+- Use `PrvdActvtyGoalMeasureProdt` NOT `PrvdActvtyGoalMeasureProdt__c` or `GoalMeasureProduct__c`
 - Use `ProviderAcctTerritoryInfo` NOT `ProviderAccountTerritoryInfo__c`
 - Provider Activity Measure Types are custom metadata configured via Admin Console (not queryable via run_soql)
 - Admin Console settings are in `LifeSciConfigRecord` (Tooling API only)

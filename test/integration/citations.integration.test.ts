@@ -14,7 +14,7 @@ import {
  *
  * These simulate what the MCP tools do: call getModuleContent/searchKnowledge,
  * then call formatCitation, and concatenate. They verify the final string
- * that gets returned to Claude actually contains a 📖 **Source:** line.
+ * that gets returned to Claude actually contains a > **Source:** line.
  */
 describe("citations in tool responses (real filesystem)", () => {
   // ==========================================================================
@@ -26,7 +26,7 @@ describe("citations in tool responses (real filesystem)", () => {
       expect(content).toBeTruthy();
       const citation = formatCitation("visit-management", "visit-management");
       const response = content + citation;
-      expect(response).toContain("📖 **Source:**");
+      expect(response).toContain("> **Source:**");
       expect(response).toContain("PM Enablement");
       expect(response).toContain("Visit Management");
     });
@@ -40,7 +40,7 @@ describe("citations in tool responses (real filesystem)", () => {
         "account-management",
       );
       const response = content + citation;
-      expect(response).toContain("📖 **Source:**");
+      expect(response).toContain("> **Source:**");
       expect(response).toContain("PM Enablement");
       // Should NOT cite Official Help when called as a module
       expect(response).not.toContain("Official Help");
@@ -54,7 +54,7 @@ describe("citations in tool responses (real filesystem)", () => {
         "sample-management",
       );
       const response = content + citation;
-      expect(response).toContain("📖 **Source:**");
+      expect(response).toContain("> **Source:**");
       expect(response).toContain("PM Enablement");
     });
 
@@ -69,8 +69,8 @@ describe("citations in tool responses (real filesystem)", () => {
         const response = content + citation;
         expect(
           response,
-          `Module "${mod.slug}" response missing 📖 **Source:**`,
-        ).toContain("📖 **Source:**");
+          `Module "${mod.slug}" response missing > **Source:**`,
+        ).toContain("> **Source:**");
       }
     });
   });
@@ -95,7 +95,7 @@ describe("citations in tool responses (real filesystem)", () => {
         expect(
           formatted,
           `Search result "${r.title}" from module "${r.module}" missing citation`,
-        ).toContain("📖 **Source:**");
+        ).toContain("> **Source:**");
       }
     });
 
@@ -110,7 +110,7 @@ describe("citations in tool responses (real filesystem)", () => {
               r.source === "modules" ? r.module : undefined,
             )
           : "";
-        expect(citation).toContain("📖 **Source:**");
+        expect(citation).toContain("> **Source:**");
       }
     });
   });
@@ -125,7 +125,7 @@ describe("citations in tool responses (real filesystem)", () => {
 
       const citation = formatCitation("account-management");
       const response = content + citation;
-      expect(response).toContain("📖 **Source:**");
+      expect(response).toContain("> **Source:**");
       expect(response).toContain("Official Help");
       expect(response).toContain("https://help.salesforce.com");
     });
@@ -141,7 +141,7 @@ describe("citations in tool responses (real filesystem)", () => {
 
       const citation = formatCitation("dev-guide");
       const response = content + citation;
-      expect(response).toContain("📖 **Source:**");
+      expect(response).toContain("> **Source:**");
       expect(response).toContain("Guide");
     });
   });
@@ -156,7 +156,7 @@ describe("citations in tool responses (real filesystem)", () => {
 
       const citation = formatCitation("common-issues");
       const response = content + citation;
-      expect(response).toContain("📖 **Source:**");
+      expect(response).toContain("> **Source:**");
       expect(response).toContain("Troubleshooting");
     });
   });

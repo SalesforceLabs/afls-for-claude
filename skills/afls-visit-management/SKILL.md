@@ -65,10 +65,10 @@ Re-run `check_visit_config()` to confirm everything is configured correctly.
 |---------|-------------------|
 | `Visit` | `Visit__c`, `VisitSetting__c` |
 | `ProviderVisit` | `ProviderVisit__c` |
-| `ProviderVisitPrdDetailing` | `ProviderVisitProductDetailing__c` |
+| `ProviderVisitProdDetailing` | `ProviderVisitProductDetailing__c` |
 | `ProviderVisitProdDiscussion` | `ProviderVisitProductDiscussion__c` |
 | `ProviderAcctTerritoryInfo` | — |
-| `ComplianceStatementDefinition` | — |
+| `ComplianceStatementDef` | — |
 
 ### Tool Restrictions
 - **DO NOT** use `run_soql` for Admin Console settings — use `list_admin_settings` / `check_visit_config`
@@ -86,6 +86,6 @@ When the user asks about this:
 7. Recommend regenerating mobile metadata cache
 
 **OOB sidebar objects (already present — do NOT offer these):**
-ProviderVisitPrdDetailing, ProviderVisitProdDiscussion, ProviderVisitMarketingItem, ProductDisbursement, ProviderVisitDtlProductMsg, Attendee, Visitor
+ProviderVisitProdDetailing, ProviderVisitProdDiscussion, ProviderVisitMarketingItem, ProductDisbursement, ProviderVisitDtlProductMsg, Attendee, Visitor
 
 **Maximum 10 related lists** (8 OOB + 2 custom).

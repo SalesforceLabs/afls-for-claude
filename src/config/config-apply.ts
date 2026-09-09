@@ -153,7 +153,7 @@ export async function applyConfig(opts: ApplyOptions): Promise<ApplyResult> {
           ok: true,
           message: rd?.note || "Not applicable under the safe policy — skipped.",
         },
-        index,
+        index
       );
       continue;
     }
@@ -162,7 +162,10 @@ export async function applyConfig(opts: ApplyOptions): Promise<ApplyResult> {
       if (rd.kind === "triggerHandler") {
         emit(await applyTriggerHandler(targetOrg, rd), index);
       } else if (rd.status === "NEW") {
-        emit(await createRecord(targetOrg, rd, srcByKey, resolveCategoryId, resolveAssigneeId), index);
+        emit(
+          await createRecord(targetOrg, rd, srcByKey, resolveCategoryId, resolveAssigneeId),
+          index
+        );
       } else {
         emit(await updateExistingRecord(targetOrg, rd, srcByKey, resolveAssigneeId), index);
       }
@@ -175,7 +178,7 @@ export async function applyConfig(opts: ApplyOptions): Promise<ApplyResult> {
           ok: false,
           message: err instanceof Error ? err.message : String(err),
         },
-        index,
+        index
       );
     }
   }
@@ -195,7 +198,13 @@ async function applyTriggerHandler(targetOrg: string, rd: RecordDiff): Promise<A
   const q = `SELECT Id, IsActive FROM LifeScienceTriggerHandler WHERE DeveloperName = '${sqlEscape(rd.developerName)}' LIMIT 1`;
   const res = await runToolingQuery(q, targetOrg);
   if (!res.success || !res.data?.records?.length) {
-    return { key: rd.key, developerName: rd.developerName, action: "toggle", ok: false, message: "Handler not found in target org." };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "toggle",
+      ok: false,
+      message: "Handler not found in target org.",
+    };
   }
   const id = (res.data.records[0] as Record<string, unknown>).Id as string;
   const upd = await updateRecord("LifeScienceTriggerHandler", id, { IsActive: desired }, targetOrg);
@@ -213,23 +222,41 @@ async function createRecord(
   rd: RecordDiff,
   srcByKey: ReturnType<typeof flattenSnapshot>,
   resolveCategoryId: (name: string) => Promise<string | null>,
-  resolveAssigneeId: (a: AssignmentRef) => Promise<string | null>,
+  resolveAssigneeId: (a: AssignmentRef) => Promise<string | null>
 ): Promise<ApplyResultItem> {
   const src = srcByKey.get(rd.key);
   if (!src) {
-    return { key: rd.key, developerName: rd.developerName, action: "create", ok: false, message: "Source record not found in snapshot." };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "create",
+      ok: false,
+      message: "Source record not found in snapshot.",
+    };
   }
 
   // Guard: never create a record whose name already exists (globally unique DeveloperName).
   const existQ = `SELECT Id FROM LifeSciConfigRecord WHERE DeveloperName = '${sqlEscape(src.developerName)}' LIMIT 1`;
   const existRes = await runToolingQuery(existQ, targetOrg);
   if (existRes.success && existRes.data?.records?.length) {
-    return { key: rd.key, developerName: rd.developerName, action: "skip", ok: true, message: "Already exists in target — skipped to avoid duplicate." };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "skip",
+      ok: true,
+      message: "Already exists in target — skipped to avoid duplicate.",
+    };
   }
 
   const categoryId = await resolveCategoryId(src.category);
   if (!categoryId) {
-    return { key: rd.key, developerName: rd.developerName, action: "create", ok: false, message: `Category '${src.category}' not found in target org.` };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "create",
+      ok: false,
+      message: `Category '${src.category}' not found in target org.`,
+    };
   }
 
   const warnings: string[] = [];
@@ -244,10 +271,16 @@ async function createRecord(
       IsActive: false,
       IsOrgLevel: src.isOrgLevel ?? false,
     },
-    targetOrg,
+    targetOrg
   );
   if (!parent.success) {
-    return { key: rd.key, developerName: rd.developerName, action: "create", ok: false, message: `Parent create failed: ${parent.error}` };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "create",
+      ok: false,
+      message: `Parent create failed: ${parent.error}`,
+    };
   }
   const recordId = parent.data!.id;
 
@@ -283,15 +316,24 @@ async function createRecord(
     }
     const ar = await createToolingRecord(
       "LifeSciConfigAssignment",
-      { LifeSciConfigRecordId: recordId, AssignedToId: assigneeId, AssignmentLevel: a.level || "Profile" },
-      targetOrg,
+      {
+        LifeSciConfigRecordId: recordId,
+        AssignedToId: assigneeId,
+        AssignmentLevel: a.level || "Profile",
+      },
+      targetOrg
     );
     if (!ar.success) warnings.push(`Assignment ${a.name}: ${ar.error}`);
   }
 
   // Phase 3: activate if the source record is active and all fields landed.
   if (src.isActive && fieldErrors === 0) {
-    const act = await updateToolingRecord("LifeSciConfigRecord", recordId, { IsActive: true }, targetOrg);
+    const act = await updateToolingRecord(
+      "LifeSciConfigRecord",
+      recordId,
+      { IsActive: true },
+      targetOrg
+    );
     if (!act.success) warnings.push(`Activation: ${act.error}`);
   } else if (src.isActive && fieldErrors > 0) {
     warnings.push("Activation skipped — fix field errors, then re-apply.");
@@ -302,7 +344,10 @@ async function createRecord(
     developerName: rd.developerName,
     action: "create",
     ok: fieldErrors === 0,
-    message: fieldErrors === 0 ? `Created (${fieldsCreated} fields)` : `Created with ${fieldErrors} field error(s)`,
+    message:
+      fieldErrors === 0
+        ? `Created (${fieldsCreated} fields)`
+        : `Created with ${fieldErrors} field error(s)`,
     warnings: warnings.length ? warnings : undefined,
   };
 }
@@ -311,18 +356,30 @@ async function updateExistingRecord(
   targetOrg: string,
   rd: RecordDiff,
   srcByKey: ReturnType<typeof flattenSnapshot>,
-  resolveAssigneeId: (a: AssignmentRef) => Promise<string | null>,
+  resolveAssigneeId: (a: AssignmentRef) => Promise<string | null>
 ): Promise<ApplyResultItem> {
   const src = srcByKey.get(rd.key);
   if (!src) {
-    return { key: rd.key, developerName: rd.developerName, action: "update", ok: false, message: "Source record not found in snapshot." };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "update",
+      ok: false,
+      message: "Source record not found in snapshot.",
+    };
   }
 
   // Locate the target record + its existing field values.
   const recQ = `SELECT Id FROM LifeSciConfigRecord WHERE DeveloperName = '${sqlEscape(src.developerName)}' LIMIT 1`;
   const recRes = await runToolingQuery(recQ, targetOrg);
   if (!recRes.success || !recRes.data?.records?.length) {
-    return { key: rd.key, developerName: rd.developerName, action: "update", ok: false, message: "Record not found in target org." };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "update",
+      ok: false,
+      message: "Record not found in target org.",
+    };
   }
   const recordId = (recRes.data.records[0] as Record<string, unknown>).Id as string;
 
@@ -345,7 +402,7 @@ async function updateExistingRecord(
         "LifeSciConfigFieldValue",
         existing.Id as string,
         { [valueCol]: fd.to },
-        targetOrg,
+        targetOrg
       );
       if (!upd.success) {
         errors++;
@@ -354,8 +411,13 @@ async function updateExistingRecord(
     } else {
       const created = await createToolingRecord(
         "LifeSciConfigFieldValue",
-        { FieldName: fd.name, LifeSciConfigRecordId: recordId, DataType: dataType, [valueCol]: fd.to },
-        targetOrg,
+        {
+          FieldName: fd.name,
+          LifeSciConfigRecordId: recordId,
+          DataType: dataType,
+          [valueCol]: fd.to,
+        },
+        targetOrg
       );
       if (!created.success) {
         errors++;
@@ -373,8 +435,12 @@ async function updateExistingRecord(
     }
     const ar = await createToolingRecord(
       "LifeSciConfigAssignment",
-      { LifeSciConfigRecordId: recordId, AssignedToId: assigneeId, AssignmentLevel: a.level || "Profile" },
-      targetOrg,
+      {
+        LifeSciConfigRecordId: recordId,
+        AssignedToId: assigneeId,
+        AssignmentLevel: a.level || "Profile",
+      },
+      targetOrg
     );
     if (!ar.success) warnings.push(`Assignment ${a.name}: ${ar.error}`);
   }
@@ -385,7 +451,7 @@ async function updateExistingRecord(
       "LifeSciConfigRecord",
       recordId,
       { IsActive: rd.activeChange.to },
-      targetOrg,
+      targetOrg
     );
     if (!act.success) {
       errors++;

@@ -2,13 +2,8 @@
  * Salesforce authentication and org management
  */
 
-import {
-  isSfCliInstalled,
-  getSfCliVersion,
-  listOrgs,
-  SfOrg,
-  SfOrgListResult,
-} from "./cli.js";
+import type { SfOrg } from "./cli.js";
+import { isSfCliInstalled, getSfCliVersion, listOrgs, SfOrgListResult } from "./cli.js";
 import { cacheInvalidateOrg } from "../cache.js";
 
 export interface SetupStatus {
@@ -21,11 +16,7 @@ export interface SetupStatus {
   nextStep?: SetupStep;
 }
 
-export type SetupStep =
-  | "install_cli"
-  | "authenticate_org"
-  | "select_default_org"
-  | "ready";
+export type SetupStep = "install_cli" | "authenticate_org" | "select_default_org" | "ready";
 
 export interface SetupInstructions {
   step: SetupStep;
@@ -107,8 +98,7 @@ export async function checkSetupStatus(): Promise<SetupStatus> {
     // If we have a current target org set, validate it still exists
     if (currentTargetOrg) {
       const targetExists = allOrgs.some(
-        (org) =>
-          org.alias === currentTargetOrg || org.username === currentTargetOrg
+        (org) => org.alias === currentTargetOrg || org.username === currentTargetOrg
       );
       if (!targetExists) {
         clearTargetOrg();
@@ -147,8 +137,7 @@ export function getSetupInstructions(step: SetupStep): SetupInstructions {
       return {
         step,
         title: "Install Salesforce CLI",
-        description:
-          "The Salesforce CLI is required to connect to your org. Install it using npm:",
+        description: "The Salesforce CLI is required to connect to your org. Install it using npm:",
         command: "npm install -g @salesforce/cli",
         options: [
           "Run the command above in your terminal",
@@ -160,8 +149,7 @@ export function getSetupInstructions(step: SetupStep): SetupInstructions {
       return {
         step,
         title: "Authenticate to Your Org",
-        description:
-          "Connect to your Salesforce org using web-based authentication:",
+        description: "Connect to your Salesforce org using web-based authentication:",
         command: "sf org login web --alias my-afls-org",
         options: [
           "For sandbox: sf org login web --alias my-afls-sandbox --instance-url https://test.salesforce.com",
@@ -174,8 +162,7 @@ export function getSetupInstructions(step: SetupStep): SetupInstructions {
       return {
         step,
         title: "Select Target Org",
-        description:
-          "Multiple orgs found. Please select which org to work with.",
+        description: "Multiple orgs found. Please select which org to work with.",
         options: [
           "Use the set_target_org tool to select an org",
           "Or set a default: sf config set target-org <alias>",
@@ -269,9 +256,7 @@ export async function validateOrgConnection(): Promise<{
   const targetOrg = await getEffectiveTargetOrg();
 
   if (!targetOrg) {
-    const orgNames = status.orgs.map(
-      (o) => o.alias || o.username
-    );
+    const orgNames = status.orgs.map((o) => o.alias || o.username);
     return {
       valid: false,
       error: `No target org selected. Multiple orgs available: ${orgNames.join(", ")}. Ask the user ONCE which org to use, then call set_target_org. The choice persists for the entire session — do not ask again.`,

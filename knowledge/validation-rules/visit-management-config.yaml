@@ -208,7 +208,7 @@ rules:
     name: Visit-related trigger handlers are enabled
     description: |
       Checks for visit-related trigger handler configuration. Trigger handlers
-      on Visit, ProviderVisit, and ProviderVisitPrdDetailing objects are required
+      on Visit, ProviderVisit, and ProviderVisitProdDetailing objects are required
       for core visit management automation including status updates, rollup
       calculations, and data synchronization. If trigger handlers are disabled,
       visit creation and completion may fail or produce incorrect data.
@@ -232,7 +232,7 @@ rules:
         - "Navigate to Admin Console > Visit Settings > Trigger Handlers"
         - "Verify VisitTriggerHandler is active"
         - "Verify ProviderVisitTriggerHandler is active"
-        - "Verify ProviderVisitPrdDetailingTriggerHandler is active"
+        - "Verify ProviderVisitProdDetailingTriggerHandler is active"
         - "If handlers are missing, check that AFLS package is properly installed"
       ui_path: "Admin Console > Visit Settings > Trigger Handlers"
     issue_ref: "6.1"

@@ -175,11 +175,12 @@ If you already have `ANTHROPIC_API_KEY`, or `ANTHROPIC_AUTH_TOKEN` + `ANTHROPIC_
 
 ## Skills (Auto-Invoked)
 
-Claude automatically activates the right skill based on what you're asking about. Skills are thin routing layers (60–200 lines) that direct Claude to call MCP tools for sourced documentation — they don't embed knowledge inline. There are 30 skills covering every major AFLS module:
+Claude automatically activates the right skill based on what you're asking about. Skills are thin routing layers (60–200 lines) that direct Claude to call MCP tools for sourced documentation — they don't embed knowledge inline. There are 36 skills covering every major AFLS module:
 
 | Skill | Description |
 |-------|-------------|
 | `afls-implementation` | Guides module implementations with best practices |
+| `afls-implementation-review` | Reviews a design against field-observed anti-patterns and flags known-bad decisions before go-live |
 | `afls-troubleshoot` | Diagnoses and resolves AFLS issues |
 | `afls-mobile-validation` | Validates mobile app configuration (DB Schema, sync settings) |
 | `afls-mobile-app-settings` | Manages mobile Application Settings (browser, password, search, notifications) |
@@ -259,7 +260,7 @@ In Admin Console > Visit Settings > Product Detailing:
 - Set: Default Detailing Mode = "Standard"
 
 ## 3. Signature Capture
-Create a ComplianceStatementDefinition record:
+Create a ComplianceStatementDef record:
   Module:        Visit
   StatementType: Pre-Call
   IsActive:      true
@@ -289,12 +290,12 @@ After all settings are saved, regenerate the cache for affected profiles:
 - Alignment: ⚠️  MISMATCHED — "Remote Visit" missing from ProviderVisit
 
 ### Product Detailing
-- ProviderVisitPrdDetailing records: 847
+- ProviderVisitProdDetailing records: 847
 - ProviderVisitProdDiscussion records: 312
 - Status: ✓ Configured
 
 ### Signature Configuration
-- ComplianceStatementDefinitions: 0 (Visit module)
+- ComplianceStatementDefs: 0 (Visit module)
 - Status: ⚠️  NOT CONFIGURED — signature page requires at least one active statement
 
 ### Mobile Metadata Cache
@@ -309,7 +310,7 @@ After all settings are saved, regenerate the cache for affected profiles:
 
 ### Recommendations
 1. Create "Remote Visit" record type in ProviderVisit to match Visit
-2. Create at least one ComplianceStatementDefinition with Module = 'Visit'
+2. Create at least one ComplianceStatementDef with ModuleType = 'Visit'
 3. Regenerate mobile metadata cache after fixing above items
 
 Want me to fix any of these now? [Yes / No / Show details]
@@ -340,10 +341,10 @@ FAILED
    Actual:   Detail Visit only
    Fix: Create "Remote Visit" record type in ProviderVisit
 
-✗  ComplianceStatementDefinition exists for Visit module
+✗  ComplianceStatementDef exists for Visit module
    Expected: ≥1 active record
    Actual: 0 records
-   Fix: Create a ComplianceStatementDefinition with Module='Visit' and IsActive=true
+   Fix: Create a ComplianceStatementDef with ModuleType='Visit'
 
 ─────────────────────────────────────────
 WARNINGS
@@ -766,7 +767,7 @@ The plugin includes skills, documentation, and validation rules for all major AF
 │  │              AFLS-for-Claude (Plugin)                     │ │
 │  ├─────────────────────────────────────────────────────────┤ │
 │  │                                                          │ │
-│  │  30 Skills (routing)       │  24 Commands (/afls:*)      │ │
+│  │  36 Skills (routing)       │  24 Commands (/afls:*)      │ │
 │  │  • Thin tool delegation   │  • /afls:setup-plugin       │ │
 │  │  • Object name guardrails │  • /afls:soql-query         │ │
 │  │  • Config mode workflows  │  • /afls:audit              │ │
@@ -781,7 +782,7 @@ The plugin includes skills, documentation, and validation rules for all major AF
 │  │                            │                             │ │
 │  │  Knowledge Base            │  Citation System            │ │
 │  │  • 29 modules (86 files)  │  • 106 citation entries    │ │
-│  │  • 15 help docs + URLs    │  • File paths + URLs       │ │
+│  │  • live help via MCP      │  • File paths + URLs       │ │
 │  │  • 2 guides, 2 exercises  │  • Blockquote format       │ │
 │  └─────────────────────────────────────────────────────────┘ │
 │                           │                                  │
@@ -803,8 +804,8 @@ All knowledge tool responses include source citations with links:
 > 📂 **File:** /path/to/knowledge/modules/visit-management/admin-console-transcript.md
 ```
 
-- **106 citation entries** covering 86 PM Enablement files, 15 Official Help docs, 2 guides, 2 exercises, 1 troubleshooting doc
-- Official Help docs include Salesforce help URLs
+- **106 citation entries** covering 86 PM Enablement files, 2 guides, 2 exercises, 1 troubleshooting doc
+- Official Salesforce help documentation is served live via the `salesforce-docs` MCP server (not bundled locally)
 - All citations include local file paths for quick access
 - Citations are returned in blockquote format by MCP tools
 - Skills delegate to tools (rather than embedding knowledge inline) to ensure citations always flow through
@@ -851,7 +852,7 @@ AFLS-for-Claude/
 │   └── validation/            # YAML rule engine (151 rules)
 ├── knowledge/                # Processed knowledge base (markdown)
 │   ├── modules/              # 29 module directories (86 files)
-│   ├── help/                 # 15 Official Salesforce help docs
+│   ├── help/                 # (official help served live via salesforce-docs MCP)
 │   ├── guides/               # Dev guide, mobile setup guide
 │   ├── exercises/            # Hands-on training (2 files)
 │   ├── troubleshooting/      # Common issues (4 files)

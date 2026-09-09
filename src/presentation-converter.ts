@@ -102,9 +102,7 @@ export function detectFormat(filePaths: string[]): FormatDetectionResult {
   }
 
   // Collect extensions
-  const extensions = new Set(
-    filePaths.map((p) => path.extname(p).toLowerCase())
-  );
+  const extensions = new Set(filePaths.map((p) => path.extname(p).toLowerCase()));
 
   if (extensions.size > 1) {
     throw new Error(
@@ -132,9 +130,7 @@ export function detectFormat(filePaths: string[]): FormatDetectionResult {
       return { format: "html-zip", paths: filePaths };
 
     default:
-      throw new Error(
-        `Unsupported file type: ${ext}. Supported types: .pptx, .pdf, .zip`
-      );
+      throw new Error(`Unsupported file type: ${ext}. Supported types: .pptx, .pdf, .zip`);
   }
 }
 
@@ -362,9 +358,7 @@ async function preparePdf(pdfPath: string): Promise<PreparationResult> {
 /**
  * HTML ZIP pipeline: validate each ZIP, return PageResult[] pointing to originals.
  */
-async function prepareHtmlZips(
-  zipPaths: string[]
-): Promise<PreparationResult> {
+async function prepareHtmlZips(zipPaths: string[]): Promise<PreparationResult> {
   const pages: PageResult[] = [];
 
   for (let i = 0; i < zipPaths.length; i++) {
@@ -399,10 +393,7 @@ async function prepareHtmlZips(
  * Check if LibreOffice is installed and available on PATH
  */
 export async function checkLibreOfficeInstalled(): Promise<boolean> {
-  const candidates = [
-    "soffice",
-    "/Applications/LibreOffice.app/Contents/MacOS/soffice",
-  ];
+  const candidates = ["soffice", "/Applications/LibreOffice.app/Contents/MacOS/soffice"];
 
   for (const cmd of candidates) {
     try {
@@ -442,15 +433,12 @@ async function getSofficePath(): Promise<string> {
     // fall through
   }
 
-  const macPath =
-    "/Applications/LibreOffice.app/Contents/MacOS/soffice";
+  const macPath = "/Applications/LibreOffice.app/Contents/MacOS/soffice";
   try {
     await execAsync(`"${macPath}" --version`);
     return macPath;
   } catch {
-    throw new Error(
-      "LibreOffice not found. Install it with: brew install --cask libreoffice"
-    );
+    throw new Error("LibreOffice not found. Install it with: brew install --cask libreoffice");
   }
 }
 
@@ -520,10 +508,9 @@ async function convertPptxViaLibreOfficeHtml(
   // Step 1: PPTX → PDF via LibreOffice
   const pdfPath = path.join(pdfDir, path.basename(pptxPath, ".pptx") + ".pdf");
   try {
-    await execAsync(
-      `"${soffice}" --headless --convert-to pdf --outdir "${pdfDir}" "${pptxPath}"`,
-      { timeout: 120000 }
-    );
+    await execAsync(`"${soffice}" --headless --convert-to pdf --outdir "${pdfDir}" "${pptxPath}"`, {
+      timeout: 120000,
+    });
   } catch (error) {
     return {
       success: false,
@@ -595,10 +582,9 @@ async function convertPptxViaLibreOfficeHtml(
       // Fallback: PNG rasterization
       try {
         const pngPath = path.join(slideDir, `temp.png`);
-        await execAsync(
-          `sips -s format png "${pagePdfPaths[i]}" --out "${pngPath}"`,
-          { timeout: 30000 }
-        );
+        await execAsync(`sips -s format png "${pagePdfPaths[i]}" --out "${pngPath}"`, {
+          timeout: 30000,
+        });
         const pngBuffer = fs.readFileSync(pngPath);
         const pngBase64 = pngBuffer.toString("base64");
         fs.writeFileSync(
@@ -622,14 +608,10 @@ async function convertPptxViaLibreOfficeHtml(
     const thumbPath = path.join(thumbDir, `slide_${slideNum}.jpg`);
     try {
       const tempJpg = path.join(thumbDir, `slide_${slideNum}_temp.jpg`);
-      await execAsync(
-        `sips -s format jpeg "${pagePdfPaths[i]}" --out "${tempJpg}"`,
-        { timeout: 15000 }
-      );
-      await execAsync(
-        `sips -z 280 220 "${tempJpg}" --out "${thumbPath}"`,
-        { timeout: 15000 }
-      );
+      await execAsync(`sips -s format jpeg "${pagePdfPaths[i]}" --out "${tempJpg}"`, {
+        timeout: 15000,
+      });
+      await execAsync(`sips -z 280 220 "${tempJpg}" --out "${thumbPath}"`, { timeout: 15000 });
       if (fs.existsSync(tempJpg) && tempJpg !== thumbPath) {
         fs.unlinkSync(tempJpg);
       }
@@ -768,7 +750,8 @@ async function convertPptxViaPandocHtml5(
       success: false,
       slides: [],
       outputDir,
-      error: "No slides found in Pandoc HTML5 output. The PPTX may have no content or an unsupported structure.",
+      error:
+        "No slides found in Pandoc HTML5 output. The PPTX may have no content or an unsupported structure.",
       diagnostics,
     };
   }
@@ -915,10 +898,9 @@ async function generateThumbnails(
   // Convert PPTX → PDF
   const pdfPath = path.join(pdfDir, path.basename(pptxPath, ".pptx") + ".pdf");
   try {
-    await execAsync(
-      `"${soffice}" --headless --convert-to pdf --outdir "${pdfDir}" "${pptxPath}"`,
-      { timeout: 120000 }
-    );
+    await execAsync(`"${soffice}" --headless --convert-to pdf --outdir "${pdfDir}" "${pptxPath}"`, {
+      timeout: 120000,
+    });
   } catch {
     return []; // Thumbnails are non-critical; return empty
   }
@@ -945,14 +927,10 @@ async function generateThumbnails(
     const thumbPath = path.join(thumbDir, `slide_${i + 1}.jpg`);
     try {
       const tempJpg = path.join(thumbDir, `slide_${i + 1}_temp.jpg`);
-      await execAsync(
-        `sips -s format jpeg "${pagePdfPath}" --out "${tempJpg}"`,
-        { timeout: 15000 }
-      );
-      await execAsync(
-        `sips -z 280 220 "${tempJpg}" --out "${thumbPath}"`,
-        { timeout: 15000 }
-      );
+      await execAsync(`sips -s format jpeg "${pagePdfPath}" --out "${tempJpg}"`, {
+        timeout: 15000,
+      });
+      await execAsync(`sips -z 280 220 "${tempJpg}" --out "${thumbPath}"`, { timeout: 15000 });
       if (fs.existsSync(tempJpg) && tempJpg !== thumbPath) {
         fs.unlinkSync(tempJpg);
       }
@@ -1005,11 +983,7 @@ function escapeHtml(str: string): string {
     .replace(/"/g, "&quot;");
 }
 
-function createSlideZip(
-  zipPath: string,
-  htmlPath: string,
-  thumbnailPath: string
-): Promise<void> {
+function createSlideZip(zipPath: string, htmlPath: string, thumbnailPath: string): Promise<void> {
   return new Promise((resolve, reject) => {
     const output = fs.createWriteStream(zipPath);
     const archive = archiver("zip", { zlib: { level: 9 } });

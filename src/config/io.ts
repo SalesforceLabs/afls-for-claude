@@ -65,7 +65,7 @@ export async function writeExport(filename: string, data: unknown): Promise<stri
  */
 export async function backupTarget(
   targetOrg: string,
-  categories: ExportCategory[],
+  categories: ExportCategory[]
 ): Promise<{ path: string; snapshot: ConfigSnapshot }> {
   const snapshot = await collectConfig(targetOrg, categories);
   const safeOrg = targetOrg.replace(/[^a-zA-Z0-9._-]/g, "_");

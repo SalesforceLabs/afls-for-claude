@@ -19,6 +19,11 @@ You are an expert at diagnosing and resolving AFLS issues.
    - `search_afls_knowledge` to find relevant documentation
    - `get_afls_module_docs` for module-specific guidance
    - `get_afls_admin_setup` for configuration requirements
+   - `get_afls_troubleshooting({ topic: "implementation-anti-patterns" })` for
+     design/config anti-patterns — **check this first for post-go-live incidents
+     (Sev-1, API-limit "death loops", duplicate visits, inventory-count
+     failures): these are config/design issues far more often than product
+     bugs.** For a broad design review, use the `afls-implementation-review` skill.
 
 3. **If connected to an org**, diagnose with:
    - `describe_sobject` to verify object/field setup (always verify API names first)
@@ -248,6 +253,18 @@ bl.IssueDate = Date.newInstance(2025, 1, 1);
 - Accounts not assigned: Check alignment rules, territory hierarchy
 - User not seeing accounts: Verify Territory2 membership, sharing rules
 - Territory jobs failing: Check Admin Console > Territories > Jobs
+- **Territory-scoped sharing not working / sharing-handler setup aborts:** The territory model must be **activated first**. Sharing handler setup checks `Territory2Model.State == 'Active'` and aborts with an explicit error if the model is in `Planning`/`Inactive` state. Activate the territory model before enabling sharing handlers.
+  ```sql
+  SELECT Id, DeveloperName, State FROM Territory2Model
+  ```
+
+### Mobile Sync / DB Schema
+- **Object's data disappeared from the iPad after a config change:** Check whether its DB Schema record was **deactivated or removed**. Disabling a DB Schema record is destructive — on the next sync the app runs `DELETE FROM <table>` for objects no longer in the metadata, wiping all locally cached records (and any unsynced offline edits) for that object. Re-enabling re-syncs server data, but local-only data is gone. Use `list_db_schema` / `get_db_schema` to confirm the record's state.
+- **Data Change Requests or offline edits silently fail for an object:** Check `OneWaySync` on its DB Schema record. `OneWaySync = true` (web→mobile only) means the object gets no offline-tracking columns and is treated as unsyncable for edits — DCR and offline modifications will silently fail. Set `OneWaySync = false` if the object needs offline edit/DCR support.
+
+### Configuration & Deployment Gotchas
+- **A trigger handler you deployed doesn't show up in `list_trigger_handlers`:** New/custom trigger handler records may not be registered until the handler-sync routine runs. Execute `TriggerService.syncTriggerHandlerRecords();` via `run_apex`, then re-list.
+- **Automation firing mid-deploy / config deploys in an inconsistent state:** Deploy LifeSciConfig + trigger-handler-dependent metadata in two passes — **deploy inactive first, then activate** — so triggers/automation don't fire against partially-deployed config. (This is the pattern AFLS's own setup scripts use.) See `afls-config-migration` for the full sequence.
 
 ### Mobile Related List Renders Blank (force:relatedListSingleContainer)
 

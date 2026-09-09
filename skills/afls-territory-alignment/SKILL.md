@@ -81,3 +81,10 @@ When the user asks about creating affiliation alignment rules, follow this proce
 3. Create rules in Admin Console > Territories > Affiliation Rules
 4. Rules apply to the selected territory **and all child territories** by default (can be unchecked)
 5. After creating rules, run the parent alignment jobs (Account/Zip/Brick) — affiliation alignment runs automatically after those complete
+
+### Activate the Territory Model Before Enabling Sharing Handlers
+Territory-scoped sharing depends on an **active** territory model. The sharing-handler setup checks `Territory2Model.State == 'Active'` and aborts with an explicit error if the model is still in `Planning` or `Inactive`. Always activate the model first, then enable the sharing handlers.
+```sql
+SELECT Id, DeveloperName, State FROM Territory2Model
+```
+If sharing isn't propagating to territory users, confirm the model's `State` is `Active` before investigating rules or `LSC4CEAutoShare`.

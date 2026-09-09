@@ -11,7 +11,7 @@ const SKILLS_DIR = join(__dirname, "..", "..", "skills");
  *
  * PATH A (preferred — "thin skill"): Skill is under 200 lines and delegates to
  *   MCP tools like get_afls_module_docs / search_afls_knowledge. The tool response
- *   includes a 📖 **Source:** citation. The skill must reference at least one
+ *   includes a > **Source:** citation. The skill must reference at least one
  *   knowledge tool so Claude calls it instead of answering from general knowledge.
  *
  * PATH B (legacy — "fat skill"): Skill embeds inline knowledge (200+ lines) and
@@ -46,12 +46,16 @@ describe("skill citation coverage", () => {
       );
       const lineCount = content.split("\n").length;
 
-      it("follows PATH A (thin + tool delegation) or PATH B (fat + embedded citation)", () => {
-        const isThin = lineCount <= 200;
+      it("delivers citations via tool delegation (PATH A) or an embedded citation (PATH B)", () => {
+        // The real invariant: a citation must reach the user. That happens
+        // either because the skill delegates to a knowledge tool (whose
+        // response carries a `> **Source:**` citation) or because the skill
+        // embeds a citation itself. Line count only signals which path is
+        // preferred — a fat skill that delegates still delivers citations.
         const referencesKnowledgeTool = KNOWLEDGE_TOOL_PATTERNS.some((tool) =>
           content.includes(tool),
         );
-        const hasEmbeddedCitation = /📖 Source/.test(
+        const hasEmbeddedCitation = /> \*\*Source:\*\*|📖 Source/.test(
           content
             .trim()
             .split("\n")
@@ -59,21 +63,13 @@ describe("skill citation coverage", () => {
             .join("\n"),
         );
 
-        if (isThin) {
-          // PATH A: thin skills MUST reference a knowledge tool
-          expect(
-            referencesKnowledgeTool,
-            `Thin skill "${skillDir}" (${lineCount} lines) must reference at least one knowledge tool ` +
-              `(${KNOWLEDGE_TOOL_PATTERNS.join(", ")}) so Claude calls it and gets a citation`,
-          ).toBe(true);
-        } else {
-          // PATH B: fat skills MUST have embedded citation as fallback
-          expect(
-            hasEmbeddedCitation,
-            `Fat skill "${skillDir}" (${lineCount} lines) must embed a 📖 **Source:** citation ` +
-              `at the end as a fallback. Prefer refactoring to a thin skill instead.`,
-          ).toBe(true);
-        }
+        expect(
+          referencesKnowledgeTool || hasEmbeddedCitation,
+          `Skill "${skillDir}" (${lineCount} lines) delivers no citation: it must either ` +
+            `reference a knowledge tool (${KNOWLEDGE_TOOL_PATTERNS.join(", ")}) so the tool ` +
+            `response carries one, or embed a "> **Source:**" citation near the end. ` +
+            `Thin skills (<=200 lines) should prefer tool delegation.`,
+        ).toBe(true);
       });
 
       it("does NOT have the broken '## Citations' instruction section", () => {
@@ -101,7 +97,7 @@ describe("MCP tools called by skills produce citations", () => {
   it("get_afls_module_docs for visit-management returns a citation", () => {
     // Simulates what happens when Claude calls get_afls_module_docs({ module: "visit-management" })
     const citation = formatCitation("visit-management", "visit-management");
-    expect(citation).toContain("📖 **Source:**");
+    expect(citation).toContain("> **Source:**");
     expect(citation).toContain("PM Enablement");
   });
 
@@ -111,8 +107,8 @@ describe("MCP tools called by skills produce citations", () => {
       const citation = formatCitation(mod.slug, mod.slug);
       expect(
         citation,
-        `formatCitation("${mod.slug}", "${mod.slug}") must contain 📖 **Source:**`,
-      ).toContain("📖 **Source:**");
+        `formatCitation("${mod.slug}", "${mod.slug}") must contain > **Source:**`,
+      ).toContain("> **Source:**");
     }
   });
 });

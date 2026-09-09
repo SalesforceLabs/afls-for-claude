@@ -18,7 +18,7 @@ Remote Engagement in AFLS enables field teams to conduct virtual interactions wi
 | `Visit` | Visit record with RecordType = "Remote Visit" |
 | `ProviderVisit` | Provider-specific visit data for remote visits |
 | `Event` | Calendar event linked to the remote visit |
-| `ProviderVisitPrdDetailing` | Product detailing during remote visits |
+| `ProviderVisitProdDetailing` | Product detailing during remote visits |
 | `ProviderVisitProdDiscussion` | Product discussions during remote visits |
 
 ## Configuration
@@ -95,7 +95,7 @@ Same as standard Visit Management — Visit, ProviderVisit, and related objects 
 2. At scheduled time, rep opens video call
    └── Presents content, discusses products
 3. During/after call, rep logs visit details
-   ├── Products detailed (ProviderVisitPrdDetailing)
+   ├── Products detailed (ProviderVisitProdDetailing)
    ├── Discussions (ProviderVisitProdDiscussion)
    ├── Attendees
    └── Notes
