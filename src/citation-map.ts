@@ -40,9 +40,25 @@ export const citationMap: Record<string, CitationInfo> = {
       category: "Exercise",
     },
 
-  // ── Troubleshooting (1 file) ────────────────────────────────────────
+  // ── Troubleshooting ─────────────────────────────────────────────────
   "common-issues": {
     label: "Common Issues and Troubleshooting",
+    category: "Troubleshooting",
+  },
+  "implementation-anti-patterns": {
+    label: "AFLS Implementation Anti-Patterns — Field-Observed Lessons",
+    category: "Troubleshooting",
+  },
+  "visit-troubleshooting": {
+    label: "Visit Management — Troubleshooting",
+    category: "Troubleshooting",
+  },
+  "sample-troubleshooting": {
+    label: "Sample Management — Troubleshooting",
+    category: "Troubleshooting",
+  },
+  "territory-troubleshooting": {
+    label: "Territory Alignment — Troubleshooting",
     category: "Troubleshooting",
   },
 };
