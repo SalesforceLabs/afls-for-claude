@@ -62,8 +62,30 @@ DB Schema records are `LifeSciConfigRecord` / `LifeSciConfigFieldValue` entries 
 - `run_soql`, `get_record`, `describe_sobject`, or ANY standard SOQL/record tool
 - The following objects DO NOT EXIST in standard SOQL: `LifeSciConfigRecord`, `LifeSciConfigFieldValue`, `LifeSciConfigCategory`, `DbSchema__c`, `DbSchema__mdt`
 
-**CORRECT field names:** `SObject`, `Type`, `WhereSoql`, `DeltaDateField`, `OneWaySync`, `AttachmentsSupport`, `MandatoryFields`.
+**CORRECT field names:** `SObject`, `Type`, `WhereSoql`, `DeltaDateField`, `OneWaySync`, `AttachmentsSupport`, `MandatoryFields`, `PermissionSets`, `EnableDataUploadNotification`, `Status`, `SobjectPlatformEvents`, `Errors`, `Category`.
 **WRONG field names (DO NOT USE):** `EntityType`, `SOQLFilterCondition`, `DeltaSyncDateField`, `WebToMobileSync`, `AttachmentDownloadMethod`.
+
+### Field Reference
+
+| Field | Type | Purpose |
+|-------|------|---------|
+| `SObject` | OBJECT | API name of the object to sync |
+| `Type` | PICKLIST | `DATA` (synced records) or `CONFIGURATION` (metadata-like records) |
+| `WhereSoql` | LONGTEXT | WHERE-clause filter (see SOQL Filter Rules below) |
+| `DeltaDateField` | FIELD | Field used for delta/incremental sync (default `LastModifiedDate`) |
+| `OneWaySync` | BOOLEAN | `true` = web→mobile only. **Disables offline edit/DCR** for the object — see Critical Behaviors |
+| `AttachmentsSupport` | PICKLIST | `CACHE` (during sync), `BACKGROUND` (after sync), or empty (none) |
+| `MandatoryFields` | LONGTEXT | Comma-separated fields that must always sync |
+| `PermissionSets` | LONGTEXT | **Semicolon-delimited permission set API names** that gate sync (in addition to profile assignments). The mobile app syncs the object for users holding any listed permission set. Set via the `permissionSets` param on `create_db_schema`/`update_db_schema` |
+| `EnableDataUploadNotification` | BOOLEAN | Whether the app surfaces a data-upload notification for this object |
+| `Status` | PICKLIST | Validity status of the record (e.g., `VALID`) |
+| `SobjectPlatformEvents` | — | Platform-event configuration for the object |
+| `Errors` | — | Validation/generation errors recorded against the record |
+
+### Critical Behaviors (warn the user about these)
+
+- **Disabling a DB Schema record is destructive to local iPad data.** `toggle_db_schema({ active: false })` (or removing the record) is not just a visibility toggle — on each device's next sync the app runs `DELETE FROM <table>` for objects no longer in the metadata, **wiping all locally cached records for that object** and any unsynced offline edits. Re-enabling re-syncs from the server, but local-only data does not come back. Only disable when you intend to remove the object from mobile.
+- **`OneWaySync = true` disables offline edit / DCR for the object.** One-way (web→mobile) objects get no offline-tracking columns and are treated as unsyncable for edits — so Data Change Requests and any offline modifications to that object will silently fail. Only use `OneWaySync` for read-only or platform-event-style reference data.
 
 ### SOQL Filter Rules (WhereSoql)
 - Enter **only the WHERE clause** — no `SELECT`, `FROM`, or `WHERE` keyword

@@ -76,6 +76,23 @@ Custom scripts are headless LWC components deployed to the org. The platform sto
 
 ---
 
+## Two Runtimes: Web vs. iPad (Locker Service vs. JavaScriptCore)
+
+The same `CodeText` script runs in two completely different JavaScript engines depending on platform:
+
+| | Web (Lightning) | iPad (AFLS Mobile) |
+|---|---|---|
+| Engine | Browser + **Locker Service** (WKWebView-style sandbox) | Native **JavaScriptCore** (`JSContext`) — no Locker Service |
+| Globals (`record`, `user`, `db`, `env`) | Locker Service secure proxies | Native Swift objects bridged via JSExport |
+| Return values | Wrapped in Locker Service **Proxy** objects | Bridged native objects (not Locker proxies) |
+| Where `env.log()` / `console.log` goes | Browser devtools console | **Device logs** (Console.app / Xcode device console) — NOT a browser console |
+
+**Why this matters:**
+- The `unwrapProxy(results)` requirement (gotcha #2) exists to strip **Locker Service** proxies on web. On iPad there is no Locker Service, but `JSON.parse(JSON.stringify(results))` is still the correct way to return plain data across the JavaScriptCore bridge — keep it for both platforms.
+- When debugging, look in the **browser console on web** and in **device logs on iPad**. A script that "works on web but not on iPad" usually differs because of the engine/bridge, not the logic — check the runtime before rewriting the validation.
+
+---
+
 ## Confirmed Working IIFE Pattern (Visit Action Validation)
 
 All Visit Action Validation scripts must follow this pattern. **Do not deviate.**
@@ -296,7 +313,13 @@ if (!accountId) {
 
 ## Available Classes
 
-`ConditionBuilder`, `FieldCondition`, `SetCondition`, `AndCondition`, `OrCondition`, `GroupCondition`, `DateFieldCondition`, `DateTimeFieldCondition`
+Injected globals (confirmed against `businessRuleValidator/objectInitialization.js`):
+
+`ConditionBuilder`, `ConditionBuilder_noNs`, `ConditionEnhancedBuilder`, `ConditionEnhancedBuilder_noNs`, `Query`, `SetCondition`, `SetCondition_noNs`, `FieldCondition`, `FieldCondition_noNs`, `DateFieldCondition`, `DateFieldCondition_noNs`, `DateTimeFieldCondition`, `DateTimeFieldCondition_noNs`, `AndCondition`, `OrCondition`, `enableAccessErrors`
+
+- Every builder/condition class has a `_noNs` variant for accessing custom (`__c`) fields without the managed-package namespace prefix — use the `_noNs` form when working with custom fields (mirrors the `noNs_stringValue` pattern for `db.query` results).
+- `Query` is the query builder; `enableAccessErrors` surfaces field-access errors instead of silently returning null.
+- **`GroupCondition` is NOT injected** — it is an internal base class, not available to scripts. Do not reference it.
 
 ## Output Format
 
@@ -318,7 +341,7 @@ When helping users write or debug custom scripts, **always warn about these**:
 
 1. **No comment blocks before the IIFE.** JSDoc or multi-line comment blocks (`/** ... */`) before `(() => {` cause Locker Service to silently fail — the platform shows a generic error with zero console output. Put comments inside the IIFE only.
 
-2. **Proxy wrapping breaks results.** Return values get wrapped in Locker Service Proxy objects. `translateValidationResults` cannot read Proxy-wrapped results. **Always call `unwrapProxy(results)`** (`JSON.parse(JSON.stringify(results))`) before returning. Without this, the platform silently allows the visit through.
+2. **Proxy wrapping breaks results.** On **web**, return values get wrapped in Locker Service Proxy objects and `translateValidationResults` cannot read them. **Always call `unwrapProxy(results)`** (`JSON.parse(JSON.stringify(results))`) before returning. Without this, the platform silently allows the visit through. (iPad runs in native JavaScriptCore with no Locker Service — but `unwrapProxy` is still required to return plain data across the bridge. See "Two Runtimes" above.)
 
 3. **Large scripts crash silently.** If a script is too large, Locker Service fails to evaluate it. Keep scripts small and focused.
 
@@ -330,7 +353,7 @@ When helping users write or debug custom scripts, **always warn about these**:
 
 7. **Product messages are nested.** `ProviderVisitDtlProductMsg` is NOT a top-level context key. Access via `detailRecord['ProviderVisitDtlProductMsg.VisitId']`.
 
-8. **Use `env.log()` for debugging.** Add `env.log('scriptName - message')` calls to trace execution in the browser console. This is the only way to debug custom scripts.
+8. **Use `env.log()` for debugging.** Add `env.log('scriptName - message')` calls to trace execution. Output goes to the **browser console on web** and to **device logs on iPad** (JavaScriptCore has no browser console). This is the only way to debug custom scripts.
 
 9. **Guard globals.** Always wrap execution in `if (record && user && env && db)`.
 
@@ -416,7 +439,7 @@ If the user wants to create a new validation script:
 |---------|-------------------|
 | `LifeScienceCustomScript` | `CustomScript__c`, `LifeSciCustomScript` |
 | `ProviderVisit` | `ProviderVisit__c`, `Visit__c` |
-| `ProviderVisitPrdDetailing` | `ProviderVisitProductDetailing__c` |
+| `ProviderVisitProdDetailing` | `ProviderVisitProductDetailing__c` |
 | `ProductDisbursement` | `SampleDrop__c` |
 | `ProductItem` | `InventoryItem__c` |
 | `Product2` | `SampleProduct__c` |

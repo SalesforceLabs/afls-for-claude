@@ -233,7 +233,7 @@ After all settings are saved, regenerate the cache for affected profiles:
 - Alignment: ⚠️  MISMATCHED — "Remote Visit" missing from ProviderVisit
 
 ### Product Detailing
-- ProviderVisitPrdDetailing records: 847
+- ProviderVisitProdDetailing records: 847
 - ProviderVisitProdDiscussion records: 312
 - Status: ✓ Configured
 

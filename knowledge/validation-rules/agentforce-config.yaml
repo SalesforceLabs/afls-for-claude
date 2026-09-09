@@ -373,7 +373,7 @@ rules:
     description: |
       Checks whether Product2 records exist. Product data is required for
       voice-based visit logging to parse product discussions and create
-      ProviderVisitPrdDetailing records. Without product data, the agent
+      ProviderVisitProdDetailing records. Without product data, the agent
       cannot recognize product names in natural language input.
     category: data-context
     severity: info

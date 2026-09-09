@@ -207,7 +207,36 @@ MyPresentation.zip
     └── doc_000003/         ← Assets for page 3
 ```
 
-The numeric prefix (`01_`, `02_`, etc.) determines page ordering in the CLM player.
+The numeric prefix (`01_`, `02_`, etc.) determines page ordering in the CLM player **when no manifest is present**.
+
+### Optional `content.json` Manifest (explicit order + titles)
+
+A multi-page zip may include a `content.json` at its root to control slide **order and titles** independently of filename sort. It is a JSON array, one entry per slide:
+
+```json
+[
+  { "title": "Slide 1", "thumbnail": "01_thumbnail.jpg", "path": "01_firstSlide.html" },
+  { "title": "Efficacy Data", "thumbnail": "02_thumbnail.jpg", "path": "02_secondSlide.html" }
+]
+```
+
+- `path` — the slide's HTML filename within the zip
+- `thumbnail` — the slide's thumbnail image
+- `title` — the display title (independent of the filename)
+
+When `content.json` is present, its array order wins over the numeric-prefix sort. When absent, the player falls back to the `NN_` numeric-prefix ordering described above. If slides appear in the wrong order or show filename-derived titles, add or fix `content.json`.
+
+### Dynamic Content — Mustache Templating
+
+Slides can render dynamic values at runtime using Mustache. Mark a container with `data-tpl="mustache"` and use `{{variable}}` placeholders inside it:
+
+```html
+<div data-tpl="mustache" class="item-list">
+  <div>Presentation Index: {{presentationindex}}</div>
+</div>
+```
+
+Available context includes values like `territory`, `user`, `mngEvent`, and `presentationindex`. Use this for content that must reflect the current rep, territory, event, or slide position. If `{{...}}` renders literally instead of substituting, the container is missing `data-tpl="mustache"`.
 
 ### Navigating Within a Multi-Page Zip
 
@@ -239,6 +268,9 @@ When migrating content from Veeva CRM CLM to AFLS Intelligent Content:
 | "Content could not load" | JavaScript shim overwriting `PresentationPlayer` before native bridge loads | Never define `PresentationPlayer` in your code; patch navigation logic in the app JS instead |
 | Navigation works in Veeva but not AFLS | Using `com.veeva.clm` API which doesn't exist in AFLS | Replace all Veeva API calls with `PresentationPlayer` equivalents |
 | Nav buttons do nothing | Navigation code in wrong branch (e.g., fix in `if(presentation)` but buttons call without presentation param) | Ensure the fix is in the code path that actually executes for nav button clicks |
+| Presentation shows blank / images missing on iPad | Offline caching issue, not authoring. The player serves assets from IndexedDB via a **service worker** (`content-sw.js`); if the worker didn't register or the cache didn't populate, assets 404 offline even though the content is valid | Re-sync the device, confirm the presentation fully downloaded, and reload. Suspect the service worker / offline cache before editing slide content — a slide that renders online but blanks offline is almost always a caching problem |
+| Slides in wrong order or wrong titles | Missing/incorrect `content.json`, or reliance on filename order when a manifest exists | Add or correct `content.json` (see Optional Manifest above), or fix the `NN_` numeric prefixes |
+| `{{variable}}` shows literally | Container missing `data-tpl="mustache"` | Wrap dynamic content in `<div data-tpl="mustache">…</div>` |
 
 ---
 

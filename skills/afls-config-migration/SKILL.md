@@ -68,6 +68,17 @@ You can also skip the file and diff two live orgs directly by passing
 - Old v1.0 snapshots (no per-field DataType) still import — types are inferred,
   reliably for DB Schema and best-effort elsewhere. Prefer re-exporting at v1.1.
 
+## Deploy sequencing: inactive first, then activate
+
+When promoting LifeSciConfig + trigger-handler-dependent metadata via a raw
+metadata deploy (outside this skill's export/import flow), deploy in **two
+passes — deploy the config as inactive first, then activate it** — so that
+triggers/automation don't fire against partially-deployed configuration and
+leave the org in an inconsistent state. This is the ordering AFLS's own setup
+scripts use (a `1_inactive` deploy followed by a `2_activate` deploy, then the
+trigger-handler activation step). It generalizes to any config whose activation
+kicks off automation.
+
 ## Related
 
 - `/afls:export-config`, `/afls:import-config`, `/afls:diff-orgs`

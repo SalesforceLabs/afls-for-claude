@@ -1130,6 +1130,10 @@ export function register(server: McpServer) {
             if (errorLog) {
               message += `- **Error Log:**\n\`\`\`\n${errorLog}\n\`\`\`\n`;
             }
+            const combinedError = `${errorCode} ${errorMsg} ${errorLog}`.toUpperCase();
+            if (combinedError.includes("EXCEEDED_ID_LIMIT")) {
+              message += `- **Diagnosis:** \`EXCEEDED_ID_LIMIT\` during cache generation is a **known large-org limitation**, not a configuration error. The metadata service fetches field-definition labels in a batch that overflows on orgs with many sobjects/fields (FieldDefinition does not support pagination). This is fixed in newer package versions via chunked label fetching. **Action:** upgrade the AFLS managed package to the latest version; do not attempt to "fix" DB Schema or field configuration in response to this error.\n`;
+            }
             if (!errorCode && !errorMsg && !errorLog && status === "Inactive") {
               message += `- **Note:** Record is inactive with no error details. It may need to be regenerated.\n`;
             }
