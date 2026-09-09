@@ -32,11 +32,11 @@ describe("citation-map.ts", () => {
       expect(exercises.length).toBe(2);
     });
 
-    it("has 1 Troubleshooting entry", () => {
+    it("has 5 Troubleshooting entries", () => {
       const trouble = Object.values(citationMap).filter(
         (e) => e.category === "Troubleshooting",
       );
-      expect(trouble.length).toBe(1);
+      expect(trouble.length).toBe(5);
     });
 
     it("all Official Help entries have URLs", () => {

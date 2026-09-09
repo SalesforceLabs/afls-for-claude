@@ -116,11 +116,12 @@ Select `salesforce-docs` and enable/reconnect it, then restart the session if ne
 
 ## Skills (Auto-Invoked)
 
-Claude automatically activates the right skill based on what you're asking about. Skills are thin routing layers (60–200 lines) that direct Claude to call MCP tools for sourced documentation — they don't embed knowledge inline. There are 30 skills covering every major AFLS module:
+Claude automatically activates the right skill based on what you're asking about. Skills are thin routing layers (60–200 lines) that direct Claude to call MCP tools for sourced documentation — they don't embed knowledge inline. There are 36 skills covering every major AFLS module:
 
 | Skill | Description |
 |-------|-------------|
 | `afls-implementation` | Guides module implementations with best practices |
+| `afls-implementation-review` | Reviews a design against field-observed anti-patterns and flags known-bad decisions before go-live |
 | `afls-troubleshoot` | Diagnoses and resolves AFLS issues |
 | `afls-mobile-validation` | Validates mobile app configuration (DB Schema, sync settings) |
 | `afls-mobile-app-settings` | Manages mobile Application Settings (browser, password, search, notifications) |
@@ -707,7 +708,7 @@ The plugin includes skills, documentation, and validation rules for all major AF
 │  │              AFLS-for-Claude (Plugin)                     │ │
 │  ├─────────────────────────────────────────────────────────┤ │
 │  │                                                          │ │
-│  │  30 Skills (routing)       │  24 Commands (/afls:*)      │ │
+│  │  36 Skills (routing)       │  24 Commands (/afls:*)      │ │
 │  │  • Thin tool delegation   │  • /afls:setup-plugin       │ │
 │  │  • Object name guardrails │  • /afls:soql-query         │ │
 │  │  • Config mode workflows  │  • /afls:audit              │ │
