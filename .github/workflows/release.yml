@@ -22,6 +22,13 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Verify version matches tag
+        # Lockstep guard: the tag must equal the version in package.json,
+        # plugin.json, and marketplace.json. Fail fast before the long build.
+        env:
+          TAG: ${{ github.ref_name }}
+        run: node scripts/check-version.mjs "$TAG"
+
       - name: Install dependencies
         run: npm ci
 
