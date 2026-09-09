@@ -13,6 +13,19 @@ interface SettingsPanelProps {
   onDisconnect: () => void;
 }
 
+function providerLabel(providerType: string): string {
+  switch (providerType) {
+    case "api-key":
+      return "Anthropic API Key";
+    case "bedrock-gateway":
+      return "Bedrock / custom gateway";
+    case "sf-gateway":
+      return "Salesforce LLM Gateway";
+    default:
+      return "Not connected";
+  }
+}
+
 export default function SettingsPanel({
   onClose,
   onDisconnect,
@@ -47,7 +60,7 @@ export default function SettingsPanel({
   useEffect(() => {
     window.aflsApi.getSettings().then((s) => {
       if (s.providerType) setProviderType(s.providerType);
-      setModel(s.model || "claude-sonnet-4-5-20250929");
+      setModel(s.model || "claude-sonnet-5");
       if (s.sfTargetOrg) setSelectedOrg(s.sfTargetOrg);
     });
     fetchOrgs();
@@ -82,7 +95,7 @@ export default function SettingsPanel({
           <label>Connected via</label>
           <input
             type="text"
-            value={providerType === "api-key" ? "Anthropic API Key" : "Salesforce LLM Gateway"}
+            value={providerLabel(providerType)}
             readOnly
             style={{ opacity: 0.7 }}
           />
@@ -191,10 +204,10 @@ export default function SettingsPanel({
           <label>Model</label>
           <select value={model} onChange={(e) => setModel(e.target.value)}>
             <>
-              <option value="claude-sonnet-4-5-20250929">Claude Sonnet 4.5</option>
-              <option value="claude-opus-4-6-v1">Claude Opus 4.6</option>
-              <option value="claude-sonnet-4-20250514">Claude Sonnet 4</option>
+              <option value="claude-opus-5">Claude Opus 5</option>
+              <option value="claude-sonnet-5">Claude Sonnet 5</option>
               <option value="claude-haiku-4-5-20251001">Claude Haiku 4.5</option>
+              <option value="claude-fable-5-1">Claude Fable 5.1</option>
             </>
           </select>
         </div>

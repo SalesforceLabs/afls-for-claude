@@ -638,25 +638,17 @@ type DocPanelState = {
 };
 const docPanelStates = new Map<string, DocPanelState>();
 
+const CLAUDE_5_MODELS: Array<{ value: string; label: string }> = [
+  { value: "claude-opus-5", label: "Opus 5" },
+  { value: "claude-sonnet-5", label: "Sonnet 5" },
+  { value: "claude-haiku-4-5-20251001", label: "Haiku 4.5" },
+  { value: "claude-fable-5-1", label: "Fable 5.1" },
+];
+
 const MODELS_BY_PROVIDER: Record<string, Array<{ value: string; label: string }>> = {
-  "bedrock-gateway": [
-    { value: "claude-opus-4-6-v1", label: "Opus 4.6" },
-    { value: "claude-sonnet-4-5-20250929", label: "Sonnet 4.5" },
-    { value: "claude-sonnet-4-20250514", label: "Sonnet 4" },
-    { value: "claude-haiku-4-5-20251001", label: "Haiku 4.5" },
-  ],
-  "api-key": [
-    { value: "claude-opus-4-6-v1", label: "Opus 4.6" },
-    { value: "claude-sonnet-4-5-20250929", label: "Sonnet 4.5" },
-    { value: "claude-sonnet-4-20250514", label: "Sonnet 4" },
-    { value: "claude-haiku-4-5-20251001", label: "Haiku 4.5" },
-  ],
-  "sf-gateway": [
-    { value: "claude-opus-4-6-v1", label: "Opus 4.6" },
-    { value: "claude-sonnet-4-5-20250929", label: "Sonnet 4.5" },
-    { value: "claude-sonnet-4-20250514", label: "Sonnet 4" },
-    { value: "claude-haiku-4-5-20251001", label: "Haiku 4.5" },
-  ],
+  "bedrock-gateway": CLAUDE_5_MODELS,
+  "api-key": CLAUDE_5_MODELS,
+  "sf-gateway": CLAUDE_5_MODELS,
 };
 
 function getModelOptions(providerType?: string) {

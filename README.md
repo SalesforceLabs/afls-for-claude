@@ -87,6 +87,42 @@ To check status or enable it, run:
 
 Select `salesforce-docs` and enable/reconnect it, then restart the session if needed. The server requires no API keys or authentication — if it still won't connect, confirm you're on Claude Code 1.0.33+ (remote MCP support) and that `https://salesforce-docs-76258744c9d7.herokuapp.com/api/mcp` is reachable from your network.
 
+## Desktop App (AFLS Assistant)
+
+The plugin ships an optional **AFLS Assistant** desktop app — a standalone chat UI (Electron + React) backed by the same knowledge base, skills, and Salesforce org tools as the plugin. Use it when you want a dedicated window with conversation history, a saved-answer library, and inline Mermaid/PDF rendering, outside of Claude Code.
+
+### Launch it
+
+From inside Claude Code:
+
+```
+/afls:launch-app
+```
+
+This builds the app from source on first run (installs dependencies, compiles the MCP server + Electron bundles, rebuilds native modules) and then opens the window. It's idempotent — subsequent runs just relaunch. **Prerequisites:** Node.js 18+ and npm. No downloads or code signing are involved.
+
+You can also run it directly:
+
+```bash
+bash scripts/launch-electron-app.sh
+# or, for development with hot reload:
+npm run electron:dev
+```
+
+### First-run onboarding
+
+The first time the app opens, it asks how to connect to Claude:
+
+- **Anthropic API key** — paste an `sk-ant-…` key from [console.anthropic.com](https://console.anthropic.com/settings/keys). Stored locally; only sent to Anthropic.
+- **Bedrock / custom gateway** — a base URL for any Anthropic-compatible endpoint (e.g. an Amazon Bedrock proxy or internal LLM gateway) plus an API key/token (sent as `x-api-key`).
+
+If you already have `ANTHROPIC_API_KEY`, or `ANTHROPIC_AUTH_TOKEN` + `ANTHROPIC_BEDROCK_BASE_URL`, set in your environment, the app auto-detects them and connects without prompting. You can switch providers or Salesforce orgs later from **Settings**.
+
+### Troubleshooting
+
+- **Window never appears / native module error:** the build log is at `$TMPDIR/afls-assistant.log`. The usual fix is rebuilding the SQLite native module for Electron: `npx @electron/rebuild -f -w better-sqlite3`.
+- **Rebuild everything:** `AFLS_FORCE_BUILD=1 bash scripts/launch-electron-app.sh`.
+
 ## Commands
 
 | Command | Description |
@@ -115,6 +151,7 @@ Select `salesforce-docs` and enable/reconnect it, then restart the session if ne
 | `/afls:import-config` | Import AFLS configuration from JSON export |
 | `/afls:status` | Dashboard view of the connected AFLS org |
 | `/afls:getting-started` | Interactive onboarding and capability discovery |
+| `/afls:launch-app` | Build and launch the AFLS Assistant desktop app |
 
 ## Skills (Auto-Invoked)
 

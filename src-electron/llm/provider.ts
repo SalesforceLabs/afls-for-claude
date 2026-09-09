@@ -49,4 +49,4 @@ export interface LLMProvider {
   validateCredentials(): Promise<boolean>;
 }
 
-export type ProviderType = "api-key" | "sf-gateway";
+export type ProviderType = "api-key" | "bedrock-gateway" | "sf-gateway";
