@@ -86,7 +86,6 @@ Re-run the checks from Step 1 to confirm everything is configured correctly.
 | `Presentation` | `Presentation__c`, `CLMContent__c`, `CLMPresentation__c` |
 | `PresentationPage` | `PresentationSlide__c`, `PresentationContent__c` |
 | `PresentationShare` | — |
-| `PresentationPageContent` | — |
 | `PresentationPageProduct` | — |
 | `LifeSciPresEvent` | `PresentationEvent__c`, `PresentationTracking__c` |
 | `Topic` | — |
