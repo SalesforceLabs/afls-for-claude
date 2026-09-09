@@ -75212,9 +75212,25 @@ var citationMap = {
     label: "Partner Enablement Hands-On Exercises \u2014 Day 2 Field Sales Rep",
     category: "Exercise"
   },
-  // ── Troubleshooting (1 file) ────────────────────────────────────────
+  // ── Troubleshooting ─────────────────────────────────────────────────
   "common-issues": {
     label: "Common Issues and Troubleshooting",
+    category: "Troubleshooting"
+  },
+  "implementation-anti-patterns": {
+    label: "AFLS Implementation Anti-Patterns \u2014 Field-Observed Lessons",
+    category: "Troubleshooting"
+  },
+  "visit-troubleshooting": {
+    label: "Visit Management \u2014 Troubleshooting",
+    category: "Troubleshooting"
+  },
+  "sample-troubleshooting": {
+    label: "Sample Management \u2014 Troubleshooting",
+    category: "Troubleshooting"
+  },
+  "territory-troubleshooting": {
+    label: "Territory Alignment \u2014 Troubleshooting",
     category: "Troubleshooting"
   }
 };
@@ -75623,9 +75639,7 @@ function loadGuideManifests() {
     const manifestPath = join(GUIDES_PATH, entry.name, "_manifest.json");
     if (!existsSync(manifestPath)) continue;
     try {
-      const manifest = JSON.parse(
-        readFileSync(manifestPath, "utf-8")
-      );
+      const manifest = JSON.parse(readFileSync(manifestPath, "utf-8"));
       manifestCache.set(manifest.guideSlug, manifest);
     } catch {
     }
@@ -75695,9 +75709,7 @@ function slugToTitle(slug) {
   return slug.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 }
 function loadModuleContent(modulePath) {
-  const files = readdirSync2(modulePath).filter(
-    (f) => f.endsWith(".md") && f !== "_index.md"
-  );
+  const files = readdirSync2(modulePath).filter((f) => f.endsWith(".md") && f !== "_index.md");
   let content = "";
   for (const file of files) {
     const filePath = join2(modulePath, file);
@@ -75718,9 +75730,7 @@ function getModuleList() {
   const moduleDirs = readdirSync2(KNOWLEDGE_BASE_PATH, { withFileTypes: true }).filter((dirent) => dirent.isDirectory()).map((dirent) => dirent.name);
   return moduleDirs.map((slug) => {
     const modulePath = join2(KNOWLEDGE_BASE_PATH, slug);
-    const files = readdirSync2(modulePath).filter(
-      (f) => f.endsWith(".md") && f !== "_index.md"
-    );
+    const files = readdirSync2(modulePath).filter((f) => f.endsWith(".md") && f !== "_index.md");
     return {
       slug,
       title: slugToTitle(slug),
@@ -75746,9 +75756,7 @@ function searchKnowledge(query) {
     const moduleDirs = readdirSync2(KNOWLEDGE_BASE_PATH, { withFileTypes: true }).filter((dirent) => dirent.isDirectory()).map((dirent) => dirent.name);
     for (const moduleSlug of moduleDirs) {
       const modulePath = join2(KNOWLEDGE_BASE_PATH, moduleSlug);
-      const files = readdirSync2(modulePath).filter(
-        (f) => f.endsWith(".md") && f !== "_index.md"
-      );
+      const files = readdirSync2(modulePath).filter((f) => f.endsWith(".md") && f !== "_index.md");
       for (const file of files) {
         const filePath = join2(modulePath, file);
         const content = readFileSync2(filePath, "utf-8");
@@ -75784,13 +75792,7 @@ function searchKnowledge(query) {
       pdfFileName: gr.pdfFileName
     });
   }
-  searchDirectory(
-    TROUBLESHOOTING_PATH,
-    queryLower,
-    query.length,
-    "troubleshooting",
-    results
-  );
+  searchDirectory(TROUBLESHOOTING_PATH, queryLower, query.length, "troubleshooting", results);
   results.sort((a, b) => {
     const aTitle = a.title.toLowerCase().includes(queryLower) ? 1 : 0;
     const bTitle = b.title.toLowerCase().includes(queryLower) ? 1 : 0;
@@ -75952,7 +75954,9 @@ function getGuideSectionCitations(topic, max = 3) {
     const guideLabel = r.guideSlug === "admin-guide" ? "Admin Guide" : "Developer Guide";
     const sectionUrl = `afls-section://${r.guideSlug}/${r.sectionSlug}?page=${r.matchPage}&highlight=${encodeURIComponent(topic)}`;
     const pdfUrl = `afls-pdf://${r.pdfFileName}?page=${r.matchPage}`;
-    lines.push(`> **${guideLabel}:** [${r.sectionTitle}, page ${r.matchPage}](${sectionUrl}) | [Open PDF](${pdfUrl})`);
+    lines.push(
+      `> **${guideLabel}:** [${r.sectionTitle}, page ${r.matchPage}](${sectionUrl}) | [Open PDF](${pdfUrl})`
+    );
   }
   block += lines.join("\n>\n");
   return block;
@@ -76061,7 +76065,9 @@ ${r.excerpt}`;
           const guideLabel = r.guideSlug === "admin-guide" ? "Admin Guide" : "Developer Guide";
           const sectionUrl = `afls-section://${r.guideSlug}/${r.sectionSlug}?page=${r.matchPage || r.startPage}&highlight=${encodeURIComponent(query)}`;
           const pdfUrl = `afls-pdf://${r.pdfFileName}?page=${r.matchPage || r.startPage}`;
-          citations.push(`> **${guideLabel}:** [${r.title}, page ${r.matchPage || r.startPage}](${sectionUrl}) | [Open PDF](${pdfUrl})`);
+          citations.push(
+            `> **${guideLabel}:** [${r.title}, page ${r.matchPage || r.startPage}](${sectionUrl}) | [Open PDF](${pdfUrl})`
+          );
         } else if (r.sourceFile) {
           const info = r.source === "modules" ? formatCitation(r.sourceFile, r.module) : formatCitation(r.sourceFile);
           if (info) citations.push(info.trim());
@@ -76115,7 +76121,10 @@ This concept may not be covered in the current knowledge base, or try a differen
       }
       const topResult = results[0];
       const moduleContent = getModuleContent(topResult.module);
-      const citation = topResult.sourceFile ? formatCitation(topResult.sourceFile, topResult.source === "modules" ? topResult.module : void 0) : formatCitation(topResult.module, topResult.module);
+      const citation = topResult.sourceFile ? formatCitation(
+        topResult.sourceFile,
+        topResult.source === "modules" ? topResult.module : void 0
+      ) : formatCitation(topResult.module, topResult.module);
       const guideCitations = getGuideSectionCitations(concept);
       return {
         content: [
@@ -76302,9 +76311,7 @@ Available guides: ${slugList || "none"}`
     "get_afls_troubleshooting",
     "Get AFLS troubleshooting documentation including common issues and their resolutions",
     {
-      topic: external_exports.string().optional().describe(
-        "Optional: specific troubleshooting topic slug. Defaults to common-issues."
-      )
+      topic: external_exports.string().optional().describe("Optional: specific troubleshooting topic slug. Defaults to common-issues.")
     },
     async ({ topic }) => {
       const slug = topic || "common-issues";
@@ -76589,11 +76596,9 @@ async function deleteToolingRecord(objectName, recordId, targetOrg) {
   return apiRequest(endpoint, "DELETE", void 0, targetOrg);
 }
 async function describeSObject(objectName, targetOrg) {
-  return execSfCommand(
-    "sobject",
-    ["describe", "--sobject", objectName],
-    { targetOrg }
-  );
+  return execSfCommand("sobject", ["describe", "--sobject", objectName], {
+    targetOrg
+  });
 }
 async function getRecord(objectName, recordId, fields, targetOrg) {
   return execSfCommand(
@@ -76623,16 +76628,7 @@ async function updateRecord(objectName, recordId, values, targetOrg) {
   const valuesStr = Object.entries(values).map(([k, v]) => `${k}="${v}"`).join(" ");
   return execSfCommand(
     "data",
-    [
-      "update",
-      "record",
-      "--sobject",
-      objectName,
-      "--record-id",
-      recordId,
-      "--values",
-      valuesStr
-    ],
+    ["update", "record", "--sobject", objectName, "--record-id", recordId, "--values", valuesStr],
     { targetOrg }
   );
 }
@@ -76645,11 +76641,11 @@ async function deleteRecord(objectName, recordId, targetOrg) {
 }
 async function deployMetadata(sourcePath, targetOrg) {
   const cwd = ensureTmpSfdxProject();
-  return execSfCommand(
-    "project",
-    ["deploy", "start", "--source-dir", sourcePath],
-    { targetOrg, timeout: 3e5, cwd }
-  );
+  return execSfCommand("project", ["deploy", "start", "--source-dir", sourcePath], {
+    targetOrg,
+    timeout: 3e5,
+    cwd
+  });
 }
 async function retrieveMetadata(_targetPath, metadata, targetOrg) {
   const projectDir = ensureTmpSfdxProject();
@@ -76749,7 +76745,9 @@ async function apiRequest(endpoint, method, body, targetOrg) {
           }
         }
         if (errorMessage === "Unknown error") {
-          const filteredStderr = stderr.split("\n").filter((line) => !line.includes("beta") && !line.includes("Warning") && line.trim()).join("\n").trim();
+          const filteredStderr = stderr.split("\n").filter(
+            (line) => !line.includes("beta") && !line.includes("Warning") && line.trim()
+          ).join("\n").trim();
           errorMessage = filteredStderr || "Unknown error";
         }
         resolve({
@@ -76896,7 +76894,8 @@ async function createBulkPresentation(payload, targetOrg) {
   if (payload.activationDate) presentation.activationDate = payload.activationDate;
   if (payload.deactivationDate) presentation.deactivationDate = payload.deactivationDate;
   if (payload.playerGesture) presentation.playerGesture = payload.playerGesture;
-  if (payload.enableDoubleTapZoom !== void 0) presentation.enableDoubleTapZoom = payload.enableDoubleTapZoom;
+  if (payload.enableDoubleTapZoom !== void 0)
+    presentation.enableDoubleTapZoom = payload.enableDoubleTapZoom;
   if (payload.enablePinchZoom !== void 0) presentation.enablePinchZoom = payload.enablePinchZoom;
   if (payload.topics && payload.topics.length > 0) presentation.topics = payload.topics;
   if (payload.sendByEmail !== void 0) presentation.sendByEmail = payload.sendByEmail;
@@ -76916,11 +76915,9 @@ async function openOrg(targetOrg, pagePath) {
   if (pagePath) {
     args.push("--path", pagePath);
   }
-  return execSfCommand(
-    "org",
-    args,
-    { targetOrg }
-  );
+  return execSfCommand("org", args, {
+    targetOrg
+  });
 }
 
 // src/salesforce/auth.ts
@@ -77083,9 +77080,7 @@ async function validateOrgConnection() {
   }
   const targetOrg = await getEffectiveTargetOrg();
   if (!targetOrg) {
-    const orgNames = status.orgs.map(
-      (o) => o.alias || o.username
-    );
+    const orgNames = status.orgs.map((o) => o.alias || o.username);
     return {
       valid: false,
       error: `No target org selected. Multiple orgs available: ${orgNames.join(", ")}. Ask the user ONCE which org to use, then call set_target_org. The choice persists for the entire session \u2014 do not ask again.`,
@@ -77219,43 +77214,36 @@ ${result.error}
       }
     }
   );
-  server2.tool(
-    "list_sf_orgs",
-    "List all authenticated Salesforce orgs",
-    {},
-    async () => {
-      const isInstalled = await isSfCliInstalled();
-      if (!isInstalled) {
-        return {
-          content: [
-            {
-              type: "text",
-              text: "Salesforce CLI is not installed. Run `check_afls_setup` for installation instructions."
-            }
-          ]
-        };
-      }
-      const result = await listOrgs();
-      if (!result.success) {
-        return {
-          content: [
-            {
-              type: "text",
-              text: `Failed to list orgs: ${result.error}`
-            }
-          ]
-        };
-      }
-      const allOrgs = [
-        ...result.data?.nonScratchOrgs || [],
-        ...result.data?.scratchOrgs || []
-      ];
-      if (allOrgs.length === 0) {
-        return {
-          content: [
-            {
-              type: "text",
-              text: `# No Authenticated Orgs
+  server2.tool("list_sf_orgs", "List all authenticated Salesforce orgs", {}, async () => {
+    const isInstalled = await isSfCliInstalled();
+    if (!isInstalled) {
+      return {
+        content: [
+          {
+            type: "text",
+            text: "Salesforce CLI is not installed. Run `check_afls_setup` for installation instructions."
+          }
+        ]
+      };
+    }
+    const result = await listOrgs();
+    if (!result.success) {
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Failed to list orgs: ${result.error}`
+          }
+        ]
+      };
+    }
+    const allOrgs = [...result.data?.nonScratchOrgs || [], ...result.data?.scratchOrgs || []];
+    if (allOrgs.length === 0) {
+      return {
+        content: [
+          {
+            type: "text",
+            text: `# No Authenticated Orgs
 
 Authenticate to an org using:
 \`\`\`bash
@@ -77266,34 +77254,31 @@ For sandbox:
 \`\`\`bash
 sf org login web --alias my-sandbox --instance-url https://test.salesforce.com
 \`\`\``
-            }
-          ]
-        };
-      }
-      const currentTarget = getTargetOrg();
-      let message = `# Authenticated Orgs
+          }
+        ]
+      };
+    }
+    const currentTarget = getTargetOrg();
+    let message = `# Authenticated Orgs
 
 ${formatOrgList(allOrgs)}
 
 `;
-      if (currentTarget) {
-        message += `**Current Target:** ${currentTarget}
+    if (currentTarget) {
+      message += `**Current Target:** ${currentTarget}
 
 `;
-      }
-      message += `Use \`set_target_org\` to select which org to work with.`;
-      return {
-        content: [{ type: "text", text: message }]
-      };
     }
-  );
+    message += `Use \`set_target_org\` to select which org to work with.`;
+    return {
+      content: [{ type: "text", text: message }]
+    };
+  });
   server2.tool(
     "set_target_org",
     "Set the target Salesforce org for ALL subsequent operations in this session. Once set, the choice is remembered \u2014 do NOT ask the user again or call this tool again unless the user explicitly wants to switch orgs.",
     {
-      org: external_exports.string().describe(
-        "The org alias or username to use as the target for operations"
-      )
+      org: external_exports.string().describe("The org alias or username to use as the target for operations")
     },
     async ({ org }) => {
       const result = await listOrgs();
@@ -77307,13 +77292,8 @@ ${formatOrgList(allOrgs)}
           ]
         };
       }
-      const allOrgs = [
-        ...result.data?.nonScratchOrgs || [],
-        ...result.data?.scratchOrgs || []
-      ];
-      const matchedOrg = allOrgs.find(
-        (o) => o.alias === org || o.username === org
-      );
+      const allOrgs = [...result.data?.nonScratchOrgs || [], ...result.data?.scratchOrgs || []];
+      const matchedOrg = allOrgs.find((o) => o.alias === org || o.username === org);
       if (!matchedOrg) {
         return {
           content: [
@@ -77405,9 +77385,7 @@ ${instructions.command}
     "Execute a SOQL query against the target Salesforce org",
     {
       query: external_exports.string().describe("The SOQL query to execute"),
-      targetOrg: external_exports.string().optional().describe(
-        "Optional: specific org to query. Uses current target org if not specified."
-      )
+      targetOrg: external_exports.string().optional().describe("Optional: specific org to query. Uses current target org if not specified.")
     },
     async ({ query, targetOrg }) => {
       const validation = await validateOrgConnection();
@@ -77493,9 +77471,7 @@ ${query}
     "describe_sobject",
     "Get metadata about a Salesforce object (fields, types, etc.)",
     {
-      objectName: external_exports.string().describe(
-        "The API name of the object (e.g., Account, Contact, Visit__c)"
-      ),
+      objectName: external_exports.string().describe("The API name of the object (e.g., Account, Contact, Visit__c)"),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to query")
     },
     async ({ objectName, targetOrg }) => {
@@ -77704,7 +77680,9 @@ ${result.error}`
 **ID:** ${recordId}
 
 **Updated fields:**
-${Object.entries(values).map(([k, v]) => `- ${k}: ${v}`).join("\n")}`
+${Object.entries(
+              values
+            ).map(([k, v]) => `- ${k}: ${v}`).join("\n")}`
           }
         ]
       };
@@ -78209,16 +78187,22 @@ function register3(server2) {
           if (quickResult.data.records.length === 0) {
             results.push("No quick actions found.\n");
           } else {
-            results.push("| ID | DeveloperName | MasterLabel | Active | Location | Action | Profiles |\n");
-            results.push("|----|---------------|-------------|--------|----------|--------|----------|\n");
+            results.push(
+              "| ID | DeveloperName | MasterLabel | Active | Location | Action | Profiles |\n"
+            );
+            results.push(
+              "|----|---------------|-------------|--------|----------|--------|----------|\n"
+            );
             for (const record2 of quickResult.data.records) {
               const rec = record2;
               const fieldValues = rec.LifeSciConfigFieldValues?.records || [];
               const location = fieldValues.find((f) => f.FieldName === "Location")?.PicklistValue || "-";
               const actionName = fieldValues.find((f) => f.FieldName === "ActionName")?.PicklistValue || "-";
               const profiles = fieldValues.find((f) => f.FieldName === "Profiles")?.TextValue || "-";
-              results.push(`| ${rec.Id} | ${rec.DeveloperName} | ${rec.MasterLabel} | ${rec.IsActive ? "Yes" : "No"} | ${location} | ${actionName} | ${profiles} |
-`);
+              results.push(
+                `| ${rec.Id} | ${rec.DeveloperName} | ${rec.MasterLabel} | ${rec.IsActive ? "Yes" : "No"} | ${location} | ${actionName} | ${profiles} |
+`
+              );
             }
           }
           results.push("\n");
@@ -78240,8 +78224,12 @@ Error: ${quickResult.error}
           if (customResult.data.records.length === 0) {
             results.push("No custom actions found.\n");
           } else {
-            results.push("| ID | DeveloperName | MasterLabel | Active | Entity Type | Action Type | Target | Profiles |\n");
-            results.push("|----|---------------|-------------|--------|-------------|-------------|--------|----------|\n");
+            results.push(
+              "| ID | DeveloperName | MasterLabel | Active | Entity Type | Action Type | Target | Profiles |\n"
+            );
+            results.push(
+              "|----|---------------|-------------|--------|-------------|-------------|--------|----------|\n"
+            );
             for (const record2 of customResult.data.records) {
               const rec = record2;
               const fieldValues = rec.LifeSciConfigFieldValues?.records || [];
@@ -78250,8 +78238,10 @@ Error: ${quickResult.error}
               const actionTarget = fieldValues.find((f) => f.FieldName === "ActionTarget")?.TextValue || "-";
               const profiles = fieldValues.find((f) => f.FieldName === "Profiles")?.TextValue || "-";
               const truncatedTarget = actionTarget && String(actionTarget).length > 30 ? String(actionTarget).substring(0, 30) + "..." : actionTarget;
-              results.push(`| ${rec.Id} | ${rec.DeveloperName} | ${rec.MasterLabel} | ${rec.IsActive ? "Yes" : "No"} | ${entityType} | ${actionType2} | ${truncatedTarget} | ${profiles} |
-`);
+              results.push(
+                `| ${rec.Id} | ${rec.DeveloperName} | ${rec.MasterLabel} | ${rec.IsActive ? "Yes" : "No"} | ${entityType} | ${actionType2} | ${truncatedTarget} | ${profiles} |
+`
+              );
             }
           }
           results.push("\n");
@@ -78274,7 +78264,9 @@ ${results.join("")}` }]
     "delete_afls_action",
     "Delete an AFLS Quick/Custom Action. Accepts a record ID or a MasterLabel/DeveloperName. NEVER use run_soql or delete_record \u2014 they will FAIL.",
     {
-      actionId: external_exports.string().describe("The record ID (from list_afls_actions) OR the MasterLabel/DeveloperName of the action to delete"),
+      actionId: external_exports.string().describe(
+        "The record ID (from list_afls_actions) OR the MasterLabel/DeveloperName of the action to delete"
+      ),
       actionName: external_exports.string().optional().describe("Optional: The action name/label for confirmation message"),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to delete from")
     },
@@ -78343,7 +78335,11 @@ Use \`list_afls_actions\` to see available actions and their IDs.`
         if (fieldValuesQuery.success && fieldValuesQuery.data?.records) {
           for (const fv of fieldValuesQuery.data.records) {
             const fvId = fv.Id;
-            const deleteResult2 = await deleteToolingRecord("LifeSciConfigFieldValue", fvId, effectiveOrg);
+            const deleteResult2 = await deleteToolingRecord(
+              "LifeSciConfigFieldValue",
+              fvId,
+              effectiveOrg
+            );
             if (deleteResult2.success) {
               deletedFieldValues.push(fvId);
             }
@@ -78355,10 +78351,18 @@ Use \`list_afls_actions\` to see available actions and their IDs.`
         );
         if (assignQuery.success && assignQuery.data?.records) {
           for (const a of assignQuery.data.records) {
-            await deleteToolingRecord("LifeSciConfigAssignment", a.Id, effectiveOrg);
+            await deleteToolingRecord(
+              "LifeSciConfigAssignment",
+              a.Id,
+              effectiveOrg
+            );
           }
         }
-        const deleteResult = await deleteToolingRecord("LifeSciConfigRecord", resolvedId, effectiveOrg);
+        const deleteResult = await deleteToolingRecord(
+          "LifeSciConfigRecord",
+          resolvedId,
+          effectiveOrg
+        );
         if (!deleteResult.success) {
           return {
             content: [
@@ -78416,10 +78420,14 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
       actionId: external_exports.string().describe("The record ID or MasterLabel/DeveloperName of the action to update"),
       label: external_exports.string().optional().describe("New display label for the action"),
       isActive: external_exports.boolean().optional().describe("Set active/inactive"),
-      fieldValues: external_exports.array(external_exports.object({
-        fieldName: external_exports.string().describe("Field name to update (e.g., Location, ActionName, SortOrder, Profiles, EntityType, ActionType, ActionTarget, TargetType, TargetParameters)"),
-        value: external_exports.unknown().describe("New value for the field")
-      })).optional().describe("Field values to update"),
+      fieldValues: external_exports.array(
+        external_exports.object({
+          fieldName: external_exports.string().describe(
+            "Field name to update (e.g., Location, ActionName, SortOrder, Profiles, EntityType, ActionType, ActionTarget, TargetType, TargetParameters)"
+          ),
+          value: external_exports.unknown().describe("New value for the field")
+        })
+      ).optional().describe("Field values to update"),
       targetOrg: external_exports.string().optional().describe("Optional: specific org")
     },
     async ({ actionId, label, isActive, fieldValues, targetOrg }) => {
@@ -78440,11 +78448,16 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
           );
           if (!nameQuery.success || !nameQuery.data?.records?.length) {
             return {
-              content: [{ type: "text", text: `# Action Not Found
+              content: [
+                {
+                  type: "text",
+                  text: `# Action Not Found
 
 No action found with name: ${actionId}
 
-Use \`list_afls_actions\` to see available actions.` }]
+Use \`list_afls_actions\` to see available actions.`
+                }
+              ]
             };
           }
           resolvedId = nameQuery.data.records[0].Id;
@@ -78534,9 +78547,14 @@ Use \`list_afls_actions\` to see available actions.` }]
         }
         if (changes.length === 0) {
           return {
-            content: [{ type: "text", text: `# No Changes Specified
+            content: [
+              {
+                type: "text",
+                text: `# No Changes Specified
 
-Provide \`label\`, \`isActive\`, or \`fieldValues\` to update.` }]
+Provide \`label\`, \`isActive\`, or \`fieldValues\` to update.`
+              }
+            ]
           };
         }
         const hasFailures = changes.some((c) => c.includes("FAILED"));
@@ -78561,9 +78579,14 @@ Provide \`label\`, \`isActive\`, or \`fieldValues\` to update.` }]
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to Update Action
+          content: [
+            {
+              type: "text",
+              text: `# Failed to Update Action
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -78573,15 +78596,46 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
     "Create an AFLS Quick Action via Tooling API. Quick actions appear on the floating action button on mobile and in quick action menus on web.",
     {
       label: external_exports.string().describe("The display label for the quick action (e.g., 'Home Email', 'Home Visit')"),
-      developerName: external_exports.string().describe("The developer name suffix (e.g., 'HomeEmail'). The 'QuickAction_' prefix is added automatically."),
-      location: external_exports.enum(["HomePage", "Account", "Visit", "Search", "NextBestCustomer", "Presentation", "VisitSearch"]).describe("Where the quick action appears"),
-      actionName: external_exports.enum(["Email", "NewVisit", "LogCall", "NewTask", "NewEvent", "IntelligentContent", "ViewOnline", "Consent", "WebEmail"]).describe("The predefined action to invoke"),
+      developerName: external_exports.string().describe(
+        "The developer name suffix (e.g., 'HomeEmail'). The 'QuickAction_' prefix is added automatically."
+      ),
+      location: external_exports.enum([
+        "HomePage",
+        "Account",
+        "Visit",
+        "Search",
+        "NextBestCustomer",
+        "Presentation",
+        "VisitSearch"
+      ]).describe("Where the quick action appears"),
+      actionName: external_exports.enum([
+        "Email",
+        "NewVisit",
+        "LogCall",
+        "NewTask",
+        "NewEvent",
+        "IntelligentContent",
+        "ViewOnline",
+        "Consent",
+        "WebEmail"
+      ]).describe("The predefined action to invoke"),
       sortOrder: external_exports.number().int().min(1).max(100).describe("Display order (lower numbers appear first). Use 1-5 for Home page actions."),
-      profiles: external_exports.array(external_exports.string()).optional().describe("Profile names that can see this action (e.g., ['Field Sales Representative', 'District Manager'])"),
+      profiles: external_exports.array(external_exports.string()).optional().describe(
+        "Profile names that can see this action (e.g., ['Field Sales Representative', 'District Manager'])"
+      ),
       isActive: external_exports.boolean().optional().default(true).describe("Whether the action is active"),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to create in")
     },
-    async ({ label, developerName: rawDevName, location, actionName, sortOrder, profiles, isActive, targetOrg }) => {
+    async ({
+      label,
+      developerName: rawDevName,
+      location,
+      actionName,
+      sortOrder,
+      profiles,
+      isActive,
+      targetOrg
+    }) => {
       const developerName = rawDevName.startsWith("QuickAction_") ? rawDevName : `QuickAction_${rawDevName}`;
       const validation = await validateOrgConnection();
       const effectiveOrg = targetOrg || validation.targetOrg;
@@ -78640,9 +78694,24 @@ ${recordResult.error}`
         }
         const recordId = recordResult.data.id;
         const fieldValues = [
-          { FieldName: "Location", PicklistValue: location, LifeSciConfigRecordId: recordId, DataType: "PICKLIST" },
-          { FieldName: "ActionName", PicklistValue: actionName, LifeSciConfigRecordId: recordId, DataType: "PICKLIST" },
-          { FieldName: "SortOrder", IntegerValue: sortOrder, LifeSciConfigRecordId: recordId, DataType: "INTEGER" }
+          {
+            FieldName: "Location",
+            PicklistValue: location,
+            LifeSciConfigRecordId: recordId,
+            DataType: "PICKLIST"
+          },
+          {
+            FieldName: "ActionName",
+            PicklistValue: actionName,
+            LifeSciConfigRecordId: recordId,
+            DataType: "PICKLIST"
+          },
+          {
+            FieldName: "SortOrder",
+            IntegerValue: sortOrder,
+            LifeSciConfigRecordId: recordId,
+            DataType: "INTEGER"
+          }
         ];
         if (profiles && profiles.length > 0) {
           fieldValues.push({
@@ -78674,7 +78743,9 @@ ${recordResult.error}`
             fieldErrors.push(`Activation: ${activateResult.error}`);
           }
         } else if (shouldActivate && fieldErrors.length > 0) {
-          fieldErrors.push("Activation skipped \u2014 fix field value errors first, then use update_admin_setting to activate");
+          fieldErrors.push(
+            "Activation skipped \u2014 fix field value errors first, then use update_admin_setting to activate"
+          );
         }
         let message = `# Quick Action Created Successfully
 
@@ -78745,10 +78816,16 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
     "Create an AFLS Custom Action via Tooling API. Custom actions invoke Lightning components, flows, URLs, or Agentforce utterances.",
     {
       label: external_exports.string().describe("The display label for the custom action (e.g., 'Search Google', 'Launch Flow')"),
-      developerName: external_exports.string().describe("The developer name suffix (e.g., 'SearchGoogle'). The 'CustomAction_' prefix is added automatically."),
+      developerName: external_exports.string().describe(
+        "The developer name suffix (e.g., 'SearchGoogle'). The 'CustomAction_' prefix is added automatically."
+      ),
       entityType: external_exports.enum(["HomePage", "SObject", "StagePath", "Visit"]).describe("Where the action is available"),
-      actionType: external_exports.enum(["URL", "App", "Utterance"]).describe("Type of action: URL opens a URL, App invokes a component/flow, Utterance sends to Agentforce"),
-      actionTarget: external_exports.string().describe("The target: URL for URL type, component/flow name for App type, or utterance text for Utterance type"),
+      actionType: external_exports.enum(["URL", "App", "Utterance"]).describe(
+        "Type of action: URL opens a URL, App invokes a component/flow, Utterance sends to Agentforce"
+      ),
+      actionTarget: external_exports.string().describe(
+        "The target: URL for URL type, component/flow name for App type, or utterance text for Utterance type"
+      ),
       targetType: external_exports.enum(["Internal", "External"]).optional().describe("For URL type: Internal opens in app, External opens in browser"),
       targetParameters: external_exports.string().optional().describe("URL parameters (e.g., 'q=$record.Name' to pass record field values)"),
       entityName: external_exports.string().optional().describe("For SObject entityType: the object API name (e.g., 'Account')"),
@@ -78756,7 +78833,19 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
       isActive: external_exports.boolean().optional().default(true).describe("Whether the action is active"),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to create in")
     },
-    async ({ label, developerName: rawDevName, entityType, actionType, actionTarget, targetType, targetParameters, entityName, profiles, isActive, targetOrg }) => {
+    async ({
+      label,
+      developerName: rawDevName,
+      entityType,
+      actionType,
+      actionTarget,
+      targetType,
+      targetParameters,
+      entityName,
+      profiles,
+      isActive,
+      targetOrg
+    }) => {
       const developerName = rawDevName.startsWith("CustomAction_") ? rawDevName : `CustomAction_${rawDevName}`;
       const validation = await validateOrgConnection();
       const effectiveOrg = targetOrg || validation.targetOrg;
@@ -78815,18 +78904,48 @@ ${recordResult.error}`
         }
         const recordId = recordResult.data.id;
         const fieldValues = [
-          { FieldName: "EntityType", PicklistValue: entityType, LifeSciConfigRecordId: recordId, DataType: "PICKLIST" },
-          { FieldName: "ActionType", PicklistValue: actionType, LifeSciConfigRecordId: recordId, DataType: "PICKLIST" },
-          { FieldName: "ActionTarget", TextValue: actionTarget, LifeSciConfigRecordId: recordId, DataType: "TEXT" }
+          {
+            FieldName: "EntityType",
+            PicklistValue: entityType,
+            LifeSciConfigRecordId: recordId,
+            DataType: "PICKLIST"
+          },
+          {
+            FieldName: "ActionType",
+            PicklistValue: actionType,
+            LifeSciConfigRecordId: recordId,
+            DataType: "PICKLIST"
+          },
+          {
+            FieldName: "ActionTarget",
+            TextValue: actionTarget,
+            LifeSciConfigRecordId: recordId,
+            DataType: "TEXT"
+          }
         ];
         if (targetType) {
-          fieldValues.push({ FieldName: "TargetType", PicklistValue: targetType, LifeSciConfigRecordId: recordId, DataType: "PICKLIST" });
+          fieldValues.push({
+            FieldName: "TargetType",
+            PicklistValue: targetType,
+            LifeSciConfigRecordId: recordId,
+            DataType: "PICKLIST"
+          });
         }
         if (targetParameters) {
-          fieldValues.push({ FieldName: "TargetParameters", TextValue: targetParameters, LifeSciConfigRecordId: recordId, DataType: "TEXT" });
+          fieldValues.push({
+            FieldName: "TargetParameters",
+            TextValue: targetParameters,
+            LifeSciConfigRecordId: recordId,
+            DataType: "TEXT"
+          });
         }
         if (entityName) {
-          fieldValues.push({ FieldName: "EntityName", TextValue: entityName, LifeSciConfigRecordId: recordId, DataType: "TEXT" });
+          fieldValues.push({
+            FieldName: "EntityName",
+            TextValue: entityName,
+            LifeSciConfigRecordId: recordId,
+            DataType: "TEXT"
+          });
         }
         if (profiles && profiles.length > 0) {
           fieldValues.push({
@@ -78858,7 +78977,9 @@ ${recordResult.error}`
             fieldErrors.push(`Activation: ${activateResult.error}`);
           }
         } else if (shouldActivate && fieldErrors.length > 0) {
-          fieldErrors.push("Activation skipped \u2014 fix field value errors first, then use update_admin_setting to activate");
+          fieldErrors.push(
+            "Activation skipped \u2014 fix field value errors first, then use update_admin_setting to activate"
+          );
         }
         let message = `# Custom Action Created Successfully
 
@@ -78983,7 +79104,7 @@ Use \`generate_mobile_metadata_cache\` to create one.`
           };
         }
         const profileIds = records.map((r) => r.ProfileId).filter((id) => id != null);
-        let profileMap = {};
+        const profileMap = {};
         if (profileIds.length > 0) {
           const uniqueIds = [...new Set(profileIds)];
           const profileQuery = `SELECT Id, Name FROM Profile WHERE Id IN ('${uniqueIds.join("','")}')`;
@@ -79074,6 +79195,11 @@ ${errorLog}
 \`\`\`
 `;
             }
+            const combinedError = `${errorCode} ${errorMsg} ${errorLog}`.toUpperCase();
+            if (combinedError.includes("EXCEEDED_ID_LIMIT")) {
+              message += `- **Diagnosis:** \`EXCEEDED_ID_LIMIT\` during cache generation is a **known large-org limitation**, not a configuration error. The metadata service fetches field-definition labels in a batch that overflows on orgs with many sobjects/fields (FieldDefinition does not support pagination). This is fixed in newer package versions via chunked label fetching. **Action:** upgrade the AFLS managed package to the latest version; do not attempt to "fix" DB Schema or field configuration in response to this error.
+`;
+            }
             if (!errorCode && !errorMsg && !errorLog && status === "Inactive") {
               message += `- **Note:** Record is inactive with no error details. It may need to be regenerated.
 `;
@@ -79107,7 +79233,9 @@ function register4(server2) {
     "list_trigger_handlers",
     "List LifeScienceTriggerHandler records showing active/inactive status. Use this to check which trigger handlers are enabled (e.g., DCR, Visit, Sample). Filter by object name to narrow results.",
     {
-      objectName: external_exports.string().optional().describe("Optional: filter by object name (e.g., 'Visit', 'Account', 'DataChangeRequest')"),
+      objectName: external_exports.string().optional().describe(
+        "Optional: filter by object name (e.g., 'Visit', 'Account', 'DataChangeRequest')"
+      ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to query")
     },
     async ({ objectName, targetOrg }) => {
@@ -79126,17 +79254,24 @@ function register4(server2) {
         const result = await runSoqlQuery(query, effectiveOrg);
         if (!result.success) {
           return {
-            content: [{ type: "text", text: `# Failed to Query Trigger Handlers
+            content: [
+              { type: "text", text: `# Failed to Query Trigger Handlers
 
-${result.error}` }]
+${result.error}` }
+            ]
           };
         }
         const records = result.data?.records || [];
         if (records.length === 0) {
           return {
-            content: [{ type: "text", text: `# Trigger Handlers
+            content: [
+              {
+                type: "text",
+                text: `# Trigger Handlers
 
-No trigger handlers found${objectName ? ` matching "${objectName}"` : ""}.` }]
+No trigger handlers found${objectName ? ` matching "${objectName}"` : ""}.`
+              }
+            ]
           };
         }
         let message = `# Trigger Handlers${objectName ? ` (filtered: "${objectName}")` : ""}
@@ -79162,9 +79297,14 @@ Use \`toggle_trigger_handler\` to enable/disable a handler by its DeveloperName.
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to List Trigger Handlers
+          content: [
+            {
+              type: "text",
+              text: `# Failed to List Trigger Handlers
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -79173,7 +79313,9 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
     "toggle_trigger_handler",
     "Enable or disable a LifeScienceTriggerHandler by DeveloperName. Use list_trigger_handlers first to see available handlers. This is the correct way to enable/disable features like DCR, Visit compliance, etc.",
     {
-      handlerName: external_exports.string().describe("The DeveloperName of the trigger handler (e.g., 'DCRHandler', 'VisitComplianceHandler')"),
+      handlerName: external_exports.string().describe(
+        "The DeveloperName of the trigger handler (e.g., 'DCRHandler', 'VisitComplianceHandler')"
+      ),
       active: external_exports.boolean().describe("Set to true to enable, false to disable"),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to update")
     },
@@ -79190,9 +79332,11 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
         const result = await runSoqlQuery(query, effectiveOrg);
         if (!result.success) {
           return {
-            content: [{ type: "text", text: `# Failed to Query Trigger Handler
+            content: [
+              { type: "text", text: `# Failed to Query Trigger Handler
 
-${result.error}` }]
+${result.error}` }
+            ]
           };
         }
         const records = result.data?.records || [];
@@ -79204,13 +79348,18 @@ ${result.error}` }]
             return `- ${rec.DeveloperName} (${rec.IsActive ? "active" : "inactive"})`;
           }).join("\n");
           return {
-            content: [{ type: "text", text: `# Handler Not Found
+            content: [
+              {
+                type: "text",
+                text: `# Handler Not Found
 
 No trigger handler with DeveloperName "${handlerName}".
 
 ## Available Handlers
 
-${available || "No handlers found in org."}` }]
+${available || "No handlers found in org."}`
+              }
+            ]
           };
         }
         const handler = records[0];
@@ -79219,9 +79368,14 @@ ${available || "No handlers found in org."}` }]
         const wasActive = handler.IsActive;
         if (wasActive === active2) {
           return {
-            content: [{ type: "text", text: `# No Change Needed
+            content: [
+              {
+                type: "text",
+                text: `# No Change Needed
 
-**${label}** (${handlerName}) is already ${active2 ? "active" : "inactive"}.` }]
+**${label}** (${handlerName}) is already ${active2 ? "active" : "inactive"}.`
+              }
+            ]
           };
         }
         const updateResult = await updateRecord(
@@ -79232,23 +79386,35 @@ ${available || "No handlers found in org."}` }]
         );
         if (!updateResult.success) {
           return {
-            content: [{ type: "text", text: `# Failed to Update Trigger Handler
+            content: [
+              { type: "text", text: `# Failed to Update Trigger Handler
 
-${updateResult.error}` }]
+${updateResult.error}` }
+            ]
           };
         }
         return {
-          content: [{ type: "text", text: `# Trigger Handler Updated
+          content: [
+            {
+              type: "text",
+              text: `# Trigger Handler Updated
 
 **${label}** (${handlerName}): ${wasActive ? "active" : "inactive"} \u2192 **${active2 ? "active" : "inactive"}**
 
-The change takes effect immediately.` }]
+The change takes effect immediately.`
+            }
+          ]
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to Toggle Trigger Handler
+          content: [
+            {
+              type: "text",
+              text: `# Failed to Toggle Trigger Handler
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -79257,7 +79423,9 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
     "list_admin_settings",
     "List Admin Console settings (LifeSciConfigRecord + LifeSciConfigFieldValue) by category. Shows all settings with their field values. Use without a category to list all available categories.",
     {
-      category: external_exports.string().optional().describe("Optional: category name to filter (e.g., 'Visit', 'DataChangeRequest', 'QuickAction', 'CustomAction'). Omit to list all categories."),
+      category: external_exports.string().optional().describe(
+        "Optional: category name to filter (e.g., 'Visit', 'DataChangeRequest', 'QuickAction', 'CustomAction'). Omit to list all categories."
+      ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to query")
     },
     async ({ category, targetOrg }) => {
@@ -79274,17 +79442,24 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
           const catResult2 = await cachedToolingQuery(catQuery2, effectiveOrg);
           if (!catResult2.success) {
             return {
-              content: [{ type: "text", text: `# Failed to Query Categories
+              content: [
+                { type: "text", text: `# Failed to Query Categories
 
-${catResult2.error}` }]
+${catResult2.error}` }
+              ]
             };
           }
           const categories = catResult2.data?.records || [];
           if (categories.length === 0) {
             return {
-              content: [{ type: "text", text: `# Admin Console Categories
+              content: [
+                {
+                  type: "text",
+                  text: `# Admin Console Categories
 
-No categories found. Ensure AFLS is installed in the org.` }]
+No categories found. Ensure AFLS is installed in the org.`
+                }
+              ]
             };
           }
           let message2 = `# Admin Console Categories
@@ -79309,9 +79484,14 @@ Use \`list_admin_settings({ category: "<name>" })\` to see settings for a specif
         const catResult = await cachedToolingQuery(catQuery, effectiveOrg);
         if (!catResult.success || !catResult.data?.records?.length) {
           return {
-            content: [{ type: "text", text: `# Category Not Found
+            content: [
+              {
+                type: "text",
+                text: `# Category Not Found
 
-No Admin Console category "${category}". Use \`list_admin_settings()\` without a category to see all available categories.` }]
+No Admin Console category "${category}". Use \`list_admin_settings()\` without a category to see all available categories.`
+              }
+            ]
           };
         }
         const categoryId = catResult.data.records[0].Id;
@@ -79319,17 +79499,24 @@ No Admin Console category "${category}". Use \`list_admin_settings()\` without a
         const recordsResult = await runToolingQuery(recordsQuery, effectiveOrg);
         if (!recordsResult.success) {
           return {
-            content: [{ type: "text", text: `# Failed to Query Settings
+            content: [
+              { type: "text", text: `# Failed to Query Settings
 
-${recordsResult.error}` }]
+${recordsResult.error}` }
+            ]
           };
         }
         const records = recordsResult.data?.records || [];
         if (records.length === 0) {
           return {
-            content: [{ type: "text", text: `# ${category} Settings
+            content: [
+              {
+                type: "text",
+                text: `# ${category} Settings
 
-No settings found for category "${category}".` }]
+No settings found for category "${category}".`
+              }
+            ]
           };
         }
         const recordIds = records.map((r) => r.Id);
@@ -79376,9 +79563,14 @@ Use \`update_admin_setting\` to modify a setting, or \`create_admin_setting\` to
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to List Admin Settings
+          content: [
+            {
+              type: "text",
+              text: `# Failed to List Admin Settings
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -79388,12 +79580,29 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
     "Update an existing Admin Console setting (LifeSciConfigRecord) or its field values (LifeSciConfigFieldValue). Use list_admin_settings first to get record IDs.",
     {
       recordId: external_exports.string().describe("The LifeSciConfigRecord ID to update (from list_admin_settings output)"),
-      fields: external_exports.record(external_exports.unknown()).optional().describe("Top-level fields to update on the LifeSciConfigRecord (e.g., { IsActive: true, MasterLabel: 'New Label' })"),
-      fieldValues: external_exports.array(external_exports.object({
-        fieldName: external_exports.string().describe("The FieldName of the LifeSciConfigFieldValue to update"),
-        value: external_exports.unknown().describe("The new value"),
-        dataType: external_exports.enum(["TEXT", "INTEGER", "PICKLIST", "BOOLEAN", "LONGTEXT", "OBJECT", "FIELD", "URL", "NUMBER", "PHONE", "MULTIPICKLIST", "RECORDREFERENCE"]).optional().describe("Data type (required only when creating a new field value)")
-      })).optional().describe("Field values to update on child LifeSciConfigFieldValue records"),
+      fields: external_exports.record(external_exports.unknown()).optional().describe(
+        "Top-level fields to update on the LifeSciConfigRecord (e.g., { IsActive: true, MasterLabel: 'New Label' })"
+      ),
+      fieldValues: external_exports.array(
+        external_exports.object({
+          fieldName: external_exports.string().describe("The FieldName of the LifeSciConfigFieldValue to update"),
+          value: external_exports.unknown().describe("The new value"),
+          dataType: external_exports.enum([
+            "TEXT",
+            "INTEGER",
+            "PICKLIST",
+            "BOOLEAN",
+            "LONGTEXT",
+            "OBJECT",
+            "FIELD",
+            "URL",
+            "NUMBER",
+            "PHONE",
+            "MULTIPICKLIST",
+            "RECORDREFERENCE"
+          ]).optional().describe("Data type (required only when creating a new field value)")
+        })
+      ).optional().describe("Field values to update on child LifeSciConfigFieldValue records"),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to update")
     },
     async ({ recordId, fields, fieldValues, targetOrg }) => {
@@ -79406,9 +79615,14 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
       }
       if (!fields && !fieldValues) {
         return {
-          content: [{ type: "text", text: `# Nothing to Update
+          content: [
+            {
+              type: "text",
+              text: `# Nothing to Update
 
-Provide either \`fields\` (top-level record fields) or \`fieldValues\` (child field values) to update.` }]
+Provide either \`fields\` (top-level record fields) or \`fieldValues\` (child field values) to update.`
+            }
+          ]
         };
       }
       try {
@@ -79422,9 +79636,11 @@ Provide either \`fields\` (top-level record fields) or \`fieldValues\` (child fi
           );
           if (!updateResult.success) {
             return {
-              content: [{ type: "text", text: `# Failed to Update Setting
+              content: [
+                { type: "text", text: `# Failed to Update Setting
 
-${updateResult.error}` }]
+${updateResult.error}` }
+              ]
             };
           }
           for (const [key, value] of Object.entries(fields)) {
@@ -79498,9 +79714,14 @@ ${updateResult.error}` }]
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to Update Admin Setting
+          content: [
+            {
+              type: "text",
+              text: `# Failed to Update Admin Setting
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -79509,16 +79730,33 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
     "create_admin_setting",
     "Create a new Admin Console setting (LifeSciConfigRecord + LifeSciConfigFieldValue records). Use list_admin_settings to see existing settings before creating duplicates.",
     {
-      category: external_exports.string().describe("The category name (e.g., 'Visit', 'DataChangeRequest', 'Sample'). Must match an existing LifeSciConfigCategory."),
+      category: external_exports.string().describe(
+        "The category name (e.g., 'Visit', 'DataChangeRequest', 'Sample'). Must match an existing LifeSciConfigCategory."
+      ),
       developerName: external_exports.string().describe("Unique developer name for the setting (alphanumeric + underscore only)"),
       label: external_exports.string().describe("Display label for the setting"),
       isActive: external_exports.boolean().optional().default(true).describe("Whether the setting is active (default: true)"),
       isOrgLevel: external_exports.boolean().optional().default(false).describe("Whether this is an org-level setting (default: false)"),
-      fields: external_exports.array(external_exports.object({
-        name: external_exports.string().describe("Field name"),
-        dataType: external_exports.enum(["TEXT", "INTEGER", "PICKLIST", "BOOLEAN", "LONGTEXT", "OBJECT", "FIELD", "URL", "NUMBER", "PHONE", "MULTIPICKLIST", "RECORDREFERENCE"]).describe("Data type of the field"),
-        value: external_exports.unknown().describe("Field value")
-      })).optional().describe("Optional: field values to create on the setting"),
+      fields: external_exports.array(
+        external_exports.object({
+          name: external_exports.string().describe("Field name"),
+          dataType: external_exports.enum([
+            "TEXT",
+            "INTEGER",
+            "PICKLIST",
+            "BOOLEAN",
+            "LONGTEXT",
+            "OBJECT",
+            "FIELD",
+            "URL",
+            "NUMBER",
+            "PHONE",
+            "MULTIPICKLIST",
+            "RECORDREFERENCE"
+          ]).describe("Data type of the field"),
+          value: external_exports.unknown().describe("Field value")
+        })
+      ).optional().describe("Optional: field values to create on the setting"),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to create in")
     },
     async ({ category, developerName, label, isActive, isOrgLevel, fields, targetOrg }) => {
@@ -79537,11 +79775,16 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
           const allCatsResult = await cachedToolingQuery(allCatsQuery, effectiveOrg);
           const available = (allCatsResult.data?.records || []).map((r) => r.Category).join(", ");
           return {
-            content: [{ type: "text", text: `# Category Not Found
+            content: [
+              {
+                type: "text",
+                text: `# Category Not Found
 
 No Admin Console category "${category}".
 
-**Available categories:** ${available || "none found"}` }]
+**Available categories:** ${available || "none found"}`
+              }
+            ]
           };
         }
         const categoryId = catResult.data.records[0].Id;
@@ -79559,9 +79802,11 @@ No Admin Console category "${category}".
         );
         if (!recordResult.success) {
           return {
-            content: [{ type: "text", text: `# Failed to Create Admin Setting
+            content: [
+              { type: "text", text: `# Failed to Create Admin Setting
 
-${recordResult.error}` }]
+${recordResult.error}` }
+            ]
           };
         }
         const recordId = recordResult.data.id;
@@ -79596,7 +79841,9 @@ ${recordResult.error}` }]
             fieldErrors.push(`Activation: ${activateResult.error}`);
           }
         } else if (shouldActivate && fieldErrors.length > 0) {
-          fieldErrors.push("Activation skipped \u2014 fix field value errors first, then use update_admin_setting to activate");
+          fieldErrors.push(
+            "Activation skipped \u2014 fix field value errors first, then use update_admin_setting to activate"
+          );
         }
         let message = `# Admin Setting Created
 
@@ -79641,9 +79888,14 @@ Some field values could not be created:
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to Create Admin Setting
+          content: [
+            {
+              type: "text",
+              text: `# Failed to Create Admin Setting
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -79654,7 +79906,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
 function register5(server2) {
   server2.tool(
     "check_visit_config",
-    "Check AFLS Visit Management configuration. Queries visit record types, ProviderVisit record types, trigger handlers, compliance statements, territory info, and Admin Console settings. CORRECT object names: Visit, ProviderVisit, ProviderVisitPrdDetailing, ProviderVisitProdDiscussion, ProviderAcctTerritoryInfo, ComplianceStatementDefinition. WRONG names (DO NOT USE): Visit__c, ProviderVisit__c, VisitSetting__c, VisitConfiguration__mdt, VisitRecordType__c, VisitType__c.",
+    "Check AFLS Visit Management configuration. Queries visit record types, ProviderVisit record types, trigger handlers, compliance statements, territory info, and Admin Console settings. CORRECT object names: Visit, ProviderVisit, ProviderVisitProdDetailing, ProviderVisitProdDiscussion, ProviderAcctTerritoryInfo, ComplianceStatementDef. WRONG names (DO NOT USE): Visit__c, ProviderVisit__c, VisitSetting__c, VisitConfiguration__mdt, VisitRecordType__c, VisitType__c.",
     {
       targetOrg: external_exports.string().optional().describe("Optional: specific org to check. Uses current target org if not specified.")
     },
@@ -79695,7 +79947,9 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No Visit record types found.**\n\n";
             issues.push("No Visit record types configured");
-            recommendations.push("Create Visit record types in Setup > Object Manager > Visit > Record Types");
+            recommendations.push(
+              "Create Visit record types in Setup > Object Manager > Visit > Record Types"
+            );
           } else {
             message += `| Name | Developer Name | Active |
 `;
@@ -79729,7 +79983,9 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No ProviderVisit record types found.**\n\n";
             issues.push("No ProviderVisit record types configured");
-            recommendations.push("Create ProviderVisit record types matching each Visit record type");
+            recommendations.push(
+              "Create ProviderVisit record types matching each Visit record type"
+            );
           } else {
             message += `| Name | Developer Name | Active |
 `;
@@ -79762,8 +80018,12 @@ ${instructions.command}
               message += `**Warning:** Visit record types without matching ProviderVisit record types: ${missingInPv.join(", ")}
 
 `;
-              issues.push(`${missingInPv.length} Visit record type(s) have no matching ProviderVisit record type`);
-              recommendations.push(`Create ProviderVisit record types for: ${missingInPv.join(", ")}`);
+              issues.push(
+                `${missingInPv.length} Visit record type(s) have no matching ProviderVisit record type`
+              );
+              recommendations.push(
+                `Create ProviderVisit record types for: ${missingInPv.join(", ")}`
+              );
             }
             if (missingInVisit.length > 0) {
               message += `**Note:** ProviderVisit record types without matching Visit record types: ${missingInVisit.join(", ")}
@@ -79796,22 +80056,24 @@ ${instructions.command}
 `;
         }
         message += "## Compliance Statements\n\n";
-        const complianceQuery = `SELECT Id, Name, Module, StatementType, IsActive FROM ComplianceStatementDefinition WHERE Module = 'Visit'`;
+        const complianceQuery = `SELECT Id, Name, ModuleType, StatementType FROM ComplianceStatementDef WHERE ModuleType = 'Visit'`;
         const complianceResult = await runSoqlQuery(complianceQuery, effectiveOrg);
         if (complianceResult.success && complianceResult.data?.records) {
           const records = complianceResult.data.records;
           if (records.length === 0) {
             message += "**No compliance statements found for Visit module.**\n\n";
             issues.push("No compliance statements configured for Visit module");
-            recommendations.push("Create ComplianceStatementDefinition records with Module = 'Visit' for signature capture");
+            recommendations.push(
+              "Create ComplianceStatementDef records with ModuleType = 'Visit' for signature capture"
+            );
           } else {
-            message += `| Name | Statement Type | Active |
+            message += `| Name | Statement Type |
 `;
-            message += `|------|----------------|--------|
+            message += `|------|----------------|
 `;
             for (const record2 of records) {
               const rec = record2;
-              message += `| ${rec.Name} | ${rec.StatementType || "-"} | ${rec.IsActive ? "Yes" : "No"} |
+              message += `| ${rec.Name} | ${rec.StatementType || "-"} |
 `;
             }
             message += `
@@ -79861,7 +80123,9 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No active metadata cache found.**\n\n";
             issues.push("No active mobile metadata cache");
-            recommendations.push("Generate mobile metadata cache for profiles that need visit management on mobile");
+            recommendations.push(
+              "Generate mobile metadata cache for profiles that need visit management on mobile"
+            );
           } else {
             message += `| Name | Status | Integration | Last Modified |
 `;
@@ -79960,7 +80224,9 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No active Product2 records found.**\n\n";
             issues.push("No active sample products configured");
-            recommendations.push("Create Product2 records with the record type mapped to LS Sample Product Specification Type");
+            recommendations.push(
+              "Create Product2 records with the record type mapped to LS Sample Product Specification Type"
+            );
           } else {
             message += `| Name | Product Code | Record Type |
 `;
@@ -79990,7 +80256,9 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No LifeSciMarketableProduct records found.**\n\n";
             issues.push("No marketable product records configured");
-            recommendations.push("Create LifeSciMarketableProduct records for each sample product with distribution method 'Drop' or 'Drop and Ship'");
+            recommendations.push(
+              "Create LifeSciMarketableProduct records for each sample product with distribution method 'Drop' or 'Drop and Ship'"
+            );
           } else {
             message += `| Name | Product |
 `;
@@ -80021,10 +80289,16 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No User Inventory locations found.**\n\n";
             issues.push("No User Inventory locations configured");
-            recommendations.push("Create Location records with LocationType = 'User Inventory' and assign a Primary User to each");
+            recommendations.push(
+              "Create Location records with LocationType = 'User Inventory' and assign a Primary User to each"
+            );
           } else {
-            const withUser = records.filter((r) => r.PrimaryUserId !== null);
-            const withoutUser = records.filter((r) => r.PrimaryUserId === null);
+            const withUser = records.filter(
+              (r) => r.PrimaryUserId !== null
+            );
+            const withoutUser = records.filter(
+              (r) => r.PrimaryUserId === null
+            );
             message += `| Name | Primary User |
 `;
             message += `|------|--------------|
@@ -80040,7 +80314,9 @@ ${instructions.command}
 
 `;
             if (withoutUser.length > 0) {
-              issues.push(`${withoutUser.length} inventory location(s) without a Primary User assigned`);
+              issues.push(
+                `${withoutUser.length} inventory location(s) without a Primary User assigned`
+              );
               recommendations.push("Assign a Primary User to all User Inventory locations");
             }
           }
@@ -80057,7 +80333,9 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No active ProductionBatch records found.**\n\n";
             issues.push("No active production batches");
-            recommendations.push("Create ProductionBatch records with unique identification numbers, expiry dates, and UOM = 'Each'");
+            recommendations.push(
+              "Create ProductionBatch records with unique identification numbers, expiry dates, and UOM = 'Each'"
+            );
           } else {
             const now = /* @__PURE__ */ new Date();
             const expired = records.filter((r) => {
@@ -80083,9 +80361,13 @@ ${instructions.command}
             message += "\n\n";
             if (expired.length === records.length) {
               issues.push("All active production batches are expired");
-              recommendations.push("Create new ProductionBatch records with future expiration dates");
+              recommendations.push(
+                "Create new ProductionBatch records with future expiration dates"
+              );
             } else if (expired.length > 0) {
-              recommendations.push(`${expired.length} production batch(es) are expired \u2014 consider creating replacements`);
+              recommendations.push(
+                `${expired.length} production batch(es) are expired \u2014 consider creating replacements`
+              );
             }
           }
         } else {
@@ -80102,9 +80384,13 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No ProductItem records found. Inventory not initialized.**\n\n";
             issues.push("No ProductItem records \u2014 inventory not initialized");
-            recommendations.push("Create ProductItem records (one per location-product pair) and use InventoryOperation (Transfer In) to set quantities");
+            recommendations.push(
+              "Create ProductItem records (one per location-product pair) and use InventoryOperation (Transfer In) to set quantities"
+            );
           } else {
-            const zeroQty = records.filter((r) => r.QuantityOnHand === 0);
+            const zeroQty = records.filter(
+              (r) => r.QuantityOnHand === 0
+            );
             message += `| Product | Location | Qty on Hand |
 `;
             message += `|---------|----------|-------------|
@@ -80138,7 +80424,9 @@ ${instructions.command}
 `;
           if (count === 0) {
             message += "No active batch allocations found. Batch-level tracking will not work.\n\n";
-            recommendations.push("Create ProductBatchItem records linking ProductionBatch to ProductItem records");
+            recommendations.push(
+              "Create ProductBatchItem records linking ProductionBatch to ProductItem records"
+            );
           }
         } else {
           message += `Error querying batch allocations: ${pbiResult.error}
@@ -80185,7 +80473,9 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No active metadata cache found.**\n\n";
             issues.push("No active mobile metadata cache");
-            recommendations.push("Generate mobile metadata cache for profiles that need sample management on mobile");
+            recommendations.push(
+              "Generate mobile metadata cache for profiles that need sample management on mobile"
+            );
           } else {
             message += `| Name | Status | Integration | Last Modified |
 `;
@@ -80292,10 +80582,16 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No Account records found.**\n\n";
             issues.push("No Account records exist in the org");
-            recommendations.push("Create Account records \u2014 PersonAccount for HCPs and standard accounts for HCOs");
+            recommendations.push(
+              "Create Account records \u2014 PersonAccount for HCPs and standard accounts for HCOs"
+            );
           } else {
-            const personAccounts = records.filter((r) => r.IsPersonAccount === true);
-            const businessAccounts = records.filter((r) => r.IsPersonAccount === false);
+            const personAccounts = records.filter(
+              (r) => r.IsPersonAccount === true
+            );
+            const businessAccounts = records.filter(
+              (r) => r.IsPersonAccount === false
+            );
             message += `| Name | Record Type | Person Account |
 `;
             message += `|------|-------------|----------------|
@@ -80311,8 +80607,12 @@ ${instructions.command}
 
 `;
             if (personAccounts.length === 0) {
-              issues.push("No PersonAccount records found \u2014 most AFLS implementations require PersonAccount for HCPs");
-              recommendations.push("Enable PersonAccount in Setup > Company Information and create PersonAccount records for HCPs");
+              issues.push(
+                "No PersonAccount records found \u2014 most AFLS implementations require PersonAccount for HCPs"
+              );
+              recommendations.push(
+                "Enable PersonAccount in Setup > Company Information and create PersonAccount records for HCPs"
+              );
             }
           }
         } else {
@@ -80327,8 +80627,12 @@ ${instructions.command}
           const records = hcpResult.data.records;
           if (records.length === 0) {
             message += "**No HealthcareProvider records found.**\n\n";
-            issues.push("No HealthcareProvider records \u2014 provider-specific functionality will not work");
-            recommendations.push("Create HealthcareProvider records linked to Account records for each HCP");
+            issues.push(
+              "No HealthcareProvider records \u2014 provider-specific functionality will not work"
+            );
+            recommendations.push(
+              "Create HealthcareProvider records linked to Account records for each HCP"
+            );
           } else {
             message += `| Name | Account | Status | Title |
 `;
@@ -80358,10 +80662,16 @@ ${instructions.command}
           const records = addressResult.data.records;
           if (records.length === 0) {
             message += "**No ContactPointAddress records found.**\n\n";
-            issues.push("No address records \u2014 accounts need addresses for visits, territory alignment, and compliance");
-            recommendations.push("Create ContactPointAddress records linked to accounts via ParentId with City, State, PostalCode, Country");
+            issues.push(
+              "No address records \u2014 accounts need addresses for visits, territory alignment, and compliance"
+            );
+            recommendations.push(
+              "Create ContactPointAddress records linked to accounts via ParentId with City, State, PostalCode, Country"
+            );
           } else {
-            const primaryCount = records.filter((r) => r.IsPrimary === true).length;
+            const primaryCount = records.filter(
+              (r) => r.IsPrimary === true
+            ).length;
             message += `| City | State | Postal Code | Country | Primary |
 `;
             message += `|------|-------|-------------|---------|----------|
@@ -80398,8 +80708,12 @@ ${instructions.command}
               const exp = r.ExpirationDate;
               return exp && new Date(String(exp)) < now;
             });
-            const validated = records.filter((r) => r.IsLicenseValidated === true);
-            const withScope = records.filter((r) => r.ComplianceScope != null);
+            const validated = records.filter(
+              (r) => r.IsLicenseValidated === true
+            );
+            const withScope = records.filter(
+              (r) => r.ComplianceScope != null
+            );
             message += `| Account | License # | Status | Expiration | Scope | Validated |
 `;
             message += `|---------|-----------|--------|------------|-------|-----------|
@@ -80417,14 +80731,22 @@ ${instructions.command}
 
 `;
             if (validated.length === 0 && records.length > 0) {
-              issues.push("No licenses are validated \u2014 check IsLicenseValidated formula configuration");
-              recommendations.push("Configure IsLicenseValidated formula in Admin Console > License Management");
+              issues.push(
+                "No licenses are validated \u2014 check IsLicenseValidated formula configuration"
+              );
+              recommendations.push(
+                "Configure IsLicenseValidated formula in Admin Console > License Management"
+              );
             }
             if (withScope.length === 0 && records.length > 0) {
-              recommendations.push("Set ComplianceScope on BusinessLicense records (Jurisdiction State, Address/DEA, or SDL)");
+              recommendations.push(
+                "Set ComplianceScope on BusinessLicense records (Jurisdiction State, Address/DEA, or SDL)"
+              );
             }
             if (expired.length > 0) {
-              recommendations.push(`${expired.length} license(s) are expired \u2014 review and update or create replacements`);
+              recommendations.push(
+                `${expired.length} license(s) are expired \u2014 review and update or create replacements`
+              );
             }
           }
         } else {
@@ -80546,7 +80868,9 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No active metadata cache found.**\n\n";
             issues.push("No active mobile metadata cache");
-            recommendations.push("Generate mobile metadata cache for profiles that need account management on mobile");
+            recommendations.push(
+              "Generate mobile metadata cache for profiles that need account management on mobile"
+            );
           } else {
             message += `| Name | Status | Integration | Last Modified |
 `;
@@ -80611,7 +80935,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
   );
   server2.tool(
     "check_activity_plan_config",
-    "Check AFLS Activity Plan configuration. Queries time periods, activity plans, territory assignments, provider activity goals, goal measures, product goals, territory info, and mobile cache. CORRECT object names: ActivityPlan, ActivityPlanTerritory, TimePeriod, ProviderActivityGoal, ProviderActivityGoalMeasure, PrvdActvtyGoalMeasurePrdct, ProviderAcctTerritoryInfo. WRONG names (DO NOT USE): ActivityPlan__c, ProviderActivityGoal__c, AccountGoal__c, TimePeriod__c, GoalMeasure__c.",
+    "Check AFLS Activity Plan configuration. Queries time periods, activity plans, territory assignments, provider activity goals, goal measures, product goals, territory info, and mobile cache. CORRECT object names: ActivityPlan, ActivityPlanTerritory, TimePeriod, ProviderActivityGoal, ProviderActivityGoalMeasure, PrvdActvtyGoalMeasureProdt, ProviderAcctTerritoryInfo. WRONG names (DO NOT USE): ActivityPlan__c, ProviderActivityGoal__c, AccountGoal__c, TimePeriod__c, GoalMeasure__c.",
     {
       targetOrg: external_exports.string().optional().describe("Optional: specific org to check. Uses current target org if not specified.")
     },
@@ -80650,8 +80974,12 @@ ${instructions.command}
           const records = tpResult.data.records;
           if (records.length === 0) {
             message += "**No TimePeriod records found.**\n\n";
-            issues.push("No TimePeriod records \u2014 activity plans cannot be created without time periods");
-            recommendations.push("Create TimePeriod records with Name, StartDate, and EndDate (e.g., H1 2026: Jan 1 - Jun 30)");
+            issues.push(
+              "No TimePeriod records \u2014 activity plans cannot be created without time periods"
+            );
+            recommendations.push(
+              "Create TimePeriod records with Name, StartDate, and EndDate (e.g., H1 2026: Jan 1 - Jun 30)"
+            );
           } else {
             const now = /* @__PURE__ */ new Date();
             message += `| Name | Start Date | End Date | Status |
@@ -80685,7 +81013,9 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No ActivityPlan records found.**\n\n";
             issues.push("No ActivityPlan records exist");
-            recommendations.push("Create ActivityPlan records with PlanType, Status, and TimePeriod reference");
+            recommendations.push(
+              "Create ActivityPlan records with PlanType, Status, and TimePeriod reference"
+            );
           } else {
             const active2 = records.filter((r) => r.IsActive === true);
             const byType = {};
@@ -80708,7 +81038,9 @@ ${instructions.command}
 
 `;
             if (active2.length === 0) {
-              recommendations.push("No active plans found \u2014 run the Validate Activity Plans batch job to activate plans based on time periods");
+              recommendations.push(
+                "No active plans found \u2014 run the Validate Activity Plans batch job to activate plans based on time periods"
+              );
             }
           }
         } else {
@@ -80725,8 +81057,12 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No ActivityPlanTerritory records found.**\n\n";
             if (planResult.success && planResult.data?.records && planResult.data.records.length > 0) {
-              issues.push("Activity plans exist but no territory assignments \u2014 plans need ActivityPlanTerritory records");
-              recommendations.push("Create ActivityPlanTerritory records linking each plan to its target territory");
+              issues.push(
+                "Activity plans exist but no territory assignments \u2014 plans need ActivityPlanTerritory records"
+              );
+              recommendations.push(
+                "Create ActivityPlanTerritory records linking each plan to its target territory"
+              );
             }
           } else {
             message += `| Activity Plan | Territory ID |
@@ -80758,8 +81094,12 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No ProviderActivityGoal records found.**\n\n";
             if (planResult.success && planResult.data?.records && planResult.data.records.length > 0) {
-              issues.push("Activity plans exist but no account goals \u2014 plans need ProviderActivityGoal records per target account");
-              recommendations.push("Create ProviderActivityGoal records for each target account with OverallGoal, ProductLevelGoal, NonProductLevelGoal");
+              issues.push(
+                "Activity plans exist but no account goals \u2014 plans need ProviderActivityGoal records per target account"
+              );
+              recommendations.push(
+                "Create ProviderActivityGoal records for each target account with OverallGoal, ProductLevelGoal, NonProductLevelGoal"
+              );
             }
           } else {
             message += `| Account | Plan | Overall Goal | Product Goal | Non-Product Goal |
@@ -80794,7 +81134,9 @@ ${instructions.command}
 `;
           if (count === 0) {
             if (goalResult.success && goalResult.data?.records && goalResult.data.records.length > 0) {
-              recommendations.push("Account goals exist but no goal measures \u2014 create ProviderActivityGoalMeasure records to define activity type targets");
+              recommendations.push(
+                "Account goals exist but no goal measures \u2014 create ProviderActivityGoalMeasure records to define activity type targets"
+              );
             }
           }
         } else {
@@ -80804,11 +81146,11 @@ ${instructions.command}
           message += "This object may not be available in the org.\n\n";
         }
         message += "## Product Goal Measures\n\n";
-        const prodMeasureQuery = `SELECT COUNT() FROM PrvdActvtyGoalMeasurePrdct`;
+        const prodMeasureQuery = `SELECT COUNT() FROM PrvdActvtyGoalMeasureProdt`;
         const prodMeasureResult = await runSoqlQuery(prodMeasureQuery, effectiveOrg);
         if (prodMeasureResult.success && prodMeasureResult.data) {
           const count = prodMeasureResult.data.totalSize;
-          message += `**PrvdActvtyGoalMeasurePrdct records:** ${count}
+          message += `**PrvdActvtyGoalMeasureProdt records:** ${count}
 
 `;
           if (count === 0) {
@@ -80829,7 +81171,9 @@ ${instructions.command}
 
 `;
           if (count === 0) {
-            recommendations.push("No ProviderAcctTerritoryInfo records \u2014 run territory alignment to create these records for activity plan tracking");
+            recommendations.push(
+              "No ProviderAcctTerritoryInfo records \u2014 run territory alignment to create these records for activity plan tracking"
+            );
           }
         } else {
           message += `Error querying territory info: ${territoryResult.error}
@@ -80844,7 +81188,9 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No active metadata cache found.**\n\n";
             issues.push("No active mobile metadata cache");
-            recommendations.push("Generate mobile metadata cache for profiles that need activity plans on mobile");
+            recommendations.push(
+              "Generate mobile metadata cache for profiles that need activity plans on mobile"
+            );
           } else {
             message += `| Name | Status | Integration | Last Modified |
 `;
@@ -80891,7 +81237,7 @@ ${instructions.command}
         message += "3. ActivityPlanTerritory (link plan to territories)\n";
         message += "4. ProviderActivityGoal (account-level goals per target HCP)\n";
         message += "5. ProviderActivityGoalMeasure (activity type targets per goal)\n";
-        message += "6. PrvdActvtyGoalMeasurePrdct (optional: product-specific targets)\n";
+        message += "6. PrvdActvtyGoalMeasureProdt (optional: product-specific targets)\n";
         message += "\n### Trigger Handler Reminder\n\n";
         message += "Ensure these trigger handlers are active:\n";
         message += "1. ActivityPlanTerritoryValidationHandler\n";
@@ -80958,10 +81304,16 @@ ${instructions.command}
           const records = modelResult.data.records;
           if (records.length === 0) {
             message += "**No Territory2Model found.**\n\n";
-            issues.push("No Territory Model exists \u2014 Enterprise Territory Management must be enabled and a model created");
-            recommendations.push("Enable Territory Management in Setup and create a Territory Model");
+            issues.push(
+              "No Territory Model exists \u2014 Enterprise Territory Management must be enabled and a model created"
+            );
+            recommendations.push(
+              "Enable Territory Management in Setup and create a Territory Model"
+            );
           } else {
-            const activeModel = records.find((r) => r.State === "Active");
+            const activeModel = records.find(
+              (r) => r.State === "Active"
+            );
             message += `| Name | State |
 |------|-------|
 `;
@@ -80972,7 +81324,9 @@ ${instructions.command}
             }
             message += "\n";
             if (!activeModel) {
-              issues.push("No Territory Model is in Active state \u2014 territory alignment will not function");
+              issues.push(
+                "No Territory Model is in Active state \u2014 territory alignment will not function"
+              );
               recommendations.push("Activate a Territory Model in Setup > Territory Models");
             }
           }
@@ -80989,7 +81343,9 @@ ${instructions.command}
           const records = territoryResult.data.records;
           if (records.length === 0) {
             message += "**No Territory2 records found.**\n\n";
-            issues.push("No territories exist \u2014 territory hierarchy must be built before alignment");
+            issues.push(
+              "No territories exist \u2014 territory hierarchy must be built before alignment"
+            );
             recommendations.push("Create Territory2 records to build the territory hierarchy");
           } else {
             const types = /* @__PURE__ */ new Set();
@@ -81025,7 +81381,9 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No ObjectTerritory2Association records found for Account.**\n\n";
             message += "Explicit assignments are the input for the Align Account to Territory batch job.\n\n";
-            recommendations.push("Create ObjectTerritory2Association records to explicitly assign accounts to territories, or set up geo alignment rules");
+            recommendations.push(
+              "Create ObjectTerritory2Association records to explicitly assign accounts to territories, or set up geo alignment rules"
+            );
           } else {
             const territories = /* @__PURE__ */ new Set();
             message += `| Account ID | Territory | Association Type |
@@ -81057,9 +81415,15 @@ ${instructions.command}
             message += "**No TerritoryGeoAssignmentRule records found.**\n\n";
             message += "Geo rules are optional \u2014 only needed if using zip-to-territory or brick-to-territory alignment.\n\n";
           } else {
-            const activeCount = records.filter((r) => r.IsActive === true).length;
-            const zipCount = records.filter((r) => r.UsageType === "ZipToTerritory").length;
-            const brickCount = records.filter((r) => r.UsageType === "BrickToTerritory").length;
+            const activeCount = records.filter(
+              (r) => r.IsActive === true
+            ).length;
+            const zipCount = records.filter(
+              (r) => r.UsageType === "ZipToTerritory"
+            ).length;
+            const brickCount = records.filter(
+              (r) => r.UsageType === "BrickToTerritory"
+            ).length;
             message += `| Name | Territory | Usage Type | Active |
 |------|-----------|-----------|--------|
 `;
@@ -81074,7 +81438,9 @@ ${instructions.command}
 
 `;
             if (activeCount < records.length) {
-              recommendations.push(`${records.length - activeCount} geo rule(s) are inactive \u2014 activate them if they should be used in alignment`);
+              recommendations.push(
+                `${records.length - activeCount} geo rule(s) are inactive \u2014 activate them if they should be used in alignment`
+              );
             }
           }
         } else {
@@ -81092,7 +81458,9 @@ ${instructions.command}
             message += "**No TerritoryProviderAffiliationAlignmentRule records found.**\n\n";
             message += "Affiliation rules are optional \u2014 only needed if aligning affiliated accounts (HCPs at HCOs) based on provider affiliations.\n\n";
           } else {
-            const activeCount = records.filter((r) => r.IsActive === true).length;
+            const activeCount = records.filter(
+              (r) => r.IsActive === true
+            ).length;
             const roles = /* @__PURE__ */ new Set();
             message += `| Territory | Account Type | Affiliation Role | Active |
 |-----------|-------------|-----------------|--------|
@@ -81126,8 +81494,12 @@ ${instructions.command}
           const records = patiResult.data.records;
           if (records.length === 0) {
             message += "**No ProviderAcctTerritoryInfo records found.**\n\n";
-            issues.push("No ProviderAcctTerritoryInfo records \u2014 the Align Account to Territory batch job has not been run or no assignments exist");
-            recommendations.push("Run the 'Align Account to Territory' batch job from Admin Console > Territory Management Jobs");
+            issues.push(
+              "No ProviderAcctTerritoryInfo records \u2014 the Align Account to Territory batch job has not been run or no assignments exist"
+            );
+            recommendations.push(
+              "Run the 'Align Account to Territory' batch job from Admin Console > Territory Management Jobs"
+            );
           } else {
             const territories = /* @__PURE__ */ new Set();
             message += `| Account | Territory | Last Visit | YTD Visits |
@@ -81251,9 +81623,13 @@ ${instructions.command}
               message += `| ${rec.NamespacePrefix} | ${allowed} | ${used} | ${available} | ${rec.Status} |
 `;
               if (available === 0 && allowed > 0) {
-                issues.push(`Package license '${rec.NamespacePrefix}' has 0 available licenses \u2014 no new users can be provisioned`);
+                issues.push(
+                  `Package license '${rec.NamespacePrefix}' has 0 available licenses \u2014 no new users can be provisioned`
+                );
               } else if (available > 0 && available <= Math.ceil(allowed * 0.1)) {
-                recommendations.push(`Package license '${rec.NamespacePrefix}' is at ${Math.round(used / allowed * 100)}% capacity (${available} remaining)`);
+                recommendations.push(
+                  `Package license '${rec.NamespacePrefix}' is at ${Math.round(used / allowed * 100)}% capacity (${available} remaining)`
+                );
               }
             }
             message += "\n";
@@ -81270,7 +81646,9 @@ ${instructions.command}
           const records = pslResult.data.records;
           if (records.length === 0) {
             message += "**No AFLS-related PSLs found.**\n\n";
-            issues.push("No AFLS Permission Set Licenses found \u2014 AFLS packages may not be installed or licensed");
+            issues.push(
+              "No AFLS Permission Set Licenses found \u2014 AFLS packages may not be installed or licensed"
+            );
           } else {
             message += `| PSL | Total | Used | Available |
 |-----|-------|------|-----------|
@@ -81283,9 +81661,13 @@ ${instructions.command}
               message += `| ${rec.MasterLabel} | ${total} | ${used} | ${available} |
 `;
               if (available === 0 && total > 0) {
-                issues.push(`PSL '${rec.MasterLabel}' has 0 available \u2014 cannot assign to new users`);
+                issues.push(
+                  `PSL '${rec.MasterLabel}' has 0 available \u2014 cannot assign to new users`
+                );
               } else if (available > 0 && available < 5) {
-                recommendations.push(`PSL '${rec.MasterLabel}' has only ${available} license(s) remaining`);
+                recommendations.push(
+                  `PSL '${rec.MasterLabel}' has only ${available} license(s) remaining`
+                );
               }
             }
             message += "\n";
@@ -81356,10 +81738,16 @@ ${instructions.command}
           const records = roleResult.data.records;
           if (records.length === 0) {
             message += "**No UserRole records found.**\n\n";
-            issues.push("No role hierarchy exists \u2014 data visibility will not work correctly for managers");
-            recommendations.push("Create a role hierarchy in Setup > Roles matching the territory structure");
+            issues.push(
+              "No role hierarchy exists \u2014 data visibility will not work correctly for managers"
+            );
+            recommendations.push(
+              "Create a role hierarchy in Setup > Roles matching the territory structure"
+            );
           } else {
-            const rootCount = records.filter((r) => !r.ParentRoleId).length;
+            const rootCount = records.filter(
+              (r) => !r.ParentRoleId
+            ).length;
             message += `| Role | Has Parent |
 |------|------------|
 `;
@@ -81386,7 +81774,9 @@ ${instructions.command}
           if (records.length === 0) {
             message += "**No UserTerritory2Association records found.**\n\n";
             issues.push("No users are assigned to territories \u2014 users will not see account data");
-            recommendations.push("Assign users to territories in Setup > Territory Models > [Model] > [Territory] > Assigned Users");
+            recommendations.push(
+              "Assign users to territories in Setup > Territory Models > [Model] > [Territory] > Assigned Users"
+            );
           } else {
             const territories = /* @__PURE__ */ new Set();
             const users = /* @__PURE__ */ new Set();
@@ -81434,7 +81824,9 @@ ${instructions.command}
 **${records.length} AFLS user(s) without territory assignments.**
 
 `;
-            issues.push(`${records.length} active AFLS user(s) have no territory assignment \u2014 they cannot see account data`);
+            issues.push(
+              `${records.length} active AFLS user(s) have no territory assignment \u2014 they cannot see account data`
+            );
             recommendations.push("Assign these users to territories in Setup > Territory Models");
           }
         } else {
@@ -81542,9 +81934,7 @@ ${listResult.error || "No layout metadata returned."}`
               ]
             };
           }
-          const visitLayouts = listResult.data.filter(
-            (l) => l.fullName.startsWith("Visit-")
-          );
+          const visitLayouts = listResult.data.filter((l) => l.fullName.startsWith("Visit-"));
           if (visitLayouts.length === 0) {
             return {
               content: [
@@ -81627,13 +82017,7 @@ Make sure the layout name is correct. Use this tool without \`layoutName\` to li
             };
           }
           const outputDir = retrieveResult.data.outputDir;
-          const layoutDir = path2.join(
-            outputDir,
-            "force-app",
-            "main",
-            "default",
-            "layouts"
-          );
+          const layoutDir = path2.join(outputDir, "force-app", "main", "default", "layouts");
           if (!fs2.existsSync(layoutDir)) {
             return {
               content: [
@@ -81695,10 +82079,7 @@ Remove an existing related list before adding a new one.`
         <excludeButtons>MassDeleteAll</excludeButtons>
     </relatedLists>
 `;
-          layoutXml = layoutXml.replace(
-            "</Layout>",
-            `${newRelatedList}</Layout>`
-          );
+          layoutXml = layoutXml.replace("</Layout>", `${newRelatedList}</Layout>`);
           fs2.writeFileSync(layoutFilePath, layoutXml, "utf-8");
           const deployResult = await deployMetadata(
             path2.join(outputDir, "force-app"),
@@ -81757,7 +82138,9 @@ You may need to check the layout manually in Setup.`
 
 1. **Regenerate mobile metadata cache** \u2014 Run \`generate_mobile_metadata_cache\` for profiles that use this layout
 2. **Verify on mobile** \u2014 The new sidebar item should appear after cache regeneration and sync
-3. **Verify in Setup** \u2014 Check Setup > Object Manager > Visit > Page Layouts > ${fullLayoutName} to confirm the related list appears${dbSchemaNote}`
+3. **Verify in Setup** \u2014 Check Setup > Object Manager > Visit > Page Layouts > ${fullLayoutName} to confirm the related list appears${dbSchemaNote}
+
+> **If the related list still doesn't appear on mobile after cache regeneration** and the target object (\`${objectName}\`) has **no record types**, this was a known metadata-service bug where related lists (including the Files related list) were silently dropped from the generated cache for record-type-less objects. It is fixed in newer package versions \u2014 check the AFLS package version and upgrade rather than re-editing the layout.`
               }
             ]
           };
@@ -81793,9 +82176,7 @@ function loadAllRules() {
     console.error(`Rules directory not found: ${RULES_DIR}`);
     return ruleFiles;
   }
-  const files = readdirSync4(RULES_DIR).filter(
-    (f) => f.endsWith(".yaml") || f.endsWith(".yml")
-  );
+  const files = readdirSync4(RULES_DIR).filter((f) => f.endsWith(".yaml") || f.endsWith(".yml"));
   for (const file of files) {
     if (file.startsWith("_")) continue;
     try {
@@ -82001,9 +82382,7 @@ function evaluateExpectCondition(expect, context) {
     }
     if (expect.includes("records.some(") || expect.includes("records.every(")) {
       if (expect.includes("ActiveVersionId != null")) {
-        return records?.some(
-          (r) => r.ActiveVersionId != null
-        ) ?? false;
+        return records?.some((r) => r.ActiveVersionId != null) ?? false;
       }
     }
     console.error(`Unable to evaluate expect condition: ${expect}`);
@@ -82044,9 +82423,7 @@ async function runAudit(targetOrg, options = {}) {
   };
   for (const rule of rulesToRun) {
     if (rule.prerequisites && rule.prerequisites.length > 0) {
-      const prereqResults = results.filter(
-        (r) => rule.prerequisites.includes(r.rule.id)
-      );
+      const prereqResults = results.filter((r) => rule.prerequisites.includes(r.rule.id));
       const prereqsFailed = prereqResults.some((r) => !r.passed);
       if (prereqsFailed) {
         results.push({
@@ -82593,7 +82970,9 @@ function register8(server2) {
     "list_db_schema",
     "List all DB Schema records (mobile object sync configuration). Shows SObject, Type, Active status, SOQL filter, sync direction, and profile assignments. Use this instead of list_admin_settings for DbSchema.",
     {
-      filter: external_exports.string().optional().describe("Optional: filter by record name or SObject name (case-insensitive partial match)"),
+      filter: external_exports.string().optional().describe(
+        "Optional: filter by record name or SObject name (case-insensitive partial match)"
+      ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to query")
     },
     async ({ filter, targetOrg }) => {
@@ -82609,9 +82988,14 @@ function register8(server2) {
         const catResult = await cachedToolingQuery(catQuery, effectiveOrg);
         if (!catResult.success || !catResult.data?.records?.length) {
           return {
-            content: [{ type: "text", text: `# DB Schema Not Found
+            content: [
+              {
+                type: "text",
+                text: `# DB Schema Not Found
 
-No DbSchema category found. Ensure AFLS is installed in the org.` }]
+No DbSchema category found. Ensure AFLS is installed in the org.`
+              }
+            ]
           };
         }
         const categoryId = catResult.data.records[0].Id;
@@ -82619,9 +83003,11 @@ No DbSchema category found. Ensure AFLS is installed in the org.` }]
         const recordsResult = await runToolingQuery(recordsQuery, effectiveOrg);
         if (!recordsResult.success) {
           return {
-            content: [{ type: "text", text: `# Failed to Query DB Schema
+            content: [
+              { type: "text", text: `# Failed to Query DB Schema
 
-${recordsResult.error}` }]
+${recordsResult.error}` }
+            ]
           };
         }
         const records = recordsResult.data?.records || [];
@@ -82633,16 +83019,25 @@ No DB Schema records found.` }]
           };
         }
         const recordIds = records.map((r) => r.Id);
-        const { fieldValuesByRecord, queryError: fvError } = await queryFieldValues(recordIds, effectiveOrg, true);
+        const { fieldValuesByRecord, queryError: fvError } = await queryFieldValues(
+          recordIds,
+          effectiveOrg,
+          true
+        );
         if (fvError) {
           return {
-            content: [{ type: "text", text: `# Failed to Query Field Values
+            content: [
+              {
+                type: "text",
+                text: `# Failed to Query Field Values
 
 Records found: ${records.length}, but field values query failed:
 
 ${fvError}
 
-This may indicate that the Tooling API column names differ from expected. Use \`list_admin_settings({ category: "DbSchema" })\` as a fallback.` }]
+This may indicate that the Tooling API column names differ from expected. Use \`list_admin_settings({ category: "DbSchema" })\` as a fallback.`
+              }
+            ]
           };
         }
         const rows = [];
@@ -82672,9 +83067,14 @@ This may indicate that the Tooling API column names differ from expected. Use \`
         }
         if (rows.length === 0) {
           return {
-            content: [{ type: "text", text: `# DB Schema Records
+            content: [
+              {
+                type: "text",
+                text: `# DB Schema Records
 
-No records match filter "${filter}". Total records in org: ${records.length}.` }]
+No records match filter "${filter}". Total records in org: ${records.length}.`
+              }
+            ]
           };
         }
         let message = `# DB Schema Records
@@ -82705,9 +83105,14 @@ Use \`get_db_schema\` to see full details for a specific record.`;
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to List DB Schema
+          content: [
+            {
+              type: "text",
+              text: `# Failed to List DB Schema
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -82733,14 +83138,22 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
         const recordResult = await runToolingQuery(recordQuery, effectiveOrg);
         if (!recordResult.success || !recordResult.data?.records?.length) {
           return {
-            content: [{ type: "text", text: `# DB Schema Record Not Found
+            content: [
+              {
+                type: "text",
+                text: `# DB Schema Record Not Found
 
-No record named "${fullName}". Use \`list_db_schema\` to see all available records.` }]
+No record named "${fullName}". Use \`list_db_schema\` to see all available records.`
+              }
+            ]
           };
         }
         const record2 = recordResult.data.records[0];
         const recordId = record2.Id;
-        const { fieldValuesByRecord: fvMap, queryError: fvError } = await queryFieldValues([recordId], effectiveOrg);
+        const { fieldValuesByRecord: fvMap, queryError: fvError } = await queryFieldValues(
+          [recordId],
+          effectiveOrg
+        );
         const fieldValues = fvMap.get(recordId) || [];
         const assignmentMap = await queryAssignments([recordId], effectiveOrg);
         let message = `# ${record2.MasterLabel} (\`${record2.DeveloperName}\`)
@@ -82804,9 +83217,14 @@ Use \`update_db_schema\` to modify this record or \`toggle_db_schema\` to enable
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to Get DB Schema Record
+          content: [
+            {
+              type: "text",
+              text: `# Failed to Get DB Schema Record
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -82816,15 +83234,36 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
     "Create a new DB Schema record for mobile object sync. Creates the LifeSciConfigRecord and all standard LifeSciConfigFieldValue records with correct data types. Names it DbSchema_{objectName} automatically.",
     {
       objectName: external_exports.string().describe("Salesforce object API name (e.g., 'Product2', 'CustomObject__c')"),
-      type: external_exports.enum(["DATA", "CONFIGURATION"]).optional().default("DATA").describe("Record type: DATA (synced objects) or CONFIGURATION (metadata-like records). Default: DATA"),
-      whereSoql: external_exports.string().optional().describe("Optional SOQL WHERE clause filter. Must be wrapped in parentheses, e.g., '(IsActive = true)'"),
+      type: external_exports.enum(["DATA", "CONFIGURATION"]).optional().default("DATA").describe(
+        "Record type: DATA (synced objects) or CONFIGURATION (metadata-like records). Default: DATA"
+      ),
+      whereSoql: external_exports.string().optional().describe(
+        "Optional SOQL WHERE clause filter. Must be wrapped in parentheses, e.g., '(IsActive = true)'"
+      ),
       oneWaySync: external_exports.boolean().optional().default(false).describe("If true, data flows web\u2192mobile only (read-only on mobile). Default: false"),
-      attachmentsSupport: external_exports.enum(["CACHE", "BACKGROUND", ""]).optional().default("").describe("How attachments are handled: CACHE (during sync), BACKGROUND (after sync), or empty (none). Default: none"),
-      profiles: external_exports.array(external_exports.string()).optional().describe("Optional: profile names to assign (e.g., ['Field Sales Representative', 'System Administrator'])"),
+      attachmentsSupport: external_exports.enum(["CACHE", "BACKGROUND", ""]).optional().default("").describe(
+        "How attachments are handled: CACHE (during sync), BACKGROUND (after sync), or empty (none). Default: none"
+      ),
+      profiles: external_exports.array(external_exports.string()).optional().describe(
+        "Optional: profile names to assign (e.g., ['Field Sales Representative', 'System Administrator'])"
+      ),
+      permissionSets: external_exports.array(external_exports.string()).optional().describe(
+        "Optional: permission set API names (NOT labels) that gate this object's sync (e.g., ['LSC_Field_Sales']). Stored as a semicolon-delimited list in the PermissionSets field. The mobile app syncs the object for users who hold any listed permission set, in addition to the assigned profiles."
+      ),
       isActive: external_exports.boolean().optional().default(true).describe("Whether the record is active (default: true)"),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to create in")
     },
-    async ({ objectName, type, whereSoql, oneWaySync, attachmentsSupport, profiles, isActive, targetOrg }) => {
+    async ({
+      objectName,
+      type,
+      whereSoql,
+      oneWaySync,
+      attachmentsSupport,
+      profiles,
+      permissionSets,
+      isActive,
+      targetOrg
+    }) => {
       const validation = await validateOrgConnection();
       const effectiveOrg = targetOrg || validation.targetOrg;
       if (!effectiveOrg) {
@@ -82839,9 +83278,14 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
         const catResult = await cachedToolingQuery(catQuery, effectiveOrg);
         if (!catResult.success || !catResult.data?.records?.length) {
           return {
-            content: [{ type: "text", text: `# DbSchema Category Not Found
+            content: [
+              {
+                type: "text",
+                text: `# DbSchema Category Not Found
 
-No DbSchema category found. Ensure AFLS is installed.` }]
+No DbSchema category found. Ensure AFLS is installed.`
+              }
+            ]
           };
         }
         const categoryId = catResult.data.records[0].Id;
@@ -82849,9 +83293,14 @@ No DbSchema category found. Ensure AFLS is installed.` }]
         const existResult = await runToolingQuery(existCheck, effectiveOrg);
         if (existResult.success && existResult.data?.records?.length) {
           return {
-            content: [{ type: "text", text: `# DB Schema Record Already Exists
+            content: [
+              {
+                type: "text",
+                text: `# DB Schema Record Already Exists
 
-\`${devName}\` already exists (ID: ${existResult.data.records[0].Id}). Use \`update_db_schema\` to modify it or \`get_db_schema\` to see its details.` }]
+\`${devName}\` already exists (ID: ${existResult.data.records[0].Id}). Use \`update_db_schema\` to modify it or \`get_db_schema\` to see its details.`
+              }
+            ]
           };
         }
         const shouldActivate = isActive ?? true;
@@ -82868,9 +83317,14 @@ No DbSchema category found. Ensure AFLS is installed.` }]
         );
         if (!recordResult.success) {
           return {
-            content: [{ type: "text", text: `# Failed to Create DB Schema Record
+            content: [
+              {
+                type: "text",
+                text: `# Failed to Create DB Schema Record
 
-${recordResult.error}` }]
+${recordResult.error}`
+              }
+            ]
           };
         }
         const recordId = recordResult.data.id;
@@ -82883,7 +83337,11 @@ ${recordResult.error}` }]
           { name: "AttachmentsSupport", dataType: "PICKLIST", value: attachmentsSupport || "" },
           { name: "Status", dataType: "PICKLIST", value: "VALID" },
           { name: "MandatoryFields", dataType: "LONGTEXT", value: "" },
-          { name: "PermissionSets", dataType: "LONGTEXT", value: "" }
+          {
+            name: "PermissionSets",
+            dataType: "LONGTEXT",
+            value: permissionSets && permissionSets.length ? permissionSets.join("; ") : ""
+          }
         ];
         const fieldErrors = [];
         for (const field of fieldDefs) {
@@ -82894,7 +83352,11 @@ ${recordResult.error}` }]
           };
           const valueCol = getValueColumn(field.dataType);
           createData[valueCol] = field.value;
-          const fieldResult = await createToolingRecord("LifeSciConfigFieldValue", createData, effectiveOrg);
+          const fieldResult = await createToolingRecord(
+            "LifeSciConfigFieldValue",
+            createData,
+            effectiveOrg
+          );
           if (!fieldResult.success) {
             fieldErrors.push(`${field.name}: ${fieldResult.error}`);
           }
@@ -82932,7 +83394,9 @@ ${recordResult.error}` }]
             fieldErrors.push(`Activation: ${activateResult.error}`);
           }
         } else if (shouldActivate && fieldErrors.length > 0) {
-          fieldErrors.push("Activation skipped \u2014 fix field value errors first, then use update_db_schema to activate");
+          fieldErrors.push(
+            "Activation skipped \u2014 fix field value errors first, then use update_db_schema to activate"
+          );
         }
         let message = `# DB Schema Record Created
 
@@ -82952,6 +83416,9 @@ ${recordResult.error}` }]
         if (whereSoql) message += `- **SOQL Filter:** ${whereSoql}
 `;
         if (attachmentsSupport) message += `- **Attachments:** ${attachmentsSupport}
+`;
+        if (permissionSets && permissionSets.length)
+          message += `- **PermissionSets:** ${permissionSets.join("; ")}
 `;
         const totalFields = fieldDefs.length;
         const successFields = totalFields - fieldErrors.length;
@@ -82994,9 +83461,14 @@ ${recordResult.error}` }]
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to Create DB Schema Record
+          content: [
+            {
+              type: "text",
+              text: `# Failed to Create DB Schema Record
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -83012,9 +83484,22 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
       attachmentsSupport: external_exports.enum(["CACHE", "BACKGROUND", ""]).optional().describe("How attachments are handled"),
       mandatoryFields: external_exports.string().optional().describe("Comma-separated list of mandatory fields"),
       deltaDateField: external_exports.string().optional().describe("Field used for delta sync (e.g., 'LastModifiedDate')"),
+      permissionSets: external_exports.array(external_exports.string()).optional().describe(
+        "Permission set API names (NOT labels) that gate this object's sync. Stored as a semicolon-delimited list in the PermissionSets field. Pass an empty array to clear."
+      ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to update")
     },
-    async ({ name, whereSoql, oneWaySync, isActive, attachmentsSupport, mandatoryFields, deltaDateField, targetOrg }) => {
+    async ({
+      name,
+      whereSoql,
+      oneWaySync,
+      isActive,
+      attachmentsSupport,
+      mandatoryFields,
+      deltaDateField,
+      permissionSets,
+      targetOrg
+    }) => {
       const validation = await validateOrgConnection();
       const effectiveOrg = targetOrg || validation.targetOrg;
       if (!effectiveOrg) {
@@ -83028,9 +83513,14 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
         const recordResult = await runToolingQuery(recordQuery, effectiveOrg);
         if (!recordResult.success || !recordResult.data?.records?.length) {
           return {
-            content: [{ type: "text", text: `# DB Schema Record Not Found
+            content: [
+              {
+                type: "text",
+                text: `# DB Schema Record Not Found
 
-No record named "${fullName}". Use \`list_db_schema\` to see all available records.` }]
+No record named "${fullName}". Use \`list_db_schema\` to see all available records.`
+              }
+            ]
           };
         }
         const record2 = recordResult.data.records[0];
@@ -83049,16 +83539,24 @@ No record named "${fullName}". Use \`list_db_schema\` to see all available recor
             changes.push(`IsActive: FAILED \u2014 ${updateResult.error}`);
           }
         }
-        const { fieldValuesByRecord: fvMap, queryError: fvError } = await queryFieldValues([recordId], effectiveOrg);
+        const { fieldValuesByRecord: fvMap, queryError: fvError } = await queryFieldValues(
+          [recordId],
+          effectiveOrg
+        );
         if (fvError) {
           return {
-            content: [{ type: "text", text: `# Failed to Query Field Values
+            content: [
+              {
+                type: "text",
+                text: `# Failed to Query Field Values
 
 Could not read existing field values for ${fullName}:
 
 ${fvError}
 
-Cannot safely update without knowing current values.` }]
+Cannot safely update without knowing current values.`
+              }
+            ]
           };
         }
         const existingFVs = /* @__PURE__ */ new Map();
@@ -83067,11 +83565,34 @@ Cannot safely update without knowing current values.` }]
           existingFVs.set(f.FieldName, f);
         }
         const fieldUpdates = [];
-        if (whereSoql !== void 0) fieldUpdates.push({ fieldName: "WhereSoql", value: whereSoql, dataType: "LONGTEXT" });
-        if (oneWaySync !== void 0) fieldUpdates.push({ fieldName: "OneWaySync", value: oneWaySync, dataType: "BOOLEAN" });
-        if (attachmentsSupport !== void 0) fieldUpdates.push({ fieldName: "AttachmentsSupport", value: attachmentsSupport, dataType: "PICKLIST" });
-        if (mandatoryFields !== void 0) fieldUpdates.push({ fieldName: "MandatoryFields", value: mandatoryFields, dataType: "LONGTEXT" });
-        if (deltaDateField !== void 0) fieldUpdates.push({ fieldName: "DeltaDateField", value: deltaDateField, dataType: "FIELD" });
+        if (whereSoql !== void 0)
+          fieldUpdates.push({ fieldName: "WhereSoql", value: whereSoql, dataType: "LONGTEXT" });
+        if (oneWaySync !== void 0)
+          fieldUpdates.push({ fieldName: "OneWaySync", value: oneWaySync, dataType: "BOOLEAN" });
+        if (attachmentsSupport !== void 0)
+          fieldUpdates.push({
+            fieldName: "AttachmentsSupport",
+            value: attachmentsSupport,
+            dataType: "PICKLIST"
+          });
+        if (mandatoryFields !== void 0)
+          fieldUpdates.push({
+            fieldName: "MandatoryFields",
+            value: mandatoryFields,
+            dataType: "LONGTEXT"
+          });
+        if (deltaDateField !== void 0)
+          fieldUpdates.push({
+            fieldName: "DeltaDateField",
+            value: deltaDateField,
+            dataType: "FIELD"
+          });
+        if (permissionSets !== void 0)
+          fieldUpdates.push({
+            fieldName: "PermissionSets",
+            value: permissionSets.join("; "),
+            dataType: "LONGTEXT"
+          });
         for (const update of fieldUpdates) {
           const existing = existingFVs.get(update.fieldName);
           if (existing) {
@@ -83097,7 +83618,11 @@ Cannot safely update without knowing current values.` }]
               DataType: update.dataType,
               [valueCol]: update.value
             };
-            const createResult = await createToolingRecord("LifeSciConfigFieldValue", createData, effectiveOrg);
+            const createResult = await createToolingRecord(
+              "LifeSciConfigFieldValue",
+              createData,
+              effectiveOrg
+            );
             if (createResult.success) {
               changes.push(`${update.fieldName}: (new) = ${update.value}`);
             } else {
@@ -83107,9 +83632,14 @@ Cannot safely update without knowing current values.` }]
         }
         if (changes.length === 0) {
           return {
-            content: [{ type: "text", text: `# Nothing to Update
+            content: [
+              {
+                type: "text",
+                text: `# Nothing to Update
 
-No changes specified. Provide at least one field to update (whereSoql, oneWaySync, isActive, attachmentsSupport, mandatoryFields, deltaDateField).` }]
+No changes specified. Provide at least one field to update (whereSoql, oneWaySync, isActive, attachmentsSupport, mandatoryFields, deltaDateField, permissionSets).`
+              }
+            ]
           };
         }
         const hasFailures = changes.some((c) => c.includes("FAILED"));
@@ -83139,9 +83669,14 @@ No changes specified. Provide at least one field to update (whereSoql, oneWaySyn
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to Update DB Schema Record
+          content: [
+            {
+              type: "text",
+              text: `# Failed to Update DB Schema Record
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -83168,9 +83703,14 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
         const recordResult = await runToolingQuery(recordQuery, effectiveOrg);
         if (!recordResult.success || !recordResult.data?.records?.length) {
           return {
-            content: [{ type: "text", text: `# DB Schema Record Not Found
+            content: [
+              {
+                type: "text",
+                text: `# DB Schema Record Not Found
 
-No record named "${fullName}". Use \`list_db_schema\` to see all available records.` }]
+No record named "${fullName}". Use \`list_db_schema\` to see all available records.`
+              }
+            ]
           };
         }
         const record2 = recordResult.data.records[0];
@@ -83178,9 +83718,14 @@ No record named "${fullName}". Use \`list_db_schema\` to see all available recor
         const wasActive = record2.IsActive;
         if (wasActive === active2) {
           return {
-            content: [{ type: "text", text: `# No Change Needed
+            content: [
+              {
+                type: "text",
+                text: `# No Change Needed
 
-\`${fullName}\` is already ${active2 ? "active" : "inactive"}.` }]
+\`${fullName}\` is already ${active2 ? "active" : "inactive"}.`
+              }
+            ]
           };
         }
         const updateResult = await updateToolingRecord(
@@ -83191,9 +83736,14 @@ No record named "${fullName}". Use \`list_db_schema\` to see all available recor
         );
         if (!updateResult.success) {
           return {
-            content: [{ type: "text", text: `# Failed to Toggle DB Schema Record
+            content: [
+              {
+                type: "text",
+                text: `# Failed to Toggle DB Schema Record
 
-${updateResult.error}` }]
+${updateResult.error}`
+              }
+            ]
           };
         }
         let message = `# DB Schema Record ${active2 ? "Enabled" : "Disabled"}
@@ -83203,6 +83753,14 @@ ${updateResult.error}` }]
 `;
         message += `**Status:** ${wasActive ? "Active" : "Inactive"} \u2192 ${active2 ? "Active" : "Inactive"}
 `;
+        if (!active2) {
+          message += `
+## \u26A0\uFE0F Destructive to Local Mobile Data
+
+`;
+          message += `Disabling a DB Schema record is **not** just a visibility toggle. On each device's next sync, the mobile app runs \`DELETE FROM <table>\` for any object that is no longer in the metadata \u2014 so **all locally cached records for \`${record2.MasterLabel ?? fullName}\` on the iPad are wiped**. Any unsynced offline edits to that object are lost. Re-enabling later re-syncs from the server, but local-only/unsynced data does not come back. Only disable when you intend to remove the object from mobile entirely.
+`;
+        }
         message += `
 ## Next Steps
 
@@ -83215,9 +83773,14 @@ ${updateResult.error}` }]
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to Toggle DB Schema Record
+          content: [
+            {
+              type: "text",
+              text: `# Failed to Toggle DB Schema Record
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -83248,11 +83811,16 @@ function register9(server2) {
           const allCatResult = await cachedToolingQuery(allCatQuery, effectiveOrg);
           const available = allCatResult.success && allCatResult.data?.records?.length ? allCatResult.data.records.map((c) => c.Category).join(", ") : "none found";
           return {
-            content: [{ type: "text", text: `# UISchema Category Not Found
+            content: [
+              {
+                type: "text",
+                text: `# UISchema Category Not Found
 
 No "UISchema" category in Admin Console. Available categories: ${available}
 
-Ensure AFLS is installed and the Mobile UI Settings feature is enabled.` }]
+Ensure AFLS is installed and the Mobile UI Settings feature is enabled.`
+              }
+            ]
           };
         }
         const categoryId = catResult.data.records[0].Id;
@@ -83260,28 +83828,44 @@ Ensure AFLS is installed and the Mobile UI Settings feature is enabled.` }]
         const recordsResult = await runToolingQuery(recordsQuery, effectiveOrg);
         if (!recordsResult.success) {
           return {
-            content: [{ type: "text", text: `# Failed to Query UI Settings
+            content: [
+              { type: "text", text: `# Failed to Query UI Settings
 
-${recordsResult.error}` }]
+${recordsResult.error}` }
+            ]
           };
         }
         const records = recordsResult.data?.records || [];
         if (records.length === 0) {
           return {
-            content: [{ type: "text", text: `# Navigation Tabs
+            content: [
+              {
+                type: "text",
+                text: `# Navigation Tabs
 
-No UI Settings records found. Use \`add_navigation_tab\` to create the first tab.` }]
+No UI Settings records found. Use \`add_navigation_tab\` to create the first tab.`
+              }
+            ]
           };
         }
         const recordIds = records.map((r) => r.Id);
-        const { fieldValuesByRecord, queryError: fvError } = await queryFieldValues(recordIds, effectiveOrg, true);
+        const { fieldValuesByRecord, queryError: fvError } = await queryFieldValues(
+          recordIds,
+          effectiveOrg,
+          true
+        );
         if (fvError) {
           return {
-            content: [{ type: "text", text: `# Failed to Query Field Values
+            content: [
+              {
+                type: "text",
+                text: `# Failed to Query Field Values
 
 Records found: ${records.length}, but field values query failed:
 
-${fvError}` }]
+${fvError}`
+              }
+            ]
           };
         }
         const assignmentsByRecord = await queryAssignments(recordIds, effectiveOrg);
@@ -83310,9 +83894,14 @@ ${fvError}` }]
         rows.sort((a, b) => (a.tabOrder ?? 999) - (b.tabOrder ?? 999));
         if (rows.length === 0) {
           return {
-            content: [{ type: "text", text: `# Navigation Tabs
+            content: [
+              {
+                type: "text",
+                text: `# Navigation Tabs
 
-No Tab-type UI Settings records found (${records.length} total UI records exist with other types). Use \`add_navigation_tab\` to create a navigation tab.` }]
+No Tab-type UI Settings records found (${records.length} total UI records exist with other types). Use \`add_navigation_tab\` to create a navigation tab.`
+              }
+            ]
           };
         }
         let message = `# Navigation Tabs (${rows.length})
@@ -83337,9 +83926,14 @@ Use \`add_navigation_tab\` to add a new tab, or \`update_admin_setting\` to modi
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to List Navigation Tabs
+          content: [
+            {
+              type: "text",
+              text: `# Failed to List Navigation Tabs
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -83349,7 +83943,9 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
     "Add a new navigation tab to AFLS Mobile via Admin Console > Mobile > UI Settings. Creates a LifeSciConfigRecord of type Tab with field values and optional profile assignments.",
     {
       label: external_exports.string().describe("Display name for the component (MasterLabel), e.g. 'Accounts Tab'"),
-      developerName: external_exports.string().describe("Unique API name (DeveloperName), e.g. 'NavTab_Accounts'. Convention: NavTab_{ObjectName}"),
+      developerName: external_exports.string().describe(
+        "Unique API name (DeveloperName), e.g. 'NavTab_Accounts'. Convention: NavTab_{ObjectName}"
+      ),
       tabName: external_exports.string().describe("Text shown on the tab in the mobile app, e.g. 'Accounts'"),
       tabOrder: external_exports.number().int().describe("Position number \u2014 lower values appear further left (e.g. 1, 2, 3)"),
       profiles: external_exports.array(external_exports.string()).optional().describe("Optional: profile names to assign (e.g. ['Field Sales Representative'])"),
@@ -83372,11 +83968,16 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
           const allCatResult = await cachedToolingQuery(allCatQuery, effectiveOrg);
           const available = allCatResult.success && allCatResult.data?.records?.length ? allCatResult.data.records.map((c) => c.Category).join(", ") : "none found";
           return {
-            content: [{ type: "text", text: `# UISchema Category Not Found
+            content: [
+              {
+                type: "text",
+                text: `# UISchema Category Not Found
 
 No "UISchema" category in Admin Console. Available categories: ${available}
 
-Ensure AFLS is installed and the Mobile UI Settings feature is enabled.` }]
+Ensure AFLS is installed and the Mobile UI Settings feature is enabled.`
+              }
+            ]
           };
         }
         const categoryId = catResult.data.records[0].Id;
@@ -83385,9 +83986,14 @@ Ensure AFLS is installed and the Mobile UI Settings feature is enabled.` }]
         if (existResult.success && existResult.data?.records?.length) {
           const existingId = existResult.data.records[0].Id;
           return {
-            content: [{ type: "text", text: `# Navigation Tab Already Exists
+            content: [
+              {
+                type: "text",
+                text: `# Navigation Tab Already Exists
 
-\`${developerName}\` already exists (ID: ${existingId}). Use \`update_admin_setting\` to modify it or \`list_navigation_tabs\` to see all tabs.` }]
+\`${developerName}\` already exists (ID: ${existingId}). Use \`update_admin_setting\` to modify it or \`list_navigation_tabs\` to see all tabs.`
+              }
+            ]
           };
         }
         const shouldActivate = isActive ?? true;
@@ -83405,9 +84011,11 @@ Ensure AFLS is installed and the Mobile UI Settings feature is enabled.` }]
         );
         if (!recordResult.success) {
           return {
-            content: [{ type: "text", text: `# Failed to Create Navigation Tab
+            content: [
+              { type: "text", text: `# Failed to Create Navigation Tab
 
-${recordResult.error}` }]
+${recordResult.error}` }
+            ]
           };
         }
         const recordId = recordResult.data.id;
@@ -83425,7 +84033,11 @@ ${recordResult.error}` }]
           };
           const valueCol = getValueColumn(field.dataType);
           createData[valueCol] = field.value;
-          const fieldResult = await createToolingRecord("LifeSciConfigFieldValue", createData, effectiveOrg);
+          const fieldResult = await createToolingRecord(
+            "LifeSciConfigFieldValue",
+            createData,
+            effectiveOrg
+          );
           if (!fieldResult.success) {
             fieldErrors.push(`${field.name}: ${fieldResult.error}`);
           }
@@ -83466,7 +84078,9 @@ ${recordResult.error}` }]
             activated = true;
           }
         } else if (shouldActivate && fieldErrors.length > 0) {
-          fieldErrors.push("Activation skipped \u2014 fix field value errors first, then activate manually via update_admin_setting");
+          fieldErrors.push(
+            "Activation skipped \u2014 fix field value errors first, then activate manually via update_admin_setting"
+          );
         }
         let message = `# Navigation Tab Created
 
@@ -83522,9 +84136,14 @@ ${recordResult.error}` }]
         };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to Add Navigation Tab
+          content: [
+            {
+              type: "text",
+              text: `# Failed to Add Navigation Tab
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -83533,38 +84152,31 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
 
 // src/tools/resources.ts
 function register10(server2) {
-  server2.resource(
-    "afls://modules",
-    "List of all AFLS4CE modules with documentation",
-    async () => {
-      const modules = getModuleList();
-      const moduleTable = modules.map((m) => `| ${m.title} | ${m.slug} | ${m.fileCount} |`).join("\n");
-      return {
-        contents: [
-          {
-            uri: "afls://modules",
-            mimeType: "text/markdown",
-            text: `# AFLS4CE Modules
+  server2.resource("afls://modules", "List of all AFLS4CE modules with documentation", async () => {
+    const modules = getModuleList();
+    const moduleTable = modules.map((m) => `| ${m.title} | ${m.slug} | ${m.fileCount} |`).join("\n");
+    return {
+      contents: [
+        {
+          uri: "afls://modules",
+          mimeType: "text/markdown",
+          text: `# AFLS4CE Modules
 
 | Module | Slug | Docs |
 |--------|------|------|
 ${moduleTable}
 
 Use the \`get_afls_module_docs\` tool with a slug to get detailed documentation.`
-          }
-        ]
-      };
-    }
-  );
-  server2.resource(
-    "afls://overview",
-    "Overview of AFLS for Customer Engagement",
-    async () => ({
-      contents: [
-        {
-          uri: "afls://overview",
-          mimeType: "text/markdown",
-          text: `# AFLS for Customer Engagement (AFLS4CE)
+        }
+      ]
+    };
+  });
+  server2.resource("afls://overview", "Overview of AFLS for Customer Engagement", async () => ({
+    contents: [
+      {
+        uri: "afls://overview",
+        mimeType: "text/markdown",
+        text: `# AFLS for Customer Engagement (AFLS4CE)
 
 ## Overview
 
@@ -83627,10 +84239,9 @@ Use the tools provided:
 - \`search_afls_knowledge\` - Search for specific topics
 - \`explain_afls_concept\` - Get explanations of AFLS concepts
 - \`get_afls_admin_setup\` - Get admin configuration guidance`
-        }
-      ]
-    })
-  );
+      }
+    ]
+  }));
   server2.prompt(
     "afls_implementation_checklist",
     "Generate an implementation checklist for an AFLS module",
@@ -83744,9 +84355,7 @@ function detectFormat(filePaths) {
       return { format: "html-zip", paths: zips };
     }
   }
-  const extensions = new Set(
-    filePaths.map((p) => path3.extname(p).toLowerCase())
-  );
+  const extensions = new Set(filePaths.map((p) => path3.extname(p).toLowerCase()));
   if (extensions.size > 1) {
     throw new Error(
       `Mixed file types are not supported. Got: ${[...extensions].join(", ")}. Provide files of a single type (.pptx, .pdf, or .zip).`
@@ -83767,9 +84376,7 @@ function detectFormat(filePaths) {
     case ".zip":
       return { format: "html-zip", paths: filePaths };
     default:
-      throw new Error(
-        `Unsupported file type: ${ext}. Supported types: .pptx, .pdf, .zip`
-      );
+      throw new Error(`Unsupported file type: ${ext}. Supported types: .pptx, .pdf, .zip`);
   }
 }
 async function validateHtmlZip(zipPath) {
@@ -83937,10 +84544,7 @@ async function prepareHtmlZips(zipPaths) {
   return { success: true, format: "html-zip", pages };
 }
 async function checkLibreOfficeInstalled() {
-  const candidates = [
-    "soffice",
-    "/Applications/LibreOffice.app/Contents/MacOS/soffice"
-  ];
+  const candidates = ["soffice", "/Applications/LibreOffice.app/Contents/MacOS/soffice"];
   for (const cmd of candidates) {
     try {
       await execAsync2(`"${cmd}" --version`);
@@ -83969,9 +84573,7 @@ async function getSofficePath() {
     await execAsync2(`"${macPath}" --version`);
     return macPath;
   } catch {
-    throw new Error(
-      "LibreOffice not found. Install it with: brew install --cask libreoffice"
-    );
+    throw new Error("LibreOffice not found. Install it with: brew install --cask libreoffice");
   }
 }
 async function convertPptxToSlides(pptxPath, outputDir, conversionEngine = "libreoffice") {
@@ -83999,10 +84601,9 @@ async function convertPptxViaLibreOfficeHtml(pptxPath, outputDir) {
   }
   const pdfPath = path3.join(pdfDir, path3.basename(pptxPath, ".pptx") + ".pdf");
   try {
-    await execAsync2(
-      `"${soffice}" --headless --convert-to pdf --outdir "${pdfDir}" "${pptxPath}"`,
-      { timeout: 12e4 }
-    );
+    await execAsync2(`"${soffice}" --headless --convert-to pdf --outdir "${pdfDir}" "${pptxPath}"`, {
+      timeout: 12e4
+    });
   } catch (error2) {
     return {
       success: false,
@@ -84061,10 +84662,9 @@ async function convertPptxViaLibreOfficeHtml(pptxPath, outputDir) {
     } else {
       try {
         const pngPath = path3.join(slideDir, `temp.png`);
-        await execAsync2(
-          `sips -s format png "${pagePdfPaths[i]}" --out "${pngPath}"`,
-          { timeout: 3e4 }
-        );
+        await execAsync2(`sips -s format png "${pagePdfPaths[i]}" --out "${pngPath}"`, {
+          timeout: 3e4
+        });
         const pngBuffer = fs3.readFileSync(pngPath);
         const pngBase64 = pngBuffer.toString("base64");
         fs3.writeFileSync(
@@ -84086,14 +84686,10 @@ async function convertPptxViaLibreOfficeHtml(pptxPath, outputDir) {
     const thumbPath = path3.join(thumbDir, `slide_${slideNum}.jpg`);
     try {
       const tempJpg = path3.join(thumbDir, `slide_${slideNum}_temp.jpg`);
-      await execAsync2(
-        `sips -s format jpeg "${pagePdfPaths[i]}" --out "${tempJpg}"`,
-        { timeout: 15e3 }
-      );
-      await execAsync2(
-        `sips -z 280 220 "${tempJpg}" --out "${thumbPath}"`,
-        { timeout: 15e3 }
-      );
+      await execAsync2(`sips -s format jpeg "${pagePdfPaths[i]}" --out "${tempJpg}"`, {
+        timeout: 15e3
+      });
+      await execAsync2(`sips -z 280 220 "${tempJpg}" --out "${thumbPath}"`, { timeout: 15e3 });
       if (fs3.existsSync(tempJpg) && tempJpg !== thumbPath) {
         fs3.unlinkSync(tempJpg);
       }
@@ -84285,10 +84881,9 @@ async function generateThumbnails(pptxPath, pdfDir, thumbDir) {
   const soffice = await getSofficePath();
   const pdfPath = path3.join(pdfDir, path3.basename(pptxPath, ".pptx") + ".pdf");
   try {
-    await execAsync2(
-      `"${soffice}" --headless --convert-to pdf --outdir "${pdfDir}" "${pptxPath}"`,
-      { timeout: 12e4 }
-    );
+    await execAsync2(`"${soffice}" --headless --convert-to pdf --outdir "${pdfDir}" "${pptxPath}"`, {
+      timeout: 12e4
+    });
   } catch {
     return [];
   }
@@ -84309,14 +84904,10 @@ async function generateThumbnails(pptxPath, pdfDir, thumbDir) {
     const thumbPath = path3.join(thumbDir, `slide_${i + 1}.jpg`);
     try {
       const tempJpg = path3.join(thumbDir, `slide_${i + 1}_temp.jpg`);
-      await execAsync2(
-        `sips -s format jpeg "${pagePdfPath}" --out "${tempJpg}"`,
-        { timeout: 15e3 }
-      );
-      await execAsync2(
-        `sips -z 280 220 "${tempJpg}" --out "${thumbPath}"`,
-        { timeout: 15e3 }
-      );
+      await execAsync2(`sips -s format jpeg "${pagePdfPath}" --out "${tempJpg}"`, {
+        timeout: 15e3
+      });
+      await execAsync2(`sips -z 280 220 "${tempJpg}" --out "${thumbPath}"`, { timeout: 15e3 });
       if (fs3.existsSync(tempJpg) && tempJpg !== thumbPath) {
         fs3.unlinkSync(tempJpg);
       }
@@ -84385,7 +84976,9 @@ function register11(server2) {
     "upload_presentation",
     "Upload a presentation to AFLS Intelligent Content. Supports three formats: (1) .pptx \u2014 converts to HTML5 per-slide ZIPs using LibreOffice (default, preserves layout with SVG/images) or Pandoc reveal.js (semantic HTML with transitions), (2) .pdf \u2014 uploads directly (Salesforce handles page splitting), (3) .zip file(s) or directory of ZIPs \u2014 validates HTML structure and uploads each as a page. Creates the presentation via the Bulk Presentation Connect API.",
     {
-      filePath: external_exports.union([external_exports.string(), external_exports.array(external_exports.string())]).describe("Path(s) to file(s): single .pptx, single .pdf, .zip file(s), or a directory containing .zip files"),
+      filePath: external_exports.union([external_exports.string(), external_exports.array(external_exports.string())]).describe(
+        "Path(s) to file(s): single .pptx, single .pdf, .zip file(s), or a directory containing .zip files"
+      ),
       presentationName: external_exports.string().describe("Display name for the presentation in AFLS"),
       presentationId: external_exports.string().optional().describe("External system ID (e.g., Veeva Vault ID)"),
       activationDate: external_exports.string().optional().describe("ISO 8601 activation date (e.g., '2025-03-01')"),
@@ -84395,7 +84988,9 @@ function register11(server2) {
       enablePinchZoom: external_exports.boolean().optional().describe("Enable pinch-to-zoom in player"),
       topics: external_exports.array(external_exports.string()).optional().describe("Array of Topic IDs for Content Library categorization"),
       sendByEmail: external_exports.boolean().optional().describe("Allow reps to email this presentation"),
-      conversionEngine: external_exports.enum(["libreoffice", "pandoc"]).optional().default("libreoffice").describe("PPTX conversion engine: 'libreoffice' (default) produces SVG-based HTML5 with pixel-perfect visual fidelity (fonts, colors, backgrounds); 'pandoc' produces semantic HTML5 (loses visual styling). Only applies to .pptx files."),
+      conversionEngine: external_exports.enum(["libreoffice", "pandoc"]).optional().default("libreoffice").describe(
+        "PPTX conversion engine: 'libreoffice' (default) produces SVG-based HTML5 with pixel-perfect visual fidelity (fonts, colors, backgrounds); 'pandoc' produces semantic HTML5 (loses visual styling). Only applies to .pptx files."
+      ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to upload to")
     },
     async ({
@@ -84565,9 +85160,7 @@ ${prepResult.diagnostics}
           message += `- Page ${page.pageNumber} (${page.name}): uploaded (ContentVersion: ${uploadResult.data.id})
 `;
         } else {
-          uploadErrors.push(
-            `Page ${page.pageNumber}: ${uploadResult.error}`
-          );
+          uploadErrors.push(`Page ${page.pageNumber}: ${uploadResult.error}`);
           message += `- Page ${page.pageNumber} (${page.name}): **FAILED** \u2014 ${uploadResult.error}
 `;
         }
@@ -84700,29 +85293,17 @@ The ${uploadedPages.length} file(s) were uploaded successfully as ContentVersion
     "distribute_presentation",
     "Distribute a presentation to territories. Creates PresentationShare records with territory Group IDs. When includeChildren is true (default), uses TerritoryAndSubordinates groups so child territories automatically get access.",
     {
-      presentationId: external_exports.string().optional().describe(
-        "Presentation record ID (18-char). Provide this OR presentationName."
-      ),
-      presentationName: external_exports.string().optional().describe(
-        "Presentation name to look up. Provide this OR presentationId."
-      ),
+      presentationId: external_exports.string().optional().describe("Presentation record ID (18-char). Provide this OR presentationName."),
+      presentationName: external_exports.string().optional().describe("Presentation name to look up. Provide this OR presentationId."),
       territoryIds: external_exports.array(external_exports.string()).describe(
         "Territory2 IDs to distribute to. Children are included automatically when includeChildren is true."
       ),
       includeChildren: external_exports.boolean().optional().default(true).describe(
         "When true (default), shares with TerritoryAndSubordinates group so all child territories get access. When false, shares with the exact Territory group only."
       ),
-      targetOrg: external_exports.string().optional().describe(
-        "Optional: specific org to use. Uses current target org if not specified."
-      )
+      targetOrg: external_exports.string().optional().describe("Optional: specific org to use. Uses current target org if not specified.")
     },
-    async ({
-      presentationId,
-      presentationName,
-      territoryIds,
-      includeChildren,
-      targetOrg
-    }) => {
+    async ({ presentationId, presentationName, territoryIds, includeChildren, targetOrg }) => {
       const validation = await validateOrgConnection();
       const effectiveOrg = targetOrg || validation.targetOrg;
       if (!effectiveOrg) {
@@ -84832,9 +85413,7 @@ Ensure the territory IDs are valid Territory2 record IDs.`
       for (const g of groups) {
         territoryToGroup.set(g.RelatedId, g.Id);
       }
-      const unknownIds = territoryIds.filter(
-        (tid) => !territoryToGroup.has(tid)
-      );
+      const unknownIds = territoryIds.filter((tid) => !territoryToGroup.has(tid));
       if (unknownIds.length > 0) {
         message += `**Warning:** No ${groupType} group found for ${unknownIds.length} territory ID(s): ${unknownIds.map((tid) => nameMap.get(tid) || tid).join(", ")}
 
@@ -84989,35 +85568,23 @@ All ${territoryToGroup.size} territories already have share records. No changes 
     "assign_presentation_content",
     "Assign topics to a presentation and/or products to its pages. Creates TopicAssignment and PresentationPageProduct records. Skips duplicates automatically.",
     {
-      presentationId: external_exports.string().optional().describe(
-        "Presentation record ID (18-char). Provide this OR presentationName."
-      ),
-      presentationName: external_exports.string().optional().describe(
-        "Presentation name to look up. Provide this OR presentationId."
-      ),
+      presentationId: external_exports.string().optional().describe("Presentation record ID (18-char). Provide this OR presentationName."),
+      presentationName: external_exports.string().optional().describe("Presentation name to look up. Provide this OR presentationId."),
       topicIds: external_exports.array(external_exports.string()).optional().describe("Array of Topic record IDs to assign to the presentation."),
-      topicNames: external_exports.array(external_exports.string()).optional().describe(
-        "Array of Topic names to look up and assign to the presentation."
-      ),
+      topicNames: external_exports.array(external_exports.string()).optional().describe("Array of Topic names to look up and assign to the presentation."),
       products: external_exports.array(
         external_exports.object({
           pageNumber: external_exports.number().optional().describe("Page number (PageNumber field) to assign the product to."),
           pageName: external_exports.string().optional().describe("Page name to look up and assign the product to."),
           pageId: external_exports.string().optional().describe("PresentationPage record ID to assign the product to."),
-          productId: external_exports.string().describe(
-            "Product2 or LifeSciMarketableProduct record ID to assign."
-          ),
+          productId: external_exports.string().describe("Product2 or LifeSciMarketableProduct record ID to assign."),
           productGuidanceId: external_exports.string().optional().describe("Optional ProductGuidance record ID.")
         })
       ).optional().describe(
         "Array of per-page product assignments. Each entry must specify one of pageNumber, pageName, or pageId."
       ),
-      productIdForAllPages: external_exports.string().optional().describe(
-        "Shortcut: assign this single product ID to every page in the presentation."
-      ),
-      targetOrg: external_exports.string().optional().describe(
-        "Optional: specific org to use. Uses current target org if not specified."
-      )
+      productIdForAllPages: external_exports.string().optional().describe("Shortcut: assign this single product ID to every page in the presentation."),
+      targetOrg: external_exports.string().optional().describe("Optional: specific org to use. Uses current target org if not specified.")
     },
     async ({
       presentationId,
@@ -85179,9 +85746,7 @@ Presentation "${resolvedPresentationName || resolvedPresentationId}" has no link
               }
             }
           } else {
-            errors.push(
-              `Failed to look up topic names: ${topicLookup.error || "Unknown error"}`
-            );
+            errors.push(`Failed to look up topic names: ${topicLookup.error || "Unknown error"}`);
           }
         }
         if (allTopicIds.length > 0) {
@@ -85233,16 +85798,14 @@ Presentation "${resolvedPresentationName || resolvedPresentationId}" has no link
 
 `;
           const pageIds = pages.map((p) => `'${p.Id}'`).join(",");
-          let existingAutoAssignments = /* @__PURE__ */ new Set();
+          const existingAutoAssignments = /* @__PURE__ */ new Set();
           const existingCheck = await runSoqlQuery(
             `SELECT PresentationPageId, ProductId FROM PresentationPageProduct WHERE PresentationPageId IN (${pageIds})`,
             effectiveOrg
           );
           if (existingCheck.success && existingCheck.data) {
             for (const rec of existingCheck.data.records) {
-              existingAutoAssignments.add(
-                `${rec.PresentationPageId}:${rec.ProductId}`
-              );
+              existingAutoAssignments.add(`${rec.PresentationPageId}:${rec.ProductId}`);
             }
           }
           for (const prodRec of productLookup.data.records) {
@@ -85270,9 +85833,7 @@ Presentation "${resolvedPresentationName || resolvedPresentationId}" has no link
                 productsAssigned++;
                 existingAutoAssignments.add(key);
               } else {
-                errors.push(
-                  `Auto-product "${prodName}" \u2192 page "${p.Name}": ${result.error}`
-                );
+                errors.push(`Auto-product "${prodName}" \u2192 page "${p.Name}": ${result.error}`);
               }
             }
             message += `- **${prodName}** (${prodId}): assigned to ${assigned} page(s), skipped ${skipped}
@@ -85302,9 +85863,7 @@ Presentation "${resolvedPresentationName || resolvedPresentationId}" has no link
         const existingAssignments = /* @__PURE__ */ new Set();
         if (existingProductsResult.success && existingProductsResult.data) {
           for (const rec of existingProductsResult.data.records) {
-            existingAssignments.add(
-              `${rec.PresentationPageId}:${rec.ProductId}`
-            );
+            existingAssignments.add(`${rec.PresentationPageId}:${rec.ProductId}`);
           }
         }
         const assignments = [];
@@ -85323,9 +85882,7 @@ Presentation "${resolvedPresentationName || resolvedPresentationId}" has no link
             if (entry.pageId) {
               resolvedPage = pageById.get(entry.pageId);
               if (!resolvedPage) {
-                errors.push(
-                  `Page ID "${entry.pageId}" not found in this presentation.`
-                );
+                errors.push(`Page ID "${entry.pageId}" not found in this presentation.`);
                 continue;
               }
             } else if (entry.pageNumber !== void 0) {
@@ -85371,11 +85928,7 @@ Presentation "${resolvedPresentationName || resolvedPresentationId}" has no link
           if (assignment.productGuidanceId) {
             values.ProductGuidanceId = assignment.productGuidanceId;
           }
-          const result = await createRecord(
-            "PresentationPageProduct",
-            values,
-            effectiveOrg
-          );
+          const result = await createRecord("PresentationPageProduct", values, effectiveOrg);
           if (result.success) {
             productsAssigned++;
             existingAssignments.add(key);
@@ -85451,31 +86004,46 @@ function register12(server2) {
       const effectiveScope = scope || "all";
       if (sourceOrg === targetOrg) {
         return {
-          content: [{ type: "text", text: `# Cannot Diff Orgs
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Diff Orgs
 
-Source and target org are the same (\`${sourceOrg}\`). Please provide two different orgs.` }]
+Source and target org are the same (\`${sourceOrg}\`). Please provide two different orgs.`
+            }
+          ]
         };
       }
       const sourceCheck = await runSoqlQuery("SELECT Id FROM Organization LIMIT 1", sourceOrg);
       if (!sourceCheck.success) {
         return {
-          content: [{ type: "text", text: `# Cannot Diff Orgs
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Diff Orgs
 
 Failed to connect to source org \`${sourceOrg}\`:
 ${sourceCheck.error}
 
-Ensure the org is authenticated via \`sf org login web --alias ${sourceOrg}\`.` }]
+Ensure the org is authenticated via \`sf org login web --alias ${sourceOrg}\`.`
+            }
+          ]
         };
       }
       const targetCheck = await runSoqlQuery("SELECT Id FROM Organization LIMIT 1", targetOrg);
       if (!targetCheck.success) {
         return {
-          content: [{ type: "text", text: `# Cannot Diff Orgs
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Diff Orgs
 
 Failed to connect to target org \`${targetOrg}\`:
 ${targetCheck.error}
 
-Ensure the org is authenticated via \`sf org login web --alias ${targetOrg}\`.` }]
+Ensure the org is authenticated via \`sf org login web --alias ${targetOrg}\`.`
+            }
+          ]
         };
       }
       const fmtVal = (v) => v !== null && v !== void 0 && String(v) !== "" ? String(v) : "(empty)";
@@ -85566,7 +86134,13 @@ Ensure the org is authenticated via \`sf org login web --alias ${targetOrg}\`.` 
 `;
               }
             }
-            summary.push({ category: "Trigger Handlers", matches, differences, onlyInSource: onlySource, onlyInTarget: onlyTarget });
+            summary.push({
+              category: "Trigger Handlers",
+              matches,
+              differences,
+              onlyInSource: onlySource,
+              onlyInTarget: onlyTarget
+            });
             if (diffDetail) {
               detailSections += `### Trigger Handlers
 
@@ -85594,7 +86168,10 @@ ${tgtOnlyDetail}
             { scope: "admin-settings", label: "Admin Settings" }
           );
         } else if (effectiveScope !== "trigger-handlers") {
-          toolingScopes.push({ scope: effectiveScope, label: effectiveScope === "db-schema" ? "DB Schema" : effectiveScope === "actions" ? "Actions" : "Admin Settings" });
+          toolingScopes.push({
+            scope: effectiveScope,
+            label: effectiveScope === "db-schema" ? "DB Schema" : effectiveScope === "actions" ? "Actions" : "Admin Settings"
+          });
         }
         for (const ts of toolingScopes) {
           const catQuery = "SELECT Id, Category, MasterLabel FROM LifeSciConfigCategory ORDER BY Category";
@@ -85618,9 +86195,13 @@ ${tgtOnlyDetail}
             if (ts.scope === "db-schema") {
               return cats.filter((c) => c.Category === "DbSchema");
             } else if (ts.scope === "actions") {
-              return cats.filter((c) => c.Category === "QuickAction" || c.Category === "CustomAction");
+              return cats.filter(
+                (c) => c.Category === "QuickAction" || c.Category === "CustomAction"
+              );
             } else if (ts.scope === "admin-settings") {
-              return cats.filter((c) => c.Category !== "DbSchema" && c.Category !== "QuickAction" && c.Category !== "CustomAction");
+              return cats.filter(
+                (c) => c.Category !== "DbSchema" && c.Category !== "QuickAction" && c.Category !== "CustomAction"
+              );
             }
             return cats;
           };
@@ -85666,10 +86247,18 @@ ${tgtOnlyDetail}
             const srcIds = srcRecords.map((r) => r.Id);
             const tgtIds = tgtRecords.map((r) => r.Id);
             const [srcFvResult, tgtFvResult, srcAssignments, tgtAssignments] = await Promise.all([
-              srcIds.length > 0 ? queryFieldValues(srcIds, sourceOrg, true) : Promise.resolve({ fieldValuesByRecord: /* @__PURE__ */ new Map() }),
-              tgtIds.length > 0 ? queryFieldValues(tgtIds, targetOrg, true) : Promise.resolve({ fieldValuesByRecord: /* @__PURE__ */ new Map() }),
-              srcIds.length > 0 ? queryAssignments(srcIds, sourceOrg) : Promise.resolve(/* @__PURE__ */ new Map()),
-              tgtIds.length > 0 ? queryAssignments(tgtIds, targetOrg) : Promise.resolve(/* @__PURE__ */ new Map())
+              srcIds.length > 0 ? queryFieldValues(srcIds, sourceOrg, true) : Promise.resolve({
+                fieldValuesByRecord: /* @__PURE__ */ new Map()
+              }),
+              tgtIds.length > 0 ? queryFieldValues(tgtIds, targetOrg, true) : Promise.resolve({
+                fieldValuesByRecord: /* @__PURE__ */ new Map()
+              }),
+              srcIds.length > 0 ? queryAssignments(srcIds, sourceOrg) : Promise.resolve(
+                /* @__PURE__ */ new Map()
+              ),
+              tgtIds.length > 0 ? queryAssignments(tgtIds, targetOrg) : Promise.resolve(
+                /* @__PURE__ */ new Map()
+              )
             ]);
             const allRecKeys = /* @__PURE__ */ new Set([...srcRecMap.keys(), ...tgtRecMap.keys()]);
             const categoryLabel = ts.scope === "db-schema" ? "DB Schema" : catName;
@@ -85733,10 +86322,18 @@ ${tgtOnlyDetail}
               if (!srcRec || !tgtRec) continue;
               const diffFields = [];
               if (srcRec.IsActive !== tgtRec.IsActive) {
-                diffFields.push({ field: "IsActive", srcVal: srcRec.IsActive ? "\u2705 Yes" : "\u274C No", tgtVal: tgtRec.IsActive ? "\u2705 Yes" : "\u274C No" });
+                diffFields.push({
+                  field: "IsActive",
+                  srcVal: srcRec.IsActive ? "\u2705 Yes" : "\u274C No",
+                  tgtVal: tgtRec.IsActive ? "\u2705 Yes" : "\u274C No"
+                });
               }
               if (srcRec.IsOrgLevel !== tgtRec.IsOrgLevel) {
-                diffFields.push({ field: "IsOrgLevel", srcVal: srcRec.IsOrgLevel ? "Yes" : "No", tgtVal: tgtRec.IsOrgLevel ? "Yes" : "No" });
+                diffFields.push({
+                  field: "IsOrgLevel",
+                  srcVal: srcRec.IsOrgLevel ? "Yes" : "No",
+                  tgtVal: tgtRec.IsOrgLevel ? "Yes" : "No"
+                });
               }
               const srcFvs = srcFvResult.fieldValuesByRecord.get(srcRec.Id) || [];
               const tgtFvs = tgtFvResult.fieldValuesByRecord.get(tgtRec.Id) || [];
@@ -85755,7 +86352,11 @@ ${tgtOnlyDetail}
               const srcAssignStr = formatAssignments(srcAssign);
               const tgtAssignStr = formatAssignments(tgtAssign);
               if (srcAssignStr !== tgtAssignStr) {
-                diffFields.push({ field: "Profile Assignments", srcVal: srcAssignStr, tgtVal: tgtAssignStr });
+                diffFields.push({
+                  field: "Profile Assignments",
+                  srcVal: srcAssignStr,
+                  tgtVal: tgtAssignStr
+                });
               }
               if (diffFields.length > 0) {
                 totalDiffs++;
@@ -85794,7 +86395,13 @@ ${d.tgtVal}
               }
             }
           }
-          summary.push({ category: ts.label, matches: totalMatches, differences: totalDiffs, onlyInSource: totalOnlySource, onlyInTarget: totalOnlyTarget });
+          summary.push({
+            category: ts.label,
+            matches: totalMatches,
+            differences: totalDiffs,
+            onlyInSource: totalOnlySource,
+            onlyInTarget: totalOnlyTarget
+          });
           if (diffDetail) {
             detailSections += `### ${ts.label}
 
@@ -85817,7 +86424,10 @@ ${tgtOnlyDetail}`;
         message += `**Scope:** ${effectiveScope}
 
 `;
-        const totalDifferences = summary.reduce((sum, s) => sum + s.differences + s.onlyInSource + s.onlyInTarget, 0);
+        const totalDifferences = summary.reduce(
+          (sum, s) => sum + s.differences + s.onlyInSource + s.onlyInTarget,
+          0
+        );
         if (totalDifferences === 0) {
           message += `**\u2705 No differences found** across all checked categories.
 
@@ -85881,9 +86491,14 @@ ${tgtOnlyDetail}`;
         return { content: [{ type: "text", text: message }] };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Org Diff Failed
+          content: [
+            {
+              type: "text",
+              text: `# Org Diff Failed
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -85896,7 +86511,9 @@ function register13(server2) {
     "list_users",
     "List active AFLS users with optional filters. Filter by profile, permission set, territory, or find users without territories or PSLs. CORRECT object names: User, PermissionSetAssignment, UserTerritory2Association.",
     {
-      filterBy: external_exports.enum(["all", "profile", "permission-set", "territory", "no-territory", "no-psl"]).optional().default("all").describe("Filter type: 'all' (default), 'profile', 'permission-set', 'territory', 'no-territory' (users without territory assignments), 'no-psl' (users without AFLS PSLs)"),
+      filterBy: external_exports.enum(["all", "profile", "permission-set", "territory", "no-territory", "no-psl"]).optional().default("all").describe(
+        "Filter type: 'all' (default), 'profile', 'permission-set', 'territory', 'no-territory' (users without territory assignments), 'no-psl' (users without AFLS PSLs)"
+      ),
       filterValue: external_exports.string().optional().describe("Partial match value for profile, permission-set, or territory filters"),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to query. Uses current target org if not specified.")
     },
@@ -85914,21 +86531,42 @@ function register13(server2) {
         switch (filterBy) {
           case "profile":
             if (!filterValue) {
-              return { content: [{ type: "text", text: "Error: filterValue is required when filterBy is 'profile'. Provide a partial profile name." }] };
+              return {
+                content: [
+                  {
+                    type: "text",
+                    text: "Error: filterValue is required when filterBy is 'profile'. Provide a partial profile name."
+                  }
+                ]
+              };
             }
             query = `SELECT Id, Name, Username, Profile.Name, UserRole.Name, IsActive FROM User WHERE IsActive = true AND Profile.Name LIKE '%${filterValue}%' ORDER BY Profile.Name, Name LIMIT 200`;
             title = `# Active Users \u2014 Profile matching "${filterValue}"`;
             break;
           case "permission-set":
             if (!filterValue) {
-              return { content: [{ type: "text", text: "Error: filterValue is required when filterBy is 'permission-set'. Provide a partial permission set name or label." }] };
+              return {
+                content: [
+                  {
+                    type: "text",
+                    text: "Error: filterValue is required when filterBy is 'permission-set'. Provide a partial permission set name or label."
+                  }
+                ]
+              };
             }
             query = `SELECT AssigneeId, Assignee.Name, Assignee.Username, Assignee.Profile.Name, PermissionSet.Label FROM PermissionSetAssignment WHERE (PermissionSet.Label LIKE '%${filterValue}%' OR PermissionSet.Name LIKE '%${filterValue}%') AND PermissionSet.IsOwnedByProfile = false AND Assignee.IsActive = true ORDER BY Assignee.Name LIMIT 200`;
             title = `# Users with Permission Set matching "${filterValue}"`;
             break;
           case "territory":
             if (!filterValue) {
-              return { content: [{ type: "text", text: "Error: filterValue is required when filterBy is 'territory'. Provide a partial territory name." }] };
+              return {
+                content: [
+                  {
+                    type: "text",
+                    text: "Error: filterValue is required when filterBy is 'territory'. Provide a partial territory name."
+                  }
+                ]
+              };
             }
             query = `SELECT UserId, User.Name, User.Username, User.Profile.Name, Territory2.Name, RoleInTerritory2 FROM UserTerritory2Association WHERE Territory2.Name LIKE '%${filterValue}%' ORDER BY Territory2.Name, User.Name LIMIT 200`;
             title = `# Users in Territory matching "${filterValue}"`;
@@ -86002,9 +86640,14 @@ ${result.error}` }] };
         return { content: [{ type: "text", text: message }] };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to List Users
+          content: [
+            {
+              type: "text",
+              text: `# Failed to List Users
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -86013,7 +86656,9 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
     "list_permission_sets",
     "List AFLS permission sets and permission set licenses (PSLs) with assignment counts and capacity. Shows which permission sets exist, how many users are assigned, and PSL capacity (total vs used vs available).",
     {
-      includeAllNamespaces: external_exports.boolean().optional().default(false).describe("If true, include all permission sets regardless of namespace. Default false = AFLS-related only."),
+      includeAllNamespaces: external_exports.boolean().optional().default(false).describe(
+        "If true, include all permission sets regardless of namespace. Default false = AFLS-related only."
+      ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to query. Uses current target org if not specified.")
     },
     async ({ includeAllNamespaces, targetOrg }) => {
@@ -86096,9 +86741,14 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
         return { content: [{ type: "text", text: message }] };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to List Permission Sets
+          content: [
+            {
+              type: "text",
+              text: `# Failed to List Permission Sets
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -86107,9 +86757,13 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
     "assign_permission_set",
     "Assign a permission set to one or more users. Looks up the permission set by label or API name, resolves usernames to IDs if needed, skips users who already have the assignment, and creates PermissionSetAssignment records.",
     {
-      permissionSetName: external_exports.string().describe("Permission set label (e.g., 'AFLS User') or API name (e.g., 'lsc4ce__LifeSciencesCloudUser')"),
+      permissionSetName: external_exports.string().describe(
+        "Permission set label (e.g., 'AFLS User') or API name (e.g., 'lsc4ce__LifeSciencesCloudUser')"
+      ),
       userIds: external_exports.array(external_exports.string()).optional().describe("Array of User IDs to assign the permission set to"),
-      usernames: external_exports.array(external_exports.string()).optional().describe("Array of usernames (email format) to assign the permission set to. Will be resolved to User IDs."),
+      usernames: external_exports.array(external_exports.string()).optional().describe(
+        "Array of usernames (email format) to assign the permission set to. Will be resolved to User IDs."
+      ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org. Uses current target org if not specified.")
     },
     async ({ permissionSetName, userIds, usernames, targetOrg }) => {
@@ -86122,7 +86776,9 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
       }
       if (!userIds?.length && !usernames?.length) {
         return {
-          content: [{ type: "text", text: "Error: Provide either userIds or usernames (or both)." }]
+          content: [
+            { type: "text", text: "Error: Provide either userIds or usernames (or both)." }
+          ]
         };
       }
       try {
@@ -86130,9 +86786,14 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
         const psResult = await runSoqlQuery(psQuery, effectiveOrg);
         if (!psResult.success || !psResult.data?.records?.length) {
           return {
-            content: [{ type: "text", text: `# Permission Set Not Found
+            content: [
+              {
+                type: "text",
+                text: `# Permission Set Not Found
 
-No permission set matching "${permissionSetName}" was found. Use \`list_permission_sets()\` to see available permission sets.` }]
+No permission set matching "${permissionSetName}" was found. Use \`list_permission_sets()\` to see available permission sets.`
+              }
+            ]
           };
         }
         const ps = psResult.data.records[0];
@@ -86148,13 +86809,20 @@ No permission set matching "${permissionSetName}" was found. Use \`list_permissi
               const r = rec;
               resolvedIds.push(String(r.Id));
             }
-            const foundUsernames = userResult.data.records.map((r) => String(r.Username));
+            const foundUsernames = userResult.data.records.map(
+              (r) => String(r.Username)
+            );
             const notFound = usernames.filter((u) => !foundUsernames.includes(u));
             if (notFound.length > 0) {
               return {
-                content: [{ type: "text", text: `# Users Not Found
+                content: [
+                  {
+                    type: "text",
+                    text: `# Users Not Found
 
-The following usernames were not found or are inactive: ${notFound.join(", ")}` }]
+The following usernames were not found or are inactive: ${notFound.join(", ")}`
+                  }
+                ]
               };
             }
           }
@@ -86189,10 +86857,14 @@ The following usernames were not found or are inactive: ${notFound.join(", ")}` 
         const results = [];
         const errors = [];
         for (const userId of toAssign) {
-          const createResult = await createRecord("PermissionSetAssignment", {
-            AssigneeId: userId,
-            PermissionSetId: psId
-          }, effectiveOrg);
+          const createResult = await createRecord(
+            "PermissionSetAssignment",
+            {
+              AssigneeId: userId,
+              PermissionSetId: psId
+            },
+            effectiveOrg
+          );
           if (createResult.success) {
             results.push(userId);
           } else {
@@ -86216,9 +86888,14 @@ The following usernames were not found or are inactive: ${notFound.join(", ")}` 
         return { content: [{ type: "text", text: message }] };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to Assign Permission Set
+          content: [
+            {
+              type: "text",
+              text: `# Failed to Assign Permission Set
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -86227,9 +86904,13 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
     "unassign_permission_set",
     "Remove a permission set assignment from one or more users. Finds existing PermissionSetAssignment records and deletes them.",
     {
-      permissionSetName: external_exports.string().describe("Permission set label (e.g., 'AFLS User') or API name (e.g., 'lsc4ce__LifeSciencesCloudUser')"),
+      permissionSetName: external_exports.string().describe(
+        "Permission set label (e.g., 'AFLS User') or API name (e.g., 'lsc4ce__LifeSciencesCloudUser')"
+      ),
       userIds: external_exports.array(external_exports.string()).optional().describe("Array of User IDs to remove the permission set from"),
-      usernames: external_exports.array(external_exports.string()).optional().describe("Array of usernames (email format) to remove the permission set from. Will be resolved to User IDs."),
+      usernames: external_exports.array(external_exports.string()).optional().describe(
+        "Array of usernames (email format) to remove the permission set from. Will be resolved to User IDs."
+      ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org. Uses current target org if not specified.")
     },
     async ({ permissionSetName, userIds, usernames, targetOrg }) => {
@@ -86242,7 +86923,9 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
       }
       if (!userIds?.length && !usernames?.length) {
         return {
-          content: [{ type: "text", text: "Error: Provide either userIds or usernames (or both)." }]
+          content: [
+            { type: "text", text: "Error: Provide either userIds or usernames (or both)." }
+          ]
         };
       }
       try {
@@ -86250,9 +86933,14 @@ ${error2 instanceof Error ? error2.message : String(error2)}` }]
         const psResult = await runSoqlQuery(psQuery, effectiveOrg);
         if (!psResult.success || !psResult.data?.records?.length) {
           return {
-            content: [{ type: "text", text: `# Permission Set Not Found
+            content: [
+              {
+                type: "text",
+                text: `# Permission Set Not Found
 
-No permission set matching "${permissionSetName}" was found.` }]
+No permission set matching "${permissionSetName}" was found.`
+              }
+            ]
           };
         }
         const ps = psResult.data.records[0];
@@ -86279,9 +86967,14 @@ No permission set matching "${permissionSetName}" was found.` }]
         const existingResult = await runSoqlQuery(existingQuery, effectiveOrg);
         if (!existingResult.success || !existingResult.data?.records?.length) {
           return {
-            content: [{ type: "text", text: `# No Assignments Found
+            content: [
+              {
+                type: "text",
+                text: `# No Assignments Found
 
-None of the specified users have "${psLabel}" assigned. No changes made.` }]
+None of the specified users have "${psLabel}" assigned. No changes made.`
+              }
+            ]
           };
         }
         let message = `# Unassign Permission Set: ${psLabel}
@@ -86292,7 +86985,11 @@ None of the specified users have "${psLabel}" assigned. No changes made.` }]
         for (const record2 of existingResult.data.records) {
           const rec = record2;
           const assignee = rec.Assignee;
-          const deleteResult = await deleteRecord("PermissionSetAssignment", String(rec.Id), effectiveOrg);
+          const deleteResult = await deleteRecord(
+            "PermissionSetAssignment",
+            String(rec.Id),
+            effectiveOrg
+          );
           if (deleteResult.success) {
             results.push(String(assignee?.Name || rec.AssigneeId));
           } else {
@@ -86315,9 +87012,14 @@ None of the specified users have "${psLabel}" assigned. No changes made.` }]
         return { content: [{ type: "text", text: message }] };
       } catch (error2) {
         return {
-          content: [{ type: "text", text: `# Failed to Unassign Permission Set
+          content: [
+            {
+              type: "text",
+              text: `# Failed to Unassign Permission Set
 
-${error2 instanceof Error ? error2.message : String(error2)}` }]
+${error2 instanceof Error ? error2.message : String(error2)}`
+            }
+          ]
         };
       }
     }
@@ -86337,14 +87039,16 @@ function register14(server2) {
       const effectiveOrg = targetOrg || validation.targetOrg;
       if (!effectiveOrg) {
         return {
-          content: [{
-            type: "text",
-            text: `# Cannot Run Health Check
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Run Health Check
 
 ${validation.error}
 
 Please connect to a Salesforce org first using \`set_target_org\`.`
-          }]
+            }
+          ]
         };
       }
       const issues = [];
@@ -86365,9 +87069,11 @@ Please connect to a Salesforce org first using \`set_target_org\`.`
           }
         }
       }
-      sections.push(`## Trigger Handlers
+      sections.push(
+        `## Trigger Handlers
 - Active: ${activeHandlers}
-- Inactive: ${inactiveHandlers}`);
+- Inactive: ${inactiveHandlers}`
+      );
       if (inactiveHandlers > 0) {
         issues.push({
           severity: "warning",
@@ -86432,9 +87138,11 @@ ${tmInfo}`);
           }
         }
       }
-      sections.push(`## DB Schema (Mobile Sync)
+      sections.push(
+        `## DB Schema (Mobile Sync)
 - Active records: ${dbSchemaActive}
-- Inactive records: ${dbSchemaInactive}`);
+- Inactive records: ${dbSchemaInactive}`
+      );
       if (dbSchemaActive === 0) {
         issues.push({
           severity: "warning",
@@ -86449,7 +87157,9 @@ ${tmInfo}`);
       if (cacheResult.success && cacheResult.data?.records?.length) {
         const cache = cacheResult.data.records[0];
         const createdDate = cache.CreatedDate;
-        const daysAgo = Math.floor((Date.now() - new Date(createdDate).getTime()) / (1e3 * 60 * 60 * 24));
+        const daysAgo = Math.floor(
+          (Date.now() - new Date(createdDate).getTime()) / (1e3 * 60 * 60 * 24)
+        );
         cacheInfo = `Last generated: ${createdDate} (${daysAgo} day(s) ago)`;
         if (daysAgo > 7) {
           issues.push({
@@ -86509,14 +87219,16 @@ ${cacheInfo}`);
       const effectiveOrg = targetOrg || validation.targetOrg;
       if (!effectiveOrg) {
         return {
-          content: [{
-            type: "text",
-            text: `# Cannot Get Org Status
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Get Org Status
 
 ${validation.error}
 
 Please connect to a Salesforce org first using \`set_target_org\`.`
-          }]
+            }
+          ]
         };
       }
       let report = `# AFLS Org Status
@@ -86927,7 +87639,10 @@ async function applyConfig(opts) {
       if (rd.kind === "triggerHandler") {
         emit(await applyTriggerHandler(targetOrg, rd), index);
       } else if (rd.status === "NEW") {
-        emit(await createRecord2(targetOrg, rd, srcByKey, resolveCategoryId, resolveAssigneeId), index);
+        emit(
+          await createRecord2(targetOrg, rd, srcByKey, resolveCategoryId, resolveAssigneeId),
+          index
+        );
       } else {
         emit(await updateExistingRecord(targetOrg, rd, srcByKey, resolveAssigneeId), index);
       }
@@ -86958,7 +87673,13 @@ async function applyTriggerHandler(targetOrg, rd) {
   const q = `SELECT Id, IsActive FROM LifeScienceTriggerHandler WHERE DeveloperName = '${sqlEscape(rd.developerName)}' LIMIT 1`;
   const res = await runToolingQuery(q, targetOrg);
   if (!res.success || !res.data?.records?.length) {
-    return { key: rd.key, developerName: rd.developerName, action: "toggle", ok: false, message: "Handler not found in target org." };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "toggle",
+      ok: false,
+      message: "Handler not found in target org."
+    };
   }
   const id = res.data.records[0].Id;
   const upd = await updateRecord("LifeScienceTriggerHandler", id, { IsActive: desired }, targetOrg);
@@ -86973,16 +87694,34 @@ async function applyTriggerHandler(targetOrg, rd) {
 async function createRecord2(targetOrg, rd, srcByKey, resolveCategoryId, resolveAssigneeId) {
   const src = srcByKey.get(rd.key);
   if (!src) {
-    return { key: rd.key, developerName: rd.developerName, action: "create", ok: false, message: "Source record not found in snapshot." };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "create",
+      ok: false,
+      message: "Source record not found in snapshot."
+    };
   }
   const existQ = `SELECT Id FROM LifeSciConfigRecord WHERE DeveloperName = '${sqlEscape(src.developerName)}' LIMIT 1`;
   const existRes = await runToolingQuery(existQ, targetOrg);
   if (existRes.success && existRes.data?.records?.length) {
-    return { key: rd.key, developerName: rd.developerName, action: "skip", ok: true, message: "Already exists in target \u2014 skipped to avoid duplicate." };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "skip",
+      ok: true,
+      message: "Already exists in target \u2014 skipped to avoid duplicate."
+    };
   }
   const categoryId = await resolveCategoryId(src.category);
   if (!categoryId) {
-    return { key: rd.key, developerName: rd.developerName, action: "create", ok: false, message: `Category '${src.category}' not found in target org.` };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "create",
+      ok: false,
+      message: `Category '${src.category}' not found in target org.`
+    };
   }
   const warnings = [];
   const parent = await createToolingRecord(
@@ -86997,7 +87736,13 @@ async function createRecord2(targetOrg, rd, srcByKey, resolveCategoryId, resolve
     targetOrg
   );
   if (!parent.success) {
-    return { key: rd.key, developerName: rd.developerName, action: "create", ok: false, message: `Parent create failed: ${parent.error}` };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "create",
+      ok: false,
+      message: `Parent create failed: ${parent.error}`
+    };
   }
   const recordId = parent.data.id;
   let fieldErrors = 0;
@@ -87028,13 +87773,22 @@ async function createRecord2(targetOrg, rd, srcByKey, resolveCategoryId, resolve
     }
     const ar = await createToolingRecord(
       "LifeSciConfigAssignment",
-      { LifeSciConfigRecordId: recordId, AssignedToId: assigneeId, AssignmentLevel: a.level || "Profile" },
+      {
+        LifeSciConfigRecordId: recordId,
+        AssignedToId: assigneeId,
+        AssignmentLevel: a.level || "Profile"
+      },
       targetOrg
     );
     if (!ar.success) warnings.push(`Assignment ${a.name}: ${ar.error}`);
   }
   if (src.isActive && fieldErrors === 0) {
-    const act = await updateToolingRecord("LifeSciConfigRecord", recordId, { IsActive: true }, targetOrg);
+    const act = await updateToolingRecord(
+      "LifeSciConfigRecord",
+      recordId,
+      { IsActive: true },
+      targetOrg
+    );
     if (!act.success) warnings.push(`Activation: ${act.error}`);
   } else if (src.isActive && fieldErrors > 0) {
     warnings.push("Activation skipped \u2014 fix field errors, then re-apply.");
@@ -87051,12 +87805,24 @@ async function createRecord2(targetOrg, rd, srcByKey, resolveCategoryId, resolve
 async function updateExistingRecord(targetOrg, rd, srcByKey, resolveAssigneeId) {
   const src = srcByKey.get(rd.key);
   if (!src) {
-    return { key: rd.key, developerName: rd.developerName, action: "update", ok: false, message: "Source record not found in snapshot." };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "update",
+      ok: false,
+      message: "Source record not found in snapshot."
+    };
   }
   const recQ = `SELECT Id FROM LifeSciConfigRecord WHERE DeveloperName = '${sqlEscape(src.developerName)}' LIMIT 1`;
   const recRes = await runToolingQuery(recQ, targetOrg);
   if (!recRes.success || !recRes.data?.records?.length) {
-    return { key: rd.key, developerName: rd.developerName, action: "update", ok: false, message: "Record not found in target org." };
+    return {
+      key: rd.key,
+      developerName: rd.developerName,
+      action: "update",
+      ok: false,
+      message: "Record not found in target org."
+    };
   }
   const recordId = recRes.data.records[0].Id;
   const { fieldValuesByRecord } = await queryFieldValues([recordId], targetOrg, false);
@@ -87084,7 +87850,12 @@ async function updateExistingRecord(targetOrg, rd, srcByKey, resolveAssigneeId) 
     } else {
       const created = await createToolingRecord(
         "LifeSciConfigFieldValue",
-        { FieldName: fd.name, LifeSciConfigRecordId: recordId, DataType: dataType, [valueCol]: fd.to },
+        {
+          FieldName: fd.name,
+          LifeSciConfigRecordId: recordId,
+          DataType: dataType,
+          [valueCol]: fd.to
+        },
         targetOrg
       );
       if (!created.success) {
@@ -87101,7 +87872,11 @@ async function updateExistingRecord(targetOrg, rd, srcByKey, resolveAssigneeId) 
     }
     const ar = await createToolingRecord(
       "LifeSciConfigAssignment",
-      { LifeSciConfigRecordId: recordId, AssignedToId: assigneeId, AssignmentLevel: a.level || "Profile" },
+      {
+        LifeSciConfigRecordId: recordId,
+        AssignedToId: assigneeId,
+        AssignmentLevel: a.level || "Profile"
+      },
       targetOrg
     );
     if (!ar.success) warnings.push(`Assignment ${a.name}: ${ar.error}`);
@@ -87412,7 +88187,10 @@ load().catch(e=>{ document.getElementById("main").innerHTML='<div class="sub" st
 </html>`;
 }
 function escapeHtml2(s) {
-  return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  return String(s).replace(
+    /[&<>"]/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]
+  );
 }
 
 // src/server/import-ui-server.ts
@@ -87478,7 +88256,11 @@ async function startImportUiServer(opts) {
     if (req.method === "POST" && url.pathname === "/apply") {
       if (applyStarted) {
         res.writeHead(409, { "content-type": "application/json" });
-        res.end(JSON.stringify({ error: "Apply already ran for this session. Re-run import_config to start a new one." }));
+        res.end(
+          JSON.stringify({
+            error: "Apply already ran for this session. Re-run import_config to start a new one."
+          })
+        );
         return;
       }
       applyStarted = true;
@@ -87557,7 +88339,9 @@ function register15(server2) {
     "export_config",
     "Export AFLS configuration (Admin Console settings, DB Schema, trigger handlers, actions) as JSON. Captures per-field DataType and profile assignments (format v1.1) so the snapshot can be faithfully re-applied with import_config. Use this to snapshot org configuration for comparison, migration, or backup.",
     {
-      targetOrg: external_exports.string().optional().describe("Optional: specific org to export from. Uses current target org if not specified."),
+      targetOrg: external_exports.string().optional().describe(
+        "Optional: specific org to export from. Uses current target org if not specified."
+      ),
       categories: external_exports.array(external_exports.enum(["trigger_handlers", "admin_settings", "db_schema", "actions"])).optional().describe("Optional: which categories to export. Defaults to all.")
     },
     async ({ targetOrg, categories }) => {
@@ -87565,20 +88349,31 @@ function register15(server2) {
       const effectiveOrg = targetOrg || validation.targetOrg;
       if (!effectiveOrg) {
         return {
-          content: [{ type: "text", text: `# Cannot Export Configuration
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Export Configuration
 
 ${validation.error}
 
-Please connect to a Salesforce org first.` }]
+Please connect to a Salesforce org first.`
+            }
+          ]
         };
       }
-      const exportCategories = categories || ["trigger_handlers", "admin_settings", "db_schema", "actions"];
+      const exportCategories = categories || [
+        "trigger_handlers",
+        "admin_settings",
+        "db_schema",
+        "actions"
+      ];
       const snapshot = await collectConfig(effectiveOrg, exportCategories);
       const json = JSON.stringify(snapshot, null, 2);
       return {
-        content: [{
-          type: "text",
-          text: `# AFLS Configuration Export
+        content: [
+          {
+            type: "text",
+            text: `# AFLS Configuration Export
 
 **Org:** ${effectiveOrg}
 **Exported:** ${snapshot.exportedAt}
@@ -87590,7 +88385,8 @@ ${json}
 \`\`\`
 
 Save this JSON (see /afls:export-config for the exports/ convention) and use \`import_config\` to review + apply it to another org.`
-        }]
+          }
+        ]
       };
     }
   );
@@ -87598,21 +88394,34 @@ Save this JSON (see /afls:export-config for the exports/ convention) and use \`i
     "import_config",
     "Import AFLS configuration from a snapshot into a target org, diff-driven and create + update-only (safe). Modes: 'report' (default) computes a diff and summarizes what would change; 'ui' opens a local browser review-and-apply UI on 127.0.0.1 with per-record checkboxes and live progress; 'apply' applies a specific selection headlessly. The target org is auto-backed-up to exports/ before any write. Never deletes or deactivates records that exist only in the target.",
     {
-      source: external_exports.string().optional().describe("Source snapshot: inline JSON, or a path to an exports/*.json file. Omit to snapshot a live source org instead (see sourceOrg)."),
+      source: external_exports.string().optional().describe(
+        "Source snapshot: inline JSON, or a path to an exports/*.json file. Omit to snapshot a live source org instead (see sourceOrg)."
+      ),
       sourceOrg: external_exports.string().optional().describe("Optional: snapshot this live org as the source instead of passing a file/JSON."),
       targetOrg: external_exports.string().optional().describe("Target org to import into. Uses the current target org if not specified."),
-      mode: external_exports.enum(["report", "ui", "apply"]).optional().describe("report (default): diff summary. ui: open the local review/apply web UI. apply: apply the given selection."),
-      selection: external_exports.array(external_exports.string()).optional().describe("For mode 'apply': record keys to apply (as shown in the report/UI, e.g. 'record:DbSchema_Visit').")
+      mode: external_exports.enum(["report", "ui", "apply"]).optional().describe(
+        "report (default): diff summary. ui: open the local review/apply web UI. apply: apply the given selection."
+      ),
+      selection: external_exports.array(external_exports.string()).optional().describe(
+        "For mode 'apply': record keys to apply (as shown in the report/UI, e.g. 'record:DbSchema_Visit')."
+      )
     },
     async ({ source, sourceOrg, targetOrg, mode = "report", selection }) => {
       const validation = await validateOrgConnection();
       const effectiveTarget = targetOrg || validation.targetOrg;
       if (!effectiveTarget) {
-        return { content: [{ type: "text", text: `# Cannot Import Configuration
+        return {
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Import Configuration
 
 ${validation.error}
 
-Connect to a Salesforce org first.` }] };
+Connect to a Salesforce org first.`
+            }
+          ]
+        };
       }
       let sourceSnapshot;
       try {
@@ -87621,15 +88430,33 @@ Connect to a Salesforce org first.` }] };
         } else if (sourceOrg) {
           sourceSnapshot = await collectConfig(sourceOrg);
         } else {
-          return { content: [{ type: "text", text: "# Import Error\n\nProvide a `source` (file path or JSON) or a `sourceOrg` to snapshot." }] };
+          return {
+            content: [
+              {
+                type: "text",
+                text: "# Import Error\n\nProvide a `source` (file path or JSON) or a `sourceOrg` to snapshot."
+              }
+            ]
+          };
         }
       } catch (err) {
-        return { content: [{ type: "text", text: `# Import Error
+        return {
+          content: [
+            {
+              type: "text",
+              text: `# Import Error
 
-Could not load source snapshot: ${err instanceof Error ? err.message : String(err)}` }] };
+Could not load source snapshot: ${err instanceof Error ? err.message : String(err)}`
+            }
+          ]
+        };
       }
       if (sourceOrg && sourceOrg === effectiveTarget) {
-        return { content: [{ type: "text", text: "# Import Error\n\nSource and target org are the same." }] };
+        return {
+          content: [
+            { type: "text", text: "# Import Error\n\nSource and target org are the same." }
+          ]
+        };
       }
       const categories = categoriesInSnapshot(sourceSnapshot);
       const targetSnapshot = await collectConfig(effectiveTarget, categories);
@@ -87643,32 +88470,59 @@ Could not load source snapshot: ${err instanceof Error ? err.message : String(er
             categories
           });
           return {
-            content: [{
-              type: "text",
-              text: uiMessage(session.url, diff, effectiveTarget)
-            }]
+            content: [
+              {
+                type: "text",
+                text: uiMessage(session.url, diff, effectiveTarget)
+              }
+            ]
           };
         } catch (err) {
-          return { content: [{ type: "text", text: `# Could Not Start Import UI
+          return {
+            content: [
+              {
+                type: "text",
+                text: `# Could Not Start Import UI
 
 ${err instanceof Error ? err.message : String(err)}
 
-Use \`mode: "report"\` to see the diff, or \`mode: "apply"\` with a selection.` }] };
+Use \`mode: "report"\` to see the diff, or \`mode: "apply"\` with a selection.`
+              }
+            ]
+          };
         }
       }
       if (mode === "apply") {
         const sel = selection || [];
         if (!sel.length) {
-          return { content: [{ type: "text", text: "# Nothing to Apply\n\nmode 'apply' requires a non-empty `selection`. Run mode 'report' or 'ui' first to choose record keys." }] };
+          return {
+            content: [
+              {
+                type: "text",
+                text: "# Nothing to Apply\n\nmode 'apply' requires a non-empty `selection`. Run mode 'report' or 'ui' first to choose record keys."
+              }
+            ]
+          };
         }
         const backup = await backupTarget(effectiveTarget, categories);
-        const result = await applyConfig({ targetOrg: effectiveTarget, source: sourceSnapshot, diff, selection: sel });
+        const result = await applyConfig({
+          targetOrg: effectiveTarget,
+          source: sourceSnapshot,
+          diff,
+          selection: sel
+        });
         const safeOrg2 = effectiveTarget.replace(/[^a-zA-Z0-9._-]/g, "_");
-        const resultPath = await writeExport(`import-result-${safeOrg2}-${fileStamp(result.appliedAt)}.json`, result);
+        const resultPath = await writeExport(
+          `import-result-${safeOrg2}-${fileStamp(result.appliedAt)}.json`,
+          result
+        );
         return { content: [{ type: "text", text: applyMessage(result, backup.path, resultPath) }] };
       }
       const safeOrg = effectiveTarget.replace(/[^a-zA-Z0-9._-]/g, "_");
-      const diffPath = await writeExport(`import-diff-${safeOrg}-${fileStamp(diff.generatedAt)}.json`, diff);
+      const diffPath = await writeExport(
+        `import-diff-${safeOrg}-${fileStamp(diff.generatedAt)}.json`,
+        diff
+      );
       return { content: [{ type: "text", text: reportMessage(diff, effectiveTarget, diffPath) }] };
     }
   );
@@ -87701,7 +88555,9 @@ function reportMessage(diff, target, diffPath) {
 | \u{1F7E3} Only in target (untouched) | ${c.targetOnly} |
 
 `;
-  const actionable = diff.records.filter((r) => (r.status === "NEW" || r.status === "CHANGED") && r.applicable);
+  const actionable = diff.records.filter(
+    (r) => (r.status === "NEW" || r.status === "CHANGED") && r.applicable
+  );
   if (!actionable.length) {
     m += `**\u2705 Target is already in sync** for the exported categories \u2014 nothing to apply.
 `;
@@ -87724,7 +88580,8 @@ function reportMessage(diff, target, diffPath) {
         if (r.activeChange) changes.push(`IsActive ${r.activeChange.from} \u2192 ${r.activeChange.to}`);
         const fc = r.fieldDiffs.filter((f) => f.willApply).length;
         if (fc) changes.push(`${fc} field${fc > 1 ? "s" : ""}`);
-        if (r.assignmentDiff.added.length) changes.push(`+${r.assignmentDiff.added.length} assignment(s)`);
+        if (r.assignmentDiff.added.length)
+          changes.push(`+${r.assignmentDiff.added.length} assignment(s)`);
         m += `- **${r.developerName}** \`${r.status}\` \u2014 ${changes.join(", ") || "create"} \xB7 key: \`${r.key}\`
 `;
       }
@@ -87758,7 +88615,8 @@ function applyMessage(result, backupPath, resultPath) {
     m += `## Failures
 
 `;
-    for (const f of failures) m += `- **${f.developerName}** (${f.action}): ${f.message || "unknown error"}
+    for (const f of failures)
+      m += `- **${f.developerName}** (${f.action}): ${f.message || "unknown error"}
 `;
     m += `
 `;
@@ -87782,12 +88640,17 @@ function applyMessage(result, backupPath, resultPath) {
 import * as fs4 from "fs";
 import * as path5 from "path";
 function register16(server2) {
-  const releaseNotesDir = path5.join(path5.dirname(new URL(import.meta.url).pathname), "../../knowledge/release-notes");
+  const releaseNotesDir = path5.join(
+    path5.dirname(new URL(import.meta.url).pathname),
+    "../../knowledge/release-notes"
+  );
   server2.tool(
     "get_release_notes",
     "Get AFLS release notes for a specific Salesforce release (e.g., 'Spring 26', 'Winter 26'). Lists available releases if no release is specified.",
     {
-      release: external_exports.string().optional().describe("The release name (e.g., 'spring-26', 'winter-26'). Omit to list all available releases.")
+      release: external_exports.string().optional().describe(
+        "The release name (e.g., 'spring-26', 'winter-26'). Omit to list all available releases."
+      )
     },
     async ({ release }) => {
       let files = [];
@@ -87795,19 +88658,23 @@ function register16(server2) {
         files = fs4.readdirSync(releaseNotesDir).filter((f) => f.endsWith(".md")).sort().reverse();
       } catch {
         return {
-          content: [{
-            type: "text",
-            text: "# Release Notes\n\nNo release notes directory found. Release notes will be added in future updates."
-          }]
+          content: [
+            {
+              type: "text",
+              text: "# Release Notes\n\nNo release notes directory found. Release notes will be added in future updates."
+            }
+          ]
         };
       }
       if (!release) {
         if (files.length === 0) {
           return {
-            content: [{
-              type: "text",
-              text: "# Release Notes\n\nNo release notes available yet."
-            }]
+            content: [
+              {
+                type: "text",
+                text: "# Release Notes\n\nNo release notes available yet."
+              }
+            ]
           };
         }
         const list = files.map((f) => {
@@ -87816,14 +88683,16 @@ function register16(server2) {
           return `- **${name}** (\`${slug2}\`)`;
         }).join("\n");
         return {
-          content: [{
-            type: "text",
-            text: `# Available AFLS Release Notes
+          content: [
+            {
+              type: "text",
+              text: `# Available AFLS Release Notes
 
 ${list}
 
 Use \`get_release_notes\` with a release slug to get the full content.`
-          }]
+            }
+          ]
         };
       }
       const slug = release.toLowerCase().replace(/['\s]+/g, "-").replace(/[^a-z0-9-]/g, "");
@@ -87836,12 +88705,14 @@ Use \`get_release_notes\` with a release slug to get the full content.`
       } catch {
         const available = files.map((f) => f.replace(".md", "")).join(", ");
         return {
-          content: [{
-            type: "text",
-            text: `Release notes for '${release}' not found.
+          content: [
+            {
+              type: "text",
+              text: `Release notes for '${release}' not found.
 
 Available releases: ${available || "none"}`
-          }]
+            }
+          ]
         };
       }
     }
@@ -87855,29 +88726,34 @@ function register17(server2) {
     "Execute anonymous Apex code against the target Salesforce org. Use for one-off tasks like running batch jobs, fixing data issues, or testing logic. Returns compilation status, execution result, and debug logs.",
     {
       code: external_exports.string().describe("The Apex code to execute anonymously"),
-      targetOrg: external_exports.string().optional().describe("Optional: specific org to run against. Uses current target org if not specified.")
+      targetOrg: external_exports.string().optional().describe(
+        "Optional: specific org to run against. Uses current target org if not specified."
+      )
     },
     async ({ code, targetOrg }) => {
       const validation = await validateOrgConnection();
       const effectiveOrg = targetOrg || validation.targetOrg;
       if (!effectiveOrg) {
         return {
-          content: [{
-            type: "text",
-            text: `# Cannot Execute Apex
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Execute Apex
 
 ${validation.error}
 
 Please connect to a Salesforce org first.`
-          }]
+            }
+          ]
         };
       }
       const result = await runAnonymousApex(code, effectiveOrg);
       if (!result.success) {
         return {
-          content: [{
-            type: "text",
-            text: `# Apex Execution Failed
+          content: [
+            {
+              type: "text",
+              text: `# Apex Execution Failed
 
 **Error:** ${result.error}
 
@@ -87885,7 +88761,8 @@ Please connect to a Salesforce org first.`
 \`\`\`
 ${result.rawOutput || "No output"}
 \`\`\``
-          }]
+            }
+          ]
         };
       }
       const data = result.data;
@@ -87928,8 +88805,12 @@ function register18(server2) {
     "bulk_create_records",
     "Create multiple records from a JSON array. Processes records sequentially and reports results. Useful for loading seed data (products, time periods, territory assignments) without Data Loader.",
     {
-      sobjectType: external_exports.string().describe("The SObject type (e.g., 'Product2', 'TimePeriod', 'ObjectTerritory2Association')"),
-      records: external_exports.string().describe("JSON array of record objects to create. Each object contains field name/value pairs."),
+      sobjectType: external_exports.string().describe(
+        "The SObject type (e.g., 'Product2', 'TimePeriod', 'ObjectTerritory2Association')"
+      ),
+      records: external_exports.string().describe(
+        "JSON array of record objects to create. Each object contains field name/value pairs."
+      ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org. Uses current target org if not specified.")
     },
     async ({ sobjectType, records: recordsJson, targetOrg }) => {
@@ -87937,14 +88818,16 @@ function register18(server2) {
       const effectiveOrg = targetOrg || validation.targetOrg;
       if (!effectiveOrg) {
         return {
-          content: [{
-            type: "text",
-            text: `# Cannot Create Records
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Create Records
 
 ${validation.error}
 
 Please connect to a Salesforce org first.`
-          }]
+            }
+          ]
         };
       }
       let recordsArray;
@@ -87955,14 +88838,16 @@ Please connect to a Salesforce org first.`
         }
       } catch (e) {
         return {
-          content: [{
-            type: "text",
-            text: `# Invalid Input
+          content: [
+            {
+              type: "text",
+              text: `# Invalid Input
 
 Failed to parse records JSON: ${e instanceof Error ? e.message : "Unknown error"}
 
 Please provide a valid JSON array of record objects.`
-          }]
+            }
+          ]
         };
       }
       const results = [];
@@ -88013,7 +88898,9 @@ Please provide a valid JSON array of record objects.`
     "Update multiple records from a JSON array. Each record must include an 'Id' field. Processes records sequentially and reports results.",
     {
       sobjectType: external_exports.string().describe("The SObject type (e.g., 'Account', 'Contact', 'Visit')"),
-      records: external_exports.string().describe("JSON array of record objects to update. Each must include an 'Id' field plus the fields to update."),
+      records: external_exports.string().describe(
+        "JSON array of record objects to update. Each must include an 'Id' field plus the fields to update."
+      ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org. Uses current target org if not specified.")
     },
     async ({ sobjectType, records: recordsJson, targetOrg }) => {
@@ -88021,14 +88908,16 @@ Please provide a valid JSON array of record objects.`
       const effectiveOrg = targetOrg || validation.targetOrg;
       if (!effectiveOrg) {
         return {
-          content: [{
-            type: "text",
-            text: `# Cannot Update Records
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Update Records
 
 ${validation.error}
 
 Please connect to a Salesforce org first.`
-          }]
+            }
+          ]
         };
       }
       let recordsArray;
@@ -88039,12 +88928,14 @@ Please connect to a Salesforce org first.`
         }
       } catch (e) {
         return {
-          content: [{
-            type: "text",
-            text: `# Invalid Input
+          content: [
+            {
+              type: "text",
+              text: `# Invalid Input
 
 Failed to parse records JSON: ${e instanceof Error ? e.message : "Unknown error"}`
-          }]
+            }
+          ]
         };
       }
       const results = [];
@@ -88095,7 +88986,9 @@ function register19(server2) {
     "deploy_metadata",
     "Deploy metadata to the target Salesforce org from a local source directory. Wraps `sf project deploy start`. Use for pushing permission sets, page layouts, flows, and other metadata from a local project.",
     {
-      sourcePath: external_exports.string().describe("Path to the local source directory containing metadata to deploy (e.g., 'force-app/main/default')"),
+      sourcePath: external_exports.string().describe(
+        "Path to the local source directory containing metadata to deploy (e.g., 'force-app/main/default')"
+      ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to deploy to. Uses current target org if not specified.")
     },
     async ({ sourcePath, targetOrg }) => {
@@ -88103,22 +88996,25 @@ function register19(server2) {
       const effectiveOrg = targetOrg || validation.targetOrg;
       if (!effectiveOrg) {
         return {
-          content: [{
-            type: "text",
-            text: `# Cannot Deploy Metadata
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Deploy Metadata
 
 ${validation.error}
 
 Please connect to a Salesforce org first.`
-          }]
+            }
+          ]
         };
       }
       const result = await deployMetadata(sourcePath, effectiveOrg);
       if (!result.success) {
         return {
-          content: [{
-            type: "text",
-            text: `# Deployment Failed
+          content: [
+            {
+              type: "text",
+              text: `# Deployment Failed
 
 **Error:** ${result.error}
 
@@ -88126,7 +89022,8 @@ Please connect to a Salesforce org first.`
 \`\`\`
 ${result.rawOutput || "No output"}
 \`\`\``
-          }]
+            }
+          ]
         };
       }
       let report = `# Deployment Successful
@@ -88150,31 +89047,40 @@ ${result.rawOutput.substring(0, 2e3)}
     "retrieve_metadata",
     "Retrieve metadata from the target Salesforce org to a local directory. Wraps `sf project retrieve start`. Use for pulling permission sets, page layouts, flows, and other metadata to inspect or version control.",
     {
-      metadata: external_exports.string().describe("Metadata type and optional name (e.g., 'PermissionSet:LSC_Admin', 'Layout:Visit-Visit Layout', 'ApexClass')"),
-      outputDir: external_exports.string().optional().describe("Optional: local directory to write retrieved metadata. Defaults to current working directory."),
-      targetOrg: external_exports.string().optional().describe("Optional: specific org to retrieve from. Uses current target org if not specified.")
+      metadata: external_exports.string().describe(
+        "Metadata type and optional name (e.g., 'PermissionSet:LSC_Admin', 'Layout:Visit-Visit Layout', 'ApexClass')"
+      ),
+      outputDir: external_exports.string().optional().describe(
+        "Optional: local directory to write retrieved metadata. Defaults to current working directory."
+      ),
+      targetOrg: external_exports.string().optional().describe(
+        "Optional: specific org to retrieve from. Uses current target org if not specified."
+      )
     },
     async ({ metadata, outputDir, targetOrg }) => {
       const validation = await validateOrgConnection();
       const effectiveOrg = targetOrg || validation.targetOrg;
       if (!effectiveOrg) {
         return {
-          content: [{
-            type: "text",
-            text: `# Cannot Retrieve Metadata
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Retrieve Metadata
 
 ${validation.error}
 
 Please connect to a Salesforce org first.`
-          }]
+            }
+          ]
         };
       }
       const result = await retrieveMetadata("", metadata, effectiveOrg);
       if (!result.success) {
         return {
-          content: [{
-            type: "text",
-            text: `# Retrieve Failed
+          content: [
+            {
+              type: "text",
+              text: `# Retrieve Failed
 
 **Error:** ${result.error}
 
@@ -88182,7 +89088,8 @@ Please connect to a Salesforce org first.`
 \`\`\`
 ${result.rawOutput || "No output"}
 \`\`\``
-          }]
+            }
+          ]
         };
       }
       const actualOutputDir = result.data?.outputDir || outputDir || "tmp project";
@@ -88212,7 +89119,9 @@ function register20(server2) {
     "check_briefings_config",
     "Check Briefings (Daily Podcasts) configuration. Validates toggle, licenses, permissions (StoriesUser/StoriesAdmin), account summarization, content definitions, scheduled flows, DB Schema records, and mobile cache. CORRECT object names: PrstContentDefinition, PrstCntntDefAssignment, PrstCntntUsageSummary, PrvdAccountTerritorySummary. WRONG names: PresentationContentDefinition, PresentationContentDefinitionAssignment, PresentationContentUsageSummary.",
     {
-      username: external_exports.string().optional().describe("Optional: check a specific user's Briefings access (permissions, profile assignment, object access)"),
+      username: external_exports.string().optional().describe(
+        "Optional: check a specific user's Briefings access (permissions, profile assignment, object access)"
+      ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to check. Uses current target org if not specified.")
     },
     async ({ username, targetOrg }) => {
@@ -88221,9 +89130,10 @@ function register20(server2) {
       if (!effectiveOrg) {
         const instructions = validation.setupInstructions;
         return {
-          content: [{
-            type: "text",
-            text: `# Cannot Check Briefings Configuration
+          content: [
+            {
+              type: "text",
+              text: `# Cannot Check Briefings Configuration
 
 ${validation.error}
 
@@ -88234,7 +89144,8 @@ ${instructions?.description}
 ${instructions?.command ? `\`\`\`bash
 ${instructions.command}
 \`\`\`` : ""}`
-          }]
+            }
+          ]
         };
       }
       let message = "# Briefings (Daily Podcasts) Configuration Report\n\n";
@@ -88250,20 +89161,37 @@ ${instructions.command}
         if (toggleResult.success) {
           message += "\u2705 **Briefings is enabled** (PresentationContent object accessible)\n\n";
           briefingsEnabled = true;
-          checkResults.push({ num: 1, check: "Briefings Toggle", status: "\u2705 PASS", detail: "PresentationContent object accessible" });
+          checkResults.push({
+            num: 1,
+            check: "Briefings Toggle",
+            status: "\u2705 PASS",
+            detail: "PresentationContent object accessible"
+          });
         } else {
           const errorMsg = toggleResult.error || "";
           if (errorMsg.includes("not supported") || errorMsg.includes("INVALID_TYPE")) {
             message += "\u274C **Briefings is NOT enabled** \u2014 PresentationContent object does not exist\n\n";
-            issues.push("Briefings toggle is OFF \u2192 Setup \u2192 Life Sciences for Customer Engagement Setup \u2192 Configure Briefings \u2192 Toggle ON");
+            issues.push(
+              "Briefings toggle is OFF \u2192 Setup \u2192 Life Sciences for Customer Engagement Setup \u2192 Configure Briefings \u2192 Toggle ON"
+            );
             message += "> When the toggle is OFF, all Briefings objects are inaccessible and Field Insights flows don't appear.\n\n";
-            checkResults.push({ num: 1, check: "Briefings Toggle", status: "\u274C FAIL", detail: "PresentationContent object does not exist" });
+            checkResults.push({
+              num: 1,
+              check: "Briefings Toggle",
+              status: "\u274C FAIL",
+              detail: "PresentationContent object does not exist"
+            });
           } else {
             message += `\u26A0\uFE0F Could not determine toggle status: ${errorMsg}
 
 `;
             warnings.push("Could not verify Briefings toggle \u2014 check manually in Setup");
-            checkResults.push({ num: 1, check: "Briefings Toggle", status: "\u26A0\uFE0F WARN", detail: "Could not determine status" });
+            checkResults.push({
+              num: 1,
+              check: "Briefings Toggle",
+              status: "\u26A0\uFE0F WARN",
+              detail: "Could not determine status"
+            });
           }
         }
         message += "## 2. Permission Set Licenses\n\n";
@@ -88302,15 +89230,30 @@ ${instructions.command}
           message += "\n";
           const pslMissing = requiredPsls.filter((r) => !foundLabels.has(r));
           if (pslMissing.length === 0) {
-            checkResults.push({ num: 2, check: "Licenses (4 PSLs)", status: "\u2705 PASS", detail: "All 4 provisioned with capacity remaining" });
+            checkResults.push({
+              num: 2,
+              check: "Licenses (4 PSLs)",
+              status: "\u2705 PASS",
+              detail: "All 4 provisioned with capacity remaining"
+            });
           } else {
-            checkResults.push({ num: 2, check: "Licenses (4 PSLs)", status: "\u274C FAIL", detail: `Missing: ${pslMissing.join(", ")}` });
+            checkResults.push({
+              num: 2,
+              check: "Licenses (4 PSLs)",
+              status: "\u274C FAIL",
+              detail: `Missing: ${pslMissing.join(", ")}`
+            });
           }
         } else {
           message += `Error querying PSLs: ${pslResult.error}
 
 `;
-          checkResults.push({ num: 2, check: "Licenses (4 PSLs)", status: "\u274C FAIL", detail: "Query error" });
+          checkResults.push({
+            num: 2,
+            check: "Licenses (4 PSLs)",
+            status: "\u274C FAIL",
+            detail: "Query error"
+          });
         }
         message += "## 3. Permission Sets\n\n";
         const standardPs = [
@@ -88358,26 +89301,55 @@ ${instructions.command}
         }
         if (!foundAdmin) {
           message += "\u274C No permission set with **Manage Briefings** (PermissionsStoriesAdmin) found\n";
-          issues.push("Clone 'Life Sciences Commercial Admin', enable 'Manage Briefings' system permission, assign to admins");
+          issues.push(
+            "Clone 'Life Sciences Commercial Admin', enable 'Manage Briefings' system permission, assign to admins"
+          );
         }
         if (!foundUser) {
           message += "\u274C No permission set with **Use Briefings** (PermissionsStoriesUser) found \u2014 **#1 reason Briefings doesn't show up**\n";
-          issues.push("Clone 'Life Sciences Field Sales Representative', enable 'Use Briefings' system permission, assign to end users");
+          issues.push(
+            "Clone 'Life Sciences Field Sales Representative', enable 'Use Briefings' system permission, assign to end users"
+          );
         }
         message += "\n";
         const standardPsOk = !issues.some((i) => i.includes("has 0 assignments"));
-        checkResults.push({ num: 3, check: "Standard Perm Sets", status: standardPsOk ? "\u2705 PASS" : "\u274C FAIL", detail: standardPsOk ? "HealthCloudStarter, PromptTemplate, Agentforce present" : "Some standard perm sets missing" });
+        checkResults.push({
+          num: 3,
+          check: "Standard Perm Sets",
+          status: standardPsOk ? "\u2705 PASS" : "\u274C FAIL",
+          detail: standardPsOk ? "HealthCloudStarter, PromptTemplate, Agentforce present" : "Some standard perm sets missing"
+        });
         if (foundAdmin) {
           const adminLabels = (adminPsResult.data?.records || []).map((r) => `"${r.Label}"`).join(", ");
-          checkResults.push({ num: 4, check: "Admin Perm Sets + StoriesAdmin", status: "\u2705 PASS", detail: `${adminLabels} have StoriesAdmin` });
+          checkResults.push({
+            num: 4,
+            check: "Admin Perm Sets + StoriesAdmin",
+            status: "\u2705 PASS",
+            detail: `${adminLabels} have StoriesAdmin`
+          });
         } else {
-          checkResults.push({ num: 4, check: "Admin Perm Sets + StoriesAdmin", status: "\u274C FAIL", detail: "No perm set with PermissionsStoriesAdmin found" });
+          checkResults.push({
+            num: 4,
+            check: "Admin Perm Sets + StoriesAdmin",
+            status: "\u274C FAIL",
+            detail: "No perm set with PermissionsStoriesAdmin found"
+          });
         }
         if (foundUser) {
           const userLabels = (userPsResult.data?.records || []).map((r) => `"${r.Label}"`).join(", ");
-          checkResults.push({ num: 5, check: "User Perm Sets + StoriesUser", status: "\u2705 PASS", detail: `${userLabels} have StoriesUser` });
+          checkResults.push({
+            num: 5,
+            check: "User Perm Sets + StoriesUser",
+            status: "\u2705 PASS",
+            detail: `${userLabels} have StoriesUser`
+          });
         } else {
-          checkResults.push({ num: 5, check: "User Perm Sets + StoriesUser", status: "\u274C FAIL", detail: "No perm set with PermissionsStoriesUser found" });
+          checkResults.push({
+            num: 5,
+            check: "User Perm Sets + StoriesUser",
+            status: "\u274C FAIL",
+            detail: "No perm set with PermissionsStoriesUser found"
+          });
         }
         message += "## 4. Account Summarization\n\n";
         const summFlowQuery = `SELECT Id, Label, ActiveVersionId FROM FlowDefinitionView WHERE Label = 'Generate Provider Account Territory Summary'`;
@@ -88392,7 +89364,9 @@ ${instructions.command}
           }
         } else {
           message += "\u274C Account Summarization flow not found\n";
-          issues.push("Account Summarization not configured \u2192 Setup \u2192 Life Sciences for Customer Engagement Setup \u2192 Configure Account Summarization");
+          issues.push(
+            "Account Summarization not configured \u2192 Setup \u2192 Life Sciences for Customer Engagement Setup \u2192 Configure Account Summarization"
+          );
         }
         const summRecQuery = `SELECT COUNT(Id) FROM PrvdAccountTerritorySummary`;
         const summRecResult = await runSoqlQuery(summRecQuery, effectiveOrg);
@@ -88403,7 +89377,9 @@ ${instructions.command}
 `;
           } else {
             message += "\u274C No PrvdAccountTerritorySummary records \u2014 summarization hasn't run\n";
-            issues.push("Account Summarization hasn't produced records \u2014 verify it's configured and the flow has run");
+            issues.push(
+              "Account Summarization hasn't produced records \u2014 verify it's configured and the flow has run"
+            );
           }
         }
         const textGenQuery = `SELECT Id, Label, ApiName, ActiveVersionId FROM FlowDefinitionView WHERE ApiName IN ('GenDailyBriefingsText', 'stories__GenDailyBriefingsText')`;
@@ -88415,14 +89391,18 @@ ${instructions.command}
 `;
           } else {
             message += "\u274C Generate Daily Briefings Text flow is **NOT active**\n";
-            issues.push("'Generate Daily Briefings Text' flow (ApiName: GenDailyBriefingsText) is not active");
+            issues.push(
+              "'Generate Daily Briefings Text' flow (ApiName: GenDailyBriefingsText) is not active"
+            );
           }
         } else {
           message += "\u274C Generate Daily Briefings Text flow not found\n";
           if (!briefingsEnabled) {
             message += "> This flow appears after the Briefings toggle is enabled.\n";
           } else {
-            issues.push("'Generate Daily Briefings Text' flow missing \u2014 verify managed package installation");
+            issues.push(
+              "'Generate Daily Briefings Text' flow missing \u2014 verify managed package installation"
+            );
           }
         }
         message += "\n";
@@ -88431,11 +89411,26 @@ ${instructions.command}
           const textGenOk = textGenResult.success && textGenResult.data?.records?.length && textGenResult.data.records[0].ActiveVersionId;
           const summRecCount = summRecResult.success && summRecResult.data?.records ? summRecResult.data.records[0]["expr0"] : 0;
           if (summOk && textGenOk && summRecCount > 0) {
-            checkResults.push({ num: 6, check: "Account Summarization", status: "\u2705 PASS", detail: `Flow active, ${summRecCount} summary records, text gen flow active` });
+            checkResults.push({
+              num: 6,
+              check: "Account Summarization",
+              status: "\u2705 PASS",
+              detail: `Flow active, ${summRecCount} summary records, text gen flow active`
+            });
           } else if (summOk && textGenOk) {
-            checkResults.push({ num: 6, check: "Account Summarization", status: "\u26A0\uFE0F WARN", detail: "Flows active but no summary records yet" });
+            checkResults.push({
+              num: 6,
+              check: "Account Summarization",
+              status: "\u26A0\uFE0F WARN",
+              detail: "Flows active but no summary records yet"
+            });
           } else {
-            checkResults.push({ num: 6, check: "Account Summarization", status: "\u274C FAIL", detail: "Flow or text gen flow missing/inactive" });
+            checkResults.push({
+              num: 6,
+              check: "Account Summarization",
+              status: "\u274C FAIL",
+              detail: "Flow or text gen flow missing/inactive"
+            });
           }
         }
         if (briefingsEnabled) {
@@ -88451,10 +89446,14 @@ ${instructions.command}
             }
           } else if (defResult.error?.includes("not supported")) {
             message += "\u23ED\uFE0F PrstContentDefinition not accessible \u2014 admin may need StoriesAdmin permission\n";
-            warnings.push("PrstContentDefinition not accessible \u2014 verify admin has 'Manage Field Insights Definitions' permission");
+            warnings.push(
+              "PrstContentDefinition not accessible \u2014 verify admin has 'Manage Field Insights Definitions' permission"
+            );
           } else {
             message += "\u274C No PrstContentDefinition record found\n";
-            issues.push("Create Content Definition \u2192 Setup \u2192 Life Sciences for Customer Engagement Setup \u2192 Configure Briefings \u2192 Manage Assignments");
+            issues.push(
+              "Create Content Definition \u2192 Setup \u2192 Life Sciences for Customer Engagement Setup \u2192 Configure Briefings \u2192 Manage Assignments"
+            );
           }
           const assignQuery = `SELECT Id, IsActive, AssignedToId FROM PrstCntntDefAssignment WHERE IsActive = true`;
           const assignResult = await runSoqlQuery(assignQuery, effectiveOrg);
@@ -88480,16 +89479,36 @@ ${instructions.command}
           const assignOk = assignResult.success && assignResult.data?.records?.length;
           if (defOk && assignOk) {
             const defLabel = defResult.data.records[0].MasterLabel;
-            checkResults.push({ num: 7, check: "Content Definition & Assignments", status: "\u2705 PASS", detail: `"${defLabel}" active, ${assignResult.data.records.length} profile(s) assigned` });
+            checkResults.push({
+              num: 7,
+              check: "Content Definition & Assignments",
+              status: "\u2705 PASS",
+              detail: `"${defLabel}" active, ${assignResult.data.records.length} profile(s) assigned`
+            });
           } else if (defOk) {
-            checkResults.push({ num: 7, check: "Content Definition & Assignments", status: "\u274C FAIL", detail: "Definition exists but no active assignments" });
+            checkResults.push({
+              num: 7,
+              check: "Content Definition & Assignments",
+              status: "\u274C FAIL",
+              detail: "Definition exists but no active assignments"
+            });
           } else {
-            checkResults.push({ num: 7, check: "Content Definition & Assignments", status: "\u274C FAIL", detail: "No content definition found" });
+            checkResults.push({
+              num: 7,
+              check: "Content Definition & Assignments",
+              status: "\u274C FAIL",
+              detail: "No content definition found"
+            });
           }
         } else {
           message += "## 5. Content Definition & Assignments\n\n";
           message += "\u23ED\uFE0F Skipped \u2014 Briefings toggle is OFF (objects not accessible)\n\n";
-          checkResults.push({ num: 7, check: "Content Definition & Assignments", status: "\u23ED\uFE0F SKIP", detail: "Briefings toggle is OFF" });
+          checkResults.push({
+            num: 7,
+            check: "Content Definition & Assignments",
+            status: "\u23ED\uFE0F SKIP",
+            detail: "Briefings toggle is OFF"
+          });
         }
         message += "## 6. Scheduled Flow\n\n";
         const templateFlowQuery = `SELECT Id, Label, ApiName, ActiveVersionId FROM FlowDefinitionView WHERE ApiName IN ('SchdDlyBriefingsOfPrvdAcct', 'stories__SchdDlyBriefingsOfPrvdAcct')`;
@@ -88500,7 +89519,9 @@ ${instructions.command}
           if (isActive) {
             message += `\u26A0\uFE0F Original template flow: **${flow.Label}** \u2014 ACTIVE (best practice: use a clone instead)
 `;
-            warnings.push("Original template flow is active \u2014 best practice is to clone it, set Daily frequency, and activate the clone instead.");
+            warnings.push(
+              "Original template flow is active \u2014 best practice is to clone it, set Daily frequency, and activate the clone instead."
+            );
           } else {
             message += `\u2705 Original template flow: **${flow.Label}** \u2014 Correctly inactive (template)
 `;
@@ -88524,18 +89545,35 @@ ${instructions.command}
             pipelineRunning = true;
           } else {
             message += "\u26A0\uFE0F No PresentationContent records yet \u2014 the scheduling flow clone may not have fired yet\n";
-            warnings.push("No PresentationContent records generated yet. Verify an admin has cloned the scheduling flow, set Daily frequency, and activated it. If just set up, check back after the next scheduled run.");
+            warnings.push(
+              "No PresentationContent records generated yet. Verify an admin has cloned the scheduling flow, set Daily frequency, and activated it. If just set up, check back after the next scheduled run."
+            );
           }
         }
         message += "\n";
         {
           const templateOk = templateFlowResult.success && templateFlowResult.data?.records?.length;
           if (templateOk && pipelineRunning) {
-            checkResults.push({ num: 8, check: "Scheduled Flow", status: "\u2705 PASS", detail: "Template found, pipeline producing records" });
+            checkResults.push({
+              num: 8,
+              check: "Scheduled Flow",
+              status: "\u2705 PASS",
+              detail: "Template found, pipeline producing records"
+            });
           } else if (templateOk && !pipelineRunning) {
-            checkResults.push({ num: 8, check: "Scheduled Flow", status: "\u26A0\uFE0F WARN", detail: "Template correctly inactive, but no PresentationContent records yet" });
+            checkResults.push({
+              num: 8,
+              check: "Scheduled Flow",
+              status: "\u26A0\uFE0F WARN",
+              detail: "Template correctly inactive, but no PresentationContent records yet"
+            });
           } else {
-            checkResults.push({ num: 8, check: "Scheduled Flow", status: "\u274C FAIL", detail: "Scheduling flow template not found" });
+            checkResults.push({
+              num: 8,
+              check: "Scheduled Flow",
+              status: "\u274C FAIL",
+              detail: "Scheduling flow template not found"
+            });
           }
         }
         if (briefingsEnabled) {
@@ -88547,16 +89585,31 @@ ${instructions.command}
             if (count > 0) {
               message += `\u2705 **${count}** permission set(s) grant read access to PresentationContent
 `;
-              checkResults.push({ num: 9, check: "Content Records + Read Access", status: "\u2705 PASS", detail: `${count} perm sets grant read access` });
+              checkResults.push({
+                num: 9,
+                check: "Content Records + Read Access",
+                status: "\u2705 PASS",
+                detail: `${count} perm sets grant read access`
+              });
             } else {
               message += "\u26A0\uFE0F No permission sets grant read access to PresentationContent\n";
               warnings.push("No read access to PresentationContent \u2014 Briefings icon won't appear");
-              checkResults.push({ num: 9, check: "Content Records + Read Access", status: "\u26A0\uFE0F WARN", detail: "No read access to PresentationContent" });
+              checkResults.push({
+                num: 9,
+                check: "Content Records + Read Access",
+                status: "\u26A0\uFE0F WARN",
+                detail: "No read access to PresentationContent"
+              });
             }
           }
           message += "\n";
         } else {
-          checkResults.push({ num: 9, check: "Content Records + Read Access", status: "\u23ED\uFE0F SKIP", detail: "Briefings toggle is OFF" });
+          checkResults.push({
+            num: 9,
+            check: "Content Records + Read Access",
+            status: "\u23ED\uFE0F SKIP",
+            detail: "Briefings toggle is OFF"
+          });
         }
         message += "## 8. DB Schema Configs\n\n";
         const requiredDbSchema = [
@@ -88583,7 +89636,9 @@ ${instructions.command}
           } else {
             message += `\u274C ${name}: **Not found**
 `;
-            issues.push(`Create ${name} in Admin Console \u2192 Mobile \u2192 Object Metadata Cache Configuration`);
+            issues.push(
+              `Create ${name} in Admin Console \u2192 Mobile \u2192 Object Metadata Cache Configuration`
+            );
           }
         }
         message += `
@@ -88591,16 +89646,41 @@ ${instructions.command}
 
 `;
         if (dbSchemaFound === 4) {
-          checkResults.push({ num: 10, check: "DB Schema Configs (4)", status: "\u2705 PASS", detail: "All 4 active" });
+          checkResults.push({
+            num: 10,
+            check: "DB Schema Configs (4)",
+            status: "\u2705 PASS",
+            detail: "All 4 active"
+          });
         } else if (dbSchemaFound > 0) {
-          checkResults.push({ num: 10, check: "DB Schema Configs (4)", status: "\u26A0\uFE0F WARN", detail: `${dbSchemaFound}/4 active` });
+          checkResults.push({
+            num: 10,
+            check: "DB Schema Configs (4)",
+            status: "\u26A0\uFE0F WARN",
+            detail: `${dbSchemaFound}/4 active`
+          });
         } else {
-          checkResults.push({ num: 10, check: "DB Schema Configs (4)", status: "\u274C FAIL", detail: "None found" });
+          checkResults.push({
+            num: 10,
+            check: "DB Schema Configs (4)",
+            status: "\u274C FAIL",
+            detail: "None found"
+          });
         }
         if (issues.length === 0) {
-          checkResults.push({ num: 11, check: "Mobile Cache", status: "\u2705 PASS", detail: "Regenerate cache after any future data/config change; users sync iPad" });
+          checkResults.push({
+            num: 11,
+            check: "Mobile Cache",
+            status: "\u2705 PASS",
+            detail: "Regenerate cache after any future data/config change; users sync iPad"
+          });
         } else {
-          checkResults.push({ num: 11, check: "Mobile Cache", status: "\u26A0\uFE0F WARN", detail: "Fix issues above, then regenerate cache; users sync iPad to get updates" });
+          checkResults.push({
+            num: 11,
+            check: "Mobile Cache",
+            status: "\u26A0\uFE0F WARN",
+            detail: "Fix issues above, then regenerate cache; users sync iPad to get updates"
+          });
         }
         if (username) {
           message += `## 9. User Check: ${username}
@@ -88625,7 +89705,9 @@ ${instructions.command}
 `;
             } else {
               message += "\u274C User does NOT have Use Briefings permission (PermissionsStoriesUser) assigned\n";
-              issues.push(`User ${username} needs a permission set with 'Use Briefings' (PermissionsStoriesUser) enabled`);
+              issues.push(
+                `User ${username} needs a permission set with 'Use Briefings' (PermissionsStoriesUser) enabled`
+              );
             }
             if (briefingsEnabled) {
               const assignCheckQuery = `SELECT Id FROM PrstCntntDefAssignment WHERE IsActive = true AND AssignedToId = '${profileId}'`;
@@ -88636,7 +89718,9 @@ ${instructions.command}
               } else if (!assignCheckResult.error?.includes("not supported")) {
                 message += `\u274C Profile **${profileName}** is NOT in any active Content Definition Assignment
 `;
-                issues.push(`Add profile "${profileName}" to Configure Briefings \u2192 Manage Assignments`);
+                issues.push(
+                  `Add profile "${profileName}" to Configure Briefings \u2192 Manage Assignments`
+                );
               }
               const readQuery = `SELECT Id FROM PermissionSetAssignment WHERE AssigneeId = '${userId}' AND PermissionSetId IN (SELECT ParentId FROM ObjectPermissions WHERE SobjectType = 'PresentationContent' AND PermissionsRead = true)`;
               const readResult = await runSoqlQuery(readQuery, effectiveOrg);
