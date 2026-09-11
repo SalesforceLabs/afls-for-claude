@@ -62,3 +62,11 @@ jobs:
             git diff --stat -- mcp-server/index.mjs
             exit 1
           fi
+
+      # A bundle can be in sync yet still refuse to connect (crashes on
+      # startup, pollutes stdout -> "-32000 Connection closed", or returns no
+      # tools). Drive a real JSON-RPC initialize + tools/list against the
+      # committed bundle to prove it actually runs. Self-skips when no bundle
+      # is committed on this branch (same as the drift check above).
+      - name: Smoke-test MCP server (initialize + tools/list)
+        run: node scripts/mcp-smoke.mjs
