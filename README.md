@@ -764,39 +764,22 @@ The plugin includes skills, documentation, and validation rules for all major AF
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                      Claude Code                             │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────────────────────────────────────────────────┐ │
-│  │              AFLS-for-Claude (Plugin)                     │ │
-│  ├─────────────────────────────────────────────────────────┤ │
-│  │                                                          │ │
-│  │  36 Skills (routing)       │  24 Commands (/afls:*)      │ │
-│  │  • Thin tool delegation   │  • /afls:setup-plugin       │ │
-│  │  • Object name guardrails │  • /afls:soql-query         │ │
-│  │  • Config mode workflows  │  • /afls:audit              │ │
-│  │                            │  • /afls:configure-*        │ │
-│  │                            │                             │ │
-│  │  3 Agents (Subagents)      │  MCP Server (60+ Tools)    │ │
-│  │  • afls-consultant         │  • Knowledge + citations   │ │
-│  │  • afls-admin              │  • SOQL / CRUD / Tooling   │ │
-│  │  • afls-developer          │  • Admin Console settings  │ │
-│  │                            │  • Config check tools      │ │
-│  │                            │  • Validation (151 rules)  │ │
-│  │                            │                             │ │
-│  │  Knowledge Base            │  Citation System            │ │
-│  │  • 29 modules (86 files)  │  • 106 citation entries    │ │
-│  │  • live help via MCP      │  • File paths + URLs       │ │
-│  │  • 2 guides, 2 exercises  │  • Blockquote format       │ │
-│  └─────────────────────────────────────────────────────────┘ │
-│                           │                                  │
-│                           ▼                                  │
-│                    Salesforce CLI (sf)                       │
-│                           │                                  │
-│                           ▼                                  │
-│                  Your AFLS Salesforce Org                     │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph CC["Claude Code"]
+        subgraph Plugin["AFLS-for-Claude (Plugin)"]
+            direction LR
+            Skills["<b>36 Skills (routing)</b><br/>• Thin tool delegation<br/>• Object name guardrails<br/>• Config mode workflows"]
+            Commands["<b>24 Commands (/afls:*)</b><br/>• /afls:setup-plugin<br/>• /afls:soql-query<br/>• /afls:audit<br/>• /afls:configure-*"]
+            Agents["<b>3 Agents (Subagents)</b><br/>• afls-consultant<br/>• afls-admin<br/>• afls-developer"]
+            MCP["<b>MCP Server (60+ Tools)</b><br/>• Knowledge + citations<br/>• SOQL / CRUD / Tooling<br/>• Admin Console settings<br/>• Config check tools<br/>• Validation (151 rules)"]
+            KB["<b>Knowledge Base</b><br/>• 29 modules (86 files)<br/>• live help via MCP<br/>• 2 guides, 2 exercises"]
+            Cite["<b>Citation System</b><br/>• 106 citation entries<br/>• File paths + URLs<br/>• Blockquote format"]
+        end
+    end
+
+    Plugin --> CLI["Salesforce CLI (sf)"]
+    CLI --> Org["Your AFLS Salesforce Org"]
 ```
 
 ## Citation System
