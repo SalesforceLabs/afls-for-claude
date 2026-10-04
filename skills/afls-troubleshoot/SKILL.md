@@ -122,6 +122,9 @@ WHERE DeveloperName LIKE 'PlannerAdministration_%'
 - Addresses not syncing: Check address configuration, integration
 - Affiliations missing: Check affiliation records, parent/child setup
 
+### Event Management (Field Events)
+- **"We couldn't add the participant to the event either because the participant type and role aren't mapped for this event type or because the mapping record isn't active" on the Non-Profiled Attendees / Write-Ins cards, and the card has no Update/+Add button at all:** almost never a genuinely missing/inactive `EventMgmtPtcpTypeRoleMap` row (that's a red herring — it's usually already active). The real cause is that the mapping row points to an `EventMgmtParticipantRole` with `Role = Attendee` instead of a dedicated role typed `Role = NonProfiledAttendee` / `WriteInAttendee` — orgs often never create one, because `StandardRole` (a separate, restricted picklist) has no matching value for these two categories. Fix: create a role record per category with `StandardRole = 'Other'` (the only valid fallback), then repoint every NonProfiledAttendee/WriteInAttendee `EventMgmtPtcpTypeRoleMap` row (across all `MngEventType`s, not just one) to the new role. Full diagnose/fix steps: `knowledge/modules/field-events-management/troubleshooting.md`.
+
 ### Calendar / Planner
 - **`Error in $A.getCallback() [Cannot read properties of undefined (reading 'ObjectType')]`**: This Aura error occurs when the Planner component cannot find expected calendar event type configuration. Investigate with Tooling API queries (see "Querying LifeSciConfigRecord" section above):
   1. Check that `CalendarEvent_*` config records exist and are active:

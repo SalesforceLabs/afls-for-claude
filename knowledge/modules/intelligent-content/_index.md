@@ -13,6 +13,14 @@
 - [release-260-send-presentations-as-links-admin](./release-260-send-presentations-as-links-admin.md)
 - [release-260-send-presentations-as-links-enduser](./release-260-send-presentations-as-links-enduser.md)
 
+## Winter '27 (Release 264) Enhancements
+
+Source deck was marked WIP; content may change. The deck also lists an iPad-only "Optimized Content Library" (see more presentations at a glance) but provides no detail slide.
+
+- [release-264-in-content-interaction-tracking](./release-264-in-content-interaction-tracking.md) - `PresentationPlayer.trackInteraction()` captures element-level engagement in HTML content as in-content clickstream metrics
+- [release-264-clickstream-data-retention](./release-264-clickstream-data-retention.md) - Data Retention tab to purge `PresentationClickStreamEntry` records manually or on schedule, with Data Cloud archiving
+- [release-264-player-quick-actions](./release-264-player-quick-actions.md) - Inquiry and Survey quick actions surfaced from the Presentation Player menu
+
 ## Support Engineering Training (AFLS4CE Value Chain)
 
 ### Key Concepts

@@ -11,3 +11,7 @@ Remote Engagement in AFLS provides virtual detailing and remote interaction capa
 - [release-260-ms-teams-enduser](./release-260-ms-teams-enduser.md)
 - [release-260-ms-teams-admin](./release-260-ms-teams-admin.md)
 - [release-260-data-model-changes](./release-260-data-model-changes.md)
+
+## Winter '27 (Release 264) Enhancements
+
+- [release-264-remote-engagement-web-twilio](./release-264-remote-engagement-web-twilio.md) — Twilio-powered Remote Engagement on Salesforce Web: Trusted URL (Lightning Experience Pages CSP) setup, Start Remote Engagement flow, signatures, and web limitations

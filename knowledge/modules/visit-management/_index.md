@@ -31,3 +31,10 @@ Deep-dive support engineering content from the Engineering → Support training 
 - [support-engineering-visit-troubleshooting](./support-engineering-visit-troubleshooting.md) — Jun 2, 2026 session (Jim Morrow). Granular settings override diagnosis, sample limits validation, sample inventory validation, product display 6-step checklist, geolocation, full settings reference, 6 troubleshooting quick-reference patterns.
 - [support-engineering-visit-configuration](./support-engineering-visit-configuration.md) — Jun 2, 2026 session (deck companion). Admin Console panels (General/Geolocation/Product Detailing/Samples/Signature), data storage metadata pattern, sample-limits + inventory + allocation configuration models, configuration anti-patterns table.
 - [support-engineering-visit-engagement-side-menu](./support-engineering-visit-engagement-side-menu.md) — Apr 3, 2026 session (Srikant Chonnad). Merged layout (Visit + ProviderVisit), sidebar sections table, product loading 5-rule logic + restrictions/override, attendee loading (5+5=10), Intelligent Content targeting, custom related list rules, 7 troubleshooting patterns.
+
+## Winter '27 (Release 264) Enhancements
+
+- [release-264-visit-agent-voice-logging](./release-264-visit-agent-voice-logging.md) — Visit Agent voice-based visit logging on iPad: setup (Access Custom Agent permission set), fields populated, limitations.
+- [release-264-validate-visits-on-save-warnings](./release-264-validate-visits-on-save-warnings.md) — Visit Action Validation scripts now run on Save and can return non-blocking `warning` status.
+- [release-264-dependent-picklists](./release-264-dependent-picklists.md) — Field dependencies on Provider Visit, Provider Visit Product Discussion and custom objects in Visit Engagement.
+- [release-264-group-visit-attendee-capture](./release-264-group-visit-attendee-capture.md) — Attendee name navigation and "Capture only samples and marketing items per attendee" setting for group visits.
