@@ -32,11 +32,11 @@ describe("citation-map.ts", () => {
       expect(exercises.length).toBe(2);
     });
 
-    it("has 5 Troubleshooting entries", () => {
+    it("has 6 Troubleshooting entries", () => {
       const trouble = Object.values(citationMap).filter(
         (e) => e.category === "Troubleshooting",
       );
-      expect(trouble.length).toBe(5);
+      expect(trouble.length).toBe(6);
     });
   });
 

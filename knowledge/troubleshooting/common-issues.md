@@ -11,6 +11,7 @@ troubleshooting documents; load the one that matches the symptom.
 | **Visit Management** | `get_afls_troubleshooting({ topic: "visit-troubleshooting" })` | Visits not saving/syncing on mobile, record-type mismatches, detailing, signatures, calendar. |
 | **Sample Management** | `get_afls_troubleshooting({ topic: "sample-troubleshooting" })` | Sample limits, disbursement, inventory counts. |
 | **Territory Alignment** | `get_afls_troubleshooting({ topic: "territory-troubleshooting" })` | Territory assignment, geo/affiliation rules, `ProviderAcctTerritoryInfo`. |
+| **Data Cloud / Tableau Next / mobile dashboards** | `get_afls_troubleshooting({ topic: "data-cloud-tableau-mobile-troubleshooting" })` | Data Kit deploy errors, "couldn't display this content", iPad "Something went wrong" on a Home dashboard, `/tableau` REST errors. |
 
 ## Fast triage
 

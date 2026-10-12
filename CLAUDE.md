@@ -386,6 +386,10 @@ The plugin includes an MCP server that provides these tools:
 
 **AFLS4CE Value Chain Training (Engineering → Support, 15 sessions, 18 files)** — Deep support-engineering content spanning Feb 2026 → Jun 2026 across 14 modules. Topics: Sync internals, Search Before Create (internal + OneKey), Medical Inquiry multi-entity setup, KAM Account Plan deep dive, Consent Management proof + filtering, Quick & Custom Actions (Spring '26 + evergreen config guide), Validations via Custom Scripts, LSStarterConfig, Territory Alignment Jobs, Activity Plan, Activity Timeline, Visit Management (configuration + troubleshooting + side menu), Intelligent Content, Generic Workflow. Files use the `support-engineering-*` prefix (evergreen) or `release-260-*` (Spring '26-specific). Two new modules introduced: `starter-config/`, `custom-scripts/`.
 
+### Supplementary Module Directories
+
+Additional `knowledge/modules/` directories beyond the table above: `clinical-site-management`, `enablement-coaching`, `field-events-management`, `field-sales-rep-e2e-demo-flow`, `insdoc`, `insights`, `kam-end-to-end-demo`, `medical-inquiries`, `order-management`, `patient-services`, `provider-engagement-compliance`, `remote-engagement`, `sales-chart`, `spm-integration`.
+
 ### Technical Components
 - **Data Model**: Industry objects (PersonAccount, Address, Affiliation, etc.)
 - **OmniStudio**: FlexCards, OmniScripts, DataRaptors, Integration Procedures (**web app only — NOT available in AFLS Mobile/iPad**)
@@ -452,7 +456,7 @@ AFLS-for-Claude/
 │   ├── SE AFLS Mobile Setup and Configuration Guide.pdf  # Mobile setup (7.6MB)
 │   └── common_issues.md      # Troubleshooting guide
 ├── knowledge/                # Processed knowledge base (markdown)
-│   ├── modules/              # PM enablement content (28 module directories)
+│   ├── modules/              # PM enablement content (29 module directories, incl. data-cloud-data-kit)
 │   ├── help/                 # Official help served live via salesforce-docs MCP (not bundled)
 │   ├── guides/               # Dev guide, mobile setup guide (2 files)
 │   ├── exercises/            # Hands-on training (2 files)

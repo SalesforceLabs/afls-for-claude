@@ -75232,6 +75232,10 @@ var citationMap = {
   "territory-troubleshooting": {
     label: "Territory Alignment \u2014 Troubleshooting",
     category: "Troubleshooting"
+  },
+  "data-cloud-tableau-mobile-troubleshooting": {
+    label: "Data Cloud, Tableau Next and Mobile Dashboard \u2014 Troubleshooting",
+    category: "Troubleshooting"
   }
 };
 var moduleCitationMap = {
@@ -75374,6 +75378,15 @@ var moduleCitationMap = {
   },
   "data-cloud-singularity-and-tabnext-metrics:next-best-customer-predictive-model-demo": {
     label: "Next Best Customer Predictive Model Demo",
+    category: "PM Enablement"
+  },
+  // ── Data Cloud Data Kit ───────────────────────────────────────────
+  "data-cloud-data-kit:data-cloud-data-kit": {
+    label: "Data Cloud Data Kit & Mobile Dashboards",
+    category: "PM Enablement"
+  },
+  "data-cloud-data-kit:data-kit-to-mobile-dashboard-walkthrough": {
+    label: "Data Kit to Mobile Dashboard Walkthrough",
     category: "PM Enablement"
   },
   // ── Field Email ───────────────────────────────────────────────────
