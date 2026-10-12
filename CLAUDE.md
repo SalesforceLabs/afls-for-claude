@@ -452,7 +452,7 @@ AFLS-for-Claude/
 │   ├── SE AFLS Mobile Setup and Configuration Guide.pdf  # Mobile setup (7.6MB)
 │   └── common_issues.md      # Troubleshooting guide
 ├── knowledge/                # Processed knowledge base (markdown)
-│   ├── modules/              # PM enablement content (28 module directories)
+│   ├── modules/              # PM enablement content (29 module directories, incl. data-cloud-data-kit)
 │   ├── help/                 # Official help served live via salesforce-docs MCP (not bundled)
 │   ├── guides/               # Dev guide, mobile setup guide (2 files)
 │   ├── exercises/            # Hands-on training (2 files)
