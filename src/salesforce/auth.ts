@@ -283,9 +283,6 @@ export async function checkLscInstalled(targetOrg: string): Promise<{
   // For now, return a basic check structure
   return {
     installed: true, // Assume true for now
-    indicators: [
-      "Check for HealthCloudGA package",
-      "Check for LSC-specific objects like Visit__c",
-    ],
+    indicators: ["Check for HealthCloudGA package", "Check for LSC-specific objects like Visit__c"],
   };
 }
