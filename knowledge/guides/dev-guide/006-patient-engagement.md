@@ -1,14 +1,14 @@
 <!-- guide:dev-guide section:patient-engagement pages:718-1369 -->
 # Patient Engagement
 
-AFLS Overview                                                                                                          Patient Engagement
+Life Sciences Cloud (LSC) Overview                                                                                                          Patient Engagement
 
 
 
 
 ## Patient Engagement
 
-These objects are available for AFLS for Patient Engagement.
+These objects are available for LSC for Patient Engagement.
 
 
 
@@ -56,7 +56,7 @@ Use the Provider Relationship Management data model along with standard Salesfor
 
 <!-- page:719 -->
 
-AFLS Overview                                                                                                      Patient Engagement
+LSC Overview                                                                                                      Patient Engagement
 
 
 
@@ -93,7 +93,7 @@ For more details and a larger image, visit the Data Model Gallery.
 
 <!-- page:720 -->
 
-AFLS Overview                                                                                                        Patient Engagement
+LSC Overview                                                                                                        Patient Engagement
 
 
 
@@ -138,7 +138,7 @@ that's performed at a service territory in a country. This object is available i
 
 <!-- page:721 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -196,7 +196,7 @@ dateTime
 
 <!-- page:722 -->
 
-AFLS Overview                                                                    Patient Engagement
+LSC Overview                                                                    Patient Engagement
 
 
 
@@ -246,7 +246,7 @@ The priority of each condition.
 
 <!-- page:723 -->
 
-AFLS Overview                                                                              Patient Engagement
+LSC Overview                                                                              Patient Engagement
 
 
 
@@ -297,7 +297,7 @@ The work type condition for which the override is applicable.
 
 <!-- page:724 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -353,7 +353,7 @@ and later.
 
 <!-- page:725 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -405,7 +405,7 @@ Filter, Nillable, Sort
 
 <!-- page:726 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -456,7 +456,7 @@ PreviousWorkOrder
 
 <!-- page:727 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -505,7 +505,7 @@ reference
 
 <!-- page:728 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -567,7 +567,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:729 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -618,7 +618,7 @@ The most recent date on which a user referenced the record.
 
 <!-- page:730 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -669,7 +669,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:731 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -726,7 +726,7 @@ Represents a participant enrolled in a care program.
 
 <!-- page:732 -->
 
-AFLS Overview                                                                                                     Patient Engagement
+LSC Overview                                                                                                     Patient Engagement
 
 
 
@@ -782,7 +782,7 @@ This field is a relationship field and is available in API version 60.0 and late
 
 <!-- page:733 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -834,7 +834,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:734 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -885,7 +885,7 @@ Filter, Group, Nillable, Sort
 
 <!-- page:735 -->
 
-AFLS Overview                                                                               Patient Engagement
+LSC Overview                                                                               Patient Engagement
 
 
 
@@ -936,7 +936,7 @@ dateTime
 
 <!-- page:736 -->
 
-AFLS Overview                                                                              Patient Engagement
+LSC Overview                                                                              Patient Engagement
 
 
 
@@ -988,7 +988,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:737 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -1039,7 +1039,7 @@ picklist
 
 <!-- page:738 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -1095,7 +1095,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:739 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 Fields
@@ -1145,7 +1145,7 @@ Master-Detail
 
 <!-- page:740 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -1194,7 +1194,7 @@ EnrolleeWorkOrderStep
 
 <!-- page:741 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -1243,7 +1243,7 @@ The most recent date on which a user referenced the record.
 
 <!-- page:742 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -1294,7 +1294,7 @@ The stage, step, task, or any custom object for which the custody entry is creat
 
 <!-- page:743 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -1343,7 +1343,7 @@ picklist
 
 <!-- page:744 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -1404,7 +1404,7 @@ dateTime
 
 <!-- page:745 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -1457,7 +1457,7 @@ reference
 
 <!-- page:746 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -1508,7 +1508,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:747 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -1562,7 +1562,7 @@ Sharing is available for the object.
 
 <!-- page:748 -->
 
-AFLS Overview                                                                                                      Patient Engagement
+LSC Overview                                                                                                      Patient Engagement
 
 
 
@@ -1618,7 +1618,7 @@ reference
 
 <!-- page:749 -->
 
-AFLS Overview                                                                     Patient Engagement
+LSC Overview                                                                     Patient Engagement
 
 
 
@@ -1669,7 +1669,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:750 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -1719,7 +1719,7 @@ The work procedure for which custody is being configured.
 
 <!-- page:751 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -1772,7 +1772,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:752 -->
 
-AFLS Overview                                                                                                      Patient Engagement
+LSC Overview                                                                                                      Patient Engagement
 
 
 
@@ -1828,7 +1828,7 @@ dateTime
 
 <!-- page:753 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -1879,7 +1879,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:754 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -1928,7 +1928,7 @@ WorkProcedure
 
 <!-- page:755 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -1989,7 +1989,7 @@ Filter, Nillable, Sort
 
 <!-- page:756 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -2040,7 +2040,7 @@ reference
 
 <!-- page:757 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -2096,7 +2096,7 @@ Feed tracking is available for the object.
 
 <!-- page:758 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -2156,7 +2156,7 @@ The ID of the record owner.
 
 <!-- page:759 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -2215,7 +2215,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:760 -->
 
-AFLS Overview                                                                    Patient Engagement
+LSC Overview                                                                    Patient Engagement
 
 
 Fields
@@ -2265,7 +2265,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:761 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -2320,13 +2320,13 @@ Cloud.
 
 <!-- page:762 -->
 
-AFLS Overview                                                                                                 Patient Engagement
+LSC Overview                                                                                                 Patient Engagement
 
 
 
 ## Special Access Rules
 
-Available in API version 61.0 and later with AFLS.
+Available in API version 61.0 and later with LSC.
 
 
 
@@ -2376,7 +2376,7 @@ Filter, Nillable, Sort
 
 <!-- page:763 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -2428,7 +2428,7 @@ The record ID of the object associated with this work procedure.
 
 <!-- page:764 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -2469,7 +2469,7 @@ Represents information about the work type that's a part of a work procedure.
 
 ## Special Access Rules
 
-Available in API version 61.0 and later with AFLS.
+Available in API version 61.0 and later with LSC.
 
 
 
@@ -2491,7 +2491,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:765 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -2543,7 +2543,7 @@ The name of the work procedure step.
 
 <!-- page:766 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -2597,7 +2597,7 @@ Change events are available for the object.
 
 <!-- page:767 -->
 
-AFLS Overview                                                                                                   Patient Engagement
+LSC Overview                                                                                                   Patient Engagement
 
 
 
@@ -2618,7 +2618,7 @@ Represents additional information about a work type.
 
 ## Special Access Rules
 
-Available in API version 61.0 and later with AFLS.
+Available in API version 61.0 and later with LSC.
 
 
 
@@ -2659,7 +2659,7 @@ The default value is FALSE.
 
 <!-- page:768 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -2710,7 +2710,7 @@ Represents the work type for which information is being added.
 
 <!-- page:769 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -2749,7 +2749,7 @@ Represents each step within a work type.
 
 ## Special Access Rules
 
-Available in API version 61.0 and later with AFLS.
+Available in API version 61.0 and later with LSC.
 
 
 
@@ -2774,7 +2774,7 @@ This field is a relationship field.
 
 <!-- page:770 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -2824,7 +2824,7 @@ The work type associated with the step.
 
 <!-- page:771 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -2885,7 +2885,7 @@ reference
 
 <!-- page:772 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -2936,7 +2936,7 @@ The name of the work type step lead time override record.
 
 <!-- page:773 -->
 
-AFLS Overview                                                                   Patient Engagement
+LSC Overview                                                                   Patient Engagement
 
 
 
@@ -2987,7 +2987,7 @@ The work procedure for which priority is being defined.
 
 <!-- page:774 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -3040,7 +3040,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:775 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -3098,7 +3098,7 @@ The name of the work type service territory scheduling priority record.
 
 <!-- page:776 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -3149,7 +3149,7 @@ Represents the service territory condition for which priority is being defined.
 
 <!-- page:777 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -3199,7 +3199,7 @@ WorkType
 
 <!-- page:778 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -3239,7 +3239,7 @@ of the enrollee. Available in API version 46.0 and later.
 
 <!-- page:779 -->
 
-AFLS Overview                                                                                                           Patient Engagement
+LSC Overview                                                                                                           Patient Engagement
 
 
 
@@ -3272,7 +3272,7 @@ Represents a business or clinical goal related to a care program.
 
 <!-- page:780 -->
 
-AFLS Overview                                                                                                      Patient Engagement
+LSC Overview                                                                                                      Patient Engagement
 
 
 
@@ -3331,7 +3331,7 @@ date
 
 <!-- page:781 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -3382,7 +3382,7 @@ Create, Filter, Group, idLookup, Sort, Update
 
 <!-- page:782 -->
 
-AFLS Overview                                                                                                         Patient Engagement
+LSC Overview                                                                                                         Patient Engagement
 
 
 
@@ -3437,7 +3437,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:783 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 Fields
@@ -3487,7 +3487,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:784 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -3538,7 +3538,7 @@ Management is enabled.
 
 <!-- page:785 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -3590,7 +3590,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:786 -->
 
-AFLS Overview                                                                              Patient Engagement
+LSC Overview                                                                              Patient Engagement
 
 
 
@@ -3641,7 +3641,7 @@ Participant Management feature in API version 61.0 and later.
 
 <!-- page:787 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -3701,7 +3701,7 @@ The campaign associated to the care program.
 
 <!-- page:788 -->
 
-AFLS Overview                                                                          Patient Engagement
+LSC Overview                                                                          Patient Engagement
 
 
 
@@ -3753,7 +3753,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:789 -->
 
-AFLS Overview                                                                                                        Patient Engagement
+LSC Overview                                                                                                        Patient Engagement
 
 
 
@@ -3815,7 +3815,7 @@ employer, or insurer.
 
 <!-- page:790 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -3865,7 +3865,7 @@ string
 
 <!-- page:791 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -3917,7 +3917,7 @@ Possible values are:
 
 <!-- page:792 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -3976,7 +3976,7 @@ Person Account representing the enrollee
 
 <!-- page:793 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -4027,7 +4027,7 @@ Management feature in API version 58.0 and later.
 
 <!-- page:794 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -4077,7 +4077,7 @@ Specifies whether the enrollee is a new enrollee or a continued enrollee.
 
 <!-- page:795 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -4125,7 +4125,7 @@ This field is a relationship field.
 
 <!-- page:796 -->
 
-AFLS Overview                                                                               Patient Engagement
+LSC Overview                                                                               Patient Engagement
 
 
 
@@ -4177,7 +4177,7 @@ string
 
 <!-- page:797 -->
 
-AFLS Overview                                                                              Patient Engagement
+LSC Overview                                                                              Patient Engagement
 
 
 
@@ -4228,7 +4228,7 @@ ResearchStudyCandidate
 
 <!-- page:798 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -4276,7 +4276,7 @@ User representing the enrollee.
 
 <!-- page:799 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -4335,7 +4335,7 @@ reference
 
 <!-- page:800 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -4387,7 +4387,7 @@ The program that offers financial assistance for this product.
 
 <!-- page:801 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -4441,7 +4441,7 @@ History is available for tracked fields of the object.
 
 <!-- page:802 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -4500,7 +4500,7 @@ Filter, Nillable, Sort
 
 <!-- page:803 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -4549,7 +4549,7 @@ The status of a card in relation to a care program enrollee.
 
 <!-- page:804 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -4608,7 +4608,7 @@ Create, Nillable, Update
 
 <!-- page:805 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -4660,7 +4660,7 @@ picklist
 
 <!-- page:806 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -4713,7 +4713,7 @@ picklist
 
 <!-- page:807 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -4776,7 +4776,7 @@ Create, Defaulted on create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:808 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -4827,7 +4827,7 @@ Name of the care program product.
 
 <!-- page:809 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -4881,7 +4881,7 @@ Change events are available for the object.
 
 <!-- page:810 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -4939,7 +4939,7 @@ The care program product to which this care program provider is associated.
 
 <!-- page:811 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -4989,7 +4989,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:812 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -5047,7 +5047,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:813 -->
 
-AFLS Overview                                                                          Patient Engagement
+LSC Overview                                                                          Patient Engagement
 
 
 Fields
@@ -5098,7 +5098,7 @@ viewed.
 
 <!-- page:814 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -5148,7 +5148,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:815 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -5213,7 +5213,7 @@ Asset
 
 <!-- page:816 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -5263,7 +5263,7 @@ Account
 
 <!-- page:817 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -5313,7 +5313,7 @@ textarea
 
 <!-- page:818 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -5365,7 +5365,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:819 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -5426,7 +5426,7 @@ create(), delete(), describeSObjects(), query(), retrieve(), update(), upsert()
 
 <!-- page:820 -->
 
-AFLS Overview                                                                               Patient Engagement
+LSC Overview                                                                               Patient Engagement
 
 
 Fields
@@ -5477,7 +5477,7 @@ Developer Edition org of the package developer.
 
 <!-- page:821 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -5528,7 +5528,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:822 -->
 
-AFLS Overview                                                                                                 Patient Engagement
+LSC Overview                                                                                                 Patient Engagement
 
 
 
@@ -5587,7 +5587,7 @@ Filter, Nillable, Sort
 
 <!-- page:823 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -5641,7 +5641,7 @@ Feed tracking is available for the object.
 
 <!-- page:824 -->
 
-AFLS Overview                                                                                                      Patient Engagement
+LSC Overview                                                                                                      Patient Engagement
 
 
 
@@ -5674,7 +5674,7 @@ To enable these objects in your org, go to FHIR R4 Support Settings in Setup and
 org pref.
 
 Note: Some of these objects are available in your org even before enabling this org pref because they’re part of other data models
-in Health Cloud and AFLS.
+in Health Cloud and LSC.
 
 Note: To use the Clinical Data Model objects on an Experience Cloud site, community users need the FHIR R4 for Experience
 Cloud Sites permission set.
@@ -5699,7 +5699,7 @@ Org Pref Required                                                      Org Pref 
 
 <!-- page:825 -->
 
-AFLS Overview                                                                                                         Patient Engagement
+LSC Overview                                                                                                         Patient Engagement
 
 
 
@@ -5749,7 +5749,7 @@ Represents a clinical assessment of a patient’s allergy or intolerance. This o
 
 <!-- page:826 -->
 
-AFLS Overview                                                                                                        Patient Engagement
+LSC Overview                                                                                                        Patient Engagement
 
 
 
@@ -5799,7 +5799,7 @@ Represents identifier information for multiple objects. This object is available
 
 <!-- page:827 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -5856,7 +5856,7 @@ The recommended number of times the activity should be performed in a repetition
 
 <!-- page:828 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -5907,7 +5907,7 @@ The recommended number of times the activity should be performed in the specifie
 
 <!-- page:829 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -5958,7 +5958,7 @@ The maximum length of each cycle of repetition.
 
 <!-- page:830 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -6010,7 +6010,7 @@ The lower limit of the length of the period during which this activity should be
 
 <!-- page:831 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -6059,7 +6059,7 @@ UnitOfMeasure
 
 <!-- page:832 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -6110,7 +6110,7 @@ Possible values are:
 
 <!-- page:833 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -6169,7 +6169,7 @@ ActivityCountPerRepetition: 5
 
 <!-- page:834 -->
 
-AFLS Overview                                                                                                            Patient Engagement
+LSC Overview                                                                                                            Patient Engagement
 
 
 
@@ -6232,7 +6232,7 @@ The patient or the provider who assessed the patient’s condition.
 
 <!-- page:835 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -6281,7 +6281,7 @@ Example
 
 <!-- page:836 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -6330,7 +6330,7 @@ Example
 
 <!-- page:837 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -6384,7 +6384,7 @@ Referenced Objects
 
 <!-- page:838 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -6434,7 +6434,7 @@ Specifies the status of the allergy or intolerance. Possible values are:
 
 <!-- page:839 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -6490,7 +6490,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:840 -->
 
-AFLS Overview                                                                                                Patient Engagement
+LSC Overview                                                                                                Patient Engagement
 
 
 
@@ -6546,7 +6546,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:841 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -6601,7 +6601,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:842 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -6652,7 +6652,7 @@ This field is available in API version 55.0 and later.
 
 <!-- page:843 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -6705,7 +6705,7 @@ Change events are available for the object.
 
 <!-- page:844 -->
 
-AFLS Overview                                                                                                   Patient Engagement
+LSC Overview                                                                                                   Patient Engagement
 
 
 
@@ -6763,7 +6763,7 @@ dateTime
 
 <!-- page:845 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -6820,7 +6820,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:846 -->
 
-AFLS Overview                                                                                                        Patient Engagement
+LSC Overview                                                                                                        Patient Engagement
 
 
 
@@ -6883,7 +6883,7 @@ The ID of the care program enrollee to whom this device is registered.
 
 <!-- page:847 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -6933,7 +6933,7 @@ The name of this device registration record.
 
 <!-- page:848 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -6984,7 +6984,7 @@ Create, Defaulted on create, Filter, Group, Restricted picklist, Sort, Update
 
 <!-- page:849 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -7037,7 +7037,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:850 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -7093,7 +7093,7 @@ History is available for tracked fields of the object.
 
 <!-- page:851 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -7152,7 +7152,7 @@ Create, Filter, Nillable, Update
 
 <!-- page:852 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -7201,7 +7201,7 @@ Case
 
 <!-- page:853 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -7252,7 +7252,7 @@ string
 
 <!-- page:854 -->
 
-AFLS Overview                                                                        Patient Engagement
+LSC Overview                                                                        Patient Engagement
 
 
 
@@ -7305,7 +7305,7 @@ url
 
 <!-- page:855 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -7356,7 +7356,7 @@ dateTime
 
 <!-- page:856 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -7409,7 +7409,7 @@ References the patient who is the subject of the diagnostic summary.
 
 <!-- page:857 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -7457,7 +7457,7 @@ Possible values are:
 
 <!-- page:858 -->
 
-AFLS Overview                                                                                                  Patient Engagement
+LSC Overview                                                                                                  Patient Engagement
 
 
 
@@ -7513,7 +7513,7 @@ to DiagnosticSummary in this way, the type of information they add, and the fiel
 
 <!-- page:859 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -7576,7 +7576,7 @@ Polymorphic reference
 
 <!-- page:860 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -7629,7 +7629,7 @@ Possible values are:
 
 <!-- page:861 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -7685,7 +7685,7 @@ Feed tracking is available for the object.
 
 <!-- page:862 -->
 
-AFLS Overview                                                                                                      Patient Engagement
+LSC Overview                                                                                                      Patient Engagement
 
 
 
@@ -7743,7 +7743,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:863 -->
 
-AFLS Overview                                                                 Patient Engagement
+LSC Overview                                                                 Patient Engagement
 
 
 
@@ -7793,7 +7793,7 @@ The user that this record belongs to.
 
 <!-- page:864 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -7843,7 +7843,7 @@ The date and time when the record was last modified in its source system.
 
 <!-- page:865 -->
 
-AFLS Overview                                                                  Patient Engagement
+LSC Overview                                                                  Patient Engagement
 
 
 
@@ -7890,7 +7890,7 @@ Referenced Objects
 
 <!-- page:866 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -7951,7 +7951,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:867 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -8001,7 +8001,7 @@ Account, CareRegisteredDevice, HealthcareProvider, User
 
 <!-- page:868 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -8053,7 +8053,7 @@ Create, Nillable, Update
 
 <!-- page:869 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -8105,7 +8105,7 @@ Specifies the status of the issue.
 
 <!-- page:870 -->
 
-AFLS Overview                                                                                                           Patient Engagement
+LSC Overview                                                                                                           Patient Engagement
 
 
 
@@ -8160,7 +8160,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:871 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 Fields
@@ -8210,7 +8210,7 @@ Lookup
 
 <!-- page:872 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -8262,7 +8262,7 @@ HealthcarePractitionerFacility, HealthcareProvider, User
 
 <!-- page:873 -->
 
-AFLS Overview                                                                                                            Patient Engagement
+LSC Overview                                                                                                            Patient Engagement
 
 
 
@@ -8316,7 +8316,7 @@ Change events are available for the object.
 
 <!-- page:874 -->
 
-AFLS Overview                                                                                                        Patient Engagement
+LSC Overview                                                                                                        Patient Engagement
 
 
 
@@ -8372,7 +8372,7 @@ Case
 
 <!-- page:875 -->
 
-AFLS Overview                                                                Patient Engagement
+LSC Overview                                                                Patient Engagement
 
 
 
@@ -8421,7 +8421,7 @@ Possible values are:
 
 <!-- page:876 -->
 
-AFLS Overview                                                                              Patient Engagement
+LSC Overview                                                                              Patient Engagement
 
 
 
@@ -8469,7 +8469,7 @@ reference
 
 <!-- page:877 -->
 
-AFLS Overview                                                                      Patient Engagement
+LSC Overview                                                                      Patient Engagement
 
 
 
@@ -8521,7 +8521,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:878 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -8571,7 +8571,7 @@ The system-defined code for the readmission.
 
 <!-- page:879 -->
 
-AFLS Overview                                                                     Patient Engagement
+LSC Overview                                                                     Patient Engagement
 
 
 
@@ -8619,7 +8619,7 @@ The name of the system this record came from.
 
 <!-- page:880 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -8668,7 +8668,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:881 -->
 
-AFLS Overview                                                                                                     Patient Engagement
+LSC Overview                                                                                                     Patient Engagement
 
 
 
@@ -8724,7 +8724,7 @@ involvement.
 
 <!-- page:882 -->
 
-AFLS Overview                                                                                                           Patient Engagement
+LSC Overview                                                                                                           Patient Engagement
 
 
 
@@ -8786,7 +8786,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:883 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 Fields
@@ -8836,7 +8836,7 @@ The last date and time when the record was viewed.
 
 <!-- page:884 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -8896,7 +8896,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:885 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 Fields
@@ -8945,7 +8945,7 @@ The healthcare facility where the encounter occurred.
 
 <!-- page:886 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -8994,7 +8994,7 @@ The start date and time of the patient’s time at the facility during the encou
 
 <!-- page:887 -->
 
-AFLS Overview                                                                                                         Patient Engagement
+LSC Overview                                                                                                         Patient Engagement
 
 
 
@@ -9058,7 +9058,7 @@ Master-detail reference
 
 <!-- page:888 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -9111,7 +9111,7 @@ Possible values are:
 
 <!-- page:889 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -9160,7 +9160,7 @@ The system-generated name of the ClinicalEncounterIdentifier record.
 
 <!-- page:890 -->
 
-AFLS Overview                                                                                                        Patient Engagement
+LSC Overview                                                                                                        Patient Engagement
 
 
 
@@ -9223,7 +9223,7 @@ The parent clinical encounter that the ClinicalEncounterProvider record belongs 
 
 <!-- page:891 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -9272,7 +9272,7 @@ string
 
 <!-- page:892 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -9329,7 +9329,7 @@ Feed tracking is available for the object.
 
 <!-- page:893 -->
 
-AFLS Overview                                                                                                     Patient Engagement
+LSC Overview                                                                                                     Patient Engagement
 
 
 
@@ -9388,7 +9388,7 @@ string
 
 <!-- page:894 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -9445,7 +9445,7 @@ Change events are available for the object.
 
 <!-- page:895 -->
 
-AFLS Overview                                                                                                        Patient Engagement
+LSC Overview                                                                                                        Patient Engagement
 
 
 
@@ -9500,7 +9500,7 @@ Filter, Nillable, Sort
 
 <!-- page:896 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -9565,7 +9565,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:897 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -9614,7 +9614,7 @@ Referenced Objects
 
 <!-- page:898 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -9663,7 +9663,7 @@ reference
 
 <!-- page:899 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -9715,7 +9715,7 @@ Filter, Nillable, Sort
 
 <!-- page:900 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -9765,7 +9765,7 @@ Lookup
 
 <!-- page:901 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -9817,7 +9817,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:902 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -9867,7 +9867,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:903 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -9917,7 +9917,7 @@ Referenced Objects
 
 <!-- page:904 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -9966,7 +9966,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:905 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -10016,7 +10016,7 @@ Possible values are:
 
 <!-- page:906 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -10076,7 +10076,7 @@ object. This object is available in API version 51.0 and later.
 
 <!-- page:907 -->
 
-AFLS Overview                                                                                          Patient Engagement
+LSC Overview                                                                                          Patient Engagement
 
 
 
@@ -10132,7 +10132,7 @@ Referenced Objects
 
 <!-- page:908 -->
 
-AFLS Overview                                                                                                 Patient Engagement
+LSC Overview                                                                                                 Patient Engagement
 
 
 
@@ -10185,7 +10185,7 @@ following types, referencing the following types of records:
 
 <!-- page:909 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 - Reason Reference: Health conditions, care observations, or diagnostic summaries
@@ -10244,7 +10244,7 @@ Additional information associated with the code set.
 
 <!-- page:910 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -10295,7 +10295,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:911 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -10347,7 +10347,7 @@ date
 
 <!-- page:912 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -10413,7 +10413,7 @@ A code set that represents the conceptual entity represented by the code set bun
 
 <!-- page:913 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -10464,7 +10464,7 @@ A code set that represents the conceptual entity represented by the code set bun
 
 <!-- page:914 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -10515,7 +10515,7 @@ A code set that represents the conceptual entity represented by the code set bun
 
 <!-- page:915 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -10565,7 +10565,7 @@ Create, Filter, Group, idLookup, Sort, Update
 
 <!-- page:916 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -10627,7 +10627,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:917 -->
 
-AFLS Overview                                                                                             Patient Engagement
+LSC Overview                                                                                             Patient Engagement
 
 
 Fields
@@ -10678,7 +10678,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:918 -->
 
-AFLS Overview                                                                                            Patient Engagement
+LSC Overview                                                                                            Patient Engagement
 
 
 
@@ -10730,7 +10730,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:919 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -10782,7 +10782,7 @@ Create, Filter, Group, Nillable, Restricted picklist, Sort, Update
 
 <!-- page:920 -->
 
-AFLS Overview                                                                                             Patient Engagement
+LSC Overview                                                                                             Patient Engagement
 
 
 
@@ -10832,7 +10832,7 @@ Possible values are:
 
 <!-- page:921 -->
 
-AFLS Overview                                                                                              Patient Engagement
+LSC Overview                                                                                              Patient Engagement
 
 
 
@@ -10881,7 +10881,7 @@ Possible values are:
 
 <!-- page:922 -->
 
-AFLS Overview                                                                                             Patient Engagement
+LSC Overview                                                                                             Patient Engagement
 
 
 
@@ -10930,7 +10930,7 @@ Possible values are:
 
 <!-- page:923 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -10981,7 +10981,7 @@ boolean
 
 <!-- page:924 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -11031,7 +11031,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:925 -->
 
-AFLS Overview                                                                                           Patient Engagement
+LSC Overview                                                                                           Patient Engagement
 
 
 
@@ -11083,7 +11083,7 @@ The last date that the record was referenced.
 
 <!-- page:926 -->
 
-AFLS Overview                                                                                Patient Engagement
+LSC Overview                                                                                Patient Engagement
 
 
 
@@ -11132,7 +11132,7 @@ Create, Filter, Group, idLookup, Sort, Update
 
 <!-- page:927 -->
 
-AFLS Overview                                                                                            Patient Engagement
+LSC Overview                                                                                            Patient Engagement
 
 
 
@@ -11184,7 +11184,7 @@ in API version 62.0 and later when Site Management is enabled.
 
 <!-- page:928 -->
 
-AFLS Overview                                                                                           Patient Engagement
+LSC Overview                                                                                           Patient Engagement
 
 
 
@@ -11232,7 +11232,7 @@ multipicklist
 
 <!-- page:929 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -11284,7 +11284,7 @@ This field is a relationship field.
 
 <!-- page:930 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -11348,7 +11348,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:931 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -11401,7 +11401,7 @@ The clinical encounter that the immunization was a part of.
 
 <!-- page:932 -->
 
-AFLS Overview                                                               Patient Engagement
+LSC Overview                                                               Patient Engagement
 
 
 
@@ -11449,7 +11449,7 @@ Possible values are:
 
 <!-- page:933 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -11498,7 +11498,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:934 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -11550,7 +11550,7 @@ ProblemDefinition
 
 <!-- page:935 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -11601,7 +11601,7 @@ reference
 
 <!-- page:936 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -11652,7 +11652,7 @@ reference
 
 <!-- page:937 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -11704,7 +11704,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:938 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -11759,7 +11759,7 @@ Sharing is available for the object.
 
 <!-- page:939 -->
 
-AFLS Overview                                                                                                        Patient Engagement
+LSC Overview                                                                                                        Patient Engagement
 
 
 
@@ -11820,7 +11820,7 @@ added.
 
 <!-- page:940 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -11875,7 +11875,7 @@ Change events are available for the object.
 
 <!-- page:941 -->
 
-AFLS Overview                                                                                                 Patient Engagement
+LSC Overview                                                                                                 Patient Engagement
 
 
 
@@ -11934,7 +11934,7 @@ Referenced Objects
 
 <!-- page:942 -->
 
-AFLS Overview                                                        Patient Engagement
+LSC Overview                                                        Patient Engagement
 
 
 
@@ -11980,7 +11980,7 @@ Referenced Objects
 
 <!-- page:943 -->
 
-AFLS Overview                                                                Patient Engagement
+LSC Overview                                                                Patient Engagement
 
 
 
@@ -12032,7 +12032,7 @@ Referenced Objects
 
 <!-- page:944 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -12083,7 +12083,7 @@ add identifiers to:
 
 <!-- page:945 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 - PatientImmunization
@@ -12141,7 +12141,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:946 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -12193,7 +12193,7 @@ Possible values are:
 
 <!-- page:947 -->
 
-AFLS Overview                                                                                Patient Engagement
+LSC Overview                                                                                Patient Engagement
 
 
 
@@ -12242,7 +12242,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:948 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -12294,7 +12294,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:949 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -12351,7 +12351,7 @@ Change events are available for the object.
 
 <!-- page:950 -->
 
-AFLS Overview                                                                                                     Patient Engagement
+LSC Overview                                                                                                     Patient Engagement
 
 
 
@@ -12410,7 +12410,7 @@ The most recent date on which a user referenced this record.
 
 <!-- page:951 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -12461,7 +12461,7 @@ The denominator value of the ingredient’s strength or quantity in the medicati
 
 <!-- page:952 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -12517,7 +12517,7 @@ History is available for tracked fields of the object.
 
 <!-- page:953 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -12575,7 +12575,7 @@ Refers To
 
 <!-- page:954 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -12624,7 +12624,7 @@ The location where the dispense occurred.
 
 <!-- page:955 -->
 
-AFLS Overview                                                                                            Patient Engagement
+LSC Overview                                                                                            Patient Engagement
 
 
 
@@ -12673,7 +12673,7 @@ reference
 
 <!-- page:956 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -12725,7 +12725,7 @@ dateTime
 
 <!-- page:957 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -12777,7 +12777,7 @@ Lookup
 
 <!-- page:958 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -12827,7 +12827,7 @@ The date and time when this item was last changed in the source system.
 
 <!-- page:959 -->
 
-AFLS Overview                                                                                            Patient Engagement
+LSC Overview                                                                                            Patient Engagement
 
 
 
@@ -12878,7 +12878,7 @@ Lookup
 
 <!-- page:960 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -12929,7 +12929,7 @@ Possible values are:
 
 <!-- page:961 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -12988,7 +12988,7 @@ available in API version 51.0 and later.
 
 <!-- page:962 -->
 
-AFLS Overview                                                                                           Patient Engagement
+LSC Overview                                                                                           Patient Engagement
 
 
 
@@ -13040,7 +13040,7 @@ reference
 
 <!-- page:963 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -13090,7 +13090,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:964 -->
 
-AFLS Overview                                                               Patient Engagement
+LSC Overview                                                               Patient Engagement
 
 
 
@@ -13139,7 +13139,7 @@ The length of time the first fill is expected to last.
 
 <!-- page:965 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -13190,7 +13190,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:966 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -13240,7 +13240,7 @@ Autonumber, Defaulted on create, Filter, idLookup, Sort
 
 <!-- page:967 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -13295,7 +13295,7 @@ reference
 
 <!-- page:968 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -13346,7 +13346,7 @@ picklist
 
 <!-- page:969 -->
 
-AFLS Overview                                                                                Patient Engagement
+LSC Overview                                                                                Patient Engagement
 
 
 
@@ -13399,7 +13399,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:970 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -13454,7 +13454,7 @@ Referenced Objects
 
 <!-- page:971 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -13503,7 +13503,7 @@ reference
 
 <!-- page:972 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -13553,7 +13553,7 @@ Possible values are:
 
 <!-- page:973 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -13614,7 +13614,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:974 -->
 
-AFLS Overview                                                                     Patient Engagement
+LSC Overview                                                                     Patient Engagement
 
 
 Fields
@@ -13664,7 +13664,7 @@ picklist
 
 <!-- page:975 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -13715,7 +13715,7 @@ Referenced Objects
 
 <!-- page:976 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -13767,7 +13767,7 @@ string
 
 <!-- page:977 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -13820,7 +13820,7 @@ reference
 
 <!-- page:978 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -13872,7 +13872,7 @@ The person who made the medication statement.
 
 <!-- page:979 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -13925,7 +13925,7 @@ record.
 
 <!-- page:980 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -13988,7 +13988,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:981 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -14038,7 +14038,7 @@ The date and time when the record was last viewed.
 
 <!-- page:982 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -14092,7 +14092,7 @@ Change events are available for the object.
 
 <!-- page:983 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -14149,7 +14149,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:984 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -14201,7 +14201,7 @@ Referenced Objects
 
 <!-- page:985 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -14257,7 +14257,7 @@ History is available for tracked fields of the object.
 
 <!-- page:986 -->
 
-AFLS Overview                                                                                              Patient Engagement
+LSC Overview                                                                                              Patient Engagement
 
 
 
@@ -14314,7 +14314,7 @@ reference
 
 <!-- page:987 -->
 
-AFLS Overview                                                                              Patient Engagement
+LSC Overview                                                                              Patient Engagement
 
 
 
@@ -14366,7 +14366,7 @@ reference
 
 <!-- page:988 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -14417,7 +14417,7 @@ dateTime
 
 <!-- page:989 -->
 
-AFLS Overview                                                                      Patient Engagement
+LSC Overview                                                                      Patient Engagement
 
 
 
@@ -14469,7 +14469,7 @@ The system-generated name of the patient immunization record.
 
 <!-- page:990 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -14520,7 +14520,7 @@ Total number of doses recommended to achieve immunity.
 
 <!-- page:991 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -14569,7 +14569,7 @@ The source system from where the immunization record was brought into Salesforce
 
 <!-- page:992 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -14619,7 +14619,7 @@ The system-defined code that represents the reason for why the vaccination was s
 
 <!-- page:993 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -14664,7 +14664,7 @@ Referenced Objects
 
 <!-- page:994 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -14723,7 +14723,7 @@ This object is available in API version 56.0 and later.
 
 <!-- page:995 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -14776,7 +14776,7 @@ The system-generated name of the PatientImmuizationProtocol record.
 
 <!-- page:996 -->
 
-AFLS Overview                                                                          Patient Engagement
+LSC Overview                                                                          Patient Engagement
 
 
 
@@ -14828,7 +14828,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:997 -->
 
-AFLS Overview                                                                                Patient Engagement
+LSC Overview                                                                                Patient Engagement
 
 
 
@@ -14880,7 +14880,7 @@ CodeSetBundle
 
 <!-- page:998 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -14931,7 +14931,7 @@ Change events are available for the object.
 
 <!-- page:999 -->
 
-AFLS Overview                                                                                              Patient Engagement
+LSC Overview                                                                                              Patient Engagement
 
 
 
@@ -14986,7 +14986,7 @@ The SNOMED code for frontal sinusectomy.
 
 <!-- page:1000 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -15035,7 +15035,7 @@ DateTime
 
 <!-- page:1001 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -15085,7 +15085,7 @@ Refers To
 
 <!-- page:1002 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -15135,7 +15135,7 @@ The unit of measure for the PerformedAtAge field.
 
 <!-- page:1003 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -15185,7 +15185,7 @@ The person who created the record.
 
 <!-- page:1004 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -15234,7 +15234,7 @@ DateTime
 
 <!-- page:1005 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -15285,7 +15285,7 @@ CodeSetBundle
 
 <!-- page:1006 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -15342,7 +15342,7 @@ Sharing is available for the object.
 
 <!-- page:1007 -->
 
-AFLS Overview                                                                                                  Patient Engagement
+LSC Overview                                                                                                  Patient Engagement
 
 
 
@@ -15402,7 +15402,7 @@ picklist
 
 <!-- page:1008 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -15454,7 +15454,7 @@ The patient medical procedure to which details are being added.
 
 <!-- page:1009 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -15515,7 +15515,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:1010 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 Fields
@@ -15565,7 +15565,7 @@ a simple quantity or a quantity range.
 
 <!-- page:1011 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -15616,7 +15616,7 @@ reference
 
 <!-- page:1012 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -15668,7 +15668,7 @@ The date and time when the record was last referenced.
 
 <!-- page:1013 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -15720,7 +15720,7 @@ Create, Nillable, Update
 
 <!-- page:1014 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -15772,7 +15772,7 @@ The identifier of the dosage record in its source system.
 
 <!-- page:1015 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -15834,7 +15834,7 @@ to the verification. This object is available in API version 60.0 and later.
 
 <!-- page:1016 -->
 
-AFLS Overview                                                                                                     Patient Engagement
+LSC Overview                                                                                                     Patient Engagement
 
 
 
@@ -15892,7 +15892,7 @@ The details associated with the digital verification setup record.
 
 <!-- page:1017 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -15942,7 +15942,7 @@ Owner
 
 <!-- page:1018 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -15995,7 +15995,7 @@ HC24__IndustriesAppConfig__c, HC24__IndustriesSettings__c,
 
 <!-- page:1019 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -16047,7 +16047,7 @@ textarea
 
 <!-- page:1020 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -16096,7 +16096,7 @@ User
 
 <!-- page:1021 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -16155,7 +16155,7 @@ Filter, Nillable, Sort
 
 <!-- page:1022 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -16207,7 +16207,7 @@ Possible values are:
 
 <!-- page:1023 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -16253,7 +16253,7 @@ Possible values are:
 
 <!-- page:1024 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -16311,7 +16311,7 @@ The parent digital verification setup associated with the digital verification s
 
 <!-- page:1025 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -16363,7 +16363,7 @@ Create, Nillable, Update
 
 <!-- page:1026 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -16416,7 +16416,7 @@ Sciences or Health Cloud
 
 <!-- page:1027 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -16446,7 +16446,7 @@ Represents the eligibility criteria and recommendation for a program. This objec
 
 <!-- page:1028 -->
 
-AFLS Overview                                                                                                   Patient Engagement
+LSC Overview                                                                                                   Patient Engagement
 
 
 
@@ -16501,7 +16501,7 @@ date
 
 <!-- page:1029 -->
 
-AFLS Overview                                                            Patient Engagement
+LSC Overview                                                            Patient Engagement
 
 
 
@@ -16551,7 +16551,7 @@ The first name of the applicant.
 
 <!-- page:1030 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -16601,7 +16601,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1031 -->
 
-AFLS Overview                                                                                                            Patient Engagement
+LSC Overview                                                                                                            Patient Engagement
 
 
 
@@ -16656,7 +16656,7 @@ History is available for tracked fields of the object.
 
 <!-- page:1032 -->
 
-AFLS Overview                                                                                               Patient Engagement
+LSC Overview                                                                                               Patient Engagement
 
 
 
@@ -16715,7 +16715,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1033 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -16767,7 +16767,7 @@ The maximum amount that can be disbursed for a period.
 
 <!-- page:1034 -->
 
-AFLS Overview                                                                                                  Patient Engagement
+LSC Overview                                                                                                  Patient Engagement
 
 
 
@@ -16819,7 +16819,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:1035 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 Fields
@@ -16870,7 +16870,7 @@ Create, Filter, Group, Nillable, Restricted picklist, Sort, Update
 
 <!-- page:1036 -->
 
-AFLS Overview                                                                                                            Patient Engagement
+LSC Overview                                                                                                            Patient Engagement
 
 
 
@@ -16921,7 +16921,7 @@ Sharing is available for the object.
 
 <!-- page:1037 -->
 
-AFLS Overview                                                                                                  Patient Engagement
+LSC Overview                                                                                                  Patient Engagement
 
 
 
@@ -16977,7 +16977,7 @@ This field is a relationship field.
 
 <!-- page:1038 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -17027,7 +17027,7 @@ Create, Filter, Group, idLookup, Sort, Update
 
 <!-- page:1039 -->
 
-AFLS Overview                                                                                                            Patient Engagement
+LSC Overview                                                                                                            Patient Engagement
 
 
 
@@ -17082,7 +17082,7 @@ History is available for tracked fields of the object.
 
 <!-- page:1040 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -17140,7 +17140,7 @@ CareProgramProduct
 
 <!-- page:1041 -->
 
-AFLS Overview                                                                                                     Patient Engagement
+LSC Overview                                                                                                     Patient Engagement
 
 
 
@@ -17197,7 +17197,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:1042 -->
 
-AFLS Overview                                                                                          Patient Engagement
+LSC Overview                                                                                          Patient Engagement
 
 
 Special Access Rules
@@ -17247,7 +17247,7 @@ string
 
 <!-- page:1043 -->
 
-AFLS Overview                                                                                                     Patient Engagement
+LSC Overview                                                                                                     Patient Engagement
 
 
 
@@ -17304,7 +17304,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:1044 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 Fields
@@ -17355,7 +17355,7 @@ int
 
 <!-- page:1045 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -17407,7 +17407,7 @@ Possible values are:
 
 <!-- page:1046 -->
 
-AFLS Overview                                                                                                  Patient Engagement
+LSC Overview                                                                                                  Patient Engagement
 
 
 
@@ -17463,7 +17463,7 @@ Represents details about the insurance coverage for a member or subscriber.
 
 <!-- page:1047 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -17519,7 +17519,7 @@ The date from which this preauthorization is effective.
 
 <!-- page:1048 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -17571,7 +17571,7 @@ Create, Nillable, Update
 
 <!-- page:1049 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -17624,7 +17624,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1050 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -17685,7 +17685,7 @@ reference
 
 <!-- page:1051 -->
 
-AFLS Overview                                                                                             Patient Engagement
+LSC Overview                                                                                             Patient Engagement
 
 
 
@@ -17736,7 +17736,7 @@ Name of this preauthorized care item.
 
 <!-- page:1052 -->
 
-AFLS Overview                                                                               Patient Engagement
+LSC Overview                                                                               Patient Engagement
 
 
 
@@ -17787,7 +17787,7 @@ The ID of this preauthorization record on its source system.
 
 <!-- page:1053 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -17840,7 +17840,7 @@ Represents the benefits provided to a covered member by a purchaser’s plan.
 
 <!-- page:1054 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -17893,7 +17893,7 @@ Lookup
 
 <!-- page:1055 -->
 
-AFLS Overview                                                                          Patient Engagement
+LSC Overview                                                                          Patient Engagement
 
 
 
@@ -17944,7 +17944,7 @@ Additional information about the member’s deductibles under this plan.
 
 <!-- page:1056 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -17996,7 +17996,7 @@ currency
 
 <!-- page:1057 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -18049,7 +18049,7 @@ the plan starts to contribute towards treatment.
 
 <!-- page:1058 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -18100,7 +18100,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1059 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -18151,7 +18151,7 @@ currency
 
 <!-- page:1060 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -18204,7 +18204,7 @@ deductibles, copayments, and coinsurance, but excludes premiums.
 
 <!-- page:1061 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -18253,7 +18253,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1062 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -18306,7 +18306,7 @@ boolean
 
 <!-- page:1063 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -18359,7 +18359,7 @@ Create, Filter, Group, Sort
 
 <!-- page:1064 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -18411,7 +18411,7 @@ by non-preferred providers.
 
 <!-- page:1065 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -18461,7 +18461,7 @@ The amount the member contributes towards primary care treatment.
 
 <!-- page:1066 -->
 
-AFLS Overview                                                                          Patient Engagement
+LSC Overview                                                                          Patient Engagement
 
 
 
@@ -18512,7 +18512,7 @@ Lookup
 
 <!-- page:1067 -->
 
-AFLS Overview                                                                                                            Patient Engagement
+LSC Overview                                                                                                            Patient Engagement
 
 
 
@@ -18565,7 +18565,7 @@ Sharing is available for the object.
 
 <!-- page:1068 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -18620,7 +18620,7 @@ CoverageBenefit
 
 <!-- page:1069 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -18668,7 +18668,7 @@ Create, Nillable, Update
 
 <!-- page:1070 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -18718,7 +18718,7 @@ Filter, Nillable, Sort
 
 <!-- page:1071 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -18770,7 +18770,7 @@ reference
 
 <!-- page:1072 -->
 
-AFLS Overview                                                                              Patient Engagement
+LSC Overview                                                                              Patient Engagement
 
 
 
@@ -18820,7 +18820,7 @@ The identifier of the CoverageBenefitItem in its source system.
 
 <!-- page:1073 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -18882,7 +18882,7 @@ upsert()
 
 <!-- page:1074 -->
 
-AFLS Overview                                                                          Patient Engagement
+LSC Overview                                                                          Patient Engagement
 
 
 Fields
@@ -18932,7 +18932,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1075 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -18983,7 +18983,7 @@ The member’s reference number for this plan.
 
 <!-- page:1076 -->
 
-AFLS Overview                                                                          Patient Engagement
+LSC Overview                                                                          Patient Engagement
 
 
 
@@ -19034,7 +19034,7 @@ HealthcarePayerNetwork
 
 <!-- page:1077 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -19083,7 +19083,7 @@ The name of the system this plan record came from.
 
 <!-- page:1078 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -19132,7 +19132,7 @@ The status of the plan’s verification. Valid options are:
 
 <!-- page:1079 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -19192,7 +19192,7 @@ Create, Nillable, Update
 
 <!-- page:1080 -->
 
-AFLS Overview                                                                   Patient Engagement
+LSC Overview                                                                   Patient Engagement
 
 
 
@@ -19245,7 +19245,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1081 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -19296,7 +19296,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1082 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -19348,7 +19348,7 @@ currency
 
 <!-- page:1083 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -19401,7 +19401,7 @@ datetime
 
 <!-- page:1084 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -19453,7 +19453,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1085 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -19504,7 +19504,7 @@ The ID of the purchaser plan offering these benefits.
 
 <!-- page:1086 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -19555,7 +19555,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1087 -->
 
-AFLS Overview                                                                                                         Patient Engagement
+LSC Overview                                                                                                         Patient Engagement
 
 
 
@@ -19618,7 +19618,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1088 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -19670,7 +19670,7 @@ Indicates if the benefit is only available in the plan network.
 
 <!-- page:1089 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -19721,7 +19721,7 @@ Create, Nillable, Update
 
 <!-- page:1090 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -19772,7 +19772,7 @@ Create, Filter, Group, Sort
 
 <!-- page:1091 -->
 
-AFLS Overview                                                                               Patient Engagement
+LSC Overview                                                                               Patient Engagement
 
 
 
@@ -19823,7 +19823,7 @@ string
 
 <!-- page:1092 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -19877,7 +19877,7 @@ A purchaser is represented by records on the Account object of record type Busin
 
 <!-- page:1093 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -19939,7 +19939,7 @@ The date on which this purchaser plan ceases to be effective.
 
 <!-- page:1094 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -19990,7 +19990,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1095 -->
 
-AFLS Overview                                                                   Patient Engagement
+LSC Overview                                                                   Patient Engagement
 
 
 
@@ -20041,7 +20041,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1096 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -20100,7 +20100,7 @@ upsert()
 
 <!-- page:1097 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 Fields
@@ -20151,7 +20151,7 @@ reference
 
 <!-- page:1098 -->
 
-AFLS Overview                                                                        Patient Engagement
+LSC Overview                                                                        Patient Engagement
 
 
 
@@ -20201,7 +20201,7 @@ Indicates whether this purchaser plan relationship is active.
 
 <!-- page:1099 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -20260,7 +20260,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:1100 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 Fields
@@ -20308,7 +20308,7 @@ The timestamp for when the current user last viewed a record related to this rec
 
 <!-- page:1101 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -20359,7 +20359,7 @@ Possible values are:
 
 <!-- page:1102 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -20410,7 +20410,7 @@ Change events are available for the object.
 
 <!-- page:1103 -->
 
-AFLS Overview                                                                                                   Patient Engagement
+LSC Overview                                                                                                   Patient Engagement
 
 
 
@@ -20466,7 +20466,7 @@ string
 
 <!-- page:1104 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -20511,7 +20511,7 @@ Change events are available for the object.
 
 <!-- page:1105 -->
 
-AFLS Overview                                                                                                           Patient Engagement
+LSC Overview                                                                                                           Patient Engagement
 
 
 
@@ -20554,7 +20554,7 @@ object is available in API version 59.0 and later.
 
 <!-- page:1106 -->
 
-AFLS Overview                                                                                                         Patient Engagement
+LSC Overview                                                                                                         Patient Engagement
 
 
 
@@ -20612,7 +20612,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1107 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -20663,7 +20663,7 @@ Date
 
 <!-- page:1108 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -20716,7 +20716,7 @@ field is available in API version 64.0 and later when Site Management is enabled
 
 <!-- page:1109 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -20767,7 +20767,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1110 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -20822,7 +20822,7 @@ Change events are available for the object.
 
 <!-- page:1111 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -20883,7 +20883,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1112 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -20934,7 +20934,7 @@ Management feature in API version 58.0 and later.
 
 <!-- page:1113 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -20983,7 +20983,7 @@ Management feature in API version 59.0 and later.
 
 <!-- page:1114 -->
 
-AFLS Overview                                                                               Patient Engagement
+LSC Overview                                                                               Patient Engagement
 
 
 
@@ -21032,7 +21032,7 @@ The default value is false.
 
 <!-- page:1115 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -21083,7 +21083,7 @@ dateTime
 
 <!-- page:1116 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -21134,7 +21134,7 @@ System from which the enrollee record was sourced.
 
 <!-- page:1117 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -21185,7 +21185,7 @@ Sharing is available for the object.
 
 <!-- page:1118 -->
 
-AFLS Overview                                                                                                      Patient Engagement
+LSC Overview                                                                                                      Patient Engagement
 
 
 
@@ -21206,7 +21206,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 ## Special Access Rules
 
-This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for AFLS),
+This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for LSC),
 and Patient Program Outcome Management permission sets are assigned to users.
 
 
@@ -21243,7 +21243,7 @@ Possible values are:
 
 <!-- page:1119 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -21292,7 +21292,7 @@ Filter, Nillable, Sort
 
 <!-- page:1120 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -21343,7 +21343,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:1121 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -21400,13 +21400,13 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:1122 -->
 
-AFLS Overview                                                                                                      Patient Engagement
+LSC Overview                                                                                                      Patient Engagement
 
 
 
 ## Special Access Rules
 
-This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for AFLS),
+This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for LSC),
 and Patient Program Outcome Management permission sets are assigned to users.
 
 
@@ -21453,7 +21453,7 @@ The name of the indicator definition.
 
 <!-- page:1123 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -21503,7 +21503,7 @@ UnitOfMeasure
 
 <!-- page:1124 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -21541,7 +21541,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 ## Special Access Rules
 
-This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for AFLS),
+This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for LSC),
 and Patient Program Outcome Management permission sets are assigned to users.
 
 
@@ -21564,7 +21564,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1125 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -21614,7 +21614,7 @@ This field is a calculated field.
 
 <!-- page:1126 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -21664,7 +21664,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1127 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -21719,12 +21719,12 @@ retrieve(), search(), undelete(), update(), upsert()
 
 ## Special Access Rules
 
-This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for AFLS),
+This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for LSC),
 and Patient Program Outcome Management permission sets are assigned to users.
 
 <!-- page:1128 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 Fields
@@ -21773,7 +21773,7 @@ Create, Filter, Group, Nillable, Sort
 
 <!-- page:1129 -->
 
-AFLS Overview                                                                                             Patient Engagement
+LSC Overview                                                                                             Patient Engagement
 
 
 
@@ -21825,7 +21825,7 @@ string
 
 <!-- page:1130 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -21877,7 +21877,7 @@ History is available for tracked fields of the object.
 
 <!-- page:1131 -->
 
-AFLS Overview                                                                                                      Patient Engagement
+LSC Overview                                                                                                      Patient Engagement
 
 
 
@@ -21898,7 +21898,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 ## Special Access Rules
 
-This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for AFLS),
+This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for LSC),
 and Patient Program Outcome Management permission sets are assigned to users.
 
 
@@ -21935,7 +21935,7 @@ Date and time when a user last referenced this outcome.
 
 <!-- page:1132 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -21985,7 +21985,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:1133 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -22040,7 +22040,7 @@ terms to avoid any effect on customer implementations.
 
 <!-- page:1134 -->
 
-AFLS Overview                                                                                                      Patient Engagement
+LSC Overview                                                                                                      Patient Engagement
 
 
 
@@ -22053,7 +22053,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 ## Special Access Rules
 
-This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for AFLS),
+This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for LSC),
 and Patient Program Outcome Management permission sets are assigned to users.
 
 
@@ -22094,7 +22094,7 @@ Date and time when a user last viewed this outcome activity.
 
 <!-- page:1135 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -22145,7 +22145,7 @@ History is available for tracked fields of the object.
 
 <!-- page:1136 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -22165,7 +22165,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 ## Special Access Rules
 
-This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for AFLS),
+This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for LSC),
 and Patient Program Outcome Management permission sets are assigned to users.
 
 
@@ -22203,7 +22203,7 @@ date
 
 <!-- page:1137 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -22258,7 +22258,7 @@ History is available for tracked fields of the object.
 
 <!-- page:1138 -->
 
-AFLS Overview                                                                                                      Patient Engagement
+LSC Overview                                                                                                      Patient Engagement
 
 
 
@@ -22285,7 +22285,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 ## Special Access Rules
 
-This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for AFLS),
+This object is available in products where the Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for LSC),
 and Patient Program Outcome Management permission sets are assigned to users.
 
 
@@ -22320,7 +22320,7 @@ string
 
 <!-- page:1139 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -22372,7 +22372,7 @@ Sharing is available for the object.
 
 <!-- page:1140 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -22412,7 +22412,7 @@ Request for verification of benefits. This object is available in API version 53
 
 <!-- page:1141 -->
 
-AFLS Overview                                                                                                           Patient Engagement
+LSC Overview                                                                                                           Patient Engagement
 
 
 
@@ -22462,7 +22462,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:1142 -->
 
-AFLS Overview                                                                       Patient Engagement
+LSC Overview                                                                       Patient Engagement
 
 
 Fields
@@ -22512,7 +22512,7 @@ Filter, Nillable, Sort
 
 <!-- page:1143 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -22564,7 +22564,7 @@ Group, User
 
 <!-- page:1144 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -22616,7 +22616,7 @@ Sharing is available for the object.
 
 <!-- page:1145 -->
 
-AFLS Overview                                                                                               Patient Engagement
+LSC Overview                                                                                               Patient Engagement
 
 
 
@@ -22672,7 +22672,7 @@ dateTime
 
 <!-- page:1146 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -22724,7 +22724,7 @@ Possible values are:
 
 <!-- page:1147 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -22781,7 +22781,7 @@ User
 
 <!-- page:1148 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -22831,7 +22831,7 @@ Verification permission set.
 
 <!-- page:1149 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -22881,7 +22881,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1150 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -22933,7 +22933,7 @@ Verification permission set.
 
 <!-- page:1151 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -22983,7 +22983,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1152 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -23033,7 +23033,7 @@ Plan
 
 <!-- page:1153 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -23082,7 +23082,7 @@ This field is a relationship field.
 
 <!-- page:1154 -->
 
-AFLS Overview                                                                                           Patient Engagement
+LSC Overview                                                                                           Patient Engagement
 
 
 
@@ -23132,7 +23132,7 @@ textarea
 
 <!-- page:1155 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -23182,7 +23182,7 @@ Account, HealthcareProvider
 
 <!-- page:1156 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -23231,7 +23231,7 @@ Possible values are:
 
 <!-- page:1157 -->
 
-AFLS Overview                                                                     Patient Engagement
+LSC Overview                                                                     Patient Engagement
 
 
 
@@ -23279,7 +23279,7 @@ AFLS Overview                                                                   
 
 <!-- page:1158 -->
 
-AFLS Overview                                                             Patient Engagement
+LSC Overview                                                             Patient Engagement
 
 
 
@@ -23325,7 +23325,7 @@ The name of the response from the external system.
 
 <!-- page:1159 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -23373,7 +23373,7 @@ Possible values are:
 
 <!-- page:1160 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -23432,7 +23432,7 @@ The name of the care program.
 
 <!-- page:1161 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -23481,7 +23481,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1162 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -23533,7 +23533,7 @@ field is available in API version 64.0 and later when Site Management is enabled
 
 <!-- page:1163 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -23583,7 +23583,7 @@ Create, Defaulted on create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1164 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -23637,7 +23637,7 @@ Sharing is available for the object.
 
 <!-- page:1165 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -23695,7 +23695,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1166 -->
 
-AFLS Overview                                                                                Patient Engagement
+LSC Overview                                                                                Patient Engagement
 
 
 
@@ -23745,7 +23745,7 @@ CarePgmEnrolleeWkOrdStep
 
 <!-- page:1167 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -23794,7 +23794,7 @@ ServiceTerritory
 
 <!-- page:1168 -->
 
-AFLS Overview                                                                               Patient Engagement
+LSC Overview                                                                               Patient Engagement
 
 
 
@@ -23845,7 +23845,7 @@ record.
 
 <!-- page:1169 -->
 
-AFLS Overview                                                                              Patient Engagement
+LSC Overview                                                                              Patient Engagement
 
 
 
@@ -23896,7 +23896,7 @@ picklist
 
 <!-- page:1170 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -23946,7 +23946,7 @@ ID of the system from which the enrollee record was sourced.
 
 <!-- page:1171 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -24003,7 +24003,7 @@ upsert()
 
 <!-- page:1172 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 Fields
@@ -24054,7 +24054,7 @@ string
 
 <!-- page:1173 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -24104,7 +24104,7 @@ The status of the product in the context of a care program.
 
 <!-- page:1174 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -24162,7 +24162,7 @@ date
 
 <!-- page:1175 -->
 
-AFLS Overview                                                                              Patient Engagement
+LSC Overview                                                                              Patient Engagement
 
 
 
@@ -24213,7 +24213,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1176 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -24264,7 +24264,7 @@ preferred providers for all family members.
 
 <!-- page:1177 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -24314,7 +24314,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1178 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -24368,7 +24368,7 @@ currency
 
 <!-- page:1179 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -24421,7 +24421,7 @@ Possible values are:
 
 <!-- page:1180 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -24468,7 +24468,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1181 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -24521,7 +24521,7 @@ currency
 
 <!-- page:1182 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -24573,7 +24573,7 @@ health plan’s preferred providers.
 
 <!-- page:1183 -->
 
-AFLS Overview                                                                                Patient Engagement
+LSC Overview                                                                                Patient Engagement
 
 
 
@@ -24625,7 +24625,7 @@ viewed.
 
 <!-- page:1184 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -24675,7 +24675,7 @@ OutcomeStatusCode
 
 <!-- page:1185 -->
 
-AFLS Overview                                                                               Patient Engagement
+LSC Overview                                                                               Patient Engagement
 
 
 
@@ -24726,7 +24726,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:1186 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -24777,7 +24777,7 @@ The date on which these benefits were last changed on their source system.
 
 <!-- page:1187 -->
 
-AFLS Overview                                                                          Patient Engagement
+LSC Overview                                                                          Patient Engagement
 
 
 
@@ -24826,7 +24826,7 @@ The amount the member contributes towards urgent care.
 
 <!-- page:1188 -->
 
-AFLS Overview                                                                                                            Patient Engagement
+LSC Overview                                                                                                            Patient Engagement
 
 
 
@@ -24886,7 +24886,7 @@ Name of the category this benefit is in.
 
 <!-- page:1189 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -24937,7 +24937,7 @@ Specifies whether the benefit item requires a prior expenditure by the patient.
 
 <!-- page:1190 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -24987,7 +24987,7 @@ The default value is 'false'.
 
 <!-- page:1191 -->
 
-AFLS Overview                                                                                          Patient Engagement
+LSC Overview                                                                                          Patient Engagement
 
 
 
@@ -25038,7 +25038,7 @@ Create, Filter, Group, idLookup, Sort, Update
 
 <!-- page:1192 -->
 
-AFLS Overview                                                                 Patient Engagement
+LSC Overview                                                                 Patient Engagement
 
 
 
@@ -25089,7 +25089,7 @@ string
 
 <!-- page:1193 -->
 
-AFLS Overview                                                                                 Patient Engagement
+LSC Overview                                                                                 Patient Engagement
 
 
 
@@ -25139,7 +25139,7 @@ A description of the period this plan benefit item covers.
 
 <!-- page:1194 -->
 
-AFLS Overview                                                                                                            Patient Engagement
+LSC Overview                                                                                                            Patient Engagement
 
 
 
@@ -25196,7 +25196,7 @@ This field is available in API Version 62.0 and later.
 
 <!-- page:1195 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -25245,7 +25245,7 @@ This is a relationship field.
 
 <!-- page:1196 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -25295,7 +25295,7 @@ dateTime
 
 <!-- page:1197 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -25346,7 +25346,7 @@ This limit's position in the sequence for calculating limits.
 
 <!-- page:1198 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -25385,7 +25385,7 @@ Represents business-level details about the healthcare organization or the pract
 
 ## Special Access Rules
 
-In AFLS, the HealthCareProvider object and its fields are used by the Account Management and the Segmentation feature
+In LSC, the HealthCareProvider object and its fields are used by the Account Management and the Segmentation feature
 areas. This topic lists fields used in both features.
 
 
@@ -25408,7 +25408,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1199 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -25418,7 +25418,7 @@ Field                   Details
 ## Description
 
 Stores the abbreviated name of the Japanese healthcare organization (HCO) for INS-DOC
-records. This field is available with the AFLS for Customer Engagement Add-on
+records. This field is available with the LSC for Customer Engagement Add-on
 license in API version 65.0 and later.
 
 AccountId               Type
@@ -25438,7 +25438,7 @@ Properties
 Create, Nillable, Update
 Description
 The JSON comprising the list of Sample Limits for the HealthcareProvider record. This field
-is available with the AFLS for Customer Engagement Add-on license in API
+is available with the LSC for Customer Engagement Add-on license in API
 version 65.0 and later.
 
 CaqhIdentifier          Type
@@ -25455,12 +25455,12 @@ Properties
 Create, Filter, Nillable, Sort, Update
 Description
 Captures comments explaining the reasons or context for changes made to the data. This
-field is available with the AFLS for Customer Engagement Add-on license in
+field is available with the LSC for Customer Engagement Add-on license in
 API version 65.0 and later.
 
 <!-- page:1200 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -25473,7 +25473,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the account dispenses medication.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 EffectiveFrom            Type
@@ -25504,12 +25504,12 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the provider’s contract follows a CMS model MA contract amendment,
 based on Centers for Medicare and Medicaid Services (CMS) guidelines.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 <!-- page:1201 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -25522,7 +25522,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether access to the sales data about the healthcare provider is restricted.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 InitialStartDate        Type
@@ -25539,7 +25539,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the provider is excluded from search results.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 IsPrivacyLawEnabled     Type
@@ -25548,7 +25548,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the privacy law regulations are enabled.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 IsSpeaker               Type
@@ -25560,14 +25560,14 @@ Indicates whether the provider is designated as a speaker for engagement.
 
 <!-- page:1202 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
 
 ## Field                   Details
 
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 LastReferencedDate      Type
@@ -25600,7 +25600,7 @@ Description
 Specifies the country code of the country to which the account belongs.
 Possible values are:
 - US
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 OwnerId                 Type
@@ -25610,7 +25610,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:1203 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -25631,7 +25631,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the ID of the parent account, used to establish the account hierarchy. This field is
-a relationship field. This field is available with the AFLS for Customer
+a relationship field. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 Relationship Name
 ParentOrganizationAccount
@@ -25644,7 +25644,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the Japanese phonetic name, applicable to both HCP and HCO, which is used for
-sorting and text-based searches. This field is available with the AFLS for
+sorting and text-based searches. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 PhoneticName2              Type
@@ -25653,7 +25653,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the Japanese phonetic name, applicable to both HCP and HCO, which is used for
-sorting and text-based searches. This field is available with the AFLS for
+sorting and text-based searches. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 PractitionerId             Type
@@ -25663,7 +25663,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1204 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -25685,7 +25685,7 @@ Properties
 Create, Filter, Nillable, Update
 Description
 Specifies the professional designation of the healthcare professional. This field is available
-with the AFLS for Customer Engagement Add-on license in API version 65.0
+with the LSC for Customer Engagement Add-on license in API version 65.0
 and later.
 
 ProfessionalTitle       Type
@@ -25694,7 +25694,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the professional title of the healthcare professional. This field is available with the
-AFLS for Customer Engagement Add-on license in API version 65.0 and later.
+LSC for Customer Engagement Add-on license in API version 65.0 and later.
 
 ProviderClass           Type
 picklist
@@ -25714,7 +25714,7 @@ Filter, Group, Nillable, Sort
 
 <!-- page:1205 -->
 
-AFLS Overview                                                                                          Patient Engagement
+LSC Overview                                                                                          Patient Engagement
 
 
 
@@ -25723,7 +25723,7 @@ Field                   Details
 
 ## Description
 
-The full name of the healthcare provider. This field is available with the AFLS
+The full name of the healthcare provider. This field is available with the LSC
 for Customer Engagement Add-on license in API version 65.0 and later.
 
 ProviderPhotoId         Type
@@ -25761,12 +25761,12 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the provider who originated the referral. This field is a relationship field. This field
-is available with the AFLS for Customer Engagement Add-on license in API
+is available with the LSC for Customer Engagement Add-on license in API
 version 65.0 and later.
 
 <!-- page:1206 -->
 
-AFLS Overview                                                                                             Patient Engagement
+LSC Overview                                                                                             Patient Engagement
 
 
 
@@ -25783,7 +25783,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the HCP account associated with the INS-DOC. This field is a relationship field. This
-field is available with the AFLS for Customer Engagement Add-on license in
+field is available with the LSC for Customer Engagement Add-on license in
 API version 65.0 and later.
 Relationship Name
 RelatedHealthcareProvider
@@ -25809,7 +25809,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the date when the sales data restriction becomes effective. This field is available
-with the AFLS for Customer Engagement Add-on license in API version 65.0
+with the LSC for Customer Engagement Add-on license in API version 65.0
 and later.
 
 SourceSystem               Type
@@ -25817,7 +25817,7 @@ string
 
 <!-- page:1207 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -25855,7 +25855,7 @@ Possible values are:
 - Active
 - Inactive
 - Pending
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 TerminationDate          Type
@@ -25867,7 +25867,7 @@ Termination date for this provider.
 
 <!-- page:1208 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -25895,7 +25895,7 @@ Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the Chines character name of the organization, applicable only to healthcare
 professionals (HCPs), which is required for INS-DOC records. This field is available with the
-AFLS for Customer Engagement Add-on license in API version 65.0 and later.
+LSC for Customer Engagement Add-on license in API version 65.0 and later.
 
 
 
@@ -25923,7 +25923,7 @@ Represents detailed information about different medications. This object is avai
 
 <!-- page:1209 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -25976,7 +25976,7 @@ The most recent date on which a user viewed this record.
 
 <!-- page:1210 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -26024,7 +26024,7 @@ Referenced Objects
 
 <!-- page:1211 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -26075,7 +26075,7 @@ reference
 
 <!-- page:1212 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -26124,7 +26124,7 @@ Possible values are:
 
 <!-- page:1213 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -26190,7 +26190,7 @@ Referenced Objects
 
 <!-- page:1214 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -26240,7 +26240,7 @@ The clinical encounter related to the medication request.
 
 <!-- page:1215 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -26288,7 +26288,7 @@ reference
 
 <!-- page:1216 -->
 
-AFLS Overview                                                                  Patient Engagement
+LSC Overview                                                                  Patient Engagement
 
 
 
@@ -26340,7 +26340,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:1217 -->
 
-AFLS Overview                                                                                             Patient Engagement
+LSC Overview                                                                                             Patient Engagement
 
 
 
@@ -26391,7 +26391,7 @@ reference
 
 <!-- page:1218 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -26441,7 +26441,7 @@ Referenced Objects
 
 <!-- page:1219 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -26492,7 +26492,7 @@ dateTime
 
 <!-- page:1220 -->
 
-AFLS Overview                                                         Patient Engagement
+LSC Overview                                                         Patient Engagement
 
 
 
@@ -26542,7 +26542,7 @@ The code for why the medicine was requested.
 
 <!-- page:1221 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -26593,7 +26593,7 @@ A plan or request that is fulfilled in whole or in part by this medication reque
 
 <!-- page:1222 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -26644,7 +26644,7 @@ The ID of this record in its source system.
 
 <!-- page:1223 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -26694,7 +26694,7 @@ Referenced Objects
 
 <!-- page:1224 -->
 
-AFLS Overview                                                                                                   Patient Engagement
+LSC Overview                                                                                                   Patient Engagement
 
 
 
@@ -26748,7 +26748,7 @@ record.
 
 <!-- page:1225 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -26807,7 +26807,7 @@ date
 
 <!-- page:1226 -->
 
-AFLS Overview                                                                          Patient Engagement
+LSC Overview                                                                          Patient Engagement
 
 
 
@@ -26858,7 +26858,7 @@ The date on which this plan was last verified.
 
 <!-- page:1227 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -26909,7 +26909,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:1228 -->
 
-AFLS Overview                                                                             Patient Engagement
+LSC Overview                                                                             Patient Engagement
 
 
 
@@ -26960,7 +26960,7 @@ picklist
 
 <!-- page:1229 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -27011,7 +27011,7 @@ picklist
 
 <!-- page:1230 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -27063,7 +27063,7 @@ Sharing is available for the object.
 
 <!-- page:1231 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -27120,7 +27120,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1232 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -27173,7 +27173,7 @@ picklist
 
 <!-- page:1233 -->
 
-AFLS Overview                                                                      Patient Engagement
+LSC Overview                                                                      Patient Engagement
 
 
 
@@ -27224,7 +27224,7 @@ picklist
 
 <!-- page:1234 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -27287,7 +27287,7 @@ double
 
 <!-- page:1235 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -27338,7 +27338,7 @@ The type of the unit of measure. For example, weight, distance, period.
 
 <!-- page:1236 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -27392,7 +27392,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:1237 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -27419,7 +27419,7 @@ organizational hierarchy for your network of providers.
 - Insurance payer and plan networks
 - Practitioner license, education, board certifications, awards, and accreditation information
 Provider information is also represented using existing standard Salesforce objects in addition to objects only available through Health
-Cloud and AFLS.
+Cloud and LSC.
 - Account: Represents a healthcare facility or location. The account hierarchy represents the way the healthcare system is organized.
 Other companies, like billing companies for physicians or healthcare facilities are represented as accounts and connected to healthcare
 facilities or physicians using account-account or account-contact relationships.
@@ -27436,7 +27436,7 @@ hours consist of one or more time slots.
 
 <!-- page:1238 -->
 
-AFLS Overview                                                                                                      Patient Engagement
+LSC Overview                                                                                                      Patient Engagement
 
 
 
@@ -27471,7 +27471,7 @@ both spine and neuro may provide spine services at one location and neuro servic
 
 <!-- page:1239 -->
 
-AFLS Overview                                                                                                         Patient Engagement
+LSC Overview                                                                                                         Patient Engagement
 
 
 
@@ -27518,7 +27518,7 @@ as physical therapy to a set of related codes. This object is available in API v
 
 <!-- page:1240 -->
 
-AFLS Overview                                                                                                         Patient Engagement
+LSC Overview                                                                                                         Patient Engagement
 
 
 
@@ -27581,7 +27581,7 @@ Example request body of the composite.json file.
 
 <!-- page:1241 -->
 
-AFLS Overview                                                        Patient Engagement
+LSC Overview                                                        Patient Engagement
 
 
 
@@ -27642,7 +27642,7 @@ AFLS Overview                                                        Patient Eng
 
 <!-- page:1242 -->
 
-AFLS Overview                                                              Patient Engagement
+LSC Overview                                                              Patient Engagement
 
 
 
@@ -27704,7 +27704,7 @@ Here’s a sample response:
 
 <!-- page:1243 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -27768,7 +27768,7 @@ upsert()
 
 <!-- page:1244 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 Fields
@@ -27818,7 +27818,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1245 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -27869,7 +27869,7 @@ string
 
 <!-- page:1246 -->
 
-AFLS Overview                                                                  Patient Engagement
+LSC Overview                                                                  Patient Engagement
 
 
 
@@ -27922,7 +27922,7 @@ picklist
 
 <!-- page:1247 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -27985,7 +27985,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1248 -->
 
-AFLS Overview                                                                  Patient Engagement
+LSC Overview                                                                  Patient Engagement
 
 
 
@@ -28036,7 +28036,7 @@ reference
 
 <!-- page:1249 -->
 
-AFLS Overview                                                                     Patient Engagement
+LSC Overview                                                                     Patient Engagement
 
 
 
@@ -28086,7 +28086,7 @@ The most recent date on which a user viewed this record.
 
 <!-- page:1250 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -28135,7 +28135,7 @@ This field is a relationship field.
 
 <!-- page:1251 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -28190,7 +28190,7 @@ Represents the practitioner's board certifications such as being board-certified
 
 <!-- page:1252 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -28242,7 +28242,7 @@ The date from which this certification is effective.
 
 <!-- page:1253 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -28292,7 +28292,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:1254 -->
 
-AFLS Overview                                                                  Patient Engagement
+LSC Overview                                                                  Patient Engagement
 
 
 
@@ -28345,7 +28345,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1255 -->
 
-AFLS Overview                                                                                                         Patient Engagement
+LSC Overview                                                                                                         Patient Engagement
 
 
 
@@ -28408,7 +28408,7 @@ picklist
 
 <!-- page:1256 -->
 
-AFLS Overview                                                                                          Patient Engagement
+LSC Overview                                                                                          Patient Engagement
 
 
 
@@ -28424,7 +28424,7 @@ Possible values are:
 - Address
 - Jurisdiction
 - StateDistributorLicense
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 ContactId               Type
@@ -28445,7 +28445,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 The ID of the person who holds the license and is listed as a contact. This field is a relationship
-field. This field is available with the AFLS for Customer Engagement Add-on
+field. This field is available with the LSC for Customer Engagement Add-on
 license in API version 65.0 and later.
 Relationship Name
 ContactPointAddress
@@ -28459,7 +28459,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1257 -->
 
-AFLS Overview                                                                                           Patient Engagement
+LSC Overview                                                                                           Patient Engagement
 
 
 
@@ -28476,7 +28476,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 The ID associated with the healthcare facility. This field is a relationship field. This field is
-available with the AFLS for Customer Engagement Add-on license in API
+available with the LSC for Customer Engagement Add-on license in API
 version 65.0 and later.
 Relationship Name
 HealthCareFacility
@@ -28511,7 +28511,7 @@ Indicates whether the license is active (true) or not (false). The default value
 
 <!-- page:1258 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -28524,7 +28524,7 @@ Properties
 Defaulted on create, Filter, Group, Sort
 Description
 Indicates whether the business license is valid (true) or not (false). The default value is
-false. This field is a calculated field. This field is available with the AFLS for
+false. This field is a calculated field. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 IsPrimaryLicense        Type
@@ -28562,7 +28562,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1259 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -28599,7 +28599,7 @@ Properties
 Filter, Nillable, Sort
 Description
 The timestamp for when the current user last referenced a record related to this record. This
-field is available with the AFLS for Customer Engagement Add-on license in
+field is available with the LSC for Customer Engagement Add-on license in
 API version 65.0 and later.
 
 LastViewedDate          Type
@@ -28609,12 +28609,12 @@ Filter, Nillable, Sort
 Description
 The timestamp for when the current user last viewed this record. If this value is null, it’s
 possible that this record was referenced (LastReferencedDate) and not viewed. This field is
-available with the AFLS for Customer Engagement Add-on license in API
+available with the LSC for Customer Engagement Add-on license in API
 version 65.0 and later.
 
 <!-- page:1260 -->
 
-AFLS Overview                                                                                          Patient Engagement
+LSC Overview                                                                                          Patient Engagement
 
 
 
@@ -28647,7 +28647,7 @@ Properties
 Filter, Group, Nillable, Sort
 Description
 The icon used to indicate the validation status of the business license. This field is a calculated
-field. This field is available with the AFLS for Customer Engagement Add-on
+field. This field is available with the LSC for Customer Engagement Add-on
 license in API version 65.0 and later.
 
 LineOfAuthority         Type
@@ -28663,14 +28663,14 @@ Possible values are:
 
 <!-- page:1261 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
 
 ## Field                   Details
 
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 Name                    Type
@@ -28714,7 +28714,7 @@ Residence status of the producer.
 
 <!-- page:1262 -->
 
-AFLS Overview                                                                                     Patient Engagement
+LSC Overview                                                                                     Patient Engagement
 
 
 
@@ -28722,7 +28722,7 @@ Field                    Details
 Possible values are:
 - Non-resident
 - Resident
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 SourceSystemUpdateDate   Type
@@ -28743,7 +28743,7 @@ Possible values are:
 - CategoryIII—Category III
 - LimitedCategoryII—Limited Category II
 - LimitedCategoryIII—Limited Category III
-This field is available with the AFLS for Customer Engagement Add-on license in
+This field is available with the LSC for Customer Engagement Add-on license in
 API version 65.0 and later.
 
 Status                   Type
@@ -28761,7 +28761,7 @@ The default value is Inactive.
 
 <!-- page:1263 -->
 
-AFLS Overview                                                                                                         Patient Engagement
+LSC Overview                                                                                                         Patient Engagement
 
 
 
@@ -28813,7 +28813,7 @@ Sharing is available for the object.
 
 <!-- page:1264 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -28870,7 +28870,7 @@ Possible values are:
 
 <!-- page:1265 -->
 
-AFLS Overview                                                                              Patient Engagement
+LSC Overview                                                                              Patient Engagement
 
 
 
@@ -28921,7 +28921,7 @@ date
 
 <!-- page:1266 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -28974,7 +28974,7 @@ string
 
 <!-- page:1267 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -29025,7 +29025,7 @@ The penalty amount imposed for an adverse action.
 
 <!-- page:1268 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -29076,7 +29076,7 @@ System from which the record was sourced.
 
 <!-- page:1269 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -29131,7 +29131,7 @@ upsert()
 
 <!-- page:1270 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 Fields
@@ -29181,7 +29181,7 @@ reference
 
 <!-- page:1271 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -29232,7 +29232,7 @@ possible that this record was referenced (LastReferencedDate) and not viewed.
 
 <!-- page:1272 -->
 
-AFLS Overview                                                                                          Patient Engagement
+LSC Overview                                                                                          Patient Engagement
 
 
 
@@ -29283,7 +29283,7 @@ Identifies the specialty associated with this provider facility specialty record
 
 <!-- page:1273 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -29345,7 +29345,7 @@ textarea
 
 <!-- page:1274 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -29399,7 +29399,7 @@ phone
 
 <!-- page:1275 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -29452,7 +29452,7 @@ Filter, Nillable, Sort
 
 <!-- page:1276 -->
 
-AFLS Overview                                                                                          Patient Engagement
+LSC Overview                                                                                          Patient Engagement
 
 
 
@@ -29502,7 +29502,7 @@ This field is available in API version 57.0 or later.
 
 <!-- page:1277 -->
 
-AFLS Overview                                                                                              Patient Engagement
+LSC Overview                                                                                              Patient Engagement
 
 
 
@@ -29554,7 +29554,7 @@ The type of plan, with the following default options:
 
 <!-- page:1278 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -29605,7 +29605,7 @@ in HealthCareProvider.ProviderType.
 
 <!-- page:1279 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -29657,7 +29657,7 @@ Note: Taxonomy.TaxonomyType must also be specified.
 
 <!-- page:1280 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -29722,7 +29722,7 @@ Indicates whether this configuration is active.
 
 <!-- page:1281 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -29770,7 +29770,7 @@ string
 
 <!-- page:1282 -->
 
-AFLS Overview                                                                                                        Patient Engagement
+LSC Overview                                                                                                        Patient Engagement
 
 
 
@@ -29833,7 +29833,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1283 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -29884,7 +29884,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:1284 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -29937,7 +29937,7 @@ Sharing is available for the object.
 
 <!-- page:1285 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -29993,7 +29993,7 @@ Filter, Nillable, Sort
 
 <!-- page:1286 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -30045,7 +30045,7 @@ picklist
 
 <!-- page:1287 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -30107,7 +30107,7 @@ reference
 
 <!-- page:1288 -->
 
-AFLS Overview                                                                      Patient Engagement
+LSC Overview                                                                      Patient Engagement
 
 
 
@@ -30157,7 +30157,7 @@ The most recent date on which a user viewed this record.
 
 <!-- page:1289 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -30218,7 +30218,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1290 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -30270,7 +30270,7 @@ reference
 
 <!-- page:1291 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -30324,7 +30324,7 @@ Feed tracking is available for the object.
 
 <!-- page:1292 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -30383,7 +30383,7 @@ The date on which this facility network is no longer effective.
 
 <!-- page:1293 -->
 
-AFLS Overview                                                                                           Patient Engagement
+LSC Overview                                                                                           Patient Engagement
 
 
 
@@ -30434,7 +30434,7 @@ boolean
 
 <!-- page:1294 -->
 
-AFLS Overview                                                                                          Patient Engagement
+LSC Overview                                                                                          Patient Engagement
 
 
 
@@ -30485,7 +30485,7 @@ The ID of the user who owns this record.
 
 <!-- page:1295 -->
 
-AFLS Overview                                                                                              Patient Engagement
+LSC Overview                                                                                              Patient Engagement
 
 
 
@@ -30537,7 +30537,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1296 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -30592,7 +30592,7 @@ Feed tracking is available for the object.
 
 <!-- page:1297 -->
 
-AFLS Overview                                                                                             Patient Engagement
+LSC Overview                                                                                             Patient Engagement
 
 
 
@@ -30652,7 +30652,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1298 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -30703,7 +30703,7 @@ string
 
 <!-- page:1299 -->
 
-AFLS Overview                                                                                Patient Engagement
+LSC Overview                                                                                Patient Engagement
 
 
 
@@ -30754,7 +30754,7 @@ reference
 
 <!-- page:1300 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -30807,7 +30807,7 @@ Sharing is available for the object.
 
 <!-- page:1301 -->
 
-AFLS Overview                                                                                           Patient Engagement
+LSC Overview                                                                                           Patient Engagement
 
 
 
@@ -30864,7 +30864,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1302 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -30914,7 +30914,7 @@ Date the practitioner started at this facility.
 
 <!-- page:1303 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -30963,7 +30963,7 @@ Filter, Nillable, Sort
 
 <!-- page:1304 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -31015,7 +31015,7 @@ Owner
 
 <!-- page:1305 -->
 
-AFLS Overview                                                                  Patient Engagement
+LSC Overview                                                                  Patient Engagement
 
 
 
@@ -31063,7 +31063,7 @@ ID of an external record on its source system.
 
 <!-- page:1306 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -31109,7 +31109,7 @@ Represents business-level details about the healthcare organization or the pract
 
 ## Special Access Rules
 
-In AFLS, the HealthCareProvider object and its fields are used by the Account Management and the Segmentation feature
+In LSC, the HealthCareProvider object and its fields are used by the Account Management and the Segmentation feature
 areas. This topic lists fields used in both features.
 
 
@@ -31121,7 +31121,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:1307 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 Fields
@@ -31135,7 +31135,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the abbreviated name of the Japanese healthcare organization (HCO) for INS-DOC
-records. This field is available with the AFLS for Customer Engagement Add-on
+records. This field is available with the LSC for Customer Engagement Add-on
 license in API version 65.0 and later.
 
 AccountId               Type
@@ -31155,7 +31155,7 @@ Properties
 Create, Nillable, Update
 Description
 The JSON comprising the list of Sample Limits for the HealthcareProvider record. This field
-is available with the AFLS for Customer Engagement Add-on license in API
+is available with the LSC for Customer Engagement Add-on license in API
 version 65.0 and later.
 
 CaqhIdentifier          Type
@@ -31171,7 +31171,7 @@ textarea
 
 <!-- page:1308 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -31183,7 +31183,7 @@ Field                    Details
 Create, Filter, Nillable, Sort, Update
 Description
 Captures comments explaining the reasons or context for changes made to the data. This
-field is available with the AFLS for Customer Engagement Add-on license in
+field is available with the LSC for Customer Engagement Add-on license in
 API version 65.0 and later.
 
 DoesDispenseMedication   Type
@@ -31192,7 +31192,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the account dispenses medication.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 EffectiveFrom            Type
@@ -31223,7 +31223,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:1309 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -31234,7 +31234,7 @@ Field                   Details
 
 Indicates whether the provider’s contract follows a CMS model MA contract amendment,
 based on Centers for Medicare and Medicaid Services (CMS) guidelines.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 HasSalesDataRestriction Type
@@ -31243,7 +31243,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether access to the sales data about the healthcare provider is restricted.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 InitialStartDate        Type
@@ -31260,7 +31260,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the provider is excluded from search results.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 IsPrivacyLawEnabled     Type
@@ -31269,12 +31269,12 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the privacy law regulations are enabled.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 <!-- page:1310 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -31287,7 +31287,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the provider is designated as a speaker for engagement.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 LastReferencedDate      Type
@@ -31320,12 +31320,12 @@ Description
 Specifies the country code of the country to which the account belongs.
 Possible values are:
 - US
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 <!-- page:1311 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -31349,7 +31349,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the ID of the parent account, used to establish the account hierarchy. This field is
-a relationship field. This field is available with the AFLS for Customer
+a relationship field. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 Relationship Name
 ParentOrganizationAccount
@@ -31362,7 +31362,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the Japanese phonetic name, applicable to both HCP and HCO, which is used for
-sorting and text-based searches. This field is available with the AFLS for
+sorting and text-based searches. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 PhoneticName2              Type
@@ -31371,12 +31371,12 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the Japanese phonetic name, applicable to both HCP and HCO, which is used for
-sorting and text-based searches. This field is available with the AFLS for
+sorting and text-based searches. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 <!-- page:1312 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -31401,7 +31401,7 @@ Properties
 Create, Filter, Nillable, Update
 Description
 Specifies the professional designation of the healthcare professional. This field is available
-with the AFLS for Customer Engagement Add-on license in API version 65.0
+with the LSC for Customer Engagement Add-on license in API version 65.0
 and later.
 
 ProfessionalTitle       Type
@@ -31410,7 +31410,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the professional title of the healthcare professional. This field is available with the
-AFLS for Customer Engagement Add-on license in API version 65.0 and later.
+LSC for Customer Engagement Add-on license in API version 65.0 and later.
 
 ProviderClass           Type
 picklist
@@ -31425,7 +31425,7 @@ Possible values are:
 
 <!-- page:1313 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 
@@ -31437,7 +31437,7 @@ string
 Properties
 Filter, Group, Nillable, Sort
 Description
-The full name of the healthcare provider. This field is available with the AFLS
+The full name of the healthcare provider. This field is available with the LSC
 for Customer Engagement Add-on license in API version 65.0 and later.
 
 ProviderPhotoId         Type
@@ -31476,7 +31476,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1314 -->
 
-AFLS Overview                                                                                             Patient Engagement
+LSC Overview                                                                                             Patient Engagement
 
 
 
@@ -31486,7 +31486,7 @@ Field                      Details
 ## Description
 
 Specifies the provider who originated the referral. This field is a relationship field. This field
-is available with the AFLS for Customer Engagement Add-on license in API
+is available with the LSC for Customer Engagement Add-on license in API
 version 65.0 and later.
 Relationship Name
 ReferredByContact
@@ -31499,7 +31499,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the HCP account associated with the INS-DOC. This field is a relationship field. This
-field is available with the AFLS for Customer Engagement Add-on license in
+field is available with the LSC for Customer Engagement Add-on license in
 API version 65.0 and later.
 Relationship Name
 RelatedHealthcareProvider
@@ -31526,7 +31526,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1315 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -31536,7 +31536,7 @@ Field                    Details
 ## Description
 
 Specifies the date when the sales data restriction becomes effective. This field is available
-with the AFLS for Customer Engagement Add-on license in API version 65.0
+with the LSC for Customer Engagement Add-on license in API version 65.0
 and later.
 
 SourceSystem             Type
@@ -31571,12 +31571,12 @@ Possible values are:
 - Active
 - Inactive
 - Pending
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 <!-- page:1316 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -31611,7 +31611,7 @@ Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the Chines character name of the organization, applicable only to healthcare
 professionals (HCPs), which is required for INS-DOC records. This field is available with the
-AFLS for Customer Engagement Add-on license in API version 65.0 and later.
+LSC for Customer Engagement Add-on license in API version 65.0 and later.
 
 
 
@@ -31629,7 +31629,7 @@ History is available for tracked fields of the object.
 
 <!-- page:1317 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -31688,7 +31688,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:1318 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -31740,7 +31740,7 @@ reference
 
 <!-- page:1319 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -31793,7 +31793,7 @@ Sharing is available for the object.
 
 <!-- page:1320 -->
 
-AFLS Overview                                                                                                    Patient Engagement
+LSC Overview                                                                                                    Patient Engagement
 
 
 
@@ -31849,7 +31849,7 @@ stopped offering this service.
 
 <!-- page:1321 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -31900,7 +31900,7 @@ Owner
 
 <!-- page:1322 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -31957,7 +31957,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:1323 -->
 
-AFLS Overview                                                                                         Patient Engagement
+LSC Overview                                                                                         Patient Engagement
 
 
 Fields
@@ -32008,7 +32008,7 @@ date
 
 <!-- page:1324 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -32059,7 +32059,7 @@ Name of the provider’s specialty.
 
 <!-- page:1325 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -32109,7 +32109,7 @@ Possible values are:
 
 <!-- page:1326 -->
 
-AFLS Overview                                                                                      Patient Engagement
+LSC Overview                                                                                      Patient Engagement
 
 
 
@@ -32158,7 +32158,7 @@ CareSpecialty
 
 <!-- page:1327 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -32219,7 +32219,7 @@ This is a relationship field.
 
 <!-- page:1328 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -32268,7 +32268,7 @@ Indicates whether the record is active.
 
 <!-- page:1329 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -32318,7 +32318,7 @@ Lookup
 
 <!-- page:1330 -->
 
-AFLS Overview                                                                     Patient Engagement
+LSC Overview                                                                     Patient Engagement
 
 
 
@@ -32367,7 +32367,7 @@ Taxonomy
 
 <!-- page:1331 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -32426,7 +32426,7 @@ This field is a relationship field.
 
 <!-- page:1332 -->
 
-AFLS Overview                                                                                        Patient Engagement
+LSC Overview                                                                                        Patient Engagement
 
 
 
@@ -32475,7 +32475,7 @@ a list view or related record.
 
 <!-- page:1333 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -32527,7 +32527,7 @@ Sharing is available for the object.
 
 <!-- page:1334 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -32582,7 +32582,7 @@ The date when the provider stopped treating the condition.
 
 <!-- page:1335 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -32631,7 +32631,7 @@ and LastReferenceDate is not null, the user accessed this record or list view in
 
 <!-- page:1336 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -32689,7 +32689,7 @@ query(), retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:1337 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 Fields
@@ -32739,7 +32739,7 @@ ID issued to the recipient by the educational institution.
 
 <!-- page:1338 -->
 
-AFLS Overview                                                                               Patient Engagement
+LSC Overview                                                                               Patient Engagement
 
 
 
@@ -32790,7 +32790,7 @@ Name of the degree earned.
 
 <!-- page:1339 -->
 
-AFLS Overview                                                                           Patient Engagement
+LSC Overview                                                                           Patient Engagement
 
 
 
@@ -32840,7 +32840,7 @@ Current educational status. Valid values:
 
 <!-- page:1340 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -32899,7 +32899,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1341 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -32951,7 +32951,7 @@ Possible values are:
 
 <!-- page:1342 -->
 
-AFLS Overview                                                                                   Patient Engagement
+LSC Overview                                                                                   Patient Engagement
 
 
 
@@ -32999,7 +32999,7 @@ The postal code of the employer’s address.
 
 <!-- page:1343 -->
 
-AFLS Overview                                                           Patient Engagement
+LSC Overview                                                           Patient Engagement
 
 
 
@@ -33048,7 +33048,7 @@ Possible values are:
 
 <!-- page:1344 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -33098,7 +33098,7 @@ string
 
 <!-- page:1345 -->
 
-AFLS Overview                                                                 Patient Engagement
+LSC Overview                                                                 Patient Engagement
 
 
 
@@ -33147,7 +33147,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:1346 -->
 
-AFLS Overview                                                         Patient Engagement
+LSC Overview                                                         Patient Engagement
 
 
 
@@ -33197,7 +33197,7 @@ The date of verification of the employment.
 
 <!-- page:1347 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -33250,7 +33250,7 @@ search(), undelete()
 
 <!-- page:1348 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 Fields
@@ -33300,7 +33300,7 @@ string
 
 <!-- page:1349 -->
 
-AFLS Overview                                                                        Patient Engagement
+LSC Overview                                                                        Patient Engagement
 
 
 
@@ -33350,7 +33350,7 @@ HealthcareProvider
 
 <!-- page:1350 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -33403,7 +33403,7 @@ The social determinants standard objects are visible to users with the Health Cl
 
 <!-- page:1351 -->
 
-AFLS Overview                                                                                                     Patient Engagement
+LSC Overview                                                                                                     Patient Engagement
 
 
 
@@ -33433,7 +33433,7 @@ Represents the circumstances or obstacles affecting a patient or member. Availab
 
 <!-- page:1352 -->
 
-AFLS Overview                                                                                  Patient Engagement
+LSC Overview                                                                                  Patient Engagement
 
 
 
@@ -33484,7 +33484,7 @@ The date on which the barrier becomes effective.
 
 <!-- page:1353 -->
 
-AFLS Overview                                                                            Patient Engagement
+LSC Overview                                                                            Patient Engagement
 
 
 
@@ -33536,7 +33536,7 @@ Filter, Group, idLookup, Sort
 
 <!-- page:1354 -->
 
-AFLS Overview                                                                   Patient Engagement
+LSC Overview                                                                   Patient Engagement
 
 
 
@@ -33585,7 +33585,7 @@ The values are:
 
 <!-- page:1355 -->
 
-AFLS Overview                                                                                Patient Engagement
+LSC Overview                                                                                Patient Engagement
 
 
 
@@ -33633,7 +33633,7 @@ Identifier for the survey response related to the barrier.
 
 <!-- page:1356 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -33691,7 +33691,7 @@ Filter, Group, Sort
 
 <!-- page:1357 -->
 
-AFLS Overview                                                                          Patient Engagement
+LSC Overview                                                                          Patient Engagement
 
 
 
@@ -33741,7 +33741,7 @@ Filter, Group, Sort
 
 <!-- page:1358 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -33802,7 +33802,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1359 -->
 
-AFLS Overview                                                                                    Patient Engagement
+LSC Overview                                                                                    Patient Engagement
 
 
 
@@ -33854,7 +33854,7 @@ so use DiagnosisCodeSetId instead.
 
 <!-- page:1360 -->
 
-AFLS Overview                                                                                       Patient Engagement
+LSC Overview                                                                                       Patient Engagement
 
 
 
@@ -33904,7 +33904,7 @@ reference
 
 <!-- page:1361 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -33966,7 +33966,7 @@ reference
 
 <!-- page:1362 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -34015,7 +34015,7 @@ Filter, Group, idLookup, Sort
 
 <!-- page:1363 -->
 
-AFLS Overview                                                           Patient Engagement
+LSC Overview                                                           Patient Engagement
 
 
 
@@ -34066,7 +34066,7 @@ reference
 
 <!-- page:1364 -->
 
-AFLS Overview                                                                                                          Patient Engagement
+LSC Overview                                                                                                          Patient Engagement
 
 
 
@@ -34128,7 +34128,7 @@ picklist
 
 <!-- page:1365 -->
 
-AFLS Overview                                                                       Patient Engagement
+LSC Overview                                                                       Patient Engagement
 
 
 
@@ -34177,7 +34177,7 @@ record.
 
 <!-- page:1366 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 
@@ -34227,7 +34227,7 @@ The values are:
 
 <!-- page:1367 -->
 
-AFLS Overview                                                                                                       Patient Engagement
+LSC Overview                                                                                                       Patient Engagement
 
 
 
@@ -34285,7 +34285,7 @@ Nillable
 
 <!-- page:1368 -->
 
-AFLS Overview                                                                       Patient Engagement
+LSC Overview                                                                       Patient Engagement
 
 
 
@@ -34337,7 +34337,7 @@ dateTime
 
 <!-- page:1369 -->
 
-AFLS Overview                                                                         Patient Engagement
+LSC Overview                                                                         Patient Engagement
 
 
 

@@ -8,7 +8,7 @@
 Get Started with Clinical Engagement
 
 Accelerate clinical trials across patients, sponsors, sites, and more on a flexible and compliant platform.
-Clinical engagement in AFLS helps clinical research organizations raise trial awareness with
+Clinical engagement in Life Sciences Cloud (LSC) helps clinical research organizations raise trial awareness with
 candidates, speed up their onboarding, and mitigate attrition. Empower candidates to discover trials,
 evaluate eligibility, and sign up for eligible trials with robust self-service portals. Streamline participant
 enrollment with optimized auto-matching and consent management features.
@@ -21,9 +21,9 @@ your implementation.
 
 Get Oriented                        Dive In: Learn About                 Go Deeper: Learn About
 Recommended Core Features            Features for Specific Business
-What is AFLS?                                             Needs
+What is LSC?                                             Needs
 Enable Clinical Trial Discovery
-Create a AFLS Trial with Criteria-Based Search and        Automate Processes with
+Create a LSC Trial with Criteria-Based Search and        Automate Processes with
 Org                                Filter                                Omnistudio
 
 
@@ -48,7 +48,7 @@ Advanced Therapy Management
 Extend Further: Learn About         Get Ready for Your                   Know Your Resources & Get
 Additional Capabilities & Add-      Implementation                       Help
 Ons
-Orchestrate Participant              AFLS Developer
+Orchestrate Participant              LSC Developer
 Manage Electronic Signatures        Enrollment                           Guide
 with Digital Verification
 Set Up Clinical Engagement           Trailblazer Community: Life

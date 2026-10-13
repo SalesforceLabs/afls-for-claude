@@ -1,12 +1,12 @@
 # Medical Inquiries
 
-Medical Inquiries in AFLS enables field reps and medical affairs teams to capture, route, and track medical information requests from healthcare providers. This module supports compliance workflows for handling unsolicited medical questions during field interactions.
+Medical Inquiries in Life Sciences Cloud (LSC) enables field reps and medical affairs teams to capture, route, and track medical information requests from healthcare providers. This module supports compliance workflows for handling unsolicited medical questions during field interactions.
 
 ## Documentation Files
 
 - [Medical Inquiries Configuration Guide](./medical-inquiries-configuration-guide.md)
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 ### Key Concepts
 

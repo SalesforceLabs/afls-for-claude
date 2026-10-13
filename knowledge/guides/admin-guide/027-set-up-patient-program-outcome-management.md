@@ -30,7 +30,7 @@ of benefit coupons and cards.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with Life Sciences Cloud (LSC) or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -135,7 +135,7 @@ Indicator Result Calculation Flow
 Use Patient Program Outcome Management to measure outcomes at the care program level. To have
 consistent and real-time results, program leads can create a flow to calculate indicator results.
 Patient Support Programs Console App
-The Patient Support Programs console app in AFLS is a single-stop shop for patient
+The Patient Support Programs console app in LSC is a single-stop shop for patient
 services reps and program leads to monitor different aspects of care programs and care program
 enrollees. Program leads and patient services reps can customize this app to suit their needs and can
 effectively manage their daily tasks by accessing the functionalities of patient support programs via
@@ -175,7 +175,7 @@ personas.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -200,7 +200,7 @@ based on their required level of access.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -264,7 +264,7 @@ program outcomes. A case manager works with patients and captures patient report
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Here’s the set of objects used in Patient Program Outcome Management and the level of access that case
@@ -394,7 +394,7 @@ Customize the picklist values, making it easier for case managers to choose the 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -457,7 +457,7 @@ indicators, and calculate indicator result and party indicator result.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 
@@ -496,13 +496,13 @@ it. To create a care program enrollee, define a person account.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
 
 To create care program records:
-Health Cloud Starter (for AFLS)
+Health Cloud Starter (for LSC)
 permission set
 
 OR
@@ -511,7 +511,7 @@ Health Cloud Foundation (for Health Cloud)
 permission set
 
 To create care program enrollee records:
-Health Cloud Starter (for AFLS)
+Health Cloud Starter (for LSC)
 permission set
 
 OR
@@ -566,7 +566,7 @@ care program enrollees, that contribute to the end goal.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -614,7 +614,7 @@ outcomes to track the effectiveness of the tasks that are done by participants.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -721,7 +721,7 @@ Measure the value of indicator assignments with indicator results.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -838,7 +838,7 @@ consistent and real-time results, program leads can create a flow to calculate i
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 The Patient Program Outcome Management data model supports manual and automatic calculation of
@@ -886,7 +886,7 @@ Salesforce Help: Build a Flow
 
 Patient Support Programs Console App
 
-The Patient Support Programs console app in AFLS is a single-stop shop for patient
+The Patient Support Programs console app in LSC is a single-stop shop for patient
 services reps and program leads to monitor different aspects of care programs and care program
 enrollees. Program leads and patient services reps can customize this app to suit their needs and can
 effectively manage their daily tasks by accessing the functionalities of patient support programs via this
@@ -898,7 +898,7 @@ app.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Assign Permissions to Users
@@ -942,7 +942,7 @@ generate patient and program outcome summary.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -986,7 +986,7 @@ support programs.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 
 <!-- page:1056 -->
 
@@ -1002,7 +1002,7 @@ USER PERMISSIONS NEEDED
 ## To enable Einstein AI
 
 Customize Application and Access Patient Support
-Programs Using Einstein (for AFLS)
+Programs Using Einstein (for LSC)
 
 OR
 
@@ -1034,7 +1034,7 @@ service to fetch the data. Before context service performs its magic, you must t
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -1098,7 +1098,7 @@ together, the key steps in summary generation, and the prerequisites before maki
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -1275,7 +1275,7 @@ outcomes and deliver value to patients.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -1380,7 +1380,7 @@ engagement and adherence.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 

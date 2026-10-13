@@ -1,4 +1,4 @@
-# AFLS Calendar, TOT & Routine Configuration Validation Rules
+# LSC Calendar, TOT & Routine Configuration Validation Rules
 # ==========================================================
 # Rules to validate Calendar, Time Off Territory, and Routine configuration
 # including calendar events, TOT records, business hours, holidays,
@@ -16,7 +16,7 @@
 schema_version: "1.0"
 category_name: "Calendar, TOT & Routine Configuration"
 description: |
-  Validation rules for AFLS Calendar, Time Off Territory, and Routine configuration.
+  Validation rules for LSC Calendar, Time Off Territory, and Routine configuration.
   Covers calendar events, TOT records, business hours, holidays, visit records,
   and mobile cache requirements.
 
@@ -189,7 +189,7 @@ rules:
       type displayed on the calendar. If no Visit records exist, this is informational -
       it may indicate a new implementation or that visits have not been created yet.
       The calendar can function with only general events and TOT, but visits are
-      typically the core use case for AFLS Calendar. Visits with PlannedVisitStartTime
+      typically the core use case for LSC Calendar. Visits with PlannedVisitStartTime
       and PlannedVisitEndTime appear as scheduled activities on the calendar.
     category: configuration
     severity: info

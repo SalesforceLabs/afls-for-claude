@@ -88,13 +88,13 @@ export function register(server: McpServer) {
 
         // 2. Permission Set Licenses
         message += "## 2. Permission Set Licenses\n\n";
-        const pslQuery = `SELECT DeveloperName, MasterLabel, TotalLicenses, UsedLicenses FROM PermissionSetLicense WHERE MasterLabel IN ('Life Science Commercial','Health Cloud Starter','Agentforce for AFLS Feature Access','Einstein Prompt Templates')`;
+        const pslQuery = `SELECT DeveloperName, MasterLabel, TotalLicenses, UsedLicenses FROM PermissionSetLicense WHERE MasterLabel IN ('Life Science Commercial','Health Cloud Starter','Agentforce for LSC Feature Access','Einstein Prompt Templates')`;
         const pslResult = await runSoqlQuery(pslQuery, effectiveOrg);
 
         const requiredPsls = [
           "Life Science Commercial",
           "Health Cloud Starter",
-          "Agentforce for AFLS Feature Access",
+          "Agentforce for LSC Feature Access",
           "Einstein Prompt Templates",
         ];
 
@@ -156,7 +156,7 @@ export function register(server: McpServer) {
           { name: "HealthCloudStarter", label: "Health Cloud Starter" },
           { name: "EinsteinGPTPromptTemplateManager", label: "Prompt Template Manager" },
           { name: "EinsteinGPTPromptTemplateUser", label: "Prompt Template User" },
-          { name: "AccsAgtfrceForLifeSciCustEngmt", label: "Access AFLS CE Agentforce" },
+          { name: "AccsAgtfrceForLifeSciCustEngmt", label: "Access LSC CE Agentforce" },
         ];
 
         message += "### Standard Permission Sets\n\n";

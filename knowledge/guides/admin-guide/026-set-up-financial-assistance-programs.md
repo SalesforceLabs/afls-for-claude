@@ -27,7 +27,7 @@ coupons.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with Life Sciences Cloud (LSC) or Health Cloud
 
 
 By leveraging scalable orchestration and automating processes, companies can significantly reduce
@@ -151,7 +151,7 @@ care program enrollee by assign appropriate level of access to the relevant obje
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Here’s the set of objects and the level of user access required for the Financial Assistance Program
@@ -376,7 +376,7 @@ Dependency                          a service catalog item            • Create
 
 ## See Also
 
-AFLS Developer Guide: Financial Assistance Program
+LSC Developer Guide: Financial Assistance Program
 
 
 Permission Sets for Financial Assistance Program Users
@@ -389,7 +389,7 @@ To get started with Financial Assistance Program, assign the appropriate permiss
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Permission                                           Purpose
@@ -447,7 +447,7 @@ program eligibility and financial assistance program recommendation.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -605,7 +605,7 @@ Omnistudio settings.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -687,7 +687,7 @@ Verification on your org, the copay care limit type is created already.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -739,7 +739,7 @@ the objects, by default. You must edit the objects and add them to the object.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -818,7 +818,7 @@ picklist values for fields in Financial Assistance Program objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:1008 -->
 
@@ -901,7 +901,7 @@ necessary data.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 
@@ -968,7 +968,7 @@ Before you set up a care program enrollee record, create a person account record
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1005,7 +1005,7 @@ Before you create a person account:
 
 ## See Also
 
-Salesforce Help: Enable Person Accounts for Use in AFLS
+Salesforce Help: Enable Person Accounts for Use in LSC
 
 
 Create a Care Program
@@ -1018,7 +1018,7 @@ Create a Care Program for the financial assistance program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1057,7 +1057,7 @@ object.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1092,7 +1092,7 @@ Create a product for the care program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1130,7 +1130,7 @@ Create a care program product for the care program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1163,7 +1163,7 @@ Create a financial assistance program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1209,7 +1209,7 @@ Enrollee object.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1246,7 +1246,7 @@ Create a care program assistance for the care program enrollee.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1279,7 +1279,7 @@ Create a purchaser plan for the financial assistance program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1319,7 +1319,7 @@ Create a member plan for the financial assistance program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1359,7 +1359,7 @@ Insulin Financial Assistance Rule - Recommendation for the Insulin programs.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:1017 -->
 
@@ -1409,7 +1409,7 @@ Create a medication for the financial assistance program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1451,7 +1451,7 @@ Create a medication request for the financial assistance program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1498,7 +1498,7 @@ program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1538,7 +1538,7 @@ Create a coverage benefit rule coverage benefit for the financial assistance pro
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:1020 -->
 
@@ -1583,7 +1583,7 @@ Create a coverage benefit item for the financial assistance program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1628,7 +1628,7 @@ Create a benefit type for the financial assistance program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1662,7 +1662,7 @@ Create coverage benefit item limits for the financial assistance program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:1022 -->
 
@@ -1704,7 +1704,7 @@ Create coverage benefit item limits for the financial assistance program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1754,7 +1754,7 @@ objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1799,7 +1799,7 @@ assistance program, and the prerequisites before making any customizations.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Patient service reps can apply for a financial assistance program through a care program enrollee record
@@ -1839,7 +1839,7 @@ requirements.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:1025 -->
 
@@ -1896,7 +1896,7 @@ and Take Action flows. Simply clone the default flows and activate it.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:1026 -->
 
@@ -1973,7 +1973,7 @@ flows and Integration Procedures.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2087,7 +2087,7 @@ resolve specific issues.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 You can define the number of appeals that your representatives can file for a single application. If you
@@ -2115,7 +2115,7 @@ Enrollee record page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2165,7 +2165,7 @@ inside that tab.
 ## See Also
 
 Salesforce Help: FlexCards
-Salesforce Help: OmniStudio for AFLS
+Salesforce Help: OmniStudio for LSC
 
 
 Create Sharing Rules for Financial Assistance Program
@@ -2179,7 +2179,7 @@ the users. For each rule, you assign access permissions to a specific set of use
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2258,7 +2258,7 @@ users.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:1032 -->
 
@@ -2298,7 +2298,7 @@ access to certain user profiles.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 1. From Setup, in the Quick Find box, enter Profiles, and then select it.
@@ -2323,7 +2323,7 @@ service rep files an appeal, the case record gets linked with the relevant appli
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2373,7 +2373,7 @@ seamless access to healthcare by enrolling them in a suitable assistance program
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:1034 -->
 
@@ -2423,7 +2423,7 @@ patient dropouts from the program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Apply for a financial assistance program on behalf of a patient by using a guided workflow. If the
@@ -2445,7 +2445,7 @@ Apply for a suitable financial assistance program on behalf of the care program 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2494,7 +2494,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Appeals can be filed multiple times to ensure resolution. However, if no action is taken on an appeal, it
@@ -2524,7 +2524,7 @@ File an appeal against a rejected application on behalf of a care program enroll
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2592,7 +2592,7 @@ to the rejection of the application were resolved, and then approves or rejects 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2662,7 +2662,7 @@ enrollee.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED

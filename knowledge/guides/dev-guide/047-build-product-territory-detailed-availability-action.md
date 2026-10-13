@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:build-product-territory-detailed-availability-action pages:1873-1873 -->
 # Build Product Territory Detailed Availability Action
 
-AFLS Overview                                                                       Build Product Territory Detailed Availability Action
+Life Sciences Cloud (LSC) Overview                                                                       Build Product Territory Detailed Availability Action
 
 
 

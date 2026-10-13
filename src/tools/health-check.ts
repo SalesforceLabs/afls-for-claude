@@ -6,7 +6,7 @@ import { validateOrgConnection } from "../salesforce/auth.js";
 export function register(server: McpServer) {
   server.tool(
     "health_check",
-    "Run a comprehensive AFLS org health check. Checks trigger handler status, permission set assignments, Admin Console settings, orphaned territory assignments, DB Schema completeness, and mobile cache freshness. Returns a summary with issues found and recommendations.",
+    "Run a comprehensive LSC org health check. Checks trigger handler status, permission set assignments, Admin Console settings, orphaned territory assignments, DB Schema completeness, and mobile cache freshness. Returns a summary with issues found and recommendations.",
     {
       targetOrg: z
         .string()
@@ -69,9 +69,9 @@ export function register(server: McpServer) {
       }
 
       // 2. Permission Set Assignments
-      const pslQuery = `SELECT PermissionSetLicenseId, PermissionSetLicense.DeveloperName, COUNT(Id) cnt FROM PermissionSetLicenseAssign WHERE PermissionSetLicense.DeveloperName LIKE '%LifeSciences%' OR PermissionSetLicense.DeveloperName LIKE '%AFLS%' GROUP BY PermissionSetLicenseId, PermissionSetLicense.DeveloperName`;
+      const pslQuery = `SELECT PermissionSetLicenseId, PermissionSetLicense.DeveloperName, COUNT(Id) cnt FROM PermissionSetLicenseAssign WHERE PermissionSetLicense.DeveloperName LIKE '%LifeSciences%' OR PermissionSetLicense.DeveloperName LIKE '%LSC%' GROUP BY PermissionSetLicenseId, PermissionSetLicense.DeveloperName`;
       const pslResult = await runSoqlQuery(pslQuery, effectiveOrg);
-      let pslInfo = "No AFLS permission set license assignments found.";
+      let pslInfo = "No LSC permission set license assignments found.";
 
       if (pslResult.success && pslResult.data?.records?.length) {
         const pslLines = (pslResult.data.records as Array<Record<string, unknown>>).map(
@@ -84,8 +84,8 @@ export function register(server: McpServer) {
           severity: "warning",
           area: "Permission Sets",
           message:
-            "No AFLS permission set license assignments found. Users may not have the required licenses.",
-          fix: "Assign AFLS permission set licenses to users via `assign_permission_set`",
+            "No LSC permission set license assignments found. Users may not have the required licenses.",
+          fix: "Assign LSC permission set licenses to users via `assign_permission_set`",
         });
       }
 
@@ -167,7 +167,7 @@ export function register(server: McpServer) {
             severity: "warning",
             area: "Mobile Cache",
             message: `Mobile metadata cache is ${daysAgo} days old. Recommend regenerating.`,
-            fix: "Run `/afls:generate-metadata-cache` to regenerate",
+            fix: "Run `/lsc:generate-metadata-cache` to regenerate",
           });
         }
       } else {
@@ -190,7 +190,7 @@ export function register(server: McpServer) {
       if (errors.length > 0) status = "NEEDS ATTENTION";
       else if (warnings.length > 0) status = "WARNINGS";
 
-      let report = `# AFLS Org Health Check\n\n**Org:** ${effectiveOrg}\n**Status:** ${status}\n**Issues:** ${errors.length} error(s), ${warnings.length} warning(s), ${infos.length} info(s)\n\n`;
+      let report = `# LSC Org Health Check\n\n**Org:** ${effectiveOrg}\n**Status:** ${status}\n**Issues:** ${errors.length} error(s), ${warnings.length} warning(s), ${infos.length} info(s)\n\n`;
       report += sections.join("\n\n");
 
       if (issues.length > 0) {
@@ -212,7 +212,7 @@ export function register(server: McpServer) {
 
   server.tool(
     "get_org_status",
-    "Get a single dashboard view of the connected AFLS org: alias, username, instance URL, installed packages, enabled features (via trigger handlers), mobile cache status, and territory model status.",
+    "Get a single dashboard view of the connected LSC org: alias, username, instance URL, installed packages, enabled features (via trigger handlers), mobile cache status, and territory model status.",
     {
       targetOrg: z
         .string()
@@ -234,7 +234,7 @@ export function register(server: McpServer) {
         };
       }
 
-      let report = `# AFLS Org Status\n\n**Org:** ${effectiveOrg}\n`;
+      let report = `# LSC Org Status\n\n**Org:** ${effectiveOrg}\n`;
 
       // Org info
       const orgQuery = `SELECT Id, Name, OrganizationType, IsSandbox, InstanceName FROM Organization LIMIT 1`;
@@ -291,12 +291,12 @@ export function register(server: McpServer) {
       }
 
       // User count
-      const userQuery = `SELECT COUNT(Id) cnt FROM User WHERE IsActive = true AND Profile.Name LIKE '%Life%' OR Profile.Name LIKE '%AFLS%'`;
+      const userQuery = `SELECT COUNT(Id) cnt FROM User WHERE IsActive = true AND Profile.Name LIKE '%Life%' OR Profile.Name LIKE '%LSC%'`;
       const userResult = await runSoqlQuery(userQuery, effectiveOrg);
       report += "\n## Users\n\n";
       if (userResult.success && userResult.data?.records?.length) {
         const cnt = (userResult.data.records[0] as Record<string, unknown>).cnt;
-        report += `Active AFLS-profiled users: ${cnt}\n`;
+        report += `Active LSC-profiled users: ${cnt}\n`;
       }
 
       return { content: [{ type: "text", text: report }] };

@@ -6,7 +6,7 @@ This talk track outlines a demo of the Consent Management feature within the Lif
 
 - **What it is:** Consent Management is a feature designed to capture, sync, and respect the communication preferences of HCPs for different subscription types and channels. It helps your organization comply with data privacy regulations by targeting outreach only to HCPs who have provided their consent.
 
-- **Availability:** The feature is available in **Lightning Experience** and **AFLS**. For setup, it requires Enterprise and Unlimited Editions with AFLS and the AFLS for Customer Engagement Add-On license.
+- **Availability:** The feature is available in **Lightning Experience** and **Life Sciences Cloud (LSC)**. For setup, it requires Enterprise and Unlimited Editions with LSC and the LSC for Customer Engagement Add-On license.
 
 ### 2. The Consent Management Data Model
 
@@ -70,7 +70,7 @@ The consent manager or a Life Sciences Commercial Admin needs to configure sever
 
 To provide a central location for reps to view and update an HCP\'s consent, you must add a custom Consent tab to the account\'s record page.
 
-1.  Go to an **Accounts** record page in the **AFLS for Customer Engagement** app.
+1.  Go to an **Accounts** record page in the **LSC for Customer Engagement** app.
 
 2.  Click the gear icon and select **Edit Page**.
 

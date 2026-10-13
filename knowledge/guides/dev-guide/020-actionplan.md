@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:actionplan pages:1458-1460 -->
 # ActionPlan
 
-AFLS Overview                                                                                                                     ActionPlan
+Life Sciences Cloud (LSC) Overview                                                                                                                     ActionPlan
 
 
 
@@ -51,11 +51,11 @@ Object Reference for the Salesforce Platform: AccountPlanObjective
 
 ## ActionPlan
 
-AFLS fields extend the standard ActionPlan object to represent the instance of an action plan.
+LSC fields extend the standard ActionPlan object to represent the instance of an action plan.
 
 <!-- page:1459 -->
 
-AFLS Overview                                                                                                       ActionPlan
+LSC Overview                                                                                                       ActionPlan
 
 
 The ActionPlan object and its fields are used by the Key Account Management and the Provider Engagement Compliance feature areas.
@@ -107,7 +107,7 @@ Sprint
 
 <!-- page:1460 -->
 
-AFLS Overview                                                                                                                     ActionPlan
+LSC Overview                                                                                                                     ActionPlan
 
 
 

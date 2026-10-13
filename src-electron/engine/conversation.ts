@@ -130,13 +130,13 @@ export class ConversationEngine {
     if (Array.isArray(userInput)) {
       this.messages.push({ role: "user", content: userInput });
     } else {
-      const commandMatch = userInput.match(/^\/afls:(\S+)\s*(.*)/);
+      const commandMatch = userInput.match(/^\/lsc:(\S+)\s*(.*)/);
       if (commandMatch) {
         const cmdName = commandMatch[1];
         const cmdArgs = commandMatch[2].trim();
         const cmdContent = this.promptBuilder.getCommandContent(cmdName);
         if (cmdContent) {
-          const injected = `[Running command /afls:${cmdName}]\n\n${cmdContent}\n\nUser input: ${cmdArgs || "(no arguments)"}`;
+          const injected = `[Running command /lsc:${cmdName}]\n\n${cmdContent}\n\nUser input: ${cmdArgs || "(no arguments)"}`;
           this.messages.push({ role: "user", content: injected });
         } else {
           this.messages.push({ role: "user", content: userInput });

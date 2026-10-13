@@ -30,7 +30,7 @@ describe("import-ui-server", () => {
     const res = await fetch(s.url);
     expect(res.status).toBe(200);
     const html = await res.text();
-    expect(html).toContain("AFLS Configuration Import");
+    expect(html).toContain("LSC Configuration Import");
     expect(html).toContain("src-org");
   });
 

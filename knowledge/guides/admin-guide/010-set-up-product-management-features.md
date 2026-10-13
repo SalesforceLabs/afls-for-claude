@@ -8,7 +8,7 @@ Set Up Product Management Features
 
 In the Life Sciences industry, delivering value to customers—healthcare professionals, organizations, and
 patients—depends on making sure that the right products are available, accessible, and aligned with
-regulatory requirements. In AFLS, Product Management supports this goal by making it
+regulatory requirements. In Life Sciences Cloud (LSC), Product Management supports this goal by making it
 easier to configure, classify, and manage the products that your organization discusses, markets, sells,
 and distributes. The product hierarchy view helps teams structure portfolios according to SKU-level
 organization, while product territory alignments make sure that users access only the products approved
@@ -58,7 +58,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -108,7 +108,7 @@ See Also
 
 
 
-## Set Up Sales Territories for AFLS
+## Set Up Sales Territories for LSC
 
 Trigger Handler Administration
 Create Object Metadata Cache Configuration
@@ -128,7 +128,7 @@ and organize them with record types in the Product2 object.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -139,7 +139,7 @@ To create a product record type:                      Life Sciences Commercial A
 
 
 You can create any kind of record type. However, to easily track product record types in the processes and
-workflows in AFLS, we recommend creating record types that correspond to these product
+workflows in LSC, we recommend creating record types that correspond to these product
 specification types—order items, promotional items, and sample products.
 
 1.    From the App Launcher, find and select Admin Console.
@@ -176,7 +176,7 @@ specification type, and in turn with the related workflow in Life Sciences.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -215,7 +215,7 @@ parts. Choose to show all the products at one go or show 500 records at a time.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 
 <!-- page:436 -->
@@ -252,7 +252,7 @@ display in the hierarchy view.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -310,21 +310,21 @@ groupings, and how they all fit together.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-In AFLS, use the Life Science Marketable Product object to create all product types.
+In LSC, use the Life Science Marketable Product object to create all product types.
 Physical and sellable products are created using the Product2 object and associated with the Life Science
 Marketable Product record of type Product.
 
 Product Types are groupings that help organize the products that a company sells, markets, and
-distributes as samples. AFLS gives you the flexibility to create hierarchies among the
+distributes as samples. LSC gives you the flexibility to create hierarchies among the
 product types by using the Parent Product field in the Life Science Marketable Product object. However,
 there are certain limitations around implementing child product types for each parent type.
 
-Here are the various groupings of products in AFLS and the parent-child hierarchies that
+Here are the various groupings of products in LSC and the parent-child hierarchies that
 you can set up for each product type.
 
 
@@ -415,7 +415,7 @@ defining products and product types.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -462,7 +462,7 @@ types, and product guidances directly from the hierarchy without switching betwe
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -486,7 +486,7 @@ emphasis and product activities aligned with broader business goals.
 
 ## See Also
 
-Get Your Org Ready for the AFLS for Customer Engagement Package
+Get Your Org Ready for the LSC for Customer Engagement Package
 
 
 Create Products from the Product Hierarchy View
@@ -503,7 +503,7 @@ view.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -556,7 +556,7 @@ and product activities aligned with broader business goals.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -628,7 +628,7 @@ correct territory.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -640,7 +640,7 @@ By default, product-territory alignments are inherited downstream in the product
 Sciences Cloud also provides the Parent Territory Product Alignment admin setting that enables product
 territory alignments to be extended all the way up in the hierarchy to all parent territories.
 
-Product-territory alignment in AFLS is determined through explicit (direct) alignment,
+Product-territory alignment in LSC is determined through explicit (direct) alignment,
 parent-based inheritance, and explicit exclusion.
 
 - Explicit alignment (direct alignment): A product is explicitly aligned to a specific territory. This means
@@ -730,7 +730,7 @@ exclude a child territory, it doesn’t inherit the product alignment of its par
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -764,7 +764,7 @@ messages to the territories that are aligned with a product.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -805,7 +805,7 @@ priority.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -859,7 +859,7 @@ compliance risks and supporting adherence to industry regulations.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 

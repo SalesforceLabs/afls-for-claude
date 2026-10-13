@@ -1,14 +1,14 @@
-# AFLS Implementation Anti-Patterns — Field-Observed Lessons
+# Life Sciences Cloud (LSC) Implementation Anti-Patterns — Field-Observed Lessons
 
 A catalog of implementation decisions that have repeatedly caused production
-incidents, blocked go-lives, or eroded customer trust on AFLS / Life Sciences
+incidents, blocked go-lives, or eroded customer trust on LSC / Life Sciences
 Cloud programs. These are **generalized, de-identified lessons** distilled from
 real escalations and health assessments — the goal is to help you *avoid* them,
 not to attribute them.
 
 > **How to use this.** When reviewing an implementation, planning a go-live, or
 > diagnosing a post-go-live incident, check the design against these patterns.
-> Each entry names the anti-pattern, why it fails on the AFLS data model, and the
+> Each entry names the anti-pattern, why it fails on the LSC data model, and the
 > correct approach. The recurring root cause across nearly all of them is the
 > same: **trial-and-error configuration against an opinionated, pre-built data
 > model, without validating consequences in a production-like sandbox.**
@@ -17,7 +17,7 @@ not to attribute them.
 
 ## 1. Sharing & Visibility Model
 
-AFLS ships an **opinionated sharing model**. Reps' visits and sample
+LSC ships an **opinionated sharing model**. Reps' visits and sample
 disbursements are designed to be **Private** at the org-wide default (OWD) and
 shared through territory hierarchy, not through blanket access.
 
@@ -27,7 +27,7 @@ shared through territory hierarchy, not through blanket access.
 | Granting **"View All" on ProductDisbursement** (often to "make reporting easier") | ProductDisbursement records back **inventory counting**. Inventory reconciliation logic keys off record **ownership**; with "View All", other reps' unreconciled disbursements are read as an ownership/state violation and **reps can no longer submit inventory counts** — which blocks regulated (e.g. FDA) reporting. | Do **not** set "View All" (or "Modify All") on ProductDisbursement. Give reps standard object access and rely on ownership + territory sharing. If cross-rep reporting is needed, use reports/CRMA on a separate sharing path, not object-level "View All". |
 
 **Rule of thumb:** before changing any OWD or granting a "View All"/"Modify All"
-permission on a core AFLS object (Visit, ProductDisbursement, ProductRequest,
+permission on a core LSC object (Visit, ProductDisbursement, ProductRequest,
 inventory objects), find out *what platform logic depends on ownership or
 sharing of that object first.* Widening access is rarely the right fix.
 
@@ -57,15 +57,15 @@ sync configuration is a top source of Sev-1 incidents.
 
 ## 4. Data Model & Over-Customization
 
-AFLS is a **pre-built, opinionated data model**. Custom objects and non-standard
+LSC is a **pre-built, opinionated data model**. Custom objects and non-standard
 UI that duplicate or bypass standard objects are the leading source of
 long-term technical debt and off-roadmap divergence.
 
 | Anti-Pattern | Why it fails | Correct approach |
 |---|---|---|
-| Proliferating **custom objects** that shadow standard AFLS objects | In assessments, only a small fraction of flagged custom objects turn out to be justified. Custom builds miss standard behavior (sharing, sync, actions), can't ride the roadmap, and become unmaintainable. | Default to **standard objects and configuration**. Require a written justification for each custom object. |
+| Proliferating **custom objects** that shadow standard LSC objects | In assessments, only a small fraction of flagged custom objects turn out to be justified. Custom builds miss standard behavior (sharing, sync, actions), can't ride the roadmap, and become unmaintainable. | Default to **standard objects and configuration**. Require a written justification for each custom object. |
 | Building **non-standard screens** (e.g. a custom visit screen) that deviate from standard layouts | Deviating from standard page-layout/action patterns breaks mobile behavior and future upgrades; high maintenance burden. | Configure standard layouts and actions first. Only customize where a documented gap exists. |
-| **Using OmniStudio for mobile customization** | OmniStudio (FlexCards, OmniScripts, DataRaptors) is **not available anywhere in the AFLS mobile/iPad app** — it is web-only. | Never propose OmniStudio for mobile. Use standard mobile configuration (DB Schema, actions, layouts, custom scripts where supported). |
+| **Using OmniStudio for mobile customization** | OmniStudio (FlexCards, OmniScripts, DataRaptors) is **not available anywhere in the LSC mobile/iPad app** — it is web-only. | Never propose OmniStudio for mobile. Use standard mobile configuration (DB Schema, actions, layouts, custom scripts where supported). |
 
 **Governance fix:** require **mandatory mid-build ADR (Architecture Decision
 Record) checkpoints** and an architect/design-authority sign-off before any

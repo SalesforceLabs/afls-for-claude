@@ -1,22 +1,22 @@
 # LSStarterConfig — Spring '26 (Release 260)
 
-**Audience:** AFLS4CE admins, support engineers, demo setup
+**Audience:** LSC4CE admins, support engineers, demo setup
 **Source:** Spring '26 release enablement deck (LSStarterConfig)
 **Status:** Open-source repo, GA for Spring '26
 
 ## Overview
 
-**LSStarterConfig** is an open-source Salesforce Labs repository that bootstraps an AFLS4CE org with pre-built configurations across DB Schemas, application & feature settings, a sample profile, and trigger handler activations. It exists to short-circuit the multi-hour manual config bootstrap that every new AFLS4CE org otherwise requires.
+**LSStarterConfig** is an open-source Salesforce Labs repository that bootstraps an LSC4CE org with pre-built configurations across DB Schemas, application & feature settings, a sample profile, and trigger handler activations. It exists to short-circuit the multi-hour manual config bootstrap that every new LSC4CE org otherwise requires.
 
 - **Repository:** https://github.com/SalesforceLabs/LSStarterConfig
-- **Audience:** Customer Engagement (AFLS4CE) orgs — not Pharma
+- **Audience:** Customer Engagement (LSC4CE) orgs — not Pharma
 - **Spring '26 change:** Repository structure simplifies — the `1_inactive` / `2_activate` two-zip dance is replaced by a single active deployment (see "Spring '26 Change" below)
 
 ## Prerequisites
 
 | Requirement | Note |
 |---|---|
-| AFLS4CE org with 2GP package installed | Vanilla AFLS4CE managed package |
+| LSC4CE org with 2GP package installed | Vanilla LSC4CE managed package |
 | Permission Set Licenses assigned | `Healthcloud Starter` AND `Life Science Commercial` |
 | No existing configurations in the org | Script will refuse to deploy if `LifeSciMetadata*` records already exist (avoids overwriting customer config) |
 
@@ -27,8 +27,8 @@
 | `LSConfig/lifeSciConfigRecord/1_inactive/` | Metadata (DB Schemas + System Admin settings) | Deployed first, **inactive** state |
 | `LSConfig/lifeSciConfigRecord/2_activate/` | Metadata (activation flags) | Deployed second — flips records to **active** |
 | `LSConfig/lifeSciMetadataRecord/` | Data (Business Admin–managed settings) | Loaded via CLI script — Workbench cannot deploy data |
-| `Scripts/sh/data_load.sh` | Shell script | Loads data, deploys `AFLS Custom Profile`, activates trigger handlers |
-| AFLS Custom Profile | Profile (sample) | Created by the script. Customers edit this for their own assignments |
+| `Scripts/sh/data_load.sh` | Shell script | Loads data, deploys `LSC Custom Profile`, activates trigger handlers |
+| Life Sciences Cloud (LSC) Custom Profile | Profile (sample) | Created by the script. Customers edit this for their own assignments |
 | Trigger handlers | Activations | A few key handlers are enabled |
 
 ## Spring '26 Change — Single-Zip Active Deployment
@@ -84,7 +84,7 @@ sh Scripts/sh/data_load.sh
 ```
 
 `data_load.sh` performs:
-1. Deploys the `AFLS Custom Profile` profile
+1. Deploys the `LSC Custom Profile` profile
 2. Loads `LifeSciMetadata*` records (Business Admin–managed config)
 3. Loads `LifeSciConfig*` records (System Admin–managed config)
 4. Activates the bundled trigger handlers
@@ -112,7 +112,7 @@ The Heroku app wraps the CLI script in a web UI: click **Login & Deploy**, log i
 
 ## Configuration Policy for Paid Orgs
 
-Paid (production) AFLS4CE orgs are shipped **blank** — only the vanilla managed package is installed. No starter config is bundled. Customers are expected to configure following product documentation.
+Paid (production) LSC4CE orgs are shipped **blank** — only the vanilla managed package is installed. No starter config is bundled. Customers are expected to configure following product documentation.
 
 LSStarterConfig is a **convenience utility** offered to accelerate this work — not a default. If a customer asks "why doesn't my paid org have feature X working out of the box?", the answer is: it's by design; they configure per documentation, or use LSStarterConfig as a head start.
 
@@ -123,9 +123,9 @@ LSStarterConfig is a **convenience utility** offered to accelerate this work —
 After deployment, verify:
 - `LifeSciConfig*` records exist and `IsActive = true`
 - `LifeSciMetadata*` records exist (if CLI/Heroku method was used)
-- `AFLS Custom Profile` is present and has the expected DB Schema assignments
+- `LSC Custom Profile` is present and has the expected DB Schema assignments
 - Bundled trigger handlers are active
-- Login as a user with the AFLS Custom Profile and run an initial mobile sync — metadata should download cleanly
+- Login as a user with the LSC Custom Profile and run an initial mobile sync — metadata should download cleanly
 
 ## Reference
 

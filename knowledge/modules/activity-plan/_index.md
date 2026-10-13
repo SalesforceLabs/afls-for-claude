@@ -26,6 +26,6 @@ All three types support both Non-Product and Product measure types.
 - [release-260-adjustment-requests](./release-260-adjustment-requests.md)
 - [release-260-emails-custom-entities](./release-260-emails-custom-entities.md)
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 - [support-engineering-activity-plan](./support-engineering-activity-plan.md) — Apr 30, 2026 session. All 4 measure type configs, 7 mandatory triggers, full job tailing chains (Validate → Calculate → Reset → AccountGoals), Review/Adjustment widget setup, 6 W-number bug patterns with diagnosis steps.

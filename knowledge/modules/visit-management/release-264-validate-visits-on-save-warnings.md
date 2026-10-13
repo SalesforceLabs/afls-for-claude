@@ -31,4 +31,4 @@ return [{
 }];
 ```
 
-Reference: "Visit Action Validation Scripts" in Salesforce Help. See also the `afls-custom-scripts` skill for IIFE/CodeText conventions.
+Reference: "Visit Action Validation Scripts" in Salesforce Help. See also the `lsc-custom-scripts` skill for IIFE/CodeText conventions.

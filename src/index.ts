@@ -34,7 +34,7 @@ import { register as registerBriefings } from "./tools/briefings.js";
 
 // Create the MCP server
 const server = new McpServer({
-  name: "AFLS-for-Claude",
+  name: "LSC-for-Claude",
   version: "0.1.0",
 });
 
@@ -72,7 +72,7 @@ async function main() {
   const exercises = getExerciseList();
   const troubleshooting = getTroubleshootingList();
 
-  console.error(`AFLS for Claude MCP server starting...`);
+  console.error(`LSC for Claude MCP server starting...`);
   console.error(`Knowledge base loaded:`);
   console.error(`  - ${modules.length} modules (PM enablement)`);
   console.error(`  - ${helpDocs.length} help documents`);
@@ -82,7 +82,7 @@ async function main() {
 
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("AFLS for Claude MCP server running on stdio");
+  console.error("LSC for Claude MCP server running on stdio");
 }
 
 main().catch((error) => {

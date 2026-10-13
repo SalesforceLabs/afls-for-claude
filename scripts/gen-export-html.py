@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a self-contained, browsable HTML report from an AFLS config export JSON.
+"""Generate a self-contained, browsable HTML report from an LSC config export JSON.
 
 Handles any combination of export categories (trigger handlers, admin settings,
 DB Schema, actions). Each category renders as a searchable/sortable tab.
@@ -84,7 +84,7 @@ meta = {
 TEMPLATE = r"""<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AFLS Config Export &mdash; __ORG__</title>
+<title>LSC Config Export &mdash; __ORG__</title>
 <style>
   :root{--bg:#0f1720;--panel:#161f2b;--border:#26313f;--text:#e5edf5;--muted:#8ba0b5;
         --accent:#4c9aff;--green:#3fb950;--red:#f85149;--amber:#d29922;--chip:#1f2a38;}
@@ -112,7 +112,7 @@ TEMPLATE = r"""<!DOCTYPE html>
   code{font-family:"SF Mono",Menlo,Consolas,monospace;font-size:12px;background:var(--bg);padding:1px 5px;border-radius:4px;color:#a5d6ff;white-space:pre-wrap;word-break:break-word;display:inline-block;max-width:640px;}
   .muted{color:var(--muted);}
 </style></head><body>
-<header><h1>AFLS Configuration Export</h1>
+<header><h1>LSC Configuration Export</h1>
 <div class="sub">Org <strong>__ORG__</strong> &middot; exported __EXPORTED__ &middot; schema version __VERSION__</div></header>
 <div class="cards" id="cards"></div>
 <div class="tabs" id="tabs"></div>

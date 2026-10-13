@@ -1,11 +1,11 @@
 ---
-description: Interactive wizard to configure and validate the AFLS Home Page
+description: Interactive wizard to configure and validate the Life Sciences Cloud (LSC) Home Page
 arguments: "[platform]"
 ---
 
-# Configure AFLS Home Page
+# Configure LSC Home Page
 
-Interactive wizard to check and configure the AFLS Home Page for web and/or mobile.
+Interactive wizard to check and configure the LSC Home Page for web and/or mobile.
 
 ## Arguments
 
@@ -20,7 +20,7 @@ Follow these steps sequentially to validate and configure the home page.
 First, check if connected to a Salesforce org:
 
 ```
-Use check_afls_setup to verify org connection
+Use check_lsc_setup to verify org connection
 ```
 
 If not connected, guide the user through authentication.
@@ -201,13 +201,13 @@ Based on findings, offer to fix issues directly using programmatic tools:
 
 ## Example Usage
 
-User: `/afls:configure-home-page`
+User: `/lsc:configure-home-page`
 > Run full configuration check for both platforms
 
-User: `/afls:configure-home-page mobile`
+User: `/lsc:configure-home-page mobile`
 > Focus on mobile-specific configuration
 
-User: `/afls:configure-home-page web`
+User: `/lsc:configure-home-page web`
 > Focus on web-specific configuration
 
 ## Quick Validation Alternative
@@ -215,7 +215,7 @@ User: `/afls:configure-home-page web`
 For a faster automated check, suggest using the audit command:
 
 ```
-/afls:audit home-page-check
+/lsc:audit home-page-check
 ```
 
 This runs all home page validation rules automatically.

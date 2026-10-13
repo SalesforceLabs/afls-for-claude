@@ -1,6 +1,6 @@
-## **Demo Script: Administering and Using Data Change Requests (DCRs) in AFLS**
+## **Demo Script: Administering and Using Data Change Requests (DCRs) in Life Sciences Cloud (LSC)**
 
-**Narrator:** \"Hello, and welcome to this demonstration of **Data Change Requests, or DCR**, within Salesforce AFLS. This powerful feature is designed to **streamline how data modifications are submitted, validated, and implemented** across the Life Sciences Commercial application.
+**Narrator:** \"Hello, and welcome to this demonstration of **Data Change Requests, or DCR**, within Salesforce LSC. This powerful feature is designed to **streamline how data modifications are submitted, validated, and implemented** across the Life Sciences Commercial application.
 
 Its primary goal is to **reduce manual corrections, prevent unauthorized changes, and ensure data consistency** for both web and mobile users.
 
@@ -27,7 +27,7 @@ Today, we\'ll walk through the essential setup and administration tasks, then se
 
     - **Administrator Action**: \"Under \'Profile Settings\', you can define the **default org behavior** for how data changes are handled. There are three main options:
 
-      - **Don't apply changes immediately**: This sends DCRs for approval first, changes only appear in AFLS after their approval.
+      - **Don't apply changes immediately**: This sends DCRs for approval first, changes only appear in LSC after their approval.
 
       - **Apply changes immediately**: is an object level setting that applies changes right when they are made, if changes are later rejected, they are reverted back which will revert them on the mobile app after the next sync.
 
@@ -69,4 +69,4 @@ Today, we\'ll walk through the essential setup and administration tasks, then se
 
     - **Lastly,** to efficiently manage incoming DCRs, we\'ve added a custom tab 'Data Change Request's in the Life Sciences Commercial, providing a centralized place for all approval workflows.\"
 
-**Narrator:** \"In summary, Data Change Requests provide a robust framework for managing data quality and compliance within AFLS. By carefully configuring permission sets, trigger handlers, profile settings, validation types, and managed fields, administrators ensure that all critical data changes undergo the necessary review and approval, maintaining the integrity of your organization\'s most valuable asset: its data. This structured approach is like a **quality control checkpoint** for your data, ensuring only verified information makes it into your official records, just as a pharmaceutical company rigorously tests products before they reach the market.\"
+**Narrator:** \"In summary, Data Change Requests provide a robust framework for managing data quality and compliance within LSC. By carefully configuring permission sets, trigger handlers, profile settings, validation types, and managed fields, administrators ensure that all critical data changes undergo the necessary review and approval, maintaining the integrity of your organization\'s most valuable asset: its data. This structured approach is like a **quality control checkpoint** for your data, ensuring only verified information makes it into your official records, just as a pharmaceutical company rigorously tests products before they reach the market.\"

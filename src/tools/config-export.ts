@@ -28,7 +28,7 @@ function groupOf(r: RecordDiff): string {
 export function register(server: McpServer) {
   server.tool(
     "export_config",
-    "Export AFLS configuration (Admin Console settings, DB Schema, trigger handlers, actions) as JSON. Captures per-field DataType and profile assignments (format v1.1) so the snapshot can be faithfully re-applied with import_config. Use this to snapshot org configuration for comparison, migration, or backup.",
+    "Export LSC configuration (Admin Console settings, DB Schema, trigger handlers, actions) as JSON. Captures per-field DataType and profile assignments (format v1.1) so the snapshot can be faithfully re-applied with import_config. Use this to snapshot org configuration for comparison, migration, or backup.",
     {
       targetOrg: z
         .string()
@@ -68,7 +68,7 @@ export function register(server: McpServer) {
         content: [
           {
             type: "text",
-            text: `# AFLS Configuration Export\n\n**Org:** ${effectiveOrg}\n**Exported:** ${snapshot.exportedAt}\n**Format:** v${snapshot.version}\n**Categories:** ${exportCategories.join(", ")}\n\n\`\`\`json\n${json}\n\`\`\`\n\nSave this JSON (see /afls:export-config for the exports/ convention) and use \`import_config\` to review + apply it to another org.`,
+            text: `# LSC Configuration Export\n\n**Org:** ${effectiveOrg}\n**Exported:** ${snapshot.exportedAt}\n**Format:** v${snapshot.version}\n**Categories:** ${exportCategories.join(", ")}\n\n\`\`\`json\n${json}\n\`\`\`\n\nSave this JSON (see /lsc:export-config for the exports/ convention) and use \`import_config\` to review + apply it to another org.`,
           },
         ],
       };
@@ -77,7 +77,7 @@ export function register(server: McpServer) {
 
   server.tool(
     "import_config",
-    "Import AFLS configuration from a snapshot into a target org, diff-driven and create + update-only (safe). Modes: 'report' (default) computes a diff and summarizes what would change; 'ui' opens a local browser review-and-apply UI on 127.0.0.1 with per-record checkboxes and live progress; 'apply' applies a specific selection headlessly. The target org is auto-backed-up to exports/ before any write. Never deletes or deactivates records that exist only in the target.",
+    "Import LSC configuration from a snapshot into a target org, diff-driven and create + update-only (safe). Modes: 'report' (default) computes a diff and summarizes what would change; 'ui' opens a local browser review-and-apply UI on 127.0.0.1 with per-record checkboxes and live progress; 'apply' applies a specific selection headlessly. The target org is auto-backed-up to exports/ before any write. Never deletes or deactivates records that exist only in the target.",
     {
       source: z
         .string()

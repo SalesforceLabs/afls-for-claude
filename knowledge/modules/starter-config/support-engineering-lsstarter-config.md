@@ -1,6 +1,6 @@
 # LSStarterConfig — Support Engineering Training
 
-**Session:** AFLS4CE Value Chain Training — Feb 19, 2026
+**Session:** LSC4CE Value Chain Training — Feb 19, 2026
 **Audience:** Support engineers
 **Source:** Engineering training series (Gemini transcript)
 **Presenter:** Srikant Chonnad
@@ -37,7 +37,7 @@ The `1_inactive` then `2_activate` two-zip flow was a workaround for a sequencin
 | DB Schemas (`LifeSciConfig*` metadata) | ✅ | ✅ | ✅ |
 | System Admin settings (`LifeSciConfig*` data on metadata entities) | ✅ | ✅ | ✅ |
 | Business Admin settings (`LifeSciMetadata*` data) | ❌ | ✅ | ✅ |
-| Sample profile (`AFLS Custom Profile`) | ❌ | ✅ | ✅ |
+| Sample profile (`LSC Custom Profile`) | ❌ | ✅ | ✅ |
 | Trigger handler activations | ❌ | ✅ | ✅ |
 
 Workbench alone is incomplete for a "full bootstrap." Use CLI or Heroku for that.
@@ -92,7 +92,7 @@ Fix: stagger team usage, or fall back to CLI for that customer's deployment.
 - **Repo navigation:** `LSConfig/lifeSciConfigRecord/1_inactive` (pre-260 only), `2_activate`, `lifeSciMetadataRecord/`, `Scripts/sh/data_load.sh`
 - **Zipping for Workbench:** zip the **contents** of the folder, not the folder itself — Workbench expects the package structure at the root of the zip
 - **CLI flow:** `sf org login web` → web browser auth → return to terminal → `sh Scripts/sh/data_load.sh`
-- **Verification post-deploy:** check that `LifeSciConfig*` records have `IsActive = true`, profile assignments on `AFLS Custom Profile` look right, and the bundled trigger handlers are active
+- **Verification post-deploy:** check that `LifeSciConfig*` records have `IsActive = true`, profile assignments on `LSC Custom Profile` look right, and the bundled trigger handlers are active
 
 ## What's NOT supported
 
@@ -106,4 +106,4 @@ Fix: stagger team usage, or fall back to CLI for that customer's deployment.
 - **Repo:** https://github.com/SalesforceLabs/LSStarterConfig
 - **Heroku app (internal-only):** https://lsstarterconfig-0d89525d2eb3.herokuapp.com/
 - **Spring '26 release notes:** `knowledge/release-notes/spring-26-official.md`
-- **Documentation gap escalation path:** file a doc bug on the AFLS4CE product documentation owner
+- **Documentation gap escalation path:** file a doc bug on the LSC4CE product documentation owner

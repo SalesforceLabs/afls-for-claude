@@ -1,4 +1,4 @@
-# AFLS Consent Management Configuration Validation Rules
+# LSC Consent Management Configuration Validation Rules
 # =====================================================
 # Rules to validate Consent Management configuration including
 # communication subscriptions, channel types, consent records,
@@ -19,7 +19,7 @@
 schema_version: "1.0"
 category_name: "Consent Management Configuration"
 description: |
-  Validation rules for AFLS Consent Management configuration.
+  Validation rules for LSC Consent Management configuration.
   Covers communication subscriptions, engagement channel types,
   consent records, contact points, compliance statements,
   digital signatures, and mobile cache requirements.

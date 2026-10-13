@@ -4,7 +4,7 @@
 import type { SfOrg, SfOrgListResult, SoqlQueryResult } from "../../src/salesforce/cli.js";
 
 export const MOCK_ORG: SfOrg = {
-  alias: "my-afls-org",
+  alias: "my-lsc-org",
   username: "admin@example.com",
   orgId: "00D000000000001",
   instanceUrl: "https://example.my.salesforce.com",

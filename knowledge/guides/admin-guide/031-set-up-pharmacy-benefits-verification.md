@@ -54,7 +54,7 @@ for pharmacy coverage details, including coverage status, co-pay, co-insurance, 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with Life Sciences Cloud (LSC) or Health Cloud
 
 <!-- page:1084 -->
 
@@ -159,7 +159,7 @@ data and make the data model interoperable.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Here’s the set of objects pharmacy benefits verification requests and responses use, and the level of
@@ -364,7 +364,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -401,7 +401,7 @@ To get started with Pharmacy Benefits Verification, assign the appropriate permi
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -466,7 +466,7 @@ To verify pharmacy benefits, users need access to certain fields that aren’t a
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 You must manually grant your users access to these fields.
@@ -526,7 +526,7 @@ many more to determine the pharmacy benefits that are available to a patient.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -684,7 +684,7 @@ Configure the units of measure for the medications that a healthcare practitione
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -730,13 +730,13 @@ benefits coverage status code. For example, covered, not covered, or covered wit
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
 
 To create a code set a record:
-Health Cloud Starter (for AFLS)
+Health Cloud Starter (for LSC)
 permission set
 
 OR
@@ -779,13 +779,13 @@ Activate the Pharmacy picklist value for all the pharmacy benefits verification 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
 
 To edit coverage benefit:
-Health Cloud Starter (for AFLS)
+Health Cloud Starter (for LSC)
 permission set
 
 OR
@@ -817,7 +817,7 @@ Limit field in the Coverage Benefit Line Item object.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -850,7 +850,7 @@ to verify patients' benefits details.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 
@@ -879,7 +879,7 @@ the verification request.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Electronic Verification Request
@@ -899,7 +899,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Use pharmacy benefits verification to integrate your Salesforce org with clearing houses or payors by
@@ -912,7 +912,7 @@ FHIR compliant RTPBC Claim Response to Salesforce org through MuleSoft.
 
 ## Built-In MuleSoft Integration for Electronic Verification
 
-Integrate Health and AFLS with third-party clearing houses by using FHIR-CARIN and
+Integrate Health and LSC with third-party clearing houses by using FHIR-CARIN and
 NCPDP aligned verification requests, industry-specific APIs, and integration application deployed on
 MuleSoft. Use this integration to accelerate the end-to-end benefits verification process.
 Set Up Electronic Verification Request
@@ -925,7 +925,7 @@ request. Also, understand the different scenarios of failure and their resolutio
 
 Built-In MuleSoft Integration for Electronic Verification
 
-Integrate Health and AFLS with third-party clearing houses by using FHIR-CARIN and
+Integrate Health and LSC with third-party clearing houses by using FHIR-CARIN and
 NCPDP aligned verification requests, industry-specific APIs, and integration application deployed on
 MuleSoft. Use this integration to accelerate the end-to-end benefits verification process.
 
@@ -935,7 +935,7 @@ MuleSoft. Use this integration to accelerate the end-to-end benefits verificatio
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Set up and use in-built integration to create seamless user experiences. Life Sciences's comprehensive
@@ -946,7 +946,7 @@ verification requests and retrieving coverage details from clearing houses.
 -    Prebuilt integration application, built using the FHIR standards, that enable Health and Life Sciences
 Cloud to interact with clearing houses and payor systems. These out-of-the-box integration
 applications help your representatives by reducing the time and cost to go live.
--    Use the Patient Services Benefits application for Health and AFLS to integrate your
+-    Use the Patient Services Benefits application for Health and LSC to integrate your
 Salesforce org with the clearing houses. With this integration in place, your representatives can send
 the verification requests electronically in an FHIR-CARIN and NCPDP API format where the verification
 goes to the clearing house's FHIR endpoint through MuleSoft outbound application.
@@ -966,7 +966,7 @@ External Client app, MuleSoft integration, and Integration Defintions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Grant Read Access to Integration Provider Definition Object
@@ -991,7 +991,7 @@ Use an external client app to connect your Salesforce org with the external appl
 USER PERMISSIONS NEEDED
 
 To create an external client app:
-Health Cloud Starter (for AFLS) OR
+Health Cloud Starter (for LSC) OR
 Health Cloud Foundation (for Health Cloud)
 permission set
 
@@ -1015,7 +1015,7 @@ To address end-to-end business needs, integrate Salesforce apps with external sy
 
 Integration Solutions with MuleSoft Direct.
 
-Get Started with MuleSoft Direct for AFLS.
+Get Started with MuleSoft Direct for LSC.
 
 
 Important The third-party clearing house that you're trying to integrate with must be FHIR-
@@ -1037,7 +1037,7 @@ directly pointing to the Apex classes.
 USER PERMISSIONS NEEDED
 
 To create an integration definition:
-Health Cloud Starter (for AFLS) OR
+Health Cloud Starter (for LSC) OR
 Health Cloud Foundation (for Health Cloud)
 permission set
 
@@ -1082,7 +1082,7 @@ request. Also, understand the different scenarios of failure and their resolutio
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 When your representative initiates an electronic verification request, an FHIR compliant RTBPC request is
@@ -1257,7 +1257,7 @@ your org.
 
 ## See Also
 
-Get Started with MuleSoft Direct for AFLS
+Get Started with MuleSoft Direct for LSC
 
 
 Data Management for Pharmacy Benefits Verification
@@ -1273,7 +1273,7 @@ admins must set up the data that’s further used in creating the verification r
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Add a Patient, Identifier, Contact Point Phone, Contact Point Email, and Contact Point Address
@@ -1329,13 +1329,13 @@ address. Identifiers are required for each patient to get their patient ID.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
 
 To create an account:
-Health Cloud Starter (for AFLS)
+Health Cloud Starter (for LSC)
 permission set
 
 OR
@@ -1402,7 +1402,7 @@ d. Save your changes.
 See Also
 Person Accounts
 Add a Related List to an Object
-Set Up Person Accounts to Represent People in AFLS
+Set Up Person Accounts to Represent People in LSC
 
 
 Add a Practitioner, Identifier, and Healthcare Provider NPI
@@ -1419,13 +1419,13 @@ can substitute the ID used in your country or region.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
 
 To create account records:
-Health Cloud Starter (for AFLS)
+Health Cloud Starter (for LSC)
 permission set
 
 OR
@@ -1437,7 +1437,7 @@ To create identifier records:                           Manage Pharmacy Benefits
 set
 
 To create healthcare provider npi records:
-Health Cloud Starter (for AFLS) OR
+Health Cloud Starter (for LSC) OR
 Health Cloud Foundation (for Health Cloud)
 permission set
 
@@ -1496,13 +1496,13 @@ address. Identifiers are required for each payor to get their payor ID.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
 
 To create account records:
-Health Cloud Starter (for AFLS)
+Health Cloud Starter (for LSC)
 permission set
 
 OR
@@ -1581,13 +1581,13 @@ must be verified for. Pharmacy Benefits Verification uses a numeric ID to specif
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
 
 To create account records:
-Health Cloud Starter (for AFLS)
+Health Cloud Starter (for LSC)
 permission set
 
 OR
@@ -1644,13 +1644,13 @@ members.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
 
 To create purchaser plan records:
-Health Cloud Starter (for AFLS)
+Health Cloud Starter (for LSC)
 permission set
 
 OR
@@ -1678,7 +1678,7 @@ Create a member plan to represent the details of the insurance coverage for a me
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:1112 -->
 
@@ -1688,7 +1688,7 @@ Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
 USER PERMISSIONS NEEDED
 
 To create member plan records:
-Health Cloud Starter (for AFLS)
+Health Cloud Starter (for LSC)
 permission set
 
 OR
@@ -1741,13 +1741,13 @@ patient.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
 
 To create product records:
-Health Cloud Starter (for AFLS)
+Health Cloud Starter (for LSC)
 permission set
 
 OR
@@ -1800,7 +1800,7 @@ benefits verification uses care programs, care program enrollees, and care progr
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Use care programs to manage a variety of patient-centric programs designed for patient’s treatment.
@@ -1834,7 +1834,7 @@ PharmacyBenefitsVerification Flexcard to the Care Program Enrollee record page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1891,8 +1891,8 @@ their prescription medications without any breaks.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -1968,8 +1968,8 @@ and healthcare professionals.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -2003,8 +2003,8 @@ of Care Benefits Verify Request records.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -2111,8 +2111,8 @@ the reverification of the care benefit verify request and care program enrollee 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -2157,8 +2157,8 @@ healthcare professionals from the orchestrator.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -2193,7 +2193,7 @@ provide field-level access to specific fields for the Analytics Cloud Integratio
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:1121 -->
 
@@ -2289,8 +2289,8 @@ Pipelines you can query and compute data that's available in your Salesforce org
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -2333,8 +2333,8 @@ definition to copy care benefit verify request records for benefits reverificati
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -2372,8 +2372,8 @@ payors to get the patient's missing benefits details.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -2409,8 +2409,8 @@ healthcare practitioner.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -2437,8 +2437,8 @@ to run patient support programs according to your requirements.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 
 <!-- page:1125 -->
@@ -2526,8 +2526,8 @@ Reverify Benefits orchestrator flow.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -2552,7 +2552,7 @@ c. Process Electronic Benefits Verification
 d. Update Coverage Details
 e. Wait for Care Benefit Verify Request Status Change
 5. Update the Experience Cloud Site URL in the Reverify Benefits flow orchestrator.
-a. From Setup, in the Quick Find box, enter Life Sciences for AFLS or Health Cloud
+a. From Setup, in the Quick Find box, enter Life Sciences for LSC or Health Cloud
 for health cloud, and then select Patient Support Program Settings.
 b. Copy the Experience Cloud Site URL.
 c. From Setup, in the Quick Find box, enter Flows, and then select Flows.
@@ -2588,8 +2588,8 @@ updates on relevant record pages.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -2663,7 +2663,7 @@ time out. Understand the prerequisites before making any customizations to this 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 
@@ -2697,7 +2697,7 @@ benefit verify request status.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Update Care Benefit Verify Request Status Flow Template
@@ -2718,7 +2718,7 @@ and activating the verification flow by using the Update Care Benefit Verify Req
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2749,7 +2749,7 @@ your business needs.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2781,11 +2781,11 @@ summary.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
-Timely care and communication are crucial in a patient’s healthcare journey. AFLS’s
+Timely care and communication are crucial in a patient’s healthcare journey. LSC’s
 embedded generative AI capabilities help reps to summarize pharmacy benefits faster and easily
 generate a concise summary that can be easily shared with a single click. Alleviate information search for
 the list of coverage fields and identify the missing coverage details with an AI-powered call script. Use our
@@ -2830,7 +2830,7 @@ support programs.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -2851,7 +2851,7 @@ Customize Application (for Health Cloud)
 1. Turn On Einstein Generative AI:
 a. From Setup, in the Quick Find box, find and select Einstein Setup.
 b. Turn on Einstein.
-2. From Setup, in the Quick Find box, enter Life Sciences (for AFLS), or Health Cloud
+2. From Setup, in the Quick Find box, enter Life Sciences (for LSC), or Health Cloud
 
 <!-- page:1132 -->
 
@@ -2878,7 +2878,7 @@ service to fetch the data. Before context service fetches the data, you must tur
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -2932,7 +2932,7 @@ benefits summary and script generation, and the prerequisites before making any 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -3095,7 +3095,7 @@ Einstein’s Generative AI auto-launched flows.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -3120,7 +3120,7 @@ Generative AI.
 
 ## Patient Support Programs Console App
 
-The Patient Support Programs console app in the Health and AFLS acts as a single-stop
+The Patient Support Programs console app in the Health and LSC acts as a single-stop
 for all patient services representatives to monitor different aspects of care programs and care program
 enrollees. Representatives can customize this app according to their needs and access all the
 functionalities of patient support programs through the app.
@@ -3167,7 +3167,7 @@ coverage is necessary and used correctly.
 
 Patient Support Programs Console App
 
-The Patient Support Programs console app in the Health and AFLS acts as a single-stop for
+The Patient Support Programs console app in the Health and LSC acts as a single-stop for
 all patient services representatives to monitor different aspects of care programs and care program
 enrollees. Representatives can customize this app according to their needs and access all the
 functionalities of patient support programs through the app.
@@ -3179,7 +3179,7 @@ functionalities of patient support programs through the app.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:1138 -->
 
@@ -3215,7 +3215,7 @@ Plan object record page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -3259,7 +3259,7 @@ prescribed within a care program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Manual Verification Request
@@ -3304,7 +3304,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -3375,7 +3375,7 @@ status, co-pay, and co-insurance.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 You can get a detailed understanding of a patient’s pharmacy benefits details such as Coverage Type,
@@ -3405,7 +3405,7 @@ reps generate a call script, which they can use to fetch missing coverage inform
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -3508,7 +3508,7 @@ informed decisions, such as enrolling patients in appropriate assistance program
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -3598,7 +3598,7 @@ depending on the business use case.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -3643,8 +3643,8 @@ necessary and used correctly.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -3688,8 +3688,8 @@ benefits of care program enrollees.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -3770,8 +3770,8 @@ through electronic and manual verification processes.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 
@@ -3863,8 +3863,8 @@ Discover the various scenarios that can occur within each step of the orchestrat
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with the Health Cloud or AFLS license.
-It's also available with these add-on licenses: Agentforce for AFLS or Agentforce for
+Available in: Enterprise and Unlimited Editions with the Health Cloud or LSC license.
+It's also available with these add-on licenses: Agentforce for LSC or Agentforce for
 Health Cloud, Flex Credits Metering, Agentforce Employee Agent, Einstein GPT Platform, Einstein GPT
 Copilot, Einstein GPT Trust, Genie Data Platform Starter, and Einstein GPT Prompt Builder.
 

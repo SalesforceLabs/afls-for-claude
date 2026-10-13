@@ -1,11 +1,11 @@
 ---
-description: Interactive wizard to configure and validate AFLS Territory Alignment
+description: Interactive wizard to configure and validate Life Sciences Cloud (LSC) Territory Alignment
 arguments: "[check-type]"
 ---
 
-# Configure AFLS Territory Alignment
+# Configure LSC Territory Alignment
 
-Interactive wizard to check and configure Territory Alignment in AFLS.
+Interactive wizard to check and configure Territory Alignment in LSC.
 
 ## Arguments
 
@@ -20,7 +20,7 @@ Follow these steps sequentially to validate and configure territory alignment.
 First, check if connected to a Salesforce org:
 
 ```
-Use check_afls_setup to verify org connection
+Use check_lsc_setup to verify org connection
 ```
 
 If not connected, guide the user through authentication.
@@ -194,7 +194,7 @@ Based on findings, offer to fix issues directly using programmatic tools:
 **If no territories:**
 - Guide to building territory hierarchy
 - Explain territory types and parent-child structure
-- Note: this is standard Salesforce configuration, not AFLS-specific
+- Note: this is standard Salesforce configuration, not LSC-specific
 
 **If no ObjectTerritory2Association records:**
 - Guide to creating explicit assignments in UI or via data load
@@ -234,22 +234,22 @@ Based on findings, offer to fix issues directly using programmatic tools:
 
 ## Example Usage
 
-User: `/afls:configure-territory`
+User: `/lsc:configure-territory`
 > Run full territory alignment configuration check
 
-User: `/afls:configure-territory territories`
+User: `/lsc:configure-territory territories`
 > Focus on territory hierarchy check
 
-User: `/afls:configure-territory assignments`
+User: `/lsc:configure-territory assignments`
 > Focus on explicit account-to-territory assignments
 
-User: `/afls:configure-territory geo-rules`
+User: `/lsc:configure-territory geo-rules`
 > Focus on zip/brick geo alignment rules
 
-User: `/afls:configure-territory affiliation-rules`
+User: `/lsc:configure-territory affiliation-rules`
 > Focus on affiliation alignment rules and picklist setup
 
-User: `/afls:configure-territory territory-info`
+User: `/lsc:configure-territory territory-info`
 > Focus on ProviderAcctTerritoryInfo and batch job status
 
 ## Quick Validation Alternative
@@ -257,7 +257,7 @@ User: `/afls:configure-territory territory-info`
 For a faster automated check, suggest using the audit command:
 
 ```
-/afls:audit territory-config-check
+/lsc:audit territory-config-check
 ```
 
 ## Admin Console Navigation

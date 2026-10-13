@@ -1,4 +1,4 @@
-# AFLS Quick Actions and Custom Actions Configuration Validation Rules
+# LSC Quick Actions and Custom Actions Configuration Validation Rules
 # ====================================================================
 # Rules to validate quick action and custom action configuration for web and mobile apps.
 #
@@ -17,7 +17,7 @@
 schema_version: "1.0"
 category_name: "Quick Actions Configuration"
 description: |
-  Validation rules for AFLS Quick Actions and Custom Actions configuration.
+  Validation rules for LSC Quick Actions and Custom Actions configuration.
   Quick actions provide direct access to core functionalities on Account, Visit,
   Search, NBC, and Home Page locations. Custom actions invoke Lightning components,
   flows, Visualforce pages, or canvas apps with custom functionality.

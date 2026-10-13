@@ -18,7 +18,7 @@
 
 ## "Cannot create visit on mobile"
 **Cause:** Visit not in DB Schema, or Quick Action not configured
-**Fix:** Check `list_db_schema` for Visit object. Check `list_afls_actions` for NewVisit action. Regenerate cache.
+**Fix:** Check `list_db_schema` for Visit object. Check `list_lsc_actions` for NewVisit action. Regenerate cache.
 
 ## "Detailing summary not saving"
 **Cause:** ProviderVisit record type does not match Visit record type

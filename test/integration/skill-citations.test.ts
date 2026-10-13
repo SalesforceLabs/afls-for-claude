@@ -10,7 +10,7 @@ const SKILLS_DIR = join(__dirname, "..", "..", "skills");
  * Skills must ensure citations reach the user through one of two paths:
  *
  * PATH A (preferred — "thin skill"): Skill is under 200 lines and delegates to
- *   MCP tools like get_afls_module_docs / search_afls_knowledge. The tool response
+ *   MCP tools like get_lsc_module_docs / search_lsc_knowledge. The tool response
  *   includes a > **Source:** citation. The skill must reference at least one
  *   knowledge tool so Claude calls it instead of answering from general knowledge.
  *
@@ -29,13 +29,13 @@ describe("skill citation coverage", () => {
 
   // Knowledge tools that return citations via formatCitation()
   const KNOWLEDGE_TOOL_PATTERNS = [
-    "get_afls_module_docs",
-    "search_afls_knowledge",
-    "explain_afls_concept",
-    "get_afls_help_doc",
-    "get_afls_guide",
-    "get_afls_troubleshooting",
-    "get_afls_exercise",
+    "get_lsc_module_docs",
+    "search_lsc_knowledge",
+    "explain_lsc_concept",
+    "get_lsc_help_doc",
+    "get_lsc_guide",
+    "get_lsc_troubleshooting",
+    "get_lsc_exercise",
   ];
 
   for (const skillDir of skillDirs) {
@@ -94,14 +94,14 @@ describe("skill citation coverage", () => {
  * This closes the loop: skill → tool call → response with citation.
  */
 describe("MCP tools called by skills produce citations", () => {
-  it("get_afls_module_docs for visit-management returns a citation", () => {
-    // Simulates what happens when Claude calls get_afls_module_docs({ module: "visit-management" })
+  it("get_lsc_module_docs for visit-management returns a citation", () => {
+    // Simulates what happens when Claude calls get_lsc_module_docs({ module: "visit-management" })
     const citation = formatCitation("visit-management", "visit-management");
     expect(citation).toContain("> **Source:**");
     expect(citation).toContain("PM Enablement");
   });
 
-  it("every module referenced by get_afls_module_docs produces a citation", () => {
+  it("every module referenced by get_lsc_module_docs produces a citation", () => {
     const modules = getModuleList();
     for (const mod of modules) {
       const citation = formatCitation(mod.slug, mod.slug);

@@ -14,13 +14,13 @@ export const guideConfigs: GuideConfig[] = [
   {
     slug: "admin-guide",
     pdfFileName: "administer_life_sciences_cloud_3-3-2026.pdf",
-    title: "Administer AFLS",
+    title: "Administer LSC",
     headerGap: 8,
   },
   {
     slug: "dev-guide",
     pdfFileName: "life_sciences_dev_guide.pdf",
-    title: "AFLS Developer Guide",
+    title: "LSC Developer Guide",
     headerGap: 8,
   },
 ];

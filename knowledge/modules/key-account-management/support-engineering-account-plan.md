@@ -1,12 +1,12 @@
 # KAM Account Plan — Support Engineering Training
 
-**Session:** AFLS4CE Value Chain Training — Jun 2026
+**Session:** LSC4CE Value Chain Training — Jun 2026
 **Audience:** Support engineers
 **Source:** Engineering training series (KAM Account Plan deck)
 
 ## Overview
 
-Key Account Management (KAM) Account Plan is the AFLS capability for planning multi-stakeholder, multi-objective, time-boxed engagement strategies on a key account. The hierarchy is deep: **Account Plan → Objective → Product / Stakeholder / Participant → Stakeholder Action / Stakeholder Product**, with sprints, roll-ups, action plan templates, and import flows on top. Configuration spans KAM Settings, Sprint Settings, OOTB layouts, trigger handlers, and Action Plan Template Assignment.
+Key Account Management (KAM) Account Plan is the Life Sciences Cloud (LSC) capability for planning multi-stakeholder, multi-objective, time-boxed engagement strategies on a key account. The hierarchy is deep: **Account Plan → Objective → Product / Stakeholder / Participant → Stakeholder Action / Stakeholder Product**, with sprints, roll-ups, action plan templates, and import flows on top. Configuration spans KAM Settings, Sprint Settings, OOTB layouts, trigger handlers, and Action Plan Template Assignment.
 
 > **The cardinal rule:** Account Plan status values, Objective status values, and Action Plan status values are all configured under **KAM Settings**. If a customer reports "I can't move my objective to Closed," start there.
 

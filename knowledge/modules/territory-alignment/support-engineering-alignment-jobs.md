@@ -1,13 +1,13 @@
 # Account-Territory Alignment Jobs — Support Engineering Training
 
-**Session:** AFLS4CE Value Chain Training — Apr 17, 2026
+**Session:** LSC4CE Value Chain Training — Apr 17, 2026
 **Audience:** Support engineers
 **Source:** Engineering training series (deck + Gemini transcript)
 **Presenter:** Shaker (Hyderabad team)
 
 ## Overview
 
-AFLS uses **Salesforce Enterprise Territory Management** for sharing HCP/HCO records to field reps. Account-to-Territory alignment is achieved through **three direct UI jobs + one internal dependent job**. They keep two objects in sync — `ObjectTerritory2Association` (drives sharing) and `ProviderAcctTerritoryInfo` (captures engagement data) — using **direct mappings, geographic codes, or affiliations** as the source of truth.
+Life Sciences Cloud (LSC) uses **Salesforce Enterprise Territory Management** for sharing HCP/HCO records to field reps. Account-to-Territory alignment is achieved through **three direct UI jobs + one internal dependent job**. They keep two objects in sync — `ObjectTerritory2Association` (drives sharing) and `ProviderAcctTerritoryInfo` (captures engagement data) — using **direct mappings, geographic codes, or affiliations** as the source of truth.
 
 **The four jobs:**
 
@@ -25,7 +25,7 @@ AFLS uses **Salesforce Enterprise Territory Management** for sharing HCP/HCO rec
 | Object | Role |
 |---|---|
 | **`ObjectTerritory2Association` (OT2A)** | Salesforce standard. Creation **automatically drives sharing** of the Account to the territory's user group. Drives access. |
-| **`ProviderAcctTerritoryInfo` (PATI)** | AFLS-specific extension. Captures **engagement data**: next provider visit date, preferred address, planned activities. |
+| **`ProviderAcctTerritoryInfo` (PATI)** | LSC-specific extension. Captures **engagement data**: next provider visit date, preferred address, planned activities. |
 
 > **Why both?** OT2A handles access (sharing). PATI handles business state for that Account-in-this-Territory context. Both need to exist with consistent state — that's what these jobs guarantee. The mobile app downloads PATI as its source of truth for the account list; if PATI is missing, accounts won't appear on iPad even when OT2A is correct.
 

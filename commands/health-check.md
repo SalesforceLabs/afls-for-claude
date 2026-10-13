@@ -1,10 +1,10 @@
 ---
-description: Run a comprehensive AFLS org health check
+description: Run a comprehensive Life Sciences Cloud (LSC) org health check
 ---
 
 # Health Check
 
-Run a comprehensive health check on the connected AFLS org.
+Run a comprehensive health check on the connected LSC org.
 
 ## Steps
 

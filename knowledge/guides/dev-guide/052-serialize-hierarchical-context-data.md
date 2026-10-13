@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:serialize-hierarchical-context-data pages:1883-1884 -->
 # Serialize Hierarchical Context Data
 
-AFLS Overview                                                                        Serialize Hierarchical Context Data
+Life Sciences Cloud (LSC) Overview                                                                        Serialize Hierarchical Context Data
 
 
 
@@ -51,7 +51,7 @@ the details of the hierarchical data to serialize context data
 
 <!-- page:1884 -->
 
-AFLS Overview                                                               Serialize Hierarchical Context Data
+LSC Overview                                                               Serialize Hierarchical Context Data
 
 
 

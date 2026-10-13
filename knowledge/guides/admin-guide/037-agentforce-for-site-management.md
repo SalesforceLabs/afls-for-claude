@@ -25,8 +25,8 @@ pages.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS with AFLS
-licenses and Agentforce for AFLS, Agentforce for Employee Agent, Einstein GPT Platform,
+Available in: Enterprise and Unlimited Editions with Life Sciences Cloud (LSC) with LSC
+licenses and Agentforce for LSC, Agentforce for Employee Agent, Einstein GPT Platform,
 Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on licenses.
 
 
@@ -68,8 +68,8 @@ suitable sites for running clinical trials. The topic includes eight agent actio
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS with AFLS
-licenses and Agentforce for AFLS, Agentforce for Employee Agent, Einstein GPT Platform,
+Available in: Enterprise and Unlimited Editions with LSC with LSC
+licenses and Agentforce for LSC, Agentforce for Employee Agent, Einstein GPT Platform,
 Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on licenses.
 
 Note The user interface of this product is available in English only and may not be fully supported in
@@ -116,8 +116,8 @@ Site Management bundles certain standard agent actions with the Site Selection A
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS with AFLS
-licenses and Agentforce for AFLS, Agentforce for Employee Agent, Einstein GPT Platform,
+Available in: Enterprise and Unlimited Editions with LSC with LSC
+licenses and Agentforce for LSC, Agentforce for Employee Agent, Einstein GPT Platform,
 Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on licenses.
 
 Note The user interface of this product is available in English only and may not be fully supported in
@@ -321,8 +321,8 @@ You can customize these flows to streamline your site selection process.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS with AFLS
-licenses and Agentforce for AFLS, Agentforce for Employee Agent, Einstein GPT Platform,
+Available in: Enterprise and Unlimited Editions with LSC with LSC
+licenses and Agentforce for LSC, Agentforce for Employee Agent, Einstein GPT Platform,
 Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on licenses.
 
 
@@ -391,8 +391,8 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS with AFLS
-licenses and Agentforce for AFLS, Agentforce for Employee Agent, Einstein GPT Platform,
+Available in: Enterprise and Unlimited Editions with LSC with LSC
+licenses and Agentforce for LSC, Agentforce for Employee Agent, Einstein GPT Platform,
 Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on licenses.
 
 
@@ -462,7 +462,7 @@ permission sets to your users.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS
+Available in: Enterprise and Unlimited Editions with LSC
 
 
 USER PERMISSIONS NEEDED
@@ -493,8 +493,8 @@ management.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS with AFLS
-licenses and Agentforce for AFLS, Agentforce for Employee Agent, Einstein GPT Platform,
+Available in: Enterprise and Unlimited Editions with LSC with LSC
+licenses and Agentforce for LSC, Agentforce for Employee Agent, Einstein GPT Platform,
 Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on licenses.
 
 
@@ -552,9 +552,9 @@ The site investigators receive the links to the feasibility assessments on the E
 
 
 
-In addition to the solution-oriented features you get with AFLS, you can also design and
+In addition to the solution-oriented features you get with LSC, you can also design and
 implement your own solutions to meet the business needs of your organization. Here’s a set of Salesforce
-features you can use to extend your AFLS implementation.
+features you can use to extend your LSC implementation.
 
 
 ## Advanced Patient Card
@@ -562,7 +562,7 @@ features you can use to extend your AFLS implementation.
 The Advanced Patient Card uses FlexCards from OmniStudio to deliver greater flexibility and ease of
 use. To show the card on patient accounts, add the HealthCloudPtCardPatientCard FlexCard
 component to your Account Layout page.
-Assessments and Surveys in AFLS
+Assessments and Surveys in LSC
 Improve quality of care by gathering information that helps you manage your patients’ or members’
 health more efficiently. Whether it’s an industry standard screener or a member feedback survey, you
 have the information you need.
@@ -579,24 +579,24 @@ care and services faster by managing patient and member forms all in one place, 
 processing. Patients can upload their own documents on an Experience Cloud site. You can route
 forms automatically to the right queue for faster review and processing in a digital, HIPAA-compliant
 workspace.
-Intelligent Document Reader for AFLS
+Intelligent Document Reader for LSC
 Use optical character recognition to automatically extract data with Amazon Textract using your AWS
 account. Specify the document type that can be associated with the document, upload the document,
 and map its fields to a Salesforce object’s fields. The extracted information can be used to create or
 update record fields, or to verify data that's already in the org.
-Life Events and Milestones in AFLS
+Life Events and Milestones in LSC
 With the Events and Milestones component, capture and track significant events in a patient’s life that
 may impact their healthcare.
-Product Catalog Management in AFLS
+Product Catalog Management in LSC
 
 <!-- page:1247 -->
 
 
 
-The Product Catalog Management app is available for AFLS users to create and manage
+The Product Catalog Management app is available for LSC users to create and manage
 products. For example, users in MedTech organizations can use the app to create and manage
 products such as pacemakers, X-ray machines, syringes, and other medical devices. Users in Pharma
 organizations can use the app to create and classify drugs and drug samples.
-View Events Using Enhanced Timeline in AFLS
+View Events Using Enhanced Timeline in LSC
 The Enhanced Timeline component shows key events relating to a person or a resource in one place,
 so your users can see information from a single source of truth.

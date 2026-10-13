@@ -45,8 +45,8 @@ export default function SetupScreen({ onConnect, error }: SetupScreenProps) {
     <div className="setup-screen no-drag">
       <div className="setup-container">
         <div className="setup-header">
-          <h1>AFLS Assistant</h1>
-          <p>AI-powered assistant for AFLS implementations</p>
+          <h1>LSC Assistant</h1>
+          <p>AI-powered assistant for LSC implementations</p>
         </div>
 
         <div className="settings-panel">

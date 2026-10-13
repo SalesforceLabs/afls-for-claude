@@ -1,5 +1,5 @@
 /**
- * Presentation → AFLS Intelligent Content Converter
+ * Presentation → LSC Intelligent Content Converter
  *
  * Supports multiple input formats:
  *   PPTX → PDF (LibreOffice) → per-page PDF (pdf-lib) → PNG (sips)
@@ -139,7 +139,7 @@ export function detectFormat(filePaths: string[]): FormatDetectionResult {
 // ============================================================================
 
 /**
- * Validate that a ZIP file contains the structure expected by AFLS Intelligent Content:
+ * Validate that a ZIP file contains the structure expected by LSC Intelligent Content:
  * at least one .html file and a thumbnail.jpg.
  */
 export async function validateHtmlZip(
@@ -232,7 +232,7 @@ async function preparePptx(
   conversionEngine: ConversionEngine = "libreoffice"
 ): Promise<PreparationResult> {
   const os = await import("os");
-  const outputDir = path.join(os.tmpdir(), `afls-pptx-${Date.now()}`);
+  const outputDir = path.join(os.tmpdir(), `lsc-pptx-${Date.now()}`);
 
   const result = await convertPptxToSlides(pptxPath, outputDir, conversionEngine);
 
@@ -271,7 +271,7 @@ export async function checkGhostscriptInstalled(): Promise<boolean> {
 
 /**
  * Rasterize a PDF so every page becomes a high-resolution image.
- * AFLS iPad content player requires image-based PDFs; text/vector PDFs
+ * LSC iPad content player requires image-based PDFs; text/vector PDFs
  * (e.g. from Google Docs) won't render correctly on the device.
  *
  * Uses Ghostscript: gs -dNOPAUSE -dBATCH -sDEVICE=pdfimage24 -r300
@@ -325,7 +325,7 @@ async function preparePdf(pdfPath: string): Promise<PreparationResult> {
   }
 
   // Rasterize the PDF for iPad compatibility
-  const outputDir = path.join(os.tmpdir(), `afls-pdf-${Date.now()}`);
+  const outputDir = path.join(os.tmpdir(), `lsc-pdf-${Date.now()}`);
   fs.mkdirSync(outputDir, { recursive: true });
   const rasterizedPath = path.join(outputDir, path.basename(pdfPath));
 
@@ -443,7 +443,7 @@ async function getSofficePath(): Promise<string> {
 }
 
 /**
- * Convert a PPTX file into per-slide ZIP packages for AFLS Intelligent Content.
+ * Convert a PPTX file into per-slide ZIP packages for LSC Intelligent Content.
  *
  * @param pptxPath - Absolute path to the .pptx file
  * @param outputDir - Directory to write output (created if missing)
@@ -1017,7 +1017,7 @@ function createSlideZipFromDir(
 
     archive.pipe(output);
 
-    // Rename index.html → 01_slide.html for AFLS compatibility,
+    // Rename index.html → 01_slide.html for LSC compatibility,
     // add all other assets at the root of the ZIP
     const files = fs.readdirSync(slideDir);
     for (const file of files) {

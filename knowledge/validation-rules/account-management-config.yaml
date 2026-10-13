@@ -1,4 +1,4 @@
-# AFLS Account Management Configuration Validation Rules
+# LSC Account Management Configuration Validation Rules
 # =====================================================
 # Rules to validate Account Management configuration including
 # accounts, healthcare providers, addresses, business licenses,
@@ -17,7 +17,7 @@
 schema_version: "1.0"
 category_name: "Account Management Configuration"
 description: |
-  Validation rules for AFLS Account Management configuration.
+  Validation rules for LSC Account Management configuration.
   Covers accounts, healthcare providers, addresses, business licenses,
   affiliations, territory info, DCR managed fields, and mobile cache.
 
@@ -30,8 +30,8 @@ rules:
     name: Account records exist
     description: |
       Verifies that Account records exist in the org. Accounts are the
-      foundational object in AFLS — nearly every other module depends on
-      accounts being configured. Most AFLS implementations use PersonAccount
+      foundational object in LSC — nearly every other module depends on
+      accounts being configured. Most LSC implementations use PersonAccount
       for HCPs (Healthcare Professionals) and standard accounts for HCOs
       (Healthcare Organizations).
     category: configuration

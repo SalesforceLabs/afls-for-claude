@@ -6,7 +6,7 @@ import { validateOrgConnection } from "../salesforce/auth.js";
 export function register(server: McpServer) {
   server.tool(
     "check_visit_config",
-    "Check AFLS Visit Management configuration. Queries visit record types, ProviderVisit record types, trigger handlers, compliance statements, territory info, and Admin Console settings. CORRECT object names: Visit, ProviderVisit, ProviderVisitProdDetailing, ProviderVisitProdDiscussion, ProviderAcctTerritoryInfo, ComplianceStatementDef. WRONG names (DO NOT USE): Visit__c, ProviderVisit__c, VisitSetting__c, VisitConfiguration__mdt, VisitRecordType__c, VisitType__c.",
+    "Check LSC Visit Management configuration. Queries visit record types, ProviderVisit record types, trigger handlers, compliance statements, territory info, and Admin Console settings. CORRECT object names: Visit, ProviderVisit, ProviderVisitProdDetailing, ProviderVisitProdDiscussion, ProviderAcctTerritoryInfo, ComplianceStatementDef. WRONG names (DO NOT USE): Visit__c, ProviderVisit__c, VisitSetting__c, VisitConfiguration__mdt, VisitRecordType__c, VisitType__c.",
     {
       targetOrg: z
         .string()
@@ -277,7 +277,7 @@ export function register(server: McpServer) {
   );
   server.tool(
     "check_sample_config",
-    "Check AFLS Sample Management configuration. Queries products, locations, inventory, production batches, sample limits, and related configuration. CORRECT object names: Product2, LifeSciMarketableProduct, Location, ProductionBatch, ProductItem, ProductBatchItem, InventoryOperation, ProductRequest, InventoryCountAssessment, ProductDisbursement, ProviderSampleLimit. WRONG names (DO NOT USE): SampleTransaction__c, SampleInventory__c, SampleLimit__c, SampleProduct__c, SampleLot__c.",
+    "Check LSC Sample Management configuration. Queries products, locations, inventory, production batches, sample limits, and related configuration. CORRECT object names: Product2, LifeSciMarketableProduct, Location, ProductionBatch, ProductItem, ProductBatchItem, InventoryOperation, ProductRequest, InventoryCountAssessment, ProductDisbursement, ProviderSampleLimit. WRONG names (DO NOT USE): SampleTransaction__c, SampleInventory__c, SampleLimit__c, SampleProduct__c, SampleLot__c.",
     {
       targetOrg: z
         .string()
@@ -621,7 +621,7 @@ export function register(server: McpServer) {
   );
   server.tool(
     "check_account_config",
-    "Check AFLS Account Management configuration. Queries accounts, healthcare providers, addresses, business licenses, affiliations, territory info, DCR managed fields, and mobile cache. CORRECT object names: Account, HealthcareProvider, ContactPointAddress, BusinessLicense, ProviderAffiliation, ProviderAcctTerritoryInfo, LifeSciDataChgDefMngFld. WRONG names (DO NOT USE): HealthcareProvider__c, ContactPointAddress__c, BusinessLicense__c, ProviderAffiliation__c, AccountAddress__c.",
+    "Check LSC Account Management configuration. Queries accounts, healthcare providers, addresses, business licenses, affiliations, territory info, DCR managed fields, and mobile cache. CORRECT object names: Account, HealthcareProvider, ContactPointAddress, BusinessLicense, ProviderAffiliation, ProviderAcctTerritoryInfo, LifeSciDataChgDefMngFld. WRONG names (DO NOT USE): HealthcareProvider__c, ContactPointAddress__c, BusinessLicense__c, ProviderAffiliation__c, AccountAddress__c.",
     {
       targetOrg: z
         .string()
@@ -682,7 +682,7 @@ export function register(server: McpServer) {
 
             if (personAccounts.length === 0) {
               issues.push(
-                "No PersonAccount records found — most AFLS implementations require PersonAccount for HCPs"
+                "No PersonAccount records found — most LSC implementations require PersonAccount for HCPs"
               );
               recommendations.push(
                 "Enable PersonAccount in Setup > Company Information and create PersonAccount records for HCPs"
@@ -998,7 +998,7 @@ export function register(server: McpServer) {
   );
   server.tool(
     "check_activity_plan_config",
-    "Check AFLS Activity Plan configuration. Queries time periods, activity plans, territory assignments, provider activity goals, goal measures, product goals, territory info, and mobile cache. CORRECT object names: ActivityPlan, ActivityPlanTerritory, TimePeriod, ProviderActivityGoal, ProviderActivityGoalMeasure, PrvdActvtyGoalMeasureProdt, ProviderAcctTerritoryInfo. WRONG names (DO NOT USE): ActivityPlan__c, ProviderActivityGoal__c, AccountGoal__c, TimePeriod__c, GoalMeasure__c.",
+    "Check LSC Activity Plan configuration. Queries time periods, activity plans, territory assignments, provider activity goals, goal measures, product goals, territory info, and mobile cache. CORRECT object names: ActivityPlan, ActivityPlanTerritory, TimePeriod, ProviderActivityGoal, ProviderActivityGoalMeasure, PrvdActvtyGoalMeasureProdt, ProviderAcctTerritoryInfo. WRONG names (DO NOT USE): ActivityPlan__c, ProviderActivityGoal__c, AccountGoal__c, TimePeriod__c, GoalMeasure__c.",
     {
       targetOrg: z
         .string()
@@ -1329,7 +1329,7 @@ export function register(server: McpServer) {
   );
   server.tool(
     "check_territory_config",
-    "Check AFLS Territory Alignment configuration. Queries Territory2 model, ObjectTerritory2Association (explicit assignments), TerritoryGeoAssignmentRule (zip/brick rules), TerritoryProviderAffiliationAlignmentRule (affiliation rules), and ProviderAcctTerritoryInfo records. CORRECT object names: Territory2, ObjectTerritory2Association, TerritoryGeoAssignmentRule, TerritoryProviderAffiliationAlignmentRule, ProviderAcctTerritoryInfo. WRONG names (DO NOT USE): AccountTerritory__c, TerritoryAssignment__c, TerritoryInfo__c, AffiliationAlignmentRule__c.",
+    "Check LSC Territory Alignment configuration. Queries Territory2 model, ObjectTerritory2Association (explicit assignments), TerritoryGeoAssignmentRule (zip/brick rules), TerritoryProviderAffiliationAlignmentRule (affiliation rules), and ProviderAcctTerritoryInfo records. CORRECT object names: Territory2, ObjectTerritory2Association, TerritoryGeoAssignmentRule, TerritoryProviderAffiliationAlignmentRule, ProviderAcctTerritoryInfo. WRONG names (DO NOT USE): AccountTerritory__c, TerritoryAssignment__c, TerritoryInfo__c, AffiliationAlignmentRule__c.",
     {
       targetOrg: z
         .string()
@@ -1616,7 +1616,7 @@ export function register(server: McpServer) {
   );
   server.tool(
     "check_user_config",
-    "Check AFLS User Management configuration. Queries PackageLicense capacity, PermissionSetLicense (PSL) capacity, permission set assignments, user profiles, role hierarchy, and user-territory associations. CORRECT object names: User, Profile, UserRole, PermissionSet, PermissionSetAssignment, PermissionSetLicense, PermissionSetLicenseAssign, UserTerritory2Association, PackageLicense. WRONG names (DO NOT USE): User__c, UserProfile__c, PermissionSetAssignment__c, PSLAssignment__c, UserTerritory__c.",
+    "Check LSC User Management configuration. Queries PackageLicense capacity, PermissionSetLicense (PSL) capacity, permission set assignments, user profiles, role hierarchy, and user-territory associations. CORRECT object names: User, Profile, UserRole, PermissionSet, PermissionSetAssignment, PermissionSetLicense, PermissionSetLicenseAssign, UserTerritory2Association, PackageLicense. WRONG names (DO NOT USE): User__c, UserProfile__c, PermissionSetAssignment__c, PSLAssignment__c, UserTerritory__c.",
     {
       targetOrg: z
         .string()
@@ -1652,8 +1652,8 @@ export function register(server: McpServer) {
         if (pkgResult.success && pkgResult.data?.records) {
           const records = pkgResult.data.records;
           if (records.length === 0) {
-            message += "**No AFLS-related package licenses found.**\n\n";
-            issues.push("No AFLS package licenses detected — AFLS packages may not be installed");
+            message += "**No LSC-related package licenses found.**\n\n";
+            issues.push("No LSC package licenses detected — LSC packages may not be installed");
           } else {
             message += `| Namespace | Allowed | Used | Available | Status |\n|-----------|---------|------|-----------|--------|\n`;
             for (const record of records) {
@@ -1686,9 +1686,9 @@ export function register(server: McpServer) {
         if (pslResult.success && pslResult.data?.records) {
           const records = pslResult.data.records;
           if (records.length === 0) {
-            message += "**No AFLS-related PSLs found.**\n\n";
+            message += "**No LSC-related PSLs found.**\n\n";
             issues.push(
-              "No AFLS Permission Set Licenses found — AFLS packages may not be installed or licensed"
+              "No LSC Permission Set Licenses found — LSC packages may not be installed or licensed"
             );
           } else {
             message += `| PSL | Total | Used | Available |\n|-----|-------|------|-----------|\n`;
@@ -1714,15 +1714,15 @@ export function register(server: McpServer) {
           message += `Error querying PSLs: ${pslResult.error}\n\n`;
         }
 
-        // 3. Check AFLS Permission Sets
-        message += "## AFLS Permission Sets\n\n";
+        // 3. Check LSC Permission Sets
+        message += "## LSC Permission Sets\n\n";
         const psQuery = `SELECT Id, Name, Label, NamespacePrefix FROM PermissionSet WHERE (NamespacePrefix IN ('lsc4ce', 'HealthCloudGA') OR Label LIKE '%Life Science%' OR Label LIKE '%Sample%' OR Label LIKE '%CLM%') AND IsOwnedByProfile = false ORDER BY Label`;
         const psResult = await runSoqlQuery(psQuery, effectiveOrg);
 
         if (psResult.success && psResult.data?.records) {
           const records = psResult.data.records;
           if (records.length === 0) {
-            message += "**No AFLS permission sets found.**\n\n";
+            message += "**No LSC permission sets found.**\n\n";
           } else {
             // Get assignment counts
             const psIds = records.map((r) => `'${(r as Record<string, unknown>).Id}'`).join(",");
@@ -1830,15 +1830,15 @@ export function register(server: McpServer) {
           message += "Enterprise Territory Management may not be enabled.\n\n";
         }
 
-        // 7. Check for AFLS users without territory assignments
+        // 7. Check for LSC users without territory assignments
         message += "## Users Without Territory Assignments\n\n";
-        const noTerritoryQuery = `SELECT Id, Name, Username, Profile.Name FROM User WHERE IsActive = true AND Id NOT IN (SELECT UserId FROM UserTerritory2Association) AND (Profile.Name LIKE '%Life Science%' OR Profile.Name LIKE '%AFLS%') ORDER BY Name LIMIT 50`;
+        const noTerritoryQuery = `SELECT Id, Name, Username, Profile.Name FROM User WHERE IsActive = true AND Id NOT IN (SELECT UserId FROM UserTerritory2Association) AND (Profile.Name LIKE '%Life Science%' OR Profile.Name LIKE '%LSC%') ORDER BY Name LIMIT 50`;
         const noTerritoryResult = await runSoqlQuery(noTerritoryQuery, effectiveOrg);
 
         if (noTerritoryResult.success && noTerritoryResult.data?.records) {
           const records = noTerritoryResult.data.records;
           if (records.length === 0) {
-            message += "All AFLS-profiled users have territory assignments.\n\n";
+            message += "All LSC-profiled users have territory assignments.\n\n";
           } else {
             message += `| Name | Username | Profile |\n|------|----------|---------|\n`;
             for (const record of records) {
@@ -1846,9 +1846,9 @@ export function register(server: McpServer) {
               const profile = rec.Profile as Record<string, unknown> | null;
               message += `| ${rec.Name} | ${rec.Username} | ${profile?.Name || "-"} |\n`;
             }
-            message += `\n**${records.length} AFLS user(s) without territory assignments.**\n\n`;
+            message += `\n**${records.length} LSC user(s) without territory assignments.**\n\n`;
             issues.push(
-              `${records.length} active AFLS user(s) have no territory assignment — they cannot see account data`
+              `${records.length} active LSC user(s) have no territory assignment — they cannot see account data`
             );
             recommendations.push("Assign these users to territories in Setup > Territory Models");
           }
@@ -1881,7 +1881,7 @@ export function register(server: McpServer) {
         }
 
         message += "### User Provisioning Reminder\n\n";
-        message += "When adding new AFLS users, follow this order:\n";
+        message += "When adding new LSC users, follow this order:\n";
         message += "1. **Create User** — Set profile, role, and active status\n";
         message +=
           "2. **Assign PSLs** — Required before permission sets (Setup > Users > [User] > PSL Assignments)\n";

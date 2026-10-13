@@ -1,13 +1,13 @@
 # Validations using Custom Scripts — Support Engineering Training
 
-**Session:** AFLS4CE Value Chain Training — Mar 24, 2026
+**Session:** LSC4CE Value Chain Training — Mar 24, 2026
 **Audience:** Support engineers
 **Source:** Engineering training series (deck + transcript)
 **Presenter:** Srikant Chonnad
 
 ## Overview
 
-Agentforce for Life Sciences (AFLs / AFLS4CE) supports **three types of custom scripts** that let admins inject JavaScript validation logic into workflow transitions and visit actions. Custom Scripts run on the mobile device (and in web), are deployed as a headless LWC, and are executed by the mobile script engine using a fixed set of context variables.
+Agentforce for Life Sciences (LSC / LSC4CE) supports **three types of custom scripts** that let admins inject JavaScript validation logic into workflow transitions and visit actions. Custom Scripts run on the mobile device (and in web), are deployed as a headless LWC, and are executed by the mobile script engine using a fixed set of context variables.
 
 ### The Three Script Types
 
@@ -17,7 +17,7 @@ Agentforce for Life Sciences (AFLs / AFLS4CE) supports **three types of custom s
 | **Workflow-Dependent Checklist** | When user clicks the info (ⓘ) icon next to an action | **Does not block.** Shows pass/fail results in an informational modal. User can still proceed and see the actual error. |
 | **Visit Action Validation** | On Visit Sign / Submit action | Validates visit data (and related entities like Provider Visit) at the moment of sign/submit. |
 
-> A fourth type — Custom Permission–based — existed in OCE but is **not currently supported in AFLS4CE**, because OCE custom permissions were migrated to boolean fields on settings, and this particular permission did not migrate.
+> A fourth type — Custom Permission–based — existed in OCE but is **not currently supported in LSC4CE**, because OCE custom permissions were migrated to boolean fields on settings, and this particular permission did not migrate.
 
 ## Prerequisites — Wiring a Script to a Workflow
 
@@ -227,7 +227,7 @@ Zip the LWC bundle + `package.xml`, then go to **Workbench → Migration → Dep
 2. Create a new record:
    - **Script Name** — any friendly name
    - **LWC Component Name** — exact name of the LWC component
-   - **Type** — one of: Validation / Checklist / Visit Action Validation (Custom Permission type exists but is unsupported in AFLS4CE)
+   - **Type** — one of: Validation / Checklist / Visit Action Validation (Custom Permission type exists but is unsupported in LSC4CE)
 3. Save — this creates a record in the **Life Science Custom Script** object, populating a `Code` (text) field with the JS body extracted from the LWC.
 
 ### Step 4: Link the Script to the Workflow
@@ -292,7 +292,7 @@ If the script body shown here doesn't match what's in your LWC source, **Refresh
 
 ## Reference
 
-- **Related skill:** `afls-custom-scripts` (in `skills/`) — implementation patterns and snippet library
+- **Related skill:** `lsc-custom-scripts` (in `skills/`) — implementation patterns and snippet library
 - **DB query patterns:** see slide 9 of the deck for fuller examples including ConditionBuilder, no-namespace variants, and `rowsByEntity`
 - **Workflow path / Life Science Stage** — required prerequisite; covered in workflow management module
 - **Mobile sync flow** — refresh + metadata regen + device sync (see `mobile-metadata-cache/` module)

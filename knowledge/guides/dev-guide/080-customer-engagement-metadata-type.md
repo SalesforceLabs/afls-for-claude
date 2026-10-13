@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:customer-engagement-metadata-type pages:1972-1977 -->
 # Customer Engagement Metadata Type
 
-AFLS Overview                                                                         Customer Engagement Metadata Type
+Life Sciences Cloud (LSC) Overview                                                                         Customer Engagement Metadata Type
 
 
 
@@ -44,7 +44,7 @@ manifest file, see Deploying and Retrieving Metadata with the Zip File.
 
 ## Customer Engagement Metadata Type
 
-Metadata API enables you to access some types and feature settings for Customer Engagement for AFLS that you can
+Metadata API enables you to access some types and feature settings for Customer Engagement for LSC that you can
 customize in the user interface.
 
 
@@ -70,7 +70,7 @@ This type extends the Metadata metadata type and inherits its fullName field.
 
 <!-- page:1973 -->
 
-AFLS Overview                                                                               Customer Engagement Metadata Type
+LSC Overview                                                                               Customer Engagement Metadata Type
 
 
 
@@ -129,7 +129,7 @@ Indicates whether the actionable list definition is active (true) or not (false)
 
 <!-- page:1974 -->
 
-AFLS Overview                                                              Customer Engagement Metadata Type
+LSC Overview                                                              Customer Engagement Metadata Type
 
 
 
@@ -178,7 +178,7 @@ Possible values are:
 
 <!-- page:1975 -->
 
-AFLS Overview                                                                                Customer Engagement Metadata Type
+LSC Overview                                                                                Customer Engagement Metadata Type
 
 
 
@@ -230,7 +230,7 @@ Possible values are:
 
 <!-- page:1976 -->
 
-AFLS Overview                                                                   Customer Engagement Metadata Type
+LSC Overview                                                                   Customer Engagement Metadata Type
 
 
 
@@ -281,7 +281,7 @@ Possible values are:
 
 <!-- page:1977 -->
 
-AFLS Overview                                                                              Customer Engagement Metadata Type
+LSC Overview                                                                              Customer Engagement Metadata Type
 
 
 

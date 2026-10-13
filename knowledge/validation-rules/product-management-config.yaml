@@ -1,4 +1,4 @@
-# AFLS Product Management Configuration Validation Rules
+# LSC Product Management Configuration Validation Rules
 # ===================================================
 # Rules to validate Product Management configuration including
 # Product2 records, LifeSciMarketableProduct hierarchy, ProductGuidance,
@@ -16,7 +16,7 @@
 schema_version: "1.0"
 category_name: "Product Management Configuration"
 description: |
-  Validation rules for AFLS Product Management configuration.
+  Validation rules for LSC Product Management configuration.
   Covers Product2 records, LifeSciMarketableProduct hierarchy, ProductGuidance,
   product territory alignment, product restrictions, and mobile cache requirements.
 
@@ -29,7 +29,7 @@ rules:
     name: Product2 records exist in the org
     description: |
       Verifies that at least one Product2 record exists. Product2 is the base
-      Salesforce product object that underlies all AFLS product management.
+      Salesforce product object that underlies all LSC product management.
       Without Product2 records, no products can be configured for detailing,
       sample management, or content delivery. Each LifeSciMarketableProduct
       must link to a Product2 record.
@@ -94,18 +94,18 @@ rules:
     tags: [product, configuration, product2, active]
 
   # ===========================================================================
-  # SECTION 2: LifeSciMarketableProduct (AFLS Product Wrapper)
+  # SECTION 2: LifeSciMarketableProduct (LSC Product Wrapper)
   # ===========================================================================
 
   - id: product-003
     name: LifeSciMarketableProduct records exist
     description: |
       Verifies that at least one LifeSciMarketableProduct record exists.
-      LifeSciMarketableProduct is the AFLS product wrapper that carries product
+      LifeSciMarketableProduct is the LSC product wrapper that carries product
       type, hierarchy, territory alignment, and metadata. It is the entity used
-      throughout AFLS for product management, detailing, sample management, and
+      throughout LSC for product management, detailing, sample management, and
       content delivery. Without LifeSciMarketableProduct records, no products
-      are available in AFLS modules.
+      are available in LSC modules.
     category: configuration
     severity: warning
     check:
@@ -132,7 +132,7 @@ rules:
     name: Active LifeSciMarketableProduct records exist
     description: |
       Checks whether active LifeSciMarketableProduct records exist. Inactive
-      LifeSciMarketableProduct records are not available in AFLS modules even if
+      LifeSciMarketableProduct records are not available in LSC modules even if
       the underlying Product2 record is active. Field reps will not see inactive
       products in their detailing lists, and these products will not appear in
       sample management or activity planning.

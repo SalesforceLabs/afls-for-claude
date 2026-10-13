@@ -1,9 +1,9 @@
 ---
-description: Interactive wizard to configure and validate AFLS Quick Actions and Custom Actions
+description: Interactive wizard to configure and validate Life Sciences Cloud (LSC) Quick Actions and Custom Actions
 arguments: "[action-type]"
 ---
 
-# Configure AFLS Quick Actions and Custom Actions
+# Configure LSC Quick Actions and Custom Actions
 
 Interactive wizard to check and configure Quick Actions and Custom Actions for web and mobile.
 
@@ -20,7 +20,7 @@ Follow these steps sequentially to validate and configure actions.
 First, check if connected to a Salesforce org:
 
 ```
-Use check_afls_setup to verify org connection
+Use check_lsc_setup to verify org connection
 ```
 
 If not connected, guide the user through authentication.
@@ -175,7 +175,7 @@ Based on findings, offer to fix issues directly using programmatic tools:
 **If too many active quick actions (>5):**
 - Explain mobile 5-action limit
 - Ask user: "You have more than 5 active quick actions. Want me to help deactivate some?"
-- If yes: Use `delete_afls_action` for actions the user selects to remove
+- If yes: Use `delete_lsc_action` for actions the user selects to remove
 
 **If no quick actions:**
 - Ask user: "No quick actions are configured. Want me to create standard actions (e.g., NewVisit, LogCall, Email)?"
@@ -204,13 +204,13 @@ Based on findings, offer to fix issues directly using programmatic tools:
 
 ## Example Usage
 
-User: `/afls:configure-quick-actions`
+User: `/lsc:configure-quick-actions`
 > Run full configuration check for both quick and custom actions
 
-User: `/afls:configure-quick-actions quick`
+User: `/lsc:configure-quick-actions quick`
 > Focus on quick actions only
 
-User: `/afls:configure-quick-actions custom`
+User: `/lsc:configure-quick-actions custom`
 > Focus on custom actions only
 
 ## Quick Validation Alternative
@@ -218,13 +218,13 @@ User: `/afls:configure-quick-actions custom`
 For a faster automated check, suggest using the audit command:
 
 ```
-/afls:audit quick-actions-check
+/lsc:audit quick-actions-check
 ```
 
 or
 
 ```
-/afls:audit custom-actions-check
+/lsc:audit custom-actions-check
 ```
 
 These run all relevant validation rules automatically.

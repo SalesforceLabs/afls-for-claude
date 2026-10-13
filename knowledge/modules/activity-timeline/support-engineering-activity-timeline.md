@@ -1,6 +1,6 @@
 # Activity Timeline & Calendar View — Support Engineering Training
 
-**Session:** AFLS4CE Value Chain Training — Jun 9, 2026
+**Session:** LSC4CE Value Chain Training — Jun 9, 2026
 **Audience:** Support engineers
 **Source:** Engineering training series (deck + Gemini transcript)
 **Presenter:** Vishal Sadwal
@@ -21,7 +21,7 @@ Activity Timeline gives reps a unified timeline + calendar view of standard acti
 | Requirement | Detail |
 |---|---|
 | **Edition** | Developer or Enterprise |
-| **Personas** | LifeScience Commercial User, AFLS Core & KAM User, Sales / Medical Persona |
+| **Personas** | LifeScience Commercial User, Life Sciences Cloud (LSC) Core & KAM User, Sales / Medical Persona |
 | **Profile setup** | Admin Console must be **Default On** on the System Administrator profile (Profile → System Administrator → search "Admin Console" → Default On → save → verify via App Launcher) |
 | **Planner** | First day of the week set to Monday (for Calendar View) |
 | **Email Settings** | "Schedule emails to send later" enabled |
@@ -200,4 +200,4 @@ Visualizations of presentations shared during Visits need ALL of these:
 - **Source deck:** Activity Timeline & Calendar View Setup, Jun 2026 — slide ID `1QY1OzbYM5Aupx9q0qDVR-6fwDM14l53ZX8B7srFwTlQ`
 - **Source transcript:** Gemini, Jun 09, 2026 session — doc ID `17wJrW7JxhCYkI-ftyqiyiura5LYnT6o5`
 - **Companion file:** `activity-timeline-transcripts.md` in this module (PM-side baseline)
-- **Custom Activity Trigger Service:** documentation forthcoming — file in Drive (AFLS4CE Value Chain Training folder)
+- **Custom Activity Trigger Service:** documentation forthcoming — file in Drive (LSC4CE Value Chain Training folder)

@@ -12,7 +12,7 @@ Let's start on the iPad. I open my application and navigate to my content librar
 
 **Compliance controls:** If a presentation is not allowed to be sent, you'll notice that neither the mail icon nor the plus icon is available. There will also be an indicator showing this is not allowed to be sent. This ensures compliance and prevents unauthorized sharing.
 
-**Selecting recipients:** I click on email. Next, I select my account. I can select one single account or multiple accounts. If an account is restricted for any of the products linked to the selected presentations, it will appear as disabled — AFLS respects the compliance rules. I select Aaron Morita and click next.
+**Selecting recipients:** I click on email. Next, I select my account. I can select one single account or multiple accounts. If an account is restricted for any of the products linked to the selected presentations, it will appear as disabled — Life Sciences Cloud (LSC) respects the compliance rules. I select Aaron Morita and click next.
 
 **Email template selection:** From here the system follows the standard email flow. We can select only those email templates that have been configured with placeholders to embed the link inside. I select a template, click next.
 

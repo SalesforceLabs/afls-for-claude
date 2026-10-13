@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:industriesunifiedinventorysettings pages:1953-1954 -->
 # IndustriesUnifiedInventorySettings
 
-AFLS Overview                                                                                      IndustriesUnifiedInventorySettings
+Life Sciences Cloud (LSC) Overview                                                                                      IndustriesUnifiedInventorySettings
 
 
 
@@ -70,7 +70,7 @@ IndustriesUnifiedInventorySettings components are available in API version 64.0 
 
 <!-- page:1954 -->
 
-AFLS Overview                                                                                IndustriesUnifiedInventorySettings
+LSC Overview                                                                                IndustriesUnifiedInventorySettings
 
 
 
@@ -82,7 +82,7 @@ enableBatchManagement                     Field Type
 Boolean
 Description
 Indicates whether the batch-based inventory management features are enabled
-(true) or not (false). Within AFLS, this is a core component of the
+(true) or not (false). Within LSC, this is a core component of the
 Unified Inventory Extension Entities, supporting Sample Inventory use cases. When
 enabled, it provides access to the entities ProductionBatch, ProductBatchItem, and
 InventoryCntProdtBatchItem.

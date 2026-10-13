@@ -1,11 +1,11 @@
 ---
-description: Interactive wizard to configure and validate AFLS User Management
+description: Interactive wizard to configure and validate Life Sciences Cloud (LSC) User Management
 arguments: "[check-type]"
 ---
 
-# Configure AFLS User Management
+# Configure LSC User Management
 
-Interactive wizard to check and configure user provisioning, permission sets, licenses, roles, and territory access in AFLS.
+Interactive wizard to check and configure user provisioning, permission sets, licenses, roles, and territory access in LSC.
 
 ## Arguments
 
@@ -20,7 +20,7 @@ Follow these steps sequentially to validate and configure user management.
 First, check if connected to a Salesforce org:
 
 ```
-Use check_afls_setup to verify org connection
+Use check_lsc_setup to verify org connection
 ```
 
 If not connected, guide the user through authentication.
@@ -34,12 +34,12 @@ check_user_config()
 ```
 
 This queries:
-- PackageLicense (AFLS package license capacity)
+- PackageLicense (LSC package license capacity)
 - PermissionSetLicense (PSL capacity — total, used, available)
-- PermissionSet (AFLS-related permission sets)
+- PermissionSet (LSC-related permission sets)
 - PermissionSetLicenseAssign (PSL assignment counts)
 - User by Profile (active user counts per profile)
-- PermissionSetAssignment (which users have which AFLS permission sets)
+- PermissionSetAssignment (which users have which LSC permission sets)
 - UserRole (role hierarchy structure)
 - UserTerritory2Association (user-territory mappings)
 
@@ -47,7 +47,7 @@ Report the summary from the tool output.
 
 ### Step 3: Check Package Licenses
 
-Verify AFLS package license capacity:
+Verify LSC package license capacity:
 
 ```sql
 SELECT NamespacePrefix, AllowedLicenses, UsedLicenses, Status
@@ -63,7 +63,7 @@ Report:
 
 ### Step 4: Check Permission Set License Capacity
 
-Verify PSL capacity for each AFLS-related PSL:
+Verify PSL capacity for each LSC-related PSL:
 
 ```sql
 SELECT DeveloperName, MasterLabel, TotalLicenses, UsedLicenses
@@ -83,7 +83,7 @@ Report:
 
 ### Step 5: Check Permission Set Assignments
 
-List AFLS permission sets and their assignment counts:
+List LSC permission sets and their assignment counts:
 
 ```
 list_permission_sets()
@@ -108,7 +108,7 @@ ORDER BY COUNT(Id) DESC
 
 Report:
 - Profile names and user counts
-- **INFO**: Identify non-AFLS profiles (System Administrator, Standard User) that may need AFLS permission sets
+- **INFO**: Identify non-LSC profiles (System Administrator, Standard User) that may need LSC permission sets
 
 ### Step 7: Check Role Hierarchy
 
@@ -145,7 +145,7 @@ list_users({ filterBy: "no-territory" })
 Report:
 - Number of territory-user associations
 - Territories and their assigned users
-- **WARN if AFLS users lack territory assignments**: They won't see accounts
+- **WARN if LSC users lack territory assignments**: They won't see accounts
 
 ### Step 9: Present Configuration Report
 
@@ -179,7 +179,7 @@ Compile findings into a summary report:
 
 ### Territory-User Associations
 - Users with territories: [count]
-- Users without territories: [count] (AFLS profiles only)
+- Users without territories: [count] (LSC profiles only)
 - Status: [Configured / Incomplete]
 
 ### Issues Found
@@ -219,7 +219,7 @@ Based on findings, offer to fix issues directly:
 - Recommend structure matching territory hierarchy (National > Region > District > Territory)
 
 **If profile mismatch detected:**
-- Identify users on non-AFLS profiles who have AFLS permission sets
+- Identify users on non-LSC profiles who have LSC permission sets
 - Recommend profile change if appropriate
 
 **If all checks pass:**
@@ -229,22 +229,22 @@ Based on findings, offer to fix issues directly:
 
 ## Example Usage
 
-User: `/afls:configure-users`
+User: `/lsc:configure-users`
 > Run full user management configuration check
 
-User: `/afls:configure-users licenses`
+User: `/lsc:configure-users licenses`
 > Focus on package license and PSL capacity
 
-User: `/afls:configure-users permission-sets`
+User: `/lsc:configure-users permission-sets`
 > Focus on permission set assignments and coverage
 
-User: `/afls:configure-users roles`
+User: `/lsc:configure-users roles`
 > Focus on role hierarchy structure
 
-User: `/afls:configure-users territories`
+User: `/lsc:configure-users territories`
 > Focus on user-territory associations
 
-User: `/afls:configure-users assignments`
+User: `/lsc:configure-users assignments`
 > Focus on permission set and PSL assignments per user
 
 ## IMPORTANT OBJECT NAME REMINDERS

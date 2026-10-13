@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:mapping-fhir-v4-0-to-salesforce-standard-objects pages:1483-1587 -->
 # Mapping FHIR v4.0 to Salesforce Standard Objects
 
-AFLS Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
+Life Sciences Cloud (LSC) Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -56,7 +56,7 @@ TrackedCommunicationDetail objects in Salesforce.
 
 <!-- page:1484 -->
 
-AFLS Overview                                                       Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                       Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -104,7 +104,7 @@ The medicationStatement FHIR resource maps to the MedicationStatement object in 
 
 <!-- page:1485 -->
 
-AFLS Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -160,7 +160,7 @@ to the person by referencing the Account or Contact record of the person’s Per
 
 <!-- page:1486 -->
 
-AFLS Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 - If a coding or codeable concept in FHIR has a value set with conceptually simple values, then Salesforce uses a picklist. For example,
@@ -219,7 +219,7 @@ type             N/A                                N/A                    N/A  
 
 <!-- page:1487 -->
 
-AFLS Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -285,7 +285,7 @@ implementation of AdverseEventEntry
 
 <!-- page:1488 -->
 
-AFLS Overview                                                           Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                           Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -345,7 +345,7 @@ one-to-many.
 
 <!-- page:1489 -->
 
-AFLS Overview                                                          Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                          Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -403,7 +403,7 @@ Medical
 
 <!-- page:1490 -->
 
-AFLS Overview                                                          Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                          Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -458,7 +458,7 @@ Administration
 
 <!-- page:1491 -->
 
-AFLS Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -519,7 +519,7 @@ RecordId field.
 
 <!-- page:1492 -->
 
-AFLS Overview                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -586,7 +586,7 @@ Period                                                                   .onset.
 
 <!-- page:1493 -->
 
-AFLS Overview                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -656,7 +656,7 @@ implementation of PatientHealth
 
 <!-- page:1494 -->
 
-AFLS Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -718,7 +718,7 @@ String
 
 <!-- page:1495 -->
 
-AFLS Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -786,7 +786,7 @@ Here’s how the fields defined by FHIR for CarePlan map to the fields in Salesf
 
 <!-- page:1496 -->
 
-AFLS Overview                                                          Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                          Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -848,7 +848,7 @@ subject        CarePlan                     Lookup:              1.1         The
 
 <!-- page:1497 -->
 
-AFLS Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -910,7 +910,7 @@ Info       Type                                                    in detailType
 
 <!-- page:1498 -->
 
-AFLS Overview                                                               Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                               Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -970,7 +970,7 @@ Request,Clinical                     and RequestGroup.
 
 <!-- page:1499 -->
 
-AFLS Overview                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1035,7 +1035,7 @@ activity       CarePlanActivity          Picklist            0.1       While FHI
 
 <!-- page:1500 -->
 
-AFLS Overview                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1103,7 +1103,7 @@ Concept
 
 <!-- page:1501 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1165,7 +1165,7 @@ Bundle.CodeSet15Id
 
 <!-- page:1502 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1228,7 +1228,7 @@ TrackedCommunicationDetail objects in Salesforce.
 
 <!-- page:1503 -->
 
-AFLS Overview                                                               Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                               Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1294,7 +1294,7 @@ encounter N/A                                    N/A                   N/A      
 
 <!-- page:1504 -->
 
-AFLS Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1357,7 +1357,7 @@ Identifier.ParentRecordId field.
 
 <!-- page:1505 -->
 
-AFLS Overview                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1418,7 +1418,7 @@ onset     N/A                          N/A                    N/A       Not supp
 
 <!-- page:1506 -->
 
-AFLS Overview                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1487,7 +1487,7 @@ Provider
 
 <!-- page:1507 -->
 
-AFLS Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1551,7 +1551,7 @@ ContactPointPhone                 String                 0.1        N/A
 
 <!-- page:1508 -->
 
-AFLS Overview                                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1618,7 +1618,7 @@ Identifier
 
 <!-- page:1509 -->
 
-AFLS Overview                                               Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                               Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1683,7 +1683,7 @@ Date                                                              device.expirat
 
 <!-- page:1510 -->
 
-AFLS Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1747,7 +1747,7 @@ AuthorNote.ParentRecordId field.
 
 <!-- page:1511 -->
 
-AFLS Overview                                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1808,7 +1808,7 @@ Bundle
 
 <!-- page:1512 -->
 
-AFLS Overview                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1876,7 +1876,7 @@ implementation.
 
 <!-- page:1513 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1929,7 +1929,7 @@ Here's a diagram that shows an example of how this resource is represented in Sa
 
 <!-- page:1514 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -1972,7 +1972,7 @@ Reference.status as
 
 <!-- page:1515 -->
 
-AFLS Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2030,7 +2030,7 @@ User                       records as authenticators.
 
 <!-- page:1516 -->
 
-AFLS Overview                                             Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                             Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2091,7 +2091,7 @@ DiagnosticSummaryDetail
 
 <!-- page:1517 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2134,7 +2134,7 @@ Here's a diagram that shows an example of how this resource is represented in Sa
 
 <!-- page:1518 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2199,7 +2199,7 @@ Rate                                                                            
 
 <!-- page:1519 -->
 
-AFLS Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2266,7 +2266,7 @@ Administration
 
 <!-- page:1520 -->
 
-AFLS Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2328,7 +2328,7 @@ Bundle                             implementation is zero-to-one.
 
 <!-- page:1521 -->
 
-AFLS Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2396,7 +2396,7 @@ Id                    Provider
 
 <!-- page:1522 -->
 
-AFLS Overview                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2458,7 +2458,7 @@ Procedure
 
 <!-- page:1523 -->
 
-AFLS Overview                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2526,7 +2526,7 @@ Facility
 
 <!-- page:1524 -->
 
-AFLS Overview                                                          Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                          Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2585,7 +2585,7 @@ Encounter
 
 <!-- page:1525 -->
 
-AFLS Overview                                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2630,7 +2630,7 @@ Identifier.ParentRecordId field.
 
 <!-- page:1526 -->
 
-AFLS Overview                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2698,7 +2698,7 @@ Healthcare
 
 <!-- page:1527 -->
 
-AFLS Overview                                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2763,7 +2763,7 @@ and
 
 <!-- page:1528 -->
 
-AFLS Overview                                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2824,7 +2824,7 @@ zero-to-one picklist.
 
 <!-- page:1529 -->
 
-AFLS Overview                                                      Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                      Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2891,7 +2891,7 @@ Healthcare
 
 <!-- page:1530 -->
 
-AFLS Overview                                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -2950,7 +2950,7 @@ Here’s how the fields defined by FHIR for HumanName map to the fields in Sales
 
 <!-- page:1531 -->
 
-AFLS Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3015,7 +3015,7 @@ Identifier.IdUsageType is a dynamic
 
 <!-- page:1532 -->
 
-AFLS Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3078,7 +3078,7 @@ their Identifier.ParentRecordId field
 
 <!-- page:1533 -->
 
-AFLS Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3160,7 +3160,7 @@ AccountId
 
 <!-- page:1534 -->
 
-AFLS Overview                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3236,7 +3236,7 @@ CareObservationId    Observation
 
 <!-- page:1535 -->
 
-AFLS Overview                                               Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                               Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3305,7 +3305,7 @@ implementation of PatientImmunization
 
 <!-- page:1536 -->
 
-AFLS Overview                                                                           Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                           Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3368,7 +3368,7 @@ extension:source.value[x] AssessmentQuestionResponse.OriginType Picklist        
 
 <!-- page:1537 -->
 
-AFLS Overview                                                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3433,7 +3433,7 @@ TypeId as a zero-to-one field.
 
 <!-- page:1538 -->
 
-AFLS Overview                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3494,7 +3494,7 @@ referenced by the facility’s account record using
 
 <!-- page:1539 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3547,7 +3547,7 @@ Here's a diagram that shows an example of how this resource is represented in Sa
 
 <!-- page:1540 -->
 
-AFLS Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3590,7 +3590,7 @@ ManufacturerId                        Account
 
 <!-- page:1541 -->
 
-AFLS Overview                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3663,7 +3663,7 @@ The MedicationRequest FHIR resource maps to the MedicationRequest object in Sale
 
 <!-- page:1542 -->
 
-AFLS Overview                                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3723,7 +3723,7 @@ Provider
 
 <!-- page:1543 -->
 
-AFLS Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3791,7 +3791,7 @@ recorder       N/A                  N/A                  N/A       Not Supported
 
 <!-- page:1544 -->
 
-AFLS Overview                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3855,7 +3855,7 @@ Request        InitialFillQuantity                                  quantity dat
 
 <!-- page:1545 -->
 
-AFLS Overview                                             Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                             Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3927,7 +3927,7 @@ Request    DispenserId               Account
 
 <!-- page:1546 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -3990,7 +3990,7 @@ Statement record using their Identifier
 
 <!-- page:1547 -->
 
-AFLS Overview                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4053,7 +4053,7 @@ Account
 
 <!-- page:1548 -->
 
-AFLS Overview                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4120,7 +4120,7 @@ the MedicationStatement record using
 
 <!-- page:1549 -->
 
-AFLS Overview                                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4182,7 +4182,7 @@ category         CareObservation                   Picklist               0.1   
 
 <!-- page:1550 -->
 
-AFLS Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4251,7 +4251,7 @@ References to care teams are not supported.
 
 <!-- page:1551 -->
 
-AFLS Overview                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4313,7 +4313,7 @@ ObservationStartTime                                     Time is used for both o
 
 <!-- page:1552 -->
 
-AFLS Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4380,7 +4380,7 @@ Range
 
 <!-- page:1553 -->
 
-AFLS Overview                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4441,7 +4441,7 @@ ValueNumerator                                           observation.component.v
 
 <!-- page:1554 -->
 
-AFLS Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4500,7 +4500,7 @@ implementation is a picklist.
 
 <!-- page:1555 -->
 
-AFLS Overview                                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4564,7 +4564,7 @@ Here’s how the fields defined by FHIR for Organization map to the fields in Sa
 
 <!-- page:1556 -->
 
-AFLS Overview                                                      Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                      Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4622,7 +4622,7 @@ references.
 
 <!-- page:1557 -->
 
-AFLS Overview                                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4684,7 +4684,7 @@ ContactPointPhone.ParentId field.
 
 <!-- page:1558 -->
 
-AFLS Overview                                                      Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                      Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4745,7 +4745,7 @@ contact       ContactContact           Lookup:                0.M        While F
 
 <!-- page:1559 -->
 
-AFLS Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4802,7 +4802,7 @@ represented as PersonLanguage records
 
 <!-- page:1560 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4853,7 +4853,7 @@ Here's a diagram that shows an example of how this resource is represented in Sa
 
 <!-- page:1561 -->
 
-AFLS Overview                                                                      Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                      Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4898,7 +4898,7 @@ Contacts instead of Person Accounts, then you
 
 <!-- page:1562 -->
 
-AFLS Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -4955,7 +4955,7 @@ represented as BoardCertification
 
 <!-- page:1563 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5005,7 +5005,7 @@ Here's a diagram that shows an example of how this resource is represented in Sa
 
 <!-- page:1564 -->
 
-AFLS Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5054,7 +5054,7 @@ dates.
 
 <!-- page:1565 -->
 
-AFLS Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5108,7 +5108,7 @@ practitioner role.
 
 <!-- page:1566 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5150,7 +5150,7 @@ Here's a diagram that shows an example of how this resource is represented in Sa
 
 <!-- page:1567 -->
 
-AFLS Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5186,7 +5186,7 @@ Canonical
 
 <!-- page:1568 -->
 
-AFLS Overview                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                 Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5241,7 +5241,7 @@ DetailType         Value: Part Of                  DetailType must use the value
 
 <!-- page:1569 -->
 
-AFLS Overview                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5312,7 +5312,7 @@ AgeUnitId             Measure
 
 <!-- page:1570 -->
 
-AFLS Overview                                                      Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                      Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5386,7 +5386,7 @@ CodeId                 Bundle                             implementation is zero
 
 <!-- page:1571 -->
 
-AFLS Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5444,7 +5444,7 @@ ProcedureDetail                                       represented as PatientMedi
 
 <!-- page:1572 -->
 
-AFLS Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5506,7 +5506,7 @@ DetailCodeId       CodeSet,
 
 <!-- page:1573 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5548,7 +5548,7 @@ Here's a diagram that shows an example of how this resource is represented in Sa
 
 <!-- page:1574 -->
 
-AFLS Overview                                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5594,7 +5594,7 @@ Relation__c.Role__c                   ReciprocalRole__c                 .relatio
 
 <!-- page:1575 -->
 
-AFLS Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                              Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5655,7 +5655,7 @@ communication PersonLanguage.Rank    Double            0.1       While FHIR defi
 
 <!-- page:1576 -->
 
-AFLS Overview                                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                     Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5718,7 +5718,7 @@ CodeSetBundle,                       the Salesforce implementation of
 
 <!-- page:1577 -->
 
-AFLS Overview                                                               Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                               Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5776,7 +5776,7 @@ CarePlanTemplate                   one-to-many.
 
 <!-- page:1578 -->
 
-AFLS Overview                                                          Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                          Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5834,7 +5834,7 @@ an effective end date time field.
 
 <!-- page:1579 -->
 
-AFLS Overview                                                          Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                          Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5895,7 +5895,7 @@ Detail objects in Salesforce.
 
 <!-- page:1580 -->
 
-AFLS Overview                                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                  Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -5953,7 +5953,7 @@ Request
 
 <!-- page:1581 -->
 
-AFLS Overview                                             Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                             Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -6022,7 +6022,7 @@ Denominator
 
 <!-- page:1582 -->
 
-AFLS Overview                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -6087,7 +6087,7 @@ fields.
 
 <!-- page:1583 -->
 
-AFLS Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -6157,7 +6157,7 @@ zero-to-one.
 
 <!-- page:1584 -->
 
-AFLS Overview                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                   Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -6223,7 +6223,7 @@ ServiceRequest record using their
 
 <!-- page:1585 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -6262,7 +6262,7 @@ Here's a diagram that shows an example of how this resource is represented in Sa
 
 <!-- page:1586 -->
 
-AFLS Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                                Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 
@@ -6309,7 +6309,7 @@ LengthUpperLimit
 
 <!-- page:1587 -->
 
-AFLS Overview                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
+LSC Overview                                                    Mapping FHIR v4.0 to Salesforce Standard Objects
 
 
 

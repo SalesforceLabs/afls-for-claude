@@ -21,14 +21,14 @@ import type { ConversionEngine } from "../presentation-converter.js";
 export function register(server: McpServer) {
   server.tool(
     "upload_presentation",
-    "Upload a presentation to AFLS Intelligent Content. Supports three formats: (1) .pptx — converts to HTML5 per-slide ZIPs using LibreOffice (default, preserves layout with SVG/images) or Pandoc reveal.js (semantic HTML with transitions), (2) .pdf — uploads directly (Salesforce handles page splitting), (3) .zip file(s) or directory of ZIPs — validates HTML structure and uploads each as a page. Creates the presentation via the Bulk Presentation Connect API.",
+    "Upload a presentation to LSC Intelligent Content. Supports three formats: (1) .pptx — converts to HTML5 per-slide ZIPs using LibreOffice (default, preserves layout with SVG/images) or Pandoc reveal.js (semantic HTML with transitions), (2) .pdf — uploads directly (Salesforce handles page splitting), (3) .zip file(s) or directory of ZIPs — validates HTML structure and uploads each as a page. Creates the presentation via the Bulk Presentation Connect API.",
     {
       filePath: z
         .union([z.string(), z.array(z.string())])
         .describe(
           "Path(s) to file(s): single .pptx, single .pdf, .zip file(s), or a directory containing .zip files"
         ),
-      presentationName: z.string().describe("Display name for the presentation in AFLS"),
+      presentationName: z.string().describe("Display name for the presentation in LSC"),
       presentationId: z.string().optional().describe("External system ID (e.g., Veeva Vault ID)"),
       activationDate: z
         .string()
@@ -140,7 +140,7 @@ export function register(server: McpServer) {
         const gsInstalled = await checkGhostscriptInstalled();
         if (!gsInstalled) {
           message += `> **Note:** Ghostscript not found. PDF will be uploaded without rasterization.\n`;
-          message += `> The AFLS iPad player requires image-based PDFs. If the presentation doesn't render\n`;
+          message += `> The LSC iPad player requires image-based PDFs. If the presentation doesn't render\n`;
           message += `> on iPad, install Ghostscript: \`brew install ghostscript\`\n\n`;
         }
       }

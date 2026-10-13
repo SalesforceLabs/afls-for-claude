@@ -1,5 +1,5 @@
 ---
-description: Diagnose why Briefings isn't working in an AFLS org
+description: Diagnose why Briefings isn't working in an Life Sciences Cloud (LSC) org
 ---
 
 # Diagnose Briefings
@@ -17,7 +17,7 @@ $ARGUMENTS
 ### Step 1: Verify Org Connection
 
 ```
-Use check_afls_setup to verify org connection
+Use check_lsc_setup to verify org connection
 ```
 
 If not connected, guide the user through authentication.

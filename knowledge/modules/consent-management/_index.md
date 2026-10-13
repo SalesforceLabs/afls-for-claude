@@ -4,7 +4,7 @@
 
 - [consent-management-demo-talk-track](./consent-management-demo-talk-track.md)
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 ### Key Concepts
 

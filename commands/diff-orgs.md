@@ -4,7 +4,7 @@ description: Compare configuration between two Salesforce orgs
 
 # Diff Orgs
 
-Compare AFLS configuration between two Salesforce orgs to identify configuration drift.
+Compare Life Sciences Cloud (LSC) configuration between two Salesforce orgs to identify configuration drift.
 
 ## Steps
 
@@ -14,7 +14,7 @@ Compare AFLS configuration between two Salesforce orgs to identify configuration
    - Call `set_target_org` with their primary org choice.
 
 2. Use the `diff_orgs` tool with the two org aliases or usernames.
-   - The tool compares: trigger handlers, Admin Console settings, DB Schema records, and AFLS actions.
+   - The tool compares: trigger handlers, Admin Console settings, DB Schema records, and LSC actions.
 
 3. Present the differences in a clear format:
    - **Trigger Handlers** — mismatched active/inactive states

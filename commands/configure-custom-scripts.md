@@ -1,9 +1,9 @@
 ---
-description: Interactive wizard to configure and validate AFLS Custom Scripts for validation
+description: Interactive wizard to configure and validate Life Sciences Cloud (LSC) Custom Scripts for validation
 arguments: "[check-type]"
 ---
 
-# Configure AFLS Custom Scripts
+# Configure LSC Custom Scripts
 
 Interactive wizard to check and configure Custom Scripts for validation, checklists, and Visit Action Validation.
 
@@ -20,7 +20,7 @@ Follow these steps sequentially to validate and configure custom scripts.
 First, check if connected to a Salesforce org:
 
 ```
-Use check_afls_setup to verify org connection
+Use check_lsc_setup to verify org connection
 ```
 
 If not connected, guide the user through authentication.
@@ -124,7 +124,7 @@ Report:
 - Help decide sync vs async based on data requirements
 - Generate the script with env.log() debugging
 - Remind about all gotchas (no JSDoc before IIFE, unwrapProxy, Refresh after deploy)
-- Point to reference examples at https://github.com/afls-ideas/afls-custom-scripts-examples
+- Point to reference examples at https://github.com/lsc-ideas/lsc-custom-scripts-examples
 
 **If user needs to debug a script:**
 - Add `env.log()` calls at entry point, before/after data access, and before return
@@ -144,13 +144,13 @@ This copies the deployed LWC code to the `CodeText` field. Without this step, th
 
 ## Example Usage
 
-User: `/afls:configure-custom-scripts`
+User: `/lsc:configure-custom-scripts`
 > Run full custom scripts configuration check
 
-User: `/afls:configure-custom-scripts visit-action`
+User: `/lsc:configure-custom-scripts visit-action`
 > Focus on Visit Action Validation configuration
 
-User: `/afls:configure-custom-scripts debug`
+User: `/lsc:configure-custom-scripts debug`
 > Help debug a custom script that isn't working
 
 ## Admin Console Navigation

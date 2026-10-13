@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:standardobjectnameownersharingrule pages:1440-1441 -->
 # StandardObjectNameOwnerSharingRule
 
-AFLS Overview                                                                               StandardObjectNameOwnerSharingRule
+Life Sciences Cloud (LSC) Overview                                                                               StandardObjectNameOwnerSharingRule
 
 
 
@@ -61,7 +61,7 @@ textarea
 
 <!-- page:1441 -->
 
-AFLS Overview                                                      StandardObjectNameOwnerSharingRule
+LSC Overview                                                      StandardObjectNameOwnerSharingRule
 
 
 

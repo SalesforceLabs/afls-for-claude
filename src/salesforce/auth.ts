@@ -150,10 +150,10 @@ export function getSetupInstructions(step: SetupStep): SetupInstructions {
         step,
         title: "Authenticate to Your Org",
         description: "Connect to your Salesforce org using web-based authentication:",
-        command: "sf org login web --alias my-afls-org",
+        command: "sf org login web --alias my-lsc-org",
         options: [
-          "For sandbox: sf org login web --alias my-afls-sandbox --instance-url https://test.salesforce.com",
-          "For production: sf org login web --alias my-afls-prod",
+          "For sandbox: sf org login web --alias my-lsc-sandbox --instance-url https://test.salesforce.com",
+          "For production: sf org login web --alias my-lsc-prod",
           "This will open a browser window for you to log in",
         ],
       };
@@ -173,7 +173,7 @@ export function getSetupInstructions(step: SetupStep): SetupInstructions {
       return {
         step,
         title: "Ready",
-        description: "Setup complete! You can now use AFLS tools to work with your org.",
+        description: "Setup complete! You can now use LSC tools to work with your org.",
       };
   }
 }
@@ -272,20 +272,20 @@ export async function validateOrgConnection(): Promise<{
 }
 
 /**
- * Identify if an org has AFLS installed (heuristic check)
+ * Identify if an org has LSC installed (heuristic check)
  */
 export async function checkLscInstalled(targetOrg: string): Promise<{
   installed: boolean;
   indicators: string[];
 }> {
   // This is a placeholder - in a real implementation, we'd query for
-  // AFLS-specific objects or check installed packages
+  // LSC-specific objects or check installed packages
   // For now, return a basic check structure
   return {
     installed: true, // Assume true for now
     indicators: [
       "Check for HealthCloudGA package",
-      "Check for AFLS-specific objects like Visit__c",
+      "Check for LSC-specific objects like Visit__c",
     ],
   };
 }

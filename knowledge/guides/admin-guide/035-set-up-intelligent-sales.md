@@ -10,7 +10,7 @@
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with Life Sciences Cloud (LSC) or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -52,7 +52,7 @@ and impacted revenue, with visits-based product availability projections.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 If someone has a product shortfall, they can request a product transfer from a nearby inventory. Reps
@@ -81,7 +81,7 @@ Before your users can use Intelligent Sales, you must enable the Intelligent Sal
 Management org prefs in your Salesforce org.
 Assign Permission Sets for Intelligent Sales
 Assign the Action Plans and Industries Visits permission sets to your users so that they can use
-Intelligent Sales. Also assign the Health Cloud Starter (for AFLS) or Health Cloud
+Intelligent Sales. Also assign the Health Cloud Starter (for LSC) or Health Cloud
 Foundation (for Health Cloud) permission set.
 Set Up Visit and Inventory Access
 Set up the right object permissions so that users access just the visits and inventories they’re
@@ -124,7 +124,7 @@ Sales is to divide and conquer these activity types with different user personas
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 User Persona                        Responsibilities
@@ -157,7 +157,7 @@ directly with these objects. Admins interact with them more than sales reps or o
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 The Intelligent Sales data model includes these objects.
@@ -397,7 +397,7 @@ audit their inventories. Visit types are created using the Work Type object.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Surgical Case Visits
@@ -449,7 +449,7 @@ Management org prefs in your Salesforce org.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -475,7 +475,7 @@ Your Salesforce org now has access to the Intelligent Sales app and the Visits d
 Assign Permission Sets for Intelligent Sales
 
 Assign the Action Plans and Industries Visits permission sets to your users so that they can use Intelligent
-Sales. Also assign the Health Cloud Starter (for AFLS) or Health Cloud Foundation (for
+Sales. Also assign the Health Cloud Starter (for LSC) or Health Cloud Foundation (for
 Health Cloud) permission set.
 
 
@@ -485,7 +485,7 @@ Health Cloud) permission set.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -520,7 +520,7 @@ for. You can use Sharing Settings and custom Apex triggers to set up access.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -590,7 +590,7 @@ access just their visits and inventories.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1157,7 +1157,7 @@ IFetchInventoryCount Apex Interface with your own custom Apex classes and method
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1206,7 +1206,7 @@ different location types. You must make these changes before your users start us
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1251,7 +1251,7 @@ the right data.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:1183 -->
 
@@ -1304,7 +1304,7 @@ that visit is factored into product shortfall projections.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:1184 -->
 
@@ -1347,7 +1347,7 @@ visit that account. Then you can add the accounts’ locations.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1400,7 +1400,7 @@ accounts they’re responsible for.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1516,7 +1516,7 @@ action plan templates.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1664,7 +1664,7 @@ visit tasks for your sales reps.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1726,7 +1726,7 @@ two assessment tasks that are common in surgical visits.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Patient Registration
@@ -1765,7 +1765,7 @@ management. To ensure that the flows meet your business’ unique needs, flows a
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 With sample flows such as Trial Request Management and Loan Request Management, your customers
@@ -1833,7 +1833,7 @@ schedule and perform their own surgical case visits and cycle counts.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 With Intelligent Sales, you get valuable features like visit-based shortfall projections, shortfall-based
@@ -1888,7 +1888,7 @@ from your mobile phone.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 The Intelligent Sales mobile app has seven main pages where you perform your core tasks.
@@ -2062,7 +2062,7 @@ page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 You can set filters to see shortfalls for today, the next 7 days, 14 days, 30 days, or 90 days.
@@ -2102,7 +2102,7 @@ counts for your reps and their inventories.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 You can perform all of these tasks from the comfort of your desk using the Intelligent Sales desktop app.
@@ -2138,7 +2138,7 @@ to fulfill that visit. You can schedule visits from the Intelligent Sales home p
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2254,7 +2254,7 @@ make up for the shortfall.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2340,7 +2340,7 @@ reduces product write-off costs and makes sure your reps have fewer surprises du
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2465,7 +2465,7 @@ visit, you request for a product transfer from someone nearby.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 Sometimes, you schedule visits for yourself if something comes up when you’re out on the job. And if
@@ -2516,7 +2516,7 @@ Schedule a surgical case visit while you’re on the road from the My Visits pag
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2626,7 +2626,7 @@ transfer inventory to you.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2698,7 +2698,7 @@ the transfer request.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2748,7 +2748,7 @@ action plan, and end the visit.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2826,7 +2826,7 @@ ad hoc cycle counts from the Cycle Counts page on the mobile app.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2916,7 +2916,7 @@ expected numbers for your products because Intelligent Sales automatically pulls
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2999,7 +2999,7 @@ quantities in the Key Performance Indicator records associated with the cycle co
 
 
 
-Leverage the power of Agentforce in AFLS. Use the Pharmacy Benefits Reverification agent
+Leverage the power of Agentforce in LSC. Use the Pharmacy Benefits Reverification agent
 to accelerate the benefits reverification process by efficiently updating patients' personal, drug,
 pharmacy, and healthcare provider details. Use the Site Selection Assistance Agent to accelerate the site
 selection process by quickly searching for sites and investigators and sending feasibility assessments.
@@ -3010,8 +3010,8 @@ selection process by quickly searching for sites and investigators and sending f
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS licenses and
-Agentforce for AFLS or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC licenses and
+Agentforce for LSC or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
 Employee Agent, Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on
 licenses
 

@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:lifesciconfigcategory pages:1955-1957 -->
 # LifeSciConfigCategory
 
-AFLS Overview                                                                                           LifeSciConfigCategory
+Life Sciences Cloud (LSC) Overview                                                                                           LifeSciConfigCategory
 
 
 
@@ -60,7 +60,7 @@ Possible values are:
 
 <!-- page:1956 -->
 
-AFLS Overview                                          LifeSciConfigCategory
+LSC Overview                                          LifeSciConfigCategory
 
 
 
@@ -108,7 +108,7 @@ AFLS Overview                                          LifeSciConfigCategory
 
 <!-- page:1957 -->
 
-AFLS Overview                                                                                         LifeSciConfigCategory
+LSC Overview                                                                                         LifeSciConfigCategory
 
 
 

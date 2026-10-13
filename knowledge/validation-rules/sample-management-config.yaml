@@ -1,22 +1,22 @@
-# AFLS Sample Management Configuration Validation Rules
+# LSC Sample Management Configuration Validation Rules
 # ====================================================
 # Rules validate sample inventory, production batches, sample limits,
 # and related configuration to prevent common issues.
 #
 # CORRECT object names used in queries:
 #   - Product2 (standard Salesforce)
-#   - LifeSciMarketableProduct (AFLS standard)
+#   - LifeSciMarketableProduct (LSC standard)
 #   - Location (standard Salesforce)
-#   - ProductionBatch (AFLS standard)
+#   - ProductionBatch (LSC standard)
 #   - ProductItem (standard Salesforce)
-#   - ProductBatchItem (AFLS standard)
-#   - ProviderSampleLimit (AFLS standard)
-#   - LifeSciMobileMetadataRecord (AFLS standard)
+#   - ProductBatchItem (LSC standard)
+#   - ProviderSampleLimit (LSC standard)
+#   - LifeSciMobileMetadataRecord (LSC standard)
 
 schema_version: "1.0"
 category_name: "Sample Management Configuration"
 description: |
-  Validation rules for AFLS Sample Management configuration.
+  Validation rules for LSC Sample Management configuration.
   Covers product setup, inventory locations, production batches,
   inventory initialization, sample limits, and mobile cache.
 

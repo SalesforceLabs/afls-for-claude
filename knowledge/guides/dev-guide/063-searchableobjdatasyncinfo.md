@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:searchableobjdatasyncinfo pages:1928-1929 -->
 # SearchableObjDataSyncInfo
 
-AFLS Overview                                                                                         SearchableObjDataSyncInfo
+Life Sciences Cloud (LSC) Overview                                                                                         SearchableObjDataSyncInfo
 
 
 
@@ -64,7 +64,7 @@ string
 
 <!-- page:1929 -->
 
-AFLS Overview                                                                               SearchableObjDataSyncInfo
+LSC Overview                                                                               SearchableObjDataSyncInfo
 
 
 

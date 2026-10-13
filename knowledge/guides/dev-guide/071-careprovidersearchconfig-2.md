@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:careprovidersearchconfig-2 pages:1948-1948 -->
 # CareProviderSearchConfig
 
-AFLS Overview                                                                                            CareProviderSearchConfig
+Life Sciences Cloud (LSC) Overview                                                                                            CareProviderSearchConfig
 
 
 

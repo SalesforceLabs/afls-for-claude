@@ -1,12 +1,12 @@
 # Visit Expense Concur Integration (Summer '26)
 
-Presenter: Sora, Product Manager, AFLS
+Presenter: Sora, Product Manager, Life Sciences Cloud (LSC)
 
 ## Overview
 
-In Summer '26, a first-party application on MuleSoft called **Concur Expense Sync** was introduced to enable bidirectional synchronization of visit expense records between Salesforce AFLS (AFLS) and the SAP Concur system. This eliminates manual reconciliation processes, reduces administrative overhead, and mitigates compliance risks associated with logging field expenses.
+In Summer '26, a first-party application on MuleSoft called **Concur Expense Sync** was introduced to enable bidirectional synchronization of visit expense records between Salesforce LSC (LSC) and the SAP Concur system. This eliminates manual reconciliation processes, reduces administrative overhead, and mitigates compliance risks associated with logging field expenses.
 
-**Current limitation:** Functionality is only available for visit expense records logged via the AFLS iPad application.
+**Current limitation:** Functionality is only available for visit expense records logged via the LSC iPad application.
 
 ## How It Works
 
@@ -31,7 +31,7 @@ The Concur Expense Sync app automatically:
 
 ### Bidirectional Updates (Concur → Salesforce)
 
-Updates made in Concur (e.g., adjusted amounts, resolved errors) are reflected back in Salesforce AFLS:
+Updates made in Concur (e.g., adjusted amounts, resolved errors) are reflected back in Salesforce LSC:
 - Trigger the Concur-to-Salesforce job via Anypoint platform
 - Corresponding record in Salesforce updates automatically
 - Expense System Integration Status updates to "Completed"
@@ -46,9 +46,9 @@ After sync:
 ## Key Technical Details
 
 - **Application:** Concur Expense Sync (MuleSoft first-party app)
-- **Sync direction:** Bidirectional (AFLS ↔ Concur)
+- **Sync direction:** Bidirectional (LSC ↔ Concur)
 - **Sync mode:** Batch at scheduled intervals + manual ad-hoc via Anypoint
-- **Platform:** AFLS iPad app expenses only (current scope)
+- **Platform:** LSC iPad app expenses only (current scope)
 - **Integration user:** Required for Anypoint platform operations
 
 ## Developer Documentation

@@ -17,8 +17,8 @@ export function useLibrary() {
   const [loading, setLoading] = useState(true);
 
   const refresh = useCallback(async () => {
-    if (!window.aflsApi?.listLibraryItems) return;
-    const list = await window.aflsApi.listLibraryItems();
+    if (!window.lscApi?.listLibraryItems) return;
+    const list = await window.lscApi.listLibraryItems();
     setItems(list);
     setLoading(false);
   }, []);
@@ -36,8 +36,8 @@ export function useLibrary() {
       sourceConversationId?: string;
       tags?: string[];
     }) => {
-      if (!window.aflsApi?.saveLibraryItem) return;
-      const item = await window.aflsApi.saveLibraryItem(input);
+      if (!window.lscApi?.saveLibraryItem) return;
+      const item = await window.lscApi.saveLibraryItem(input);
       setItems((prev) => [item, ...prev]);
       return item;
     },
@@ -46,20 +46,20 @@ export function useLibrary() {
 
   const deleteItem = useCallback(
     async (id: string) => {
-      if (!window.aflsApi?.deleteLibraryItem) return;
+      if (!window.lscApi?.deleteLibraryItem) return;
       setItems((prev) => prev.filter((i) => i.id !== id));
-      await window.aflsApi.deleteLibraryItem(id);
+      await window.lscApi.deleteLibraryItem(id);
     },
     []
   );
 
   const search = useCallback(async (query: string) => {
-    if (!window.aflsApi?.searchLibraryItems) return;
+    if (!window.lscApi?.searchLibraryItems) return;
     if (!query.trim()) {
       refresh();
       return;
     }
-    const results = await window.aflsApi.searchLibraryItems(query);
+    const results = await window.lscApi.searchLibraryItems(query);
     setItems(results);
   }, [refresh]);
 

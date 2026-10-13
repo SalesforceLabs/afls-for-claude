@@ -1,6 +1,6 @@
 # Search Before Create (SBC) — Part 1: Internal Search
 
-**Session:** AFLS4CE Value Chain Training — May 8, 2026 (Part 1 of 2)
+**Session:** LSC4CE Value Chain Training — May 8, 2026 (Part 1 of 2)
 **Audience:** Support engineers
 **Source:** Engineering training series (deck + Gemini transcript)
 **Presenter:** Saumya Sharma

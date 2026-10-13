@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:request-bodies pages:1693-1784 -->
 # Request Bodies
 
-AFLS Overview                                                                                                           Request Bodies
+Life Sciences Cloud (LSC) Overview                                                                                                           Request Bodies
 
 
 
@@ -42,7 +42,7 @@ Work Type Lead Time Output
 
 ## Request Bodies
 
-This section lists the request bodies for AFLS Business APIs. The query parameters for an endpoint are listed along with
+This section lists the request bodies for LSC Business APIs. The query parameters for an endpoint are listed along with
 each resource.
 To create a JSON request body, specify the properties of the request body in JSON format. If a request body is top-level, it has a root XML
 tag listed. To create an XML request body, nest the properties as XML tags inside the root XML tag.
@@ -61,7 +61,7 @@ Input representation of the action plan template item filters.
 
 <!-- page:1694 -->
 
-AFLS Overview                                                                                                         Request Bodies
+LSC Overview                                                                                                         Request Bodies
 
 
 
@@ -110,7 +110,7 @@ The primary member on the plan.
 
 <!-- page:1695 -->
 
-AFLS Overview                                                                                                    Request Bodies
+LSC Overview                                                                                                    Request Bodies
 
 
 
@@ -158,7 +158,7 @@ Input representation of the specified dose and rate.
 
 <!-- page:1696 -->
 
-AFLS Overview                                                                                               Request Bodies
+LSC Overview                                                                                               Request Bodies
 
 
 
@@ -206,7 +206,7 @@ Input representation of the patient communication language.
 
 <!-- page:1697 -->
 
-AFLS Overview                                                                                                            Request Bodies
+LSC Overview                                                                                                            Request Bodies
 
 
 
@@ -257,7 +257,7 @@ JSON Example
 
 <!-- page:1698 -->
 
-AFLS Overview                                                                                                     Request Bodies
+LSC Overview                                                                                                     Request Bodies
 
 
 
@@ -320,7 +320,7 @@ templateId            String                  ID of an action plan template.    
 
 <!-- page:1699 -->
 
-AFLS Overview                                                                                                           Request Bodies
+LSC Overview                                                                                                           Request Bodies
 
 
 
@@ -382,7 +382,7 @@ appointed representative record to associate with your care request.
 
 <!-- page:1700 -->
 
-AFLS Overview                                                                                         Request Bodies
+LSC Overview                                                                                         Request Bodies
 
 
 
@@ -444,7 +444,7 @@ JSON example
 
 <!-- page:1701 -->
 
-AFLS Overview                                                                                  Request Bodies
+LSC Overview                                                                                  Request Bodies
 
 
 
@@ -505,7 +505,7 @@ slots                Slots []    Appointment slots to be booked.         Require
 
 <!-- page:1702 -->
 
-AFLS Overview                                                                                                      Request Bodies
+LSC Overview                                                                                                      Request Bodies
 
 
 
@@ -561,7 +561,7 @@ the source system ID or the Salesforce ID.
 
 <!-- page:1703 -->
 
-AFLS Overview                                                                                                  Request Bodies
+LSC Overview                                                                                                  Request Bodies
 
 
 
@@ -621,7 +621,7 @@ id                   String               ID of the presentation.               
 
 <!-- page:1704 -->
 
-AFLS Overview                                                                                          Request Bodies
+LSC Overview                                                                                          Request Bodies
 
 
 
@@ -679,7 +679,7 @@ name                 String                Name of the presentation.            
 
 <!-- page:1705 -->
 
-AFLS Overview                                                                                                      Request Bodies
+LSC Overview                                                                                                      Request Bodies
 
 
 
@@ -737,7 +737,7 @@ pass the contentDocumentId as
 
 <!-- page:1706 -->
 
-AFLS Overview                                                                                                  Request Bodies
+LSC Overview                                                                                                  Request Bodies
 
 
 
@@ -798,7 +798,7 @@ Case related to the care request.
 
 <!-- page:1707 -->
 
-AFLS Overview                                                                               Request Bodies
+LSC Overview                                                                               Request Bodies
 
 
 
@@ -857,7 +857,7 @@ Maps to: Case.SuppliedPhone
 
 <!-- page:1708 -->
 
-AFLS Overview                                                                                             Request Bodies
+LSC Overview                                                                                             Request Bodies
 
 
 
@@ -922,7 +922,7 @@ middleName           String                Middle name of the patient.          
 
 <!-- page:1709 -->
 
-AFLS Overview                                                                               Request Bodies
+LSC Overview                                                                               Request Bodies
 
 
 
@@ -983,7 +983,7 @@ JSON example
 
 <!-- page:1710 -->
 
-AFLS Overview                                                                                              Request Bodies
+LSC Overview                                                                                              Request Bodies
 
 
 
@@ -1043,7 +1043,7 @@ Input[]              including name, modifiers, and the
 
 <!-- page:1711 -->
 
-AFLS Overview                                                                                                     Request Bodies
+LSC Overview                                                                                                     Request Bodies
 
 
 
@@ -1101,7 +1101,7 @@ CareDiagnosis.CodeType
 
 <!-- page:1712 -->
 
-AFLS Overview                                                                                           Request Bodies
+LSC Overview                                                                                           Request Bodies
 
 
 
@@ -1162,7 +1162,7 @@ CareDiagnosis.ModifiedCode
 
 <!-- page:1713 -->
 
-AFLS Overview                                                                               Request Bodies
+LSC Overview                                                                               Request Bodies
 
 
 
@@ -1223,7 +1223,7 @@ CareDiagnosis.SourceSystemModified
 
 <!-- page:1714 -->
 
-AFLS Overview                                                                                                     Request Bodies
+LSC Overview                                                                                                     Request Bodies
 
 
 
@@ -1281,7 +1281,7 @@ CareRequestDrug.ClinicalDeterminationReason
 
 <!-- page:1715 -->
 
-AFLS Overview                                                                                          Request Bodies
+LSC Overview                                                                                          Request Bodies
 
 
 
@@ -1340,7 +1340,7 @@ CareRequestDrug.Frequency
 
 <!-- page:1716 -->
 
-AFLS Overview                                                                                            Request Bodies
+LSC Overview                                                                                            Request Bodies
 
 
 
@@ -1400,7 +1400,7 @@ FillDate                      CareRequestDrug.PrescriptionFillDate
 
 <!-- page:1717 -->
 
-AFLS Overview                                                                                           Request Bodies
+LSC Overview                                                                                           Request Bodies
 
 
 
@@ -1459,7 +1459,7 @@ CareRequestDrug.Status
 
 <!-- page:1718 -->
 
-AFLS Overview                                                                                                         Request Bodies
+LSC Overview                                                                                                         Request Bodies
 
 
 
@@ -1511,7 +1511,7 @@ JSON example
 
 <!-- page:1719 -->
 
-AFLS Overview                                                                                     Request Bodies
+LSC Overview                                                                                     Request Bodies
 
 
 
@@ -1570,7 +1570,7 @@ CareRequestExtension.AppealEffectuationDateTime
 
 <!-- page:1720 -->
 
-AFLS Overview                                                                                                  Request Bodies
+LSC Overview                                                                                                  Request Bodies
 
 
 
@@ -1629,7 +1629,7 @@ unavailable for PATCH requests.
 
 <!-- page:1721 -->
 
-AFLS Overview                                                                                    Request Bodies
+LSC Overview                                                                                    Request Bodies
 
 
 
@@ -1689,7 +1689,7 @@ CareRequestExtention.DocumentAttachmentStatus
 
 <!-- page:1722 -->
 
-AFLS Overview                                                                                        Request Bodies
+LSC Overview                                                                                        Request Bodies
 
 
 
@@ -1747,7 +1747,7 @@ CareRequest.FirstReviewerNotes
 
 <!-- page:1723 -->
 
-AFLS Overview                                                                                                                     Request Bodies
+LSC Overview                                                                                                                     Request Bodies
 
 
 
@@ -1805,7 +1805,7 @@ CareRequestExtension.IndependentReviewSubmissionDate
 
 <!-- page:1724 -->
 
-AFLS Overview                                                                                            Request Bodies
+LSC Overview                                                                                            Request Bodies
 
 
 
@@ -1865,7 +1865,7 @@ CareRequest.MemberSecondaryPlan
 
 <!-- page:1725 -->
 
-AFLS Overview                                                                                             Request Bodies
+LSC Overview                                                                                             Request Bodies
 
 
 
@@ -1922,7 +1922,7 @@ CareRequest.PractitionerContactDateTime
 
 <!-- page:1726 -->
 
-AFLS Overview                                                                                        Request Bodies
+LSC Overview                                                                                        Request Bodies
 
 
 
@@ -1981,7 +1981,7 @@ Type                          CareRequestExtension.ReopenRequestType
 
 <!-- page:1727 -->
 
-AFLS Overview                                                                                                  Request Bodies
+LSC Overview                                                                                                  Request Bodies
 
 
 
@@ -2042,7 +2042,7 @@ PractitionerLicense                      CareRequest.RequestingPractitionerLicen
 
 <!-- page:1728 -->
 
-AFLS Overview                                                                                             Request Bodies
+LSC Overview                                                                                             Request Bodies
 
 
 
@@ -2101,7 +2101,7 @@ CareRequestExtension.ServiceLevel
 
 <!-- page:1729 -->
 
-AFLS Overview                                                                                                             Request Bodies
+LSC Overview                                                                                                             Request Bodies
 
 
 
@@ -2163,7 +2163,7 @@ Root XML tag
 
 <!-- page:1730 -->
 
-AFLS Overview                                                                                        Request Bodies
+LSC Overview                                                                                        Request Bodies
 
 
 
@@ -2221,7 +2221,7 @@ CareRequestItem.CareRequestReviewers
 
 <!-- page:1731 -->
 
-AFLS Overview                                                                                  Request Bodies
+LSC Overview                                                                                  Request Bodies
 
 
 
@@ -2280,7 +2280,7 @@ CareRequestItem.DeniedQuantity
 
 <!-- page:1732 -->
 
-AFLS Overview                                                                                           Request Bodies
+LSC Overview                                                                                           Request Bodies
 
 
 
@@ -2341,7 +2341,7 @@ CareRequestItem.ModifiedProcedureCodeSet
 
 <!-- page:1733 -->
 
-AFLS Overview                                                                                 Request Bodies
+LSC Overview                                                                                 Request Bodies
 
 
 
@@ -2402,7 +2402,7 @@ CareRequestItem.Quantity
 
 <!-- page:1734 -->
 
-AFLS Overview                                                                                           Request Bodies
+LSC Overview                                                                                           Request Bodies
 
 
 
@@ -2461,7 +2461,7 @@ CareRequestItem.SourceSystem
 
 <!-- page:1735 -->
 
-AFLS Overview                                                                                      Request Bodies
+LSC Overview                                                                                      Request Bodies
 
 
 
@@ -2522,7 +2522,7 @@ JSON Schema
 
 <!-- page:1736 -->
 
-AFLS Overview                                             Request Bodies
+LSC Overview                                             Request Bodies
 
 
 
@@ -2583,7 +2583,7 @@ AFLS Overview                                             Request Bodies
 
 <!-- page:1737 -->
 
-AFLS Overview                                                                                                           Request Bodies
+LSC Overview                                                                                                           Request Bodies
 
 
 
@@ -2645,7 +2645,7 @@ reviewed.
 
 <!-- page:1738 -->
 
-AFLS Overview                                                                                Request Bodies
+LSC Overview                                                                                Request Bodies
 
 
 
@@ -2701,7 +2701,7 @@ Account.MiddleName
 
 <!-- page:1739 -->
 
-AFLS Overview                                                                                                  Request Bodies
+LSC Overview                                                                                                  Request Bodies
 
 
 
@@ -2761,7 +2761,7 @@ JSON example
 
 <!-- page:1740 -->
 
-AFLS Overview                                                                                              Request Bodies
+LSC Overview                                                                                              Request Bodies
 
 
 
@@ -2817,7 +2817,7 @@ by the sales representatives.
 
 <!-- page:1741 -->
 
-AFLS Overview                                                                                                Request Bodies
+LSC Overview                                                                                                Request Bodies
 
 
 
@@ -2872,7 +2872,7 @@ fieldName           String               The name of the field.                 
 
 <!-- page:1742 -->
 
-AFLS Overview                                                                                                      Request Bodies
+LSC Overview                                                                                                      Request Bodies
 
 
 
@@ -2930,7 +2930,7 @@ Input representation of the key-value pairs containing the fields to be updated 
 
 <!-- page:1743 -->
 
-AFLS Overview                                                                                                     Request Bodies
+LSC Overview                                                                                                     Request Bodies
 
 
 
@@ -2989,7 +2989,7 @@ Code                            search was performed.
 
 <!-- page:1744 -->
 
-AFLS Overview                                                                                   Request Bodies
+LSC Overview                                                                                   Request Bodies
 
 
 
@@ -3039,7 +3039,7 @@ JSON example
 
 <!-- page:1745 -->
 
-AFLS Overview                                                                                                     Request Bodies
+LSC Overview                                                                                                     Request Bodies
 
 
 
@@ -3098,7 +3098,7 @@ checklist item.
 
 <!-- page:1746 -->
 
-AFLS Overview                                                                                       Request Bodies
+LSC Overview                                                                                       Request Bodies
 
 
 
@@ -3158,7 +3158,7 @@ in the Care System Field Mapping.
 
 <!-- page:1747 -->
 
-AFLS Overview                                                                                                 Request Bodies
+LSC Overview                                                                                                 Request Bodies
 
 
 
@@ -3219,7 +3219,7 @@ state                  String                 The state or province of the addre
 
 <!-- page:1748 -->
 
-AFLS Overview                                                                                             Request Bodies
+LSC Overview                                                                                             Request Bodies
 
 
 
@@ -3279,7 +3279,7 @@ JSON example
 
 <!-- page:1749 -->
 
-AFLS Overview                                                                                                   Request Bodies
+LSC Overview                                                                                                   Request Bodies
 
 
 
@@ -3337,7 +3337,7 @@ JSON example
 
 <!-- page:1750 -->
 
-AFLS Overview                                                                                                      Request Bodies
+LSC Overview                                                                                                      Request Bodies
 
 
 
@@ -3394,7 +3394,7 @@ JSON example
 
 <!-- page:1751 -->
 
-AFLS Overview                                                                                              Request Bodies
+LSC Overview                                                                                              Request Bodies
 
 
 
@@ -3455,7 +3455,7 @@ The ContactPoint FHIR object maps to the ContactPoint object in Salesforce.
 
 <!-- page:1752 -->
 
-AFLS Overview                                                                                              Request Bodies
+LSC Overview                                                                                              Request Bodies
 
 
 
@@ -3513,7 +3513,7 @@ Root XML tag
 
 <!-- page:1753 -->
 
-AFLS Overview                                                                                            Request Bodies
+LSC Overview                                                                                            Request Bodies
 
 
 
@@ -3572,7 +3572,7 @@ JSON example
 
 <!-- page:1754 -->
 
-AFLS Overview                                                                                            Request Bodies
+LSC Overview                                                                                            Request Bodies
 
 
 
@@ -3632,7 +3632,7 @@ Concept Or ID Input
 
 <!-- page:1755 -->
 
-AFLS Overview                                                                                                 Request Bodies
+LSC Overview                                                                                                 Request Bodies
 
 
 
@@ -3688,7 +3688,7 @@ JSON example
 
 <!-- page:1756 -->
 
-AFLS Overview                                                                                              Request Bodies
+LSC Overview                                                                                              Request Bodies
 
 
 
@@ -3746,7 +3746,7 @@ JSON example
 
 <!-- page:1757 -->
 
-AFLS Overview                                                                                             Request Bodies
+LSC Overview                                                                                             Request Bodies
 
 
 
@@ -3803,7 +3803,7 @@ Information          Value[]               not mapped in this API.
 
 <!-- page:1758 -->
 
-AFLS Overview                                                                                                 Request Bodies
+LSC Overview                                                                                                 Request Bodies
 
 
 
@@ -3865,7 +3865,7 @@ JSON example
 
 <!-- page:1759 -->
 
-AFLS Overview                                                                                                         Request Bodies
+LSC Overview                                                                                                         Request Bodies
 
 
 
@@ -3926,7 +3926,7 @@ to the MedicationStatement object in Salesforce.
 
 <!-- page:1760 -->
 
-AFLS Overview                                                                                               Request Bodies
+LSC Overview                                                                                               Request Bodies
 
 
 
@@ -3989,7 +3989,7 @@ from.
 
 <!-- page:1761 -->
 
-AFLS Overview                                                                                              Request Bodies
+LSC Overview                                                                                              Request Bodies
 
 
 
@@ -4036,7 +4036,7 @@ JSON example
 
 <!-- page:1762 -->
 
-AFLS Overview                                                                                                                   Request Bodies
+LSC Overview                                                                                                                   Request Bodies
 
 
 
@@ -4155,7 +4155,7 @@ JSON example
 
 <!-- page:1764 -->
 
-AFLS Overview                                                                                            Request Bodies
+LSC Overview                                                                                            Request Bodies
 
 
 
@@ -4215,7 +4215,7 @@ DateTime
 
 <!-- page:1765 -->
 
-AFLS Overview                                                                                                Request Bodies
+LSC Overview                                                                                                Request Bodies
 
 
 
@@ -4275,7 +4275,7 @@ JSON example
 
 <!-- page:1766 -->
 
-AFLS Overview                                                                                               Request Bodies
+LSC Overview                                                                                               Request Bodies
 
 
 
@@ -4333,7 +4333,7 @@ JSON example
 
 <!-- page:1767 -->
 
-AFLS Overview                                                                                                       Request Bodies
+LSC Overview                                                                                                       Request Bodies
 
 
 
@@ -4392,7 +4392,7 @@ Possible values are:
 
 <!-- page:1768 -->
 
-AFLS Overview                                                                                       Request Bodies
+LSC Overview                                                                                       Request Bodies
 
 
 
@@ -4446,7 +4446,7 @@ JSON example
 
 <!-- page:1769 -->
 
-AFLS Overview                                                                                                        Request Bodies
+LSC Overview                                                                                                        Request Bodies
 
 
 
@@ -4506,7 +4506,7 @@ Member's primary or general care practitioner.
 
 <!-- page:1770 -->
 
-AFLS Overview                                                                                                   Request Bodies
+LSC Overview                                                                                                   Request Bodies
 
 
 
@@ -4567,7 +4567,7 @@ within the request.
 
 <!-- page:1771 -->
 
-AFLS Overview                                                                                              Request Bodies
+LSC Overview                                                                                              Request Bodies
 
 
 
@@ -4627,7 +4627,7 @@ JSON example
 
 <!-- page:1772 -->
 
-AFLS Overview                                                                                            Request Bodies
+LSC Overview                                                                                            Request Bodies
 
 
 
@@ -4686,7 +4686,7 @@ records.
 
 <!-- page:1773 -->
 
-AFLS Overview                                                                                                   Request Bodies
+LSC Overview                                                                                                   Request Bodies
 
 
 
@@ -4748,7 +4748,7 @@ Input representation of the patient communication language.
 
 <!-- page:1774 -->
 
-AFLS Overview                                                                                               Request Bodies
+LSC Overview                                                                                               Request Bodies
 
 
 The PatientCommunicationLanguage FHIR object maps to the PersonLanguage object in Salesforce.
@@ -4804,7 +4804,7 @@ system field mappings.
 
 <!-- page:1775 -->
 
-AFLS Overview                                                                                 Request Bodies
+LSC Overview                                                                                 Request Bodies
 
 
 
@@ -4860,7 +4860,7 @@ JSON example
 
 <!-- page:1776 -->
 
-AFLS Overview                                                                                                  Request Bodies
+LSC Overview                                                                                                  Request Bodies
 
 
 
@@ -4921,7 +4921,7 @@ associated with the appointment slot.
 
 <!-- page:1777 -->
 
-AFLS Overview                                                                                                       Request Bodies
+LSC Overview                                                                                                       Request Bodies
 
 
 
@@ -4985,7 +4985,7 @@ Ordering or referring practitioner for the request.
 
 <!-- page:1778 -->
 
-AFLS Overview                                                                                                   Request Bodies
+LSC Overview                                                                                                   Request Bodies
 
 
 
@@ -5046,7 +5046,7 @@ JSON example
 
 <!-- page:1779 -->
 
-AFLS Overview                                                           Request Bodies
+LSC Overview                                                           Request Bodies
 
 
 
@@ -5107,7 +5107,7 @@ AFLS Overview                                                           Request 
 
 <!-- page:1780 -->
 
-AFLS Overview                                                                Request Bodies
+LSC Overview                                                                Request Bodies
 
 
 
@@ -5168,7 +5168,7 @@ AFLS Overview                                                                Req
 
 <!-- page:1781 -->
 
-AFLS Overview                                                                                                            Request Bodies
+LSC Overview                                                                                                            Request Bodies
 
 
 
@@ -5228,7 +5228,7 @@ Root XML tag
 
 <!-- page:1782 -->
 
-AFLS Overview                                                      Request Bodies
+LSC Overview                                                      Request Bodies
 
 
 
@@ -5288,7 +5288,7 @@ JSON example
 
 <!-- page:1783 -->
 
-AFLS Overview                                                                                               Request Bodies
+LSC Overview                                                                                               Request Bodies
 
 
 
@@ -5344,7 +5344,7 @@ name                    String           Name of the transport location.        
 
 <!-- page:1784 -->
 
-AFLS Overview                                                                                                                Request Bodies
+LSC Overview                                                                                                                Request Bodies
 
 
 

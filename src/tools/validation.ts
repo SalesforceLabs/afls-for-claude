@@ -13,7 +13,7 @@ import { validateOrgConnection } from "../salesforce/auth.js";
 export function register(server: McpServer) {
   server.tool(
     "audit_mobile_config",
-    "Audit AFLS Mobile configuration against best practices. Runs validation rules to identify misconfigurations that cause login failures, sync issues, and other common problems.",
+    "Audit LSC Mobile configuration against best practices. Runs validation rules to identify misconfigurations that cause login failures, sync issues, and other common problems.",
     {
       group: z
         .string()
@@ -112,8 +112,8 @@ export function register(server: McpServer) {
 
   // Tool: Diagnose Issue by Symptom
   server.tool(
-    "diagnose_afls_issue",
-    "Diagnose an AFLS issue based on an error message or symptom. Finds relevant validation rules and suggests checks to run.",
+    "diagnose_lsc_issue",
+    "Diagnose an LSC issue based on an error message or symptom. Finds relevant validation rules and suggests checks to run.",
     {
       symptom: z
         .string()

@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:uiobjectrelationconfig pages:1967-1971 -->
 # UIObjectRelationConfig
 
-AFLS Overview                                                                                                                                                                                                                                                                                                                                                                                                                        UIObjectRelationConfig
+Life Sciences Cloud (LSC) Overview                                                                                                                                                                                                                                                                                                                                                                                                                        UIObjectRelationConfig
 
 
 
@@ -369,7 +369,7 @@ terms to avoid any effect on customer implementations.
 
 <!-- page:1968 -->
 
-AFLS Overview                                                                                                UIObjectRelationConfig
+LSC Overview                                                                                                UIObjectRelationConfig
 
 
 
@@ -395,7 +395,7 @@ UIObjectRelationConfig components are available in API version 54.0 and later.
 
 ## Special Access Rules
 
-You must be a Health Cloud or AFLS customer to use this metadata type
+You must be a Health Cloud or LSC customer to use this metadata type
 
 
 
@@ -427,7 +427,7 @@ object.
 
 <!-- page:1969 -->
 
-AFLS Overview                                                                                   UIObjectRelationConfig
+LSC Overview                                                                                   UIObjectRelationConfig
 
 
 
@@ -480,7 +480,7 @@ Valid values are:
 
 <!-- page:1970 -->
 
-AFLS Overview                                                                                                   UIObjectRelationConfig
+LSC Overview                                                                                                   UIObjectRelationConfig
 
 
 
@@ -537,7 +537,7 @@ This is an example of a UIObjectRelationConfig component.
 
 <!-- page:1971 -->
 
-AFLS Overview                                        UIObjectRelationConfig
+LSC Overview                                        UIObjectRelationConfig
 
 
 

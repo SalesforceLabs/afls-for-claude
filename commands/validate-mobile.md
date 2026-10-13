@@ -1,17 +1,17 @@
 ---
-description: Validate AFLS Mobile app configuration to prevent sync and functionality issues
+description: Validate Life Sciences Cloud (LSC) Mobile app configuration to prevent sync and functionality issues
 ---
 
-# Validate AFLS Mobile Configuration
+# Validate LSC Mobile Configuration
 
-Check for common configuration issues that can break the AFLS Mobile (iPad) app.
+Check for common configuration issues that can break the LSC Mobile (iPad) app.
 
 $ARGUMENTS
 
 ## Steps
 
 ### 1. Verify Org Connection
-First run `check_afls_setup` to ensure connected to a Salesforce org.
+First run `check_lsc_setup` to ensure connected to a Salesforce org.
 
 ### 2. Query Mobile Metadata Records
 The key object is **LifeSciMobileMetadataRecord** - run this query:

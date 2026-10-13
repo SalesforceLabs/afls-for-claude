@@ -27,7 +27,7 @@ The kit has a ProviderVisit stream but **no Visit stream**, and ProviderVisit re
 1. Data Streams > New > Salesforce CRM > pick the `Visit` object, category Engagement, primary key Id.
 2. Run it. The first run **failed** ("Error while fetching table") in testing; a re-run via `POST /ssot/data-streams/<name>/actions/run` succeeded with a row count equal to CRM. Cause of the first failure **unconfirmed**; re-run before debugging further.
 3. Map the DLO to `ssot__Visit__dlm`. When using the API, the mapping body takes a singular `fieldMapping`.
-4. The HCP side: AFLS providers are `HealthcareProvider`, not Contact. The Life Sciences kit has no HealthcareProvider stream. The standard **HealthCloud Provider** kit (one bundle, 19 objects) deploys one in testing. It is all-or-nothing and brings objects AFLS does not use.
+4. The HCP side: Life Sciences Cloud (LSC) providers are `HealthcareProvider`, not Contact. The Life Sciences kit has no HealthcareProvider stream. The standard **HealthCloud Provider** kit (one bundle, 19 objects) deploys one in testing. It is all-or-nothing and brings objects LSC does not use.
 
 ## 4. Tableau Next: semantic model, visualizations, dashboard
 

@@ -4,7 +4,7 @@
 
 
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or Life Sciences Cloud (LSC), and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -24,7 +24,7 @@ up signature trails for records or workflows that require users to verify key up
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 Note Salesforce's Electronic Signature feature provides 21 CFR Part 11-ready electronic signature
 functionality. You can set up and use the feature to comply with your own 21 CFR Part 11
@@ -94,7 +94,7 @@ party application.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -200,7 +200,7 @@ must sign the records in a specific order. After you create the trail, configure
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -243,7 +243,7 @@ text for the pre- and post-signing reasons.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -283,7 +283,7 @@ can view a list of digital verifications that either require signatures or are r
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:1254 -->
 
@@ -318,7 +318,7 @@ the same device as the other signers or different devices.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 The Pending Signatures section of your Home page or a Care Program Enrollee detail page lists electronic

@@ -1,6 +1,6 @@
 # Briefings (Daily Podcasts)
 
-Briefings transforms complex account data — visit history, prescribing trends, engagement records — into concise, personalized audio briefings. Field reps listen on their iPad before each HCP/HCO visit via the AFLS Mobile app's built-in audio player.
+Briefings transforms complex account data — visit history, prescribing trends, engagement records — into concise, personalized audio briefings. Field reps listen on their iPad before each HCP/HCO visit via the Life Sciences Cloud (LSC) Mobile app's built-in audio player.
 
 ## How It Works
 
@@ -30,9 +30,9 @@ These permissions must be enabled on a **cloned custom permission set** — the 
 ## Required Editions & Licensing
 
 Enterprise and Unlimited Editions with:
-- AFLS
-- AFLS for Customer Engagement
-- Agentforce for AFLS
+- LSC
+- LSC for Customer Engagement
+- Agentforce for LSC
 - Einstein GPT Prompt Builder
 - Einstein GPT Platform Add-on
 - Life Sciences Customer Engagement managed package (namespace: `lsc4ce`)

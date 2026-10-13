@@ -1,4 +1,4 @@
-# AFLS Next Best Configuration Validation Rules
+# LSC Next Best Configuration Validation Rules
 # ===================================================
 # Rules to validate Next Best Customer (NBC), Next Best Action (NBA),
 # and Next Best Message (NBM) configuration including data, territory
@@ -18,7 +18,7 @@
 schema_version: "1.0"
 category_name: "Next Best Configuration"
 description: |
-  Validation rules for AFLS Next Best Customer (NBC), Next Best Action (NBA),
+  Validation rules for LSC Next Best Customer (NBC), Next Best Action (NBA),
   and Next Best Message (NBM) configuration. Covers data requirements,
   territory alignment, ProductGuidance setup, and mobile cache.
 
@@ -216,7 +216,7 @@ rules:
       via ProductGuidance, which in turn links to Product2. Without Product2
       records, ProductGuidance cannot be created, and NBM recommendations cannot
       include product information. Product2 is a standard Salesforce object
-      extended by LifeSciMarketableProduct in AFLS.
+      extended by LifeSciMarketableProduct in LSC.
     category: configuration
     severity: info
     check:
@@ -281,7 +281,7 @@ rules:
     description: |
       Verifies that Account records exist. Next Best recommendations reference
       Account records. Without accounts, no recommendations can be created.
-      Accounts in AFLS are typically PersonAccounts representing Healthcare
+      Accounts in LSC are typically PersonAccounts representing Healthcare
       Providers (HCPs) or Business Accounts representing Healthcare Organizations (HCOs).
     category: data
     severity: error
@@ -311,7 +311,7 @@ rules:
       Checks whether HealthcareProvider records exist. HealthcareProvider is
       the Industry Cloud object representing individual healthcare practitioners.
       While not directly required for Next Best features, HealthcareProvider
-      records are typically the target of NBC/NBA/NBM recommendations in AFLS
+      records are typically the target of NBC/NBA/NBM recommendations in LSC
       implementations. This check provides awareness of whether HCP data exists.
     category: data
     severity: error

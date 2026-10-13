@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:standardvalueset-names-and-standard-picklist-fields pages:1476-1479 -->
 # StandardValueSet Names and Standard Picklist Fields
 
-AFLS Overview                                                                 StandardValueSet Names and Standard Picklist Fields
+Life Sciences Cloud (LSC) Overview                                                                 StandardValueSet Names and Standard Picklist Fields
 
 
 
@@ -63,7 +63,7 @@ APTCategoryEnum                                                     ActionPlanTe
 
 <!-- page:1477 -->
 
-AFLS Overview                                       StandardValueSet Names and Standard Picklist Fields
+LSC Overview                                       StandardValueSet Names and Standard Picklist Fields
 
 
 
@@ -132,7 +132,7 @@ GoalDefinitionUsageType                    GoalDefinition.UsageType
 
 <!-- page:1478 -->
 
-AFLS Overview                                StandardValueSet Names and Standard Picklist Fields
+LSC Overview                                StandardValueSet Names and Standard Picklist Fields
 
 
 
@@ -201,7 +201,7 @@ MergeRequestOriginType            MergeRequest.OriginType
 
 <!-- page:1479 -->
 
-AFLS Overview                            StandardValueSet Names and Standard Picklist Fields
+LSC Overview                            StandardValueSet Names and Standard Picklist Fields
 
 
 

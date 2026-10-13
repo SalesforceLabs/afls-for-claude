@@ -1,6 +1,6 @@
-## **Demo Script: Configuring and Using Multi-Object Layouts for Accounts in AFLS**
+## **Demo Script: Configuring and Using Multi-Object Layouts for Accounts in Life Sciences Cloud (LSC)**
 
-**Narrator:** \"Hello, and welcome to this demonstration of the **Multi-Object Record View component** within Salesforce AFLS. This powerful feature consolidates fields from several related objects, specifically **Account and Healthcare Provider**, onto a single record page. This design makes it significantly easier for users to view and manage data, streamlines workflows, and improves overall efficiency by eliminating the need to navigate to multiple pages to gather complete account information.\"
+**Narrator:** \"Hello, and welcome to this demonstration of the **Multi-Object Record View component** within Salesforce LSC. This powerful feature consolidates fields from several related objects, specifically **Account and Healthcare Provider**, onto a single record page. This design makes it significantly easier for users to view and manage data, streamlines workflows, and improves overall efficiency by eliminating the need to navigate to multiple pages to gather complete account information.\"
 
 ### **Part 1: Administrator Demo - Configuring Multi-Object Layouts**
 

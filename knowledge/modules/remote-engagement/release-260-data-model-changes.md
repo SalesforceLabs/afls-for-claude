@@ -14,9 +14,9 @@ In all of these cases, there is currently no clean way to collect a compliance s
 
 ## What's Changing
 
-AFLS introduced a flexible data model that separates signature requests from remote visit records. This allows signature requests to be created and tracked independently with support for secure signing links sent via email.
+Life Sciences Cloud (LSC) introduced a flexible data model that separates signature requests from remote visit records. This allows signature requests to be created and tracked independently with support for secure signing links sent via email.
 
-**Important:** This is not the feature itself. What we are introducing here are the **data model foundations** that make these scenarios possible. These changes prepare AFLS to support asynchronous compliance signature features in a future release without needing to redesign the data model later.
+**Important:** This is not the feature itself. What we are introducing here are the **data model foundations** that make these scenarios possible. These changes prepare LSC to support asynchronous compliance signature features in a future release without needing to redesign the data model later.
 
 ## New Core Entity: Digital Signature Request
 

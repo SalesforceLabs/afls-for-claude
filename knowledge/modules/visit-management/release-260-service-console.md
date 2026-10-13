@@ -2,7 +2,7 @@
 
 Hello everyone. In this video, we are going to look at a powerful productivity enhancement for the Web experience in the Spring '26 release: Managing Visits from the Service Console.
 
-This feature is for Inside Sales Representatives and Service Agents who typically operate in high-volume call center environments where efficiency is crucial. These users need to manage multiple visits, accounts, and cases simultaneously. In AFLS commercial application, creating a visit opens a modal window—a pop-up that blocks the rest of the screen. This makes it difficult to reference other data or multitask, leading to lost context and slower task completion.
+This feature is for Inside Sales Representatives and Service Agents who typically operate in high-volume call center environments where efficiency is crucial. These users need to manage multiple visits, accounts, and cases simultaneously. In Life Sciences Cloud (LSC) commercial application, creating a visit opens a modal window—a pop-up that blocks the rest of the screen. This makes it difficult to reference other data or multitask, leading to lost context and slower task completion.
 
 To solve this, we have integrated Visit Management directly into the Service Console. Now Visit Engagement page opens in subtabs rather than blocking modal window. This allows users to juggle multiple records and maintain context across different interactions within a single workspace.
 

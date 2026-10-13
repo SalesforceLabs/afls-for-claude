@@ -1,6 +1,6 @@
 # Visit Configuration — Support Engineering Training
 
-**Session:** AFLS4CE Value Chain Training — Jun 2, 2026 (deck-side companion)
+**Session:** LSC4CE Value Chain Training — Jun 2, 2026 (deck-side companion)
 **Audience:** Support engineers
 **Source:** Engineering training series (deck reference)
 **Presenter:** Jim Morrow

@@ -1,10 +1,10 @@
 ## Briefings (Daily Podcasts) - Summer '26 Demo
 
-Presenter: Saurabh Bansal, Product Manager, AFLS
+Presenter: Saurabh Bansal, Product Manager, Life Sciences Cloud (LSC)
 
 ### Overview
 
-Briefings (AKA Daily Podcast) is an AI-powered audio briefing capability available within the AFLS iPad application. It transforms complex account data such as visit history, prescribing trends into personalized, concise audio summaries that reps can listen to on their iPads before each HCP or HCO visit.
+Briefings (AKA Daily Podcast) is an AI-powered audio briefing capability available within the LSC iPad application. It transforms complex account data such as visit history, prescribing trends into personalized, concise audio summaries that reps can listen to on their iPads before each HCP or HCO visit.
 
 ### Key Technical Details
 
@@ -29,7 +29,7 @@ Briefings (AKA Daily Podcast) is an AI-powered audio briefing capability availab
 
 ### Player Features
 
-- **Mini player** and **full player** views (both built in-house for AFLS iPad)
+- **Mini player** and **full player** views (both built in-house for LSC iPad)
 - Tracks arranged in visit calendar order
 - Background playback — hide player and continue working in app
 - Animated wave icon indicates audio is playing

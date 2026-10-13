@@ -1,28 +1,28 @@
-Welcome everyone to this series of recordings. My name is Eva Miguel, and in this video, I'm going to guide you through how to configure and manage Content in AFLS.
+Welcome everyone to this series of recordings. My name is Eva Miguel, and in this video, I'm going to guide you through how to configure and manage Content in LSC.
 
-Let me walk you through how Intelligent Content flows in Salesforce AFLS.
+Let me walk you through how Intelligent Content flows in Salesforce LSC.
 
 In the life sciences industry, this process is often called CLM --- Closed Loop Marketing.\
 It's all about delivering compliant, personalized content to healthcare professionals, tracking its usage, and using those insights to continuously improve engagement strategies.
 
-In Salesforce AFLS, we use the term Intelligent Content to describe this entire process.
+In Salesforce Life Sciences Cloud (LSC), we use the term Intelligent Content to describe this entire process.
 
-It starts outside of AFLS, where the Home Office defines the messaging strategy.\
+It starts outside of LSC, where the Home Office defines the messaging strategy.\
 Content is created in the customer's Content Management Systems and approved through MLR processes in their existing systems.
 
-Once approved, the content is pushed into AFLS, either:
+Once approved, the content is pushed into LSC, either:
 
 1.  Manually via the Admin Console --- ideal for small volumes or quick updates,
 
-2.  Automatically via the Content API, connecting AFLS to systems like Veeva Vault PromoMats.
+2.  Automatically via the Content API, connecting LSC to systems like Veeva Vault PromoMats.
 
-    - Metadata like product assignments, activation dates, and expiration dates flow directly into AFLS.
+    - Metadata like product assignments, activation dates, and expiration dates flow directly into LSC.
 
-AFLS supports two content types:
+LSC supports two content types:
 
 - PDF presentations
 
-- HTML presentations, which must follow the AFLS content format before it is pushed into AFLS.
+- HTML presentations, which must follow the LSC content format before it is pushed into LSC.
 
 Once uploaded, the content is distributed to the right territories so only the right field teams have access.
 
@@ -35,7 +35,7 @@ ADMIN CONSOLE
 
 Let's see the Admin experience, starting by Uploading a presentation via the Admin Console
 
-We start on the Admin console in AFLS, on Web, then we go to the Intelligent content tile
+We start on the Admin console in LSC, on Web, then we go to the Intelligent content tile
 
 Here you will land in a *Centralized View* of all presentations within the system, in the presentations tab,
 
@@ -55,7 +55,7 @@ From this view, admins have full visibility into the presentation library, From 
 
   - External System ID
 
-  - Custom Presentation flag -- showing if the presentation was created directly by an end user within AFLS.
+  - Custom Presentation flag -- showing if the presentation was created directly by an end user within LSC.
 
 Admins can also take actions --- such as updating, editing, or activating/deactivating so that they can manage existing presentations as needed.
 
@@ -192,7 +192,7 @@ Here, we'll define important details such as:
 
 - All fields --- including custom ones --- can be automatically populated via the Content API.
 
-- If the customer already maintains this metadata in PromoMats, it can flow directly into AFLS through the integration, so there's no need for manual updates.
+- If the customer already maintains this metadata in PromoMats, it can flow directly into LSC through the integration, so there's no need for manual updates.
 
 Once all the presentation parameters have been added and reviewed, we simply tap on 'Done'.
 
@@ -314,7 +314,7 @@ When a page is replaced, the system will deactivate the previous file and upload
 
 All versions are securely stored in the system, so you always have a complete version history.
 
-On top of that, AFLS tracks which version was presented and to which HCP, giving you full visibility for compliance, audits, and analytics, along with the products and messages shown, the time spent on each page or the HCP feedback.
+On top of that, LSC tracks which version was presented and to which HCP, giving you full visibility for compliance, audits, and analytics, along with the products and messages shown, the time spent on each page or the HCP feedback.
 
 So we review all of them and we can confirm.
 
@@ -342,7 +342,7 @@ Once the updates are complete, I simply click Save to apply the changes.
 
 Next topic is Content API...
 
-In the API Queue tab, you can see all the presentations that have been pushed into AFLS via the Content API.\
+In the API Queue tab, you can see all the presentations that have been pushed into LSC via the Content API.\
 This is where content flows from external systems like Veeva PromoMats or any other Digital Asset Management (DAM) platform.
 
 From here, admins can monitor the status of each push, making it easy to track whether a presentation was successfully processed or if any errors need attention.
@@ -390,8 +390,8 @@ In the body, you'll see key details such as:
   - For this example, I've uploaded the actual content files into these variables, which represent the ZIP files for the presentation pages.
 
 The big benefit here is automation:\
-Everything can flow automatically into AFLS, so admins don't need to manually re-enter metadata or update settings.\
-If a piece of content is updated or withdrawn upstream, that change will be reflected in AFLS, keeping the system perfectly aligned with the source of truth.
+Everything can flow automatically into LSC, so admins don't need to manually re-enter metadata or update settings.\
+If a piece of content is updated or withdrawn upstream, that change will be reflected in LSC, keeping the system perfectly aligned with the source of truth.
 
 Once the content has been pushed through the API, only two final steps need to be completed in the Admin Console:
 

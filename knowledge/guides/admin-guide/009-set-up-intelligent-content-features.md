@@ -23,7 +23,7 @@ Configure email templates and fragments that streamline email communication betw
 and healthcare professionals (HCPs). Manage and capture consent to help ensure that your
 organization meets relevant compliance requirements, and monitor email analytics to optimize
 campaign performance. Sales reps can send emails to HCPs by using preapproved templates
-throughout AFLS for Customer Engagement and the AFLS mobile app.
+throughout Life Sciences Cloud (LSC) for Customer Engagement and the LSC mobile app.
 Presentations
 Streamline content management so that field users can deliver tailored presentations to healthcare
 professionals (HCPs) during face-to-face and remote interactions. Create and manage effective
@@ -42,7 +42,7 @@ Configure email templates and fragments that streamline email communication betw
 healthcare professionals (HCPs). Manage and capture consent to help ensure that your organization
 meets relevant compliance requirements, and monitor email analytics to optimize campaign
 performance. Sales reps can send emails to HCPs by using preapproved templates throughout Life
-Sciences Cloud for Customer Engagement and the AFLS mobile app.
+Sciences Cloud for Customer Engagement and the LSC mobile app.
 
 Unlike standard Salesforce email templates, Life Sciences email templates and reusable fragments
 provide a controlled framework for sales reps to send emails that are personalized, adherent to industry
@@ -62,7 +62,7 @@ features.
 ## Mobile Configuration for Emails
 
 Set up object metadata cache configurations for the supported Life Sciences email objects. Generate a
-metadata cache to package the object schema configuration that the AFLS mobile app
+metadata cache to package the object schema configuration that the LSC mobile app
 uses for online and offline access. This configuration defines how the mobile app fetches and stores
 the necessary metadata when a network connection is unavailable.
 Configure Email Settings
@@ -81,7 +81,7 @@ Monitor and Manage the Email Queue
 Get an administrative view into the flow of emails. Monitor and manage emails that were sent recently
 or are awaiting delivery.
 Use a Third-Party Email Service
-The AFLS for Customer Engagement managed package includes the
+The LSC for Customer Engagement managed package includes the
 EmailQueueProcessor Apex interface to integrate with a third-party email service provider and handle
 email operations. Create an Apex class that implements the EmailQueueProcessor interface.
 
@@ -97,7 +97,7 @@ features.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -167,7 +167,7 @@ enable field level security for the correct profiles on all fields on these obje
 Mobile Configuration for Emails
 
 Set up object metadata cache configurations for the supported Life Sciences email objects. Generate a
-metadata cache to package the object schema configuration that the AFLS mobile app
+metadata cache to package the object schema configuration that the LSC mobile app
 uses for online and offline access. This configuration defines how the mobile app fetches and stores the
 necessary metadata when a network connection is unavailable.
 
@@ -177,7 +177,7 @@ necessary metadata when a network connection is unavailable.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -188,7 +188,7 @@ To set up Life Sciences Customer Engagement           Life Sciences Commercial A
 data:
 
 
-To enable offline access for the objects that support emails in the AFLS mobile app, create
+To enable offline access for the objects that support emails in the LSC mobile app, create
 these object metadata cache configurations.
 
 
@@ -258,7 +258,7 @@ control, apply settings for the entire org, for certain profiles, or for specifi
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -296,7 +296,7 @@ Setting                           Description
 adhere to template availability, start and end dates, and
 subscription settings.
 
-Sort templates by last modified   Sort templates by the Last Modified Date in AFLS
+Sort templates by last modified   Sort templates by the Last Modified Date in LSC
 for Customer Engagement.
 
 5. Under Delivery Settings, configure these settings as needed.
@@ -394,7 +394,7 @@ available to the right users.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -437,7 +437,7 @@ Upload ZIP files to create email templates that help users draft emails faster.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -524,7 +524,7 @@ the templates.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -551,7 +551,7 @@ territory are also aligned to that template.
 
 ## See Also
 
-Set Up Sales Territories for AFLS
+Set Up Sales Territories for LSC
 
 
 Manage Email Template Attachments
@@ -564,7 +564,7 @@ Work with email template attachments and upload new versions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -605,7 +605,7 @@ as updating email text or images.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -652,7 +652,7 @@ email template, they can select that blurb to include product details.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -721,7 +721,7 @@ email status and collect engagement metrics for sent emails.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -767,7 +767,7 @@ are awaiting delivery.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -821,7 +821,7 @@ consent, related presentation, tracking and status information, and more.
 
 Use a Third-Party Email Service
 
-The AFLS for Customer Engagement managed package includes the EmailQueueProcessor
+The LSC for Customer Engagement managed package includes the EmailQueueProcessor
 Apex interface to integrate with a third-party email service provider and handle email operations. Create
 an Apex class that implements the EmailQueueProcessor interface.
 
@@ -831,7 +831,7 @@ an Apex class that implements the EmailQueueProcessor interface.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -896,7 +896,7 @@ service.
 4. Save your changes.
 5. If needed, create a named credential and external credential to securely store API keys.
 See Named Credentials as Callout Endpoints.
-6. From the Email tile in the Admin Console, update email settings so that AFLS for
+6. From the Email tile in the Admin Console, update email settings so that LSC for
 Customer Engagement uses your Apex class to send emails and track status.
 See Configure Email Settings.
 
@@ -908,7 +908,7 @@ sending emails and updating the tracking status in Salesforce. You can add addit
 implementations for different email service providers.
 EmailQueueProcessor Example
 This example creates an Apex class that implements the EmailQueueProcessor interface to integrate a
-third-party email service with AFLS for Customer Engagement.
+third-party email service with LSC for Customer Engagement.
 
 See Also
 
@@ -931,7 +931,7 @@ for different email service providers.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1071,7 +1071,7 @@ See EmailQueueProcessor Example.
 EmailQueueProcessor Example
 
 This example creates an Apex class that implements the EmailQueueProcessor interface to integrate a
-third-party email service with AFLS for Customer Engagement.
+third-party email service with LSC for Customer Engagement.
 
 
 **REQUIRED EDITIONS**
@@ -1079,7 +1079,7 @@ third-party email service with AFLS for Customer Engagement.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1677,7 +1677,7 @@ Before you get started with Intelligent Content, complete a few tasks to prepare
 presentations.
 Mobile Configuration for Presentations
 Set up object metadata cache configurations for Life Sciences presentation objects. Generate a
-metadata cache to package the object schema configuration that the AFLS mobile app
+metadata cache to package the object schema configuration that the LSC mobile app
 uses for online and offline access. This configuration defines how the mobile app fetches and stores
 the necessary metadata when a network connection is unavailable to provide a seamless experience
 whether users are online and offline.
@@ -1728,7 +1728,7 @@ and dashboards by using presentation click stream entry data.
 
 ## See Also
 
-Compare the AFLS Mobile App and Desktop Site
+Compare the LSC Mobile App and Desktop Site
 
 
 Get Your Org Ready for Presentations
@@ -1742,7 +1742,7 @@ presentations.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1774,7 +1774,7 @@ Presentation Party Accesses                           Read, Create, Edit, Delete
 
 Presentations                                         Read
 
-2. Enable users to create custom presentations in the AFLS mobile app.
+2. Enable users to create custom presentations in the LSC mobile app.
 a. Enable these additional object permissions on the right permission sets or profiles.
 
 <!-- page:340 -->
@@ -1855,7 +1855,7 @@ files.
 Mobile Configuration for Presentations
 
 Set up object metadata cache configurations for Life Sciences presentation objects. Generate a
-metadata cache to package the object schema configuration that the AFLS mobile app
+metadata cache to package the object schema configuration that the LSC mobile app
 uses for online and offline access. This configuration defines how the mobile app fetches and stores the
 necessary metadata when a network connection is unavailable to provide a seamless experience
 whether users are online and offline.
@@ -1866,7 +1866,7 @@ whether users are online and offline.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1939,7 +1939,7 @@ for specific users.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2074,7 +2074,7 @@ Setting                           Description
 
 ## Create custom presentations
 
-In the AFLS mobile app, users can create custom
+In the LSC mobile app, users can create custom
 presentations in the content library by using approved pages from
 HTML presentations.
 
@@ -2259,7 +2259,7 @@ consistency, manage version control and activation schedules.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2329,7 +2329,7 @@ Create presentations by selecting and combining from pages from existing present
 presentations by reusing pages makes maintaining content easier and makes your presentations more
 consistent.
 Monitor the Presentation API Job Queue
-Monitor the status of presentations that are uploaded to AFLS for Customer
+Monitor the status of presentations that are uploaded to LSC for Customer
 Engagement via the content management REST API.
 Distribute Presentations to Territories
 Assign relevant territories to presentations so that only the sales reps for those territories can access
@@ -2365,7 +2365,7 @@ presentation page record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2498,7 +2498,7 @@ consistent.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2545,7 +2545,7 @@ longer available for use.
 
 Monitor the Presentation API Job Queue
 
-Monitor the status of presentations that are uploaded to AFLS for Customer Engagement
+Monitor the status of presentations that are uploaded to LSC for Customer Engagement
 via the content management REST API.
 
 
@@ -2554,7 +2554,7 @@ via the content management REST API.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2585,7 +2585,7 @@ them in the content library.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2615,7 +2615,7 @@ to that presentation.
 
 ## See Also
 
-Set Up Sales Territories for AFLS
+Set Up Sales Territories for LSC
 
 
 Edit Products and Messages for Individual Pages
@@ -2635,7 +2635,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2677,7 +2677,7 @@ pages, or make several pages mandatory at once.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2715,7 +2715,7 @@ engagement.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2753,7 +2753,7 @@ reorder the pages.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2787,7 +2787,7 @@ automatically and deactivates the previous versions.
 
 ## See Also
 
-AFLS Developer Guide: Content Management
+LSC Developer Guide: Content Management
 
 
 Remove Presentations
@@ -2800,7 +2800,7 @@ Remove presentations from your org when you no longer need them.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2845,7 +2845,7 @@ content. Recommended presentations suggest the best content to use during intera
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2885,7 +2885,7 @@ recommended presentations to select the best content for that account and territ
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2936,7 +2936,7 @@ that aren’t targeted to a presentation, or prevent reps from adding accounts t
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3004,7 +3004,7 @@ search terms.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3054,7 +3054,7 @@ Use Data 360 to create a vector search index of searchable strings from your pre
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3067,7 +3067,7 @@ To configure presentations and settings:             Life Sciences Commercial Ad
 
 
 Before you set up smart content search, make sure that Data 360 is set up for your Salesforce org. See
-Set Up Data 360 for AFLS for Customer Engagement.
+Set Up Data 360 for LSC for Customer Engagement.
 
 
 Note If you upload a presentation before you set up smart content search, the presentation content
@@ -3169,7 +3169,7 @@ future interactions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3189,7 +3189,7 @@ and visibility controls still apply.
 Provide healthcare professionals (HCPs) with secure, token based access to a dedicated portal for
 reviewing presentations. When field users share presentations as email links, HCPs can view content in
 the presentation player without logging in or downloading attachments. In your Experience Cloud site,
-HCPs always see the latest version of the presentation content, and AFLS for Customer
+HCPs always see the latest version of the presentation content, and LSC for Customer
 Engagement tracks presentation metrics and engagement data.
 2. Configure Guest User Access for Your Presentation Site
 Assign required permission sets so that healthcare professionals (HCPs) can open email links and view
@@ -3211,7 +3211,7 @@ reviewing presentations. When field users share presentations as email links, HC
 
 
 the presentation player without logging in or downloading attachments. In your Experience Cloud site,
-HCPs always see the latest version of the presentation content, and AFLS for Customer
+HCPs always see the latest version of the presentation content, and LSC for Customer
 Engagement tracks presentation metrics and engagement data.
 
 
@@ -3220,7 +3220,7 @@ Engagement tracks presentation metrics and engagement data.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3296,7 +3296,7 @@ presentations in your Experience Cloud site without logging in.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3352,7 +3352,7 @@ presentations users can share.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3434,7 +3434,7 @@ content.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3458,7 +3458,7 @@ When you define mandatory pages, keep these considerations in mind.
 
 Mandatory Pages in Custom Presentations
 
-AFLS for Customer Engagement helps to make sure that custom presentations meet your
+LSC for Customer Engagement helps to make sure that custom presentations meet your
 organization's compliance guidelines. When your field users create custom presentations, required pages
 are denoted with an asterisk. If users add another page from a presentation that has mandatory pages,
 they must add all mandatory pages to their presentation. To remove a mandatory page, they must
@@ -3468,7 +3468,7 @@ remove all other pages from that presentation too.
 Mandatory Pages in the Presentation Player
 
 During interactions with healthcare professionals (HCPs), users can navigate presentations freely in the
-content library and the presentation player. In the presentation player, AFLS for Customer
+content library and the presentation player. In the presentation player, LSC for Customer
 Engagement:
 
 - Denotes mandatory pages with an asterisk
@@ -3490,7 +3490,7 @@ dashboards by using presentation click stream entry data.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 
 <!-- page:370 -->
@@ -3531,7 +3531,7 @@ operating system.
 -    Timestamps for when the user opened and left a page, and the total time spent on the page.
 -    Content feedback from the participant during or after the presentation.
 
-For details about all metrics collected, see PresentationClickStrmEntry in the AFLS
+For details about all metrics collected, see PresentationClickStrmEntry in the LSC
 Developer Guide.
 
 
@@ -3555,7 +3555,7 @@ templates.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3587,7 +3587,7 @@ can upload the ZIP files to Life Sciences Customer Engagement and create email t
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3618,7 +3618,7 @@ upload these ZIP files to create and share email templates with field users.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3747,7 +3747,7 @@ In the Send Email window, users see the populated email template.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3777,7 +3777,7 @@ from an email template.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 
 <!-- page:375 -->
 
@@ -3788,7 +3788,7 @@ Customer Engagement Add-on license, and the Life Sciences Customer Engagement ma
 package.
 
 
-These attributes are supported only for email templates in the AFLS mobile app. When
+These attributes are supported only for email templates in the LSC mobile app. When
 users send emails on desktop, only attributes on the user and account objects, which represent the email
 sender and recipient, are supported.
 
@@ -3977,7 +3977,7 @@ Add additional content into email template HTML and ZIP files.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4267,12 +4267,12 @@ template processor in Life Sciences Customer Engagement email templates.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-In the AFLS mobile app, all populated account and user fields, along with the associated
+In the LSC mobile app, all populated account and user fields, along with the associated
 objects, are available in lowercase within the JSON. Formula fields aren’t included.
 
 
@@ -4403,7 +4403,7 @@ Query Life Sciences Customer Engagement data in email templates and show results
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 
 <!-- page:386 -->
@@ -4435,7 +4435,7 @@ Executes code automatically as soon as the Life Sciences email loads.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4476,7 +4476,7 @@ Queries Life Sciences Customer Engagement data and returns results to the specif
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4556,7 +4556,7 @@ the whole page. Instead, use parent based styles such as .some-custom- container
 
 Results
 
-In the AFLS mobile app, these events are logged so that you can identify how many times
+In the LSC mobile app, these events are logged so that you can identify how many times
 the function executes in the email.
 
 - Delete
@@ -4669,7 +4669,7 @@ Prevent sending emails with empty or invalid query data in Life Sciences Custome
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4779,7 +4779,7 @@ supports two types of source files for presentations: ZIP files and PDFs.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4829,7 +4829,7 @@ improve performance over time.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5078,7 +5078,7 @@ player.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5143,7 +5143,7 @@ Customer Engagement.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5176,7 +5176,7 @@ presentation player, users see the fully populated presentation page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5199,7 +5199,7 @@ You can include JavaScript code in the presentation ZIP file for Life Sciences C
 When the JavaScript function is called during presentations, the action is performed in the
 presentation player.
 Callback Event Function
-When an event occurs in the AFLS mobile app, you can use a callback event function to
+When an event occurs in the LSC mobile app, you can use a callback event function to
 notify the page’s JavaScript, HTML, or template. For example, events can be triggered when users
 pause or resume tracking presentation metrics.
 
@@ -5219,7 +5219,7 @@ from presentation ZIP files.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5462,7 +5462,7 @@ template processor for Intelligent Content presentations.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5471,7 +5471,7 @@ currentTerritoryId: The ID of the current territory.
 currentTerritoryName: The name of the current territory.
 emailTemplateId: The ID of the email template that's associated with the curre
 nt page.
-state: The saved state of the presentation on the AFLS Mobile a
+state: The saved state of the presentation on the LSC Mobile a
 pp.
 presentationIndex: The presentation index in the presentations array.
 pageIndex: The page index in the pages array.
@@ -5576,12 +5576,12 @@ player.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-All of the functions listed are available in the AFLS mobile app. Only these functions are
+All of the functions listed are available in the LSC mobile app. Only these functions are
 available on desktop.
 
 -     gotoSlide
@@ -5666,12 +5666,12 @@ Opens an alert on the user’s mobile device with the specified message.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 
 Syntax
@@ -5698,12 +5698,12 @@ visits are created, Salesforce applies all configured visit validations.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 
 Tip We recommend invoking this function only once per presentation session.
@@ -5815,12 +5815,12 @@ Defines an area of the screen where the presentation player ignores the swipe ge
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 
 Syntax
@@ -5873,12 +5873,12 @@ Removes the region ID of an area of the screen where the presentation player ign
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 
 Syntax
@@ -5909,12 +5909,12 @@ button. These functions execute long-term operations in the 'returntovisitbutton
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 
 PresentationPlayer.disableDismiss()
@@ -5974,14 +5974,14 @@ callback method.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
-You can query the User, Account, Record Type, Territory2, UserTerritory2Association, AFLS
+You can query the User, Account, Record Type, Territory2, UserTerritory2Association, LSC
 objects, and custom objects. To query records:
 
 - The user must have Read permissions on the queried objects and fields.
@@ -6194,12 +6194,12 @@ and show it in the presentation player.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 When called, this function:
 
@@ -6268,7 +6268,7 @@ nothing happens.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -6294,7 +6294,7 @@ nothing happens.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -6315,7 +6315,7 @@ Goes to the specified pages and assets within a presentation.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -6444,12 +6444,12 @@ page, the page isn't linked to a template.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 <!-- page:422 -->
 
@@ -6472,12 +6472,12 @@ Opens the Send Email window with the email templates that are available to the u
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 
 Syntax
@@ -6512,7 +6512,7 @@ Logs error messages within the presentation player.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 
 <!-- page:423 -->
@@ -6523,7 +6523,7 @@ Customer Engagement Add-on license, and the Life Sciences Customer Engagement ma
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 To log errors efficiently and prevent excess entries:
 
@@ -6555,12 +6555,12 @@ a presentation and continue where they left off in the same session or a future 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 
 Syntax
@@ -6605,12 +6605,12 @@ or submitted.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 When called, this function:
 
@@ -6690,12 +6690,12 @@ presentation page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 
 Syntax
@@ -6723,12 +6723,12 @@ Stops tracking presentation metrics for the current slide.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 <!-- page:427 -->
 
@@ -6751,12 +6751,12 @@ Sets the feedback from the healthcare professional (HCP) to the specified type d
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 
 Syntax
@@ -6810,7 +6810,7 @@ method.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -6819,7 +6819,7 @@ plan to upsert from the presentation content. For example, to update an account 
 content, allowlist the Account object.
 
 
-This function is supported only in the AFLS mobile app.
+This function is supported only in the LSC mobile app.
 
 You can create or update custom objects and supported Life Sciences Customer Engagement objects. To
 create or update records:
@@ -6950,7 +6950,7 @@ errors can occur when:
 
 Callback Event Function
 
-When an event occurs in the AFLS mobile app, you can use a callback event function to
+When an event occurs in the LSC mobile app, you can use a callback event function to
 notify the page’s JavaScript, HTML, or template. For example, events can be triggered when users pause
 or resume tracking presentation metrics.
 
@@ -6964,7 +6964,7 @@ or resume tracking presentation metrics.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 

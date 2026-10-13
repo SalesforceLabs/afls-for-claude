@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:searchresultactionconfig-2 pages:1963-1964 -->
 # SearchResultActionConfig
 
-AFLS Overview                                                                                                  SearchResultActionConfig
+Life Sciences Cloud (LSC) Overview                                                                                                  SearchResultActionConfig
 
 
 
@@ -67,7 +67,7 @@ Valid values are:
 
 <!-- page:1964 -->
 
-AFLS Overview                                                                           SearchResultActionConfig
+LSC Overview                                                                           SearchResultActionConfig
 
 
 

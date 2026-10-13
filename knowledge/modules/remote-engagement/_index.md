@@ -1,6 +1,6 @@
 # Remote Engagement
 
-Remote Engagement in AFLS provides virtual detailing and remote interaction capabilities for field representatives. This module enables video calls, screen sharing, and digital content presentation for engaging healthcare providers remotely.
+Remote Engagement in Life Sciences Cloud (LSC) provides virtual detailing and remote interaction capabilities for field representatives. This module enables video calls, screen sharing, and digital content presentation for engaging healthcare providers remotely.
 
 ## Documentation Files
 

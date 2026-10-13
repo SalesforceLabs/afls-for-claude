@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:working-with-electronic-health-records pages:1482-1482 -->
 # Working With Electronic Health Records
 
-AFLS Overview                                                                               Working With Electronic Health Records
+Life Sciences Cloud (LSC) Overview                                                                               Working With Electronic Health Records
 
 
 
@@ -14,7 +14,7 @@ create(), describeSObjects()
 
 ## Special Access Rules
 
-This object is available to users with Manage Pharmacy Benefits Verification and Health Cloud Starter (for AFLS) or Health
+This object is available to users with Manage Pharmacy Benefits Verification and Health Cloud Starter (for LSC) or Health
 Cloud Foundation (for Health Cloud) permission set.
 
 

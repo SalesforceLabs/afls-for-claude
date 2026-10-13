@@ -13,8 +13,8 @@ import { queryFieldValues, getValueColumn, extractFieldValue } from "./helpers.j
 
 export function register(server: McpServer) {
   server.tool(
-    "list_afls_actions",
-    "THE ONLY WAY to list AFLS Quick Actions or Custom Actions. NEVER use run_soql for actions - objects like LifeSciCustomAction__mdt, CustomAction__c, LifeSciConfigType__c DO NOT EXIST. This tool uses Tooling API internally.",
+    "list_lsc_actions",
+    "THE ONLY WAY to list LSC Quick Actions or Custom Actions. NEVER use run_soql for actions - objects like LifeSciCustomAction__mdt, CustomAction__c, LifeSciConfigType__c DO NOT EXIST. This tool uses Tooling API internally.",
     {
       actionType: z
         .enum(["quick", "custom", "both"])
@@ -136,20 +136,20 @@ export function register(server: McpServer) {
       }
 
       return {
-        content: [{ type: "text", text: `# AFLS Actions\n\n${results.join("")}` }],
+        content: [{ type: "text", text: `# LSC Actions\n\n${results.join("")}` }],
       };
     }
   );
 
   // Tool: Delete Quick/Custom Action
   server.tool(
-    "delete_afls_action",
-    "Delete an AFLS Quick/Custom Action. Accepts a record ID or a MasterLabel/DeveloperName. NEVER use run_soql or delete_record — they will FAIL.",
+    "delete_lsc_action",
+    "Delete an LSC Quick/Custom Action. Accepts a record ID or a MasterLabel/DeveloperName. NEVER use run_soql or delete_record — they will FAIL.",
     {
       actionId: z
         .string()
         .describe(
-          "The record ID (from list_afls_actions) OR the MasterLabel/DeveloperName of the action to delete"
+          "The record ID (from list_lsc_actions) OR the MasterLabel/DeveloperName of the action to delete"
         ),
       actionName: z
         .string()
@@ -189,7 +189,7 @@ export function register(server: McpServer) {
               content: [
                 {
                   type: "text",
-                  text: `# Action Not Found\n\nNo action found with name: ${actionId}\n\nUse \`list_afls_actions\` to see available actions and their IDs.`,
+                  text: `# Action Not Found\n\nNo action found with name: ${actionId}\n\nUse \`list_lsc_actions\` to see available actions and their IDs.`,
                 },
               ],
             };
@@ -209,7 +209,7 @@ export function register(server: McpServer) {
             content: [
               {
                 type: "text",
-                text: `# Action Not Found\n\nNo LifeSciConfigRecord found with ID: ${resolvedId}\n\nUse \`list_afls_actions\` to see available actions and their IDs.`,
+                text: `# Action Not Found\n\nNo LifeSciConfigRecord found with ID: ${resolvedId}\n\nUse \`list_lsc_actions\` to see available actions and their IDs.`,
               },
             ],
           };
@@ -298,8 +298,8 @@ export function register(server: McpServer) {
 
   // Tool: Update Quick/Custom Action
   server.tool(
-    "update_afls_action",
-    "Update an existing AFLS Quick or Custom Action. Accepts a record ID or MasterLabel/DeveloperName. Can update the label, activation status, and field values (Location, ActionName, SortOrder, Profiles, etc.).",
+    "update_lsc_action",
+    "Update an existing LSC Quick or Custom Action. Accepts a record ID or MasterLabel/DeveloperName. Can update the label, activation status, and field values (Location, ActionName, SortOrder, Profiles, etc.).",
     {
       actionId: z
         .string()
@@ -347,7 +347,7 @@ export function register(server: McpServer) {
               content: [
                 {
                   type: "text",
-                  text: `# Action Not Found\n\nNo action found with name: ${actionId}\n\nUse \`list_afls_actions\` to see available actions.`,
+                  text: `# Action Not Found\n\nNo action found with name: ${actionId}\n\nUse \`list_lsc_actions\` to see available actions.`,
                 },
               ],
             };
@@ -494,7 +494,7 @@ export function register(server: McpServer) {
   // Tool: Create Quick Action
   server.tool(
     "create_quick_action",
-    "Create an AFLS Quick Action via Tooling API. Quick actions appear on the floating action button on mobile and in quick action menus on web.",
+    "Create an LSC Quick Action via Tooling API. Quick actions appear on the floating action button on mobile and in quick action menus on web.",
     {
       label: z
         .string()
@@ -583,7 +583,7 @@ export function register(server: McpServer) {
             content: [
               {
                 type: "text",
-                text: `# Failed to Create Quick Action\n\nCould not find QuickAction category. Ensure AFLS is installed in the org.`,
+                text: `# Failed to Create Quick Action\n\nCould not find QuickAction category. Ensure LSC is installed in the org.`,
               },
             ],
           };
@@ -734,7 +734,7 @@ export function register(server: McpServer) {
   // Tool: Create Custom Action
   server.tool(
     "create_custom_action",
-    "Create an AFLS Custom Action via Tooling API. Custom actions invoke Lightning components, flows, URLs, or Agentforce utterances.",
+    "Create an LSC Custom Action via Tooling API. Custom actions invoke Lightning components, flows, URLs, or Agentforce utterances.",
     {
       label: z
         .string()
@@ -816,7 +816,7 @@ export function register(server: McpServer) {
             content: [
               {
                 type: "text",
-                text: `# Failed to Create Custom Action\n\nCould not find CustomAction category. Ensure AFLS is installed in the org.`,
+                text: `# Failed to Create Custom Action\n\nCould not find CustomAction category. Ensure LSC is installed in the org.`,
               },
             ],
           };
@@ -996,7 +996,7 @@ export function register(server: McpServer) {
   );
   server.tool(
     "check_mobile_cache_status",
-    "THE ONLY WAY to check AFLS mobile metadata cache status. NEVER use run_soql - objects like MobileMetadataCache__c, MobileApplicationDetail, lsc4ce__MobileMetadataCache__c DO NOT EXIST. The correct object is LifeSciMobileMetadataRecord (standard SOQL).",
+    "THE ONLY WAY to check LSC mobile metadata cache status. NEVER use run_soql - objects like MobileMetadataCache__c, MobileApplicationDetail, lsc4ce__MobileMetadataCache__c DO NOT EXIST. The correct object is LifeSciMobileMetadataRecord (standard SOQL).",
     {
       targetOrg: z.string().optional().describe("Optional: specific org to query"),
     },
@@ -1132,7 +1132,7 @@ export function register(server: McpServer) {
             }
             const combinedError = `${errorCode} ${errorMsg} ${errorLog}`.toUpperCase();
             if (combinedError.includes("EXCEEDED_ID_LIMIT")) {
-              message += `- **Diagnosis:** \`EXCEEDED_ID_LIMIT\` during cache generation is a **known large-org limitation**, not a configuration error. The metadata service fetches field-definition labels in a batch that overflows on orgs with many sobjects/fields (FieldDefinition does not support pagination). This is fixed in newer package versions via chunked label fetching. **Action:** upgrade the AFLS managed package to the latest version; do not attempt to "fix" DB Schema or field configuration in response to this error.\n`;
+              message += `- **Diagnosis:** \`EXCEEDED_ID_LIMIT\` during cache generation is a **known large-org limitation**, not a configuration error. The metadata service fetches field-definition labels in a batch that overflows on orgs with many sobjects/fields (FieldDefinition does not support pagination). This is fixed in newer package versions via chunked label fetching. **Action:** upgrade the LSC managed package to the latest version; do not attempt to "fix" DB Schema or field configuration in response to this error.\n`;
             }
             if (!errorCode && !errorMsg && !errorLog && status === "Inactive") {
               message += `- **Note:** Record is inactive with no error details. It may need to be regenerated.\n`;

@@ -1,4 +1,4 @@
-# AFLS Intelligent Content Configuration Validation Rules
+# LSC Intelligent Content Configuration Validation Rules
 # ========================================================
 # Rules to validate Intelligent Content (CLM) configuration including
 # presentations, pages, territory distribution, presentation settings,
@@ -18,7 +18,7 @@
 schema_version: "1.0"
 category_name: "Intelligent Content Configuration"
 description: |
-  Validation rules for AFLS Intelligent Content (CLM) configuration.
+  Validation rules for LSC Intelligent Content (CLM) configuration.
   Covers presentations, presentation pages, territory distribution,
   product assignments, presentation settings, tracking, and mobile cache requirements.
 

@@ -50,12 +50,12 @@ Because no valid `StandardRole` value exists for these two categories, orgs freq
 1. Create one dedicated `EventMgmtParticipantRole` record per missing category. Since `StandardRole` has no matching value, use `Other`:
    ```
    create_record EventMgmtParticipantRole
-     Name: "AFLS NonProfiled Attendee Role"
+     Name: "LSC NonProfiled Attendee Role"
      Role: "NonProfiledAttendee"
      StandardRole: "Other"
 
    create_record EventMgmtParticipantRole
-     Name: "AFLS WriteIn Attendee Role"
+     Name: "LSC WriteIn Attendee Role"
      Role: "WriteInAttendee"
      StandardRole: "Other"
    ```

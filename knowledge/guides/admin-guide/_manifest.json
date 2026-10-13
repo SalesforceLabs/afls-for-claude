@@ -1,5 +1,5 @@
 {
-  "guideTitle": "Administer AFLS",
+  "guideTitle": "Administer LSC",
   "guideSlug": "admin-guide",
   "pdfFileName": "administer_life_sciences_cloud_3-3-2026.pdf",
   "totalPages": 1263,
@@ -27,14 +27,14 @@
     },
     {
       "slug": "set-up-life-sciences-cloud-for-customer-engagement-basics",
-      "title": "Set Up AFLS for Customer Engagement Basics",
+      "title": "Set Up LSC for Customer Engagement Basics",
       "startPage": 10,
       "endPage": 26,
       "file": "004-set-up-life-sciences-cloud-for-customer-engagement-basics.md"
     },
     {
       "slug": "set-up-the-life-sciences-cloud-mobile-app",
-      "title": "Set Up the AFLS Mobile App",
+      "title": "Set Up the LSC Mobile App",
       "startPage": 27,
       "endPage": 58,
       "file": "005-set-up-the-life-sciences-cloud-mobile-app.md"
@@ -97,7 +97,7 @@
     },
     {
       "slug": "use-life-sciences-cloud-for-customer-engagement-features",
-      "title": "Use AFLS for Customer Engagement Features",
+      "title": "Use LSC for Customer Engagement Features",
       "startPage": 644,
       "endPage": 717,
       "file": "014-use-life-sciences-cloud-for-customer-engagement-features.md"
@@ -111,7 +111,7 @@
     },
     {
       "slug": "life-sciences-cloud-for-customer-engagement-patch-releases",
-      "title": "AFLS for Customer Engagement Patch Releases",
+      "title": "LSC for Customer Engagement Patch Releases",
       "startPage": 734,
       "endPage": 768,
       "file": "016-life-sciences-cloud-for-customer-engagement-patch-releases.md"
@@ -195,7 +195,7 @@
     },
     {
       "slug": "set-up-patient-support-programs-analytics-for-life-sciences-cloud",
-      "title": "Set Up Patient Support Programs Analytics for AFLS",
+      "title": "Set Up Patient Support Programs Analytics for LSC",
       "startPage": 1064,
       "endPage": 1074,
       "file": "028-set-up-patient-support-programs-analytics-for-life-sciences-cloud.md"
@@ -209,7 +209,7 @@
     },
     {
       "slug": "set-up-patient-support-programs-analytics-for-life-sciences-cloud-2",
-      "title": "Set Up Patient Support Programs Analytics for AFLS",
+      "title": "Set Up Patient Support Programs Analytics for LSC",
       "startPage": 1076,
       "endPage": 1082,
       "file": "030-set-up-patient-support-programs-analytics-for-life-sciences-cloud-2.md"
@@ -293,14 +293,14 @@
     },
     {
       "slug": "product-catalog-management-in-life-sciences-cloud",
-      "title": "Product Catalog Management in AFLS",
+      "title": "Product Catalog Management in LSC",
       "startPage": 1257,
       "endPage": 1258,
       "file": "042-product-catalog-management-in-life-sciences-cloud.md"
     },
     {
       "slug": "view-events-using-enhanced-timeline-in-life-sciences-cloud",
-      "title": "View Events Using Enhanced Timeline in AFLS",
+      "title": "View Events Using Enhanced Timeline in LSC",
       "startPage": 1259,
       "endPage": 1263,
       "file": "043-view-events-using-enhanced-timeline-in-life-sciences-cloud.md"

@@ -20,7 +20,7 @@ individual tasks.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or Life Sciences Cloud (LSC)
 
 
 In the healthcare industry, advanced therapy refers to an innovative medical practice that uses genetics
@@ -110,7 +110,7 @@ Let’s go through the list of licenses.
 Advanced Therapy Management - Patients (500)
 
 This license provides an additional capacity of 500 enrollees who you can enroll in advanced therapies.
-Orgs that use AFLS or Health Cloud can purchase this add-on license to get additional
+Orgs that use LSC or Health Cloud can purchase this add-on license to get additional
 enrollment capacity.
 
 This license also includes an additional 500 Orchestration Runs per org (as each additional patient
@@ -118,7 +118,7 @@ requires one orchestrator run).
 
 Scheduler Add-On License
 
-AFLS and Health Cloud both offer 12000 service appointments per org per annum and
+LSC and Health Cloud both offer 12000 service appointments per org per annum and
 300 service appointments per user per annum. To use additional service appointments, purchase the
 Salesforce Scheduler–Additional Appointments license that provides 10000 additional service
 appointments per org per month.
@@ -143,7 +143,7 @@ for users who book slots and users who confirm the requests.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -188,7 +188,7 @@ Create users and assign them the Advanced Therapy Management profiles that you c
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -200,7 +200,7 @@ OR
 
 Manage Multi-Step Scheduling features
 
-To create, edit, and delete AFLS      Health Cloud Starter perm set
+To create, edit, and delete LSC      Health Cloud Starter perm set
 data:
 
 To create, edit, and delete Health Cloud data:
@@ -243,7 +243,7 @@ providing information about affiliated territories where consecutive work types 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Admins can also configure shifts of service resources assigned to a service territory for a work type (work
@@ -252,7 +252,7 @@ and Reschedule Appointments. When users conduct basic and advanced searches, the
 time slots for all work types configured as per the time required to complete each work type. Users can
 then book their preferred slots for all work types, and reschedule and cancel appointments as well.
 
-You can use Multi-Step Scheduling both in the context of AFLS and with other products.
+You can use Multi-Step Scheduling both in the context of LSC and with other products.
 
 
 Note When you enable Salesforce Scheduler settings, make sure to leave the Schedule
@@ -332,7 +332,7 @@ permission sets and permission set licenses.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -345,7 +345,7 @@ OR
 Manage Multi-Step Scheduling features
 
 
-## To create, edit, and delete AFLS
+## To create, edit, and delete LSC
 
 data:                                                   Health Cloud Starter permission set
 
@@ -361,7 +361,7 @@ Manage Health Cloud
 2. Select the appropriate user.
 3. In the Permission Set License Assignment related list, and click Edit Assignment.
 4. Select these permission set licenses:
-- Health Cloud Starter (for AFLS) or Health Cloud Platform (for Health Cloud)
+- Health Cloud Starter (for LSC) or Health Cloud Platform (for Health Cloud)
 - Multi-Step Scheduling
 - Action Plans
 - Industries Visit
@@ -369,7 +369,7 @@ Manage Health Cloud
 5. Click Save.
 6. In the Permission Set Assignments related list, click Edit Assignment.
 7. Move the following permission sets to the Enabled Permission Sets list.
-- Health Cloud Starter (for AFLS) or Health Cloud Foundation (for Health Cloud)
+- Health Cloud Starter (for LSC) or Health Cloud Foundation (for Health Cloud)
 - Multi-Step Scheduling
 - Action Plans
 - Industries Visit
@@ -394,7 +394,7 @@ types. To do this, you must first enable the Salesforce Scheduler for Health Clo
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -414,7 +414,7 @@ Channels.
 
 1. From Setup, in the Quick Find box, enter Salesforce Scheduler, and then select Salesforce
 Scheduler Settings.
-2. Enable Salesforce Scheduler for Health Cloud and AFLS.
+2. Enable Salesforce Scheduler for Health Cloud and LSC.
 
 
 Add the Appointment Slots Lightning Component to a Record Page
@@ -431,7 +431,7 @@ Program Enrollee object.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -475,7 +475,7 @@ to use service territory member’s shifts to search for slots.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -521,7 +521,7 @@ availability of appointment slots.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 There are two ways in which you can define availability for work types at a service territory: time slots and
@@ -569,7 +569,7 @@ available slots.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -612,7 +612,7 @@ model.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Let’s first get a sense of the Advanced Therapy Management objects and what they store. Check out the
@@ -804,7 +804,7 @@ represent a particular kind of treatment or therapy, involving steps or tasks su
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -858,7 +858,7 @@ procedure step record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -898,7 +898,7 @@ available.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:908 -->
 
@@ -957,7 +957,7 @@ procedure and the time required before the work procedure step can begin.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:909 -->
 
@@ -1007,7 +1007,7 @@ Icon URL field to upload an icon for a work type.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1051,7 +1051,7 @@ Gene Therapy, takes place.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1107,7 +1107,7 @@ territory where a work type, such as apheresis, is performed.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1160,7 +1160,7 @@ service territories where consecutive work procedure steps are performed.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1207,7 +1207,7 @@ assigned to a work type at a service territory.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1243,7 +1243,7 @@ medical staff assigned to a hospital operate in shifts that determine the availa
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1308,7 +1308,7 @@ Configure the availability of a service resource assigned to a service territory
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1352,7 +1352,7 @@ a relationship between service territories and work types performed at the servi
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1398,7 +1398,7 @@ with, and creates appointments in the existing service appointment group.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Partial reschedule starts with the work type to reschedule; appointments for subsequent work types are
@@ -1456,7 +1456,7 @@ work type that follows.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Let’s look at the differences between full chain reschedule and partial reschedule.
@@ -1509,7 +1509,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 At any point in time, there’s only one service appointment group that is active, which means the
@@ -1674,7 +1674,7 @@ the flow to add your custom logic to hide or show the buttons.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1717,7 +1717,7 @@ Care Program Enrollee objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:922 -->
 
@@ -1783,7 +1783,7 @@ checks.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Multi-Step Scheduling is built on top of Lightning Scheduler APIs to efficiently retrieve search results.
@@ -1861,7 +1861,7 @@ details provide more information about the enrollee count that you can use for b
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -1908,7 +1908,7 @@ patient intake to infusion.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 In Advanced Therapy Management, a therapy workflow involves multiple stages that occur in sequence
@@ -2167,7 +2167,7 @@ required permission sets licenses and corresponding permission sets.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2179,7 +2179,7 @@ OR
 
 Manage Health Cloud user permission
 
-To create, edit, and delete AFLS       Health Cloud Starter permission set
+To create, edit, and delete LSC       Health Cloud Starter permission set
 data:
 
 
@@ -2189,7 +2189,7 @@ As a prerequisite, make sure you create and assign profiles for Therapy Orchestr
 2. Select the appropriate user for therapy orchestration.
 3. In the Permission Set License Assignments related list, click Edit Assignment.
 4. Select these permission set licenses:
-- Health Cloud Starter (for AFLS) or Health Cloud Platform (for Health Cloud)
+- Health Cloud Starter (for LSC) or Health Cloud Platform (for Health Cloud)
 - Multi-Step Scheduling
 - Action Plans
 - Industries Visit
@@ -2202,7 +2202,7 @@ As a prerequisite, make sure you create and assign profiles for Therapy Orchestr
 5. Click Save.
 6. In the Permission Set Assignments related list, click Edit Assignment.
 7. Move the following permission sets to the Enabled Permission Sets list.
-- Health Cloud Starter (for AFLS) or Health Cloud Foundation (for Health Cloud)
+- Health Cloud Starter (for LSC) or Health Cloud Foundation (for Health Cloud)
 - Multi-Step Scheduling
 - Action Plans
 - Industries Visit
@@ -2222,7 +2222,7 @@ and Care Program Enrollee Work Order Step records, configure data capture for th
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2250,7 +2250,7 @@ To resume the Advanced Therapy Management flow orchestrator, turn off the flow e
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:931 -->
 
@@ -2281,7 +2281,7 @@ users to view completed, current, and upcoming tasks.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2324,7 +2324,7 @@ flows in one place.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 - Make sure you set up data in your org to represent the therapy.
@@ -2374,7 +2374,7 @@ Perform prerequisite tasks before you run the default flows for therapy orchestr
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 To run the default orchestration flow, configure these items:
@@ -2430,7 +2430,7 @@ field in the care program record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2465,7 +2465,7 @@ program record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2502,7 +2502,7 @@ override the original evaluation flow.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2548,7 +2548,7 @@ step.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Here’s a video of the process to help you get started.
@@ -2622,7 +2622,7 @@ team members so that they can perform the therapy tasks.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2672,7 +2672,7 @@ verification record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2702,7 +2702,7 @@ associate the team member records with users in your org who perform the tasks.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:939 -->
 
@@ -2747,7 +2747,7 @@ create therapy tasks.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2793,7 +2793,7 @@ assigning the flows to participant roles.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2846,7 +2846,7 @@ to complete tasks assigned to them.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2901,7 +2901,7 @@ before you publish a template.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -2936,7 +2936,7 @@ template to create the therapy tasks that are part of the work type step.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:943 -->
 
@@ -2984,7 +2984,7 @@ flow, you can add it here.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -3035,7 +3035,7 @@ territory work type record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -3081,7 +3081,7 @@ tasks using criteria-based sharing.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -3165,7 +3165,7 @@ component task.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -3233,7 +3233,7 @@ create a Lightning aura component.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -3355,7 +3355,7 @@ when things don’t go according to plan.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 In an ideal scenario, the orchestration workflow starts at the first stage of Apheresis, runs through all the
@@ -3398,7 +3398,7 @@ override rules. Customize field lists that store therapy task data according to 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Find out the requirements for using advanced scheduling and creating override rules.
@@ -3473,7 +3473,7 @@ activate advanced scheduling for therapies.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -3511,7 +3511,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -3547,7 +3547,7 @@ service territories where work procedure steps are held, with a priority number 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -3621,7 +3621,7 @@ a work type step.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -3710,7 +3710,7 @@ combination of conditions, based on the priority number assigned to each combina
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -3793,7 +3793,7 @@ receives the right treatment by assigning a unique identifier to the collected b
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 You can create custody records automatically as part of Advanced Therapy Management’s Therapy
@@ -3846,7 +3846,7 @@ Verification Type Override decision table and create a Custody Verification Type
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -3924,7 +3924,7 @@ therapy orchestration processes.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -3963,7 +3963,7 @@ and auditing the history of chain of custody events.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4009,7 +4009,7 @@ patient intake, and delegate tasks to various stakeholders in your org.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4074,7 +4074,7 @@ an Experience Cloud site.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 
@@ -4099,7 +4099,7 @@ that can access your Experience Cloud site.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4146,7 +4146,7 @@ site and customize the Digital Experience site per your requirements.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4316,7 +4316,7 @@ Search for published slots and schedule appointments for patients enrolled in a 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4384,7 +4384,7 @@ where manufacturing is performed, reach out to the service territory contact for
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4469,7 +4469,7 @@ procedure are rescheduled.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4521,7 +4521,7 @@ Partially reschedule an appointment series downstream with the work type you wan
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4569,7 +4569,7 @@ your enrollees, or both. In such cases, you can cancel the booking entirely.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:971 -->
 
@@ -4615,7 +4615,7 @@ coordinators, to seamlessly confirm appointment booking requests.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4670,7 +4670,7 @@ tasks, custody items, custody chain entries, and electronic signature records.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4713,7 +4713,7 @@ upcoming tasks in the My Tasks section.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4761,7 +4761,7 @@ Assign the task to the relevant user or group and define mandatory tasks.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 Important You can create an ad hoc task only in the step of a stage that's already completed or is in
 progress.
@@ -4787,7 +4787,7 @@ In a step of a therapy stage, create ad hoc tasks by using an action plan templa
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4826,7 +4826,7 @@ add up to 10 ad hoc tasks in a therapy stage.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4883,7 +4883,7 @@ Orchestration Run record page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -4920,7 +4920,7 @@ unexpected errors where a therapy stage has to be repeated.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Therapy Orchestration and Multi-Step Scheduling are used together in non-linear flows to reschedule

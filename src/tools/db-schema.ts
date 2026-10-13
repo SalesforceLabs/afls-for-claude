@@ -49,7 +49,7 @@ export function register(server: McpServer) {
             content: [
               {
                 type: "text",
-                text: `# DB Schema Not Found\n\nNo DbSchema category found. Ensure AFLS is installed in the org.`,
+                text: `# DB Schema Not Found\n\nNo DbSchema category found. Ensure LSC is installed in the org.`,
               },
             ],
           };
@@ -378,7 +378,7 @@ export function register(server: McpServer) {
             content: [
               {
                 type: "text",
-                text: `# DbSchema Category Not Found\n\nNo DbSchema category found. Ensure AFLS is installed.`,
+                text: `# DbSchema Category Not Found\n\nNo DbSchema category found. Ensure LSC is installed.`,
               },
             ],
           };

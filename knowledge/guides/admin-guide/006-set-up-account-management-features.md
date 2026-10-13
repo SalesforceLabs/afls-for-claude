@@ -4,7 +4,7 @@
 
 
 
-Feature                                Where                  AFLS        Desktop Site
+Feature                                Where                  Life Sciences Cloud (LSC)        Desktop Site
 Mobile App
 
 Get recommended presentations          Content Library              Available            Not Available
@@ -52,7 +52,7 @@ details.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -94,7 +94,7 @@ Create an Account Team
 Let team members view details of all the collaborators of an account across different territories.
 Choose which fields to display to the account team.
 Activity Timeline
-The Activity Timeline in AFLS gives you a 360-degree view of all activities for an account.
+The Activity Timeline in LSC gives you a 360-degree view of all activities for an account.
 It helps sales representatives, Key Account Managers (KAM), and Medical Science Liaisons (MSLs)
 visualize past and upcoming interactions with healthcare providers (HCPs) and healthcare
 organizations (HCOs). Activity Timeline helps you work more effectively by consolidating relevant
@@ -115,11 +115,11 @@ related list. To allow bulk updates from related lists, enable bulk edits for th
 custom button, and add the custom button to the account page layout.
 Data Change Request
 Use Data Change Request to manage how data changes are submitted, validated, and implemented
-across the AFLS for Customer Engagement app. Reduce manual corrections, prevent
+across the LSC for Customer Engagement app. Reduce manual corrections, prevent
 unapproved changes from being applied, and make sure that data consistency across both web and
 mobile apps.
 Lists and Filters
-Use Lists and Filters to organize and prioritize accounts and associated data in the AFLS
+Use Lists and Filters to organize and prioritize accounts and associated data in the LSC
 for Customer Engagement app. Sales reps manage and refine large volumes of accounts into
 meaningful segments, helping them to focus on accounts that align with specific criteria based on
 business priorities, territory requirements, or engagement strategies.
@@ -133,7 +133,7 @@ next engagement. Next Best Customer leverages user-configured data, such as enga
 and territory alignment, to rank the accounts that are most likely to respond, so your reps can
 maximize the impact of each interaction.
 Provider Cards for Life Sciences
-Provider Cards in AFLS consolidates an account’s information that’s scattered across
+Provider Cards in LSC consolidates an account’s information that’s scattered across
 various objects and fields, such as the provider’s locations and specialties and the user’s scheduled
 visits, and displays it all in a one place on the mobile. You can choose which records to show in the
 card. To create provider cards, you can use the predefined template or create them from scratch.
@@ -166,7 +166,7 @@ optimized efficiency.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -248,7 +248,7 @@ profiles.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -297,7 +297,7 @@ Contact Point Address object for all relevant profiles.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -320,7 +320,7 @@ better engagement and streamlined workflows.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -356,7 +356,7 @@ providers (HCPs) at their addresses.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -420,7 +420,7 @@ the account’s dashboard.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -458,7 +458,7 @@ they create a record. Users can search for duplicate addresses for business and 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -492,7 +492,7 @@ governor limits faced by trigger handlers.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -536,7 +536,7 @@ consistency, and improves business decisions and customer satisfaction.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -584,7 +584,7 @@ record pages. First, create the Account Merge action, and then add it to the Acc
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -638,7 +638,7 @@ processes.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -703,7 +703,7 @@ merge request records in Requested status and merges the corresponding accounts.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -760,7 +760,7 @@ record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -797,7 +797,7 @@ can manage this setup at both the org and profile levels, and further refine it 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -847,7 +847,7 @@ Configure Advanced Search
 Configure the criteria for performing advanced account search and the search results based on the
 record type. You can apply these configurations at the org and profile level.
 Set up External Search by Using Built-In MuleSoft Integration
-Integrate AFLS with configured external data sources, such as an MDM or IQVIA’s
+Integrate LSC with configured external data sources, such as an MDM or IQVIA’s
 OneKey, to extend account searches beyond Salesforce. This integration helps sales reps find and add
 accounts that aren't yet available in Salesforce.
 Configure Search Before Account Creation
@@ -872,7 +872,7 @@ the Care Specialty object’s sharing settings.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -903,7 +903,7 @@ accessible by a user, and designate a country preferred by the user for specific
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -934,7 +934,7 @@ settings in the Admin Console. You can do this at the org and profile level.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -966,7 +966,7 @@ them to Selected Values.
 scope by a user’s available countries.
 7. If necessary, under the Additional Search Preferences section, further customize your search
 preferences.
-a. Enable users to view accounts in a map view (AFLS Mobile app only) and automatically align affiliated
+a. Enable users to view accounts in a map view (LSC Mobile app only) and automatically align affiliated
 accounts after a primary account is aligned to a territory.
 b. Select a default customer filter and an additional provider territory field for searching.
 The selected filter applies to account searches performed outside the Life Sciences Commercial
@@ -986,7 +986,7 @@ org and user levels.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1028,7 +1028,7 @@ record type. You can apply these configurations at the org and profile level.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1068,7 +1068,7 @@ Salesforce Help: Run Data Processing Engine Definitions
 
 Set up External Search by Using Built-In MuleSoft Integration
 
-Integrate AFLS with configured external data sources, such as an MDM or IQVIA’s OneKey,
+Integrate LSC with configured external data sources, such as an MDM or IQVIA’s OneKey,
 to extend account searches beyond Salesforce. This integration helps sales reps find and add accounts
 that aren't yet available in Salesforce.
 
@@ -1078,7 +1078,7 @@ that aren't yet available in Salesforce.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1112,7 +1112,7 @@ code interface. Create integration definitions for Apex classes used to integrat
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1153,7 +1153,7 @@ This prevents the creation of duplicate account records.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1192,7 +1192,7 @@ Help users access account summaries on the web and on mobile devices, even when 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement, Agentforce for LifeSciences Cloud, Einstein GPT Prompt Builder, and Einstein
 GPT Platform Add-on licenses, and the Life Sciences Customer Engagement managed package.
 
@@ -1248,7 +1248,7 @@ Object Field History settings.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement, Agentforce for LifeSciences Cloud, Einstein GPT Prompt Builder, and Einstein
 GPT Platform Add-on licenses, and the Life Sciences Customer Engagement managed package.
 
@@ -1281,7 +1281,7 @@ Account Summarization.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement, Agentforce for LifeSciences Cloud, Einstein GPT Prompt Builder, and Einstein
 GPT Platform Add-on licenses, and the Life Sciences Customer Engagement managed package.
 
@@ -1319,7 +1319,7 @@ configuration for the Provider Account Territory Summary object.
 ## See Also
 
 Generate Metadata Cache
-Set Up Sales Territories for AFLS
+Set Up Sales Territories for LSC
 Track Object Field History
 
 
@@ -1336,7 +1336,7 @@ the mobile, and supports both online and offline viewing in the mobile.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement, Agentforce for LifeSciences Cloud, Einstein GPT Prompt Builder, and Einstein
 GPT Platform Add-on licenses, and the Life Sciences Customer Engagement managed package.
 
@@ -1441,7 +1441,7 @@ interaction. Choose which fields to include in the information summary.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement, Agentforce for LifeSciences Cloud, Einstein GPT Prompt Builder, and Einstein
 GPT Platform Add-on licenses, and the Life Sciences Customer Engagement managed package.
 
@@ -1479,7 +1479,7 @@ profiles by customizing the related objects and fields. You can also create a gr
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement, Agentforce for LifeSciences Cloud, Einstein GPT Prompt Builder, and Einstein
 GPT Platform Add-on licenses, and the Life Sciences Customer Engagement managed package.
 
@@ -1526,7 +1526,7 @@ graph for the org or for a specific profile.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement, Agentforce for LifeSciences Cloud, Einstein GPT Prompt Builder, and Einstein
 GPT Platform Add-on licenses, and the Life Sciences Customer Engagement managed package.
 
@@ -1555,7 +1555,7 @@ each component of the Account Summarization capability.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement, Agentforce for LifeSciences Cloud, Einstein GPT Prompt Builder, and Einstein
 GPT Platform Add-on licenses, and the Life Sciences Customer Engagement managed package.
 
@@ -1625,7 +1625,7 @@ the Account object. Choose when to capture summary changes.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement, Agentforce for LifeSciences Cloud, Einstein GPT Prompt Builder, and Einstein
 GPT Platform Add-on licenses, and the Life Sciences Customer Engagement managed package.
 
@@ -1675,7 +1675,7 @@ intervals. Customize the batch size, criteria, and retry count and interval.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement, Agentforce for LifeSciences Cloud, Einstein GPT Prompt Builder, and Einstein
 GPT Platform Add-on licenses, and the Life Sciences Customer Engagement managed package.
 
@@ -1736,7 +1736,7 @@ Summarization Batch Job flow.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement, Agentforce for LifeSciences Cloud, Einstein GPT Prompt Builder, and Einstein
 GPT Platform Add-on licenses, and the Life Sciences Customer Engagement managed package.
 
@@ -1790,7 +1790,7 @@ must update the prompt to summarize the details of the objects and fields you ad
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement, Agentforce for LifeSciences Cloud, Einstein GPT Prompt Builder, and Einstein
 GPT Platform Add-on licenses, and the Life Sciences Customer Engagement managed package.
 
@@ -1847,8 +1847,8 @@ iPad.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS for Customer Engagement
-Add-on license, Agentforce for AFLS, Flex Credits Metering, Agentforce Employee Agent,
+Available in: Enterprise and Unlimited Editions with LSC for Customer Engagement
+Add-on license, Agentforce for LSC, Flex Credits Metering, Agentforce Employee Agent,
 Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder. Also available with
 Einstein GPT Trust and Genie Data Platform Starter add-on licenses.
 
@@ -1899,8 +1899,8 @@ actions, and account summarization. Also verify that you have records set up in 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS for Customer Engagement
-Add-on license, Agentforce for AFLS, Flex Credits Metering, Agentforce Employee Agent,
+Available in: Enterprise and Unlimited Editions with LSC for Customer Engagement
+Add-on license, Agentforce for LSC, Flex Credits Metering, Agentforce Employee Agent,
 Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder. Also available with
 Einstein GPT Trust and Genie Data Platform Starter add-on licenses.
 
@@ -1940,7 +1940,7 @@ Licenses
 - Assign the Life Sciences Field Sales Representative permission set to sales representatives.
 1. From Setup, in the Quick Find box, enter Life Sciences for Customer Engagement Setup, and
 select it.
-2. In the Enable AFLS for Customer Engagement Features section, turn on Territory-Based
+2. In the Enable LSC for Customer Engagement Features section, turn on Territory-Based
 Derived Sharing admin settings.
 3. In the Configure Account Summarization For Customer Engagement section, turn on the Account
 Summarization.
@@ -1960,8 +1960,8 @@ needs of personas in Life Sciences.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS for Customer Engagement
-Add-on license, Agentforce for AFLS, Flex Credits Metering, Agentforce Employee Agent,
+Available in: Enterprise and Unlimited Editions with LSC for Customer Engagement
+Add-on license, Agentforce for LSC, Flex Credits Metering, Agentforce Employee Agent,
 Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder. Also available with
 Einstein GPT Trust and Genie Data Platform Starter add-on licenses.
 
@@ -2023,8 +2023,8 @@ Summary action to generate account summaries.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS for Customer Engagement
-Add-on license, Agentforce for AFLS, Flex Credits Metering, Agentforce Employee Agent,
+Available in: Enterprise and Unlimited Editions with LSC for Customer Engagement
+Add-on license, Agentforce for LSC, Flex Credits Metering, Agentforce Employee Agent,
 Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder. Also available with
 Einstein GPT Trust and Genie Data Platform Starter add-on licenses.
 
@@ -2067,8 +2067,8 @@ haven't been summarized, the flow retrieves the latest summary details.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS for Customer Engagement
-Add-on license, Agentforce for AFLS, Flex Credits Metering, Agentforce Employee Agent,
+Available in: Enterprise and Unlimited Editions with LSC for Customer Engagement
+Add-on license, Agentforce for LSC, Flex Credits Metering, Agentforce Employee Agent,
 Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder. Also available with
 Einstein GPT Trust and Genie Data Platform Starter add-on licenses.
 
@@ -2099,8 +2099,8 @@ assign it to the user. Or, provide agent access to your user's current profile.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS for Customer Engagement
-Add-on license, Agentforce for AFLS, Flex Credits Metering, Agentforce Employee Agent,
+Available in: Enterprise and Unlimited Editions with LSC for Customer Engagement
+Add-on license, Agentforce for LSC, Flex Credits Metering, Agentforce Employee Agent,
 Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder. Also available with
 Einstein GPT Trust and Genie Data Platform Starter add-on licenses.
 
@@ -2137,7 +2137,7 @@ which fields to display to the account team.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2177,7 +2177,7 @@ Coordinating with Account Teams Across Territories
 
 Activity Timeline
 
-The Activity Timeline in AFLS gives you a 360-degree view of all activities for an account. It
+The Activity Timeline in LSC gives you a 360-degree view of all activities for an account. It
 helps sales representatives, Key Account Managers (KAM), and Medical Science Liaisons (MSLs) visualize
 past and upcoming interactions with healthcare providers (HCPs) and healthcare organizations (HCOs).
 Activity Timeline helps you work more effectively by consolidating relevant account activities in one
@@ -2189,7 +2189,7 @@ place, enabling better collaboration, informed decision-making, and smarter pree
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2242,7 +2242,7 @@ Customize the text that appears in the header and body of each activity on the A
 Calendar views, and manage the options for filtering activities.
 Activity Timeline Objects Access on Mobile
 The Activity Timeline provides desktop and mobile app users with a comprehensive view of their
-activities. Configure key objects to make this feature available on the AFLS mobile app
+activities. Configure key objects to make this feature available on the LSC mobile app
 and give your mobile app users access activity-related data.
 
 
@@ -2263,7 +2263,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2319,7 +2319,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2350,7 +2350,7 @@ your sales team. For the timeline to show email activity, schedule email jobs to
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2384,7 +2384,7 @@ Give your users the permissions to view activities that are outside their territ
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2415,7 +2415,7 @@ and address filters, HCP activity rollup, and the visibility of detailed visit i
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2484,7 +2484,7 @@ customize the fields for expanded activities to make relevant information easily
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 
 <!-- page:103 -->
@@ -2524,7 +2524,7 @@ Calendar views, and define the fields that appear when these activities are expa
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2577,7 +2577,7 @@ Review the tasks you must complete to set up custom activities on your timeline.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2665,7 +2665,7 @@ configure custom activities on the activity timeline.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2768,7 +2768,7 @@ child object that represents an activity to track on the timeline.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2894,7 +2894,7 @@ Timeline and Calendar views for accounts.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2936,7 +2936,7 @@ Calendar views, and manage the options for filtering activities.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2967,7 +2967,7 @@ activities displayed on the Activity Timeline and Calendar views.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3025,7 +3025,7 @@ mapping custom labels and fields to specific activity types and statuses.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3088,7 +3088,7 @@ Timeline.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3201,7 +3201,7 @@ redirects you to the parent visit record.
 Activity Timeline Objects Access on Mobile
 
 The Activity Timeline provides desktop and mobile app users with a comprehensive view of their
-activities. Configure key objects to make this feature available on the AFLS mobile app and
+activities. Configure key objects to make this feature available on the LSC mobile app and
 give your mobile app users access activity-related data.
 
 
@@ -3210,7 +3210,7 @@ give your mobile app users access activity-related data.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3250,7 +3250,7 @@ provides insights that help you target your engagement and improve outcomes.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3268,7 +3268,7 @@ capabilities.
 
 ## Views for Managing Affiliations
 
-AFLS provides distinct views for affiliations, each designed to help you visualize account
+LSC provides distinct views for affiliations, each designed to help you visualize account
 relationships for different purposes. The Table View presents data in a structured list, the Hierarchy
 View shows relationships in an org-chart format for mobile users, and the Network View visualizes
 connections as a graph. Understanding each view helps you choose the one that best fits your
@@ -3297,7 +3297,7 @@ validation rules, and streamline address management.
 Map Direct and Reverse Affiliation Roles
 Simplify relationship management by automatically creating a reverse role for every direct role you
 define. For instance, when you map a healthcare professional (HCP) as an employee of a healthcare
-organization (HCO), AFLS automatically creates the reverse relationship, designating the
+organization (HCO), LSC automatically creates the reverse relationship, designating the
 HCO as the HCP's Employer. This automation eliminates manual inverse entries and ensures
 consistent, efficient relationship management.
 Streamline Address Management
@@ -3326,7 +3326,7 @@ organizations.
 
 Views for Managing Affiliations
 
-AFLS provides distinct views for affiliations, each designed to help you visualize account
+LSC provides distinct views for affiliations, each designed to help you visualize account
 relationships for different purposes. The Table View presents data in a structured list, the Hierarchy View
 shows relationships in an org-chart format for mobile users, and the Network View visualizes connections
 as a graph. Understanding each view helps you choose the one that best fits your workflow.
@@ -3337,7 +3337,7 @@ as a graph. Understanding each view helps you choose the one that best fits your
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3405,7 +3405,7 @@ affiliations, users can manually align an affiliated account from outside their 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3434,7 +3434,7 @@ affiliation settings in the Admin Console.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3529,7 +3529,7 @@ beforehand helps you tailor the experience for your users.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3569,7 +3569,7 @@ To manage affiliations, users need access to certain fields that aren’t availa
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3604,7 +3604,7 @@ fields in the Provider Affiliation object.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3680,7 +3680,7 @@ graph view, and the fields used for uniqueness validation.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3733,7 +3733,7 @@ the account record page by adjusting pagination and defining the sort order for 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3799,7 +3799,7 @@ the network view by referencing field sets on the Provider Affiliation Product o
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3850,7 +3850,7 @@ Map Direct and Reverse Affiliation Roles
 
 Simplify relationship management by automatically creating a reverse role for every direct role you
 define. For instance, when you map a healthcare professional (HCP) as an employee of a healthcare
-organization (HCO), AFLS automatically creates the reverse relationship, designating the
+organization (HCO), LSC automatically creates the reverse relationship, designating the
 HCO as the HCP's Employer. This automation eliminates manual inverse entries and ensures consistent,
 efficient relationship management.
 
@@ -3860,7 +3860,7 @@ efficient relationship management.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3896,7 +3896,7 @@ address is always listed, without manual updates.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3937,7 +3937,7 @@ the PATI record, which stores the associated contact point address.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3974,7 +3974,7 @@ assigned correctly.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4027,7 +4027,7 @@ reciprocal affiliations, and establishing primary affiliations between accounts 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4082,14 +4082,14 @@ necessary.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
 USER PERMISSIONS NEEDED
 
-To create, edit, and delete AFLS         Life Sciences Commercial Admin permission set
+To create, edit, and delete LSC         Life Sciences Commercial Admin permission set
 data:
 
 
@@ -4158,7 +4158,7 @@ edit capability for a specific user profile or all user profiles in your org.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4185,7 +4185,7 @@ list.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4221,7 +4221,7 @@ To make the custom button accessible to users from a related list, add it to the
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4246,7 +4246,7 @@ To customize buttons on page layouts:                 Customize Application
 Data Change Request
 
 Use Data Change Request to manage how data changes are submitted, validated, and implemented
-across the AFLS for Customer Engagement app. Reduce manual corrections, prevent
+across the LSC for Customer Engagement app. Reduce manual corrections, prevent
 unapproved changes from being applied, and make sure that data consistency across both web and
 mobile apps.
 
@@ -4260,7 +4260,7 @@ mobile apps.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4268,7 +4268,7 @@ package.
 
 ## Set Up Data Change Request by User Profile
 
-Control how data updates are governed for various objects in the AFLS for Customer
+Control how data updates are governed for various objects in the LSC for Customer
 Engagement app. Specify whether changes apply immediately or require review before finalization.
 This set up makes sure that data updates comply with your organization’s review policies and support
 profile-specific handling of data changes.
@@ -4282,7 +4282,7 @@ Managed fields determine which updates trigger a Data Change Request for support
 Creating records for each object makes sure that changes to critical data are reviewed, validated, and
 approved through the Data Change Request workflow.
 Approve or Reject a Data Change Request
-Review and act on Data Change Requests submitted by users directly from the AFLS for
+Review and act on Data Change Requests submitted by users directly from the LSC for
 Customer Engagement app. Use the built-in Lightning component to create a new tab to approve or
 reject a change request.
 Mobile App Configuration for Data Change Request
@@ -4293,7 +4293,7 @@ mobile app uses for online and offline access.
 
 Set Up Data Change Request by User Profile
 
-Control how data updates are governed for various objects in the AFLS for Customer
+Control how data updates are governed for various objects in the LSC for Customer
 Engagement app. Specify whether changes apply immediately or require review before finalization. This
 set up makes sure that data updates comply with your organization’s review policies and support profile-
 specific handling of data changes.
@@ -4304,7 +4304,7 @@ specific handling of data changes.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 
 <!-- page:135 -->
@@ -4377,7 +4377,7 @@ requirements.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4436,7 +4436,7 @@ integration mappings meet specific requirements.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4511,7 +4511,7 @@ through the Data Change Request workflow.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4551,7 +4551,7 @@ the validation types setup in the admin console.
 
 Approve or Reject a Data Change Request
 
-Review and act on Data Change Requests submitted by users directly from the AFLS for
+Review and act on Data Change Requests submitted by users directly from the LSC for
 Customer Engagement app. Use the built-in Lightning component to create a new tab to approve or
 reject a change request.
 
@@ -4561,7 +4561,7 @@ reject a change request.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4605,7 +4605,7 @@ uses for online and offline access.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4648,7 +4648,7 @@ including any schema changes for supported objects.
 
 Lists and Filters
 
-Use Lists and Filters to organize and prioritize accounts and associated data in the AFLS for
+Use Lists and Filters to organize and prioritize accounts and associated data in the LSC for
 Customer Engagement app. Sales reps manage and refine large volumes of accounts into meaningful
 segments, helping them to focus on accounts that align with specific criteria based on business priorities,
 territory requirements, or engagement strategies.
@@ -4659,7 +4659,7 @@ territory requirements, or engagement strategies.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS and the AFLS for
+Available in: Enterprise and Unlimited Editions with LSC and the LSC for
 Customer Engagement Add-On license
 
 
@@ -4688,12 +4688,12 @@ Create a configuration set to define the fields and columns structure for Lists.
 appear as columns, the fields that support sorting, and the default filter columns available in the Life
 Sciences Cloud for Customer Engagement app.
 Account Search Preferences for Lists and Filters
-Define account search preferences to control how accounts appear in the AFLS for
+Define account search preferences to control how accounts appear in the LSC for
 Customer Engagement app. Enable map view to let users view accounts, set default filters, and use
 searchable fields to enhance their search results.
 Mobile App Configuration for Lists and Filters
 Create object metadata cache configuration for supported List and Filter objects. Generate a metadata
-cache to make the feature available for users in the AFLS Mobile app.
+cache to make the feature available for users in the LSC Mobile app.
 
 <!-- page:142 -->
 
@@ -4711,7 +4711,7 @@ large volumes of account-related data.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS and the AFLS for
+Available in: Enterprise and Unlimited Editions with LSC and the LSC for
 Customer Engagement Add-On license
 
 
@@ -4746,7 +4746,7 @@ selected accounts, update actions for different accounts, and export lists to a 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS and the AFLS for
+Available in: Enterprise and Unlimited Editions with LSC and the LSC for
 Customer Engagement Add-On license
 
 
@@ -4780,7 +4780,7 @@ and manage large volumes of account data to identify and focus on target account
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS and the AFLS for
+Available in: Enterprise and Unlimited Editions with LSC and the LSC for
 Customer Engagement Add-On license
 
 
@@ -4815,7 +4815,7 @@ d. To let users view and apply advanced filters, select Let users view Advanced 
 
 
 If no fields are defined, all fields the user has access to will be available by default.
-8. To help users see the recommended accounts on the AFLS for Customer Engagement
+8. To help users see the recommended accounts on the LSC for Customer Engagement
 mobile app, in the Next Best Customer Settings, select Let users view the next best customer filter.
 9. To determine the default number of days to snooze an account, enter a number in the Days to Mute
 field.
@@ -4834,7 +4834,7 @@ Sciences Cloud for Customer Engagement app.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS and the AFLS for
+Available in: Enterprise and Unlimited Editions with LSC and the LSC for
 Customer Engagement Add-On license
 
 
@@ -4906,7 +4906,7 @@ Zip or Postal Code, Next Provider Visit Date, Last Provider Visit Date, and Spec
 
 Account Search Preferences for Lists and Filters
 
-Define account search preferences to control how accounts appear in the AFLS for
+Define account search preferences to control how accounts appear in the LSC for
 Customer Engagement app. Enable map view to let users view accounts, set default filters, and use
 searchable fields to enhance their search results.
 
@@ -4916,7 +4916,7 @@ searchable fields to enhance their search results.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS and the AFLS for
+Available in: Enterprise and Unlimited Editions with LSC and the LSC for
 Customer Engagement Add-On license
 
 <!-- page:146 -->
@@ -4935,7 +4935,7 @@ To configure Lists and Filters:                      Life Sciences Commercial Ad
 4. Select the Apply Settings To as Profile.
 5. Select the profile.
 6. Configure the Advanced Search Preferences section.
-a. To enable the map view (AFLS Mobile app only) so users can visualize accounts on a map, select
+a. To enable the map view (LSC Mobile app only) so users can visualize accounts on a map, select
 Show accounts in a map view.
 b. To improve the search results, select the default account type filters.
 c. To help users find accounts with greater precision, select an additional field from the Provider
@@ -4951,7 +4951,7 @@ aligned with a territory.
 Mobile App Configuration for Lists and Filters
 
 Create object metadata cache configuration for supported List and Filter objects. Generate a metadata
-cache to make the feature available for users in the AFLS Mobile app.
+cache to make the feature available for users in the LSC Mobile app.
 
 
 **REQUIRED EDITIONS**
@@ -4959,7 +4959,7 @@ cache to make the feature available for users in the AFLS Mobile app.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5018,7 +5018,7 @@ meetings, and emails for accounts, in the optimal sequence.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5053,7 +5053,7 @@ Before you set up Next Best Action, complete the following prerequisites.
 - Industries Visit
 - Life Sciences Commercial User
 - Life Sciences Field Sales Representative
-- AFLS Rep
+- LSC Rep
 - Create Territory Account Recommended Action (TARA) records.
 Note You can create the TARA records of type Visit and Email. The Email type TARA records apply
 only to the mobile app.
@@ -5121,7 +5121,7 @@ Customer component, quick actions, and scores.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5130,10 +5130,10 @@ package.
 ## Set Up Next Best Customers Component
 
 Configure the Life Sciences Next Best Customers component to show prioritized accounts with clear
-scoring, intuitive rationale explanations, and rich account insights on the AFLS for
+scoring, intuitive rationale explanations, and rich account insights on the LSC for
 Customer Engagement home page.
 Configure Next Best Customer Settings for Mobile App
-Customize the required settings for the Next Best Customer components in the AFLS
+Customize the required settings for the Next Best Customer components in the LSC
 mobile app.
 Set Up the Data Required for Next Best Customer
 Configure the data required to show accounts on the Next Best Customer component and support
@@ -5148,7 +5148,7 @@ Get Help for Lightning App Builder
 Set Up Next Best Customers Component
 
 Configure the Life Sciences Next Best Customers component to show prioritized accounts with clear
-scoring, intuitive rationale explanations, and rich account insights on the AFLS for
+scoring, intuitive rationale explanations, and rich account insights on the LSC for
 Customer Engagement home page.
 
 
@@ -5166,7 +5166,7 @@ adding the Life Sciences Next Best Customers component.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5207,7 +5207,7 @@ relationships between account-related objects using an actionable relationship c
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5279,7 +5279,7 @@ recommendations at a glance, eliminating the need to navigate to rationale pages
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5299,7 +5299,7 @@ related object.
 
 Configure Next Best Customer Settings for Mobile App
 
-Customize the required settings for the Next Best Customer components in the AFLS
+Customize the required settings for the Next Best Customer components in the LSC
 mobile app.
 
 
@@ -5308,7 +5308,7 @@ mobile app.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5399,7 +5399,7 @@ account score calculations.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5446,7 +5446,7 @@ representation of the data.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5512,7 +5512,7 @@ Score (Optional)
 - Score percentage is calculated by dividing category score by total category score. The Total Score field
 isn't used for calculating the percentage.
 
--        Note Category scores are exclusive to the AFLS mobile app and are not displayed
+-        Note Category scores are exclusive to the LSC mobile app and are not displayed
 on the web app.
 
 
@@ -5621,7 +5621,7 @@ ment.",
 
 Provider Cards for Life Sciences
 
-Provider Cards in AFLS consolidates an account’s information that’s scattered across
+Provider Cards in LSC consolidates an account’s information that’s scattered across
 various objects and fields, such as the provider’s locations and specialties and the user’s scheduled visits,
 and displays it all in a one place on the mobile. You can choose which records to show in the card. To
 create provider cards, you can use the predefined template or create them from scratch.
@@ -5632,7 +5632,7 @@ create provider cards, you can use the predefined template or create them from s
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5696,7 +5696,7 @@ and a builder where you can choose how you want to render the card interface at 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5762,7 +5762,7 @@ Find out about how nodes and retrieval limits are used in the card interface.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5773,7 +5773,7 @@ Nodes
 node can have several child nodes. Child nodes have a lookup to the root node.
 -    You can add any object to the root node but you can add the ARC Relationship Graph Lightning App
 Builder component only on the record page of the object that you select as the root node. To
-configure cards in AFLS, the root node must be the account object, and the card must
+configure cards in LSC, the root node must be the account object, and the card must
 
 <!-- page:161 -->
 
@@ -5820,7 +5820,7 @@ used objects. You can also create a graph from scratch.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5886,7 +5886,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5965,7 +5965,7 @@ Name, Specialty Role, Effective From, Effective To, and so on.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -6030,7 +6030,7 @@ records by configuring the visibility of text items and field items.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -6123,7 +6123,7 @@ Specialty Role field in the Healthcare Provider Specialty.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -6171,7 +6171,7 @@ efficiency.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -6179,7 +6179,7 @@ package.
 Supported Rating Segments
 
 Configure Ratings on different objects to match how sales reps work and where segmentation delivers
-the most value. Sales reps view these rating segments directly in the AFLS for Customer
+the most value. Sales reps view these rating segments directly in the LSC for Customer
 Engagement app:
 
 - General (Account): Displays all fields configured at the account level and applies to all user profiles
@@ -6200,7 +6200,7 @@ the Account.
 Supported Rating Segments
 
 Configure Ratings on different objects to match how sales reps work and where segmentation delivers
-the most value. Sales reps view these rating segments directly in the AFLS for Customer
+the most value. Sales reps view these rating segments directly in the LSC for Customer
 Engagement app:
 
 - General (Account): Shows all the fields configured at the account level and applies to all the user
@@ -6233,7 +6233,7 @@ supports targeted user actions.
 
 ## Create a Ratings Layout
 
-In the AFLS for Customer Engagement web and mobile app, rating layouts visually
+In the LSC for Customer Engagement web and mobile app, rating layouts visually
 represent ratings on an account's record page. Create a rating layout and add rating fields at various
 levels, including account, territory, product, team, or address. These layouts make sure that users see
 only the ratings relevant to their role and permissions.
@@ -6250,7 +6250,7 @@ offline access.
 
 Create a Ratings Layout
 
-In the AFLS for Customer Engagement web and mobile app, rating layouts visually
+In the LSC for Customer Engagement web and mobile app, rating layouts visually
 represent ratings on an account's record page. Create a rating layout and add rating fields at various
 levels, including account, territory, product, team, or address. These layouts make sure that users see
 only the ratings relevant to their role and permissions.
@@ -6261,7 +6261,7 @@ only the ratings relevant to their role and permissions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 
 <!-- page:170 -->
@@ -6331,7 +6331,7 @@ Lightning page and link it to the configured layout.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -6389,7 +6389,7 @@ access.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -6438,7 +6438,7 @@ loaded from external systems or based on geographical representations like zip/p
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 
 <!-- page:173 -->
 
@@ -6511,7 +6511,7 @@ and terminate them from Setup as needed.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 

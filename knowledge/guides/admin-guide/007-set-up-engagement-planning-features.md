@@ -24,7 +24,7 @@ targeted at key accounts in a region with Territory Business Plans.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with Life Sciences Cloud (LSC), LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -43,7 +43,7 @@ Schedule events with the best time recommendations to avoid conflicts and create
 plans. Users can save sets of visits as routines and access team member's schedules. With Calendar,
 users easily identify different types of events alongside their key information and status.
 Key Account Management for Customer Engagement
-Drive strategic, insight-based customer engagement with AFLS Key Account
+Drive strategic, insight-based customer engagement with LSC Key Account
 Management. Foster long-term, high-value partnerships, and achieve common goals by configuring
 account plans. Implement strategic initiatives focused on specific territories. Identify growth
 opportunities, anticipate customer concerns, and promote cross-functional collaboration. Enable users
@@ -72,7 +72,7 @@ create, review, and implement plans effectively.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -116,7 +116,7 @@ nomenclature. Learn about the terms that are commonly used to describe activity 
 terminology used throughout the feature's lifecycle, from the initial setup and goal definition to the
 final execution.
 Get Your Org Ready for Activity Plans
-Before you set up Activity Plans in AFLS, make sure that you have the required user
+Before you set up Activity Plans in LSC, make sure that you have the required user
 profiles, licenses, and permission sets.
 Activity Plan Process Checklist
 Setting up Activity Plans for your organization involves multiple steps, such as defining clear objectives
@@ -158,7 +158,7 @@ organizational goals through a structured workflow of objective setting and targ
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 
 <!-- page:178 -->
 
@@ -208,7 +208,7 @@ execution.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -300,7 +300,7 @@ toward the actual attainment of a goal.
 
 Get Your Org Ready for Activity Plans
 
-Before you set up Activity Plans in AFLS, make sure that you have the required user
+Before you set up Activity Plans in LSC, make sure that you have the required user
 profiles, licenses, and permission sets.
 
 
@@ -309,7 +309,7 @@ profiles, licenses, and permission sets.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -323,10 +323,10 @@ Profiles for Life Sciences Customer Engagement.
 
 
 
-representatives and sales managers. See Assign AFLS for Customer Engagement
+representatives and sales managers. See Assign LSC for Customer Engagement
 Permission Sets.
 -    Set up HCP accounts, territories, and provider account territory information. See Set Up Sales
-Territories for AFLS.
+Territories for LSC.
 -    Associate the HCP accounts with an active, primary healthcare specialty. See Create Care Specialty
 Records.
 -    Assign territories to the sales representatives and sales managers. You must assign the sales manager
@@ -353,7 +353,7 @@ Follow this checklist for a smoother implementation of Activity Plans for your o
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -422,7 +422,7 @@ manually set the status of the plan cycles to Approved.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -469,7 +469,7 @@ various filters to see the actual and potential goal completion rates.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -510,7 +510,7 @@ apply filters to see the actual and potential goal completion rates.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -582,7 +582,7 @@ representative's goal and monitor their progress.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -866,7 +866,7 @@ product activities.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -904,7 +904,7 @@ either triggering a job immediately or scheduling it for later.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1034,7 +1034,7 @@ filters on the Account record page and use default ratings for filtering activit
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1078,7 +1078,7 @@ before you start setting up records, learn about the activity plan statuses and 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1177,7 +1177,7 @@ To help define the duration of an activity plan, configure a Time Period record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1213,7 +1213,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1446,7 +1446,7 @@ activity plans with territories.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1483,7 +1483,7 @@ complete their interactions and activities.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1528,7 +1528,7 @@ high-level strategic plan to the specific, daily tasks your sales representative
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 
 <!-- page:203 -->
@@ -1582,7 +1582,7 @@ goal plan.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1622,7 +1622,7 @@ Plan Review lifecycle conducted by employees (field reps), managers, and admins.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1677,7 +1677,7 @@ knowledge, and accept or decline them as needed.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1725,7 +1725,7 @@ and remove accounts from a plan. Activity Plans can be adjusted both from the we
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1778,7 +1778,7 @@ creating adjustments. Configure a quick action button to create activity plan ad
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1824,7 +1824,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2134,7 +2134,7 @@ easily identify different types of events alongside their key information and st
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2176,7 +2176,7 @@ Account Address, and Best Time features.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2243,7 +2243,7 @@ event indicators.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2320,7 +2320,7 @@ calendar.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2399,7 +2399,7 @@ your business hours.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2436,7 +2436,7 @@ Configure the parameters so that your users can view events from shared territor
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2466,7 +2466,7 @@ relevant permission sets and creating a custom tab.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2500,7 +2500,7 @@ To set up My Team:                                   Life Sciences Commercial Ad
 
 Key Account Management for Customer Engagement
 
-Drive strategic, insight-based customer engagement with AFLS Key Account Management.
+Drive strategic, insight-based customer engagement with LSC Key Account Management.
 Foster long-term, high-value partnerships, and achieve common goals by configuring account plans.
 Implement strategic initiatives focused on specific territories. Identify growth opportunities, anticipate
 customer concerns, and promote cross-functional collaboration. Enable users to configure records,
@@ -2562,7 +2562,7 @@ and the objects and records that inform the plans.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2730,7 +2730,7 @@ trigger handlers, and create object metadata cache configurations for offline ac
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2838,7 +2838,7 @@ objectives, sprints, and tasks.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2895,7 +2895,7 @@ connect participants and stakeholders.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2935,7 +2935,7 @@ Help account managers implement an account plan by adding participant users.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2966,7 +2966,7 @@ records. Also configure the default status value of Action Plan records.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3002,7 +3002,7 @@ completion mappings for territory plans, action plans, and goals in your org.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3043,7 +3043,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3070,7 +3070,7 @@ Help key account managers monitor and execute assigned tasks in a timely manner 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3108,7 +3108,7 @@ tasks by using action plan template items.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3145,7 +3145,7 @@ A goal definition represents a broad business objective that you can reapply acr
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3190,7 +3190,7 @@ associate a goal definition with a Product record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3227,7 +3227,7 @@ plan.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3295,7 +3295,7 @@ record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3328,7 +3328,7 @@ remove fields as needed.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3370,7 +3370,7 @@ predefined time slot intervals that users can use to create time-offs across mul
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3403,7 +3403,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3442,7 +3442,7 @@ requests with autopopulated start and end times based on the selected slot type.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 

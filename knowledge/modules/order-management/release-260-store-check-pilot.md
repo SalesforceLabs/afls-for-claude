@@ -101,7 +101,7 @@ Use provided scripts to create/update store check settings:
 
 Persona: Ivan Castro, Pharmacy Representative
 
-1. Open AFLS app, view assigned visits
+1. Open Life Sciences Cloud (LSC) app, view assigned visits
 2. Navigate to store visit, tap Quick Action > Store Check
 3. Pre-populated details: pharmacy name, address, tasks (Inventory Check, Aisle, POS), KPIs per task
 4. **Priority filter:** Toggle to show only priority products from assortments

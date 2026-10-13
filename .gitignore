@@ -102,7 +102,7 @@ dist-electron/
 dist-renderer/
 release/
 
-# AFLS config exports (generated JSON + HTML snapshots)
+# LSC config exports (generated JSON + HTML snapshots)
 exports/
 
 # Scratch / temporary working directories

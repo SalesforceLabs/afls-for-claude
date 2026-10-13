@@ -199,7 +199,7 @@ function groupBlocks(blocks: ContentBlock[]): BlockGroup[] {
   return groups;
 }
 
-/** Summarize tool names: "check_afls_setup, describe_sobject x7, run_soql" */
+/** Summarize tool names: "check_lsc_setup, describe_sobject x7, run_soql" */
 function summarizeTools(tools: ToolCall[]): string {
   const counts = new Map<string, number>();
   for (const t of tools) counts.set(t.name, (counts.get(t.name) || 0) + 1);
@@ -515,7 +515,7 @@ function DocViewerPanel({
             <button
               className="doc-panel-pdf-btn"
               title="Open in Preview"
-              onClick={() => window.aflsApi.openPdfAtPage(pdfFileName, page || startPage || 1)}
+              onClick={() => window.lscApi.openPdfAtPage(pdfFileName, page || startPage || 1)}
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" />
@@ -764,7 +764,7 @@ export default function ChatView({
   }, [addImageFiles]);
 
   const openDocFile = useCallback(async (filePath: string) => {
-    const result = await window.aflsApi.readFile(filePath);
+    const result = await window.lscApi.readFile(filePath);
     if (result.ok && result.content) {
       const name = filePath.split("/").pop() || filePath;
       setDocPanel({ title: name, content: result.content, path: filePath });
@@ -773,7 +773,7 @@ export default function ChatView({
   }, []);
 
   const openGuideSection = useCallback(async (guideSlug: string, sectionSlug: string, page?: number, _highlight?: string) => {
-    const result = await window.aflsApi.readGuideSection(guideSlug, sectionSlug);
+    const result = await window.lscApi.readGuideSection(guideSlug, sectionSlug);
     if (result.ok) {
       const targetPage = page || result.startPage || 1;
       setDocPanel({
@@ -925,9 +925,9 @@ export default function ChatView({
   const autocomplete = useMemo(() => {
     if (!input.startsWith("/")) return [];
     const query = input.slice(1).toLowerCase(); // strip the leading /
-    // Match against /afls:name — user might type "/" or "/afls:" or "/afls:he"
+    // Match against /lsc:name — user might type "/" or "/lsc:" or "/lsc:he"
     return commands.filter((cmd) => {
-      const full = `afls:${cmd.name}`;
+      const full = `lsc:${cmd.name}`;
       return full.toLowerCase().startsWith(query);
     });
   }, [input, commands]);
@@ -954,7 +954,7 @@ export default function ChatView({
 
   const acceptAutocomplete = useCallback(
     (cmd: { name: string }) => {
-      setInput(`/afls:${cmd.name} `);
+      setInput(`/lsc:${cmd.name} `);
       textareaRef.current?.focus();
     },
     []
@@ -1057,7 +1057,7 @@ export default function ChatView({
                   acceptAutocomplete(cmd);
                 }}
               >
-                <span className="autocomplete-cmd">/afls:{cmd.name}</span>
+                <span className="autocomplete-cmd">/lsc:{cmd.name}</span>
                 <span className="autocomplete-desc">{cmd.description}</span>
               </div>
             ))}
@@ -1080,7 +1080,7 @@ export default function ChatView({
           onKeyDown={handleKeyDown}
           placeholder={
             messages.length === 0
-              ? "Ask about AFLS, run a command, or type / to see options..."
+              ? "Ask about LSC, run a command, or type / to see options..."
               : "Type a message..."
           }
           rows={1}
@@ -1143,11 +1143,11 @@ export default function ChatView({
       <div className="main-area">
         <div className="welcome">
           <div className="welcome-logo-wrap">
-            <img src="afls-logo-2026.png" alt="AFLS" className="welcome-logo" />
+            <img src="lsc-logo-2026.png" alt="LSC" className="welcome-logo" />
           </div>
-          <h2>AFLS Assistant</h2>
+          <h2>LSC Assistant</h2>
           <p>
-            Ask questions about AFLS, run SOQL queries, configure
+            Ask questions about LSC, run SOQL queries, configure
             modules, or type <strong>/</strong> to see available commands.
           </p>
           <div className="model-selector">
@@ -1249,8 +1249,8 @@ export default function ChatView({
                             return <code className={className} {...props}>{children}</code>;
                           },
                           a: ({ href, children, ...props }) => {
-                            if (href?.startsWith("afls-file://")) {
-                              const filePath = href.slice("afls-file://".length);
+                            if (href?.startsWith("lsc-file://")) {
+                              const filePath = href.slice("lsc-file://".length);
                               return (
                                 <a
                                   {...props}
@@ -1261,8 +1261,8 @@ export default function ChatView({
                                 </a>
                               );
                             }
-                            if (href?.startsWith("afls-section://")) {
-                              const url = new URL(href.replace("afls-section://", "https://placeholder/"));
+                            if (href?.startsWith("lsc-section://")) {
+                              const url = new URL(href.replace("lsc-section://", "https://placeholder/"));
                               const parts = url.pathname.split("/").filter(Boolean);
                               const guideSlug = parts[0];
                               const sectionSlug = parts[1];
@@ -1278,15 +1278,15 @@ export default function ChatView({
                                 </a>
                               );
                             }
-                            if (href?.startsWith("afls-pdf://")) {
-                              const url = new URL(href.replace("afls-pdf://", "https://placeholder/"));
+                            if (href?.startsWith("lsc-pdf://")) {
+                              const url = new URL(href.replace("lsc-pdf://", "https://placeholder/"));
                               const pdfFileName = url.pathname.replace(/^\//, "");
                               const page = url.searchParams.get("page") ? parseInt(url.searchParams.get("page")!) : 1;
                               return (
                                 <a
                                   className="doc-link"
                                   href="#"
-                                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.aflsApi.openPdfAtPage(pdfFileName, page); }}
+                                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.lscApi.openPdfAtPage(pdfFileName, page); }}
                                 >
                                   {children}
                                 </a>
@@ -1297,7 +1297,7 @@ export default function ChatView({
                                 <a
                                   {...props}
                                   className="doc-link"
-                                  onClick={(e) => { e.preventDefault(); window.aflsApi.openExternal(href); }}
+                                  onClick={(e) => { e.preventDefault(); window.lscApi.openExternal(href); }}
                                 >
                                   {children}
                                 </a>

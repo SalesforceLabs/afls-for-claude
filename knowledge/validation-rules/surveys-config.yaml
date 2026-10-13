@@ -1,4 +1,4 @@
-# AFLS Surveys Configuration Validation Rules
+# LSC Surveys Configuration Validation Rules
 # ===========================================
 # Rules to validate Surveys configuration including
 # survey records, versions, questions, invitations, responses,
@@ -20,7 +20,7 @@
 schema_version: "1.0"
 category_name: "Surveys Configuration"
 description: |
-  Validation rules for AFLS Surveys configuration.
+  Validation rules for LSC Surveys configuration.
   Covers survey records, versions, questions, sharing, responses,
   and mobile cache requirements.
 
@@ -154,7 +154,7 @@ rules:
     description: |
       Checks whether SurveyInvitation records exist. Survey invitations are
       created when surveys are sent to respondents via email or other channels.
-      For AFLS mobile surveys launched during visits, invitations may not be
+      For LSC mobile surveys launched during visits, invitations may not be
       required as surveys are launched directly. However, for email-based
       surveys or external respondents, invitations track who was sent a survey.
       This is informational only and does not block survey functionality.

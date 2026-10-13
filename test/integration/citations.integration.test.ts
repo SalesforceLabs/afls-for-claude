@@ -18,9 +18,9 @@ import {
  */
 describe("citations in tool responses (real filesystem)", () => {
   // ==========================================================================
-  // get_afls_module_docs tool path
+  // get_lsc_module_docs tool path
   // ==========================================================================
-  describe("get_afls_module_docs response", () => {
+  describe("get_lsc_module_docs response", () => {
     it("visit-management response contains citation", () => {
       const content = getModuleContent("visit-management");
       expect(content).toBeTruthy();
@@ -76,9 +76,9 @@ describe("citations in tool responses (real filesystem)", () => {
   });
 
   // ==========================================================================
-  // search_afls_knowledge tool path
+  // search_lsc_knowledge tool path
   // ==========================================================================
-  describe("search_afls_knowledge response", () => {
+  describe("search_lsc_knowledge response", () => {
     it("search results include citations per result", () => {
       const results = searchKnowledge("visit");
       expect(results.length).toBeGreaterThan(0);
@@ -116,9 +116,9 @@ describe("citations in tool responses (real filesystem)", () => {
   });
 
   // ==========================================================================
-  // get_afls_help_doc tool path
+  // get_lsc_help_doc tool path
   // ==========================================================================
-  describe("get_afls_help_doc response", () => {
+  describe("get_lsc_help_doc response", () => {
     it("help doc response includes citation with URL", () => {
       const content = getHelpDocContent("account-management");
       if (!content) return; // skip if file missing
@@ -132,9 +132,9 @@ describe("citations in tool responses (real filesystem)", () => {
   });
 
   // ==========================================================================
-  // get_afls_guide tool path
+  // get_lsc_guide tool path
   // ==========================================================================
-  describe("get_afls_guide response", () => {
+  describe("get_lsc_guide response", () => {
     it("guide response includes citation", () => {
       const content = getGuideContent("dev-guide");
       if (!content) return;
@@ -147,9 +147,9 @@ describe("citations in tool responses (real filesystem)", () => {
   });
 
   // ==========================================================================
-  // get_afls_troubleshooting tool path
+  // get_lsc_troubleshooting tool path
   // ==========================================================================
-  describe("get_afls_troubleshooting response", () => {
+  describe("get_lsc_troubleshooting response", () => {
     it("troubleshooting response includes citation", () => {
       const content = getTroubleshootingContent("common-issues");
       if (!content) return;

@@ -1,6 +1,6 @@
 name: Build Desktop App
 
-# Package the AFLS Assistant desktop app and upload the installers as
+# Package the LSC Assistant desktop app and upload the installers as
 # per-run workflow artifacts (downloadable from the run summary page).
 # Runs on CI pushes and PRs, plus on-demand via the Actions tab.
 on:
@@ -48,7 +48,7 @@ jobs:
       - name: Upload installers
         uses: actions/upload-artifact@v4
         with:
-          name: afls-assistant-macos
+          name: lsc-assistant-macos
           path: |
             release/*.dmg
             release/*.zip

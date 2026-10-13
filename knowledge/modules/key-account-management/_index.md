@@ -4,7 +4,7 @@
 
 - [kam-account-plan-web-mobile-transcription](./kam-account-plan-web-mobile-transcription.md)
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 ### Key Concepts
 

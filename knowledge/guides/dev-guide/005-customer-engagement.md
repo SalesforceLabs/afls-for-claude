@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:customer-engagement pages:147-717 -->
 # Customer Engagement
 
-AFLS Overview                                                                                                   Customer Engagement
+Life Sciences Cloud (LSC) Overview                                                                                                   Customer Engagement
 
 
 
@@ -17,7 +17,7 @@ ResearchStudy (the master object)
 
 ## Customer Engagement
 
-These objects are available for AFLS for Customer Engagement.
+These objects are available for LSC for Customer Engagement.
 
 
 
@@ -27,7 +27,7 @@ Account Management in the Life Sciences industry is crucial for organizations to
 providers (HCPs) and healthcare organizations (HCOs). The profile information serves as a foundation for various operational activities
 within the organization, providing a comprehensive view of HCPs and HCOs including their contact and social network details,
 specialties, affiliations, business licenses, ratings to segment and categorize HCPs and HCOs, as well as territory and product, and
-team-specific details. AFLS extends the Salesforce Core Account data model allowing organizations to create a holistic
+team-specific details. LSC extends the Salesforce Core Account data model allowing organizations to create a holistic
 view of their customers providing up-to-date information in support of their business priorities.
 Activity Plans
 Activity plans allow administrators to define goals for specific employees, including targeted accounts, plan cycle duration, types of
@@ -55,7 +55,7 @@ view, and manage General Events in their schedules. Users can also add employees
 
 <!-- page:148 -->
 
-AFLS Overview                                                                                                       Customer Engagement
+LSC Overview                                                                                                       Customer Engagement
 
 
 
@@ -98,14 +98,14 @@ questions about drug details, interactions, off-label usage, and clinical produc
 work in contact center environments and partner with MSLs to resolve inquiries, including incoming patient and consumer calls
 about product information, side effects, and adverse reactions.
 Mobile Metadata
-Mobile Metadata represents a metadata cache for the AFLS for Customer Engagement mobile application.
+Mobile Metadata represents a metadata cache for the LSC for Customer Engagement mobile application.
 Mobile Sync
-The Mobile Sync objects store information about data transactions synchronized from the AFLS for Customer Engagement
+The Mobile Sync objects store information about data transactions synchronized from the LSC for Customer Engagement
 mobile application. This information includes individual data transactions and supporting summary and logging information.
 
 <!-- page:149 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -156,7 +156,7 @@ and email templates for easy searching by subject filtering.
 
 <!-- page:150 -->
 
-AFLS Overview                                                                                                Customer Engagement
+LSC Overview                                                                                                Customer Engagement
 
 
 
@@ -164,15 +164,15 @@ AFLS Overview                                                                   
 
 Surveys provide Life Science companies with an easy-to-use solution for creating, distributing, and completing surveys. Surveys help
 ensure regulatory compliance, support accurate data management, and deliver actionable insights that enhance research outcomes
-and enable informed decision-making. Additionally, Surveys include an offline survey capability in the AFLS mobile
+and enable informed decision-making. Additionally, Surveys include an offline survey capability in the LSC mobile
 app, allowing users to collect responses without an internet connection. When back online, data is automatically synced, ensuring
 seamless integration with the feedback and analytics processes.
 System Objects
-System objects are related to core system functionality used by AFLS for Commercial Engagement.
+System objects are related to core system functionality used by LSC for Commercial Engagement.
 Territory Management
 Territory Management supports strategically organizing territories and aligning healthcare providers (HCPs) and healthcare
 organizations (HCOs) to territories. Use Territory Management to optimize resource allocation and improve engagement with
-HCPs/HCOs. AFLS enables industry-specific territory management features that are integrated with Salesforce Enterprise
+HCPs/HCOs. LSC enables industry-specific territory management features that are integrated with Salesforce Enterprise
 Territory Management.
 
 
@@ -183,7 +183,7 @@ Account Management in the Life Sciences industry is crucial for organizations to
 providers (HCPs) and healthcare organizations (HCOs). The profile information serves as a foundation for various operational activities
 within the organization, providing a comprehensive view of HCPs and HCOs including their contact and social network details, specialties,
 affiliations, business licenses, ratings to segment and categorize HCPs and HCOs, as well as territory and product, and team-specific
-details. AFLS extends the Salesforce Core Account data model allowing organizations to create a holistic view of their
+details. LSC extends the Salesforce Core Account data model allowing organizations to create a holistic view of their
 customers providing up-to-date information in support of their business priorities.
 
 
@@ -193,7 +193,7 @@ For more details and a larger image, visit the Data Model Gallery.
 
 <!-- page:151 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -243,7 +243,7 @@ Represents the classification values for the provider account user group. This o
 
 <!-- page:152 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -283,7 +283,7 @@ Represents the object for which the data change request is configured. This obje
 
 <!-- page:153 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -341,7 +341,7 @@ Possible values are:
 
 <!-- page:154 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -389,7 +389,7 @@ The object associated with the data change definition.
 
 <!-- page:155 -->
 
-AFLS Overview                                                                                             Customer Engagement
+LSC Overview                                                                                             Customer Engagement
 
 
 
@@ -445,7 +445,7 @@ string
 
 <!-- page:156 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -497,7 +497,7 @@ message for a failed request to an external system.
 
 <!-- page:157 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -548,7 +548,7 @@ Autonumber, Defaulted on create, Filter, idLookup, Sort
 
 <!-- page:158 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -599,7 +599,7 @@ string
 
 <!-- page:159 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -646,7 +646,7 @@ Possible values are:
 
 <!-- page:160 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -705,7 +705,7 @@ a list view or related record.
 
 <!-- page:161 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -756,7 +756,7 @@ boolean
 
 <!-- page:162 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -812,7 +812,7 @@ Represents the management of data validation for the object by record type.
 
 <!-- page:163 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -865,7 +865,7 @@ The record type identifier for the validation system for the data change definit
 
 <!-- page:164 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -922,7 +922,7 @@ The default value is DoNotApplyChangesImmediately.
 
 <!-- page:165 -->
 
-AFLS Overview                                                                                               Customer Engagement
+LSC Overview                                                                                               Customer Engagement
 
 
 
@@ -976,7 +976,7 @@ and HCOs that they work with.
 
 <!-- page:166 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -1034,7 +1034,7 @@ string
 
 <!-- page:167 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -1086,7 +1086,7 @@ The Salesforce ID of the losing record in the merge request.
 
 <!-- page:168 -->
 
-AFLS Overview                                                                                        Customer Engagement
+LSC Overview                                                                                        Customer Engagement
 
 
 
@@ -1136,7 +1136,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:169 -->
 
-AFLS Overview                                                                                         Customer Engagement
+LSC Overview                                                                                         Customer Engagement
 
 
 
@@ -1186,7 +1186,7 @@ The external ID of the winning record in the merge request.
 
 <!-- page:170 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -1246,7 +1246,7 @@ Account
 
 <!-- page:171 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -1265,7 +1265,7 @@ Possible values are:
 - Address
 - Jurisdiction
 - StateDistributorLicense
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 ContactId               Type
@@ -1286,7 +1286,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 The ID of the person who holds the license and is listed as a contact. This field is a relationship
-field. This field is available with the AFLS for Customer Engagement Add-on
+field. This field is available with the LSC for Customer Engagement Add-on
 license in API version 65.0 and later.
 Relationship Name
 ContactPointAddress
@@ -1295,7 +1295,7 @@ ContactPointAddress
 
 <!-- page:172 -->
 
-AFLS Overview                                                                                        Customer Engagement
+LSC Overview                                                                                        Customer Engagement
 
 
 
@@ -1315,7 +1315,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 The ID associated with the healthcare facility. This field is a relationship field. This field is
-available with the AFLS for Customer Engagement Add-on license in API
+available with the LSC for Customer Engagement Add-on license in API
 version 65.0 and later.
 Relationship Name
 HealthCareFacility
@@ -1346,7 +1346,7 @@ boolean
 
 <!-- page:173 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -1365,7 +1365,7 @@ Properties
 Defaulted on create, Filter, Group, Sort
 Description
 Indicates whether the business license is valid (true) or not (false). The default value is
-false. This field is a calculated field. This field is available with the AFLS for
+false. This field is a calculated field. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 IsPrimaryLicense        Type
@@ -1398,7 +1398,7 @@ Country where license is valid.
 
 <!-- page:174 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -1438,7 +1438,7 @@ Properties
 Filter, Nillable, Sort
 Description
 The timestamp for when the current user last referenced a record related to this record. This
-field is available with the AFLS for Customer Engagement Add-on license in
+field is available with the LSC for Customer Engagement Add-on license in
 API version 65.0 and later.
 
 LastViewedDate          Type
@@ -1448,7 +1448,7 @@ Filter, Nillable, Sort
 
 <!-- page:175 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -1459,7 +1459,7 @@ Field                   Details
 
 The timestamp for when the current user last viewed this record. If this value is null, it’s
 possible that this record was referenced (LastReferencedDate) and not viewed. This field is
-available with the AFLS for Customer Engagement Add-on license in API
+available with the LSC for Customer Engagement Add-on license in API
 version 65.0 and later.
 
 LicenseClass            Type
@@ -1488,7 +1488,7 @@ Properties
 Filter, Group, Nillable, Sort
 Description
 The icon used to indicate the validation status of the business license. This field is a calculated
-field. This field is available with the AFLS for Customer Engagement Add-on
+field. This field is available with the LSC for Customer Engagement Add-on
 license in API version 65.0 and later.
 
 LineOfAuthority         Type
@@ -1500,7 +1500,7 @@ The line of authority that the distributor is licensed for.
 
 <!-- page:176 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -1509,7 +1509,7 @@ Possible values are:
 - Accident & Health or Sickness
 - Casualty
 - Property
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 Name                    Type
@@ -1549,7 +1549,7 @@ picklist
 
 <!-- page:177 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -1564,7 +1564,7 @@ Residence status of the producer.
 Possible values are:
 - Non-resident
 - Resident
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 SourceSystemUpdateDate   Type
@@ -1585,7 +1585,7 @@ Possible values are:
 - CategoryIII—Category III
 - LimitedCategoryII—Limited Category II
 - LimitedCategoryIII—Limited Category III
-This field is available with the AFLS for Customer Engagement Add-on license in
+This field is available with the LSC for Customer Engagement Add-on license in
 API version 65.0 and later.
 
 Status                   Type
@@ -1600,7 +1600,7 @@ Possible values are:
 
 <!-- page:178 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -1650,7 +1650,7 @@ History is available for tracked fields of the object.
 
 <!-- page:179 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -1709,7 +1709,7 @@ Filter, Nillable, Sort
 
 <!-- page:180 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -1764,7 +1764,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:181 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -1823,7 +1823,7 @@ ContactPointAddress
 
 <!-- page:182 -->
 
-AFLS Overview                                                                           Customer Engagement
+LSC Overview                                                                           Customer Engagement
 
 
 
@@ -1873,7 +1873,7 @@ int
 
 <!-- page:183 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -1923,7 +1923,7 @@ The name of the contact point best contact time record.
 
 <!-- page:184 -->
 
-AFLS Overview                                                                    Customer Engagement
+LSC Overview                                                                    Customer Engagement
 
 
 
@@ -1973,7 +1973,7 @@ time
 
 <!-- page:185 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -2027,7 +2027,7 @@ Change events are available for the object.
 
 <!-- page:186 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -2086,7 +2086,7 @@ reference
 
 <!-- page:187 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -2137,7 +2137,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:188 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -2192,7 +2192,7 @@ Sharing is available for the object.
 
 <!-- page:189 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -2248,7 +2248,7 @@ dateTime
 
 <!-- page:190 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -2299,7 +2299,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:191 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -2357,7 +2357,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:192 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 Fields
@@ -2407,7 +2407,7 @@ Master-detail
 
 <!-- page:193 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -2459,7 +2459,7 @@ string
 
 <!-- page:194 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -2510,7 +2510,7 @@ Specifies the status of the product within the formulary.
 
 <!-- page:195 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -2565,13 +2565,13 @@ Represents business-level details about the healthcare organization or the pract
 
 <!-- page:196 -->
 
-AFLS Overview                                                                                                 Customer Engagement
+LSC Overview                                                                                                 Customer Engagement
 
 
 
 ## Special Access Rules
 
-In AFLS, the HealthCareProvider object and its fields are used by the Account Management and the Segmentation feature
+In LSC, the HealthCareProvider object and its fields are used by the Account Management and the Segmentation feature
 areas. This topic lists fields used in both features.
 
 
@@ -2593,7 +2593,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the abbreviated name of the Japanese healthcare organization (HCO) for INS-DOC
-records. This field is available with the AFLS for Customer Engagement Add-on
+records. This field is available with the LSC for Customer Engagement Add-on
 license in API version 65.0 and later.
 
 AccountId                           Type
@@ -2613,7 +2613,7 @@ Properties
 Create, Nillable, Update
 Description
 The JSON comprising the list of Sample Limits for the HealthcareProvider record. This field
-is available with the AFLS for Customer Engagement Add-on license in API
+is available with the LSC for Customer Engagement Add-on license in API
 version 65.0 and later.
 
 CaqhIdentifier                      Type
@@ -2621,7 +2621,7 @@ string
 
 <!-- page:197 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -2641,7 +2641,7 @@ Properties
 Create, Filter, Nillable, Sort, Update
 Description
 Captures comments explaining the reasons or context for changes made to the data. This
-field is available with the AFLS for Customer Engagement Add-on license in
+field is available with the LSC for Customer Engagement Add-on license in
 API version 65.0 and later.
 
 DoesDispenseMedication   Type
@@ -2650,7 +2650,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the account dispenses medication.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 EffectiveFrom            Type
@@ -2674,7 +2674,7 @@ Create, Nillable, Update
 
 <!-- page:198 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -2692,7 +2692,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the provider’s contract follows a CMS model MA contract amendment,
 based on Centers for Medicare and Medicaid Services (CMS) guidelines.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 HasSalesDataRestriction Type
@@ -2701,7 +2701,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether access to the sales data about the healthcare provider is restricted.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 InitialStartDate        Type
@@ -2718,7 +2718,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the provider is excluded from search results.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 IsPrivacyLawEnabled     Type
@@ -2726,7 +2726,7 @@ boolean
 
 <!-- page:199 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -2738,7 +2738,7 @@ Field                   Details
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the privacy law regulations are enabled.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 IsSpeaker               Type
@@ -2747,7 +2747,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the provider is designated as a speaker for engagement.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 LastReferencedDate      Type
@@ -2777,7 +2777,7 @@ picklist
 
 <!-- page:200 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -2791,7 +2791,7 @@ Description
 Specifies the country code of the country to which the account belongs.
 Possible values are:
 - US
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 OwnerId                    Type
@@ -2811,7 +2811,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the ID of the parent account, used to establish the account hierarchy. This field is
-a relationship field. This field is available with the AFLS for Customer
+a relationship field. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 Relationship Name
 ParentOrganizationAccount
@@ -2824,12 +2824,12 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the Japanese phonetic name, applicable to both HCP and HCO, which is used for
-sorting and text-based searches. This field is available with the AFLS for
+sorting and text-based searches. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 <!-- page:201 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -2842,7 +2842,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the Japanese phonetic name, applicable to both HCP and HCO, which is used for
-sorting and text-based searches. This field is available with the AFLS for
+sorting and text-based searches. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 PractitionerId          Type
@@ -2863,7 +2863,7 @@ Properties
 Create, Filter, Nillable, Update
 Description
 Specifies the professional designation of the healthcare professional. This field is available
-with the AFLS for Customer Engagement Add-on license in API version 65.0
+with the LSC for Customer Engagement Add-on license in API version 65.0
 and later.
 
 ProfessionalTitle       Type
@@ -2872,7 +2872,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the professional title of the healthcare professional. This field is available with the
-AFLS for Customer Engagement Add-on license in API version 65.0 and later.
+LSC for Customer Engagement Add-on license in API version 65.0 and later.
 
 ProviderClass           Type
 picklist
@@ -2881,7 +2881,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:202 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -2901,7 +2901,7 @@ string
 Properties
 Filter, Group, Nillable, Sort
 Description
-The full name of the healthcare provider. This field is available with the AFLS
+The full name of the healthcare provider. This field is available with the LSC
 for Customer Engagement Add-on license in API version 65.0 and later.
 
 ProviderPhotoId         Type
@@ -2932,7 +2932,7 @@ Possible values are:
 
 <!-- page:203 -->
 
-AFLS Overview                                                                                         Customer Engagement
+LSC Overview                                                                                         Customer Engagement
 
 
 
@@ -2947,7 +2947,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the provider who originated the referral. This field is a relationship field. This field
-is available with the AFLS for Customer Engagement Add-on license in API
+is available with the LSC for Customer Engagement Add-on license in API
 version 65.0 and later.
 Relationship Name
 ReferredByContact
@@ -2960,7 +2960,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the HCP account associated with the INS-DOC. This field is a relationship field. This
-field is available with the AFLS for Customer Engagement Add-on license in
+field is available with the LSC for Customer Engagement Add-on license in
 API version 65.0 and later.
 Relationship Name
 RelatedHealthcareProvider
@@ -2980,7 +2980,7 @@ Lookup
 
 <!-- page:204 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -2995,7 +2995,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the date when the sales data restriction becomes effective. This field is available
-with the AFLS for Customer Engagement Add-on license in API version 65.0
+with the LSC for Customer Engagement Add-on license in API version 65.0
 and later.
 
 SourceSystem               Type
@@ -3030,7 +3030,7 @@ Possible values are:
 
 <!-- page:205 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -3038,7 +3038,7 @@ Field                                   Details
 - Active
 - Inactive
 - Pending
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 TerminationDate                         Type
@@ -3069,7 +3069,7 @@ Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the Chines character name of the organization, applicable only to healthcare
 professionals (HCPs), which is required for INS-DOC records. This field is available with the
-AFLS for Customer Engagement Add-on license in API version 65.0 and later.
+LSC for Customer Engagement Add-on license in API version 65.0 and later.
 
 
 
@@ -3083,7 +3083,7 @@ Change events are available for the object.
 
 <!-- page:206 -->
 
-AFLS Overview                                                                                                 Customer Engagement
+LSC Overview                                                                                                 Customer Engagement
 
 
 
@@ -3143,7 +3143,7 @@ dateTime
 
 <!-- page:207 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -3195,7 +3195,7 @@ Party
 
 <!-- page:208 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -3248,7 +3248,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:209 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -3305,7 +3305,7 @@ is used for segmentation and product-level rankings. This object is available in
 
 <!-- page:210 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -3356,7 +3356,7 @@ possible that this record was referenced (LastReferencedDate) and not viewed.
 
 <!-- page:211 -->
 
-AFLS Overview                                                                               Customer Engagement
+LSC Overview                                                                               Customer Engagement
 
 
 
@@ -3406,7 +3406,7 @@ string
 
 <!-- page:212 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -3463,7 +3463,7 @@ retrieve(), search(), update(), upsert()
 
 <!-- page:213 -->
 
-AFLS Overview                                                                               Customer Engagement
+LSC Overview                                                                               Customer Engagement
 
 
 Fields
@@ -3512,7 +3512,7 @@ The default value is false.
 
 <!-- page:214 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -3563,7 +3563,7 @@ possible that this record was referenced (LastReferencedDate) and not viewed.
 
 <!-- page:215 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -3614,7 +3614,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:216 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -3663,7 +3663,7 @@ string
 
 <!-- page:217 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -3714,7 +3714,7 @@ int
 
 <!-- page:218 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -3775,7 +3775,7 @@ Account
 
 <!-- page:219 -->
 
-AFLS Overview                                                                            Customer Engagement
+LSC Overview                                                                            Customer Engagement
 
 
 
@@ -3824,7 +3824,7 @@ reference
 
 <!-- page:220 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -3876,7 +3876,7 @@ Indicates whether the account is of person account type (true) or not (false).
 
 <!-- page:221 -->
 
-AFLS Overview                                                                                          Customer Engagement
+LSC Overview                                                                                          Customer Engagement
 
 
 
@@ -3926,7 +3926,7 @@ Defaulted on create, Filter, Group, Sort
 
 <!-- page:222 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -3977,7 +3977,7 @@ reference
 
 <!-- page:223 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -4027,7 +4027,7 @@ The default value is Employ.
 
 <!-- page:224 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -4089,7 +4089,7 @@ dateTime
 
 <!-- page:225 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -4141,7 +4141,7 @@ Product
 
 <!-- page:226 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -4194,7 +4194,7 @@ Sharing is available for the object.
 
 <!-- page:227 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -4250,7 +4250,7 @@ Group
 
 <!-- page:228 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -4301,7 +4301,7 @@ Group, User
 
 <!-- page:229 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -4363,7 +4363,7 @@ Account for which the summary is generated.
 
 <!-- page:230 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -4413,7 +4413,7 @@ Date and time at which key information summary is generated.
 
 <!-- page:231 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -4463,7 +4463,7 @@ Autonumber, Defaulted on create, Filter, idLookup, Sort
 
 <!-- page:232 -->
 
-AFLS Overview                                                                      Customer Engagement
+LSC Overview                                                                      Customer Engagement
 
 
 
@@ -4514,7 +4514,7 @@ Territory2
 
 <!-- page:233 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -4560,7 +4560,7 @@ during an active plan. Charts provide a visual representation of the employee's 
 
 <!-- page:234 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -4593,7 +4593,7 @@ Object Reference for the Salesforce Platform: Holiday
 
 <!-- page:235 -->
 
-AFLS Overview                                                                                                 Customer Engagement
+LSC Overview                                                                                                 Customer Engagement
 
 
 
@@ -4649,7 +4649,7 @@ textarea
 
 <!-- page:236 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -4700,7 +4700,7 @@ string
 
 <!-- page:237 -->
 
-AFLS Overview                                                                               Customer Engagement
+LSC Overview                                                                               Customer Engagement
 
 
 
@@ -4751,7 +4751,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:238 -->
 
-AFLS Overview                                                                                Customer Engagement
+LSC Overview                                                                                Customer Engagement
 
 
 
@@ -4801,7 +4801,7 @@ Possible values are:
 
 <!-- page:239 -->
 
-AFLS Overview                                                                                Customer Engagement
+LSC Overview                                                                                Customer Engagement
 
 
 
@@ -4850,7 +4850,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:240 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -4898,7 +4898,7 @@ The number of working days available for the activity plan.
 
 <!-- page:241 -->
 
-AFLS Overview                                                                                                       Customer Engagement
+LSC Overview                                                                                                       Customer Engagement
 
 
 
@@ -4956,7 +4956,7 @@ a list view or related record.
 
 <!-- page:242 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -5015,7 +5015,7 @@ reference
 
 <!-- page:243 -->
 
-AFLS Overview                                                                                        Customer Engagement
+LSC Overview                                                                                        Customer Engagement
 
 
 
@@ -5066,7 +5066,7 @@ Possible values are:
 
 <!-- page:244 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -5116,7 +5116,7 @@ The total value of the completed activities related to products within this acco
 
 <!-- page:245 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -5167,7 +5167,7 @@ double
 
 <!-- page:246 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -5219,7 +5219,7 @@ double
 
 <!-- page:247 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -5271,7 +5271,7 @@ This field is a calculated field.
 
 <!-- page:248 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -5322,7 +5322,7 @@ Filter, Nillable, Sort
 
 <!-- page:249 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -5377,7 +5377,7 @@ Represents the goal measurement for an activity type. This object is available i
 
 <!-- page:250 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -5429,7 +5429,7 @@ int
 
 <!-- page:251 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -5480,7 +5480,7 @@ double
 
 <!-- page:252 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -5532,7 +5532,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:253 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -5585,7 +5585,7 @@ string
 
 <!-- page:254 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -5636,7 +5636,7 @@ double
 
 <!-- page:255 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -5688,7 +5688,7 @@ Stores the weighted value for all actual activities associated with the products
 
 <!-- page:256 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -5737,7 +5737,7 @@ Possible values are:
 
 <!-- page:257 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -5796,7 +5796,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:258 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -5848,7 +5848,7 @@ string
 
 <!-- page:259 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -5908,7 +5908,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:260 -->
 
-AFLS Overview                                                                                Customer Engagement
+LSC Overview                                                                                Customer Engagement
 
 
 
@@ -5959,7 +5959,7 @@ a list view or related record.
 
 <!-- page:261 -->
 
-AFLS Overview                                                                                        Customer Engagement
+LSC Overview                                                                                        Customer Engagement
 
 
 
@@ -6010,7 +6010,7 @@ reference
 
 <!-- page:262 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -6062,7 +6062,7 @@ picklist
 
 <!-- page:263 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -6114,7 +6114,7 @@ Sharing is available for the object.
 
 <!-- page:264 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -6171,7 +6171,7 @@ Product
 
 <!-- page:265 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -6231,7 +6231,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:266 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 Fields
@@ -6281,7 +6281,7 @@ Owner
 
 <!-- page:267 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -6327,7 +6327,7 @@ version 65.0 and later.
 
 <!-- page:268 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -6383,7 +6383,7 @@ Create, Filter, Sort, Update
 
 <!-- page:269 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -6434,7 +6434,7 @@ The message communicated in the app alert.
 
 <!-- page:270 -->
 
-AFLS Overview                                                                  Customer Engagement
+LSC Overview                                                                  Customer Engagement
 
 
 
@@ -6483,7 +6483,7 @@ The identifier of the record in the source system.
 
 <!-- page:271 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -6536,7 +6536,7 @@ Feed tracking is available for the object.
 
 <!-- page:272 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -6595,7 +6595,7 @@ The timestamp when the current user last viewed this record or list view.
 
 <!-- page:273 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -6649,7 +6649,7 @@ History is available for tracked fields of the object.
 
 <!-- page:274 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -6706,7 +6706,7 @@ The default value is false.
 
 <!-- page:275 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -6757,7 +6757,7 @@ Possible values are:
 
 <!-- page:276 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -6809,7 +6809,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:277 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 Fields
@@ -6860,7 +6860,7 @@ dateTime
 
 <!-- page:278 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -6912,7 +6912,7 @@ Parent
 
 <!-- page:279 -->
 
-AFLS Overview                                                                              Customer Engagement
+LSC Overview                                                                              Customer Engagement
 
 
 
@@ -6965,7 +6965,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:280 -->
 
-AFLS Overview                                                                            Customer Engagement
+LSC Overview                                                                            Customer Engagement
 
 
 
@@ -7017,7 +7017,7 @@ The record that the alert pertains to.
 
 <!-- page:281 -->
 
-AFLS Overview                                                                                          Customer Engagement
+LSC Overview                                                                                          Customer Engagement
 
 
 
@@ -7056,7 +7056,7 @@ and compliance.
 
 <!-- page:282 -->
 
-AFLS Overview                                                                                            Customer Engagement
+LSC Overview                                                                                            Customer Engagement
 
 
 
@@ -7091,7 +7091,7 @@ for a specific communication. This object is available in API version 65.0 and l
 
 <!-- page:283 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -7143,7 +7143,7 @@ History is available for tracked fields of the object.
 
 <!-- page:284 -->
 
-AFLS Overview                                                                                              Customer Engagement
+LSC Overview                                                                                              Customer Engagement
 
 
 
@@ -7202,7 +7202,7 @@ ContactPoint
 
 <!-- page:285 -->
 
-AFLS Overview                                                                                              Customer Engagement
+LSC Overview                                                                                              Customer Engagement
 
 
 
@@ -7261,7 +7261,7 @@ The list of restricted products associated with the consent giver at the time of
 
 <!-- page:286 -->
 
-AFLS Overview                                                                                        Customer Engagement
+LSC Overview                                                                                        Customer Engagement
 
 
 
@@ -7311,7 +7311,7 @@ The timestamp when the current user last viewed this record or list view.
 
 <!-- page:287 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -7361,7 +7361,7 @@ The terms and conditions information agreed upon by the consent giver.
 
 <!-- page:288 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -7417,7 +7417,7 @@ Object Reference for the Salesforce Platform: ContactPointConsent
 
 <!-- page:289 -->
 
-AFLS Overview                                                                                            Customer Engagement
+LSC Overview                                                                                            Customer Engagement
 
 
 
@@ -7469,7 +7469,7 @@ effectively.
 
 <!-- page:290 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -7505,7 +7505,7 @@ in API version 65.0 and later.
 
 <!-- page:291 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -7557,7 +7557,7 @@ linked and formatted when the email is sent.
 
 <!-- page:292 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -7608,7 +7608,7 @@ CommSubscriptionConsent
 
 <!-- page:293 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -7660,7 +7660,7 @@ double
 
 <!-- page:294 -->
 
-AFLS Overview                                                                                Customer Engagement
+LSC Overview                                                                                Customer Engagement
 
 
 
@@ -7711,7 +7711,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:295 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -7761,7 +7761,7 @@ Autonumber, Defaulted on create, Filter, idLookup, Sort
 
 <!-- page:296 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -7813,7 +7813,7 @@ Possible values are:
 
 <!-- page:297 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -7865,7 +7865,7 @@ determined based on the FromUser and the email settings, and is populated in the
 
 <!-- page:298 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -7916,7 +7916,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:299 -->
 
-AFLS Overview                                                                                Customer Engagement
+LSC Overview                                                                                Customer Engagement
 
 
 
@@ -7967,7 +7967,7 @@ the message. The subject is visible to recipients in their inbox.
 
 <!-- page:300 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -8019,7 +8019,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:301 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -8078,7 +8078,7 @@ boolean
 
 <!-- page:302 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -8129,7 +8129,7 @@ The date when the email template is no longer available for use by sales represe
 
 <!-- page:303 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -8179,7 +8179,7 @@ boolean
 
 <!-- page:304 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -8231,7 +8231,7 @@ string
 
 <!-- page:305 -->
 
-AFLS Overview                                                                  Customer Engagement
+LSC Overview                                                                  Customer Engagement
 
 
 
@@ -8282,7 +8282,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:306 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -8335,7 +8335,7 @@ Create, Filter, Group, idLookup, Nillable, Sort, Update
 
 <!-- page:307 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -8396,7 +8396,7 @@ retrieve(), search(), update(), upsert()
 
 <!-- page:308 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 Fields
@@ -8446,7 +8446,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:309 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -8502,7 +8502,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:310 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 Fields
@@ -8551,7 +8551,7 @@ This field is a relationship field.
 
 <!-- page:311 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -8604,7 +8604,7 @@ History is available for tracked fields of the object.
 
 <!-- page:312 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -8661,7 +8661,7 @@ string
 
 <!-- page:313 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -8713,7 +8713,7 @@ LifeSciEmailTmplSnapshot.
 
 <!-- page:314 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -8764,7 +8764,7 @@ picklist
 
 <!-- page:315 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -8810,15 +8810,15 @@ view, and manage General Events in their schedules. Users can also add employees
 
 <!-- page:316 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 For more details and a larger image, visit the Data Model Gallery.
 
 
 SEE ALSO:
-AFLS Fields on Standard Objects: Event
-AFLS Fields on Standard Objects: Event Relation
+LSC Fields on Standard Objects: Event
+LSC Fields on Standard Objects: Event Relation
 
 
 
@@ -8848,7 +8848,7 @@ object is available in API version 65.0 and later.
 
 <!-- page:317 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -8907,7 +8907,7 @@ The default value is false.
 
 <!-- page:318 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -8958,7 +8958,7 @@ Enables or disables the pinch-to-zoom functionality in the presentation.
 
 <!-- page:319 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -9009,7 +9009,7 @@ ID of the owner or creator of this object.
 
 <!-- page:320 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -9060,7 +9060,7 @@ Determines the location of the sequence rating zone in the presentation player.
 
 <!-- page:321 -->
 
-AFLS Overview                                                                            Customer Engagement
+LSC Overview                                                                            Customer Engagement
 
 
 
@@ -9106,7 +9106,7 @@ Possible values are:
 
 <!-- page:322 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -9168,7 +9168,7 @@ This field is a relationship field.
 
 <!-- page:323 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -9219,7 +9219,7 @@ remote session.
 
 <!-- page:324 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -9270,7 +9270,7 @@ dateTime
 
 <!-- page:325 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -9322,7 +9322,7 @@ Presentation
 
 <!-- page:326 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -9372,7 +9372,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:327 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -9423,7 +9423,7 @@ ProviderVisitDtlProductMsg
 
 <!-- page:328 -->
 
-AFLS Overview                                                                                          Customer Engagement
+LSC Overview                                                                                          Customer Engagement
 
 
 
@@ -9473,7 +9473,7 @@ Create, Filter, Group, idLookup, Nillable, Sort, Update
 
 <!-- page:329 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -9521,7 +9521,7 @@ Visit
 
 <!-- page:330 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -9579,7 +9579,7 @@ dateTime
 
 <!-- page:331 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -9631,7 +9631,7 @@ dateTime
 
 <!-- page:332 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -9682,7 +9682,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:333 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -9745,7 +9745,7 @@ dateTime
 
 <!-- page:334 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -9795,7 +9795,7 @@ Presentation (the master object)
 
 <!-- page:335 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -9850,7 +9850,7 @@ across different presentations. This object is available in API version 65.0 and
 
 <!-- page:336 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -9904,7 +9904,7 @@ current presentation page via email.
 
 <!-- page:337 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -9953,7 +9953,7 @@ or list view indirectly.
 
 <!-- page:338 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -10003,7 +10003,7 @@ The name of the external source system from which the record was imported.
 
 <!-- page:339 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -10061,7 +10061,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:340 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 Fields
@@ -10111,7 +10111,7 @@ This field is a relationship field.
 
 <!-- page:341 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -10159,7 +10159,7 @@ The ID of the record in the external source system for data integrations.
 
 <!-- page:342 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -10220,7 +10220,7 @@ Create, Filter, Group, Restricted picklist, Sort, Update
 
 <!-- page:343 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -10272,7 +10272,7 @@ string
 
 <!-- page:344 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -10324,7 +10324,7 @@ string
 
 <!-- page:345 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -10364,14 +10364,14 @@ Account Management ensures alignment, collaboration, and effective execution of 
 ## Account Plan
 
 Key account managers use Account Plans to enhance the accuracy of customer targeting and management by defining business
-objectives at the global, affiliate, and territory levels. Key Account Management in AFLS consists of five stages: Goal Setting,
+objectives at the global, affiliate, and territory levels. Key Account Management in LSC consists of five stages: Goal Setting,
 Targeting, Strategic Planning, Execution, and Reporting. An account can have multiple account plans, each with one or more objectives.
 Each objective can have one or more tactics, which are groups of tasks that can be tracked for progress and rolled up to higher objectives.
 Assign tasks and tactics to various team members for stakeholders and track them through sprints.
 
 <!-- page:346 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -10391,7 +10391,7 @@ tasks from tactics to objectives ensures a comprehensive approach to managing te
 
 <!-- page:347 -->
 
-AFLS Overview                                                                                                         Customer Engagement
+LSC Overview                                                                                                         Customer Engagement
 
 
 
@@ -10424,7 +10424,7 @@ that's associated with a stakeholder. This object is available in API version 65
 
 <!-- page:348 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -10475,7 +10475,7 @@ Represents the team members participating in the account plan. This object is av
 
 <!-- page:349 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -10528,7 +10528,7 @@ The name of the account plan participant record.
 
 <!-- page:350 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -10576,7 +10576,7 @@ The name of the system from which data is loaded into this object.
 
 <!-- page:351 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -10634,7 +10634,7 @@ This field is a relationship field.
 
 <!-- page:352 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -10684,7 +10684,7 @@ string
 
 <!-- page:353 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -10747,7 +10747,7 @@ This field is a relationship field.
 
 <!-- page:354 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -10797,7 +10797,7 @@ textarea
 
 <!-- page:355 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -10848,7 +10848,7 @@ LifeSciMarketableProduct, Product2
 
 <!-- page:356 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -10899,7 +10899,7 @@ textarea
 
 <!-- page:357 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -10961,7 +10961,7 @@ reference
 
 <!-- page:358 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -11013,7 +11013,7 @@ This field is a relationship field.
 
 <!-- page:359 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -11069,7 +11069,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:360 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 Fields
@@ -11120,7 +11120,7 @@ Filter, Nillable, Sort
 
 <!-- page:361 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -11176,7 +11176,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:362 -->
 
-AFLS Overview                                                                                                Customer Engagement
+LSC Overview                                                                                                Customer Engagement
 
 
 
@@ -11235,7 +11235,7 @@ AccountPlanObjective
 
 <!-- page:363 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -11284,7 +11284,7 @@ The name of the account plan stakeholder record.
 
 <!-- page:364 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -11335,7 +11335,7 @@ its products, or its initiatives.
 
 <!-- page:365 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -11391,7 +11391,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:366 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -11442,7 +11442,7 @@ string
 
 <!-- page:367 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -11504,7 +11504,7 @@ AccountPlanStakeholder
 
 <!-- page:368 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -11554,7 +11554,7 @@ The product associated with the account plan stakeholder.
 
 <!-- page:369 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -11610,7 +11610,7 @@ Represents the instance of an action plan template.
 
 <!-- page:370 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -11663,7 +11663,7 @@ Filter, Nillable, Sort
 
 <!-- page:371 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -11715,7 +11715,7 @@ The identifier of the record in the source system.
 
 <!-- page:372 -->
 
-AFLS Overview                                                                              Customer Engagement
+LSC Overview                                                                              Customer Engagement
 
 
 
@@ -11761,7 +11761,7 @@ This field is unique within your organization.
 
 <!-- page:373 -->
 
-AFLS Overview                                                                                                 Customer Engagement
+LSC Overview                                                                                                 Customer Engagement
 
 
 
@@ -11799,7 +11799,7 @@ Create, Filter, Group, Sort
 Description
 Action plan template that’s mapped to a problem defintion, goal definition, or care plan
 template. This field is a relationship field.
-In AFLS (Medical Management), it is the version of the action plan template.
+In LSC (Medical Management), it is the version of the action plan template.
 Relationship Name
 ActionPlanTemplateVersion
 Relationship Type
@@ -11816,11 +11816,11 @@ Description
 The object to which the action plan template is associated. For example: a problem definition,
 goal definition, or care plan template, associated with an action plan template.
 Relationship Name
-AssociatedObject (AFLS - Medical Management)
+AssociatedObject (LSC - Medical Management)
 
 <!-- page:374 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -11872,7 +11872,7 @@ Feed tracking is available for the object.
 
 <!-- page:375 -->
 
-AFLS Overview                                                                                                 Customer Engagement
+LSC Overview                                                                                                 Customer Engagement
 
 
 
@@ -11931,7 +11931,7 @@ The default value is false.
 
 <!-- page:376 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -11982,7 +11982,7 @@ string
 
 <!-- page:377 -->
 
-AFLS Overview                                                                                              Customer Engagement
+LSC Overview                                                                                              Customer Engagement
 
 
 
@@ -12021,7 +12021,7 @@ Perform activities such as patient registration or order authorization to captur
 
 ## Special Access Rules
 
-In AFLS, standard and custom fields extend the standard AssessmentTask object to represent tasks to complete a provider
+In LSC, standard and custom fields extend the standard AssessmentTask object to represent tasks to complete a provider
 engagement compliance cycle.
 The AssessmentTask object and its fields are used by the Key Account Management and the Provider Engagement Compliance feature
 areas. This topic lists the fields used in both of these features.
@@ -12044,7 +12044,7 @@ reference
 
 <!-- page:378 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -12095,7 +12095,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:379 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -12147,7 +12147,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:380 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -12190,7 +12190,7 @@ Properties
 Create, Filter, Group, idLookup, Nillable, Sort, Update
 Description
 The identifier of the record in the source system.
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 SourceSystemName         Type
@@ -12198,7 +12198,7 @@ string
 
 <!-- page:381 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -12210,7 +12210,7 @@ Field                   Details
 Create, Filter, Group, Nillable, Sort, Update
 Description
 The name of the system from which data is loaded into this object. This field is available with
-the AFLS for Customer Engagement Add-on license in API version 65.0 and
+the LSC for Customer Engagement Add-on license in API version 65.0 and
 later.
 
 StartTime               Type
@@ -12239,7 +12239,7 @@ Properties
 Create, Filter, Group, Restricted picklist, Sort
 Description
 Type of a task that the sales rep can perform during the visit.
-In AFLS, the task type must match the task type of the assessment task
+In LSC, the task type must match the task type of the assessment task
 definition.
 Possible values are:
 - ComponentTask—Component Task
@@ -12249,7 +12249,7 @@ Possible values are:
 
 <!-- page:382 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -12309,7 +12309,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:383 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -12333,7 +12333,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 The name of the custom goal.
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 Description             Type
@@ -12360,7 +12360,7 @@ Account, Contact
 
 <!-- page:384 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -12410,7 +12410,7 @@ Filter, Nillable, Sort
 
 <!-- page:385 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -12461,7 +12461,7 @@ picklist
 
 <!-- page:386 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -12513,7 +12513,7 @@ Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort,
 
 <!-- page:387 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -12549,7 +12549,7 @@ double
 Properties
 Create, Defaulted on create, Filter, Nillable, Sort, Update
 Description
-The target of the goal assignment. This field is available with the AFLS for
+The target of the goal assignment. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 TargetCompletionDate    Type
@@ -12561,7 +12561,7 @@ The date when the goal is targeted to be completed.
 
 <!-- page:388 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -12619,7 +12619,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:389 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -12629,7 +12629,7 @@ Field                   Details
 ## Description
 
 Indicates whether the custom goal name is required.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 LastReferencedDate      Type
@@ -12669,7 +12669,7 @@ Refers To
 
 <!-- page:390 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -12700,7 +12700,7 @@ Possible values are:
 - Affiliate
 - Global
 - Territory
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 SourceSystemIdentifier   Type
@@ -12718,7 +12718,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:391 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -12728,7 +12728,7 @@ Field                                   Details
 ## Description
 
 The name of the system from which data is loaded into this object. This field is available with
-the AFLS for Customer Engagement Add-on license in API version 65.0 and
+the LSC for Customer Engagement Add-on license in API version 65.0 and
 later.
 
 Status                                  Type
@@ -12772,7 +12772,7 @@ Feed tracking is available for the object.
 
 <!-- page:392 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -12832,7 +12832,7 @@ Filter, Nillable, Sort
 
 <!-- page:393 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -12886,7 +12886,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:394 -->
 
-AFLS Overview                                                                                              Customer Engagement
+LSC Overview                                                                                              Customer Engagement
 
 
 
@@ -12945,7 +12945,7 @@ dateTime
 
 <!-- page:395 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -12997,7 +12997,7 @@ string
 
 <!-- page:396 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -13053,7 +13053,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:397 -->
 
-AFLS Overview                                                                              Customer Engagement
+LSC Overview                                                                              Customer Engagement
 
 
 Fields
@@ -13104,7 +13104,7 @@ Filter, Nillable, Sort
 
 <!-- page:398 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -13156,7 +13156,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:399 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -13208,7 +13208,7 @@ Sharing is available for the object.
 
 <!-- page:400 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -13259,7 +13259,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:401 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 Fields
@@ -13308,7 +13308,7 @@ a list view or related record.
 
 <!-- page:402 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -13364,7 +13364,7 @@ Represents the category that Life Sciences configuration records are organized i
 
 <!-- page:403 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -13415,7 +13415,7 @@ a list view or related record.
 
 <!-- page:404 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -13469,7 +13469,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:405 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -13527,7 +13527,7 @@ Possible values are:
 
 <!-- page:406 -->
 
-AFLS Overview                                                                           Customer Engagement
+LSC Overview                                                                           Customer Engagement
 
 
 
@@ -13577,7 +13577,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:407 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -13627,7 +13627,7 @@ The long text value for the field.
 
 <!-- page:408 -->
 
-AFLS Overview                                                      Customer Engagement
+LSC Overview                                                      Customer Engagement
 
 
 
@@ -13678,7 +13678,7 @@ The URL value for the field.
 
 <!-- page:409 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -13734,7 +13734,7 @@ Filter, Nillable, Sort
 
 <!-- page:410 -->
 
-AFLS Overview                                                                                         Customer Engagement
+LSC Overview                                                                                         Customer Engagement
 
 
 
@@ -13785,7 +13785,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:411 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -13837,7 +13837,7 @@ Feed tracking is available for the object.
 
 <!-- page:412 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -13878,7 +13878,7 @@ This object is available in API version 65.0 and later.
 
 <!-- page:413 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -13937,7 +13937,7 @@ The name of the Life Science custom script record.
 
 <!-- page:414 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -13988,7 +13988,7 @@ string
 
 <!-- page:415 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -14049,7 +14049,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:416 -->
 
-AFLS Overview                                                                       Customer Engagement
+LSC Overview                                                                       Customer Engagement
 
 
 
@@ -14100,7 +14100,7 @@ reference
 
 <!-- page:417 -->
 
-AFLS Overview                                                                      Customer Engagement
+LSC Overview                                                                      Customer Engagement
 
 
 
@@ -14152,7 +14152,7 @@ Possible values are:
 
 <!-- page:418 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -14212,7 +14212,7 @@ Indicates whether the object permissions are determined by a stage path (true) o
 
 <!-- page:419 -->
 
-AFLS Overview                                                                             Customer Engagement
+LSC Overview                                                                             Customer Engagement
 
 
 
@@ -14263,7 +14263,7 @@ An external ID from the source system for data integrations.
 
 <!-- page:420 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -14320,7 +14320,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:421 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 Fields
@@ -14370,7 +14370,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:422 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -14421,7 +14421,7 @@ ParentStageOperation
 
 <!-- page:423 -->
 
-AFLS Overview                                                                                                Customer Engagement
+LSC Overview                                                                                                Customer Engagement
 
 
 
@@ -14474,7 +14474,7 @@ of a specific stage operation. This object is available in API version 65.0 and 
 
 <!-- page:424 -->
 
-AFLS Overview                                                                                                Customer Engagement
+LSC Overview                                                                                                Customer Engagement
 
 
 
@@ -14528,7 +14528,7 @@ LifeSciStageOperation
 
 <!-- page:425 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -14579,7 +14579,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:426 -->
 
-AFLS Overview                                                                              Customer Engagement
+LSC Overview                                                                              Customer Engagement
 
 
 Fields
@@ -14629,7 +14629,7 @@ Create, Filter, Group, Restricted picklist, Sort, Update
 
 <!-- page:427 -->
 
-AFLS Overview                                                                                             Customer Engagement
+LSC Overview                                                                                             Customer Engagement
 
 
 
@@ -14681,7 +14681,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:428 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 Fields
@@ -14732,7 +14732,7 @@ Create, Filter, Group, idLookup, Nillable, Sort, Update
 
 <!-- page:429 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -14787,7 +14787,7 @@ terms to avoid any effect on customer implementations.
 
 <!-- page:430 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -14840,7 +14840,7 @@ An external ID from the source system for data integrations.
 
 <!-- page:431 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -14879,7 +14879,7 @@ object is available in API version 65.0 and later.
 
 <!-- page:432 -->
 
-AFLS Overview                                                                                                         Customer Engagement
+LSC Overview                                                                                                         Customer Engagement
 
 
 
@@ -14936,7 +14936,7 @@ Create, Filter, Group, Sort
 
 <!-- page:433 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -14987,7 +14987,7 @@ The name of the system from which data is loaded into this object.
 
 <!-- page:434 -->
 
-AFLS Overview                                                                                                       Customer Engagement
+LSC Overview                                                                                                       Customer Engagement
 
 
 
@@ -15043,7 +15043,7 @@ Stores the duration of the route event in minutes.
 
 <!-- page:435 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -15094,7 +15094,7 @@ The name of the system from which data is loaded into the object.
 
 <!-- page:436 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -15153,7 +15153,7 @@ Stores the value against which the Life Science Account List object field is eva
 
 <!-- page:437 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -15203,7 +15203,7 @@ double
 
 <!-- page:438 -->
 
-AFLS Overview                                                                                                         Customer Engagement
+LSC Overview                                                                                                         Customer Engagement
 
 
 
@@ -15261,7 +15261,7 @@ The timezone of the user who creates or updates a route.
 
 <!-- page:439 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -15312,7 +15312,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:440 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -15366,7 +15366,7 @@ Represents the object that is referenced in the provider account list. This obje
 
 <!-- page:441 -->
 
-AFLS Overview                                                                                Customer Engagement
+LSC Overview                                                                                Customer Engagement
 
 
 
@@ -15417,7 +15417,7 @@ Possible values are:
 
 <!-- page:442 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -15453,7 +15453,7 @@ side effects, and adverse reactions.
 
 <!-- page:443 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -15486,7 +15486,7 @@ Represents the details of an inquiry logged by a sales representative or other u
 
 <!-- page:444 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -15539,7 +15539,7 @@ Specifies the channel through which the inquiry was made.
 
 <!-- page:445 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -15588,7 +15588,7 @@ Create, Filter, Group, Nillable, Restricted picklist, Sort, Update
 
 <!-- page:446 -->
 
-AFLS Overview                                                                             Customer Engagement
+LSC Overview                                                                             Customer Engagement
 
 
 
@@ -15640,7 +15640,7 @@ reference
 
 <!-- page:447 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -15693,7 +15693,7 @@ History is available for tracked fields of the object.
 
 <!-- page:448 -->
 
-AFLS Overview                                                                                                 Customer Engagement
+LSC Overview                                                                                                 Customer Engagement
 
 
 
@@ -15748,7 +15748,7 @@ Inquiry
 
 <!-- page:449 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -15798,7 +15798,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:450 -->
 
-AFLS Overview                                                                               Customer Engagement
+LSC Overview                                                                               Customer Engagement
 
 
 
@@ -15848,7 +15848,7 @@ The name of the external system that generated the record.
 
 <!-- page:451 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -15906,7 +15906,7 @@ InquiryQuestion
 
 <!-- page:452 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -15956,7 +15956,7 @@ The answer or response provided to the inquiry question.
 
 <!-- page:453 -->
 
-AFLS Overview                                                                         Customer Engagement
+LSC Overview                                                                         Customer Engagement
 
 
 
@@ -16006,7 +16006,7 @@ The name of the external system that generated the record.
 
 <!-- page:454 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -16027,7 +16027,7 @@ Sharing is available for the object.
 
 ## Mobile Metadata
 
-Mobile Metadata represents a metadata cache for the AFLS for Customer Engagement mobile application.
+Mobile Metadata represents a metadata cache for the LSC for Customer Engagement mobile application.
 
 
 
@@ -16055,7 +16055,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:455 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 Fields
@@ -16105,7 +16105,7 @@ Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort,
 
 <!-- page:456 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -16157,7 +16157,7 @@ Autonumber, Defaulted on create, Filter, idLookup, Sort
 
 <!-- page:457 -->
 
-AFLS Overview                                                                   Customer Engagement
+LSC Overview                                                                   Customer Engagement
 
 
 
@@ -16208,7 +16208,7 @@ string
 
 <!-- page:458 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -16259,7 +16259,7 @@ date
 
 <!-- page:459 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -16277,7 +16277,7 @@ Represents the due date to update the metadata.
 
 ## Mobile Sync
 
-The Mobile Sync objects store information about data transactions synchronized from the AFLS for Customer Engagement
+The Mobile Sync objects store information about data transactions synchronized from the LSC for Customer Engagement
 mobile application. This information includes individual data transactions and supporting summary and logging information.
 
 
@@ -16289,10 +16289,10 @@ For more details and a larger image, visit the Data Model Gallery.
 
 ## BatchJob
 
-Represents an instance of a batch job that is either running and has been run. This object is available in AFLS API
+Represents an instance of a batch job that is either running and has been run. This object is available in LSC API
 version 65.0 and later.
 BatchJobPart
-Represents one part of a batch job. This object is available in AFLS in API version 65.0 and later.
+Represents one part of a batch job. This object is available in LSC in API version 65.0 and later.
 DeviceSyncSummary
 Represents a summary of the synchronized data from a mobile device. This object is available in API version 65.0 and later.
 DeviceSyncTransaction
@@ -16305,14 +16305,14 @@ Represents a single data item to synchronize from a mobile device. This object i
 
 <!-- page:460 -->
 
-AFLS Overview                                                                                                 Customer Engagement
+LSC Overview                                                                                                 Customer Engagement
 
 
 
 
 ## BatchJob
 
-Represents an instance of a batch job that is either running and has been run. This object is available in AFLS API version
+Represents an instance of a batch job that is either running and has been run. This object is available in LSC API version
 65.0 and later.
 
 
@@ -16334,7 +16334,7 @@ Properties
 Create, Nillable, Update
 Description
 Additional information about the batch job. This field is available in API version 65.0 when
-AFLS is enabled.
+LSC is enabled.
 
 BatchJobDefinitionId                  Type
 reference
@@ -16362,7 +16362,7 @@ int
 
 <!-- page:461 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -16414,7 +16414,7 @@ The default value is false.
 
 <!-- page:462 -->
 
-AFLS Overview                                                                           Customer Engagement
+LSC Overview                                                                           Customer Engagement
 
 
 
@@ -16465,7 +16465,7 @@ The group or team for which the batch job is run.
 
 <!-- page:463 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -16516,7 +16516,7 @@ The type of batch job that is run.
 
 <!-- page:464 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -16543,7 +16543,7 @@ Feed tracking is available for the object.
 
 ## BatchJobPart
 
-Represents one part of a batch job. This object is available in AFLS in API version 65.0 and later.
+Represents one part of a batch job. This object is available in LSC in API version 65.0 and later.
 
 
 
@@ -16574,7 +16574,7 @@ BatchJob
 
 <!-- page:465 -->
 
-AFLS Overview                                                                              Customer Engagement
+LSC Overview                                                                              Customer Engagement
 
 
 
@@ -16624,7 +16624,7 @@ Filter, Group, idLookup, Sort
 
 <!-- page:466 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -16674,7 +16674,7 @@ The number of times the batch job part is automatically rerun in case it fails.
 
 <!-- page:467 -->
 
-AFLS Overview                                                                                        Customer Engagement
+LSC Overview                                                                                        Customer Engagement
 
 
 
@@ -16724,7 +16724,7 @@ Possible values are:
 
 <!-- page:468 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -16783,7 +16783,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:469 -->
 
-AFLS Overview                                                                             Customer Engagement
+LSC Overview                                                                             Customer Engagement
 
 
 
@@ -16836,7 +16836,7 @@ dateTime
 
 <!-- page:470 -->
 
-AFLS Overview                                                                        Customer Engagement
+LSC Overview                                                                        Customer Engagement
 
 
 
@@ -16887,7 +16887,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:471 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -16936,7 +16936,7 @@ dateTime
 
 <!-- page:472 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -16987,7 +16987,7 @@ The timestamp of the most recent metadata update.
 
 <!-- page:473 -->
 
-AFLS Overview                                                                             Customer Engagement
+LSC Overview                                                                             Customer Engagement
 
 
 
@@ -17038,7 +17038,7 @@ The ID of the owner of the record.
 
 <!-- page:474 -->
 
-AFLS Overview                                                                               Customer Engagement
+LSC Overview                                                                               Customer Engagement
 
 
 
@@ -17089,7 +17089,7 @@ textarea
 
 <!-- page:475 -->
 
-AFLS Overview                                                                                Customer Engagement
+LSC Overview                                                                                Customer Engagement
 
 
 
@@ -17140,7 +17140,7 @@ dateTime
 
 <!-- page:476 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -17195,7 +17195,7 @@ Feed tracking is available for the object.
 
 <!-- page:477 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -17254,7 +17254,7 @@ textarea
 
 <!-- page:478 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -17306,7 +17306,7 @@ int
 
 <!-- page:479 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -17356,7 +17356,7 @@ The default value is false.
 
 <!-- page:480 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -17407,7 +17407,7 @@ The ID associated with the debug log attachment from the most recent sync.
 
 <!-- page:481 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -17457,7 +17457,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:482 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -17509,7 +17509,7 @@ Create, Filter, Group, Restricted picklist, Sort, Update
 
 <!-- page:483 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -17563,7 +17563,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:484 -->
 
-AFLS Overview                                                                                              Customer Engagement
+LSC Overview                                                                                              Customer Engagement
 
 
 
@@ -17623,7 +17623,7 @@ string
 
 <!-- page:485 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -17674,7 +17674,7 @@ a list view or related record.
 
 <!-- page:486 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -17725,7 +17725,7 @@ Possible values are:
 
 <!-- page:487 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -17785,7 +17785,7 @@ DeviceSyncTransaction
 
 <!-- page:488 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -17836,7 +17836,7 @@ Required. The type of object associated with the data item to sync.
 
 <!-- page:489 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -17885,7 +17885,7 @@ or a standard identifier for an existing record.
 
 <!-- page:490 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -17939,7 +17939,7 @@ History is available for tracked fields of the object.
 
 <!-- page:491 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -17980,7 +17980,7 @@ later.
 
 <!-- page:492 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -18037,7 +18037,7 @@ Autonumber, Defaulted on create, Filter, idLookup, Sort
 
 <!-- page:493 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -18089,7 +18089,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:494 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -18143,7 +18143,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:495 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -18203,7 +18203,7 @@ dateTime
 
 <!-- page:496 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -18255,7 +18255,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:497 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -18306,7 +18306,7 @@ string
 
 <!-- page:498 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -18363,7 +18363,7 @@ Represents the recommended engagement actions for the account at territory level
 
 <!-- page:499 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -18416,7 +18416,7 @@ Create, Defaulted on create, Filter, Group, Restricted picklist, Sort, Update
 
 <!-- page:500 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -18467,7 +18467,7 @@ string
 
 <!-- page:501 -->
 
-AFLS Overview                                                                            Customer Engagement
+LSC Overview                                                                            Customer Engagement
 
 
 
@@ -18518,7 +18518,7 @@ picklist
 
 <!-- page:502 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -18568,7 +18568,7 @@ Sharing is available for the object.
 
 <!-- page:503 -->
 
-AFLS Overview                                                                                               Customer Engagement
+LSC Overview                                                                                               Customer Engagement
 
 
 
@@ -18606,7 +18606,7 @@ working with the product. This object is available in API version 65.0 and later
 
 <!-- page:504 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -18665,7 +18665,7 @@ Represents the business group within which a product is marketed.
 
 <!-- page:505 -->
 
-AFLS Overview                                                                               Customer Engagement
+LSC Overview                                                                               Customer Engagement
 
 
 
@@ -18714,7 +18714,7 @@ The default value is false.
 
 <!-- page:506 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -18763,7 +18763,7 @@ Filter, Nillable, Sort
 
 <!-- page:507 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -18814,7 +18814,7 @@ The minimum quantity of a sample that can be ordered.
 
 <!-- page:508 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -18865,7 +18865,7 @@ reference
 
 <!-- page:509 -->
 
-AFLS Overview                                                                                Customer Engagement
+LSC Overview                                                                                Customer Engagement
 
 
 
@@ -18916,7 +18916,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:510 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -18968,7 +18968,7 @@ Create, Filter, Group, Nillable, Restricted picklist, Sort, Update
 
 <!-- page:511 -->
 
-AFLS Overview                                                                                Customer Engagement
+LSC Overview                                                                                Customer Engagement
 
 
 
@@ -19019,7 +19019,7 @@ Create, Filter, Group, Nillable, Restricted picklist, Sort, Update
 
 <!-- page:512 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -19073,7 +19073,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:513 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -19133,7 +19133,7 @@ dateTime
 
 <!-- page:514 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -19185,7 +19185,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:515 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -19247,7 +19247,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:516 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -19297,7 +19297,7 @@ The default value is false.
 
 <!-- page:517 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -19348,7 +19348,7 @@ The default priority order of product guidance messages.
 
 <!-- page:518 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -19399,7 +19399,7 @@ Possible values are:
 
 <!-- page:519 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -19458,7 +19458,7 @@ The default value is Inclusion.
 
 <!-- page:520 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -19509,7 +19509,7 @@ The product for which the territory availability is defined .
 
 <!-- page:521 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -19559,7 +19559,7 @@ Territory2
 
 <!-- page:522 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -19620,7 +19620,7 @@ The default value is false.
 
 <!-- page:523 -->
 
-AFLS Overview                                                                                        Customer Engagement
+LSC Overview                                                                                        Customer Engagement
 
 
 
@@ -19671,7 +19671,7 @@ The product territory availability associated with the product territory detaile
 
 <!-- page:524 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -19722,7 +19722,7 @@ Stores the ID of the territory associated with the product territory detailed av
 
 <!-- page:525 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -19776,7 +19776,7 @@ Sharing is available for the object.
 
 <!-- page:526 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -19799,10 +19799,10 @@ For more details and a larger image, visit the Data Model Gallery.
 
 ## DigitalSignature
 
-AFLS fields extend the standard DigitalSignature object to represent a signature. This object is available in API version
+LSC fields extend the standard DigitalSignature object to represent a signature. This object is available in API version
 65.0 and later.
 Expense
-AFLS fields extend the standard Expense object to represent expenses related to a visit. This object is available in API
+LSC fields extend the standard Expense object to represent expenses related to a visit. This object is available in API
 version 65.0 and later.
 ExpenseParticipant
 Represents a participant in an expence and is used in expense allocation. This object is available in API version 65.0 and later..
@@ -19812,7 +19812,7 @@ later.
 
 <!-- page:527 -->
 
-AFLS Overview                                                                                                       Customer Engagement
+LSC Overview                                                                                                       Customer Engagement
 
 
 
@@ -19850,7 +19850,7 @@ Represents the sales reps performing visits.
 
 ## DigitalSignature
 
-AFLS fields extend the standard DigitalSignature object to represent a signature. This object is available in API version 65.0
+LSC fields extend the standard DigitalSignature object to represent a signature. This object is available in API version 65.0
 and later.
 
 
@@ -19870,7 +19870,7 @@ DeviceOs                                Reserved for future use.
 
 <!-- page:528 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -19921,7 +19921,7 @@ reference
 
 <!-- page:529 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -19952,7 +19952,7 @@ Object Reference for the Salesforce Platform: DigitalSignature
 
 ## Expense
 
-AFLS fields extend the standard Expense object to represent expenses related to a visit. This object is available in API
+LSC fields extend the standard Expense object to represent expenses related to a visit. This object is available in API
 version 65.0 and later.
 
 
@@ -19982,7 +19982,7 @@ Autonumber, Defaulted on create, Filter, idLookup, Sort
 
 <!-- page:530 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -20033,7 +20033,7 @@ Owner
 
 <!-- page:531 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -20084,7 +20084,7 @@ Represents a participant in an expence and is used in expense allocation. This o
 
 <!-- page:532 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -20136,7 +20136,7 @@ The timestamp when the current user last viewed this record or list view.
 
 <!-- page:533 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -20192,7 +20192,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:534 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 Fields
@@ -20243,7 +20243,7 @@ dateTime
 
 <!-- page:535 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -20292,7 +20292,7 @@ The name of the source system for data integrations.
 
 <!-- page:536 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -20349,7 +20349,7 @@ Captures the geographical location where the presentation was opened.
 
 <!-- page:537 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -20399,7 +20399,7 @@ a list view or related record.
 
 <!-- page:538 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -20449,7 +20449,7 @@ string
 
 <!-- page:539 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -20511,7 +20511,7 @@ textarea
 
 <!-- page:540 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -20563,7 +20563,7 @@ location
 
 <!-- page:541 -->
 
-AFLS Overview                                                                          Customer Engagement
+LSC Overview                                                                          Customer Engagement
 
 
 
@@ -20612,7 +20612,7 @@ Reason for a bounced email invitation for a remote visit.
 
 <!-- page:542 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -20662,7 +20662,7 @@ boolean
 
 <!-- page:543 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -20714,7 +20714,7 @@ The default value is false.
 
 <!-- page:544 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -20765,7 +20765,7 @@ Autonumber, Defaulted on create, Filter, idLookup, Sort
 
 <!-- page:545 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -20816,7 +20816,7 @@ Filter, Nillable, Sort
 
 <!-- page:546 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -20867,7 +20867,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:547 -->
 
-AFLS Overview                                                                                         Customer Engagement
+LSC Overview                                                                                         Customer Engagement
 
 
 
@@ -20920,7 +20920,7 @@ string
 
 <!-- page:548 -->
 
-AFLS Overview                                                                                         Customer Engagement
+LSC Overview                                                                                         Customer Engagement
 
 
 
@@ -20970,7 +20970,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:549 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -21021,7 +21021,7 @@ The name of the territory associated with the provider visit.
 
 <!-- page:550 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -21078,7 +21078,7 @@ create(), describeSObjects()
 
 <!-- page:551 -->
 
-AFLS Overview                                                                                        Customer Engagement
+LSC Overview                                                                                        Customer Engagement
 
 
 Fields
@@ -21128,7 +21128,7 @@ Visit
 
 <!-- page:552 -->
 
-AFLS Overview                                                                                                Customer Engagement
+LSC Overview                                                                                                Customer Engagement
 
 
 
@@ -21185,7 +21185,7 @@ dateTime
 
 <!-- page:553 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -21237,7 +21237,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:554 -->
 
-AFLS Overview                                                                             Customer Engagement
+LSC Overview                                                                             Customer Engagement
 
 
 
@@ -21286,7 +21286,7 @@ Possible values are:
 
 <!-- page:555 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -21341,7 +21341,7 @@ Represents marketing items provided to the health care provider as part of a vis
 
 <!-- page:556 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -21393,7 +21393,7 @@ Autonumber, Defaulted on create, Filter, idLookup, Sort
 
 <!-- page:557 -->
 
-AFLS Overview                                                                 Customer Engagement
+LSC Overview                                                                 Customer Engagement
 
 
 
@@ -21444,7 +21444,7 @@ ProviderVisit (the master object)
 
 <!-- page:558 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -21498,7 +21498,7 @@ History is available for tracked fields of the object.
 
 <!-- page:559 -->
 
-AFLS Overview                                                                                               Customer Engagement
+LSC Overview                                                                                               Customer Engagement
 
 
 
@@ -21557,7 +21557,7 @@ The default value is false.
 
 <!-- page:560 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -21606,7 +21606,7 @@ Name of the provider visit product detailing.
 
 <!-- page:561 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -21657,7 +21657,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:562 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -21707,7 +21707,7 @@ Account
 
 <!-- page:563 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -21757,7 +21757,7 @@ reference
 
 <!-- page:564 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -21808,7 +21808,7 @@ The name of the source system for data integrations.
 
 <!-- page:565 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -21868,7 +21868,7 @@ Create, Nillable, Update
 
 <!-- page:566 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -21920,7 +21920,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:567 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -21969,7 +21969,7 @@ string
 
 <!-- page:568 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -22024,7 +22024,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:569 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 Fields
@@ -22074,7 +22074,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:570 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -22126,7 +22126,7 @@ The timestamp when the current user last viewed this record or list view.
 
 <!-- page:571 -->
 
-AFLS Overview                                                                             Customer Engagement
+LSC Overview                                                                             Customer Engagement
 
 
 
@@ -22176,7 +22176,7 @@ Product2
 
 <!-- page:572 -->
 
-AFLS Overview                                                                      Customer Engagement
+LSC Overview                                                                      Customer Engagement
 
 
 
@@ -22227,7 +22227,7 @@ An external ID from the source system for data integrations.
 
 <!-- page:573 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -22281,7 +22281,7 @@ History is available for tracked fields of the object.
 
 <!-- page:574 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -22294,7 +22294,7 @@ Track information related to a field rep’s visit to a health care provider.
 
 ## Special Access Rules
 
-In AFLS, Visit is used for Customer Engagement.
+In LSC, Visit is used for Customer Engagement.
 
 
 
@@ -22334,12 +22334,12 @@ Possible values are:
 - SMS
 - WeChat
 - WhatsApp
-The default value is In-Person. This field is available with the AFLS for
+The default value is In-Person. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 <!-- page:575 -->
 
-AFLS Overview                                                                                            Customer Engagement
+LSC Overview                                                                                            Customer Engagement
 
 
 
@@ -22352,7 +22352,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 If this visit is the child of a larger group visit, this field is used to provide a link to that visit.
-This field is a relationship field. This field is available with the AFLS for Customer
+This field is a relationship field. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 Relationship Name
 ParentVisit
@@ -22389,14 +22389,14 @@ Possible values are:
 
 <!-- page:576 -->
 
-AFLS Overview                                                                                                       Customer Engagement
+LSC Overview                                                                                                       Customer Engagement
 
 
 
 
 ## Field                                 Details
 
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 Status                                Type
@@ -22416,7 +22416,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 The ID of the terriory for this visit.
-This field is a relationship field. This field is available with the AFLS for Customer
+This field is a relationship field. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 Relationship Name
 Territory
@@ -22448,7 +22448,7 @@ reference
 
 <!-- page:577 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -22499,7 +22499,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:578 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -22539,7 +22539,7 @@ Reserved for future use.
 
 <!-- page:579 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -22599,7 +22599,7 @@ Create, Filter, Nillable, Sort
 
 <!-- page:580 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -22649,7 +22649,7 @@ The date and time when the video call ended, in universal time coordinated (UTC)
 
 <!-- page:581 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -22698,7 +22698,7 @@ Filter, Group, Nillable, Sort
 
 <!-- page:582 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -22749,7 +22749,7 @@ Filter, Nillable, Sort
 
 <!-- page:583 -->
 
-AFLS Overview                                                                               Customer Engagement
+LSC Overview                                                                               Customer Engagement
 
 
 
@@ -22800,7 +22800,7 @@ reference
 
 <!-- page:584 -->
 
-AFLS Overview                                                                                Customer Engagement
+LSC Overview                                                                                Customer Engagement
 
 
 
@@ -22851,7 +22851,7 @@ The vendor's ID for this video call.
 
 <!-- page:585 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -22907,7 +22907,7 @@ Participant information can come from the video call provider (for example, Zoom
 
 <!-- page:586 -->
 
-AFLS Overview                                                                                               Customer Engagement
+LSC Overview                                                                                               Customer Engagement
 
 
 
@@ -22961,7 +22961,7 @@ dateTime
 
 <!-- page:587 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -23014,7 +23014,7 @@ The Salesforce ID of the account record for this participant.
 
 <!-- page:588 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -23069,7 +23069,7 @@ Object Reference for the Salesforce Platform: VideoCallParticipant
 
 <!-- page:589 -->
 
-AFLS Overview                                                                                           Customer Engagement
+LSC Overview                                                                                           Customer Engagement
 
 
 
@@ -23126,7 +23126,7 @@ Zoom ID of the recording.
 
 <!-- page:590 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -23176,7 +23176,7 @@ Filter, Nillable, Sort
 
 <!-- page:591 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -23227,7 +23227,7 @@ The start time of the video call recording.
 
 <!-- page:592 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -23289,7 +23289,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:593 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -23340,7 +23340,7 @@ The information related to the samples or consent channels requested.
 
 <!-- page:594 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -23390,7 +23390,7 @@ reference
 
 <!-- page:595 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -23452,7 +23452,7 @@ The browser used by the participant.
 
 <!-- page:596 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -23502,7 +23502,7 @@ dateTime
 
 <!-- page:597 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -23556,7 +23556,7 @@ Feed tracking is available for the object.
 
 <!-- page:598 -->
 
-AFLS Overview                                                                                               Customer Engagement
+LSC Overview                                                                                               Customer Engagement
 
 
 
@@ -23597,7 +23597,7 @@ support organizational policies on sample distribution and disbursement.
 
 <!-- page:599 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -23633,7 +23633,7 @@ Represents the details about the product items in each batch. This object is ava
 
 <!-- page:600 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -23687,7 +23687,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:601 -->
 
-AFLS Overview                                                                                Customer Engagement
+LSC Overview                                                                                Customer Engagement
 
 
 Fields
@@ -23738,7 +23738,7 @@ inventory.
 
 <!-- page:602 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -23788,7 +23788,7 @@ InventoryCountProductItem
 
 <!-- page:603 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -23839,7 +23839,7 @@ The timestamp when the current user last viewed this record or list view.
 
 <!-- page:604 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -23890,7 +23890,7 @@ ProductBatchItem
 
 <!-- page:605 -->
 
-AFLS Overview                                                                              Customer Engagement
+LSC Overview                                                                              Customer Engagement
 
 
 
@@ -23940,7 +23940,7 @@ picklist
 
 <!-- page:606 -->
 
-AFLS Overview                                                                                           Customer Engagement
+LSC Overview                                                                                           Customer Engagement
 
 
 
@@ -24000,7 +24000,7 @@ The person who counts the inventory.
 
 <!-- page:607 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -24051,7 +24051,7 @@ a list view or related record.
 
 <!-- page:608 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -24101,7 +24101,7 @@ reference
 
 <!-- page:609 -->
 
-AFLS Overview                                                                           Customer Engagement
+LSC Overview                                                                           Customer Engagement
 
 
 
@@ -24153,7 +24153,7 @@ Possible values are:
 
 <!-- page:610 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -24202,7 +24202,7 @@ Contact, User
 
 <!-- page:611 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -24258,7 +24258,7 @@ User
 
 <!-- page:612 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -24309,7 +24309,7 @@ string
 
 <!-- page:613 -->
 
-AFLS Overview                                                                 Customer Engagement
+LSC Overview                                                                 Customer Engagement
 
 
 
@@ -24360,7 +24360,7 @@ Group, User
 
 <!-- page:614 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -24410,7 +24410,7 @@ SourceLocation
 
 <!-- page:615 -->
 
-AFLS Overview                                                                                               Customer Engagement
+LSC Overview                                                                                               Customer Engagement
 
 
 
@@ -24460,7 +24460,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:616 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 Fields
@@ -24518,7 +24518,7 @@ Group, User
 
 <!-- page:617 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -24568,7 +24568,7 @@ reference
 
 <!-- page:618 -->
 
-AFLS Overview                                                                 Customer Engagement
+LSC Overview                                                                 Customer Engagement
 
 
 
@@ -24619,7 +24619,7 @@ Product2
 
 <!-- page:619 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -24669,7 +24669,7 @@ double
 
 <!-- page:620 -->
 
-AFLS Overview                                                                                          Customer Engagement
+LSC Overview                                                                                          Customer Engagement
 
 
 
@@ -24728,7 +24728,7 @@ dateTime
 
 <!-- page:621 -->
 
-AFLS Overview                                                                          Customer Engagement
+LSC Overview                                                                          Customer Engagement
 
 
 
@@ -24780,7 +24780,7 @@ Defaulted on create, Filter, Group, Sort
 
 <!-- page:622 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -24831,7 +24831,7 @@ reference
 
 <!-- page:623 -->
 
-AFLS Overview                                                                             Customer Engagement
+LSC Overview                                                                             Customer Engagement
 
 
 
@@ -24882,7 +24882,7 @@ The name of the product to be disbursed.
 
 <!-- page:624 -->
 
-AFLS Overview                                                                               Customer Engagement
+LSC Overview                                                                               Customer Engagement
 
 
 
@@ -24931,7 +24931,7 @@ Specifies the status of the product disbursement.
 
 <!-- page:625 -->
 
-AFLS Overview                                                                                 Customer Engagement
+LSC Overview                                                                                 Customer Engagement
 
 
 
@@ -24980,7 +24980,7 @@ Specifies the type of warning displayed during the product disbursement.
 
 <!-- page:626 -->
 
-AFLS Overview                                                                                            Customer Engagement
+LSC Overview                                                                                            Customer Engagement
 
 
 
@@ -25045,7 +25045,7 @@ reference
 
 <!-- page:627 -->
 
-AFLS Overview                                                                                              Customer Engagement
+LSC Overview                                                                                              Customer Engagement
 
 
 
@@ -25102,7 +25102,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:628 -->
 
-AFLS Overview                                                                                               Customer Engagement
+LSC Overview                                                                                               Customer Engagement
 
 
 
@@ -25162,7 +25162,7 @@ InventoryOperation
 
 <!-- page:629 -->
 
-AFLS Overview                                                                                               Customer Engagement
+LSC Overview                                                                                               Customer Engagement
 
 
 
@@ -25211,7 +25211,7 @@ Object Reference for the Salesforce Platform: ProductTransfer
 
 <!-- page:630 -->
 
-AFLS Overview                                                                                            Customer Engagement
+LSC Overview                                                                                            Customer Engagement
 
 
 
@@ -25267,7 +25267,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:631 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -25320,7 +25320,7 @@ reference
 
 <!-- page:632 -->
 
-AFLS Overview                                                                      Customer Engagement
+LSC Overview                                                                      Customer Engagement
 
 
 
@@ -25371,7 +25371,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:633 -->
 
-AFLS Overview                                                                                               Customer Engagement
+LSC Overview                                                                                               Customer Engagement
 
 
 
@@ -25430,7 +25430,7 @@ Create, Filter, Group, Sort
 
 <!-- page:634 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -25480,7 +25480,7 @@ string
 
 <!-- page:635 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -25531,7 +25531,7 @@ Required. Stores the rules for allocating sample limits to the linked account.
 
 <!-- page:636 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -25592,7 +25592,7 @@ The unique name of the object in the API.
 
 <!-- page:637 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -25642,7 +25642,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:638 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -25694,7 +25694,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:639 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -25753,7 +25753,7 @@ The default value is USD.
 
 <!-- page:640 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -25803,7 +25803,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:641 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -25854,7 +25854,7 @@ The name of the external source system from which the record was imported.
 
 <!-- page:642 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -25912,7 +25912,7 @@ picklist
 
 <!-- page:643 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -25963,7 +25963,7 @@ This field is a relationship field.
 
 <!-- page:644 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -26012,7 +26012,7 @@ string
 
 <!-- page:645 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -26074,7 +26074,7 @@ picklist
 
 <!-- page:646 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -26124,7 +26124,7 @@ The name of the provider visit sample limit transaction.
 
 <!-- page:647 -->
 
-AFLS Overview                                                                 Customer Engagement
+LSC Overview                                                                 Customer Engagement
 
 
 
@@ -26174,7 +26174,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:648 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -26226,7 +26226,7 @@ records.
 
 <!-- page:649 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -26285,7 +26285,7 @@ Possible values are:
 
 <!-- page:650 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -26334,7 +26334,7 @@ Required. Name of territory product quantity allocation record.
 
 <!-- page:651 -->
 
-AFLS Overview                                                                        Customer Engagement
+LSC Overview                                                                        Customer Engagement
 
 
 
@@ -26383,7 +26383,7 @@ This field is a relationship field.
 
 <!-- page:652 -->
 
-AFLS Overview                                                                                               Customer Engagement
+LSC Overview                                                                                               Customer Engagement
 
 
 
@@ -26418,7 +26418,7 @@ logic changes. Use Segmentation to assign and restrict of various elements witho
 
 <!-- page:653 -->
 
-AFLS Overview                                                                                                 Customer Engagement
+LSC Overview                                                                                                 Customer Engagement
 
 
 
@@ -26453,7 +26453,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:654 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 Fields
@@ -26503,7 +26503,7 @@ Possible values are:
 
 <!-- page:655 -->
 
-AFLS Overview                                                                               Customer Engagement
+LSC Overview                                                                               Customer Engagement
 
 
 
@@ -26551,7 +26551,7 @@ Possible values are:
 
 <!-- page:656 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -26601,7 +26601,7 @@ ActionableListMemberStatus
 
 <!-- page:657 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -26652,7 +26652,7 @@ dateTime
 
 <!-- page:658 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -26702,7 +26702,7 @@ The date and time when the member count of an actionable list was last modified.
 
 <!-- page:659 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -26750,7 +26750,7 @@ Possible values are:
 
 <!-- page:660 -->
 
-AFLS Overview                                                                               Customer Engagement
+LSC Overview                                                                               Customer Engagement
 
 
 
@@ -26800,7 +26800,7 @@ Possible values are:
 
 <!-- page:661 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -26854,7 +26854,7 @@ actionable list. This object is available in API version 65.0 and later.
 
 <!-- page:662 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -26906,7 +26906,7 @@ dateTime
 
 <!-- page:663 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -26956,12 +26956,12 @@ Represents business-level details about the healthcare organization or the pract
 
 ## Special Access Rules
 
-In AFLS, the HealthCareProvider object and its fields are used by the Account Management and the Segmentation feature
+In LSC, the HealthCareProvider object and its fields are used by the Account Management and the Segmentation feature
 areas. This topic lists fields used in both features.
 
 <!-- page:664 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -26982,7 +26982,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the abbreviated name of the Japanese healthcare organization (HCO) for INS-DOC
-records. This field is available with the AFLS for Customer Engagement Add-on
+records. This field is available with the LSC for Customer Engagement Add-on
 license in API version 65.0 and later.
 
 AccountId                Type
@@ -27002,7 +27002,7 @@ Properties
 Create, Nillable, Update
 Description
 The JSON comprising the list of Sample Limits for the HealthcareProvider record. This field
-is available with the AFLS for Customer Engagement Add-on license in API
+is available with the LSC for Customer Engagement Add-on license in API
 version 65.0 and later.
 
 CaqhIdentifier           Type
@@ -27015,7 +27015,7 @@ Cloud for Customer Engagement Add-on license in API version 65.0 and later.
 
 <!-- page:665 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -27028,7 +27028,7 @@ Properties
 Create, Filter, Nillable, Sort, Update
 Description
 Captures comments explaining the reasons or context for changes made to the data. This
-field is available with the AFLS for Customer Engagement Add-on license in
+field is available with the LSC for Customer Engagement Add-on license in
 API version 65.0 and later.
 
 DoesDispenseMedication   Type
@@ -27037,7 +27037,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the account dispenses medication.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 EffectiveFrom            Type
@@ -27066,7 +27066,7 @@ boolean
 
 <!-- page:666 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -27079,7 +27079,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the provider’s contract follows a CMS model MA contract amendment,
 based on Centers for Medicare and Medicaid Services (CMS) guidelines.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 HasSalesDataRestriction Type
@@ -27088,7 +27088,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether access to the sales data about the healthcare provider is restricted.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 InitialStartDate        Type
@@ -27105,7 +27105,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the provider is excluded from search results.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 IsPrivacyLawEnabled     Type
@@ -27117,14 +27117,14 @@ Indicates whether the privacy law regulations are enabled.
 
 <!-- page:667 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
 
 ## Field                   Details
 
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 IsSpeaker               Type
@@ -27133,7 +27133,7 @@ Properties
 Create, Defaulted on create, Filter, Group, Sort, Update
 Description
 Indicates whether the provider is designated as a speaker for engagement.
-The default value is false. This field is available with the AFLS for Customer
+The default value is false. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 
 LastReferencedDate      Type
@@ -27168,13 +27168,13 @@ Possible values are:
 
 <!-- page:668 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
 Field                      Details
 - US
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 OwnerId                    Type
@@ -27194,7 +27194,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the ID of the parent account, used to establish the account hierarchy. This field is
-a relationship field. This field is available with the AFLS for Customer
+a relationship field. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 Relationship Name
 ParentOrganizationAccount
@@ -27207,7 +27207,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the Japanese phonetic name, applicable to both HCP and HCO, which is used for
-sorting and text-based searches. This field is available with the AFLS for
+sorting and text-based searches. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 PhoneticName2              Type
@@ -27217,7 +27217,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:669 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -27227,7 +27227,7 @@ Field                   Details
 ## Description
 
 Stores the Japanese phonetic name, applicable to both HCP and HCO, which is used for
-sorting and text-based searches. This field is available with the AFLS for
+sorting and text-based searches. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 PractitionerId          Type
@@ -27248,7 +27248,7 @@ Properties
 Create, Filter, Nillable, Update
 Description
 Specifies the professional designation of the healthcare professional. This field is available
-with the AFLS for Customer Engagement Add-on license in API version 65.0
+with the LSC for Customer Engagement Add-on license in API version 65.0
 and later.
 
 ProfessionalTitle       Type
@@ -27257,7 +27257,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the professional title of the healthcare professional. This field is available with the
-AFLS for Customer Engagement Add-on license in API version 65.0 and later.
+LSC for Customer Engagement Add-on license in API version 65.0 and later.
 
 ProviderClass           Type
 picklist
@@ -27270,7 +27270,7 @@ Possible values are:
 
 <!-- page:670 -->
 
-AFLS Overview                                                                                      Customer Engagement
+LSC Overview                                                                                      Customer Engagement
 
 
 
@@ -27283,7 +27283,7 @@ string
 Properties
 Filter, Group, Nillable, Sort
 Description
-The full name of the healthcare provider. This field is available with the AFLS
+The full name of the healthcare provider. This field is available with the LSC
 for Customer Engagement Add-on license in API version 65.0 and later.
 
 ProviderPhotoId         Type
@@ -27317,7 +27317,7 @@ Possible values are:
 
 <!-- page:671 -->
 
-AFLS Overview                                                                                         Customer Engagement
+LSC Overview                                                                                         Customer Engagement
 
 
 
@@ -27330,7 +27330,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the provider who originated the referral. This field is a relationship field. This field
-is available with the AFLS for Customer Engagement Add-on license in API
+is available with the LSC for Customer Engagement Add-on license in API
 version 65.0 and later.
 Relationship Name
 ReferredByContact
@@ -27343,7 +27343,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the HCP account associated with the INS-DOC. This field is a relationship field. This
-field is available with the AFLS for Customer Engagement Add-on license in
+field is available with the LSC for Customer Engagement Add-on license in
 API version 65.0 and later.
 Relationship Name
 RelatedHealthcareProvider
@@ -27368,7 +27368,7 @@ date
 
 <!-- page:672 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -27380,7 +27380,7 @@ Field                    Details
 Create, Filter, Group, Nillable, Sort, Update
 Description
 Specifies the date when the sales data restriction becomes effective. This field is available
-with the AFLS for Customer Engagement Add-on license in API version 65.0
+with the LSC for Customer Engagement Add-on license in API version 65.0
 and later.
 
 SourceSystem             Type
@@ -27415,12 +27415,12 @@ Possible values are:
 - Active
 - Inactive
 - Pending
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 <!-- page:673 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -27455,7 +27455,7 @@ Create, Filter, Group, Nillable, Sort, Update
 Description
 Stores the Chines character name of the organization, applicable only to healthcare
 professionals (HCPs), which is required for INS-DOC records. This field is available with the
-AFLS for Customer Engagement Add-on license in API version 65.0 and later.
+LSC for Customer Engagement Add-on license in API version 65.0 and later.
 
 
 
@@ -27473,7 +27473,7 @@ History is available for tracked fields of the object.
 
 <!-- page:674 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -27532,7 +27532,7 @@ dateTime
 
 <!-- page:675 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -27582,7 +27582,7 @@ The identifier of the record in the source system.
 
 <!-- page:676 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -27621,7 +27621,7 @@ later.
 
 <!-- page:677 -->
 
-AFLS Overview                                                                                                Customer Engagement
+LSC Overview                                                                                                Customer Engagement
 
 
 
@@ -27676,7 +27676,7 @@ The default value is false.
 
 <!-- page:678 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -27726,7 +27726,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:679 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -27781,7 +27781,7 @@ History is available for tracked fields of the object.
 
 <!-- page:680 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -27837,7 +27837,7 @@ Sharing is available for the object.
 
 <!-- page:681 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -27846,7 +27846,7 @@ AFLS Overview                                                                   
 
 Surveys provide Life Science companies with an easy-to-use solution for creating, distributing, and completing surveys. Surveys help
 ensure regulatory compliance, support accurate data management, and deliver actionable insights that enhance research outcomes
-and enable informed decision-making. Additionally, Surveys include an offline survey capability in the AFLS mobile app,
+and enable informed decision-making. Additionally, Surveys include an offline survey capability in the LSC mobile app,
 allowing users to collect responses without an internet connection. When back online, data is automatically synced, ensuring seamless
 integration with the feedback and analytics processes.
 
@@ -27877,7 +27877,7 @@ version 65.0 and later.
 
 <!-- page:682 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -27930,7 +27930,7 @@ The identifier of the offline or staging question response record.
 
 <!-- page:683 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -27981,7 +27981,7 @@ This field is a relationship field.
 
 <!-- page:684 -->
 
-AFLS Overview                                                                                                Customer Engagement
+LSC Overview                                                                                                Customer Engagement
 
 
 
@@ -28043,7 +28043,7 @@ time, for both offline and staging environments. This object is available in API
 
 <!-- page:685 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -28094,7 +28094,7 @@ survey response.
 
 <!-- page:686 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 
@@ -28144,7 +28144,7 @@ The participant’s offline response to the survey.
 
 <!-- page:687 -->
 
-AFLS Overview                                                                            Customer Engagement
+LSC Overview                                                                            Customer Engagement
 
 
 
@@ -28193,7 +28193,7 @@ Contact, Lead, User
 
 <!-- page:688 -->
 
-AFLS Overview                                                                            Customer Engagement
+LSC Overview                                                                            Customer Engagement
 
 
 
@@ -28240,14 +28240,14 @@ SurveyVersion
 
 <!-- page:689 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
 
 ## System Objects
 
-System objects are related to core system functionality used by AFLS for Commercial Engagement.
+System objects are related to core system functionality used by LSC for Commercial Engagement.
 
 
 
@@ -28267,7 +28267,7 @@ For more details and a larger image, visit the Data Model Gallery.
 
 ## Trigger Handlers
 
-Triggers handlers respond to specific events or triggers within the AFLS. A trigger is an event that signals the need for
+Triggers handlers respond to specific events or triggers within the LSC. A trigger is an event that signals the need for
 some action to occur, and the handler is the function that executes in response to that event.
 
 
@@ -28283,7 +28283,7 @@ The user and device management objects store additional information about users 
 
 <!-- page:690 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -28332,7 +28332,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:691 -->
 
-AFLS Overview                                                                                Customer Engagement
+LSC Overview                                                                                Customer Engagement
 
 
 
@@ -28384,7 +28384,7 @@ string
 
 <!-- page:692 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -28436,7 +28436,7 @@ The owner of the integration job run.
 
 <!-- page:693 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -28489,7 +28489,7 @@ Feed tracking is available for the object.
 
 <!-- page:694 -->
 
-AFLS Overview                                                                                                  Customer Engagement
+LSC Overview                                                                                                  Customer Engagement
 
 
 
@@ -28548,7 +28548,7 @@ boolean
 
 <!-- page:695 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -28600,7 +28600,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:696 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -28654,7 +28654,7 @@ History is available for tracked fields of the object.
 
 <!-- page:697 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -28711,7 +28711,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:698 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -28767,7 +28767,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:699 -->
 
-AFLS Overview                                                                                        Customer Engagement
+LSC Overview                                                                                        Customer Engagement
 
 
 Fields
@@ -28817,7 +28817,7 @@ string
 
 <!-- page:700 -->
 
-AFLS Overview                                                                                       Customer Engagement
+LSC Overview                                                                                       Customer Engagement
 
 
 
@@ -28869,7 +28869,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:701 -->
 
-AFLS Overview                                                                               Customer Engagement
+LSC Overview                                                                               Customer Engagement
 
 
 
@@ -28922,7 +28922,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:702 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -28974,7 +28974,7 @@ with the user.
 
 <!-- page:703 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -29026,7 +29026,7 @@ Create, Filter, Group, idLookup, Nillable, Sort, Update
 
 <!-- page:704 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -29079,7 +29079,7 @@ History is available for tracked fields of the object.
 
 <!-- page:705 -->
 
-AFLS Overview                                                                                                     Customer Engagement
+LSC Overview                                                                                                     Customer Engagement
 
 
 
@@ -29098,7 +29098,7 @@ use in business activities like emails and invitations.
 
 Territory Alignment provides for efficient distribution of Healthcare Providers (HCPs) and Healthcare Organizations (HCOs) among an
 organization’s territories. Assign users to territories and align accounts to territories. HCPs and HCOs can be aligned to territories through
-various alignment rules such as explicit customer alignment, geographical alignment, and affiliation alignment. AFLS jobs
+various alignment rules such as explicit customer alignment, geographical alignment, and affiliation alignment. LSC jobs
 process the alignment rules to generate territory alignments including the sharing of account-related data with users and creation of
 provider account territory info records.
 
@@ -29116,7 +29116,7 @@ enable the assignment of relevant content to specific territories.
 
 <!-- page:706 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -29159,7 +29159,7 @@ Object Reference for the Salesforce Platform: ProviderAcctTerritoryInfo
 
 <!-- page:707 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -29216,7 +29216,7 @@ string
 
 <!-- page:708 -->
 
-AFLS Overview                                                                            Customer Engagement
+LSC Overview                                                                            Customer Engagement
 
 
 
@@ -29267,7 +29267,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:709 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -29320,7 +29320,7 @@ Sharing is available for the object.
 
 <!-- page:710 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -29377,7 +29377,7 @@ Possible values are:
 
 <!-- page:711 -->
 
-AFLS Overview                                                                                     Customer Engagement
+LSC Overview                                                                                     Customer Engagement
 
 
 
@@ -29428,7 +29428,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:712 -->
 
-AFLS Overview                                                                                                      Customer Engagement
+LSC Overview                                                                                                      Customer Engagement
 
 
 
@@ -29482,7 +29482,7 @@ Feed tracking is available for the object.
 
 <!-- page:713 -->
 
-AFLS Overview                                                                                                   Customer Engagement
+LSC Overview                                                                                                   Customer Engagement
 
 
 
@@ -29542,7 +29542,7 @@ reference
 
 <!-- page:714 -->
 
-AFLS Overview                                                                                                    Customer Engagement
+LSC Overview                                                                                                    Customer Engagement
 
 
 
@@ -29596,7 +29596,7 @@ This object is available in API version 65.0 and later.
 
 <!-- page:715 -->
 
-AFLS Overview                                                                                   Customer Engagement
+LSC Overview                                                                                   Customer Engagement
 
 
 
@@ -29648,7 +29648,7 @@ Filter, Nillable, Sort
 
 <!-- page:716 -->
 
-AFLS Overview                                                                                    Customer Engagement
+LSC Overview                                                                                    Customer Engagement
 
 
 
@@ -29699,7 +29699,7 @@ Create, Filter, Group, idLookup, Nillable, Sort, Update
 
 <!-- page:717 -->
 
-AFLS Overview                                                                                  Customer Engagement
+LSC Overview                                                                                  Customer Engagement
 
 
 

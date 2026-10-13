@@ -1,6 +1,6 @@
 # Admin - Send Presentations as Links Configuration
 
-Welcome everyone to this series of enablement recordings. My name is Eva Miguel and in this video I will guide you through how to configure the send presentations as links feature in AFLS.
+Welcome everyone to this series of enablement recordings. My name is Eva Miguel and in this video I will guide you through how to configure the send presentations as links feature in LSC.
 
 ## Presentation Settings Configuration
 
@@ -12,13 +12,13 @@ Next you will see the digital experience site URL. This is the site used to host
 
 ## How Links Are Generated
 
-Behind the scenes, each time a presentation is shared as a link, the system generates a unique recipient-specific access link. This enables AFLS to securely manage access and track engagement at the individual recipient level. When a recipient clicks the link, they are automatically directed to the latest active version of the presentation. They can navigate through the content as intended and all interactions are tracked.
+Behind the scenes, each time a presentation is shared as a link, the system generates a unique recipient-specific access link. This enables Life Sciences Cloud (LSC) to securely manage access and track engagement at the individual recipient level. When a recipient clicks the link, they are automatically directed to the latest active version of the presentation. They can navigate through the content as intended and all interactions are tracked.
 
 Finally, it's important to know that only active presentations are accessible. If a presentation becomes inactive after the link is shared, the recipient will see a specific message indicating that the content is no longer available and access to the material will be blocked.
 
 ## Presentation Party Access Records
 
-Presentation links are generated just before the mail is sent. They are created on demand. Once the system knows two key things — which presentation is being shared and which target account (either an HCP or an account) is receiving it — AFLS creates a presentation party access record. This includes the presentation ID, the presentation name, the party ID, effective start and end date (when the link is active), and an access identifier. This is formatted as PPA (presentation party access) followed by a globally unique identifier. This access identifier is a unique token generated at the exact moment that represents the email and a new one is created for every presentation party access record. In other words, one record equals one presentation for one account for one send.
+Presentation links are generated just before the mail is sent. They are created on demand. Once the system knows two key things — which presentation is being shared and which target account (either an HCP or an account) is receiving it — LSC creates a presentation party access record. This includes the presentation ID, the presentation name, the party ID, effective start and end date (when the link is active), and an access identifier. This is formatted as PPA (presentation party access) followed by a globally unique identifier. This access identifier is a unique token generated at the exact moment that represents the email and a new one is created for every presentation party access record. In other words, one record equals one presentation for one account for one send.
 
 ## Experience Cloud Site Configuration
 

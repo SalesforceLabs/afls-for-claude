@@ -1,9 +1,9 @@
 ---
-description: Interactive wizard to configure and validate AFLS Sample Management
+description: Interactive wizard to configure and validate Life Sciences Cloud (LSC) Sample Management
 arguments: "[check-type]"
 ---
 
-# Configure AFLS Sample Management
+# Configure LSC Sample Management
 
 Interactive wizard to check and configure Sample Management (inventory and sample limits) for web and mobile.
 
@@ -20,7 +20,7 @@ Follow these steps sequentially to validate and configure sample management.
 First, check if connected to a Salesforce org:
 
 ```
-Use check_afls_setup to verify org connection
+Use check_lsc_setup to verify org connection
 ```
 
 If not connected, guide the user through authentication.
@@ -243,19 +243,19 @@ Based on findings, offer to fix issues directly using programmatic tools:
 
 ## Example Usage
 
-User: `/afls:configure-samples`
+User: `/lsc:configure-samples`
 > Run full sample management configuration check
 
-User: `/afls:configure-samples inventory`
+User: `/lsc:configure-samples inventory`
 > Focus on inventory setup (products, locations, batches, product items)
 
-User: `/afls:configure-samples limits`
+User: `/lsc:configure-samples limits`
 > Focus on sample limits configuration
 
-User: `/afls:configure-samples batches`
+User: `/lsc:configure-samples batches`
 > Focus on production batch status and expiration
 
-User: `/afls:configure-samples mobile`
+User: `/lsc:configure-samples mobile`
 > Focus on mobile-specific sample configuration
 
 ## Quick Validation Alternative
@@ -263,7 +263,7 @@ User: `/afls:configure-samples mobile`
 For a faster automated check, suggest using the audit command:
 
 ```
-/afls:audit sample-config-check
+/lsc:audit sample-config-check
 ```
 
 This runs all sample-specific validation rules automatically.

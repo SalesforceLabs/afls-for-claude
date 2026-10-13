@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:carebnftvrfyrqststschgevent pages:1481-1481 -->
 # CareBnftVrfyRqstStsChgEvent
 
-AFLS Overview                                                                                               CareBnftVrfyRqstStsChgEvent
+Life Sciences Cloud (LSC) Overview                                                                                               CareBnftVrfyRqstStsChgEvent
 
 
 

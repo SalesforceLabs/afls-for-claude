@@ -18,28 +18,28 @@ effective interactions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with Life Sciences Cloud (LSC), LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
 
-## Set Up Tableau Next for AFLS
+## Set Up Tableau Next for LSC
 
-AFLS integrates with Tableau Next to transform complex life sciences data into
+LSC integrates with Tableau Next to transform complex life sciences data into
 actionable insights and enhanced visualizations. Tableau Next is the composable, AI-analytics platform
 that turns any type of data into actionable insights. Tableau Next requires Data 360 and the Data 360
 semantic layer.
 Set Up a Tableau View Lighting Web Component for Your Life Sciences Org and Mobile App
-View embedded Tableau reports in your Life Sciences org and the AFLS mobile app.
+View embedded Tableau reports in your Life Sciences org and the LSC mobile app.
 Sales Data Setup
 Give users access to the drug distribution data and prescription data, and help them better
 understand their customers and plan effective interactions.
 
 
-Set Up Tableau Next for AFLS
+Set Up Tableau Next for LSC
 
-AFLS integrates with Tableau Next to transform complex life sciences data into actionable
+LSC integrates with Tableau Next to transform complex life sciences data into actionable
 insights and enhanced visualizations. Tableau Next is the composable, AI-analytics platform that turns
 any type of data into actionable insights. Tableau Next requires Data 360 and the Data 360 semantic
 layer.
@@ -50,7 +50,7 @@ layer.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -93,7 +93,7 @@ To set up Tableau Next for Mobile, see Stay Informed With Tableau Next Mobile Ov
 
 Sciences Org and Mobile App
 
-View embedded Tableau reports in your Life Sciences org and the AFLS mobile app.
+View embedded Tableau reports in your Life Sciences org and the LSC mobile app.
 
 
 **REQUIRED EDITIONS**
@@ -101,7 +101,7 @@ View embedded Tableau reports in your Life Sciences org and the AFLS mobile app.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -159,7 +159,7 @@ their customers and plan effective interactions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -193,7 +193,7 @@ Before you configure and use Sales Data reports, complete these required setup t
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -208,7 +208,7 @@ To create data streams                                 Data Cloud Architect
 To use Data 360                                        Data Cloud User
 
 
-1.    Set up territories. See Set Up Sales Territories for AFLS
+1.    Set up territories. See Set Up Sales Territories for LSC
 2.    Create Account records.
 3.    Create Product2 records.
 4.    Create LifeSciMarketableProduct records.
@@ -238,7 +238,7 @@ sales data only from their specific territory.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -279,7 +279,7 @@ Data component to a record page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 
 <!-- page:643 -->
@@ -322,7 +322,7 @@ Make the Sales Data component available to your users by adding it as a tab in y
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 

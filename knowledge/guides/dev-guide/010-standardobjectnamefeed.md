@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:standardobjectnamefeed pages:1433-1437 -->
 # StandardObjectNameFeed
 
-AFLS Overview                                                                                             StandardObjectNameFeed
+Life Sciences Cloud (LSC) Overview                                                                                             StandardObjectNameFeed
 
 
 - ProviderAcctProductInfo
@@ -56,7 +56,7 @@ Note: Users with the Moderate Chatter permission can delete only the feed items 
 
 <!-- page:1434 -->
 
-AFLS Overview                                                                                             StandardObjectNameFeed
+LSC Overview                                                                                             StandardObjectNameFeed
 
 
 Only users with this permission can delete items in unlisted groups.
@@ -108,7 +108,7 @@ Group, Nillable, Sort
 
 <!-- page:1435 -->
 
-AFLS Overview                                                                                StandardObjectNameFeed
+LSC Overview                                                                                StandardObjectNameFeed
 
 
 
@@ -161,7 +161,7 @@ The number of likes associated with this feed item.
 
 <!-- page:1436 -->
 
-AFLS Overview                                                                                     StandardObjectNameFeed
+LSC Overview                                                                                     StandardObjectNameFeed
 
 
 
@@ -211,7 +211,7 @@ posts except ContentPost.
 
 <!-- page:1437 -->
 
-AFLS Overview                                                                              StandardObjectNameFeed
+LSC Overview                                                                              StandardObjectNameFeed
 
 
 

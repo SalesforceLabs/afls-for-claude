@@ -1,17 +1,17 @@
-# AFLS Common Issues & Troubleshooting — Index
+# Life Sciences Cloud (LSC) Common Issues & Troubleshooting — Index
 
-Start here when diagnosing an AFLS issue. This index points to the detailed
+Start here when diagnosing an LSC issue. This index points to the detailed
 troubleshooting documents; load the one that matches the symptom.
 
 ## Troubleshooting documents
 
 | Topic | Load with | Covers |
 |---|---|---|
-| **Implementation anti-patterns** | `get_afls_troubleshooting({ topic: "implementation-anti-patterns" })` | Design/config decisions that cause production incidents and blocked go-lives — sharing model, inventory, mobile sync, over-customization, territory, MDM, Agentforce, UAT/go-live discipline. **Check this first for design-review and post-go-live incidents.** |
-| **Visit Management** | `get_afls_troubleshooting({ topic: "visit-troubleshooting" })` | Visits not saving/syncing on mobile, record-type mismatches, detailing, signatures, calendar. |
-| **Sample Management** | `get_afls_troubleshooting({ topic: "sample-troubleshooting" })` | Sample limits, disbursement, inventory counts. |
-| **Territory Alignment** | `get_afls_troubleshooting({ topic: "territory-troubleshooting" })` | Territory assignment, geo/affiliation rules, `ProviderAcctTerritoryInfo`. |
-| **Data Cloud / Tableau Next / mobile dashboards** | `get_afls_troubleshooting({ topic: "data-cloud-tableau-mobile-troubleshooting" })` | Data Kit deploy errors, "couldn't display this content", iPad "Something went wrong" on a Home dashboard, `/tableau` REST errors. |
+| **Implementation anti-patterns** | `get_lsc_troubleshooting({ topic: "implementation-anti-patterns" })` | Design/config decisions that cause production incidents and blocked go-lives — sharing model, inventory, mobile sync, over-customization, territory, MDM, Agentforce, UAT/go-live discipline. **Check this first for design-review and post-go-live incidents.** |
+| **Visit Management** | `get_lsc_troubleshooting({ topic: "visit-troubleshooting" })` | Visits not saving/syncing on mobile, record-type mismatches, detailing, signatures, calendar. |
+| **Sample Management** | `get_lsc_troubleshooting({ topic: "sample-troubleshooting" })` | Sample limits, disbursement, inventory counts. |
+| **Territory Alignment** | `get_lsc_troubleshooting({ topic: "territory-troubleshooting" })` | Territory assignment, geo/affiliation rules, `ProviderAcctTerritoryInfo`. |
+| **Data Cloud / Tableau Next / mobile dashboards** | `get_lsc_troubleshooting({ topic: "data-cloud-tableau-mobile-troubleshooting" })` | Data Kit deploy errors, "couldn't display this content", iPad "Something went wrong" on a Home dashboard, `/tableau` REST errors. |
 
 ## Fast triage
 
@@ -29,6 +29,6 @@ troubleshooting documents; load the one that matches the symptom.
 ## Deeper module content
 
 For module-specific engineering detail beyond these files, search the knowledge
-base: `search_afls_knowledge({ query: "<symptom or object>" })`. The richest
+base: `search_lsc_knowledge({ query: "<symptom or object>" })`. The richest
 support-engineering material lives in the `support-engineering-*` documents
 within each module.

@@ -1,4 +1,4 @@
-# AFLS Visit Management Configuration Validation Rules
+# LSC Visit Management Configuration Validation Rules
 # ===================================================
 # Rules to validate Visit Management configuration including
 # record types, trigger handlers, compliance statements,
@@ -15,7 +15,7 @@
 schema_version: "1.0"
 category_name: "Visit Management Configuration"
 description: |
-  Validation rules for AFLS Visit Management configuration.
+  Validation rules for LSC Visit Management configuration.
   Covers record types, trigger handlers, compliance statements,
   territory visit tracking, and mobile cache requirements.
 
@@ -233,7 +233,7 @@ rules:
         - "Verify VisitTriggerHandler is active"
         - "Verify ProviderVisitTriggerHandler is active"
         - "Verify ProviderVisitProdDetailingTriggerHandler is active"
-        - "If handlers are missing, check that AFLS package is properly installed"
+        - "If handlers are missing, check that LSC package is properly installed"
       ui_path: "Admin Console > Visit Settings > Trigger Handlers"
     issue_ref: "6.1"
     tags: [visit, configuration, trigger]

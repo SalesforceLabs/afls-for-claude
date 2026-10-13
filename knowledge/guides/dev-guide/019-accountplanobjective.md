@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:accountplanobjective pages:1457-1457 -->
 # AccountPlanObjective
 
-AFLS Overview                                                                                                AccountPlanObjective
+Life Sciences Cloud (LSC) Overview                                                                                                AccountPlanObjective
 
 
 
@@ -19,7 +19,7 @@ Object Reference for the Salesforce Platform: AccountPlan
 
 ## AccountPlanObjective
 
-AFLS fields extend the standard Account Plan Objective object to represent information about strategic objectives or
+LSC fields extend the standard Account Plan Objective object to represent information about strategic objectives or
 initiatives pursued by a relationship team with a customer to enhance customer engagement and satisfaction.
 
 

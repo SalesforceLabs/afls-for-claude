@@ -1,4 +1,4 @@
-- Hello everyone, I'm Rebecca Wang and I'm a product manager of AFLS. Today I'll walk you through the **configuration and setup of the Calendar** module in the AFLS for Customer Engagement.
+- Hello everyone, I'm Rebecca Wang and I'm a product manager of LSC. Today I'll walk you through the **configuration and setup of the Calendar** module in the Life Sciences Cloud (LSC) for Customer Engagement.
 
 - From the Admin Console, we have a dedicated tile called **Planner Administration**, where we configure the calendar and its related settings.
 
@@ -126,13 +126,13 @@
 
 Admin TOT
 
-- Hello everyone, I'm Rebecca Wang and I'm a product manager of AFLS. Today I'll walk you through the **configuration and setup of the Time Off Territory** module in the AFLS for Customer Engagement.
+- Hello everyone, I'm Rebecca Wang and I'm a product manager of LSC. Today I'll walk you through the **configuration and setup of the Time Off Territory** module in the LSC for Customer Engagement.
 
 - Time Off Territory or TOT, is used to track when field sales reps are out of their territory, such as, vacation, training, etc. This keeps schedules accurate and prevents conflicts with other activities.
 
 - As part of setting up Time Off Territory, and also in order to maintain that accuracy, there are multiple **trigger handlers** that work behind the scenes, and we need to make sure these trigger handlers for Time Off Territory are enabled.
 
-- In AFLS, there are two approaches for creating Time Off Territory: The first is **datetime-based creation**. The second is **slot-based creation**.
+- In LSC, there are two approaches for creating Time Off Territory: The first is **datetime-based creation**. The second is **slot-based creation**.
 
   - We ship the datetime Time Off Territory approach by default. If needed, customers can also enable the **slot-based** approach by adding the *Slot* field to the page layout.
 
@@ -172,7 +172,7 @@ Admin TOT
 
 Admin MyTeam
 
-- Hello everyone, I'm Rebecca Wang and I'm a product manager of AFLS. Today, I'll quickly walk you through how to enable the **MyTeam Scheduler** feature for managers in AFLS for Customer Engagement.
+- Hello everyone, I'm Rebecca Wang and I'm a product manager of LSC. Today, I'll quickly walk you through how to enable the **MyTeam Scheduler** feature for managers in LSC for Customer Engagement.
 
 - MyTeam Scheduler is a **mobile-only** feature that allows district and regional managers to oversee the activities of their employees within assigned territories, with all relevant details available at a glance.
 

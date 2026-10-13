@@ -1,4 +1,4 @@
-# AFLS App Alerts & Notifications Configuration Validation Rules
+# LSC App Alerts & Notifications Configuration Validation Rules
 # ==============================================================
 # Rules to validate App Alerts and Notifications configuration including
 # alerts, territory assignments, user responses, announcements, and mobile cache.
@@ -13,7 +13,7 @@
 schema_version: "1.0"
 category_name: "App Alerts & Notifications Configuration"
 description: |
-  Validation rules for AFLS App Alerts and Notifications configuration.
+  Validation rules for LSC App Alerts and Notifications configuration.
   Covers app alerts, territory assignments, user responses, home office
   announcements, and mobile cache requirements.
 

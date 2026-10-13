@@ -9,13 +9,13 @@ const __dirname = path.dirname(__filename);
 // Only load the Vite dev server when explicitly told to (set by `electron:dev`).
 // Running the built app (`electron:start`) leaves this unset so we load the
 // bundled renderer directly instead of probing a dev server that isn't running.
-const rendererDevUrl = process.env.AFLS_RENDERER_URL;
+const rendererDevUrl = process.env.LSC_RENDERER_URL;
 
 // Register a custom protocol to serve local files (PDFs, etc.) to the renderer.
 // This avoids file:// security restrictions in iframes.
 protocol.registerSchemesAsPrivileged([
   {
-    scheme: "afls-local",
+    scheme: "lsc-local",
     privileges: {
       standard: true,
       secure: true,
@@ -33,7 +33,7 @@ function createWindow(): void {
     height: 750,
     minWidth: 600,
     minHeight: 400,
-    title: "AFLS Assistant",
+    title: "LSC Assistant",
     titleBarStyle: "hiddenInset",
     trafficLightPosition: { x: 16, y: 16 },
     webPreferences: {
@@ -79,10 +79,10 @@ function createWindow(): void {
 }
 
 app.whenReady().then(() => {
-  // Handle afls-local:// protocol — serves files from the project directory.
-  // URL format: afls-local://file/documentation/some-file.pdf
+  // Handle lsc-local:// protocol — serves files from the project directory.
+  // URL format: lsc-local://file/documentation/some-file.pdf
   const projectRoot = path.resolve(__dirname, "..");
-  protocol.handle("afls-local", (request) => {
+  protocol.handle("lsc-local", (request) => {
     const url = new URL(request.url);
     // pathname is like /documentation/some-file.pdf
     const filePath = path.join(projectRoot, decodeURIComponent(url.pathname));

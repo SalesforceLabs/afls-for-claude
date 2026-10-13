@@ -1,9 +1,9 @@
-# Winter '26 Release Notes — AFLS
+# Winter '26 Release Notes — Life Sciences Cloud (LSC)
 
 ## Key Features
 
-### Agentforce for AFLS (Beta)
-- Introduction of Field Sales Agent for AFLS
+### Agentforce for LSC (Beta)
+- Introduction of Field Sales Agent for LSC
 - Pre-built topics: Visit Management, Account Lookup, Activity Tracking
 - Pre-built actions: Schedule Visit, Log Call, Check Account Goals
 - Einstein Studio configuration for agent customization

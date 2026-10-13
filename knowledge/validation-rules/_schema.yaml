@@ -1,9 +1,9 @@
-# AFLS Validation Rules Schema
+# LSC Validation Rules Schema
 # This file documents the format for validation rules used by the audit system.
 
 # Rule Structure
 # ==============
-# Each rule validates a specific aspect of AFLS configuration.
+# Each rule validates a specific aspect of LSC configuration.
 # Rules are grouped by category (e.g., mobile-login, metadata-cache, sync).
 
 schema_version: "1.0"

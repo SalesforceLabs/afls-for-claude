@@ -1,4 +1,4 @@
-# AFLS Mobile Configuration Validation Rules
+# LSC Mobile Configuration Validation Rules
 # ==========================================
 # Rules extracted from common_issues.md sections 1, 2, 3, 5, 6, 9
 # These rules validate mobile app configuration to prevent common issues.
@@ -12,7 +12,7 @@
 schema_version: "1.0"
 category_name: "Mobile Configuration"
 description: |
-  Validation rules for AFLS Mobile (iPad) app configuration.
+  Validation rules for LSC Mobile (iPad) app configuration.
   Covers login/auth, metadata cache, sync, and device requirements.
 
 rules:
@@ -56,7 +56,7 @@ rules:
     tags: [ipad, mobile, login]
 
   - id: mobile-004
-    name: Users have required AFLS permission sets
+    name: Users have required LSC permission sets
     description: |
       Checks that mobile users have the Life Sciences Field Sales Representative
       permission set (or equivalent role-based permission set) assigned.
@@ -70,7 +70,7 @@ rules:
         FROM PermissionSet
         WHERE Name LIKE '%LifeSciences%'
         OR Name LIKE '%Life_Sciences%'
-        OR Name LIKE '%AFLS%'
+        OR Name LIKE '%LSC%'
       expect: "records.length > 0"
     symptoms:
       - "Unknown Error. The operation couldn't be completed. (com.salesforce.RestAPI.ErrorDomain error 400)"
@@ -244,7 +244,7 @@ rules:
     resolution:
       steps:
         - "Navigate to Setup > Permission Sets"
-        - "Edit the AFLS permission set"
+        - "Edit the LSC permission set"
         - "Enable 'View Setup Configuration' under System Permissions"
         - "Save and reassign to users if needed"
       ui_path: "Setup > Permission Sets"

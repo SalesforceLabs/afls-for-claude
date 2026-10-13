@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:caresystemfieldmapping-2 pages:1946-1947 -->
 # CareSystemFieldMapping
 
-AFLS Overview                                                                                          CareSystemFieldMapping
+Life Sciences Cloud (LSC) Overview                                                                                          CareSystemFieldMapping
 
 
 
@@ -43,8 +43,8 @@ CareSystemFieldMapping components are available in API version 49.0 and later.
 
 ## Special Access Rules
 
-To use this metadata type, your Salesforce org must have the Health Cloud or AFLS license and the user must have the
-Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for AFLS) permission set.
+To use this metadata type, your Salesforce org must have the Health Cloud or LSC license and the user must have the
+Health Cloud Foundation (for Health Cloud) or Health Cloud Starter (for LSC) permission set.
 
 
 
@@ -69,7 +69,7 @@ Account.
 
 <!-- page:1947 -->
 
-AFLS Overview                                                                                       CareSystemFieldMapping
+LSC Overview                                                                                       CareSystemFieldMapping
 
 
 

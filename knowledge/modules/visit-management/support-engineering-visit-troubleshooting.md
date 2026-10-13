@@ -1,6 +1,6 @@
 # Visit Management Troubleshooting — Support Engineering Training
 
-**Session:** AFLS4CE Value Chain Training — Jun 2, 2026
+**Session:** LSC4CE Value Chain Training — Jun 2, 2026
 **Audience:** Support engineers
 **Source:** Engineering training series (deck + Gemini transcript)
 **Presenter:** Jim Morrow

@@ -105,7 +105,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with Life Sciences Cloud (LSC) or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -338,7 +338,7 @@ clinical trials.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -366,7 +366,7 @@ Assign the necessary permission sets to users according to their roles.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -534,7 +534,7 @@ the program and the relationships and activities within it.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -574,7 +574,7 @@ can use these details to manage and track specific details of the care programs 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -603,7 +603,7 @@ information to manage and track specific details of the care program site within
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -650,7 +650,7 @@ details to manage and track specific details of the research studies within clin
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -705,7 +705,7 @@ manually create these records as necessary.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -740,7 +740,7 @@ creating a research study comparison group record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 
 <!-- page:804 -->
 
@@ -781,7 +781,7 @@ checklist.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -821,7 +821,7 @@ program and defining their data use purpose.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -850,7 +850,7 @@ data for the Research Study Candidate Evaluation prompt template.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -982,7 +982,7 @@ the necessary licenses and permissions in your Salesforce org.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -1045,7 +1045,7 @@ and fields, and populate the searchable object with the consolidated data.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -1080,7 +1080,7 @@ Configure the trial search settings to tailor result relevance and display optio
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 <!-- page:810 -->
@@ -1160,7 +1160,7 @@ Customer Community Plus license.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -1286,7 +1286,7 @@ to assign them to the guest users.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -1328,7 +1328,7 @@ to unauthenticated guest users. Guest user sharing rules can grant only Read-Onl
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -1372,7 +1372,7 @@ record access to authenticated portal users.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -1405,7 +1405,7 @@ and TrialManagement_CandidateEligibilityAndRegistrationMerged Omniscripts.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -1440,7 +1440,7 @@ eligibility assessment and registration.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -1647,7 +1647,7 @@ questions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -1735,7 +1735,7 @@ trials.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -1822,7 +1822,7 @@ the creation of a lead record and a consent record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -1891,7 +1891,7 @@ Einstein are applied to your organization. Learn more
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2037,7 +2037,7 @@ actionable lists as an implementation method to identify candidates for clinical
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2094,7 +2094,7 @@ Einstein are applied to your organization. Learn more
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2175,7 +2175,7 @@ Einstein are applied to your organization. Learn more
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2210,7 +2210,7 @@ basic criteria that are needed to match candidates to clinical trials.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2308,7 +2308,7 @@ by organizing important metrics and tasks.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2412,7 +2412,7 @@ can view candidates' medical data and candidate-matching evaluation results.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2476,7 +2476,7 @@ percentage, and candidate enrollment status.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 <!-- page:836 -->
@@ -2559,7 +2559,7 @@ Accounts, Contracts, and Users specified in the Information Authorization Reques
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2581,7 +2581,7 @@ Clone and manage the flows so that your users can manage consent forms from an o
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 <!-- page:838 -->
@@ -2616,7 +2616,7 @@ this screen flow, you can help your users prepare the consent forms.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2685,7 +2685,7 @@ acknowledging their informed consent for clinical trials.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2742,7 +2742,7 @@ for the clinical trials are randomly assigned (randomized) to different comparis
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2768,7 +2768,7 @@ groups.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2834,7 +2834,7 @@ as central.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2884,7 +2884,7 @@ candidates to comparison groups.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -2972,7 +2972,7 @@ Help your users implement randomization by using a custom algorithm type.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 <!-- page:845 -->
@@ -3013,7 +3013,7 @@ invocation.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -3077,7 +3077,7 @@ Health Conditions, Allergies, and Immunization records directly from the patient
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -3136,7 +3136,7 @@ your studies are set up and running smoothly.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 <!-- page:848 -->
@@ -3182,7 +3182,7 @@ participants.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -3222,7 +3222,7 @@ medication requests, health conditions, allergies, and immunizations from the pa
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -3261,7 +3261,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -3301,7 +3301,7 @@ actionable list member record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -3353,7 +3353,7 @@ shows the list of criteria for the research study.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 
@@ -3403,7 +3403,7 @@ accuracy and safety before using. Learn more
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud and the
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud and the
 Participant Enrollment Add-On license
 
 

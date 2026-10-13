@@ -32,7 +32,7 @@ source system fields to Salesforce target entities and attributes.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or Life Sciences Cloud (LSC)
 
 
 1. From Setup, in the Quick Find box, enter Care System Field Mapping, and then select Care
@@ -90,7 +90,7 @@ data model.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 
@@ -135,7 +135,7 @@ care program. Create and clone permission sets to give users the correct access 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 1. Set org-wide sharing for the following objects to be Private, Public Read Only, or Public Read/Write, as
@@ -174,7 +174,7 @@ Authorization Form Texts: Read
 
 Data Use Purposes: Read
 
-3. Clone the Health Cloud Starter (for AFLS) or Health Cloud Foundation permission set
+3. Clone the Health Cloud Starter (for LSC) or Health Cloud Foundation permission set
 
 <!-- page:981 -->
 
@@ -244,7 +244,7 @@ for care plan participants.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Make sure to enable Experience Cloud in your org.
@@ -259,7 +259,7 @@ contact record.
 4. Edit the user record for this external user and assign the Customer Community Plus license and the
 cloned Customer Community Plus profile.
 5. Click Save.
-6. Select Permission Sets and add the cloned Health Cloud Starter (for AFLS) or Health
+6. Select Permission Sets and add the cloned Health Cloud Starter (for LSC) or Health
 Cloud Foundation (for Health Cloud) permission set and the permission set you created to manage
 access to consent forms.
 
@@ -279,7 +279,7 @@ care program product and care program provider and other records as needed.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Make sure you create records for the Product and the Provider objects. You must associate these records
@@ -352,7 +352,7 @@ Create a Care Program Goal, and associate it with a care program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 To create goals as part of a care program, define the care program goals.
@@ -379,7 +379,7 @@ look up all the healthcare practitioners involved with a care program provider.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 1. In the App Launcher, select Care Program Healthcare Providers and then click New.
@@ -412,7 +412,7 @@ consent.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 If your enrollment process requires that consent happen apart from enrollment, remove the Enrollment
@@ -471,7 +471,7 @@ to their care program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Clone the Customer Community Plus User profile or a similar profile that includes View Content
@@ -538,7 +538,7 @@ program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:988 -->
 
@@ -617,7 +617,7 @@ clone the documents from a Data Use Purpose record.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 1. From the App Launcher, go to Data Use Purpose and then click the record that contains the existing
@@ -643,7 +643,7 @@ accessibility of the folder and the documents within it.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 Note Files larger than 25 MB, unknown file types, password-protected files, and copy-protected
 PDFs can’t be previewed. Some Microsoft Office 2007 features don’t display correctly in previews. If
@@ -673,7 +673,7 @@ care program card.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 Tip You can also manage Files membership through a public group or by adding a single user. If
 you're doing this via API, use the ContentWorkspaceMember object to manage library membership.
@@ -775,7 +775,7 @@ site, then view and provide consent for documents related to the program.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 
@@ -799,7 +799,7 @@ It’s quick and easy to enroll someone in a care program and capture their cons
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 
@@ -845,7 +845,7 @@ team to look up all healthcare professionals for care program providers.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 Make sure that the field-level security of the Source System Identifier, Status Reason, Source System, and

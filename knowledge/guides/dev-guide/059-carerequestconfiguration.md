@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:carerequestconfiguration pages:1901-1905 -->
 # CareRequestConfiguration
 
-AFLS Overview                                                                                             CareRequestConfiguration
+Life Sciences Cloud (LSC) Overview                                                                                             CareRequestConfiguration
 
 
 
@@ -54,7 +54,7 @@ terms to avoid any effect on customer implementations.
 
 <!-- page:1902 -->
 
-AFLS Overview                                                                                CareRequestConfiguration
+LSC Overview                                                                                CareRequestConfiguration
 
 
 
@@ -108,7 +108,7 @@ Possible values are:
 
 <!-- page:1903 -->
 
-AFLS Overview                                                                                CareRequestConfiguration
+LSC Overview                                                                                CareRequestConfiguration
 
 
 
@@ -159,7 +159,7 @@ boolean
 
 <!-- page:1904 -->
 
-AFLS Overview                                                                                CareRequestConfiguration
+LSC Overview                                                                                CareRequestConfiguration
 
 
 
@@ -209,7 +209,7 @@ Possible values are:
 
 <!-- page:1905 -->
 
-AFLS Overview                                                                                CareRequestConfiguration
+LSC Overview                                                                                CareRequestConfiguration
 
 
 

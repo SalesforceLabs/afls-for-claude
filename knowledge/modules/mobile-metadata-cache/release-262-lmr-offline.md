@@ -2,7 +2,7 @@
 
 ## Background
 
-The LMR (Lightning Mobile Runtime) module hosts Lightning Web Components inside the AFLS Mobile app. By default, all UI-API requests from LWC wire adapters flow to the Salesforce server via the network. The **offline subsystem** adds a local interception layer that can resolve UI-API requests directly from the device's local database.
+The LMR (Lightning Mobile Runtime) module hosts Lightning Web Components inside the Life Sciences Cloud (LSC) Mobile app. By default, all UI-API requests from LWC wire adapters flow to the Salesforce server via the network. The **offline subsystem** adds a local interception layer that can resolve UI-API requests directly from the device's local database.
 
 When a request arrives:
 1. The offline subsystem checks whether a registered handler can serve the request locally
@@ -10,7 +10,7 @@ When a request arrives:
 3. If no handler matches and the device is **online**, the request falls through to the normal network path
 4. If no handler matches and the device is **offline**, the adapter returns a localized "API call is unsupported offline" error
 
-Write operations persist changes to the local database and generate sync transactions, exactly like the AFLS mobile app.
+Write operations persist changes to the local database and generate sync transactions, exactly like the LSC mobile app.
 
 - **Offline temporary IDs** use the format `EntityName-UUID` (longer than 18 chars)
 - **Write operations** (POST/PATCH/DELETE) persist changes locally and generate temporary IDs, synced to server when connectivity is restored
@@ -21,7 +21,7 @@ Setting: `EnableLSCMobileAppsOfflineSupport = true`
 
 This is a field on the **ApplicationSettings** Life Science Config Category.
 
-**Admin Console location:** Mobile → Application Settings → AFLS Mobile Apps → **Use Mobile Apps offline**
+**Admin Console location:** Mobile → Application Settings → LSC Mobile Apps → **Use Mobile Apps offline**
 
 ## Supported Lightning Adapters (Resolve Offline)
 

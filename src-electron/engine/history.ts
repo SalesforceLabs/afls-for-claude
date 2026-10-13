@@ -88,7 +88,7 @@ export function generateId(): string {
 
 /** Derive a short title from the first user message */
 function deriveTitle(text: string): string {
-  const clean = text.replace(/^\/afls:\S+\s*/, "").trim();
+  const clean = text.replace(/^\/lsc:\S+\s*/, "").trim();
   if (!clean) return text.slice(0, 60);
   return clean.length > 60 ? clean.slice(0, 57) + "..." : clean;
 }

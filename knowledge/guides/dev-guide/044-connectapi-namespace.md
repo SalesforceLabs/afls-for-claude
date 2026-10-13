@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:connectapi-namespace pages:1859-1869 -->
 # ConnectApi Namespace
 
-AFLS Overview                                                                                          ConnectApi Namespace
+Life Sciences Cloud (LSC) Overview                                                                                          ConnectApi Namespace
 
 
 toRecordApexRep(jsonString)
@@ -59,23 +59,23 @@ For information about working with the ConnectApi classes, see Connect in Apex.
 
 ## LifeSciEmailTemplate Methods
 
-These are the LifeSciEmailTemplate methods for AFLS.
+These are the LifeSciEmailTemplate methods for LSC.
 LifeSciPresentation Methods
-These are the LifeSciPresentation methods for AFLS.
+These are the LifeSciPresentation methods for LSC.
 
 <!-- page:1860 -->
 
-AFLS Overview                                                                                                ConnectApi Namespace
+LSC Overview                                                                                                ConnectApi Namespace
 
 
 
 ## LifeSciPresPageProductGuidance Methods
 
-These are the LifeSciPresPageProductGuidance methods for AFLS.
+These are the LifeSciPresPageProductGuidance methods for LSC.
 Input Classes
-These are the Apex input classes for AFLS.
+These are the Apex input classes for LSC.
 Output Classes
-These are the Apex output classes for AFLS.
+These are the Apex output classes for LSC.
 ConnectApi Enums
 Enums specific to the ConnectApi namespace.
 
@@ -83,7 +83,7 @@ Enums specific to the ConnectApi namespace.
 
 ## LifeSciEmailTemplate Methods
 
-These are the LifeSciEmailTemplate methods for AFLS.
+These are the LifeSciEmailTemplate methods for LSC.
 
 
 createEmailTemplate(emailTemplateInput)
@@ -124,7 +124,7 @@ Type: ConnectApi.GenericResponseOutputRepresentation
 
 <!-- page:1861 -->
 
-AFLS Overview                                                        ConnectApi Namespace
+LSC Overview                                                        ConnectApi Namespace
 
 
 
@@ -186,7 +186,7 @@ No
 
 <!-- page:1862 -->
 
-AFLS Overview                                                                                               ConnectApi Namespace
+LSC Overview                                                                                               ConnectApi Namespace
 
 
 
@@ -248,11 +248,11 @@ System.debug(ConnectApi.LifeSciEmailTemplate.updateEmailTemplate(input));
 
 ## LifeSciPresentation Methods
 
-These are the LifeSciPresentation methods for AFLS.
+These are the LifeSciPresentation methods for LSC.
 
 <!-- page:1863 -->
 
-AFLS Overview                                                                                                     ConnectApi Namespace
+LSC Overview                                                                                                     ConnectApi Namespace
 
 
 createPresentationContent(presentationContentInput)
@@ -316,7 +316,7 @@ page1.pageNumber = 1;
 
 <!-- page:1864 -->
 
-AFLS Overview                                                                                                     ConnectApi Namespace
+LSC Overview                                                                                                     ConnectApi Namespace
 
 
 
@@ -382,7 +382,7 @@ Type: ConnectApi.GenericResponseOutputRepresentation
 
 <!-- page:1865 -->
 
-AFLS Overview                                                                 ConnectApi Namespace
+LSC Overview                                                                 ConnectApi Namespace
 
 
 
@@ -425,7 +425,7 @@ System.debug(ConnectApi.LifeSciPresentation.updatePresentationContent(input));
 
 ## LifeSciPresPageProductGuidance Methods
 
-These are the LifeSciPresPageProductGuidance methods for AFLS.
+These are the LifeSciPresPageProductGuidance methods for LSC.
 
 
 createPresPageProductGuidance(pageProductInput)
@@ -443,7 +443,7 @@ API Version
 
 <!-- page:1866 -->
 
-AFLS Overview                                                                                              ConnectApi Namespace
+LSC Overview                                                                                              ConnectApi Namespace
 
 
 Requires Chatter
@@ -504,7 +504,7 @@ No
 
 <!-- page:1867 -->
 
-AFLS Overview                                                                                            ConnectApi Namespace
+LSC Overview                                                                                            ConnectApi Namespace
 
 
 
@@ -551,7 +551,7 @@ System.debug(ConnectApi.LifeSciPresPageProductGuidance.deletePresPageProductGuid
 
 ## Input Classes
 
-These are the Apex input classes for AFLS.
+These are the Apex input classes for LSC.
 
 
 
@@ -571,7 +571,7 @@ Input representation for creating or updating an email template.
 
 <!-- page:1868 -->
 
-AFLS Overview                                                                                              ConnectApi Namespace
+LSC Overview                                                                                              ConnectApi Namespace
 
 
 
@@ -637,7 +637,7 @@ Input representation for creating or deleting product guidance associations on a
 
 <!-- page:1869 -->
 
-AFLS Overview                                                                                                          ConnectApi Namespace
+LSC Overview                                                                                                          ConnectApi Namespace
 
 
 
@@ -669,7 +669,7 @@ name, ID, and other properties.
 
 ## Output Classes
 
-These are the Apex output classes for AFLS.
+These are the Apex output classes for LSC.
 
 
 

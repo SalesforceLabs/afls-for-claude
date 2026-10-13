@@ -21,7 +21,7 @@ Source deck was marked WIP; content may change. The deck also lists an iPad-only
 - [release-264-clickstream-data-retention](./release-264-clickstream-data-retention.md) - Data Retention tab to purge `PresentationClickStreamEntry` records manually or on schedule, with Data Cloud archiving
 - [release-264-player-quick-actions](./release-264-player-quick-actions.md) - Inquiry and Survey quick actions surfaced from the Presentation Player menu
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 ### Key Concepts
 

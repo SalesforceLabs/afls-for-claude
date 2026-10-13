@@ -1,10 +1,10 @@
 ---
-description: Generate AFLS Mobile metadata cache programmatically for specified profiles
+description: Generate Life Sciences Cloud (LSC) Mobile metadata cache programmatically for specified profiles
 ---
 
 # Generate Mobile Metadata Cache
 
-Programmatically create and generate the AFLS Mobile (iPad) metadata cache without using the Admin Console UI.
+Programmatically create and generate the LSC Mobile (iPad) metadata cache without using the Admin Console UI.
 
 $ARGUMENTS
 
@@ -19,7 +19,7 @@ This command automates the mobile metadata cache generation process which typica
 
 ### 1. Verify Org Connection
 
-First run `check_afls_setup` to ensure connected to a Salesforce org.
+First run `check_lsc_setup` to ensure connected to a Salesforce org.
 
 ### 2. Identify Target Profiles
 
@@ -31,7 +31,7 @@ SELECT Id, Name FROM Profile WHERE UserType = 'Standard' ORDER BY Name
 
 Use `run_soql` to execute this query.
 
-Common AFLS profiles include:
+Common LSC profiles include:
 - Medical Sales Representative
 - Key Account Manager
 - Field Medical
@@ -82,7 +82,7 @@ LIMIT 20
 ### 6. Verify Mobile App Access
 
 Once generation completes successfully, the mobile app users with the specified profiles should:
-1. Force close the AFLS Mobile app
+1. Force close the LSC Mobile app
 2. Reopen and perform a full sync
 3. Verify data appears correctly
 
@@ -110,7 +110,7 @@ Each profile gets its own child record under a shared parent.
 
 ### "LifeSciMobileMetadataRecord not found"
 
-The object may not exist in the org. Verify AFLS is properly installed:
+The object may not exist in the org. Verify LSC is properly installed:
 
 ```sql
 SELECT COUNT() FROM LifeSciMobileMetadataRecord

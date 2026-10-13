@@ -1,5 +1,5 @@
 {
-  "guideTitle": "AFLS Developer Guide",
+  "guideTitle": "LSC Developer Guide",
   "guideSlug": "dev-guide",
   "pdfFileName": "life_sciences_dev_guide.pdf",
   "totalPages": 1978,
@@ -13,14 +13,14 @@
     },
     {
       "slug": "life-sciences-cloud-overview",
-      "title": "AFLS Overview",
+      "title": "LSC Overview",
       "startPage": 5,
       "endPage": 5,
       "file": "002-life-sciences-cloud-overview.md"
     },
     {
       "slug": "life-sciences-cloud-data-model",
-      "title": "AFLS Data Model",
+      "title": "LSC Data Model",
       "startPage": 6,
       "endPage": 6,
       "file": "003-life-sciences-cloud-data-model.md"
@@ -55,7 +55,7 @@
     },
     {
       "slug": "life-sciences-cloud-associated-objects",
-      "title": "AFLS Associated Objects",
+      "title": "LSC Associated Objects",
       "startPage": 1430,
       "endPage": 1430,
       "file": "008-life-sciences-cloud-associated-objects.md"
@@ -111,7 +111,7 @@
     },
     {
       "slug": "life-sciences-cloud-fields-on-standard-objects",
-      "title": "AFLS Fields on Standard Objects",
+      "title": "LSC Fields on Standard Objects",
       "startPage": 1452,
       "endPage": 1452,
       "file": "016-life-sciences-cloud-fields-on-standard-objects.md"
@@ -230,7 +230,7 @@
     },
     {
       "slug": "life-sciences-cloud-platform-events",
-      "title": "AFLS Platform Events",
+      "title": "LSC Platform Events",
       "startPage": 1480,
       "endPage": 1480,
       "file": "033-life-sciences-cloud-platform-events.md"
@@ -265,7 +265,7 @@
     },
     {
       "slug": "life-sciences-cloud-business-apis",
-      "title": "AFLS Business APIs",
+      "title": "LSC Business APIs",
       "startPage": 1606,
       "endPage": 1606,
       "file": "038-life-sciences-cloud-business-apis.md"
@@ -314,7 +314,7 @@
     },
     {
       "slug": "life-sciences-cloud-standard-invocable-actions",
-      "title": "AFLS Standard Invocable Actions",
+      "title": "LSC Standard Invocable Actions",
       "startPage": 1870,
       "endPage": 1870,
       "file": "045-life-sciences-cloud-standard-invocable-actions.md"
@@ -370,7 +370,7 @@
     },
     {
       "slug": "life-sciences-cloud-tooling-api-objects",
-      "title": "AFLS Tooling API Objects",
+      "title": "LSC Tooling API Objects",
       "startPage": 1885,
       "endPage": 1885,
       "file": "053-life-sciences-cloud-tooling-api-objects.md"
@@ -461,7 +461,7 @@
     },
     {
       "slug": "life-sciences-cloud-metadata-types",
-      "title": "AFLS Metadata Types",
+      "title": "LSC Metadata Types",
       "startPage": 1938,
       "endPage": 1938,
       "file": "066-life-sciences-cloud-metadata-types.md"
@@ -503,7 +503,7 @@
     },
     {
       "slug": "flow-for-life-sciences-cloud",
-      "title": "Flow for AFLS",
+      "title": "Flow for LSC",
       "startPage": 1949,
       "endPage": 1949,
       "file": "072-flow-for-life-sciences-cloud.md"

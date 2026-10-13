@@ -1,6 +1,6 @@
-# AFLS Agentforce Configuration Validation Rules
+# LSC Agentforce Configuration Validation Rules
 # ===================================================
-# Rules to validate Agentforce for AFLS configuration
+# Rules to validate Agentforce for LSC configuration
 # including agent definitions, topics, actions, plugins, and data context.
 #
 # Verified object names:
@@ -22,9 +22,9 @@
 schema_version: "1.0"
 category_name: "Agentforce Configuration"
 description: |
-  Validation rules for AFLS Agentforce configuration.
+  Validation rules for LSC Agentforce configuration.
   Covers agent definitions, bot versions, topics (mlDomain), actions (GenAiFunction),
-  plugins, and underlying AFLS data model required for agent functionality.
+  plugins, and underlying LSC data model required for agent functionality.
 
 rules:
   # ===========================================================================
@@ -304,7 +304,7 @@ rules:
     name: PersonAccount records exist for HCP summarization
     description: |
       Checks whether PersonAccount records exist. PersonAccount (Account with
-      IsPersonAccount = true) represents Healthcare Providers (HCPs) in AFLS.
+      IsPersonAccount = true) represents Healthcare Providers (HCPs) in LSC.
       Agentforce uses account data for HCP summarization, daily briefings,
       and next best action predictions. Without HCP account data, these features
       will return empty results.
@@ -390,7 +390,7 @@ rules:
       - "Agent says 'I cannot find that product'"
     resolution:
       steps:
-        - "Navigate to Product Management in AFLS"
+        - "Navigate to Product Management in LSC"
         - "Verify Product2 records exist and are Active"
         - "Ensure product names match terminology used by field reps"
         - "Consider adding product aliases or synonyms in configuration"

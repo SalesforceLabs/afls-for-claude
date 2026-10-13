@@ -1,4 +1,4 @@
-# AFLS Activity Plan Configuration Validation Rules
+# LSC Activity Plan Configuration Validation Rules
 # =================================================
 # Rules to validate Activity Plan configuration including
 # time periods, plans, territories, goals, measures,
@@ -17,7 +17,7 @@
 schema_version: "1.0"
 category_name: "Activity Plan Configuration"
 description: |
-  Validation rules for AFLS Activity Plan configuration.
+  Validation rules for LSC Activity Plan configuration.
   Covers time periods, plans, territory assignments, account goals,
   goal measures, product goals, and mobile cache requirements.
 

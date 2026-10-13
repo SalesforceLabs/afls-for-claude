@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 #
-# launch-electron-app.sh — build (if needed) and launch the AFLS Assistant desktop app.
+# launch-electron-app.sh — build (if needed) and launch the LSC Assistant desktop app.
 #
-# Used by the /afls:launch-app command. Safe to run repeatedly: it only builds
+# Used by the /lsc:launch-app command. Safe to run repeatedly: it only builds
 # artifacts that are missing, then launches the Electron app detached so the
 # calling shell (or Claude Code command) returns immediately.
 #
 # Override behavior with env vars:
-#   AFLS_FORCE_BUILD=1     Rebuild all artifacts even if present.
-#   AFLS_SKIP_REBUILD=1    Skip the Electron native-module rebuild step.
+#   LSC_FORCE_BUILD=1     Rebuild all artifacts even if present.
+#   LSC_SKIP_REBUILD=1    Skip the Electron native-module rebuild step.
 #
 set -euo pipefail
 
@@ -33,7 +33,7 @@ if [ "${NODE_MAJOR}" -lt 18 ]; then
 fi
 ok "Node $(node -v) detected"
 
-FORCE="${AFLS_FORCE_BUILD:-0}"
+FORCE="${LSC_FORCE_BUILD:-0}"
 
 # --- 1. Dependencies ---------------------------------------------------------
 if [ "${FORCE}" = "1" ] || [ ! -d "node_modules" ] || [ ! -d "node_modules/electron" ]; then
@@ -66,7 +66,7 @@ fi
 # better-sqlite3 is a native module; it must match Electron's ABI, not Node's.
 # Best-effort: if the rebuild tool or step fails, continue — a matching prebuilt
 # binary may already be in place.
-if [ "${AFLS_SKIP_REBUILD:-0}" != "1" ]; then
+if [ "${LSC_SKIP_REBUILD:-0}" != "1" ]; then
   log "Rebuilding native modules for Electron…"
   if npx --yes @electron/rebuild -f -w better-sqlite3 >/dev/null 2>&1; then
     ok "Native modules rebuilt for Electron"
@@ -76,11 +76,11 @@ if [ "${AFLS_SKIP_REBUILD:-0}" != "1" ]; then
 fi
 
 # --- 5. Launch (detached) ----------------------------------------------------
-log "Launching AFLS Assistant…"
-LOG_FILE="${TMPDIR:-/tmp}/afls-assistant.log"
+log "Launching LSC Assistant…"
+LOG_FILE="${TMPDIR:-/tmp}/lsc-assistant.log"
 # Detach so the app keeps running after this script/command returns.
 nohup npm run electron:start >"${LOG_FILE}" 2>&1 &
 disown || true
 
-ok "AFLS Assistant is starting. A window should appear shortly."
+ok "LSC Assistant is starting. A window should appear shortly."
 printf '  Logs: %s\n' "${LOG_FILE}"

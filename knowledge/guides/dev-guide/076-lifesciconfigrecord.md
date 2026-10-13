@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:lifesciconfigrecord pages:1958-1962 -->
 # LifeSciConfigRecord
 
-AFLS Overview                                                                                               LifeSciConfigRecord
+Life Sciences Cloud (LSC) Overview                                                                                               LifeSciConfigRecord
 
 
 The following is an example package.xml that references the previous definition.
@@ -19,7 +19,7 @@ The following is an example package.xml that references the previous definition.
 
 ## LifeSciConfigRecord
 
-Represents the configuration records used in AFLS.
+Represents the configuration records used in LSC.
 
 
 
@@ -65,7 +65,7 @@ false.
 
 <!-- page:1959 -->
 
-AFLS Overview                                                                                               LifeSciConfigRecord
+LSC Overview                                                                                               LifeSciConfigRecord
 
 
 
@@ -115,7 +115,7 @@ The following table describes the assignment for the LifeSciConfigAssignement co
 
 <!-- page:1960 -->
 
-AFLS Overview                                                                                                   LifeSciConfigRecord
+LSC Overview                                                                                                   LifeSciConfigRecord
 
 
 
@@ -170,7 +170,7 @@ DateTime
 
 <!-- page:1961 -->
 
-AFLS Overview                                                      LifeSciConfigRecord
+LSC Overview                                                      LifeSciConfigRecord
 
 
 
@@ -220,7 +220,7 @@ Number value of the field.
 
 <!-- page:1962 -->
 
-AFLS Overview                                                                        LifeSciConfigRecord
+LSC Overview                                                                        LifeSciConfigRecord
 
 
 

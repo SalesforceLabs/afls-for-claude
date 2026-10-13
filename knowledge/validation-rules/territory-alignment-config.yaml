@@ -1,4 +1,4 @@
-# AFLS Territory Alignment Configuration Validation Rules
+# LSC Territory Alignment Configuration Validation Rules
 # ======================================================
 # Rules to validate Territory Alignment configuration including
 # territory models, territory records, explicit assignments,
@@ -16,7 +16,7 @@
 schema_version: "1.0"
 category_name: "Territory Alignment Configuration"
 description: |
-  Validation rules for AFLS Territory Alignment configuration.
+  Validation rules for LSC Territory Alignment configuration.
   Covers territory models, territories, explicit assignments,
   geo-based alignment rules, affiliation rules, territory info
   records, and mobile cache requirements.
@@ -30,7 +30,7 @@ rules:
     name: Active Territory2Model exists
     description: |
       Verifies that an active Territory2Model exists. The Territory2Model is
-      the container for the territory hierarchy. AFLS extends Enterprise Territory
+      the container for the territory hierarchy. LSC extends Enterprise Territory
       Management, which requires an active model before territories can be created.
       Without an active model, territory assignments and alignment will not function.
     category: configuration

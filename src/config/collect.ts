@@ -1,5 +1,5 @@
 /**
- * collectConfig() — read AFLS configuration from a live org into a ConfigSnapshot.
+ * collectConfig() — read LSC configuration from a live org into a ConfigSnapshot.
  *
  * This is the single source of truth for what "export" captures. It is reused by:
  *   - the export_config tool (writes the snapshot to disk),

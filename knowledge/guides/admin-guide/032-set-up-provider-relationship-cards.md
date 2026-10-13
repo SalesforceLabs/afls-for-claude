@@ -53,9 +53,9 @@ Set Up Provider Search for Life Sciences
 
 Powered by the provider data model, Provider Search helps your users find healthcare providers based
 on criteria such as location, specialty, and whether the provider is accepting new patients. You can even
-see the location of each provider right in AFLS.
+see the location of each provider right in LSC.
 
-Before you enable Provider Search in AFLS, you must enable Site Management in your org.
+Before you enable Provider Search in Life Sciences Cloud (LSC), you must enable Site Management in your org.
 To learn more, see Enable Site Management.
 
 To learn how to set up Provider Search, see Health Cloud Help: Provider Search.
@@ -72,7 +72,7 @@ agreements, account manager targets, and forecast device sales.
 
 ## Get Started with MedTech Commercial Engagement
 
-AFLS helps teams better engage with their customers by streamlining the end-to-end
+LSC helps teams better engage with their customers by streamlining the end-to-end
 process, from lead generation to fulfilling orders. Accurate forecasts ensure transparency across your
 sales and commercial units. Explore a trial org and then learn what’s included, what setup we
 recommend, and how to prepare for your implementation.

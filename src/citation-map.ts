@@ -11,15 +11,15 @@ export interface CitationInfo {
 export const citationMap: Record<string, CitationInfo> = {
   // ── Guides ────────────────────────────────────────────────────────────
   "dev-guide": {
-    label: "AFLS Developer Guide",
+    label: "LSC Developer Guide",
     category: "Guide",
   },
   "admin-guide": {
-    label: "Administer AFLS",
+    label: "Administer LSC",
     category: "Guide",
   },
   "mobile-setup": {
-    label: "AFLS Mobile Setup and Configuration Guide",
+    label: "LSC Mobile Setup and Configuration Guide",
     category: "Guide",
   },
 
@@ -39,7 +39,7 @@ export const citationMap: Record<string, CitationInfo> = {
     category: "Troubleshooting",
   },
   "implementation-anti-patterns": {
-    label: "AFLS Implementation Anti-Patterns — Field-Observed Lessons",
+    label: "LSC Implementation Anti-Patterns — Field-Observed Lessons",
     category: "Troubleshooting",
   },
   "visit-troubleshooting": {
@@ -155,11 +155,11 @@ export const moduleCitationMap: Record<string, CitationInfo> = {
 
   // ── Agentforce ────────────────────────────────────────────────────
   "agentforce:agentforce": {
-    label: "Agentforce for AFLS",
+    label: "Agentforce for LSC",
     category: "PM Enablement",
   },
-  "agentforce:agentforce-for-afls-winter-26-enablement": {
-    label: "Agentforce for AFLS Winter '26 Enablement",
+  "agentforce:agentforce-for-lsc-winter-26-enablement": {
+    label: "Agentforce for LSC Winter '26 Enablement",
     category: "PM Enablement",
   },
 
@@ -328,13 +328,13 @@ export const moduleCitationMap: Record<string, CitationInfo> = {
     category: "PM Enablement",
   },
 
-  // ── AFLS Apps ──────────────────────────────────────────────────────
-  "afls-apps:afls-apps": {
-    label: "AFLS Apps",
+  // ── LSC Apps ──────────────────────────────────────────────────────
+  "lsc-apps:lsc-apps": {
+    label: "LSC Apps",
     category: "PM Enablement",
   },
-  "afls-apps:demo-script-afls-apps": {
-    label: "AFLS Apps Demo Script",
+  "lsc-apps:demo-script-lsc-apps": {
+    label: "LSC Apps Demo Script",
     category: "PM Enablement",
   },
 

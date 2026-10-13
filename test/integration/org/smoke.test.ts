@@ -5,9 +5,9 @@
  * LSC_TEST_ORG environment variable. Set it to the alias or username
  * of the org you want to test against:
  *
- *   LSC_TEST_ORG=my-afls-sandbox npx vitest test/integration/org/smoke.test.ts
+ *   LSC_TEST_ORG=my-lsc-sandbox npx vitest test/integration/org/smoke.test.ts
  *
- * Tests are designed to be resilient: an org without AFLS installed should
+ * Tests are designed to be resilient: an org without LSC installed should
  * still pass (tools return structured error/empty results, not crashes).
  */
 
@@ -228,11 +228,11 @@ describe.skipIf(!TEST_ORG)("Org integration smoke tests", () => {
   // ---------------------------------------------------------------------------
   // 5. Config check tools don't crash
   //
-  //    These tools use Tooling API queries against AFLS-specific objects.
-  //    If AFLS is not installed the queries will fail gracefully with a
+  //    These tools use Tooling API queries against LSC-specific objects.
+  //    If LSC is not installed the queries will fail gracefully with a
   //    structured error — the key assertion is "no unhandled exception."
   // ---------------------------------------------------------------------------
-  describe("config check queries (graceful on non-AFLS orgs)", () => {
+  describe("config check queries (graceful on non-LSC orgs)", () => {
     it(
       "trigger handler query returns structured result",
       async () => {
@@ -241,7 +241,7 @@ describe.skipIf(!TEST_ORG)("Org integration smoke tests", () => {
           TEST_ORG!
         );
 
-        // Either succeeds with records (AFLS org) or fails with a clear error (non-AFLS org)
+        // Either succeeds with records (LSC org) or fails with a clear error (non-LSC org)
         expect(result).toHaveProperty("success");
         if (result.success) {
           expect(result.data).toBeDefined();
@@ -286,7 +286,7 @@ describe.skipIf(!TEST_ORG)("Org integration smoke tests", () => {
         if (result.success) {
           expect(result.data).toBeDefined();
         } else {
-          // Non-AFLS org: structured error, not a crash
+          // Non-LSC org: structured error, not a crash
           expect(result.error).toBeDefined();
         }
       },
@@ -296,7 +296,7 @@ describe.skipIf(!TEST_ORG)("Org integration smoke tests", () => {
     it(
       "visit-related object query returns structured result",
       async () => {
-        // Check if Visit object exists via describe (standard AFLS object)
+        // Check if Visit object exists via describe (standard LSC object)
         const result = await describeSObject("Visit", TEST_ORG!);
 
         expect(result).toHaveProperty("success");
@@ -370,7 +370,7 @@ describe.skipIf(!TEST_ORG)("Org integration smoke tests", () => {
             expect(cat).toHaveProperty("Category");
           }
         } else {
-          // Non-AFLS org: just verify it's a clean error
+          // Non-LSC org: just verify it's a clean error
           expect(typeof result.error).toBe("string");
         }
       },
@@ -437,7 +437,7 @@ describe.skipIf(!TEST_ORG)("Org integration smoke tests", () => {
             }
           }
         } else {
-          // Non-AFLS org: structured error is acceptable
+          // Non-LSC org: structured error is acceptable
           expect(
             catResult.error !== undefined || catResult.data?.records?.length === 0
           ).toBe(true);

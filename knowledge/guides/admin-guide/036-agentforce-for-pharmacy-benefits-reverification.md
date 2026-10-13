@@ -17,8 +17,8 @@ details.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS licenses and
-Agentforce for AFLS or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
+Available in: Enterprise and Unlimited Editions with Health Cloud or Life Sciences Cloud (LSC) licenses and
+Agentforce for LSC or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
 Employee Agent, Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on
 licenses
 
@@ -71,8 +71,8 @@ and review the response to compare existing and new information.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS licenses and
-Agentforce for AFLS or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC licenses and
+Agentforce for LSC or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
 Employee Agent, Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on
 licenses
 
@@ -141,8 +141,8 @@ the flows to run patient support programs according to your requirements.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS licenses and
-Agentforce for AFLS or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC licenses and
+Agentforce for LSC or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
 Employee Agent, Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on
 licenses
 
@@ -199,8 +199,8 @@ features.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS licenses and
-Agentforce for AFLS or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC licenses and
+Agentforce for LSC or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
 Employee Agent, Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on
 licenses
 
@@ -288,7 +288,7 @@ See Create Sharing Rules for Digital Experience Guest Users.
 
 
 11. Set up the Experience Cloud URL for Patient Support Programs.
-a. From Setup, in the Quick Find box, enter Life Sciences (for AFLS), or Health
+a. From Setup, in the Quick Find box, enter Life Sciences (for LSC), or Health
 Cloud (for Health Cloud). Then select Patient Support Program Settings.
 b. Under the Experience Cloud Site section, click Edit, and enter the URL of the Experience Cloud site
 that you set up earlier.
@@ -328,8 +328,8 @@ action on the care benefit verify request record page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS licenses and
-Agentforce for AFLS or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC licenses and
+Agentforce for LSC or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
 Employee Agent, Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on
 licenses
 
@@ -404,8 +404,8 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS licenses and
-Agentforce for AFLS or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC licenses and
+Agentforce for LSC or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
 Employee Agent, Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on
 licenses
 
@@ -470,8 +470,8 @@ Update Verification Request Status to Received Confirmation flow.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS licenses and
-Agentforce for AFLS or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC licenses and
+Agentforce for LSC or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
 Employee Agent, Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on
 licenses
 
@@ -499,7 +499,7 @@ Prompt Template User
 
 AND
 
-Health Cloud Starter (For AFLS)
+Health Cloud Starter (For LSC)
 permission set OR Health Cloud Foundation (For
 Health Cloud) permission set
 
@@ -529,8 +529,8 @@ limitations and allowances, limits, and other issues.
 
 
 
-Available in: Enterprise, and Unlimited Editions with Health Cloud or AFLS licenses and
-Agentforce for AFLS or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
+Available in: Enterprise, and Unlimited Editions with Health Cloud or LSC licenses and
+Agentforce for LSC or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
 Employee Agent, Genie Data platform, Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT
 Prompt Builder add-on licenses
 
@@ -677,8 +677,8 @@ updated personal, drug, pharmacy, healthcare provider, and insurance details.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS licenses and
-Agentforce for AFLS or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC licenses and
+Agentforce for LSC or Agentforce for Health Cloud, Flex Credits Metering, Agentforce
 Employee Agent, Einstein GPT Platform, Einstein GPT Copilot, and Einstein GPT Prompt Builder add-on
 licenses
 

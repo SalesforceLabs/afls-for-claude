@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:accountplan pages:1454-1456 -->
 # AccountPlan
 
-AFLS Overview                                                                                                         AccountPlan
+Life Sciences Cloud (LSC) Overview                                                                                                         AccountPlan
 
 
 
@@ -35,7 +35,7 @@ The identifier of the record in its source system. This field can’t be encrypt
 
 ## AccountPlan
 
-AFLS fields extend the standard Account Plan object to represent information about customers with measurable objectives
+LSC fields extend the standard Account Plan object to represent information about customers with measurable objectives
 and executable steps to proactively manage and grow customer relationships.
 
 
@@ -57,7 +57,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1455 -->
 
-AFLS Overview                                                                                                AccountPlan
+LSC Overview                                                                                                AccountPlan
 
 
 
@@ -108,7 +108,7 @@ Create, Nillable, Update
 
 <!-- page:1456 -->
 
-AFLS Overview                                                                                                                   AccountPlan
+LSC Overview                                                                                                                   AccountPlan
 
 
 

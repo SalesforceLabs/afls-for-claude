@@ -11,7 +11,7 @@ export function register(server: McpServer) {
 
   server.tool(
     "get_release_notes",
-    "Get AFLS release notes for a specific Salesforce release (e.g., 'Spring 26', 'Winter 26'). Lists available releases if no release is specified.",
+    "Get LSC release notes for a specific Salesforce release (e.g., 'Spring 26', 'Winter 26'). Lists available releases if no release is specified.",
     {
       release: z
         .string()
@@ -64,7 +64,7 @@ export function register(server: McpServer) {
           content: [
             {
               type: "text",
-              text: `# Available AFLS Release Notes\n\n${list}\n\nUse \`get_release_notes\` with a release slug to get the full content.`,
+              text: `# Available LSC Release Notes\n\n${list}\n\nUse \`get_release_notes\` with a release slug to get the full content.`,
             },
           ],
         };

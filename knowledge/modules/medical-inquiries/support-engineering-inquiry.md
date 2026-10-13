@@ -1,6 +1,6 @@
 # Medical Inquiry — Support Engineering Training
 
-**Session:** AFLS4CE Value Chain Training — Apr 13, 2026
+**Session:** LSC4CE Value Chain Training — Apr 13, 2026
 **Audience:** Support engineers
 **Source:** Engineering training series (Inquiry Setup Guide PDF + Gemini transcript)
 
@@ -56,7 +56,7 @@ Unlike other tabs that use a single related list, the **Answer** tab uses a Gene
 
 ## Generic Workflow — Stage Path Container
 
-Inquiry uses AFLS Generic Workflow for status transitions + role-based access control.
+Inquiry uses Life Sciences Cloud (LSC) Generic Workflow for status transitions + role-based access control.
 
 ### Setup
 1. Drag and drop **Life Science Stage Path Container** custom component onto the Lightning Record Page

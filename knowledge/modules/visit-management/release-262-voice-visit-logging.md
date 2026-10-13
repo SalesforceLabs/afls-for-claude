@@ -1,6 +1,6 @@
 ## Voice-Based Visit Logging using Visit Agent (Summer '26 - PILOT)
 
-Presenter: Nilotpal Paul, AFLS
+Presenter: Nilotpal Paul, Life Sciences Cloud (LSC)
 
 This feature allows life sciences field reps to capture visit details using voice, powered by the Visit Agent within Agentforce.
 

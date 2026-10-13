@@ -1,8 +1,8 @@
 ## HCO Mapping to HCP Visit (Summer '26)
 
-This is a demo for Agentforce AFLS Summer '26 feature: HCO mapping for HCP visit.
+This is a demo for Agentforce Life Sciences Cloud (LSC) Summer '26 feature: HCO mapping for HCP visit.
 
-Presenter: Nilotpal Paul, Director of Product for AFLS
+Presenter: Nilotpal Paul, Director of Product for LSC
 
 ### The Problem
 

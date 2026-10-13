@@ -23,7 +23,7 @@ export function useEngine() {
       credentials: Record<string, unknown>
     ) => {
       setState((prev) => ({ ...prev, error: null }));
-      const result = await window.aflsApi.startEngine(providerType, credentials);
+      const result = await window.lscApi.startEngine(providerType, credentials);
 
       if (result.ok) {
         setState({
@@ -47,7 +47,7 @@ export function useEngine() {
   );
 
   const stop = useCallback(async () => {
-    await window.aflsApi.stopEngine();
+    await window.lscApi.stopEngine();
     setState({
       connected: false,
       toolCount: 0,

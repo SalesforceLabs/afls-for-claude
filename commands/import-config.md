@@ -1,10 +1,10 @@
 ---
-description: Import AFLS configuration from a snapshot (diff → review → apply)
+description: Import Life Sciences Cloud (LSC) configuration from a snapshot (diff → review → apply)
 ---
 
 # Import Configuration
 
-Import AFLS configuration from a snapshot into the target org. Import is
+Import LSC configuration from a snapshot into the target org. Import is
 **diff-driven** and **create + update-only (safe)**: it compares the snapshot
 against the target, applies only what you select, and **never deletes or
 deactivates** records that exist only in the target. The target org is
@@ -43,7 +43,7 @@ The **source** is either a saved `exports/*.json` snapshot (pass its path as
    writes a result log to `exports/import-result-*.json`.
 
 5. After import, regenerate the mobile metadata cache if DB Schema / actions
-   changed, and run `/afls:health-check` or `/afls:diff-orgs` to verify.
+   changed, and run `/lsc:health-check` or `/lsc:diff-orgs` to verify.
 
 ## Safety notes
 

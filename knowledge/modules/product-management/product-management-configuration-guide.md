@@ -2,14 +2,14 @@
 
 ## Overview
 
-Product Management in AFLS handles the setup and configuration of pharmaceutical products, marketable products, product hierarchies, product-to-territory assignments, messages/objectives for detailing, and account-level product restrictions for compliance.
+Product Management in Life Sciences Cloud (LSC) handles the setup and configuration of pharmaceutical products, marketable products, product hierarchies, product-to-territory assignments, messages/objectives for detailing, and account-level product restrictions for compliance.
 
 ## Key Objects
 
 | Object | Purpose |
 |--------|---------|
 | `Product2` | Standard Salesforce product record (drug, device, etc.) |
-| `LifeSciMarketableProduct` | AFLS marketable product linking to Product2 with commercial attributes |
+| `LifeSciMarketableProduct` | LSC marketable product linking to Product2 with commercial attributes |
 | `ProviderProductGuidance` | Messages/objectives attached to products for detailing |
 | `ProductRestriction` | Account-level product restrictions (compliance) |
 | `PrvdActvtyGoalMeasureProdt` | Product-level activity goal measures |
@@ -32,7 +32,7 @@ The base Salesforce Product2 object represents the physical product:
 
 ### LifeSciMarketableProduct
 
-The AFLS-specific marketable product extends Product2 with commercial attributes:
+The LSC-specific marketable product extends Product2 with commercial attributes:
 
 | Field | Description |
 |-------|-------------|

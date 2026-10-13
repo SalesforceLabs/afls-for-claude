@@ -2,24 +2,24 @@
 
 Source: https://help.salesforce.com/s/articleView?id=release-notes.rn_lifesciences.htm&release=260&type=5
 
-> AFLS is now Agentforce Life Sciences. You may see references to AFLS in our application and documentation.
+> Life Sciences Cloud (LSC) is now Agentforce Life Sciences. You may see references to LSC in our application and documentation.
 
 ## Overview
 
-Streamline your Account Management data with Data 360. Focus on the right accounts with the enhanced Next Best Customer component. Make quick, ad hoc adjustments to Activity Plans. Use the enhanced Activity Measure workflow to track a wider range of activities. Boost engagement efficiency with new remote visit capabilities, AI-based and voice-based data capture, and a centralized Visit Management experience in the Service Console. Drive informed execution and mitigate risks effectively with Collaborative Medical Insights. Use Smart Content Search to improve your search results and find relevant material. Send presentations as unique email links to help healthcare providers save time and find up-to-date content. Access real-time sales data on the AFLS mobile app and plan better customer interactions from anywhere.
+Streamline your Account Management data with Data 360. Focus on the right accounts with the enhanced Next Best Customer component. Make quick, ad hoc adjustments to Activity Plans. Use the enhanced Activity Measure workflow to track a wider range of activities. Boost engagement efficiency with new remote visit capabilities, AI-based and voice-based data capture, and a centralized Visit Management experience in the Service Console. Drive informed execution and mitigate risks effectively with Collaborative Medical Insights. Use Smart Content Search to improve your search results and find relevant material. Send presentations as unique email links to help healthcare providers save time and find up-to-date content. Access real-time sales data on the LSC mobile app and plan better customer interactions from anywhere.
 
 ## Account Management
 
-Streamline Account Management by integrating Data 360 with AFLS using the Life Sciences data kit. Boost user engagement with the enhanced Next Best Customer component. Align out-of-territory accounts to your territory directly on the desktop site.
+Streamline Account Management by integrating Data 360 with LSC using the Life Sciences data kit. Boost user engagement with the enhanced Next Best Customer component. Align out-of-territory accounts to your territory directly on the desktop site.
 
-### Integrate Data 360 with AFLS Using the Life Sciences Data Kit
-Seamlessly integrate Data 360 with AFLS by using the Life Sciences data kit. Streamline your Account Management data by using the preconfigured data stream bundles that harmonize data from various objects. The data kit includes five ready-to-use bundles: Activity Plan, Marketable Product, Presentation, Provider Visit, and Sales Territory Account.
+### Integrate Data 360 with LSC Using the Life Sciences Data Kit
+Seamlessly integrate Data 360 with LSC by using the Life Sciences data kit. Streamline your Account Management data by using the preconfigured data stream bundles that harmonize data from various objects. The data kit includes five ready-to-use bundles: Activity Plan, Marketable Product, Presentation, Provider Visit, and Sales Territory Account.
 
 ### Improve User Engagement with Prioritized Accounts (Enhanced Next Best Customer)
 Help your users focus on the right accounts with the enhanced Next Best Customer component. The updated display offers clearer scoring visibility, intuitive rationales, and richer account insights, powered by the Actionable Relationship Center (ARC) framework. The ARC framework enables a more flexible and informative display of account details, allowing you to make faster and more informed engagement decisions. You can configure the rationale display and related settings directly from the Admin Console.
 
 ### View and Align Out-of-Territory Accounts on the Desktop Site
-Now view and align accounts outside your current territory directly from affiliation lists on the desktop site. Manage your activities more efficiently with immediate access to summaries of affiliated accounts. Previously, this feature was available only on the AFLS mobile app.
+Now view and align accounts outside your current territory directly from affiliation lists on the desktop site. Manage your activities more efficiently with immediate access to summaries of affiliated accounts. Previously, this feature was available only on the LSC mobile app.
 
 ## Engagement Planning
 
@@ -35,15 +35,15 @@ Expand your search beyond just presentation names and metadata properties by sea
 
 ## Data and Analytics
 
-Access real-time sales data on the AFLS mobile app, and plan better customer interactions from anywhere.
+Access real-time sales data on the LSC mobile app, and plan better customer interactions from anywhere.
 
 ## Mobile App
 
-Increase your efficiency by using deep links to streamline navigation and automate task execution in the AFLS mobile app.
+Increase your efficiency by using deep links to streamline navigation and automate task execution in the LSC mobile app.
 
 ## Limited Pilot Features for Life Sciences
 
-AFLS offers the **Store Check** and **Remote Engagement with Microsoft Teams** features through limited pilots. Participation in these pilots is optional and at your organization's discretion.
+LSC offers the **Store Check** and **Remote Engagement with Microsoft Teams** features through limited pilots. Participation in these pilots is optional and at your organization's discretion.
 
 ## New and Changed Objects for Life Sciences
 

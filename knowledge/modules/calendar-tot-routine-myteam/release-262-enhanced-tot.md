@@ -1,6 +1,6 @@
 # Time Off Territory (TOT) - Summer '26 Enhancements
 
-Presenter: Rebecca Wang, Product Manager, Agentforce AFLS
+Presenter: Rebecca Wang, Product Manager, Agentforce Life Sciences Cloud (LSC)
 
 ## Admin Setup & Configuration
 

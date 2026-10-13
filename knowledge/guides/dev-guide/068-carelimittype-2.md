@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:carelimittype-2 pages:1941-1942 -->
 # CareLimitType
 
-AFLS Overview                                                                                                   CareLimitType
+Life Sciences Cloud (LSC) Overview                                                                                                   CareLimitType
 
 
 
@@ -66,7 +66,7 @@ Defines the characteristics of limits on benefit provision.
 
 <!-- page:1942 -->
 
-AFLS Overview                                                                                                       CareLimitType
+LSC Overview                                                                                                       CareLimitType
 
 
 

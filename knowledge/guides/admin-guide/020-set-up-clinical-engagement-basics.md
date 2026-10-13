@@ -29,21 +29,21 @@ Before you set up specific clinical engagement features in Agentforce Life Scien
 tasks such as enabling person accounts and installing OmniStudio.
 
 
-## Set Up Security and Permissions for AFLS
+## Set Up Security and Permissions for Life Sciences Cloud (LSC)
 
 Create users and profiles for your org and give them the permission sets and permission set licenses
-that they need for AFLS.
+that they need for LSC.
 Verify Data Protection Details Are Available in Records
 To help maintain the privacy of your users’ data, verify that data protection details are available for
 lead, contact, and person account records.
-Set Up Person Accounts to Represent People in AFLS
+Set Up Person Accounts to Represent People in LSC
 Person accounts store information about specific people by combining certain account and contact
-fields into a single record. In AFLS, always model your patients or members as person
-accounts. You can’t fully use AFLS functionality if you don’t model your patients and
+fields into a single record. In LSC, always model your patients or members as person
+accounts. You can’t fully use LSC functionality if you don’t model your patients and
 members as person accounts.
-Omnistudio for AFLS
+Omnistudio for LSC
 Use Omnistudio to create guided interactions and other rich user experiences without code. You can
-even create applications and workflows using data from AFLS and from external
+even create applications and workflows using data from LSC and from external
 sources.
 Set Up Healthcare Providers
 Set up records for healthcare providers such as the practitioners (people) who take care of patients
@@ -56,28 +56,28 @@ organizations.
 
 
 
-Set Up Security and Permissions for AFLS
+Set Up Security and Permissions for LSC
 
 Create users and profiles for your org and give them the permission sets and permission set licenses that
-they need for AFLS.
+they need for LSC.
 
 
-## Add AFLS Users
+## Add LSC Users
 
 You can add internal Salesforce users one at a time or in batches of up to 10 users.
-Configure Profiles for AFLS
+Configure Profiles for LSC
 Your org includes several standard profiles where you can edit a limited number of settings. You can
-assign these standard Salesforce profiles to your AFLS users. If you need a custom
+assign these standard Salesforce profiles to your LSC users. If you need a custom
 profile to extend visibility and provide access to certain objects, clone a standard profile and edit it to
 meet your organization’s needs. You can also adjust users’ profiles to determine their access to fields.
-Assign Permission Sets for AFLS
-To work in AFLS, users need the appropriate permission sets and permission set
+Assign Permission Sets for LSC
+To work in LSC, users need the appropriate permission sets and permission set
 licenses. The Permission Sets page in Setup describes each permission set and shows the permission
 set license related to each permission set. Sort the License column to gain a clear picture of which
 permission sets match which permission set licenses.
 
 
-Add AFLS Users
+Add LSC Users
 
 You can add internal Salesforce users one at a time or in batches of up to 10 users.
 
@@ -87,7 +87,7 @@ You can add internal Salesforce users one at a time or in batches of up to 10 us
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS
+Available in: Enterprise and Unlimited Editions with LSC
 
 
 1. From Setup, in the Quick Find box, enter Users, and then select Users.
@@ -104,7 +104,7 @@ and notify user immediately is selected.
 7. Save your changes.
 
 
-Configure Profiles for AFLS
+Configure Profiles for LSC
 
 Your org includes several standard profiles where you can edit a limited number of settings. You can
 
@@ -112,7 +112,7 @@ Your org includes several standard profiles where you can edit a limited number 
 
 
 
-assign these standard Salesforce profiles to your AFLS users. If you need a custom profile
+assign these standard Salesforce profiles to your LSC users. If you need a custom profile
 to extend visibility and provide access to certain objects, clone a standard profile and edit it to meet your
 organization’s needs. You can also adjust users’ profiles to determine their access to fields.
 
@@ -122,7 +122,7 @@ organization’s needs. You can also adjust users’ profiles to determine their
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS
+Available in: Enterprise and Unlimited Editions with LSC
 
 Note When you set up certain features such as Advanced Therapy Management, you will encounter
 tasks to create specific profiles for users of those features.
@@ -134,9 +134,9 @@ tasks to create specific profiles for users of those features.
 4.    Configure the new profile per your organization’s requirements and save your changes.
 
 
-Assign Permission Sets for AFLS
+Assign Permission Sets for LSC
 
-To work in AFLS, users need the appropriate permission sets and permission set licenses.
+To work in LSC, users need the appropriate permission sets and permission set licenses.
 The Permission Sets page in Setup describes each permission set and shows the permission set license
 related to each permission set. Sort the License column to gain a clear picture of which permission sets
 match which permission set licenses.
@@ -202,7 +202,7 @@ contact, and person account records.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS
+Available in: Enterprise and Unlimited Editions with LSC
 
 
 1. From Setup, in the Quick Find box, enter Data Protection and Privacy, and then select Data
@@ -216,8 +216,8 @@ Set Up Person Accounts to Represent People in Life Sciences
 Cloud
 
 Person accounts store information about specific people by combining certain account and contact
-fields into a single record. In AFLS, always model your patients or members as person
-accounts. You can’t fully use AFLS functionality if you don’t model your patients and
+fields into a single record. In LSC, always model your patients or members as person
+accounts. You can’t fully use LSC functionality if you don’t model your patients and
 members as person accounts.
 
 
@@ -231,7 +231,7 @@ and organizations.
 
 
 
-## Enable Person Accounts for Use in AFLS
+## Enable Person Accounts for Use in LSC
 
 Enable person accounts so that you can use them to represent patients and members in your Life
 Sciences Cloud org.
@@ -254,13 +254,13 @@ organizations.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 Important Enabling Contacts to Multiple Accounts is required to use person accounts in Life
 Sciences Cloud.
 
 
-Because AFLS uses person accounts to represent patients, you must enable the setting
+Because LSC uses person accounts to represent patients, you must enable the setting
 that allows a contact to be related to multiple accounts. By enabling the contacts to be shared with
 multiple accounts, you ensure that person accounts are available to use in your org.
 
@@ -271,7 +271,7 @@ to relate a contact to multiple accounts.
 4. Save your changes.
 
 
-Enable Person Accounts for Use in AFLS
+Enable Person Accounts for Use in LSC
 
 Enable person accounts so that you can use them to represent patients and members in your Life
 Sciences Cloud org.
@@ -283,7 +283,7 @@ Sciences Cloud org.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 <!-- page:781 -->
 
@@ -333,7 +333,7 @@ organizations.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 You can also differentiate your patient records from your practitioner records by creating a record type
@@ -409,14 +409,14 @@ payer and healthcare provider organizations.
 
 ## See Also
 
-Salesforce Help: Configure Profiles for AFLS
+Salesforce Help: Configure Profiles for LSC
 Salesforce Help: Assign Record Types and Page Layouts in Profiles
 
 
-Omnistudio for AFLS
+Omnistudio for LSC
 
 Use Omnistudio to create guided interactions and other rich user experiences without code. You can
-even create applications and workflows using data from AFLS and from external sources.
+even create applications and workflows using data from LSC and from external sources.
 
 Omnistudio is built on the Salesforce platform and provides a suite of services, components, and data
 model objects. Omnistudio includes components for different purposes:
@@ -432,9 +432,9 @@ When we update Omnistudio, the upgrades are pushed automatically to you. Omnistu
 Business Rules Engine and Decision Explainer.
 
 
-Set Up Omnistudio for AFLS
+Set Up Omnistudio for LSC
 
-To use Omnistudio in AFLS, set up permissions, change optional Omnistudio settings, and
+To use Omnistudio in LSC, set up permissions, change optional Omnistudio settings, and
 learn more about Omnistudio.
 
 Before using Omnistudio, set up and assign Omnistudio permission sets.
@@ -562,7 +562,7 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -606,7 +606,7 @@ healthcare provider record to represent what the organization does.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -653,7 +653,7 @@ business account and a healthcare provider record for that specific branch or fa
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -685,7 +685,7 @@ that organization.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -725,7 +725,7 @@ facility network records to identify the payer network that a facility or organi
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 
 <!-- page:789 -->
 
@@ -771,7 +771,7 @@ subspecialties using taxonomy records.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
@@ -834,7 +834,7 @@ certifications, business licenses, and education.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS, and Einstein
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC, and Einstein
 GPT Platform and Einstein GPT Prompt Builder Add-On licenses
 
 
