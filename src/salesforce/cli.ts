@@ -152,7 +152,7 @@ export async function installSfCli(): Promise<CliResult<string>> {
  * Commands like `sf project deploy/retrieve` require an sfdx-project.json.
  * A unique directory is created per process (session) using the PID.
  */
-const TMP_SFDX_PROJECT_DIR = path.join(os.tmpdir(), `afls-sfdx-project-${process.pid}`);
+const TMP_SFDX_PROJECT_DIR = path.join(os.tmpdir(), `lsc-sfdx-project-${process.pid}`);
 
 export function ensureTmpSfdxProject(): string {
   const forceAppDir = path.join(TMP_SFDX_PROJECT_DIR, "force-app");
@@ -166,7 +166,7 @@ export function ensureTmpSfdxProject(): string {
       JSON.stringify(
         {
           packageDirectories: [{ path: "force-app", default: true }],
-          name: "afls-tmp",
+          name: "lsc-tmp",
           namespace: "",
           sfdcLoginUrl: "https://login.salesforce.com",
           sourceApiVersion: "62.0",

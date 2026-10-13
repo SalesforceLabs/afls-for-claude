@@ -1,6 +1,6 @@
-# Claude for AFLS
+# Claude for Life Sciences Cloud (LSC)
 
-A Claude Code plugin providing AFLS-specific knowledge, templates, tools, skills, and agents for AFLS Customer Engagement implementations.
+A Claude Code plugin providing LSC-specific knowledge, templates, tools, skills, and agents for LSC Customer Engagement implementations.
 
 ## Diagram Output — Electron App
 
@@ -13,11 +13,11 @@ When connecting to a Salesforce org, follow these rules strictly:
 1. **If only one org is authenticated**, use it automatically — do not ask the user.
 2. **If multiple orgs are authenticated and no target is set**, ask the user **exactly once** which org to use, then call `set_target_org` with their choice.
 3. **Once an org is selected (via `set_target_org` or auto-detection), NEVER ask again.** The choice persists for the entire session. All tools automatically use the selected org.
-4. **Do not call `check_afls_setup` or `list_sf_orgs` before every operation.** Only call them if the user explicitly asks about setup or if a tool returns an authentication error.
+4. **Do not call `check_lsc_setup` or `list_sf_orgs` before every operation.** Only call them if the user explicitly asks about setup or if a tool returns an authentication error.
 
 ## Architecture
 
-This is a **Claude Code Plugin** providing an all-in-one AFLS solution:
+This is a **Claude Code Plugin** providing an all-in-one LSC solution:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -25,22 +25,22 @@ This is a **Claude Code Plugin** providing an all-in-one AFLS solution:
 ├─────────────────────────────────────────────────────────────┤
 │                                                              │
 │  ┌─────────────────────────────────────────────────────────┐ │
-│  │              AFLS-for-Claude (Plugin)                     │ │
+│  │              LSC-for-Claude (Plugin)                     │ │
 │  ├─────────────────────────────────────────────────────────┤ │
 │  │                                                          │ │
 │  │  Skills (Auto-invoked)    │   Commands (User-invoked)   │ │
 │  │  ─────────────────────    │   ─────────────────────────  │ │
-│  │  • afls-implementation     │   • /afls:setup-plugin        │ │
-│  │  • afls-troubleshoot       │   • /afls:soql-query               │ │
-│  │  • salesforce-query       │   • /afls:describe            │ │
-│  │  • afls-data-model         │   • /afls:help                │ │
-│  │                           │   • /afls:docs                │ │
+│  │  • lsc-implementation     │   • /lsc:setup-plugin        │ │
+│  │  • lsc-troubleshoot       │   • /lsc:soql-query               │ │
+│  │  • salesforce-query       │   • /lsc:describe            │ │
+│  │  • lsc-data-model         │   • /lsc:help                │ │
+│  │                           │   • /lsc:docs                │ │
 │  │                           │                              │ │
 │  │  Agents (Subagents)       │   MCP Server (Tools)         │ │
 │  │  ─────────────────────    │   ───────────────────────── │ │
-│  │  • afls-consultant         │   • AFLS knowledge tools      │ │
-│  │  • afls-admin              │   • Salesforce org tools     │ │
-│  │  • afls-developer          │   • SOQL, CRUD, metadata     │ │
+│  │  • lsc-consultant         │   • LSC knowledge tools      │ │
+│  │  • lsc-admin              │   • Salesforce org tools     │ │
+│  │  • lsc-developer          │   • SOQL, CRUD, metadata     │ │
 │  │                           │                              │ │
 │  └─────────────────────────────────────────────────────────┘ │
 │                           │                                  │
@@ -48,7 +48,7 @@ This is a **Claude Code Plugin** providing an all-in-one AFLS solution:
 │                    Salesforce CLI (sf)                       │
 │                           │                                  │
 │                           ▼                                  │
-│                  Your AFLS Salesforce Org                     │
+│                  Your LSC Salesforce Org                     │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -57,87 +57,87 @@ This is a **Claude Code Plugin** providing an all-in-one AFLS solution:
 ### Skills (Claude auto-invokes based on context)
 | Skill | Description |
 |-------|-------------|
-| `afls-implementation` | Guides module implementations with best practices |
-| `afls-implementation-review` | Reviews an implementation/design against field-observed anti-patterns (sharing model, sample/inventory, mobile sync, over-customization, territory, MDM, Agentforce, UAT/go-live discipline) — proactively flags known-bad decisions before go-live |
-| `afls-troubleshoot` | Diagnoses and resolves AFLS issues |
-| `afls-mobile-validation` | Validates mobile app configuration (DB Schema, sync settings) |
-| `afls-home-page-configuration` | Guides home page setup for web and mobile apps |
-| `afls-quick-actions-configuration` | Guides quick actions and custom actions setup for web and mobile |
-| `afls-visit-management` | Guides visit management configuration for web and mobile |
-| `afls-sample-management` | Guides sample inventory and sample limits configuration |
-| `afls-account-management` | Guides account management configuration (addresses, affiliations, licenses, DCR, search) |
-| `afls-activity-plan` | Guides activity plan configuration (account goals, weighted goals, shared goals, batch jobs, measures) |
-| `afls-territory-alignment` | Guides territory alignment configuration (explicit assignments, geo rules, affiliation rules, batch jobs) |
-| `afls-user-management` | Guides user provisioning, permission sets, PSLs, profiles, role hierarchy, and license capacity |
-| `afls-key-account-management` | Guides KAM account plans, goal definitions, action plan templates, stakeholders, and participants |
-| `afls-lists-filters` | Guides account lists, dynamic filters, static lists, advanced filters, and bulk actions configuration |
-| `afls-field-email` | Guides field email setup — templates, jobs, queue, consent integration, and mobile requirements |
-| `afls-intelligent-content` | Guides CLM/presentation management — upload, distribution, tracking, and presentation settings |
-| `afls-calendar-tot-routine` | Guides calendar, Time Off Territory, routines, and Planner Administration configuration |
-| `afls-surveys` | Guides survey configuration and usage — sharing, launch points, and response tracking |
-| `afls-product-management` | Guides product hierarchy, territory alignment, messages/objectives, and account restrictions |
-| `afls-app-alerts` | Guides app alerts and notifications — creation, territory targeting, deep links, and alert types |
-| `afls-next-best` | Guides NBC/NBA/NBM configuration — data model, widgets, Einstein Studio integration |
-| `afls-consent-management` | Guides consent capture, communication subscriptions, channels, and compliance snapshots |
-| `afls-agentforce` | Guides Agentforce for AFLS (Winter '26) — Field Sales Agent, topics, actions, and Einstein Studio |
-| `afls-events-management` | Guides Events Management configuration — Managed Events, speaker events, participants, resources, budgets, stage paths |
-| `afls-custom-scripts` | Guides custom script configuration for validation, checklists, and Visit Action Validation (IIFE patterns, CodeText, Locker Service gotchas) |
+| `lsc-implementation` | Guides module implementations with best practices |
+| `lsc-implementation-review` | Reviews an implementation/design against field-observed anti-patterns (sharing model, sample/inventory, mobile sync, over-customization, territory, MDM, Agentforce, UAT/go-live discipline) — proactively flags known-bad decisions before go-live |
+| `lsc-troubleshoot` | Diagnoses and resolves LSC issues |
+| `lsc-mobile-validation` | Validates mobile app configuration (DB Schema, sync settings) |
+| `lsc-home-page-configuration` | Guides home page setup for web and mobile apps |
+| `lsc-quick-actions-configuration` | Guides quick actions and custom actions setup for web and mobile |
+| `lsc-visit-management` | Guides visit management configuration for web and mobile |
+| `lsc-sample-management` | Guides sample inventory and sample limits configuration |
+| `lsc-account-management` | Guides account management configuration (addresses, affiliations, licenses, DCR, search) |
+| `lsc-activity-plan` | Guides activity plan configuration (account goals, weighted goals, shared goals, batch jobs, measures) |
+| `lsc-territory-alignment` | Guides territory alignment configuration (explicit assignments, geo rules, affiliation rules, batch jobs) |
+| `lsc-user-management` | Guides user provisioning, permission sets, PSLs, profiles, role hierarchy, and license capacity |
+| `lsc-key-account-management` | Guides KAM account plans, goal definitions, action plan templates, stakeholders, and participants |
+| `lsc-lists-filters` | Guides account lists, dynamic filters, static lists, advanced filters, and bulk actions configuration |
+| `lsc-field-email` | Guides field email setup — templates, jobs, queue, consent integration, and mobile requirements |
+| `lsc-intelligent-content` | Guides CLM/presentation management — upload, distribution, tracking, and presentation settings |
+| `lsc-calendar-tot-routine` | Guides calendar, Time Off Territory, routines, and Planner Administration configuration |
+| `lsc-surveys` | Guides survey configuration and usage — sharing, launch points, and response tracking |
+| `lsc-product-management` | Guides product hierarchy, territory alignment, messages/objectives, and account restrictions |
+| `lsc-app-alerts` | Guides app alerts and notifications — creation, territory targeting, deep links, and alert types |
+| `lsc-next-best` | Guides NBC/NBA/NBM configuration — data model, widgets, Einstein Studio integration |
+| `lsc-consent-management` | Guides consent capture, communication subscriptions, channels, and compliance snapshots |
+| `lsc-agentforce` | Guides Agentforce for LSC (Winter '26) — Field Sales Agent, topics, actions, and Einstein Studio |
+| `lsc-events-management` | Guides Events Management configuration — Managed Events, speaker events, participants, resources, budgets, stage paths |
+| `lsc-custom-scripts` | Guides custom script configuration for validation, checklists, and Visit Action Validation (IIFE patterns, CodeText, Locker Service gotchas) |
 | `salesforce-query` | Helps construct and execute SOQL queries |
-| `afls-mobile-app-settings` | Manages mobile Application Settings (default browser, password, search, notifications, dynamic actions) |
-| `afls-db-schema` | Manages DB Schema records (mobile object sync configuration, SOQL filters, enable/disable objects) |
-| `afls-briefings` | Guides Briefings (Daily Podcasts) configuration and troubleshooting |
-| `afls-data-model` | Expert knowledge of the AFLS data model |
-| `afls-health-check` | Guides org health assessment and configuration verification |
-| `afls-data-migration` | Guides data loading and migration (account hierarchies, territory assignments, Veeva CRM migration) |
-| `afls-config-migration` | Guides configuration migration between orgs (export → diff → selective import of admin settings, DB Schema, trigger handlers, actions; create + update-only safe apply) |
-| `afls-demo-data-loading` | Guides loading demo data into AFLS orgs (territories, accounts, HCPs, NPIs, contact points, PATI/PATS, business licenses, therapy-area scenarios, localization) |
-| `afls-integration-patterns` | Guides integration patterns (MDM, ERP, IQVIA, email providers, video platforms) |
-| `afls-reporting-analytics` | Guides CRM Analytics, reports, dashboards, and KPI configuration |
+| `lsc-mobile-app-settings` | Manages mobile Application Settings (default browser, password, search, notifications, dynamic actions) |
+| `lsc-db-schema` | Manages DB Schema records (mobile object sync configuration, SOQL filters, enable/disable objects) |
+| `lsc-briefings` | Guides Briefings (Daily Podcasts) configuration and troubleshooting |
+| `lsc-data-model` | Expert knowledge of the LSC data model |
+| `lsc-health-check` | Guides org health assessment and configuration verification |
+| `lsc-data-migration` | Guides data loading and migration (account hierarchies, territory assignments, Veeva CRM migration) |
+| `lsc-config-migration` | Guides configuration migration between orgs (export → diff → selective import of admin settings, DB Schema, trigger handlers, actions; create + update-only safe apply) |
+| `lsc-demo-data-loading` | Guides loading demo data into LSC orgs (territories, accounts, HCPs, NPIs, contact points, PATI/PATS, business licenses, therapy-area scenarios, localization) |
+| `lsc-integration-patterns` | Guides integration patterns (MDM, ERP, IQVIA, email providers, video platforms) |
+| `lsc-reporting-analytics` | Guides CRM Analytics, reports, dashboards, and KPI configuration |
 
-### Commands (User-invoked with `/afls:command`)
+### Commands (User-invoked with `/lsc:command`)
 | Command | Description |
 |---------|-------------|
-| `/afls:setup-plugin` | Check plugin status and connect to Salesforce org |
-| `/afls:soql-query` | Run a SOQL query against your org |
-| `/afls:describe` | Describe a Salesforce object's fields |
-| `/afls:help` | Search the AFLS knowledge base by topic |
-| `/afls:docs` | Browse and navigate AFLS documentation by category |
-| `/afls:validate-mobile` | Validate mobile app configuration for deployment |
-| `/afls:generate-metadata-cache` | Generate mobile metadata cache programmatically |
-| `/afls:audit` | Audit mobile configuration against best practices |
-| `/afls:configure-home-page` | Interactive wizard to configure and validate home page |
-| `/afls:configure-quick-actions` | Interactive wizard to configure quick and custom actions |
-| `/afls:configure-visits` | Interactive wizard to configure and validate visit management |
-| `/afls:configure-samples` | Interactive wizard to configure and validate sample management |
-| `/afls:configure-accounts` | Interactive wizard to configure and validate account management |
-| `/afls:configure-activity-plan` | Interactive wizard to configure and validate activity plans |
-| `/afls:configure-territory` | Interactive wizard to configure and validate territory alignment |
-| `/afls:configure-users` | Interactive wizard to configure and validate user management |
-| `/afls:configure-custom-scripts` | Interactive wizard to configure and validate custom scripts for validation |
-| `/afls:open-org` | Open the Salesforce org in the browser |
-| `/afls:diff-orgs` | Compare configuration between two Salesforce orgs |
-| `/afls:health-check` | Run a comprehensive AFLS org health check |
-| `/afls:release-notes` | View AFLS release notes by Salesforce release |
-| `/afls:export-config` | Export AFLS org configuration as JSON |
-| `/afls:import-config` | Import AFLS configuration from JSON export |
-| `/afls:status` | View a dashboard of the connected AFLS org |
-| `/afls:configure-briefings` | Interactive wizard to configure and validate Briefings (Daily Podcasts) |
-| `/afls:diagnose-briefings` | Diagnose why Briefings isn't working — validates toggle, permissions, flows, DB Schema |
-| `/afls:getting-started` | Interactive onboarding — check setup, discover capabilities, get started |
-| `/afls:launch-app` | Build (first run) and launch the AFLS Assistant desktop app (Electron) |
+| `/lsc:setup-plugin` | Check plugin status and connect to Salesforce org |
+| `/lsc:soql-query` | Run a SOQL query against your org |
+| `/lsc:describe` | Describe a Salesforce object's fields |
+| `/lsc:help` | Search the LSC knowledge base by topic |
+| `/lsc:docs` | Browse and navigate LSC documentation by category |
+| `/lsc:validate-mobile` | Validate mobile app configuration for deployment |
+| `/lsc:generate-metadata-cache` | Generate mobile metadata cache programmatically |
+| `/lsc:audit` | Audit mobile configuration against best practices |
+| `/lsc:configure-home-page` | Interactive wizard to configure and validate home page |
+| `/lsc:configure-quick-actions` | Interactive wizard to configure quick and custom actions |
+| `/lsc:configure-visits` | Interactive wizard to configure and validate visit management |
+| `/lsc:configure-samples` | Interactive wizard to configure and validate sample management |
+| `/lsc:configure-accounts` | Interactive wizard to configure and validate account management |
+| `/lsc:configure-activity-plan` | Interactive wizard to configure and validate activity plans |
+| `/lsc:configure-territory` | Interactive wizard to configure and validate territory alignment |
+| `/lsc:configure-users` | Interactive wizard to configure and validate user management |
+| `/lsc:configure-custom-scripts` | Interactive wizard to configure and validate custom scripts for validation |
+| `/lsc:open-org` | Open the Salesforce org in the browser |
+| `/lsc:diff-orgs` | Compare configuration between two Salesforce orgs |
+| `/lsc:health-check` | Run a comprehensive LSC org health check |
+| `/lsc:release-notes` | View LSC release notes by Salesforce release |
+| `/lsc:export-config` | Export LSC org configuration as JSON |
+| `/lsc:import-config` | Import LSC configuration from JSON export |
+| `/lsc:status` | View a dashboard of the connected LSC org |
+| `/lsc:configure-briefings` | Interactive wizard to configure and validate Briefings (Daily Podcasts) |
+| `/lsc:diagnose-briefings` | Diagnose why Briefings isn't working — validates toggle, permissions, flows, DB Schema |
+| `/lsc:getting-started` | Interactive onboarding — check setup, discover capabilities, get started |
+| `/lsc:launch-app` | Build (first run) and launch the LSC Assistant desktop app (Electron) |
 
 ### Agents (Specialized subagents)
 | Agent | Description |
 |-------|-------------|
-| `afls-consultant` | Senior implementation consultant for complex projects |
-| `afls-admin` | Administrator for day-to-day operations |
-| `afls-developer` | Developer for OmniStudio and custom development |
-| `afls-docs-researcher` | Searches live official Salesforce Help documentation for AFLS setup, features, and admin configuration |
+| `lsc-consultant` | Senior implementation consultant for complex projects |
+| `lsc-admin` | Administrator for day-to-day operations |
+| `lsc-developer` | Developer for OmniStudio and custom development |
+| `lsc-docs-researcher` | Searches live official Salesforce Help documentation for LSC setup, features, and admin configuration |
 
 ## Target Users
 
-- **Consultants**: Implementing AFLS for new customers, need guidance on best practices
-- **Developers**: Building custom functionality and integrations on AFLS
+- **Consultants**: Implementing LSC for new customers, need guidance on best practices
+- **Developers**: Building custom functionality and integrations on LSC
 - **Administrators**: Managing operations, troubleshooting, and optimizing implementations
 
 ## MCP Server Tools
@@ -148,22 +148,22 @@ The plugin includes an MCP server that provides these tools:
 
 | Tool | Description |
 |------|-------------|
-| `list_afls_modules` | List all 28 AFLS4CE modules with documentation |
-| `get_afls_module_docs` | Get detailed documentation for a specific module |
-| `search_afls_knowledge` | Search across all documentation for topics/terms |
-| `explain_afls_concept` | Get explanation of AFLS concepts (ARC, Sample Limits, etc.) |
-| `get_afls_admin_setup` | Get admin configuration guidance for a feature |
-| `list_afls_help_docs` | List all available documentation (help, guides, exercises, troubleshooting) |
-| `get_afls_help_doc` | Get official Salesforce help documentation for a topic |
-| `get_afls_guide` | Get guide documentation (developer guide, mobile setup) |
-| `get_afls_troubleshooting` | Get common issues and troubleshooting documentation |
-| `get_afls_exercise` | Get hands-on exercise documentation |
+| `list_lsc_modules` | List all 28 LSC4CE modules with documentation |
+| `get_lsc_module_docs` | Get detailed documentation for a specific module |
+| `search_lsc_knowledge` | Search across all documentation for topics/terms |
+| `explain_lsc_concept` | Get explanation of LSC concepts (ARC, Sample Limits, etc.) |
+| `get_lsc_admin_setup` | Get admin configuration guidance for a feature |
+| `list_lsc_help_docs` | List all available documentation (help, guides, exercises, troubleshooting) |
+| `get_lsc_help_doc` | Get official Salesforce help documentation for a topic |
+| `get_lsc_guide` | Get guide documentation (developer guide, mobile setup) |
+| `get_lsc_troubleshooting` | Get common issues and troubleshooting documentation |
+| `get_lsc_exercise` | Get hands-on exercise documentation |
 
 #### Salesforce Org Tools
 
 | Tool | Description |
 |------|-------------|
-| `check_afls_setup` | Check if SF CLI is installed and orgs are authenticated |
+| `check_lsc_setup` | Check if SF CLI is installed and orgs are authenticated |
 | `install_sf_cli` | Install Salesforce CLI via npm (with user consent) |
 | `list_sf_orgs` | List all authenticated Salesforce orgs |
 | `set_target_org` | Set which org to use for operations |
@@ -175,35 +175,35 @@ The plugin includes an MCP server that provides these tools:
 | `update_record` | Update an existing record |
 | `delete_record` | Delete a record |
 | `generate_mobile_metadata_cache` | Generate mobile metadata cache for specified profiles |
-| `upload_presentation` | Upload a presentation (.pptx, .pdf, or .zip files) to AFLS Intelligent Content. Auto-detects format: PPTX converts via LibreOffice, PDF uploads directly, HTML ZIPs are validated and uploaded as pages. All formats use the Bulk Presentation API. |
+| `upload_presentation` | Upload a presentation (.pptx, .pdf, or .zip files) to LSC Intelligent Content. Auto-detects format: PPTX converts via LibreOffice, PDF uploads directly, HTML ZIPs are validated and uploaded as pages. All formats use the Bulk Presentation API. |
 | `distribute_presentation` | Distribute a presentation to territories. Creates PresentationShare records with territory Group IDs (TerritoryAndSubordinates for cascading). |
 | `assign_presentation_content` | Assign topics to a presentation and/or products to its pages. Creates TopicAssignment and PresentationPageProduct records. |
-| `diff_orgs` | Compare AFLS configuration between two orgs. Compares trigger handlers, admin settings, DB Schema, and actions to identify configuration drift. |
+| `diff_orgs` | Compare LSC configuration between two orgs. Compares trigger handlers, admin settings, DB Schema, and actions to identify configuration drift. |
 
 **CRITICAL — Presentation language interpretation:**
 - **"associate with X" / "link to X" / "tag with X"** → X is a **Topic** name. Search `Topic` object, then call `assign_presentation_content` with `topicNames`. NEVER search Territory2 for this.
 - **"give access to [person]" / "grant access to [person]"** → Look up the person's territory via `UserTerritory2Association`, then call `distribute_presentation` with that territory ID.
 - **"distribute to [territory]"** → Call `distribute_presentation` directly with the territory ID.
 
-#### AFLS Action Tools
+#### LSC Action Tools
 
-**CRITICAL: These are the ONLY tools that work for AFLS actions. NEVER use run_soql, Bash, delete_record, or create_record for actions.**
+**CRITICAL: These are the ONLY tools that work for LSC actions. NEVER use run_soql, Bash, delete_record, or create_record for actions.**
 
 | Tool | Description |
 |------|-------------|
-| `list_afls_actions` | List Quick Actions and Custom Actions via Tooling API (includes IDs, profiles) |
+| `list_lsc_actions` | List Quick Actions and Custom Actions via Tooling API (includes IDs, profiles) |
 | `create_quick_action` | Create a Quick Action (Email, NewVisit, LogCall, etc.) |
 | `create_custom_action` | Create a Custom Action (URL, App, Utterance) |
-| `update_afls_action` | Update an existing Quick/Custom Action (label, fields, profiles, active status) |
-| `delete_afls_action` | Delete a Quick Action or Custom Action by ID or name |
+| `update_lsc_action` | Update an existing Quick/Custom Action (label, fields, profiles, active status) |
+| `delete_lsc_action` | Delete a Quick Action or Custom Action by ID or name |
 | `check_mobile_cache_status` | Check mobile metadata cache status |
 
 **NEVER use run_soql to query actions or cache status. These objects DO NOT EXIST:**
 - `LifeSciCustomAction__mdt`, `CustomAction__c`, `QuickAction__mdt`, `LifeSciConfigType__c`
 - `MobileMetadataCache__c`, `MobileApplicationDetail`, `lsc4ce__MobileMetadataCache__c`
 
-**To update an action:** Call `update_afls_action` with the ID or name and the fields to change.
-**To delete an action:** Call `delete_afls_action` with the ID or name.
+**To update an action:** Call `update_lsc_action` with the ID or name and the fields to change.
+**To delete an action:** Call `delete_lsc_action` with the ID or name.
 **To check cache status:** Call `check_mobile_cache_status`.
 
 #### Admin Console & Trigger Handler Tools
@@ -243,7 +243,7 @@ The plugin includes an MCP server that provides these tools:
 | Tool | Description |
 |------|-------------|
 | `list_navigation_tabs` | List mobile navigation tabs configured in Admin Console > Mobile > UI Settings |
-| `add_navigation_tab` | Add a new navigation tab to AFLS Mobile with label, tab name, order, and profile assignments |
+| `add_navigation_tab` | Add a new navigation tab to LSC Mobile with label, tab name, order, and profile assignments |
 
 **Navigation tabs are stored as `LifeSciConfigRecord` records (Tooling API) in the "UISchema" category.** Use these dedicated tools rather than `list_admin_settings`/`create_admin_setting` for tab management.
 
@@ -302,7 +302,7 @@ The plugin includes an MCP server that provides these tools:
 |------|-------------|
 | `check_user_config` | Check user management configuration (package licenses, PSL capacity, permission set assignments, profiles, roles, territory-user associations) |
 | `list_users` | List active users with filters (by profile, permission set, territory, or find users without territories/PSLs) |
-| `list_permission_sets` | List AFLS permission sets and PSLs with assignment counts and capacity |
+| `list_permission_sets` | List LSC permission sets and PSLs with assignment counts and capacity |
 | `assign_permission_set` | Assign a permission set to one or more users by label/API name |
 | `unassign_permission_set` | Remove a permission set assignment from one or more users |
 
@@ -315,17 +315,17 @@ The plugin includes an MCP server that provides these tools:
 |------|-------------|
 | `audit_mobile_config` | Run automated checks against validation rules to identify misconfigurations |
 | `list_validation_groups` | List available validation groups (mobile-login-check, pre-deployment, etc.) |
-| `diagnose_afls_issue` | Find validation rules matching a specific error message or symptom |
+| `diagnose_lsc_issue` | Find validation rules matching a specific error message or symptom |
 
 #### Health Check & Status Tools
 
 | Tool | Description |
 |------|-------------|
-| `health_check` | Run a comprehensive AFLS org health check (trigger handlers, PSLs, territory model, DB Schema, mobile cache) |
-| `get_org_status` | Get a single dashboard view of the connected AFLS org (packages, features, territory model, user count) |
-| `export_config` | Export AFLS configuration (Admin Console settings, DB Schema, trigger handlers, actions) as JSON |
-| `import_config` | Import AFLS configuration from a snapshot into a target org. Diff-driven, create + update-only (safe). Modes: `report` (diff summary, default), `ui` (local browser review/apply UI on 127.0.0.1 with checkboxes + live progress), `apply` (headless apply of a selection). Auto-backs-up the target first; never deletes/deactivates target-only records |
-| `get_release_notes` | Get AFLS release notes for a specific Salesforce release (Spring '26, Winter '26, etc.) |
+| `health_check` | Run a comprehensive LSC org health check (trigger handlers, PSLs, territory model, DB Schema, mobile cache) |
+| `get_org_status` | Get a single dashboard view of the connected LSC org (packages, features, territory model, user count) |
+| `export_config` | Export LSC configuration (Admin Console settings, DB Schema, trigger handlers, actions) as JSON |
+| `import_config` | Import LSC configuration from a snapshot into a target org. Diff-driven, create + update-only (safe). Modes: `report` (diff summary, default), `ui` (local browser review/apply UI on 127.0.0.1 with checkboxes + live progress), `apply` (headless apply of a selection). Auto-backs-up the target first; never deletes/deactivates target-only records |
+| `get_release_notes` | Get LSC release notes for a specific Salesforce release (Spring '26, Winter '26, etc.) |
 
 #### Developer & Integrator Tools
 
@@ -341,17 +341,17 @@ The plugin includes an MCP server that provides these tools:
 
 | Resource | Description |
 |----------|-------------|
-| `afls://modules` | List of all modules with documentation counts |
-| `afls://overview` | Overview of AFLS4CE capabilities and architecture |
+| `lsc://modules` | List of all modules with documentation counts |
+| `lsc://overview` | Overview of LSC4CE capabilities and architecture |
 
 ### Prompts
 
 | Prompt | Description |
 |--------|-------------|
-| `afls_implementation_checklist` | Generate implementation checklist for a module |
-| `afls_troubleshoot` | Get help troubleshooting an AFLS issue |
+| `lsc_implementation_checklist` | Generate implementation checklist for a module |
+| `lsc_troubleshoot` | Get help troubleshooting an LSC issue |
 
-## AFLS4CE Modules (with Documentation)
+## LSC4CE Modules (with Documentation)
 
 | Module | Coverage | Key Topics |
 |--------|----------|------------|
@@ -374,9 +374,9 @@ The plugin includes an MCP server that provides these tools:
 | **Key Account Management** | ✅ Full | KAM Account Plans (Web & Mobile), E2E Demo |
 | **Segmentation** | ✅ Admin | Admin-only configuration |
 | **Workflow Management** | ✅ Demo | Generic workflow |
-| **Agentforce for AFLS** | ✅ Winter'26 | Agentforce enablement |
+| **Agentforce for LSC** | ✅ Winter'26 | Agentforce enablement |
 | **Data Cloud/Singularity** | ✅ Demo | TabNext Metrics, NBC Predictive Model |
-| **AFLS Apps** | ✅ Demo | App configuration |
+| **LSC Apps** | ✅ Demo | App configuration |
 | **Briefings (Daily Podcasts)** | ✅ Full | Setup, troubleshooting, mobile config, DB Schema, validation rules |
 | **Mobile Metadata Cache** | ✅ Full | Programmatic generation, DB Schema configuration, DB Schema record management |
 | **Starter Config** | ✅ Full | LSStarterConfig — bulk-configure trigger handlers, admin settings, DB Schema in one shot (Spring '26) |
@@ -384,7 +384,7 @@ The plugin includes an MCP server that provides these tools:
 
 ### Recent Additions (Jun 2026)
 
-**AFLS4CE Value Chain Training (Engineering → Support, 15 sessions, 18 files)** — Deep support-engineering content spanning Feb 2026 → Jun 2026 across 14 modules. Topics: Sync internals, Search Before Create (internal + OneKey), Medical Inquiry multi-entity setup, KAM Account Plan deep dive, Consent Management proof + filtering, Quick & Custom Actions (Spring '26 + evergreen config guide), Validations via Custom Scripts, LSStarterConfig, Territory Alignment Jobs, Activity Plan, Activity Timeline, Visit Management (configuration + troubleshooting + side menu), Intelligent Content, Generic Workflow. Files use the `support-engineering-*` prefix (evergreen) or `release-260-*` (Spring '26-specific). Two new modules introduced: `starter-config/`, `custom-scripts/`.
+**LSC4CE Value Chain Training (Engineering → Support, 15 sessions, 18 files)** — Deep support-engineering content spanning Feb 2026 → Jun 2026 across 14 modules. Topics: Sync internals, Search Before Create (internal + OneKey), Medical Inquiry multi-entity setup, KAM Account Plan deep dive, Consent Management proof + filtering, Quick & Custom Actions (Spring '26 + evergreen config guide), Validations via Custom Scripts, LSStarterConfig, Territory Alignment Jobs, Activity Plan, Activity Timeline, Visit Management (configuration + troubleshooting + side menu), Intelligent Content, Generic Workflow. Files use the `support-engineering-*` prefix (evergreen) or `release-260-*` (Spring '26-specific). Two new modules introduced: `starter-config/`, `custom-scripts/`.
 
 ### Supplementary Module Directories
 
@@ -392,44 +392,44 @@ Additional `knowledge/modules/` directories beyond the table above: `clinical-si
 
 ### Technical Components
 - **Data Model**: Industry objects (PersonAccount, Address, Affiliation, etc.)
-- **OmniStudio**: FlexCards, OmniScripts, DataRaptors, Integration Procedures (**web app only — NOT available in AFLS Mobile/iPad**)
+- **OmniStudio**: FlexCards, OmniScripts, DataRaptors, Integration Procedures (**web app only — NOT available in LSC Mobile/iPad**)
 - **Business Rules Engine**: Validation, calculations, automation
 - **Analytics**: Reports, dashboards, CRM Analytics templates
 
-### CRITICAL: AFLS Mobile Constraints
-- **OmniStudio components (FlexCards, OmniScripts, DataRaptors) are NOT available anywhere in the AFLS Mobile app (iPad).** NEVER suggest OmniStudio as a solution for mobile customization. OmniStudio is only available on the web app.
+### CRITICAL: LSC Mobile Constraints
+- **OmniStudio components (FlexCards, OmniScripts, DataRaptors) are NOT available anywhere in the LSC Mobile app (iPad).** NEVER suggest OmniStudio as a solution for mobile customization. OmniStudio is only available on the web app.
 
 ## Project Structure
 
 ```
-AFLS-for-Claude/
+LSC-for-Claude/
 ├── .claude-plugin/           # Plugin manifest
 │   └── plugin.json           # Plugin metadata (name, version, etc.)
 ├── skills/                   # Agent Skills (auto-invoked by Claude)
-│   ├── afls-implementation/
+│   ├── lsc-implementation/
 │   │   └── SKILL.md
-│   ├── afls-troubleshoot/
+│   ├── lsc-troubleshoot/
 │   │   └── SKILL.md
-│   ├── afls-mobile-validation/
+│   ├── lsc-mobile-validation/
 │   │   └── SKILL.md          # Mobile/iPad app configuration validation
 │   ├── salesforce-query/
 │   │   └── SKILL.md
-│   └── afls-data-model/
+│   └── lsc-data-model/
 │       └── SKILL.md
 ├── commands/                 # User-invocable slash commands
-│   ├── setup-plugin.md       # /afls:setup-plugin
-│   ├── soql-query.md         # /afls:soql-query
-│   ├── describe.md           # /afls:describe
-│   ├── help.md               # /afls:help
-│   ├── docs.md               # /afls:docs
-│   ├── validate-mobile.md    # /afls:validate-mobile
-│   ├── generate-metadata-cache.md  # /afls:generate-metadata-cache
-│   ├── audit.md              # /afls:audit
-│   └── open-org.md           # /afls:open-org
+│   ├── setup-plugin.md       # /lsc:setup-plugin
+│   ├── soql-query.md         # /lsc:soql-query
+│   ├── describe.md           # /lsc:describe
+│   ├── help.md               # /lsc:help
+│   ├── docs.md               # /lsc:docs
+│   ├── validate-mobile.md    # /lsc:validate-mobile
+│   ├── generate-metadata-cache.md  # /lsc:generate-metadata-cache
+│   ├── audit.md              # /lsc:audit
+│   └── open-org.md           # /lsc:open-org
 ├── agents/                   # Specialized subagents
-│   ├── afls-consultant.md     # Implementation consultant
-│   ├── afls-admin.md          # Administrator
-│   └── afls-developer.md      # Developer
+│   ├── lsc-consultant.md     # Implementation consultant
+│   ├── lsc-admin.md          # Administrator
+│   └── lsc-developer.md      # Developer
 ├── .mcp.json                 # MCP server configuration
 ├── CLAUDE.md                 # This file
 ├── package.json              # Dependencies
@@ -453,7 +453,7 @@ AFLS-for-Claude/
 │   ├── official help documentation/  # Salesforce help PDFs (served live via MCP, not bundled)
 │   ├── hands-on exercises/   # Training exercises (2 PDFs)
 │   ├── life_sciences_dev_guide.pdf  # Developer guide (27MB)
-│   ├── SE AFLS Mobile Setup and Configuration Guide.pdf  # Mobile setup (7.6MB)
+│   ├── SE LSC Mobile Setup and Configuration Guide.pdf  # Mobile setup (7.6MB)
 │   └── common_issues.md      # Troubleshooting guide
 ├── knowledge/                # Processed knowledge base (markdown)
 │   ├── modules/              # PM enablement content (29 module directories, incl. data-cloud-data-kit)
@@ -484,7 +484,7 @@ npm run build
 
 **Option 1: Development mode (recommended for testing)**
 ```bash
-claude --plugin-dir /path/to/AFLS-for-Claude
+claude --plugin-dir /path/to/LSC-for-Claude
 ```
 
 **Option 2: Add to a marketplace for distribution**
@@ -493,26 +493,26 @@ See [Claude Code Plugin Marketplaces](https://code.claude.com/docs/en/plugin-mar
 ### Available Commands
 
 Once loaded, you can use:
-- `/afls:setup-plugin` - Check setup and connect to Salesforce
-- `/afls:soql-query <soql>` - Run a SOQL query
-- `/afls:describe <object>` - Describe a Salesforce object
-- `/afls:help <topic>` - Search AFLS documentation by topic
-- `/afls:docs` - Browse AFLS documentation by category
+- `/lsc:setup-plugin` - Check setup and connect to Salesforce
+- `/lsc:soql-query <soql>` - Run a SOQL query
+- `/lsc:describe <object>` - Describe a Salesforce object
+- `/lsc:help <topic>` - Search LSC documentation by topic
+- `/lsc:docs` - Browse LSC documentation by category
 
 ### Available Agents
 
 Invoke specialized agents with `/agents`:
-- `afls:afls-consultant` - Implementation consulting
-- `afls:afls-admin` - Administration tasks
-- `afls:afls-developer` - Development tasks
+- `lsc:lsc-consultant` - Implementation consulting
+- `lsc:lsc-admin` - Administration tasks
+- `lsc:lsc-developer` - Development tasks
 
 ### Salesforce Org Setup
 
 When you first use the plugin:
 
-1. **Check setup status**: Run `/afls:setup-plugin`
+1. **Check setup status**: Run `/lsc:setup-plugin`
 2. **Install SF CLI** (if needed): The plugin offers to install it
-3. **Authenticate to your org**: `sf org login web --alias my-afls-org`
+3. **Authenticate to your org**: `sf org login web --alias my-lsc-org`
 4. **Select target org**: Use `set_target_org` if you have multiple orgs
 
 ```
@@ -528,8 +528,8 @@ When you first use the plugin:
 │     └─ None  → Guide through sf org login web               │
 │                                                              │
 │  3. Ready to use!                                           │
-│     • Use /afls:* commands                                   │
-│     • Query AFLS data                                        │
+│     • Use /lsc:* commands                                   │
+│     • Query LSC data                                        │
 │     • Get implementation guidance                           │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -556,11 +556,11 @@ npm run lint     # Lint code
 ### Testing
 - Unit tests for all tools
 - Validate documentation accuracy against Salesforce docs
-- Test with real AFLS sandbox when possible
+- Test with real LSC sandbox when possible
 
 ## Resources
 
-- [Salesforce AFLS Documentation](https://help.salesforce.com/s/articleView?id=sf.health_life_sciences.htm)
+- [Salesforce LSC Documentation](https://help.salesforce.com/s/articleView?id=sf.health_life_sciences.htm)
 - [Official Salesforce CLI MCP](https://github.com/salesforcecli/mcp)
 - [MCP Specification](https://modelcontextprotocol.io/)
 - [OmniStudio Documentation](https://help.salesforce.com/s/articleView?id=sf.omnistudio.htm)

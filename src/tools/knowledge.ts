@@ -40,8 +40,8 @@ function getGuideSectionCitations(topic: string, max = 3): string {
   const lines: string[] = [];
   for (const r of top) {
     const guideLabel = r.guideSlug === "admin-guide" ? "Admin Guide" : "Developer Guide";
-    const sectionUrl = `afls-section://${r.guideSlug}/${r.sectionSlug}?page=${r.matchPage}&highlight=${encodeURIComponent(topic)}`;
-    const pdfUrl = `afls-pdf://${r.pdfFileName}?page=${r.matchPage}`;
+    const sectionUrl = `lsc-section://${r.guideSlug}/${r.sectionSlug}?page=${r.matchPage}&highlight=${encodeURIComponent(topic)}`;
+    const pdfUrl = `lsc-pdf://${r.pdfFileName}?page=${r.matchPage}`;
     lines.push(
       `> **${guideLabel}:** [${r.sectionTitle}, page ${r.matchPage}](${sectionUrl}) | [Open PDF](${pdfUrl})`
     );
@@ -52,8 +52,8 @@ function getGuideSectionCitations(topic: string, max = 3): string {
 
 export function register(server: McpServer) {
   server.tool(
-    "list_afls_modules",
-    "List all available AFLS modules with documentation",
+    "list_lsc_modules",
+    "List all available LSC modules with documentation",
     {},
     async () => {
       const modules = getModuleList();
@@ -77,7 +77,7 @@ export function register(server: McpServer) {
         content: [
           {
             type: "text",
-            text: `# Available AFLS4CE Modules\n\n${moduleList}\n\nUse \`get_afls_module_docs\` with a module slug to get detailed documentation.`,
+            text: `# Available LSC4CE Modules\n\n${moduleList}\n\nUse \`get_lsc_module_docs\` with a module slug to get detailed documentation.`,
           },
         ],
       };
@@ -86,8 +86,8 @@ export function register(server: McpServer) {
 
   // Tool: Get Module Documentation
   server.tool(
-    "get_afls_module_docs",
-    "Get detailed documentation for a specific AFLS module",
+    "get_lsc_module_docs",
+    "Get detailed documentation for a specific LSC module",
     {
       module: z
         .string()
@@ -124,10 +124,10 @@ export function register(server: McpServer) {
     }
   );
 
-  // Tool: Search AFLS Knowledge Base
+  // Tool: Search LSC Knowledge Base
   server.tool(
-    "search_afls_knowledge",
-    "Search the AFLS knowledge base for specific topics or terms",
+    "search_lsc_knowledge",
+    "Search the LSC knowledge base for specific topics or terms",
     {
       query: z
         .string()
@@ -147,7 +147,7 @@ export function register(server: McpServer) {
           content: [
             {
               type: "text",
-              text: `No results found for '${query}'.\n\nTry different search terms or use \`list_afls_modules\` to see available documentation.`,
+              text: `No results found for '${query}'.\n\nTry different search terms or use \`list_lsc_modules\` to see available documentation.`,
             },
           ],
         };
@@ -165,8 +165,8 @@ export function register(server: McpServer) {
       for (const r of results) {
         if (r.source === "guide-section" && r.guideSlug && r.sectionSlug) {
           const guideLabel = r.guideSlug === "admin-guide" ? "Admin Guide" : "Developer Guide";
-          const sectionUrl = `afls-section://${r.guideSlug}/${r.sectionSlug}?page=${r.matchPage || r.startPage}&highlight=${encodeURIComponent(query)}`;
-          const pdfUrl = `afls-pdf://${r.pdfFileName}?page=${r.matchPage || r.startPage}`;
+          const sectionUrl = `lsc-section://${r.guideSlug}/${r.sectionSlug}?page=${r.matchPage || r.startPage}&highlight=${encodeURIComponent(query)}`;
+          const pdfUrl = `lsc-pdf://${r.pdfFileName}?page=${r.matchPage || r.startPage}`;
           citations.push(
             `> **${guideLabel}:** [${r.title}, page ${r.matchPage || r.startPage}](${sectionUrl}) | [Open PDF](${pdfUrl})`
           );
@@ -197,10 +197,10 @@ export function register(server: McpServer) {
     }
   );
 
-  // Tool: Explain AFLS Concept
+  // Tool: Explain LSC Concept
   server.tool(
-    "explain_afls_concept",
-    "Get an explanation of a AFLS concept, feature, or component",
+    "explain_lsc_concept",
+    "Get an explanation of a LSC concept, feature, or component",
     {
       concept: z
         .string()
@@ -247,8 +247,8 @@ export function register(server: McpServer) {
 
   // Tool: Get Admin Setup Guide
   server.tool(
-    "get_afls_admin_setup",
-    "Get admin setup and configuration guidance for an AFLS feature",
+    "get_lsc_admin_setup",
+    "Get admin setup and configuration guidance for an LSC feature",
     {
       feature: z
         .string()
@@ -281,7 +281,7 @@ export function register(server: McpServer) {
           content: [
             {
               type: "text",
-              text: `No admin setup documentation found for '${feature}'.\n\nUse \`list_afls_modules\` to see available modules.`,
+              text: `No admin setup documentation found for '${feature}'.\n\nUse \`list_lsc_modules\` to see available modules.`,
             },
           ],
         };
@@ -319,8 +319,8 @@ export function register(server: McpServer) {
 
   // Tool: List Help Documents
   server.tool(
-    "list_afls_help_docs",
-    "List all official Salesforce help documentation for AFLS",
+    "list_lsc_help_docs",
+    "List all official Salesforce help documentation for LSC",
     {},
     async () => {
       const helpDocs = getHelpDocList();
@@ -328,7 +328,7 @@ export function register(server: McpServer) {
       const guides = getGuideList();
       const troubleshooting = getTroubleshootingList();
 
-      let message = "# Available AFLS Documentation\n\n";
+      let message = "# Available LSC Documentation\n\n";
 
       if (helpDocs.length > 0) {
         message += "## Official Help Documentation\n\n";
@@ -358,7 +358,7 @@ export function register(server: McpServer) {
       if (total === 0) {
         message = "No documentation found. Please run the documentation processing scripts.";
       } else {
-        message += `\nUse \`get_afls_help_doc\`, \`get_afls_guide\`, or \`get_afls_troubleshooting\` with a slug to get the full content.`;
+        message += `\nUse \`get_lsc_help_doc\`, \`get_lsc_guide\`, or \`get_lsc_troubleshooting\` with a slug to get the full content.`;
       }
 
       return {
@@ -369,8 +369,8 @@ export function register(server: McpServer) {
 
   // Tool: Get Help Document
   server.tool(
-    "get_afls_help_doc",
-    "Get official Salesforce help documentation for a specific AFLS topic",
+    "get_lsc_help_doc",
+    "Get official Salesforce help documentation for a specific LSC topic",
     {
       slug: z
         .string()
@@ -403,8 +403,8 @@ export function register(server: McpServer) {
 
   // Tool: Get Guide
   server.tool(
-    "get_afls_guide",
-    "Get AFLS guide documentation (developer guide, mobile setup guide, etc.)",
+    "get_lsc_guide",
+    "Get LSC guide documentation (developer guide, mobile setup guide, etc.)",
     {
       slug: z.string().describe("The guide slug (e.g., 'dev-guide', 'mobile-setup')"),
     },
@@ -433,8 +433,8 @@ export function register(server: McpServer) {
 
   // Tool: Get Troubleshooting Documentation
   server.tool(
-    "get_afls_troubleshooting",
-    "Get AFLS troubleshooting documentation including common issues and their resolutions",
+    "get_lsc_troubleshooting",
+    "Get LSC troubleshooting documentation including common issues and their resolutions",
     {
       topic: z
         .string()
@@ -467,8 +467,8 @@ export function register(server: McpServer) {
 
   // Tool: Get Exercise Content
   server.tool(
-    "get_afls_exercise",
-    "Get hands-on exercise documentation for AFLS training",
+    "get_lsc_exercise",
+    "Get hands-on exercise documentation for LSC training",
     {
       slug: z
         .string()

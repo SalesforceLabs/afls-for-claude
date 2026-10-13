@@ -6,7 +6,7 @@ import { queryFieldValues, queryAssignments, extractFieldValue } from "./helpers
 export function register(server: McpServer) {
   server.tool(
     "diff_orgs",
-    "Compare AFLS configuration between two Salesforce orgs. Produces a detailed per-record report comparing trigger handlers, admin settings, DB Schema records, and actions (with profile assignments) to identify configuration drift. Both orgs must be authenticated via SF CLI.",
+    "Compare LSC configuration between two Salesforce orgs. Produces a detailed per-record report comparing trigger handlers, admin settings, DB Schema records, and actions (with profile assignments) to identify configuration drift. Both orgs must be authenticated via SF CLI.",
     {
       sourceOrg: z.string().describe("Alias or username of the first (source) org"),
       targetOrg: z.string().describe("Alias or username of the second (target) org"),
@@ -503,7 +503,7 @@ export function register(server: McpServer) {
           message += `- **Trigger Handlers:** \`toggle_trigger_handler({ handlerName: "...", active: true/false, targetOrg: "..." })\`\n`;
           message += `- **Admin Settings:** \`update_admin_setting({ recordName: "...", fields: {...}, targetOrg: "..." })\`\n`;
           message += `- **DB Schema:** \`update_db_schema({ recordName: "...", fields: {...}, targetOrg: "..." })\`\n`;
-          message += `- **Actions:** \`update_afls_action({ id: "...", fields: {...}, targetOrg: "..." })\`\n`;
+          message += `- **Actions:** \`update_lsc_action({ id: "...", fields: {...}, targetOrg: "..." })\`\n`;
           message += `- **Missing records:** Use the corresponding \`create_*\` tool to add the record to the org where it's missing\n\n`;
           message += `Re-run \`diff_orgs\` after making changes to verify alignment.\n`;
         }

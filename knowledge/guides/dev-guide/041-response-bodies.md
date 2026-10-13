@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:response-bodies pages:1785-1852 -->
 # Response Bodies
 
-AFLS Overview                                                                                                       Response Bodies
+Life Sciences Cloud (LSC) Overview                                                                                                       Response Bodies
 
 
 
@@ -64,7 +64,7 @@ Represents the output for the request to align customer account manually.
 
 <!-- page:1786 -->
 
-AFLS Overview                                                                                                          Response Bodies
+LSC Overview                                                                                                          Response Bodies
 
 
 
@@ -112,7 +112,7 @@ Represents the information about the job status and any associated messages retu
 
 <!-- page:1787 -->
 
-AFLS Overview                                                                                           Response Bodies
+LSC Overview                                                                                           Response Bodies
 
 
 
@@ -160,7 +160,7 @@ The output representation of a PersonName record created to represent a humanNam
 
 <!-- page:1788 -->
 
-AFLS Overview                                                                                                          Response Bodies
+LSC Overview                                                                                                          Response Bodies
 
 
 
@@ -208,7 +208,7 @@ A merge request that was rejected due to invalid input.
 
 <!-- page:1789 -->
 
-AFLS Overview                                                               Response Bodies
+LSC Overview                                                               Response Bodies
 
 
 
@@ -263,7 +263,7 @@ JSON example
 
 <!-- page:1790 -->
 
-AFLS Overview                                                                                                 Response Bodies
+LSC Overview                                                                                                 Response Bodies
 
 
 
@@ -323,7 +323,7 @@ Object>            territory data.
 
 <!-- page:1791 -->
 
-AFLS Overview                                                                                             Response Bodies
+LSC Overview                                                                                             Response Bodies
 
 
 
@@ -385,7 +385,7 @@ JSON example
 
 <!-- page:1792 -->
 
-AFLS Overview                                                                                       Response Bodies
+LSC Overview                                                                                       Response Bodies
 
 
 
@@ -450,7 +450,7 @@ lastViewedDate String              Last viewed date of the case.                
 
 <!-- page:1793 -->
 
-AFLS Overview                                                                                              Response Bodies
+LSC Overview                                                                                              Response Bodies
 
 
 
@@ -510,7 +510,7 @@ memberId              String                Insurance identifier for the member.
 
 <!-- page:1794 -->
 
-AFLS Overview                                                                                                 Response Bodies
+LSC Overview                                                                                                 Response Bodies
 
 
 
@@ -571,7 +571,7 @@ isSuccess             Boolean                Indicates if the operation was a su
 
 <!-- page:1795 -->
 
-AFLS Overview                                                                                               Response Bodies
+LSC Overview                                                                                               Response Bodies
 
 
 
@@ -633,7 +633,7 @@ JSON example
 
 <!-- page:1796 -->
 
-AFLS Overview                                                                                                  Response Bodies
+LSC Overview                                                                                                  Response Bodies
 
 
 
@@ -694,7 +694,7 @@ Request Result[]
 
 <!-- page:1797 -->
 
-AFLS Overview                                                                                                  Response Bodies
+LSC Overview                                                                                                  Response Bodies
 
 
 
@@ -754,7 +754,7 @@ CareDiagnosis.DischargeDiagnosisEndDate
 
 <!-- page:1798 -->
 
-AFLS Overview                                                                                 Response Bodies
+LSC Overview                                                                                 Response Bodies
 
 
 
@@ -814,7 +814,7 @@ CareDiagnosis.PresentOnAdmission
 
 <!-- page:1799 -->
 
-AFLS Overview                                                                                                  Response Bodies
+LSC Overview                                                                                                  Response Bodies
 
 
 
@@ -877,7 +877,7 @@ with a care request.
 
 <!-- page:1800 -->
 
-AFLS Overview                                                                                            Response Bodies
+LSC Overview                                                                                            Response Bodies
 
 
 
@@ -937,7 +937,7 @@ CareRequestDrug.DispenserName
 
 <!-- page:1801 -->
 
-AFLS Overview                                                                                Response Bodies
+LSC Overview                                                                                Response Bodies
 
 
 
@@ -996,7 +996,7 @@ CareRequestDrug.ModifiedStrength
 
 <!-- page:1802 -->
 
-AFLS Overview                                                                                              Response Bodies
+LSC Overview                                                                                              Response Bodies
 
 
 
@@ -1054,7 +1054,7 @@ CareRequestDrug.SourceSystem
 
 <!-- page:1803 -->
 
-AFLS Overview                                                                                                           Response Bodies
+LSC Overview                                                                                                           Response Bodies
 
 
 
@@ -1113,7 +1113,7 @@ CareRequestItem.ApprovedServiceEndDate
 
 <!-- page:1804 -->
 
-AFLS Overview                                                                                             Response Bodies
+LSC Overview                                                                                             Response Bodies
 
 
 
@@ -1173,7 +1173,7 @@ CareRequestItem.CurrentLevelOfCare
 
 <!-- page:1805 -->
 
-AFLS Overview                                                                                   Response Bodies
+LSC Overview                                                                                   Response Bodies
 
 
 
@@ -1233,7 +1233,7 @@ CareRequestItem.ModifiedLevelOfCare
 
 <!-- page:1806 -->
 
-AFLS Overview                                                                                 Response Bodies
+LSC Overview                                                                                 Response Bodies
 
 
 
@@ -1293,7 +1293,7 @@ CareRequestItem.Name
 
 <!-- page:1807 -->
 
-AFLS Overview                                                                                  Response Bodies
+LSC Overview                                                                                  Response Bodies
 
 
 
@@ -1350,7 +1350,7 @@ CareRequestItem.ServiceCategoryCode
 
 <!-- page:1808 -->
 
-AFLS Overview                                                                                                            Response Bodies
+LSC Overview                                                                                                            Response Bodies
 
 
 
@@ -1411,7 +1411,7 @@ CareRequest.AdmissionNotes
 
 <!-- page:1809 -->
 
-AFLS Overview                                                                                           Response Bodies
+LSC Overview                                                                                           Response Bodies
 
 
 
@@ -1469,7 +1469,7 @@ tative            Representative
 
 <!-- page:1810 -->
 
-AFLS Overview                                                                                                Response Bodies
+LSC Overview                                                                                                Response Bodies
 
 
 
@@ -1527,7 +1527,7 @@ CareRequest.DecisionDaysRemaining
 
 <!-- page:1811 -->
 
-AFLS Overview                                                                                    Response Bodies
+LSC Overview                                                                                    Response Bodies
 
 
 
@@ -1586,7 +1586,7 @@ CareRequest.
 
 <!-- page:1812 -->
 
-AFLS Overview                                                                                                     Response Bodies
+LSC Overview                                                                                                     Response Bodies
 
 
 
@@ -1645,7 +1645,7 @@ CareRequestExtension.HomeHealthCertificationEndDate
 
 <!-- page:1813 -->
 
-AFLS Overview                                                                                             Response Bodies
+LSC Overview                                                                                             Response Bodies
 
 
 
@@ -1704,7 +1704,7 @@ Date
 
 <!-- page:1814 -->
 
-AFLS Overview                                                                                      Response Bodies
+LSC Overview                                                                                      Response Bodies
 
 
 
@@ -1761,7 +1761,7 @@ CareRequest.ModifiedLevelOfCare
 
 <!-- page:1815 -->
 
-AFLS Overview                                                                                             Response Bodies
+LSC Overview                                                                                             Response Bodies
 
 
 
@@ -1821,7 +1821,7 @@ CareRequest.ReferenceCareRequestCase
 
 <!-- page:1816 -->
 
-AFLS Overview                                                                                                 Response Bodies
+LSC Overview                                                                                                 Response Bodies
 
 
 
@@ -1880,7 +1880,7 @@ CareRequest.RequestedDate
 
 <!-- page:1817 -->
 
-AFLS Overview                                                                                                   Response Bodies
+LSC Overview                                                                                                   Response Bodies
 
 
 
@@ -1941,7 +1941,7 @@ CareRequest.RootCauseNotes
 
 <!-- page:1818 -->
 
-AFLS Overview                                                                                                  Response Bodies
+LSC Overview                                                                                                  Response Bodies
 
 
 
@@ -1998,7 +1998,7 @@ CareRequestExtension.UnitofMeasure
 
 <!-- page:1819 -->
 
-AFLS Overview                                                                                             Response Bodies
+LSC Overview                                                                                             Response Bodies
 
 
 
@@ -2057,7 +2057,7 @@ JSON example
 
 <!-- page:1820 -->
 
-AFLS Overview                                            Response Bodies
+LSC Overview                                            Response Bodies
 
 
 
@@ -2118,7 +2118,7 @@ AFLS Overview                                            Response Bodies
 
 <!-- page:1821 -->
 
-AFLS Overview                                              Response Bodies
+LSC Overview                                              Response Bodies
 
 
 
@@ -2179,7 +2179,7 @@ AFLS Overview                                              Response Bodies
 
 <!-- page:1822 -->
 
-AFLS Overview                                                                                               Response Bodies
+LSC Overview                                                                                               Response Bodies
 
 
 
@@ -2241,7 +2241,7 @@ appear in the response body. This is normal and can be ignored.
 
 <!-- page:1823 -->
 
-AFLS Overview                                                                                                    Response Bodies
+LSC Overview                                                                                                    Response Bodies
 
 
 
@@ -2304,7 +2304,7 @@ during the request validation.
 
 <!-- page:1824 -->
 
-AFLS Overview                                                                                                     Response Bodies
+LSC Overview                                                                                                     Response Bodies
 
 
 
@@ -2362,7 +2362,7 @@ JSON example
 
 <!-- page:1825 -->
 
-AFLS Overview                                                                                                 Response Bodies
+LSC Overview                                                                                                 Response Bodies
 
 
 
@@ -2424,7 +2424,7 @@ Pharmacy address.
 
 <!-- page:1826 -->
 
-AFLS Overview                                                                                                               Response Bodies
+LSC Overview                                                                                                               Response Bodies
 
 
 
@@ -2484,7 +2484,7 @@ Field[]                 that have conflicts.
 
 <!-- page:1827 -->
 
-AFLS Overview                                                                                            Response Bodies
+LSC Overview                                                                                            Response Bodies
 
 
 
@@ -2545,7 +2545,7 @@ Response body example for POST
 
 <!-- page:1828 -->
 
-AFLS Overview                                                                                           Response Bodies
+LSC Overview                                                                                           Response Bodies
 
 
 
@@ -2606,7 +2606,7 @@ request is successful (true) or not
 
 <!-- page:1829 -->
 
-AFLS Overview                                                                                            Response Bodies
+LSC Overview                                                                                            Response Bodies
 
 
 
@@ -2667,7 +2667,7 @@ created               Boolean           Indicate if the record was created.     
 
 <!-- page:1830 -->
 
-AFLS Overview                                                                                                   Response Bodies
+LSC Overview                                                                                                   Response Bodies
 
 
 
@@ -2729,7 +2729,7 @@ The name of the person who reviewed the request first.
 
 <!-- page:1831 -->
 
-AFLS Overview                                                                                               Response Bodies
+LSC Overview                                                                                               Response Bodies
 
 
 
@@ -2787,7 +2787,7 @@ Represents the value of a field.
 
 <!-- page:1832 -->
 
-AFLS Overview                                                                                                Response Bodies
+LSC Overview                                                                                                Response Bodies
 
 
 
@@ -2848,7 +2848,7 @@ Information                                specified in the input request.
 
 <!-- page:1833 -->
 
-AFLS Overview                                                                                               Response Bodies
+LSC Overview                                                                                               Response Bodies
 
 
 
@@ -2910,7 +2910,7 @@ startDate             String                The date from when the code set is v
 
 <!-- page:1834 -->
 
-AFLS Overview                                                                                            Response Bodies
+LSC Overview                                                                                            Response Bodies
 
 
 
@@ -2972,7 +2972,7 @@ system.
 
 <!-- page:1835 -->
 
-AFLS Overview                                                                                                 Response Bodies
+LSC Overview                                                                                                 Response Bodies
 
 
 
@@ -3034,7 +3034,7 @@ The output representation of the Identified records created to represent an iden
 
 <!-- page:1836 -->
 
-AFLS Overview                                                                                                     Response Bodies
+LSC Overview                                                                                                     Response Bodies
 
 
 
@@ -3096,7 +3096,7 @@ contact point address records.
 
 <!-- page:1837 -->
 
-AFLS Overview                                                                                               Response Bodies
+LSC Overview                                                                                               Response Bodies
 
 
 
@@ -3156,7 +3156,7 @@ addresses.
 
 <!-- page:1838 -->
 
-AFLS Overview                                                                                             Response Bodies
+LSC Overview                                                                                             Response Bodies
 
 
 
@@ -3219,7 +3219,7 @@ successful.
 
 <!-- page:1839 -->
 
-AFLS Overview                                                                                                   Response Bodies
+LSC Overview                                                                                                   Response Bodies
 
 
 
@@ -3283,7 +3283,7 @@ Output representation of the OCR document scan result ID.
 
 <!-- page:1840 -->
 
-AFLS Overview                                                                                              Response Bodies
+LSC Overview                                                                                              Response Bodies
 
 
 
@@ -3346,7 +3346,7 @@ records.
 
 <!-- page:1841 -->
 
-AFLS Overview                                                                                                Response Bodies
+LSC Overview                                                                                                Response Bodies
 
 
 
@@ -3468,7 +3468,7 @@ JSON example
 
 <!-- page:1843 -->
 
-AFLS Overview                                                                                       Response Bodies
+LSC Overview                                                                                       Response Bodies
 
 
 
@@ -3528,7 +3528,7 @@ Language[]       the PersonLanguage object.
 
 <!-- page:1844 -->
 
-AFLS Overview                                                                                                 Response Bodies
+LSC Overview                                                                                                 Response Bodies
 
 
 
@@ -3591,7 +3591,7 @@ Output representation of result after a Patient FHIR resource is created.
 
 <!-- page:1845 -->
 
-AFLS Overview                                                                                                Response Bodies
+LSC Overview                                                                                                Response Bodies
 
 
 
@@ -3646,7 +3646,7 @@ successfully completed.
 
 <!-- page:1846 -->
 
-AFLS Overview                                                                                                              Response Bodies
+LSC Overview                                                                                                              Response Bodies
 
 
 
@@ -3707,7 +3707,7 @@ Enrollment Result[]        enrollments.
 
 <!-- page:1847 -->
 
-AFLS Overview                                                                                                             Response Bodies
+LSC Overview                                                                                                             Response Bodies
 
 
 
@@ -3767,7 +3767,7 @@ HealthcareProviderId.
 
 <!-- page:1848 -->
 
-AFLS Overview                                                                                             Response Bodies
+LSC Overview                                                                                             Response Bodies
 
 
 
@@ -3829,7 +3829,7 @@ JSON example
 
 <!-- page:1849 -->
 
-AFLS Overview                                                                                                Response Bodies
+LSC Overview                                                                                                Response Bodies
 
 
 
@@ -3889,7 +3889,7 @@ successful (true) or not (false..
 
 <!-- page:1850 -->
 
-AFLS Overview                                                                                                    Response Bodies
+LSC Overview                                                                                                    Response Bodies
 
 
 
@@ -3950,7 +3950,7 @@ Account.LastName
 
 <!-- page:1851 -->
 
-AFLS Overview                                                                                                   Response Bodies
+LSC Overview                                                                                                   Response Bodies
 
 
 
@@ -4014,7 +4014,7 @@ is created.
 
 <!-- page:1852 -->
 
-AFLS Overview                                                                                                 Response Bodies
+LSC Overview                                                                                                 Response Bodies
 
 
 

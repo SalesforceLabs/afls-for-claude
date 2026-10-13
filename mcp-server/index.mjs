@@ -75192,15 +75192,15 @@ import { dirname as dirname2 } from "path";
 var citationMap = {
   // ── Guides ────────────────────────────────────────────────────────────
   "dev-guide": {
-    label: "AFLS Developer Guide",
+    label: "LSC Developer Guide",
     category: "Guide"
   },
   "admin-guide": {
-    label: "Administer AFLS",
+    label: "Administer LSC",
     category: "Guide"
   },
   "mobile-setup": {
-    label: "AFLS Mobile Setup and Configuration Guide",
+    label: "LSC Mobile Setup and Configuration Guide",
     category: "Guide"
   },
   // ── Exercises (2 files) ─────────────────────────────────────────────
@@ -75218,7 +75218,7 @@ var citationMap = {
     category: "Troubleshooting"
   },
   "implementation-anti-patterns": {
-    label: "AFLS Implementation Anti-Patterns \u2014 Field-Observed Lessons",
+    label: "LSC Implementation Anti-Patterns \u2014 Field-Observed Lessons",
     category: "Troubleshooting"
   },
   "visit-troubleshooting": {
@@ -75324,11 +75324,11 @@ var moduleCitationMap = {
   },
   // ── Agentforce ────────────────────────────────────────────────────
   "agentforce:agentforce": {
-    label: "Agentforce for AFLS",
+    label: "Agentforce for LSC",
     category: "PM Enablement"
   },
-  "agentforce:agentforce-for-afls-winter-26-enablement": {
-    label: "Agentforce for AFLS Winter '26 Enablement",
+  "agentforce:agentforce-for-lsc-winter-26-enablement": {
+    label: "Agentforce for LSC Winter '26 Enablement",
     category: "PM Enablement"
   },
   // ── App Alerts & Notifications ────────────────────────────────────
@@ -75481,13 +75481,13 @@ var moduleCitationMap = {
     label: "Lists & Filters Transcripts",
     category: "PM Enablement"
   },
-  // ── AFLS Apps ──────────────────────────────────────────────────────
-  "afls-apps:afls-apps": {
-    label: "AFLS Apps",
+  // ── LSC Apps ──────────────────────────────────────────────────────
+  "lsc-apps:lsc-apps": {
+    label: "LSC Apps",
     category: "PM Enablement"
   },
-  "afls-apps:demo-script-afls-apps": {
-    label: "AFLS Apps Demo Script",
+  "lsc-apps:demo-script-lsc-apps": {
+    label: "LSC Apps Demo Script",
     category: "PM Enablement"
   },
   // ── Medical Inquiries ─────────────────────────────────────────────
@@ -75924,7 +75924,7 @@ function resolveFilePath(sourceFile, moduleName) {
 function formatCitation(sourceFile, moduleName) {
   const info = getCitation(sourceFile, moduleName);
   const filePath = resolveFilePath(sourceFile, moduleName);
-  const fileLink = `[${basename2(filePath)}](afls-file://${filePath})`;
+  const fileLink = `[${basename2(filePath)}](lsc-file://${filePath})`;
   if (!info) {
     const label = slugToTitle(sourceFile);
     const category = moduleName ? "PM Enablement" : "Documentation";
@@ -75965,8 +75965,8 @@ function getGuideSectionCitations(topic, max = 3) {
   const lines = [];
   for (const r of top) {
     const guideLabel = r.guideSlug === "admin-guide" ? "Admin Guide" : "Developer Guide";
-    const sectionUrl = `afls-section://${r.guideSlug}/${r.sectionSlug}?page=${r.matchPage}&highlight=${encodeURIComponent(topic)}`;
-    const pdfUrl = `afls-pdf://${r.pdfFileName}?page=${r.matchPage}`;
+    const sectionUrl = `lsc-section://${r.guideSlug}/${r.sectionSlug}?page=${r.matchPage}&highlight=${encodeURIComponent(topic)}`;
+    const pdfUrl = `lsc-pdf://${r.pdfFileName}?page=${r.matchPage}`;
     lines.push(
       `> **${guideLabel}:** [${r.sectionTitle}, page ${r.matchPage}](${sectionUrl}) | [Open PDF](${pdfUrl})`
     );
@@ -75976,8 +75976,8 @@ function getGuideSectionCitations(topic, max = 3) {
 }
 function register(server2) {
   server2.tool(
-    "list_afls_modules",
-    "List all available AFLS modules with documentation",
+    "list_lsc_modules",
+    "List all available LSC modules with documentation",
     {},
     async () => {
       const modules = getModuleList();
@@ -75996,19 +75996,19 @@ function register(server2) {
         content: [
           {
             type: "text",
-            text: `# Available AFLS4CE Modules
+            text: `# Available LSC4CE Modules
 
 ${moduleList}
 
-Use \`get_afls_module_docs\` with a module slug to get detailed documentation.`
+Use \`get_lsc_module_docs\` with a module slug to get detailed documentation.`
           }
         ]
       };
     }
   );
   server2.tool(
-    "get_afls_module_docs",
-    "Get detailed documentation for a specific AFLS module",
+    "get_lsc_module_docs",
+    "Get detailed documentation for a specific LSC module",
     {
       module: external_exports.string().describe(
         "The module slug (e.g., 'account-management', 'sample-management', 'visit-management')"
@@ -76043,8 +76043,8 @@ Available modules: ${availableModules}`
     }
   );
   server2.tool(
-    "search_afls_knowledge",
-    "Search the AFLS knowledge base for specific topics or terms",
+    "search_lsc_knowledge",
+    "Search the LSC knowledge base for specific topics or terms",
     {
       query: external_exports.string().describe(
         "The search term or phrase to look for (e.g., 'sample limits', 'provider card', 'territory alignment')"
@@ -76060,7 +76060,7 @@ Available modules: ${availableModules}`
               type: "text",
               text: `No results found for '${query}'.
 
-Try different search terms or use \`list_afls_modules\` to see available documentation.`
+Try different search terms or use \`list_lsc_modules\` to see available documentation.`
             }
           ]
         };
@@ -76076,8 +76076,8 @@ ${r.excerpt}`;
       for (const r of results) {
         if (r.source === "guide-section" && r.guideSlug && r.sectionSlug) {
           const guideLabel = r.guideSlug === "admin-guide" ? "Admin Guide" : "Developer Guide";
-          const sectionUrl = `afls-section://${r.guideSlug}/${r.sectionSlug}?page=${r.matchPage || r.startPage}&highlight=${encodeURIComponent(query)}`;
-          const pdfUrl = `afls-pdf://${r.pdfFileName}?page=${r.matchPage || r.startPage}`;
+          const sectionUrl = `lsc-section://${r.guideSlug}/${r.sectionSlug}?page=${r.matchPage || r.startPage}&highlight=${encodeURIComponent(query)}`;
+          const pdfUrl = `lsc-pdf://${r.pdfFileName}?page=${r.matchPage || r.startPage}`;
           citations.push(
             `> **${guideLabel}:** [${r.title}, page ${r.matchPage || r.startPage}](${sectionUrl}) | [Open PDF](${pdfUrl})`
           );
@@ -76111,8 +76111,8 @@ ${formattedResults}${citationBlock}`
     }
   );
   server2.tool(
-    "explain_afls_concept",
-    "Get an explanation of a AFLS concept, feature, or component",
+    "explain_lsc_concept",
+    "Get an explanation of a LSC concept, feature, or component",
     {
       concept: external_exports.string().describe(
         "The concept to explain (e.g., 'ARC', 'Provider Card', 'Sample Limits', 'Territory Alignment', 'Activity Plans')"
@@ -76156,8 +76156,8 @@ ${moduleContent}${citation}${guideCitations}`
     }
   );
   server2.tool(
-    "get_afls_admin_setup",
-    "Get admin setup and configuration guidance for an AFLS feature",
+    "get_lsc_admin_setup",
+    "Get admin setup and configuration guidance for an LSC feature",
     {
       feature: external_exports.string().describe(
         "The feature to get admin setup for (e.g., 'sample-management', 'territory-alignment', 'visit-management')"
@@ -76188,7 +76188,7 @@ ${moduleContent}`
               type: "text",
               text: `No admin setup documentation found for '${feature}'.
 
-Use \`list_afls_modules\` to see available modules.`
+Use \`list_lsc_modules\` to see available modules.`
             }
           ]
         };
@@ -76221,15 +76221,15 @@ ${content}${citation}`;
     }
   );
   server2.tool(
-    "list_afls_help_docs",
-    "List all official Salesforce help documentation for AFLS",
+    "list_lsc_help_docs",
+    "List all official Salesforce help documentation for LSC",
     {},
     async () => {
       const helpDocs = getHelpDocList();
       const exercises = getExerciseList();
       const guides = getGuideList();
       const troubleshooting = getTroubleshootingList();
-      let message = "# Available AFLS Documentation\n\n";
+      let message = "# Available LSC Documentation\n\n";
       if (helpDocs.length > 0) {
         message += "## Official Help Documentation\n\n";
         message += helpDocs.map((d) => `- **${d.title}** (\`${d.slug}\`)`).join("\n");
@@ -76255,7 +76255,7 @@ ${content}${citation}`;
         message = "No documentation found. Please run the documentation processing scripts.";
       } else {
         message += `
-Use \`get_afls_help_doc\`, \`get_afls_guide\`, or \`get_afls_troubleshooting\` with a slug to get the full content.`;
+Use \`get_lsc_help_doc\`, \`get_lsc_guide\`, or \`get_lsc_troubleshooting\` with a slug to get the full content.`;
       }
       return {
         content: [{ type: "text", text: message }]
@@ -76263,8 +76263,8 @@ Use \`get_afls_help_doc\`, \`get_afls_guide\`, or \`get_afls_troubleshooting\` w
     }
   );
   server2.tool(
-    "get_afls_help_doc",
-    "Get official Salesforce help documentation for a specific AFLS topic",
+    "get_lsc_help_doc",
+    "Get official Salesforce help documentation for a specific LSC topic",
     {
       slug: external_exports.string().describe(
         "The document slug (e.g., 'account-management', 'sample-management', 'activity-plans')"
@@ -76293,8 +76293,8 @@ Available documents: ${slugList || "none"}`
     }
   );
   server2.tool(
-    "get_afls_guide",
-    "Get AFLS guide documentation (developer guide, mobile setup guide, etc.)",
+    "get_lsc_guide",
+    "Get LSC guide documentation (developer guide, mobile setup guide, etc.)",
     {
       slug: external_exports.string().describe("The guide slug (e.g., 'dev-guide', 'mobile-setup')")
     },
@@ -76321,8 +76321,8 @@ Available guides: ${slugList || "none"}`
     }
   );
   server2.tool(
-    "get_afls_troubleshooting",
-    "Get AFLS troubleshooting documentation including common issues and their resolutions",
+    "get_lsc_troubleshooting",
+    "Get LSC troubleshooting documentation including common issues and their resolutions",
     {
       topic: external_exports.string().optional().describe("Optional: specific troubleshooting topic slug. Defaults to common-issues.")
     },
@@ -76350,8 +76350,8 @@ Available documents: ${slugList || "none"}`
     }
   );
   server2.tool(
-    "get_afls_exercise",
-    "Get hands-on exercise documentation for AFLS training",
+    "get_lsc_exercise",
+    "Get hands-on exercise documentation for LSC training",
     {
       slug: external_exports.string().describe(
         "The exercise slug (e.g., 'life-sciences-cloud-partner-enablement-hands-on-exercises-day-1-foundations')"
@@ -76488,7 +76488,7 @@ async function installSfCli() {
     };
   }
 }
-var TMP_SFDX_PROJECT_DIR = path.join(os.tmpdir(), `afls-sfdx-project-${process.pid}`);
+var TMP_SFDX_PROJECT_DIR = path.join(os.tmpdir(), `lsc-sfdx-project-${process.pid}`);
 function ensureTmpSfdxProject() {
   const forceAppDir = path.join(TMP_SFDX_PROJECT_DIR, "force-app");
   const projectFile = path.join(TMP_SFDX_PROJECT_DIR, "sfdx-project.json");
@@ -76499,7 +76499,7 @@ function ensureTmpSfdxProject() {
       JSON.stringify(
         {
           packageDirectories: [{ path: "force-app", default: true }],
-          name: "afls-tmp",
+          name: "lsc-tmp",
           namespace: "",
           sfdcLoginUrl: "https://login.salesforce.com",
           sourceApiVersion: "62.0"
@@ -77016,10 +77016,10 @@ function getSetupInstructions(step) {
         step,
         title: "Authenticate to Your Org",
         description: "Connect to your Salesforce org using web-based authentication:",
-        command: "sf org login web --alias my-afls-org",
+        command: "sf org login web --alias my-lsc-org",
         options: [
-          "For sandbox: sf org login web --alias my-afls-sandbox --instance-url https://test.salesforce.com",
-          "For production: sf org login web --alias my-afls-prod",
+          "For sandbox: sf org login web --alias my-lsc-sandbox --instance-url https://test.salesforce.com",
+          "For production: sf org login web --alias my-lsc-prod",
           "This will open a browser window for you to log in"
         ]
       };
@@ -77037,7 +77037,7 @@ function getSetupInstructions(step) {
       return {
         step,
         title: "Ready",
-        description: "Setup complete! You can now use AFLS tools to work with your org."
+        description: "Setup complete! You can now use LSC tools to work with your org."
       };
   }
 }
@@ -77110,12 +77110,12 @@ async function validateOrgConnection() {
 // src/tools/salesforce-org.ts
 function register2(server2) {
   server2.tool(
-    "check_afls_setup",
+    "check_lsc_setup",
     "Check if Salesforce CLI is installed and orgs are authenticated. Run this first to ensure everything is set up correctly.",
     {},
     async () => {
       const status = await checkSetupStatus();
-      let message = "# AFLS Plugin Setup Status\n\n";
+      let message = "# LSC Plugin Setup Status\n\n";
       message += `## Salesforce CLI
 `;
       message += `- **Installed:** ${status.cliInstalled ? "Yes \u2713" : "No \u2717"}
@@ -77162,7 +77162,7 @@ ${instructions.command}
       } else {
         message += `## Status: Ready \u2713
 
-You can now use AFLS tools to query and modify your Salesforce org.
+You can now use LSC tools to query and modify your Salesforce org.
 `;
       }
       return {
@@ -77198,7 +77198,7 @@ ${result.data}
 
 Next step: Authenticate to your org using:
 \`\`\`bash
-${getLoginCommand("my-afls-org")}
+${getLoginCommand("my-lsc-org")}
 \`\`\``
             }
           ]
@@ -77234,7 +77234,7 @@ ${result.error}
         content: [
           {
             type: "text",
-            text: "Salesforce CLI is not installed. Run `check_afls_setup` for installation instructions."
+            text: "Salesforce CLI is not installed. Run `check_lsc_setup` for installation instructions."
           }
         ]
       };
@@ -77260,7 +77260,7 @@ ${result.error}
 
 Authenticate to an org using:
 \`\`\`bash
-${getLoginCommand("my-afls-org")}
+${getLoginCommand("my-lsc-org")}
 \`\`\`
 
 For sandbox:
@@ -77750,7 +77750,7 @@ ${result.error}`
   );
   server2.tool(
     "generate_mobile_metadata_cache",
-    "Generate AFLS Mobile metadata cache programmatically. IMPORTANT: Always ASK the user which profiles to generate the cache for before calling this tool. Do not guess profile names.",
+    "Generate LSC Mobile metadata cache programmatically. IMPORTANT: Always ASK the user which profiles to generate the cache for before calling this tool. Do not guess profile names.",
     {
       profileNames: external_exports.array(external_exports.string()).describe(
         'Array of profile names to generate cache for. ASK THE USER which profiles to use. Examples: ["Field Sales Representative", "Medical Sales Representative", "Key Account Manager"]'
@@ -78169,8 +78169,8 @@ async function queryFieldValues(recordIds, targetOrg, includeParentId = false) {
 // src/tools/actions.ts
 function register3(server2) {
   server2.tool(
-    "list_afls_actions",
-    "THE ONLY WAY to list AFLS Quick Actions or Custom Actions. NEVER use run_soql for actions - objects like LifeSciCustomAction__mdt, CustomAction__c, LifeSciConfigType__c DO NOT EXIST. This tool uses Tooling API internally.",
+    "list_lsc_actions",
+    "THE ONLY WAY to list LSC Quick Actions or Custom Actions. NEVER use run_soql for actions - objects like LifeSciCustomAction__mdt, CustomAction__c, LifeSciConfigType__c DO NOT EXIST. This tool uses Tooling API internally.",
     {
       actionType: external_exports.enum(["quick", "custom", "both"]).default("both").describe("Type of actions to list: quick, custom, or both"),
       activeOnly: external_exports.boolean().optional().default(false).describe("Only show active actions"),
@@ -78267,18 +78267,18 @@ Error: ${customResult.error}
         }
       }
       return {
-        content: [{ type: "text", text: `# AFLS Actions
+        content: [{ type: "text", text: `# LSC Actions
 
 ${results.join("")}` }]
       };
     }
   );
   server2.tool(
-    "delete_afls_action",
-    "Delete an AFLS Quick/Custom Action. Accepts a record ID or a MasterLabel/DeveloperName. NEVER use run_soql or delete_record \u2014 they will FAIL.",
+    "delete_lsc_action",
+    "Delete an LSC Quick/Custom Action. Accepts a record ID or a MasterLabel/DeveloperName. NEVER use run_soql or delete_record \u2014 they will FAIL.",
     {
       actionId: external_exports.string().describe(
-        "The record ID (from list_afls_actions) OR the MasterLabel/DeveloperName of the action to delete"
+        "The record ID (from list_lsc_actions) OR the MasterLabel/DeveloperName of the action to delete"
       ),
       actionName: external_exports.string().optional().describe("Optional: The action name/label for confirmation message"),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to delete from")
@@ -78313,7 +78313,7 @@ ${results.join("")}` }]
 
 No action found with name: ${actionId}
 
-Use \`list_afls_actions\` to see available actions and their IDs.`
+Use \`list_lsc_actions\` to see available actions and their IDs.`
                 }
               ]
             };
@@ -78333,7 +78333,7 @@ Use \`list_afls_actions\` to see available actions and their IDs.`
 
 No LifeSciConfigRecord found with ID: ${resolvedId}
 
-Use \`list_afls_actions\` to see available actions and their IDs.`
+Use \`list_lsc_actions\` to see available actions and their IDs.`
               }
             ]
           };
@@ -78427,8 +78427,8 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
     }
   );
   server2.tool(
-    "update_afls_action",
-    "Update an existing AFLS Quick or Custom Action. Accepts a record ID or MasterLabel/DeveloperName. Can update the label, activation status, and field values (Location, ActionName, SortOrder, Profiles, etc.).",
+    "update_lsc_action",
+    "Update an existing LSC Quick or Custom Action. Accepts a record ID or MasterLabel/DeveloperName. Can update the label, activation status, and field values (Location, ActionName, SortOrder, Profiles, etc.).",
     {
       actionId: external_exports.string().describe("The record ID or MasterLabel/DeveloperName of the action to update"),
       label: external_exports.string().optional().describe("New display label for the action"),
@@ -78468,7 +78468,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
 
 No action found with name: ${actionId}
 
-Use \`list_afls_actions\` to see available actions.`
+Use \`list_lsc_actions\` to see available actions.`
                 }
               ]
             };
@@ -78606,7 +78606,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
   );
   server2.tool(
     "create_quick_action",
-    "Create an AFLS Quick Action via Tooling API. Quick actions appear on the floating action button on mobile and in quick action menus on web.",
+    "Create an LSC Quick Action via Tooling API. Quick actions appear on the floating action button on mobile and in quick action menus on web.",
     {
       label: external_exports.string().describe("The display label for the quick action (e.g., 'Home Email', 'Home Visit')"),
       developerName: external_exports.string().describe(
@@ -78674,7 +78674,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
                 type: "text",
                 text: `# Failed to Create Quick Action
 
-Could not find QuickAction category. Ensure AFLS is installed in the org.`
+Could not find QuickAction category. Ensure LSC is installed in the org.`
               }
             ]
           };
@@ -78826,7 +78826,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
   );
   server2.tool(
     "create_custom_action",
-    "Create an AFLS Custom Action via Tooling API. Custom actions invoke Lightning components, flows, URLs, or Agentforce utterances.",
+    "Create an LSC Custom Action via Tooling API. Custom actions invoke Lightning components, flows, URLs, or Agentforce utterances.",
     {
       label: external_exports.string().describe("The display label for the custom action (e.g., 'Search Google', 'Launch Flow')"),
       developerName: external_exports.string().describe(
@@ -78884,7 +78884,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
                 type: "text",
                 text: `# Failed to Create Custom Action
 
-Could not find CustomAction category. Ensure AFLS is installed in the org.`
+Could not find CustomAction category. Ensure LSC is installed in the org.`
               }
             ]
           };
@@ -79067,7 +79067,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
   );
   server2.tool(
     "check_mobile_cache_status",
-    "THE ONLY WAY to check AFLS mobile metadata cache status. NEVER use run_soql - objects like MobileMetadataCache__c, MobileApplicationDetail, lsc4ce__MobileMetadataCache__c DO NOT EXIST. The correct object is LifeSciMobileMetadataRecord (standard SOQL).",
+    "THE ONLY WAY to check LSC mobile metadata cache status. NEVER use run_soql - objects like MobileMetadataCache__c, MobileApplicationDetail, lsc4ce__MobileMetadataCache__c DO NOT EXIST. The correct object is LifeSciMobileMetadataRecord (standard SOQL).",
     {
       targetOrg: external_exports.string().optional().describe("Optional: specific org to query")
     },
@@ -79210,7 +79210,7 @@ ${errorLog}
             }
             const combinedError = `${errorCode} ${errorMsg} ${errorLog}`.toUpperCase();
             if (combinedError.includes("EXCEEDED_ID_LIMIT")) {
-              message += `- **Diagnosis:** \`EXCEEDED_ID_LIMIT\` during cache generation is a **known large-org limitation**, not a configuration error. The metadata service fetches field-definition labels in a batch that overflows on orgs with many sobjects/fields (FieldDefinition does not support pagination). This is fixed in newer package versions via chunked label fetching. **Action:** upgrade the AFLS managed package to the latest version; do not attempt to "fix" DB Schema or field configuration in response to this error.
+              message += `- **Diagnosis:** \`EXCEEDED_ID_LIMIT\` during cache generation is a **known large-org limitation**, not a configuration error. The metadata service fetches field-definition labels in a batch that overflows on orgs with many sobjects/fields (FieldDefinition does not support pagination). This is fixed in newer package versions via chunked label fetching. **Action:** upgrade the LSC managed package to the latest version; do not attempt to "fix" DB Schema or field configuration in response to this error.
 `;
             }
             if (!errorCode && !errorMsg && !errorLog && status === "Inactive") {
@@ -79470,7 +79470,7 @@ ${catResult2.error}` }
                   type: "text",
                   text: `# Admin Console Categories
 
-No categories found. Ensure AFLS is installed in the org.`
+No categories found. Ensure LSC is installed in the org.`
                 }
               ]
             };
@@ -79919,7 +79919,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
 function register5(server2) {
   server2.tool(
     "check_visit_config",
-    "Check AFLS Visit Management configuration. Queries visit record types, ProviderVisit record types, trigger handlers, compliance statements, territory info, and Admin Console settings. CORRECT object names: Visit, ProviderVisit, ProviderVisitProdDetailing, ProviderVisitProdDiscussion, ProviderAcctTerritoryInfo, ComplianceStatementDef. WRONG names (DO NOT USE): Visit__c, ProviderVisit__c, VisitSetting__c, VisitConfiguration__mdt, VisitRecordType__c, VisitType__c.",
+    "Check LSC Visit Management configuration. Queries visit record types, ProviderVisit record types, trigger handlers, compliance statements, territory info, and Admin Console settings. CORRECT object names: Visit, ProviderVisit, ProviderVisitProdDetailing, ProviderVisitProdDiscussion, ProviderAcctTerritoryInfo, ComplianceStatementDef. WRONG names (DO NOT USE): Visit__c, ProviderVisit__c, VisitSetting__c, VisitConfiguration__mdt, VisitRecordType__c, VisitType__c.",
     {
       targetOrg: external_exports.string().optional().describe("Optional: specific org to check. Uses current target org if not specified.")
     },
@@ -80197,7 +80197,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
   );
   server2.tool(
     "check_sample_config",
-    "Check AFLS Sample Management configuration. Queries products, locations, inventory, production batches, sample limits, and related configuration. CORRECT object names: Product2, LifeSciMarketableProduct, Location, ProductionBatch, ProductItem, ProductBatchItem, InventoryOperation, ProductRequest, InventoryCountAssessment, ProductDisbursement, ProviderSampleLimit. WRONG names (DO NOT USE): SampleTransaction__c, SampleInventory__c, SampleLimit__c, SampleProduct__c, SampleLot__c.",
+    "Check LSC Sample Management configuration. Queries products, locations, inventory, production batches, sample limits, and related configuration. CORRECT object names: Product2, LifeSciMarketableProduct, Location, ProductionBatch, ProductItem, ProductBatchItem, InventoryOperation, ProductRequest, InventoryCountAssessment, ProductDisbursement, ProviderSampleLimit. WRONG names (DO NOT USE): SampleTransaction__c, SampleInventory__c, SampleLimit__c, SampleProduct__c, SampleLot__c.",
     {
       targetOrg: external_exports.string().optional().describe("Optional: specific org to check. Uses current target org if not specified.")
     },
@@ -80555,7 +80555,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
   );
   server2.tool(
     "check_account_config",
-    "Check AFLS Account Management configuration. Queries accounts, healthcare providers, addresses, business licenses, affiliations, territory info, DCR managed fields, and mobile cache. CORRECT object names: Account, HealthcareProvider, ContactPointAddress, BusinessLicense, ProviderAffiliation, ProviderAcctTerritoryInfo, LifeSciDataChgDefMngFld. WRONG names (DO NOT USE): HealthcareProvider__c, ContactPointAddress__c, BusinessLicense__c, ProviderAffiliation__c, AccountAddress__c.",
+    "Check LSC Account Management configuration. Queries accounts, healthcare providers, addresses, business licenses, affiliations, territory info, DCR managed fields, and mobile cache. CORRECT object names: Account, HealthcareProvider, ContactPointAddress, BusinessLicense, ProviderAffiliation, ProviderAcctTerritoryInfo, LifeSciDataChgDefMngFld. WRONG names (DO NOT USE): HealthcareProvider__c, ContactPointAddress__c, BusinessLicense__c, ProviderAffiliation__c, AccountAddress__c.",
     {
       targetOrg: external_exports.string().optional().describe("Optional: specific org to check. Uses current target org if not specified.")
     },
@@ -80621,7 +80621,7 @@ ${instructions.command}
 `;
             if (personAccounts.length === 0) {
               issues.push(
-                "No PersonAccount records found \u2014 most AFLS implementations require PersonAccount for HCPs"
+                "No PersonAccount records found \u2014 most LSC implementations require PersonAccount for HCPs"
               );
               recommendations.push(
                 "Enable PersonAccount in Setup > Company Information and create PersonAccount records for HCPs"
@@ -80948,7 +80948,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
   );
   server2.tool(
     "check_activity_plan_config",
-    "Check AFLS Activity Plan configuration. Queries time periods, activity plans, territory assignments, provider activity goals, goal measures, product goals, territory info, and mobile cache. CORRECT object names: ActivityPlan, ActivityPlanTerritory, TimePeriod, ProviderActivityGoal, ProviderActivityGoalMeasure, PrvdActvtyGoalMeasureProdt, ProviderAcctTerritoryInfo. WRONG names (DO NOT USE): ActivityPlan__c, ProviderActivityGoal__c, AccountGoal__c, TimePeriod__c, GoalMeasure__c.",
+    "Check LSC Activity Plan configuration. Queries time periods, activity plans, territory assignments, provider activity goals, goal measures, product goals, territory info, and mobile cache. CORRECT object names: ActivityPlan, ActivityPlanTerritory, TimePeriod, ProviderActivityGoal, ProviderActivityGoalMeasure, PrvdActvtyGoalMeasureProdt, ProviderAcctTerritoryInfo. WRONG names (DO NOT USE): ActivityPlan__c, ProviderActivityGoal__c, AccountGoal__c, TimePeriod__c, GoalMeasure__c.",
     {
       targetOrg: external_exports.string().optional().describe("Optional: specific org to check. Uses current target org if not specified.")
     },
@@ -81278,7 +81278,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
   );
   server2.tool(
     "check_territory_config",
-    "Check AFLS Territory Alignment configuration. Queries Territory2 model, ObjectTerritory2Association (explicit assignments), TerritoryGeoAssignmentRule (zip/brick rules), TerritoryProviderAffiliationAlignmentRule (affiliation rules), and ProviderAcctTerritoryInfo records. CORRECT object names: Territory2, ObjectTerritory2Association, TerritoryGeoAssignmentRule, TerritoryProviderAffiliationAlignmentRule, ProviderAcctTerritoryInfo. WRONG names (DO NOT USE): AccountTerritory__c, TerritoryAssignment__c, TerritoryInfo__c, AffiliationAlignmentRule__c.",
+    "Check LSC Territory Alignment configuration. Queries Territory2 model, ObjectTerritory2Association (explicit assignments), TerritoryGeoAssignmentRule (zip/brick rules), TerritoryProviderAffiliationAlignmentRule (affiliation rules), and ProviderAcctTerritoryInfo records. CORRECT object names: Territory2, ObjectTerritory2Association, TerritoryGeoAssignmentRule, TerritoryProviderAffiliationAlignmentRule, ProviderAcctTerritoryInfo. WRONG names (DO NOT USE): AccountTerritory__c, TerritoryAssignment__c, TerritoryInfo__c, AffiliationAlignmentRule__c.",
     {
       targetOrg: external_exports.string().optional().describe("Optional: specific org to check. Uses current target org if not specified.")
     },
@@ -81584,7 +81584,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
   );
   server2.tool(
     "check_user_config",
-    "Check AFLS User Management configuration. Queries PackageLicense capacity, PermissionSetLicense (PSL) capacity, permission set assignments, user profiles, role hierarchy, and user-territory associations. CORRECT object names: User, Profile, UserRole, PermissionSet, PermissionSetAssignment, PermissionSetLicense, PermissionSetLicenseAssign, UserTerritory2Association, PackageLicense. WRONG names (DO NOT USE): User__c, UserProfile__c, PermissionSetAssignment__c, PSLAssignment__c, UserTerritory__c.",
+    "Check LSC User Management configuration. Queries PackageLicense capacity, PermissionSetLicense (PSL) capacity, permission set assignments, user profiles, role hierarchy, and user-territory associations. CORRECT object names: User, Profile, UserRole, PermissionSet, PermissionSetAssignment, PermissionSetLicense, PermissionSetLicenseAssign, UserTerritory2Association, PackageLicense. WRONG names (DO NOT USE): User__c, UserProfile__c, PermissionSetAssignment__c, PSLAssignment__c, UserTerritory__c.",
     {
       targetOrg: external_exports.string().optional().describe("Optional: specific org to check. Uses current target org if not specified.")
     },
@@ -81622,8 +81622,8 @@ ${instructions.command}
         if (pkgResult.success && pkgResult.data?.records) {
           const records = pkgResult.data.records;
           if (records.length === 0) {
-            message += "**No AFLS-related package licenses found.**\n\n";
-            issues.push("No AFLS package licenses detected \u2014 AFLS packages may not be installed");
+            message += "**No LSC-related package licenses found.**\n\n";
+            issues.push("No LSC package licenses detected \u2014 LSC packages may not be installed");
           } else {
             message += `| Namespace | Allowed | Used | Available | Status |
 |-----------|---------|------|-----------|--------|
@@ -81658,9 +81658,9 @@ ${instructions.command}
         if (pslResult.success && pslResult.data?.records) {
           const records = pslResult.data.records;
           if (records.length === 0) {
-            message += "**No AFLS-related PSLs found.**\n\n";
+            message += "**No LSC-related PSLs found.**\n\n";
             issues.push(
-              "No AFLS Permission Set Licenses found \u2014 AFLS packages may not be installed or licensed"
+              "No LSC Permission Set Licenses found \u2014 LSC packages may not be installed or licensed"
             );
           } else {
             message += `| PSL | Total | Used | Available |
@@ -81690,13 +81690,13 @@ ${instructions.command}
 
 `;
         }
-        message += "## AFLS Permission Sets\n\n";
+        message += "## LSC Permission Sets\n\n";
         const psQuery = `SELECT Id, Name, Label, NamespacePrefix FROM PermissionSet WHERE (NamespacePrefix IN ('lsc4ce', 'HealthCloudGA') OR Label LIKE '%Life Science%' OR Label LIKE '%Sample%' OR Label LIKE '%CLM%') AND IsOwnedByProfile = false ORDER BY Label`;
         const psResult = await runSoqlQuery(psQuery, effectiveOrg);
         if (psResult.success && psResult.data?.records) {
           const records = psResult.data.records;
           if (records.length === 0) {
-            message += "**No AFLS permission sets found.**\n\n";
+            message += "**No LSC permission sets found.**\n\n";
           } else {
             const psIds = records.map((r) => `'${r.Id}'`).join(",");
             const assignCountQuery = `SELECT PermissionSetId, COUNT(Id) cnt FROM PermissionSetAssignment WHERE PermissionSetId IN (${psIds}) GROUP BY PermissionSetId`;
@@ -81817,12 +81817,12 @@ ${instructions.command}
           message += "Enterprise Territory Management may not be enabled.\n\n";
         }
         message += "## Users Without Territory Assignments\n\n";
-        const noTerritoryQuery = `SELECT Id, Name, Username, Profile.Name FROM User WHERE IsActive = true AND Id NOT IN (SELECT UserId FROM UserTerritory2Association) AND (Profile.Name LIKE '%Life Science%' OR Profile.Name LIKE '%AFLS%') ORDER BY Name LIMIT 50`;
+        const noTerritoryQuery = `SELECT Id, Name, Username, Profile.Name FROM User WHERE IsActive = true AND Id NOT IN (SELECT UserId FROM UserTerritory2Association) AND (Profile.Name LIKE '%Life Science%' OR Profile.Name LIKE '%LSC%') ORDER BY Name LIMIT 50`;
         const noTerritoryResult = await runSoqlQuery(noTerritoryQuery, effectiveOrg);
         if (noTerritoryResult.success && noTerritoryResult.data?.records) {
           const records = noTerritoryResult.data.records;
           if (records.length === 0) {
-            message += "All AFLS-profiled users have territory assignments.\n\n";
+            message += "All LSC-profiled users have territory assignments.\n\n";
           } else {
             message += `| Name | Username | Profile |
 |------|----------|---------|
@@ -81834,11 +81834,11 @@ ${instructions.command}
 `;
             }
             message += `
-**${records.length} AFLS user(s) without territory assignments.**
+**${records.length} LSC user(s) without territory assignments.**
 
 `;
             issues.push(
-              `${records.length} active AFLS user(s) have no territory assignment \u2014 they cannot see account data`
+              `${records.length} active LSC user(s) have no territory assignment \u2014 they cannot see account data`
             );
             recommendations.push("Assign these users to territories in Setup > Territory Models");
           }
@@ -81867,7 +81867,7 @@ ${instructions.command}
           message += "\n";
         }
         message += "### User Provisioning Reminder\n\n";
-        message += "When adding new AFLS users, follow this order:\n";
+        message += "When adding new LSC users, follow this order:\n";
         message += "1. **Create User** \u2014 Set profile, role, and active status\n";
         message += "2. **Assign PSLs** \u2014 Required before permission sets (Setup > Users > [User] > PSL Assignments)\n";
         message += "3. **Assign Permission Sets** \u2014 Use `assign_permission_set` tool or Setup UI\n";
@@ -82153,7 +82153,7 @@ You may need to check the layout manually in Setup.`
 2. **Verify on mobile** \u2014 The new sidebar item should appear after cache regeneration and sync
 3. **Verify in Setup** \u2014 Check Setup > Object Manager > Visit > Page Layouts > ${fullLayoutName} to confirm the related list appears${dbSchemaNote}
 
-> **If the related list still doesn't appear on mobile after cache regeneration** and the target object (\`${objectName}\`) has **no record types**, this was a known metadata-service bug where related lists (including the Files related list) were silently dropped from the generated cache for record-type-less objects. It is fixed in newer package versions \u2014 check the AFLS package version and upgrade rather than re-editing the layout.`
+> **If the related list still doesn't appear on mobile after cache regeneration** and the target object (\`${objectName}\`) has **no record types**, this was a known metadata-service bug where related lists (including the Files related list) were silently dropped from the generated cache for record-type-less objects. It is fixed in newer package versions \u2014 check the LSC package version and upgrade rather than re-editing the layout.`
               }
             ]
           };
@@ -82643,7 +82643,7 @@ function formatFailedCheck(result) {
 function register7(server2) {
   server2.tool(
     "audit_mobile_config",
-    "Audit AFLS Mobile configuration against best practices. Runs validation rules to identify misconfigurations that cause login failures, sync issues, and other common problems.",
+    "Audit LSC Mobile configuration against best practices. Runs validation rules to identify misconfigurations that cause login failures, sync issues, and other common problems.",
     {
       group: external_exports.string().optional().describe(
         "Validation group to run (e.g., 'mobile-login-check', 'pre-deployment', 'sync-troubleshooting', 'full-mobile-audit'). If not specified, runs all mobile rules."
@@ -82737,8 +82737,8 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
     }
   );
   server2.tool(
-    "diagnose_afls_issue",
-    "Diagnose an AFLS issue based on an error message or symptom. Finds relevant validation rules and suggests checks to run.",
+    "diagnose_lsc_issue",
+    "Diagnose an LSC issue based on an error message or symptom. Finds relevant validation rules and suggests checks to run.",
     {
       symptom: external_exports.string().describe(
         "The error message or symptom the user is experiencing (e.g., 'Device sync transaction record was not found', '403 error', 'metadata cache stuck')"
@@ -83006,7 +83006,7 @@ function register8(server2) {
                 type: "text",
                 text: `# DB Schema Not Found
 
-No DbSchema category found. Ensure AFLS is installed in the org.`
+No DbSchema category found. Ensure LSC is installed in the org.`
               }
             ]
           };
@@ -83296,7 +83296,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
                 type: "text",
                 text: `# DbSchema Category Not Found
 
-No DbSchema category found. Ensure AFLS is installed.`
+No DbSchema category found. Ensure LSC is installed.`
               }
             ]
           };
@@ -83831,7 +83831,7 @@ function register9(server2) {
 
 No "UISchema" category in Admin Console. Available categories: ${available}
 
-Ensure AFLS is installed and the Mobile UI Settings feature is enabled.`
+Ensure LSC is installed and the Mobile UI Settings feature is enabled.`
               }
             ]
           };
@@ -83953,7 +83953,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
   );
   server2.tool(
     "add_navigation_tab",
-    "Add a new navigation tab to AFLS Mobile via Admin Console > Mobile > UI Settings. Creates a LifeSciConfigRecord of type Tab with field values and optional profile assignments.",
+    "Add a new navigation tab to LSC Mobile via Admin Console > Mobile > UI Settings. Creates a LifeSciConfigRecord of type Tab with field values and optional profile assignments.",
     {
       label: external_exports.string().describe("Display name for the component (MasterLabel), e.g. 'Accounts Tab'"),
       developerName: external_exports.string().describe(
@@ -83988,7 +83988,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
 
 No "UISchema" category in Admin Console. Available categories: ${available}
 
-Ensure AFLS is installed and the Mobile UI Settings feature is enabled.`
+Ensure LSC is installed and the Mobile UI Settings feature is enabled.`
               }
             ]
           };
@@ -84165,35 +84165,35 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
 
 // src/tools/resources.ts
 function register10(server2) {
-  server2.resource("afls://modules", "List of all AFLS4CE modules with documentation", async () => {
+  server2.resource("lsc://modules", "List of all LSC4CE modules with documentation", async () => {
     const modules = getModuleList();
     const moduleTable = modules.map((m) => `| ${m.title} | ${m.slug} | ${m.fileCount} |`).join("\n");
     return {
       contents: [
         {
-          uri: "afls://modules",
+          uri: "lsc://modules",
           mimeType: "text/markdown",
-          text: `# AFLS4CE Modules
+          text: `# LSC4CE Modules
 
 | Module | Slug | Docs |
 |--------|------|------|
 ${moduleTable}
 
-Use the \`get_afls_module_docs\` tool with a slug to get detailed documentation.`
+Use the \`get_lsc_module_docs\` tool with a slug to get detailed documentation.`
         }
       ]
     };
   });
-  server2.resource("afls://overview", "Overview of AFLS for Customer Engagement", async () => ({
+  server2.resource("lsc://overview", "Overview of LSC for Customer Engagement", async () => ({
     contents: [
       {
-        uri: "afls://overview",
+        uri: "lsc://overview",
         mimeType: "text/markdown",
-        text: `# AFLS for Customer Engagement (AFLS4CE)
+        text: `# LSC for Customer Engagement (LSC4CE)
 
 ## Overview
 
-AFLS for Customer Engagement is Salesforce's industry cloud solution for pharmaceutical, biotech, and medical device companies. It helps commercial teams effectively engage with healthcare providers (HCPs) and healthcare organizations (HCOs) while maintaining regulatory compliance.
+LSC for Customer Engagement is Salesforce's industry cloud solution for pharmaceutical, biotech, and medical device companies. It helps commercial teams effectively engage with healthcare providers (HCPs) and healthcare organizations (HCOs) while maintaining regulatory compliance.
 
 ## Key Modules
 
@@ -84247,17 +84247,17 @@ AFLS for Customer Engagement is Salesforce's industry cloud solution for pharmac
 ## Getting Help
 
 Use the tools provided:
-- \`list_afls_modules\` - See all available documentation
-- \`get_afls_module_docs\` - Get detailed module documentation
-- \`search_afls_knowledge\` - Search for specific topics
-- \`explain_afls_concept\` - Get explanations of AFLS concepts
-- \`get_afls_admin_setup\` - Get admin configuration guidance`
+- \`list_lsc_modules\` - See all available documentation
+- \`get_lsc_module_docs\` - Get detailed module documentation
+- \`search_lsc_knowledge\` - Search for specific topics
+- \`explain_lsc_concept\` - Get explanations of LSC concepts
+- \`get_lsc_admin_setup\` - Get admin configuration guidance`
       }
     ]
   }));
   server2.prompt(
-    "afls_implementation_checklist",
-    "Generate an implementation checklist for an AFLS module",
+    "lsc_implementation_checklist",
+    "Generate an implementation checklist for an LSC module",
     {
       module: external_exports.enum([
         "account-management",
@@ -84269,7 +84269,7 @@ Use the tools provided:
         "consent-management",
         "field-email",
         "full"
-      ]).describe("The AFLS module to generate a checklist for")
+      ]).describe("The LSC module to generate a checklist for")
     },
     async ({ module }) => {
       const moduleContent = getModuleContent(module);
@@ -84279,7 +84279,7 @@ Use the tools provided:
             role: "user",
             content: {
               type: "text",
-              text: `Generate a detailed implementation checklist for the AFLS ${module} module.
+              text: `Generate a detailed implementation checklist for the LSC ${module} module.
 
 Here is the available documentation for this module:
 
@@ -84302,8 +84302,8 @@ Format as a structured checklist with clear categories and actionable items.`
     }
   );
   server2.prompt(
-    "afls_troubleshoot",
-    "Get help troubleshooting an AFLS issue",
+    "lsc_troubleshoot",
+    "Get help troubleshooting an LSC issue",
     {
       issue: external_exports.string().describe("Description of the issue or error"),
       module: external_exports.string().optional().describe("The module where the issue is occurring")
@@ -84322,7 +84322,7 @@ ${r.excerpt}`).join("\n\n");
             role: "user",
             content: {
               type: "text",
-              text: `Help troubleshoot this AFLS issue:
+              text: `Help troubleshoot this LSC issue:
 
 **Issue:** ${issue2}
 ${module ? `**Module:** ${module}` : ""}
@@ -84333,7 +84333,7 @@ ${moduleContent}
 **Search Results:**
 ${relevantContent}
 
-Based on the documentation and common AFLS patterns, please:
+Based on the documentation and common LSC patterns, please:
 1. Identify possible causes of this issue
 2. Suggest diagnostic steps
 3. Provide resolution steps
@@ -84445,7 +84445,7 @@ async function preparePresentation(filePaths, format, presentationName, conversi
 }
 async function preparePptx(pptxPath, presentationName, conversionEngine = "libreoffice") {
   const os2 = await import("os");
-  const outputDir = path3.join(os2.tmpdir(), `afls-pptx-${Date.now()}`);
+  const outputDir = path3.join(os2.tmpdir(), `lsc-pptx-${Date.now()}`);
   const result = await convertPptxToSlides(pptxPath, outputDir, conversionEngine);
   if (!result.success) {
     return {
@@ -84507,7 +84507,7 @@ async function preparePdf(pdfPath) {
       ]
     };
   }
-  const outputDir = path3.join(os2.tmpdir(), `afls-pdf-${Date.now()}`);
+  const outputDir = path3.join(os2.tmpdir(), `lsc-pdf-${Date.now()}`);
   fs3.mkdirSync(outputDir, { recursive: true });
   const rasterizedPath = path3.join(outputDir, path3.basename(pdfPath));
   const result = await rasterizePdf(pdfPath, rasterizedPath);
@@ -84987,12 +84987,12 @@ function createSlideZipFromDir(zipPath, slideDir, thumbnailPath) {
 function register11(server2) {
   server2.tool(
     "upload_presentation",
-    "Upload a presentation to AFLS Intelligent Content. Supports three formats: (1) .pptx \u2014 converts to HTML5 per-slide ZIPs using LibreOffice (default, preserves layout with SVG/images) or Pandoc reveal.js (semantic HTML with transitions), (2) .pdf \u2014 uploads directly (Salesforce handles page splitting), (3) .zip file(s) or directory of ZIPs \u2014 validates HTML structure and uploads each as a page. Creates the presentation via the Bulk Presentation Connect API.",
+    "Upload a presentation to LSC Intelligent Content. Supports three formats: (1) .pptx \u2014 converts to HTML5 per-slide ZIPs using LibreOffice (default, preserves layout with SVG/images) or Pandoc reveal.js (semantic HTML with transitions), (2) .pdf \u2014 uploads directly (Salesforce handles page splitting), (3) .zip file(s) or directory of ZIPs \u2014 validates HTML structure and uploads each as a page. Creates the presentation via the Bulk Presentation Connect API.",
     {
       filePath: external_exports.union([external_exports.string(), external_exports.array(external_exports.string())]).describe(
         "Path(s) to file(s): single .pptx, single .pdf, .zip file(s), or a directory containing .zip files"
       ),
-      presentationName: external_exports.string().describe("Display name for the presentation in AFLS"),
+      presentationName: external_exports.string().describe("Display name for the presentation in LSC"),
       presentationId: external_exports.string().optional().describe("External system ID (e.g., Veeva Vault ID)"),
       activationDate: external_exports.string().optional().describe("ISO 8601 activation date (e.g., '2025-03-01')"),
       deactivationDate: external_exports.string().optional().describe("ISO 8601 deactivation date"),
@@ -85102,7 +85102,7 @@ Alternatively, use the default LibreOffice SVG engine by omitting the \`conversi
         if (!gsInstalled) {
           message += `> **Note:** Ghostscript not found. PDF will be uploaded without rasterization.
 `;
-          message += `> The AFLS iPad player requires image-based PDFs. If the presentation doesn't render
+          message += `> The LSC iPad player requires image-based PDFs. If the presentation doesn't render
 `;
           message += `> on iPad, install Ghostscript: \`brew install ghostscript\`
 
@@ -86007,7 +86007,7 @@ Presentation "${resolvedPresentationName || resolvedPresentationId}" has no link
 function register12(server2) {
   server2.tool(
     "diff_orgs",
-    "Compare AFLS configuration between two Salesforce orgs. Produces a detailed per-record report comparing trigger handlers, admin settings, DB Schema records, and actions (with profile assignments) to identify configuration drift. Both orgs must be authenticated via SF CLI.",
+    "Compare LSC configuration between two Salesforce orgs. Produces a detailed per-record report comparing trigger handlers, admin settings, DB Schema records, and actions (with profile assignments) to identify configuration drift. Both orgs must be authenticated via SF CLI.",
     {
       sourceOrg: external_exports.string().describe("Alias or username of the first (source) org"),
       targetOrg: external_exports.string().describe("Alias or username of the second (target) org"),
@@ -86493,7 +86493,7 @@ ${tgtOnlyDetail}`;
 `;
           message += `- **DB Schema:** \`update_db_schema({ recordName: "...", fields: {...}, targetOrg: "..." })\`
 `;
-          message += `- **Actions:** \`update_afls_action({ id: "...", fields: {...}, targetOrg: "..." })\`
+          message += `- **Actions:** \`update_lsc_action({ id: "...", fields: {...}, targetOrg: "..." })\`
 `;
           message += `- **Missing records:** Use the corresponding \`create_*\` tool to add the record to the org where it's missing
 
@@ -86522,10 +86522,10 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
 function register13(server2) {
   server2.tool(
     "list_users",
-    "List active AFLS users with optional filters. Filter by profile, permission set, territory, or find users without territories or PSLs. CORRECT object names: User, PermissionSetAssignment, UserTerritory2Association.",
+    "List active LSC users with optional filters. Filter by profile, permission set, territory, or find users without territories or PSLs. CORRECT object names: User, PermissionSetAssignment, UserTerritory2Association.",
     {
       filterBy: external_exports.enum(["all", "profile", "permission-set", "territory", "no-territory", "no-psl"]).optional().default("all").describe(
-        "Filter type: 'all' (default), 'profile', 'permission-set', 'territory', 'no-territory' (users without territory assignments), 'no-psl' (users without AFLS PSLs)"
+        "Filter type: 'all' (default), 'profile', 'permission-set', 'territory', 'no-territory' (users without territory assignments), 'no-psl' (users without LSC PSLs)"
       ),
       filterValue: external_exports.string().optional().describe("Partial match value for profile, permission-set, or territory filters"),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to query. Uses current target org if not specified.")
@@ -86585,12 +86585,12 @@ function register13(server2) {
             title = `# Users in Territory matching "${filterValue}"`;
             break;
           case "no-territory":
-            query = `SELECT Id, Name, Username, Profile.Name, UserRole.Name FROM User WHERE IsActive = true AND Id NOT IN (SELECT UserId FROM UserTerritory2Association) AND (Profile.Name LIKE '%Life Science%' OR Profile.Name LIKE '%AFLS%' OR Profile.Name LIKE '%Sales%') ORDER BY Profile.Name, Name LIMIT 200`;
+            query = `SELECT Id, Name, Username, Profile.Name, UserRole.Name FROM User WHERE IsActive = true AND Id NOT IN (SELECT UserId FROM UserTerritory2Association) AND (Profile.Name LIKE '%Life Science%' OR Profile.Name LIKE '%LSC%' OR Profile.Name LIKE '%Sales%') ORDER BY Profile.Name, Name LIMIT 200`;
             title = "# Active Users Without Territory Assignments";
             break;
           case "no-psl":
-            query = `SELECT Id, Name, Username, Profile.Name FROM User WHERE IsActive = true AND Id NOT IN (SELECT AssigneeId FROM PermissionSetLicenseAssign WHERE PermissionSetLicense.DeveloperName LIKE '%LifeScience%') AND (Profile.Name LIKE '%Life Science%' OR Profile.Name LIKE '%AFLS%' OR Profile.Name LIKE '%Sales%') ORDER BY Profile.Name, Name LIMIT 200`;
-            title = "# Active Users Without AFLS Permission Set Licenses";
+            query = `SELECT Id, Name, Username, Profile.Name FROM User WHERE IsActive = true AND Id NOT IN (SELECT AssigneeId FROM PermissionSetLicenseAssign WHERE PermissionSetLicense.DeveloperName LIKE '%LifeScience%') AND (Profile.Name LIKE '%Life Science%' OR Profile.Name LIKE '%LSC%' OR Profile.Name LIKE '%Sales%') ORDER BY Profile.Name, Name LIMIT 200`;
+            title = "# Active Users Without LSC Permission Set Licenses";
             break;
           default:
             query = `SELECT Id, Name, Username, Profile.Name, UserRole.Name, IsActive FROM User WHERE IsActive = true ORDER BY Profile.Name, Name LIMIT 200`;
@@ -86667,10 +86667,10 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
   );
   server2.tool(
     "list_permission_sets",
-    "List AFLS permission sets and permission set licenses (PSLs) with assignment counts and capacity. Shows which permission sets exist, how many users are assigned, and PSL capacity (total vs used vs available).",
+    "List LSC permission sets and permission set licenses (PSLs) with assignment counts and capacity. Shows which permission sets exist, how many users are assigned, and PSL capacity (total vs used vs available).",
     {
       includeAllNamespaces: external_exports.boolean().optional().default(false).describe(
-        "If true, include all permission sets regardless of namespace. Default false = AFLS-related only."
+        "If true, include all permission sets regardless of namespace. Default false = LSC-related only."
       ),
       targetOrg: external_exports.string().optional().describe("Optional: specific org to query. Uses current target org if not specified.")
     },
@@ -86683,7 +86683,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
         };
       }
       try {
-        let message = "# AFLS Permission Sets & Licenses\n\n";
+        let message = "# LSC Permission Sets & Licenses\n\n";
         message += "## Permission Sets\n\n";
         const psFilter = includeAllNamespaces ? "IsOwnedByProfile = false" : "(NamespacePrefix IN ('lsc4ce', 'HealthCloudGA') OR Label LIKE '%Life Science%' OR Label LIKE '%Sample%' OR Label LIKE '%CLM%' OR Label LIKE '%Health Cloud%' OR Label LIKE '%Industry Sales%') AND IsOwnedByProfile = false";
         const psQuery = `SELECT Id, Name, Label, NamespacePrefix FROM PermissionSet WHERE ${psFilter} ORDER BY Label LIMIT 200`;
@@ -86771,7 +86771,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
     "Assign a permission set to one or more users. Looks up the permission set by label or API name, resolves usernames to IDs if needed, skips users who already have the assignment, and creates PermissionSetAssignment records.",
     {
       permissionSetName: external_exports.string().describe(
-        "Permission set label (e.g., 'AFLS User') or API name (e.g., 'lsc4ce__LifeSciencesCloudUser')"
+        "Permission set label (e.g., 'LSC User') or API name (e.g., 'lsc4ce__LifeSciencesCloudUser')"
       ),
       userIds: external_exports.array(external_exports.string()).optional().describe("Array of User IDs to assign the permission set to"),
       usernames: external_exports.array(external_exports.string()).optional().describe(
@@ -86918,7 +86918,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
     "Remove a permission set assignment from one or more users. Finds existing PermissionSetAssignment records and deletes them.",
     {
       permissionSetName: external_exports.string().describe(
-        "Permission set label (e.g., 'AFLS User') or API name (e.g., 'lsc4ce__LifeSciencesCloudUser')"
+        "Permission set label (e.g., 'LSC User') or API name (e.g., 'lsc4ce__LifeSciencesCloudUser')"
       ),
       userIds: external_exports.array(external_exports.string()).optional().describe("Array of User IDs to remove the permission set from"),
       usernames: external_exports.array(external_exports.string()).optional().describe(
@@ -87043,7 +87043,7 @@ ${error2 instanceof Error ? error2.message : String(error2)}`
 function register14(server2) {
   server2.tool(
     "health_check",
-    "Run a comprehensive AFLS org health check. Checks trigger handler status, permission set assignments, Admin Console settings, orphaned territory assignments, DB Schema completeness, and mobile cache freshness. Returns a summary with issues found and recommendations.",
+    "Run a comprehensive LSC org health check. Checks trigger handler status, permission set assignments, Admin Console settings, orphaned territory assignments, DB Schema completeness, and mobile cache freshness. Returns a summary with issues found and recommendations.",
     {
       targetOrg: external_exports.string().optional().describe("Optional: specific org to check. Uses current target org if not specified.")
     },
@@ -87095,9 +87095,9 @@ Please connect to a Salesforce org first using \`set_target_org\`.`
           fix: "Review and enable handlers via `toggle_trigger_handler` or Admin Console > Trigger Handlers"
         });
       }
-      const pslQuery = `SELECT PermissionSetLicenseId, PermissionSetLicense.DeveloperName, COUNT(Id) cnt FROM PermissionSetLicenseAssign WHERE PermissionSetLicense.DeveloperName LIKE '%LifeSciences%' OR PermissionSetLicense.DeveloperName LIKE '%AFLS%' GROUP BY PermissionSetLicenseId, PermissionSetLicense.DeveloperName`;
+      const pslQuery = `SELECT PermissionSetLicenseId, PermissionSetLicense.DeveloperName, COUNT(Id) cnt FROM PermissionSetLicenseAssign WHERE PermissionSetLicense.DeveloperName LIKE '%LifeSciences%' OR PermissionSetLicense.DeveloperName LIKE '%LSC%' GROUP BY PermissionSetLicenseId, PermissionSetLicense.DeveloperName`;
       const pslResult = await runSoqlQuery(pslQuery, effectiveOrg);
-      let pslInfo = "No AFLS permission set license assignments found.";
+      let pslInfo = "No LSC permission set license assignments found.";
       if (pslResult.success && pslResult.data?.records?.length) {
         const pslLines = pslResult.data.records.map(
           (r) => `- ${r["PermissionSetLicense.DeveloperName"] || r.PermissionSetLicenseId}: ${r.cnt} user(s)`
@@ -87107,8 +87107,8 @@ Please connect to a Salesforce org first using \`set_target_org\`.`
         issues.push({
           severity: "warning",
           area: "Permission Sets",
-          message: "No AFLS permission set license assignments found. Users may not have the required licenses.",
-          fix: "Assign AFLS permission set licenses to users via `assign_permission_set`"
+          message: "No LSC permission set license assignments found. Users may not have the required licenses.",
+          fix: "Assign LSC permission set licenses to users via `assign_permission_set`"
         });
       }
       sections.push(`## Permission Set Licenses
@@ -87179,7 +87179,7 @@ ${tmInfo}`);
             severity: "warning",
             area: "Mobile Cache",
             message: `Mobile metadata cache is ${daysAgo} days old. Recommend regenerating.`,
-            fix: "Run `/afls:generate-metadata-cache` to regenerate"
+            fix: "Run `/lsc:generate-metadata-cache` to regenerate"
           });
         }
       } else {
@@ -87197,7 +87197,7 @@ ${cacheInfo}`);
       let status = "HEALTHY";
       if (errors.length > 0) status = "NEEDS ATTENTION";
       else if (warnings.length > 0) status = "WARNINGS";
-      let report = `# AFLS Org Health Check
+      let report = `# LSC Org Health Check
 
 **Org:** ${effectiveOrg}
 **Status:** ${status}
@@ -87223,7 +87223,7 @@ ${cacheInfo}`);
   );
   server2.tool(
     "get_org_status",
-    "Get a single dashboard view of the connected AFLS org: alias, username, instance URL, installed packages, enabled features (via trigger handlers), mobile cache status, and territory model status.",
+    "Get a single dashboard view of the connected LSC org: alias, username, instance URL, installed packages, enabled features (via trigger handlers), mobile cache status, and territory model status.",
     {
       targetOrg: external_exports.string().optional().describe("Optional: specific org to check. Uses current target org if not specified.")
     },
@@ -87244,7 +87244,7 @@ Please connect to a Salesforce org first using \`set_target_org\`.`
           ]
         };
       }
-      let report = `# AFLS Org Status
+      let report = `# LSC Org Status
 
 **Org:** ${effectiveOrg}
 `;
@@ -87301,12 +87301,12 @@ Please connect to a Salesforce org first using \`set_target_org\`.`
       } else {
         report += "No territory models configured.\n";
       }
-      const userQuery = `SELECT COUNT(Id) cnt FROM User WHERE IsActive = true AND Profile.Name LIKE '%Life%' OR Profile.Name LIKE '%AFLS%'`;
+      const userQuery = `SELECT COUNT(Id) cnt FROM User WHERE IsActive = true AND Profile.Name LIKE '%Life%' OR Profile.Name LIKE '%LSC%'`;
       const userResult = await runSoqlQuery(userQuery, effectiveOrg);
       report += "\n## Users\n\n";
       if (userResult.success && userResult.data?.records?.length) {
         const cnt = userResult.data.records[0].cnt;
-        report += `Active AFLS-profiled users: ${cnt}
+        report += `Active LSC-profiled users: ${cnt}
 `;
       }
       return { content: [{ type: "text", text: report }] };
@@ -87921,7 +87921,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { existsSync as existsSync7 } from "node:fs";
 import path4 from "node:path";
 function exportsDir() {
-  return process.env.AFLS_EXPORTS_DIR || path4.resolve(process.cwd(), "exports");
+  return process.env.LSC_EXPORTS_DIR || path4.resolve(process.cwd(), "exports");
 }
 async function ensureExportsDir() {
   const dir = exportsDir();
@@ -87975,7 +87975,7 @@ function renderImportSpa(token, targetOrg, sourceOrg) {
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AFLS Config Import \u2014 ${escapeHtml2(sourceOrg)} \u2192 ${escapeHtml2(targetOrg)}</title>
+<title>LSC Config Import \u2014 ${escapeHtml2(sourceOrg)} \u2192 ${escapeHtml2(targetOrg)}</title>
 <style>
   :root { --bg:#14161c; --panel:#1c1f27; --panel2:#232733; --fg:#e6e6e6; --dim:#8b93a7;
           --line:#2a2f3a; --new:#7cc4a4; --chg:#e0b25a; --id:#5a6072; --tgt:#a06a9a;
@@ -88026,7 +88026,7 @@ function renderImportSpa(token, targetOrg, sourceOrg) {
 </head>
 <body>
 <header>
-  <h1>AFLS Configuration Import</h1>
+  <h1>LSC Configuration Import</h1>
   <div class="sub">Source snapshot <b>${escapeHtml2(sourceOrg)}</b> <span class="arrow">\u2192</span> writes into target org <b>${escapeHtml2(targetOrg)}</b> \xB7 create + update-only (safe) \xB7 target is auto-backed-up before apply</div>
   <div class="legend">Each field reads <span class="from">current in ${escapeHtml2(targetOrg)}</span> <span class="arrow">\u2192</span> <span class="to">value from ${escapeHtml2(sourceOrg)} that will be applied</span>. &nbsp;<b>NEW</b> = create in ${escapeHtml2(targetOrg)}; &nbsp;<b>CHANGED</b> = update ${escapeHtml2(targetOrg)}.</div>
 </header>
@@ -88162,7 +88162,7 @@ document.getElementById("applyBtn").onclick=async ()=>{
   const addLog=(m)=>{ log.textContent+=m+"\\n"; log.scrollTop=log.scrollHeight; };
 
   const resp=await fetch("/apply?t="+encodeURIComponent(CFG.token),{
-    method:"POST", headers:{"content-type":"application/json","x-afls-token":CFG.token},
+    method:"POST", headers:{"content-type":"application/json","x-lsc-token":CFG.token},
     body:JSON.stringify({selection})
   });
   const reader=resp.body.getReader(); const dec=new TextDecoder(); let buf="";
@@ -88241,7 +88241,7 @@ async function startImportUiServer(opts) {
     return origin === `http://127.0.0.1:${port2}` || origin === `http://localhost:${port2}`;
   };
   const authOk = (req, url) => {
-    const t = url.searchParams.get("t") || req.headers["x-afls-token"] || "";
+    const t = url.searchParams.get("t") || req.headers["x-lsc-token"] || "";
     return !!t && tokensMatch(t, token);
   };
   server2.on("request", async (req, res) => {
@@ -88350,7 +88350,7 @@ function groupOf(r) {
 function register15(server2) {
   server2.tool(
     "export_config",
-    "Export AFLS configuration (Admin Console settings, DB Schema, trigger handlers, actions) as JSON. Captures per-field DataType and profile assignments (format v1.1) so the snapshot can be faithfully re-applied with import_config. Use this to snapshot org configuration for comparison, migration, or backup.",
+    "Export LSC configuration (Admin Console settings, DB Schema, trigger handlers, actions) as JSON. Captures per-field DataType and profile assignments (format v1.1) so the snapshot can be faithfully re-applied with import_config. Use this to snapshot org configuration for comparison, migration, or backup.",
     {
       targetOrg: external_exports.string().optional().describe(
         "Optional: specific org to export from. Uses current target org if not specified."
@@ -88386,7 +88386,7 @@ Please connect to a Salesforce org first.`
         content: [
           {
             type: "text",
-            text: `# AFLS Configuration Export
+            text: `# LSC Configuration Export
 
 **Org:** ${effectiveOrg}
 **Exported:** ${snapshot.exportedAt}
@@ -88397,7 +88397,7 @@ Please connect to a Salesforce org first.`
 ${json}
 \`\`\`
 
-Save this JSON (see /afls:export-config for the exports/ convention) and use \`import_config\` to review + apply it to another org.`
+Save this JSON (see /lsc:export-config for the exports/ convention) and use \`import_config\` to review + apply it to another org.`
           }
         ]
       };
@@ -88405,7 +88405,7 @@ Save this JSON (see /afls:export-config for the exports/ convention) and use \`i
   );
   server2.tool(
     "import_config",
-    "Import AFLS configuration from a snapshot into a target org, diff-driven and create + update-only (safe). Modes: 'report' (default) computes a diff and summarizes what would change; 'ui' opens a local browser review-and-apply UI on 127.0.0.1 with per-record checkboxes and live progress; 'apply' applies a specific selection headlessly. The target org is auto-backed-up to exports/ before any write. Never deletes or deactivates records that exist only in the target.",
+    "Import LSC configuration from a snapshot into a target org, diff-driven and create + update-only (safe). Modes: 'report' (default) computes a diff and summarizes what would change; 'ui' opens a local browser review-and-apply UI on 127.0.0.1 with per-record checkboxes and live progress; 'apply' applies a specific selection headlessly. The target org is auto-backed-up to exports/ before any write. Never deletes or deactivates records that exist only in the target.",
     {
       source: external_exports.string().optional().describe(
         "Source snapshot: inline JSON, or a path to an exports/*.json file. Omit to snapshot a live source org instead (see sourceOrg)."
@@ -88659,7 +88659,7 @@ function register16(server2) {
   );
   server2.tool(
     "get_release_notes",
-    "Get AFLS release notes for a specific Salesforce release (e.g., 'Spring 26', 'Winter 26'). Lists available releases if no release is specified.",
+    "Get LSC release notes for a specific Salesforce release (e.g., 'Spring 26', 'Winter 26'). Lists available releases if no release is specified.",
     {
       release: external_exports.string().optional().describe(
         "The release name (e.g., 'spring-26', 'winter-26'). Omit to list all available releases."
@@ -88699,7 +88699,7 @@ function register16(server2) {
           content: [
             {
               type: "text",
-              text: `# Available AFLS Release Notes
+              text: `# Available LSC Release Notes
 
 ${list}
 
@@ -89208,12 +89208,12 @@ ${instructions.command}
           }
         }
         message += "## 2. Permission Set Licenses\n\n";
-        const pslQuery = `SELECT DeveloperName, MasterLabel, TotalLicenses, UsedLicenses FROM PermissionSetLicense WHERE MasterLabel IN ('Life Science Commercial','Health Cloud Starter','Agentforce for AFLS Feature Access','Einstein Prompt Templates')`;
+        const pslQuery = `SELECT DeveloperName, MasterLabel, TotalLicenses, UsedLicenses FROM PermissionSetLicense WHERE MasterLabel IN ('Life Science Commercial','Health Cloud Starter','Agentforce for LSC Feature Access','Einstein Prompt Templates')`;
         const pslResult = await runSoqlQuery(pslQuery, effectiveOrg);
         const requiredPsls = [
           "Life Science Commercial",
           "Health Cloud Starter",
-          "Agentforce for AFLS Feature Access",
+          "Agentforce for LSC Feature Access",
           "Einstein Prompt Templates"
         ];
         if (pslResult.success && pslResult.data?.records) {
@@ -89273,7 +89273,7 @@ ${instructions.command}
           { name: "HealthCloudStarter", label: "Health Cloud Starter" },
           { name: "EinsteinGPTPromptTemplateManager", label: "Prompt Template Manager" },
           { name: "EinsteinGPTPromptTemplateUser", label: "Prompt Template User" },
-          { name: "AccsAgtfrceForLifeSciCustEngmt", label: "Access AFLS CE Agentforce" }
+          { name: "AccsAgtfrceForLifeSciCustEngmt", label: "Access LSC CE Agentforce" }
         ];
         message += "### Standard Permission Sets\n\n";
         message += "| Permission Set | Assignments | Status |\n|---------------|-------------|--------|\n";
@@ -89799,7 +89799,7 @@ ${instructions.command}
 
 // src/index.ts
 var server = new McpServer({
-  name: "AFLS-for-Claude",
+  name: "LSC-for-Claude",
   version: "0.1.0"
 });
 register(server);
@@ -89828,7 +89828,7 @@ async function main() {
   const guides = getGuideList();
   const exercises = getExerciseList();
   const troubleshooting = getTroubleshootingList();
-  console.error(`AFLS for Claude MCP server starting...`);
+  console.error(`LSC for Claude MCP server starting...`);
   console.error(`Knowledge base loaded:`);
   console.error(`  - ${modules.length} modules (PM enablement)`);
   console.error(`  - ${helpDocs.length} help documents`);
@@ -89837,7 +89837,7 @@ async function main() {
   console.error(`  - ${troubleshooting.length} troubleshooting docs`);
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("AFLS for Claude MCP server running on stdio");
+  console.error("LSC for Claude MCP server running on stdio");
 }
 main().catch((error2) => {
   console.error("Fatal error:", error2);

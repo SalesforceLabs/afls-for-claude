@@ -1,5 +1,5 @@
 # VHS tape → renders docs/media/export-config-demo.gif
-# Faithful reproduction of a real Claude Code /afls:export-config session.
+# Faithful reproduction of a real Claude Code /lsc:export-config session.
 # Regenerate:  vhs scripts/demo-export.tape
 Output docs/media/export-config-demo.gif
 

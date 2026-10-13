@@ -1,6 +1,6 @@
 # Territory Alignment
 
-AFLS uses Salesforce Enterprise Territory Management for sharing HCP/HCO records to field reps. Account-to-Territory alignment is achieved through three direct UI jobs + one internal dependent job, keeping `ObjectTerritory2Association` (drives sharing) and `ProviderAcctTerritoryInfo` (engagement data) in sync.
+Life Sciences Cloud (LSC) uses Salesforce Enterprise Territory Management for sharing HCP/HCO records to field reps. Account-to-Territory alignment is achieved through three direct UI jobs + one internal dependent job, keeping `ObjectTerritory2Association` (drives sharing) and `ProviderAcctTerritoryInfo` (engagement data) in sync.
 
 ## The Four Jobs
 
@@ -22,6 +22,6 @@ AFLS uses Salesforce Enterprise Territory Management for sharing HCP/HCO records
 - [Territory Alignment Configuration Guide](./territory-alignment-configuration-guide.md)
 - [Territory Alignment Admin Transcript](./territory-alignment-admin-transcript.md)
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 - [support-engineering-alignment-jobs](./support-engineering-alignment-jobs.md) — Apr 17, 2026 session. All 4 alignment jobs (3 UI + 1 internal), valid-provider 3-flag criteria, OT2A vs PATI roles, source-type accumulation and cleanup logic, scheduling guidance, 6 troubleshooting patterns with SOQL queries, mobile delta-sync answer.

@@ -1,4 +1,4 @@
-# AFLS Lists & Filters Configuration Validation Rules
+# LSC Lists & Filters Configuration Validation Rules
 # ===================================================
 # Rules to validate Lists & Filters configuration including
 # account data, territory info, record types, addresses,
@@ -15,7 +15,7 @@
 schema_version: "1.0"
 category_name: "Lists & Filters Configuration"
 description: |
-  Validation rules for AFLS Lists & Filters configuration.
+  Validation rules for LSC Lists & Filters configuration.
   Covers account data, territory info, record types, addresses
   for map view, and mobile cache requirements.
 
@@ -65,7 +65,7 @@ rules:
     name: ProviderAcctTerritoryInfo records exist for list views
     description: |
       Checks whether ProviderAcctTerritoryInfo records exist. This object
-      is the primary data source for account lists in AFLS. It contains
+      is the primary data source for account lists in LSC. It contains
       territory-level account tracking including visit counts, last visit
       dates, and next visit dates. Without these records, account lists
       will not display properly, and territory-based filtering will not work.

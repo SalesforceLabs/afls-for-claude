@@ -1,6 +1,6 @@
 # Generic Workflows — Support Engineering Training
 
-**Session:** AFLS4CE Value Chain Training — May 5, 2026
+**Session:** LSC4CE Value Chain Training — May 5, 2026
 **Audience:** Support engineers
 **Source:** Engineering training series (deck + Gemini transcript)
 **Presenter:** Srikant Chonnad
@@ -275,7 +275,7 @@ LifeSciStageOperation (parent — for Inquiry "Signed")
 
 ## Reference
 
-- **Source deck:** Generic Workflows in AFLS, Spring '26 — slide ID `1f9nBJoyp5fg_uoL0HWu_GZAXeVFSQCAGA4a6DD5WL5M`
+- **Source deck:** Generic Workflows in Life Sciences Cloud (LSC), Spring '26 — slide ID `1f9nBJoyp5fg_uoL0HWu_GZAXeVFSQCAGA4a6DD5WL5M`
 - **Source transcript:** Gemini, May 5, 2026 session — doc ID `1Hg_HXKcFFTxYouVEQ1YnThLuVN6lGuKl`
 - **Companion file:** `workflow-mgmt-demo-talk-track.md` in this module (PM-side baseline)
 - **Related — Custom Scripts:** see `custom-scripts/support-engineering-validations-custom-scripts.md` for JS execution context and namespace handling

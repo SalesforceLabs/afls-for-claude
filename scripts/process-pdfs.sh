@@ -94,15 +94,15 @@ echo "--- Processing Guide Documents ---"
 # Life Sciences Dev Guide
 DEV_GUIDE="$DOC_DIR/life_sciences_dev_guide.pdf"
 if [ -f "$DEV_GUIDE" ]; then
-    convert_pdf "$DEV_GUIDE" "$KNOWLEDGE_DIR/guides/dev-guide.md" "AFLS Developer Guide"
+    convert_pdf "$DEV_GUIDE" "$KNOWLEDGE_DIR/guides/dev-guide.md" "LSC Developer Guide"
 else
     echo "Warning: Dev guide not found at $DEV_GUIDE"
 fi
 
 # Mobile Setup Guide
-MOBILE_GUIDE="$DOC_DIR/SE AFLS Mobile Setup and Configuration Guide.pdf"
+MOBILE_GUIDE="$DOC_DIR/SE LSC Mobile Setup and Configuration Guide.pdf"
 if [ -f "$MOBILE_GUIDE" ]; then
-    convert_pdf "$MOBILE_GUIDE" "$KNOWLEDGE_DIR/guides/mobile-setup.md" "AFLS Mobile Setup and Configuration Guide"
+    convert_pdf "$MOBILE_GUIDE" "$KNOWLEDGE_DIR/guides/mobile-setup.md" "LSC Mobile Setup and Configuration Guide"
 else
     echo "Warning: Mobile setup guide not found at $MOBILE_GUIDE"
 fi

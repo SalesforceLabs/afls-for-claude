@@ -1,14 +1,14 @@
 <!-- guide:dev-guide section:fields-on-productrequest pages:1474-1474 -->
 # Fields on ProductRequest
 
-AFLS Overview                                                                                           Fields on ProductRequest
+Life Sciences Cloud (LSC) Overview                                                                                           Fields on ProductRequest
 
 
 
 
 ## Fields on ProductRequest
 
-AFLS fields extend the standard ProductRequest object for sample order information, including destination user and
+LSC fields extend the standard ProductRequest object for sample order information, including destination user and
 urgency level.
 
 
@@ -40,7 +40,7 @@ Specifies the level of urgency associated with the product request.
 
 ## Fields on ProductRequestLineItem
 
-AFLS fields extend the Product Request Line Item object to represent information about sample order details.
+LSC fields extend the Product Request Line Item object to represent information about sample order details.
 
 
 

@@ -81,7 +81,7 @@ function loadModuleContent(modulePath: string): string {
  */
 export function loadKnowledgeBase(): KnowledgeBase {
   const modules = new Map<string, ModuleDoc>();
-  let allContent = "# AFLS Knowledge Base\n\n";
+  let allContent = "# LSC Knowledge Base\n\n";
 
   if (!existsSync(KNOWLEDGE_BASE_PATH)) {
     console.error(`Knowledge base path not found: ${KNOWLEDGE_BASE_PATH}`);
@@ -450,18 +450,18 @@ function resolveFilePath(sourceFile: string, moduleName?: string): string {
  * Format a citation block for a guide section search result.
  *
  * Produces two links:
- * - afls-section:// — opens the section in the DocViewerPanel
- * - afls-pdf:// — opens the actual PDF file
+ * - lsc-section:// — opens the section in the DocViewerPanel
+ * - lsc-pdf:// — opens the actual PDF file
  */
 export function formatGuideSectionCitation(result: SearchResult): string {
   const { guideSlug, sectionSlug, matchPage, startPage, endPage, pdfFileName } = result;
   if (!guideSlug || !sectionSlug) return "";
 
-  const guideLabel = guideSlug === "admin-guide" ? "Administer AFLS" : "AFLS Developer Guide";
+  const guideLabel = guideSlug === "admin-guide" ? "Administer LSC" : "LSC Developer Guide";
 
   const pageInfo = matchPage ? ` (page ${matchPage})` : "";
-  const sectionUrl = `afls-section://${guideSlug}/${sectionSlug}?page=${matchPage || startPage}&highlight=${encodeURIComponent(result.title)}`;
-  const pdfUrl = pdfFileName ? `afls-pdf://${pdfFileName}?page=${matchPage || startPage}` : "";
+  const sectionUrl = `lsc-section://${guideSlug}/${sectionSlug}?page=${matchPage || startPage}&highlight=${encodeURIComponent(result.title)}`;
+  const pdfUrl = pdfFileName ? `lsc-pdf://${pdfFileName}?page=${matchPage || startPage}` : "";
 
   let block = `\n\n> **Source:** ${guideLabel} — ${result.title}${pageInfo}`;
   block += `\n>\n> **Section:** [${result.title}, pages ${startPage}-${endPage}](${sectionUrl})`;
@@ -475,7 +475,7 @@ export function formatCitation(sourceFile: string, moduleName?: string): string 
   const info = getCitation(sourceFile, moduleName);
   const filePath = resolveFilePath(sourceFile, moduleName);
 
-  const fileLink = `[${basename(filePath)}](afls-file://${filePath})`;
+  const fileLink = `[${basename(filePath)}](lsc-file://${filePath})`;
 
   if (!info) {
     const label = slugToTitle(sourceFile);

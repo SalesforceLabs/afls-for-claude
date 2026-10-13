@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:customer-engagement-tooling-api-objects pages:1911-1927 -->
 # Customer Engagement Tooling API Objects
 
-AFLS Overview                                                                   Customer Engagement Tooling API Objects
+Life Sciences Cloud (LSC) Overview                                                                   Customer Engagement Tooling API Objects
 
 
 
@@ -57,7 +57,7 @@ include spaces, not end with an underscore, and not contain two consecutive unde
 
 <!-- page:1912 -->
 
-AFLS Overview                                                              Customer Engagement Tooling API Objects
+LSC Overview                                                              Customer Engagement Tooling API Objects
 
 
 
@@ -111,7 +111,7 @@ Possible values are:
 
 <!-- page:1913 -->
 
-AFLS Overview                                                                                Customer Engagement Tooling API Objects
+LSC Overview                                                                                Customer Engagement Tooling API Objects
 
 
 
@@ -173,7 +173,7 @@ Create, Filter, Group, Restricted picklist, Sort, Update
 
 <!-- page:1914 -->
 
-AFLS Overview                                                          Customer Engagement Tooling API Objects
+LSC Overview                                                          Customer Engagement Tooling API Objects
 
 
 
@@ -222,7 +222,7 @@ Possible values are:
 
 <!-- page:1915 -->
 
-AFLS Overview                                                         Customer Engagement Tooling API Objects
+LSC Overview                                                         Customer Engagement Tooling API Objects
 
 
 
@@ -271,7 +271,7 @@ the API.
 
 <!-- page:1916 -->
 
-AFLS Overview                                                              Customer Engagement Tooling API Objects
+LSC Overview                                                              Customer Engagement Tooling API Objects
 
 
 
@@ -323,7 +323,7 @@ creates a managed package has a unique namespace prefix. The prefix is limited t
 
 <!-- page:1917 -->
 
-AFLS Overview                                                                                Customer Engagement Tooling API Objects
+LSC Overview                                                                                Customer Engagement Tooling API Objects
 
 
 
@@ -384,7 +384,7 @@ Possible values are:
 
 <!-- page:1918 -->
 
-AFLS Overview                                                         Customer Engagement Tooling API Objects
+LSC Overview                                                         Customer Engagement Tooling API Objects
 
 
 
@@ -437,7 +437,7 @@ picklist
 
 <!-- page:1919 -->
 
-AFLS Overview                                                               Customer Engagement Tooling API Objects
+LSC Overview                                                               Customer Engagement Tooling API Objects
 
 
 
@@ -489,7 +489,7 @@ textarea
 
 <!-- page:1920 -->
 
-AFLS Overview                                                              Customer Engagement Tooling API Objects
+LSC Overview                                                              Customer Engagement Tooling API Objects
 
 
 
@@ -540,7 +540,7 @@ double
 
 <!-- page:1921 -->
 
-AFLS Overview                                                               Customer Engagement Tooling API Objects
+LSC Overview                                                               Customer Engagement Tooling API Objects
 
 
 
@@ -590,7 +590,7 @@ The URL value for the field.
 
 <!-- page:1922 -->
 
-AFLS Overview                                                                           Customer Engagement Tooling API Objects
+LSC Overview                                                                           Customer Engagement Tooling API Objects
 
 
 
@@ -653,7 +653,7 @@ boolean
 
 <!-- page:1923 -->
 
-AFLS Overview                                                              Customer Engagement Tooling API Objects
+LSC Overview                                                              Customer Engagement Tooling API Objects
 
 
 
@@ -704,7 +704,7 @@ Possible values are:
 
 <!-- page:1924 -->
 
-AFLS Overview                                                             Customer Engagement Tooling API Objects
+LSC Overview                                                             Customer Engagement Tooling API Objects
 
 
 
@@ -755,7 +755,7 @@ configurations.
 
 <!-- page:1925 -->
 
-AFLS Overview                                                                           Customer Engagement Tooling API Objects
+LSC Overview                                                                           Customer Engagement Tooling API Objects
 
 
 
@@ -813,7 +813,7 @@ Indicates the type of custom template. Defines whether or not the template is ad
 
 <!-- page:1926 -->
 
-AFLS Overview                                                            Customer Engagement Tooling API Objects
+LSC Overview                                                            Customer Engagement Tooling API Objects
 
 
 
@@ -863,7 +863,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:1927 -->
 
-AFLS Overview                                                             Customer Engagement Tooling API Objects
+LSC Overview                                                             Customer Engagement Tooling API Objects
 
 
 

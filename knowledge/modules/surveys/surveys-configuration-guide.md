@@ -2,7 +2,7 @@
 
 ## Overview
 
-Surveys in AFLS allow field teams to collect structured feedback from healthcare professionals (HCPs) during or after interactions. Surveys can be launched from visits, account pages, or standalone, and responses are tracked for reporting and analytics.
+Surveys in Life Sciences Cloud (LSC) allow field teams to collect structured feedback from healthcare professionals (HCPs) during or after interactions. Surveys can be launched from visits, account pages, or standalone, and responses are tracked for reporting and analytics.
 
 ## Key Objects
 
@@ -34,7 +34,7 @@ Surveys in AFLS allow field teams to collect structured feedback from healthcare
 4. Configure question logic (branching, required fields)
 5. Set the survey to **Active**
 
-### Question Types for AFLS
+### Question Types for LSC
 
 | Type | Best For |
 |------|----------|
@@ -51,7 +51,7 @@ Surveys must be shared with the users/territories that will use them:
 
 1. **Public Link:** Generate a survey URL that can be emailed or embedded
 2. **Community/Experience Site:** Embed in a customer-facing portal
-3. **In-App (AFLS):** Launch surveys from within the AFLS web or mobile app
+3. **In-App (LSC):** Launch surveys from within the LSC web or mobile app
 
 ### Launch Points
 
@@ -90,7 +90,7 @@ Surveys can be triggered from:
 
 ## Mobile Considerations
 
-- Surveys are accessible on the AFLS Mobile app through visit flows and quick actions
+- Surveys are accessible on the LSC Mobile app through visit flows and quick actions
 - Offline survey completion is supported when DB Schema is configured for survey objects
 - Survey responses sync when connectivity is restored
 

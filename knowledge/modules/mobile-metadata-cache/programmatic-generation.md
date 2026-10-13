@@ -1,6 +1,6 @@
 # Programmatic Mobile Metadata Cache Generation
 
-This document describes how to programmatically generate the AFLS Mobile Metadata Cache without using the Admin Console UI.
+This document describes how to programmatically generate the Life Sciences Cloud (LSC) Mobile Metadata Cache without using the Admin Console UI.
 
 ## Overview
 
@@ -31,7 +31,7 @@ POST /services/data/v{version}/connect/life-sciences/commercial/metadata/actions
 |-----------|-------------|
 | `parentMetadataRecordId` | The Salesforce ID of the parent LifeSciMobileMetadataRecord |
 | `apiVersion` | The API version to use (e.g., "64.0") |
-| `prefix` | The namespace prefix, typically "lsc4ce" for AFLS4CE |
+| `prefix` | The namespace prefix, typically "lsc4ce" for LSC4CE |
 
 ## Apex Implementation
 
@@ -123,7 +123,7 @@ VALUES ('New', 'New')
 SELECT Id, Name FROM Profile WHERE Name = 'Medical Sales Representative'
 ```
 
-Common AFLS profiles:
+Common LSC profiles:
 - Medical Sales Representative
 - Key Account Manager
 - Field Medical
@@ -189,7 +189,7 @@ WHERE Id = '<record_id>'
 
 Common errors:
 - **Profile not found**: Ensure ProfileId references a valid, active profile
-- **Permission denied**: User must have appropriate AFLS permissions
+- **Permission denied**: User must have appropriate LSC permissions
 - **Callout failed**: Check Remote Site Settings include your org domain
 
 ### Verifying Generation Success
@@ -206,11 +206,11 @@ Successful generation shows:
 - `Status = 'Active'` or `Status = 'Published'`
 - `IntegrationStatus = 'Ok'`
 
-## Using the AFLS for Claude Plugin
+## Using the LSC for Claude Plugin
 
 The plugin provides automated metadata cache generation via:
 
-### Command: `/afls:generate-metadata-cache`
+### Command: `/lsc:generate-metadata-cache`
 
 This command walks you through:
 1. Selecting target profiles

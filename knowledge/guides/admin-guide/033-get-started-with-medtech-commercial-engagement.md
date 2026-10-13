@@ -7,7 +7,7 @@
 
 Get Started with MedTech Commercial Engagement
 
-AFLS helps teams better engage with their customers by streamlining the end-to-end
+Life Sciences Cloud (LSC) helps teams better engage with their customers by streamlining the end-to-end
 process, from lead generation to fulfilling orders. Accurate forecasts ensure transparency across your
 sales and commercial units. Explore a trial org and then learn what’s included, what setup we
 recommend, and how to prepare for your implementation.
@@ -22,7 +22,7 @@ Engagement?                        Leverage Sales Agreements to
 Manage Your Run-Rate Business       Automate Processes with
 Video: Watch a Demo                                                    Omnistudio
 Plan Ahead with Account-Based
-Create a AFLS Trial and Advanced Forecasting            Automate Complex Decision-
+Create a LSC Trial and Advanced Forecasting            Automate Complex Decision-
 Org                                                                    Making Solutions Using Business
 Strategically Grow Your Business    Rules Engine
 with Account Manager Targets
@@ -37,13 +37,13 @@ with Intelligent Sales
 Extend Further: Learn About        Get Ready for Your                  Know Your Resources & Get
 Additional Capabilities & Add-     Implementation                      Help
 Ons
-Assign Permission Sets for          Trailhead: AFLS for
+Assign Permission Sets for          Trailhead: LSC for
 Manage Your Commercial Edge        Intelligent Sales                   MedTech
 with Rebate Management
 Extend Field Inventory Processes    Trailhead: Surgical Case Visit and
 with Sample Flows                   Field Inventory Management
 
-AFLS Developer
+LSC Developer
 Guide
 
 

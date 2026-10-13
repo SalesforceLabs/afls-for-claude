@@ -27,7 +27,7 @@ Use Surveys to collect feedback from customers.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with Life Sciences Cloud (LSC), LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -89,7 +89,7 @@ compliant with data privacy regulations.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS and the AFLS for
+Available in: Enterprise and Unlimited Editions with LSC and the LSC for
 Customer Engagement Add-On license
 
 
@@ -116,7 +116,7 @@ with applicable regulatory requirements.
 
 ## Add a Logo to the Consent Page
 
-Use static resources to upload a logo or image that you can reference in the AFLS for
+Use static resources to upload a logo or image that you can reference in the LSC for
 Customer Engagement app. This logo appears in the signature section when sales reps collect consent
 from healthcare professionals, helping your organization maintain brand consistency.
 Mobile App Configuration for Consent Management
@@ -145,7 +145,7 @@ channel preferences.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -195,7 +195,7 @@ f. Save your changes.
 Based on your business needs, you can also set the page as an Org Default to show it for all account
 records or as an App Default for the specific app.
 
-To see this tab on the AFLS Mobile app, generate a metadata cache.
+To see this tab on the LSC Mobile app, generate a metadata cache.
 
 
 ## See Also
@@ -214,7 +214,7 @@ Management.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -223,7 +223,7 @@ package.
 ## Add a New Subscription
 
 Create a Communication Subscription record to add new subscription topics to the Consent page on
-the AFLS for Customer Engagement app.
+the LSC for Customer Engagement app.
 Create a Data Use Purpose Record
 
 <!-- page:241 -->
@@ -249,7 +249,7 @@ Set Up Consent Management
 Add a New Subscription
 
 Create a Communication Subscription record to add new subscription topics to the Consent page on the
-AFLS for Customer Engagement app.
+LSC for Customer Engagement app.
 
 
 **REQUIRED EDITIONS**
@@ -257,7 +257,7 @@ AFLS for Customer Engagement app.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -310,7 +310,7 @@ Purpose record to manage and organize consents for specific products.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -347,7 +347,7 @@ professionals can choose from as their primary mode of communication.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 
 <!-- page:243 -->
 
@@ -384,7 +384,7 @@ makes these options available on the Consent page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -426,7 +426,7 @@ applicable regulatory requirements.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -437,7 +437,7 @@ To set up and configure Consent Management           Life Sciences Commercial Ad
 features and objects:
 
 
-- The Consent page in the AFLS for Customer Engagement app works by creating a series
+- The Consent page in the LSC for Customer Engagement app works by creating a series
 of connected Communication Subscription records and related object data: Communication
 Subscription, Engagement Channel Types, Communication Subscriptions Channel Types, Data Use
 Purpose, Compliance Statement Definition, Communication Subscription Consent, Communication
@@ -473,7 +473,7 @@ signing.
 a. In the Attachment Requirement for Desktop Site field, select an option to determine whether an
 attachment is required or not when capturing consent on a desktop site.
 b. In the Attachment Requirement for Mobile App field, select an option to determine whether an
-attachment is required or not when capturing consent on the AFLS Mobile app.
+attachment is required or not when capturing consent on the LSC Mobile app.
 8. In the Product Restriction section, select Show restricted products.
 Show or hide disabled subscriptions associated with the restricted products.
 9. Configure the subscription filtering fields.
@@ -497,13 +497,13 @@ conditions when a provider account territory info record isn't available.
 
 Manage Subscriptions and Channels
 Generate Metadata Cache
-Customize the AFLS Mobile App
+Customize the LSC Mobile App
 Consent Management Trigger Handlers
 
 
 Add a Logo to the Consent Page
 
-Use static resources to upload a logo or image that you can reference in the AFLS for
+Use static resources to upload a logo or image that you can reference in the LSC for
 Customer Engagement app. This logo appears in the signature section when sales reps collect consent
 from healthcare professionals, helping your organization maintain brand consistency.
 
@@ -513,7 +513,7 @@ from healthcare professionals, helping your organization maintain brand consiste
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -532,7 +532,7 @@ To create static resources:                          Customize Application
 
 1. From Setup, create a static resource, and enter the name as SignatureAreaLogo.
 See Create a Static Resource.
-2. Configure the logo in the AFLS Mobile app's UI.
+2. Configure the logo in the LSC Mobile app's UI.
 a. From the App Launcher, find and select Life Sciences Commercial.
 b. Click Admin Console.
 c. In the Life Sciences Customer Engagement Setup page, click Mobile.
@@ -550,7 +550,7 @@ For example, System Administrator.
 k. To activate the configuration, select IsActive.
 l. Save your changes.
 
-To see the logo on the AFLS Mobile app, generate a metadata cache.
+To see the logo on the LSC Mobile app, generate a metadata cache.
 
 
 ## See Also
@@ -561,7 +561,7 @@ Generate Metadata Cache
 Mobile App Configuration for Consent Management
 
 Create object metadata cache configuration for supported Consent Management objects and generate a
-metadata cache to make sure your sales reps can view and update consents on the AFLS
+metadata cache to make sure your sales reps can view and update consents on the LSC
 Mobile app.
 
 
@@ -570,7 +570,7 @@ Mobile app.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -629,7 +629,7 @@ or signature.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -647,7 +647,7 @@ Consent confirmation emails confirm the subscriptions and channels that the HCP 
 the feature to send the email automatically or only when the Request receipt option is selected during
 consent capture.
 
-To send the email to the correct recipient, AFLS for Customer Engagement automatically
+To send the email to the correct recipient, LSC for Customer Engagement automatically
 selects the primary Contact Point Email associated with the account that has the highest preference rank.
 Sent emails appear in the account’s Activity History.
 
@@ -688,7 +688,7 @@ Snapshot objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -708,7 +708,7 @@ Compliance Snapshot records.
 Run and Schedule a Batch Job
 
 To make sure that new sharing records stay aligned with the latest account and territory changes, use this
-Apex code snippet in the Developer Console. See [Run Batch Jobs for AFLS for Customer
+Apex code snippet in the Developer Console. See [Run Batch Jobs for LSC for Customer
 Engagement app].
 
 
@@ -751,7 +751,7 @@ legal, and regulatory standards.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -773,7 +773,7 @@ tracking.
 
 ## Get Your Org Ready for Medical Inquiries
 
-Before you set up Medical Inquiry in AFLS, make sure you have the required user
+Before you set up Medical Inquiry in LSC, make sure you have the required user
 profiles, licenses, and permission sets.
 Define Statuses for Medical Inquiries
 Medical inquiries move through a series of steps from creation to closure. To get a clear understanding
@@ -840,7 +840,7 @@ Salesforce Help: Review and Respond to a Medical Inquiry
 
 Get Your Org Ready for Medical Inquiries
 
-Before you set up Medical Inquiry in AFLS, make sure you have the required user profiles,
+Before you set up Medical Inquiry in LSC, make sure you have the required user profiles,
 licenses, and permission sets.
 
 
@@ -849,7 +849,7 @@ licenses, and permission sets.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -886,7 +886,7 @@ Inquiry workflow efficiently.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -929,7 +929,7 @@ response to the inquiry questions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -990,7 +990,7 @@ Lightning component that enables users to manage both inquiry and case records i
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1030,7 +1030,7 @@ medical science liaisons can easily manage and track all inquiries related to th
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 
 <!-- page:255 -->
@@ -1088,7 +1088,7 @@ to get a better context of the healthcare professional while creating the inquir
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1140,7 +1140,7 @@ view records.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1187,7 +1187,7 @@ have the same sharing settings.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1232,7 +1232,7 @@ only assign and respond to the inquiries.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1289,7 +1289,7 @@ the sales representative.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1377,7 +1377,7 @@ path based on the Inquiry object and its different stages.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1588,7 +1588,7 @@ reliability of inquiry data by using the MIRF Share Management job.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1631,14 +1631,14 @@ actions and defining granular permissions to control how users interact with ins
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS and the AFLS for
+Available in: Enterprise and Unlimited Editions with LSC and the LSC for
 Customer Engagement Add-On license
 
 
 
 ## Get Your Org Ready for Medical Insights
 
-Before you set up Medical Insights in the AFLS, make sure that you enable all the
+Before you set up Medical Insights in the LSC, make sure that you enable all the
 necessary system components and data structures.
 Add Medical Insights Tab to App Launcher
 Make Medical Insights available to users by adding a tab in the Life Sciences mobile app. This tab
@@ -1668,7 +1668,7 @@ Account, and Visit pages.
 
 Get Your Org Ready for Medical Insights
 
-Before you set up Medical Insights in the AFLS, make sure that you enable all the
+Before you set up Medical Insights in the LSC, make sure that you enable all the
 necessary system components and data structures.
 
 
@@ -1677,7 +1677,7 @@ necessary system components and data structures.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1724,7 +1724,7 @@ enables users to view their insights as well as insights captured by the same pr
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1754,7 +1754,7 @@ data on Account and Visit records.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1794,7 +1794,7 @@ component to provide a seamless user experience when navigating medical insights
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1836,7 +1836,7 @@ Add necessary components to capture insights from these Account and Visit record
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1886,7 +1886,7 @@ mandate certain required fields before saving them.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1917,7 +1917,7 @@ and Visit pages.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1963,7 +1963,7 @@ need for in-person visits.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1981,7 +1981,7 @@ Twilio WSS endpoints as trusted URLs and set up Experience Cloud sites for custo
 remote engagement visits.
 Mobile Configuration for Remote Engagement
 Set up object metadata cache configurations for Life Sciences remote engagement objects. Generate
-a metadata cache to package the object schema configuration that the AFLS mobile
+a metadata cache to package the object schema configuration that the LSC mobile
 app uses for online and offline access. This configuration defines how the mobile app fetches and
 stores the necessary metadata when a network connection is unavailable.
 
@@ -2001,7 +2001,7 @@ for Customer Engagement.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2045,7 +2045,7 @@ visits.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 
 <!-- page:273 -->
@@ -2091,7 +2091,7 @@ type. The new channel value is used to configure video call settings.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2125,7 +2125,7 @@ Remote Engagement for Digital Experience permission set.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2151,7 +2151,7 @@ To support attendees joining a video call remote session via the Experience Clou
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2239,7 +2239,7 @@ and add it as a member to your Experience Cloud site. If you skip these steps, h
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2294,7 +2294,7 @@ Salesforce org. Use the Admin Console to define video call settings and add phon
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2302,7 +2302,7 @@ package.
 
 ## Configure Twilio Credentials
 
-Twilio's named and external credentials are delivered in the AFLS for Customer
+Twilio's named and external credentials are delivered in the LSC for Customer
 Engagement managed package. To finalize the setup, add authentication parameters such as the
 Twilio account ID, authorization token, API key, and secrets.
 Assign Trusted Twilio URLs
@@ -2318,7 +2318,7 @@ To allow remote users to join meetings from their phones, define dial-in options
 
 Configure Twilio Credentials
 
-Twilio's named and external credentials are delivered in the AFLS for Customer
+Twilio's named and external credentials are delivered in the LSC for Customer
 Engagement managed package. To finalize the setup, add authentication parameters such as the Twilio
 account ID, authorization token, API key, and secrets.
 
@@ -2328,7 +2328,7 @@ account ID, authorization token, API key, and secrets.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2398,7 +2398,7 @@ Salesforce org.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 
 <!-- page:279 -->
 
@@ -2444,7 +2444,7 @@ sessions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2514,7 +2514,7 @@ To allow remote users to join meetings from their phones, define dial-in options
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 
 <!-- page:281 -->
 
@@ -2560,7 +2560,7 @@ for accounts.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2598,7 +2598,7 @@ engagement trigger handlers.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2630,7 +2630,7 @@ emails notifying attendees of any changes to the visit.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2727,7 +2727,7 @@ discussions, or consent.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2787,7 +2787,7 @@ action.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2834,7 +2834,7 @@ Add terms and conditions that participants see and must accept upon joining a vi
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2897,7 +2897,7 @@ To make video call recordings for visits available to your users, add a related 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2926,7 +2926,7 @@ expires.
 Mobile Configuration for Remote Engagement
 
 Set up object metadata cache configurations for Life Sciences remote engagement objects. Generate a
-metadata cache to package the object schema configuration that the AFLS mobile app
+metadata cache to package the object schema configuration that the LSC mobile app
 
 <!-- page:288 -->
 
@@ -2941,7 +2941,7 @@ necessary metadata when a network connection is unavailable.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2952,7 +2952,7 @@ To set up Life Sciences Customer Engagement          Life Sciences Commercial Ad
 data:
 
 
-To set up offline access for the objects that support remote engagement in the AFLS
+To set up offline access for the objects that support remote engagement in the LSC
 mobile app, create these object metadata cache configurations. Make sure that you also set up offline
 access for other areas of the app, such as visits, presentations, emails, and consent.
 
@@ -2996,7 +2996,7 @@ strategic decision-making.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3110,7 +3110,7 @@ the valid responses that users can choose from.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3178,7 +3178,7 @@ invitation directly from the survey builder.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3211,7 +3211,7 @@ specific target, such as an account or territory.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3238,7 +3238,7 @@ batch job. Create a schedule-triggered flow to invoke this batch job and merge y
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3286,7 +3286,7 @@ component. Enable users to retake a survey by making the survey link clickable.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3312,7 +3312,7 @@ pages.
 3. Click and drag the component from the left pane to where you'd like to place it in the right pane.
 4. To access the properties pane, click the component that you just added.
 a. To enable users to retake the survey, select Let users retake a survey after submitting responses.
-b. To auto-populate fields with prior responses when users retake a survey in the AFLS
+b. To auto-populate fields with prior responses when users retake a survey in the LSC
 for Customer Engagement app, select Pre-fill responses from previous survey submission.
 5. Save your changes, and then click Activation.
 6. In the Activation window, to choose whether you want to Assign or Remove your Salesforce org as
@@ -3336,7 +3336,7 @@ into a downloadable metadata cache that the mobile app can use for offline acces
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3384,7 +3384,7 @@ fetches all survey invitation records linked to those accounts.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3423,7 +3423,7 @@ controls.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3473,7 +3473,7 @@ Visit pages support users throughout the visit lifecycle. For streamlined user e
 with two pages throughout the visit lifecycle:
 
 - Visit Engagement Page (Edit Visit)
-- This is the AFLS specific, purpose-built page that helps users plan, engage, and
+- This is the LSC specific, purpose-built page that helps users plan, engage, and
 follow-up on the visit within a single page to complete their visit engagements efficiently and
 compliantly, such as sharing approved content, products and messages, and capturing samples.
 This page is accessible only for planned visits.
@@ -3494,13 +3494,13 @@ Visit Data Model
 
 Visit management uses a one-to-one relationship between visit and provider visit records. As a result, for
 each visit record created, a corresponding provider visit record is automatically created. Provider Visit is a
-AFLS object that is used to extend the standard Visit object. See the Visit Management
+LSC object that is used to extend the standard Visit object. See the Visit Management
 data model to learn about these objects and how work together to support visit management.
 
 
 ## Get Your Org Ready for Visit Management
 
-Before you get started with visits in AFLS for Customer Engagement, complete a few
+Before you get started with visits in LSC for Customer Engagement, complete a few
 tasks to prepare your org for visit management features.
 Visit Management Admin Console
 To configure what information fields users can see and how they can interact with and manage visit
@@ -3513,7 +3513,7 @@ sales teams to provide this information during visits with their customers.
 
 Get Your Org Ready for Visit Management
 
-Before you get started with visits in AFLS for Customer Engagement, complete a few tasks
+Before you get started with visits in LSC for Customer Engagement, complete a few tasks
 to prepare your org for visit management features.
 
 
@@ -3522,7 +3522,7 @@ to prepare your org for visit management features.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3606,7 +3606,7 @@ they need to conduct effective visits.
 ## Mobile App Configuration for Visit Management
 
 Configure the object schema for supported Visit Management objects and generate a metadata cache
-to make sure your field users can view and update visits on the AFLS mobile app. You
+to make sure your field users can view and update visits on the LSC mobile app. You
 must also do this for Visit Management to work for desktop users.
 
 
@@ -3629,7 +3629,7 @@ to conduct effective visits.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3720,7 +3720,7 @@ configure the New button that is shown on the home and list view pages.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3742,7 +3742,7 @@ lsc4ce:LogAVisitAction.
 Mobile App Configuration for Visit Management
 
 Configure the object schema for supported Visit Management objects and generate a metadata cache to
-make sure your field users can view and update visits on the AFLS mobile app. You must
+make sure your field users can view and update visits on the LSC mobile app. You must
 also do this for Visit Management to work for desktop users.
 
 
@@ -3751,7 +3751,7 @@ also do this for Visit Management to work for desktop users.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3761,7 +3761,7 @@ USER PERMISSIONS NEEDED
 To set up and manage visits:                           Life Sciences Commercial Admin
 
 
-To enable offline access for the objects that support Visit Management in the AFLS mobile
+To enable offline access for the objects that support Visit Management in the LSC mobile
 app, create these object metadata cache configurations.
 
 To limit the data that's downloaded to the mobile device, make sure to specify the SOQL Filter Condition.
@@ -3922,7 +3922,7 @@ records, use the Admin Console.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3958,7 +3958,7 @@ settings in the Admin Console.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 
 <!-- page:306 -->
 
@@ -4029,7 +4029,7 @@ associations between account record types and visit record types.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4058,7 +4058,7 @@ product discussion record types to use for specific marketable products and cond
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4100,7 +4100,7 @@ records, run the Provider Account Territory Information job.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4127,7 +4127,7 @@ This provides field users with continued access to account visit data in their u
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4167,7 +4167,7 @@ to provide this information during visits with their customers.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 

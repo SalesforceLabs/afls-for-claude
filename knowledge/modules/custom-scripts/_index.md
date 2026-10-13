@@ -1,6 +1,6 @@
 # Custom Scripts
 
-AFLS4CE supports **JavaScript-based custom scripts** for workflow validation and visit action validation. Scripts run on the mobile device (and in web), are authored as headless LWCs, deployed via Workbench, and registered against the **Life Science Custom Script** object in Admin Console.
+LSC4CE supports **JavaScript-based custom scripts** for workflow validation and visit action validation. Scripts run on the mobile device (and in web), are authored as headless LWCs, deployed via Workbench, and registered against the **Life Science Custom Script** object in Admin Console.
 
 ## Three Script Types
 
@@ -10,7 +10,7 @@ AFLS4CE supports **JavaScript-based custom scripts** for workflow validation and
 | **Workflow-Dependent Checklist** | When user clicks the info (ⓘ) icon | ❌ Informational only |
 | **Visit Action Validation** | On Visit Sign / Submit | ✅ Blocks visit completion |
 
-> A fourth type, Custom Permission–based, existed in OCE but is **not currently supported in AFLS4CE**.
+> A fourth type, Custom Permission–based, existed in OCE but is **not currently supported in LSC4CE**.
 
 ## Execution Context
 
@@ -25,6 +25,6 @@ Every accessor method has **namespace-prefixed** and **`noNs_`** variants — us
 
 ## Documentation
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 - [Validations using Custom Scripts](./support-engineering-validations-custom-scripts.md) — three script types, execution context, deployment workflow (LWC → Workbench → Admin Console → Refresh), troubleshooting (namespace mismatches, action label mismatches, missed Refresh, access issues)

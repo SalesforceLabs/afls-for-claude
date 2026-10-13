@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:careproviderafflroleconfig pages:1896-1897 -->
 # CareProviderAfflRoleConfig
 
-AFLS Overview                                                                                                  CareProviderAfflRoleConfig
+Life Sciences Cloud (LSC) Overview                                                                                                  CareProviderAfflRoleConfig
 
 
 
@@ -64,7 +64,7 @@ Possible values are:
 
 <!-- page:1897 -->
 
-AFLS Overview                                                                                CareProviderAfflRoleConfig
+LSC Overview                                                                                CareProviderAfflRoleConfig
 
 
 

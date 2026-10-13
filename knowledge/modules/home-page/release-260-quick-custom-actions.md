@@ -1,14 +1,14 @@
 # Quick & Custom Actions — Spring '26 (Release 260)
 
 **Release:** Spring '26 — Release 260
-**Session:** AFLS4CE Value Chain Training — Mar 6, 2026
+**Session:** LSC4CE Value Chain Training — Mar 6, 2026
 **Audience:** Support engineers + admins
 **Presenter:** Srikant Chonnad
 **Source:** Engineering training series (deck + Gemini transcript)
 
 ## Overview
 
-Spring '26 introduces **3 action types** for the AFLS mobile + web record pages — **Standard**, **Quick**, and **Custom** — and a special **GoTo** action pattern for Visit Engagement. The headline change: admins can now configure mobile-friendly custom actions (URL launchers, app launchers, voice utterances, LWC modals) without code, controlled by a **Dynamic Actions** toggle.
+Spring '26 introduces **3 action types** for the Life Sciences Cloud (LSC) mobile + web record pages — **Standard**, **Quick**, and **Custom** — and a special **GoTo** action pattern for Visit Engagement. The headline change: admins can now configure mobile-friendly custom actions (URL launchers, app launchers, voice utterances, LWC modals) without code, controlled by a **Dynamic Actions** toggle.
 
 > **The cardinal rule:** For Quick + Custom actions to appear on a Lightning Record Page, the **Standard action MUST also be present** on the same record page. The system uses Standard as the "anchor" — without it, dynamic actions don't render.
 
@@ -70,7 +70,7 @@ Visit.Status != 'Completed'
 
 ## iPad URI Schemes (Custom Action URL targets)
 
-Spring '26 cataloged the schemes the AFLS4CE iPad app supports for Custom Action URL targets:
+Spring '26 cataloged the schemes the LSC4CE iPad app supports for Custom Action URL targets:
 
 | Scheme | Opens |
 |---|---|

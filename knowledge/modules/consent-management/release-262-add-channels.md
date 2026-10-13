@@ -4,7 +4,7 @@ Target Release: 262
 
 ## Introduction
 
-During evaluation of OCE Personal OPT data models in 254, it was discovered that most Salesforce Consent and Privacy data models could support AFLS consent data. The focus on 258 was to replatform current OCE Opt/Consent screens to Salesforce's consent and privacy data model. This feature addresses key spillover functionality that couldn't be completed in 258.
+During evaluation of OCE Personal OPT data models in 254, it was discovered that most Salesforce Consent and Privacy data models could support Life Sciences Cloud (LSC) consent data. The focus on 258 was to replatform current OCE Opt/Consent screens to Salesforce's consent and privacy data model. This feature addresses key spillover functionality that couldn't be completed in 258.
 
 These features are crucial for a seamless user experience — allowing sales reps to capture communication channels from within the Consent capture module without navigating to other tabs.
 
@@ -41,7 +41,7 @@ Address the key gap of capturing communication channels so that a sales rep can 
 **As an Admin**, I want to filter subscriptions based on HCP specialty so only relevant subscriptions are surfaced during consent capture.
 
 **Configuration:**
-- Admin Console > AFLS Commercial > Consent Management
+- Admin Console > LSC Commercial > Consent Management
 - Account Filter and ATP filter settings
 - Subscription Filtering Fields: map to Healthcare Provider Specialty
 - Only matching subscriptions surfaced in HCP consent capture screen
@@ -71,4 +71,4 @@ Share consent records with re-aligned territory when account-territory alignment
 - 254 OCE-P Migration - Opts/Consent Management Product Brief
 - 256 Consent Management Steel Thread re-platforming effort
 - Consent Management re-platforming epic narrative
-- AFLS Consent Reimagination Scenarios
+- LSC Consent Reimagination Scenarios

@@ -1,4 +1,4 @@
-- Hello everyone, I'm Rebecca Wang and I'm a product manager of AFLS. Today I'll walk you through the **data model and setup objects** that power the **App Alerts** module in AFLS for Customer Engagement.
+- Hello everyone, I'm Rebecca Wang and I'm a product manager of LSC. Today I'll walk you through the **data model and setup objects** that power the **App Alerts** module in Life Sciences Cloud (LSC) for Customer Engagement.
 
 - The purpose of App Alerts is to deliver **timely, contextual messages** directly where users work---so they can stay informed and follow up **without breaking their flow**.
 
@@ -30,9 +30,9 @@
 
         - they can open a specific **tab** inside the app,
 
-        - they can navigate directly to a particular **AFLS4CE record**,
+        - they can navigate directly to a particular **LSC4CE record**,
 
-        - or they could launch an **AFLS4CE quick action**---and you can pass optional parameters along with it.
+        - or they could launch an **LSC4CE quick action**---and you can pass optional parameters along with it.
 
       - Deep links aren't limited to the app itself---they can also open **external apps** like Slack, or take you to **external websites** in a new browser tab.
 
@@ -58,7 +58,7 @@
 
 <!-- -->
 
-- First is **Global,** if Global is picked, then the alert appears **across the AFLS4CE mobile app** anywhere the App Alerts feature is supported. It shows everywhere. But sometimes, you might want it to show only in a specific part of the app.
+- First is **Global,** if Global is picked, then the alert appears **across the LSC4CE mobile app** anywhere the App Alerts feature is supported. It shows everywhere. But sometimes, you might want it to show only in a specific part of the app.
 
 - Then you need to pick "**Tab**". If you choose "Tab," you also need to fill in the Display Context Name to tell the system which tab.
 
@@ -82,7 +82,7 @@ Mobile End User
 
 ### **App Alerts Overview 📣**
 
-App Alerts is a feature within the AFLS for Customer Engagement that provides
+App Alerts is a feature within the LSC for Customer Engagement that provides
 
 **timely, contextual, and actionable messages** to field users like sales reps and medical science liaisons, helping them stay informed and act efficiently within their daily workflows^111111111111111111111111111111111^. This framework helps to reduce missed opportunities and cognitive overload by delivering insights directly where users are working, whether on the web or mobile platforms^222222^.
 

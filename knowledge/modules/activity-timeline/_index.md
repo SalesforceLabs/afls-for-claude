@@ -16,6 +16,6 @@ Activity Timeline gives reps a unified timeline + calendar view of standard acti
 
 - [activity-timeline-transcripts](./activity-timeline-transcripts.md)
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 - [support-engineering-activity-timeline](./support-engineering-activity-timeline.md) — Jun 9, 2026 session. Full Admin Console structure (3 tabs), Custom Activity Container Object pattern (4 steps + multiple-source-objects via one container), Standard Object Data Integrity Checklist, 5 troubleshooting patterns (status mismatch, custom field loading, missing actions, calendar behavior).

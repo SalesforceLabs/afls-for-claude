@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:visitorfeed pages:1448-1451 -->
 # VisitorFeed
 
-AFLS Overview                                                                                                             VisitorFeed
+Life Sciences Cloud (LSC) Overview                                                                                                             VisitorFeed
 
 
 
@@ -57,7 +57,7 @@ boolean
 
 <!-- page:1449 -->
 
-AFLS Overview                                                                                             VisitorFeed
+LSC Overview                                                                                             VisitorFeed
 
 
 
@@ -108,7 +108,7 @@ picklist
 
 <!-- page:1450 -->
 
-AFLS Overview                                                                                                        VisitorFeed
+LSC Overview                                                                                                        VisitorFeed
 
 
 
@@ -158,7 +158,7 @@ this field is the link name.
 
 <!-- page:1451 -->
 
-AFLS Overview                                                                              VisitorFeed
+LSC Overview                                                                              VisitorFeed
 
 
 

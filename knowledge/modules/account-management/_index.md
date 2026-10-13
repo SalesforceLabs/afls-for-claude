@@ -13,7 +13,7 @@
 - [data-change-request-talk-track](./data-change-request-talk-track.md)
 - [provider-card](./provider-card.md)
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 Deep-dive support engineering content on Search Before Create (SBC) from the Engineering → Support training series. Two-part series covering internal search flows + external OneKey integration.
 

@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:actionplantemplateitemvalue pages:1462-1462 -->
 # ActionPlanTemplateItemValue
 
-AFLS Overview                                                                                              ActionPlanTemplateItemValue
+Life Sciences Cloud (LSC) Overview                                                                                              ActionPlanTemplateItemValue
 
 
 
@@ -18,7 +18,7 @@ Object Reference for the Salesforce Platform: ActionPlanItem
 
 ## ActionPlanTemplateItemValue
 
-AFLS fields extend the standard ActionPlanTemplateItemValue object to represent the value associated with an action
+LSC fields extend the standard ActionPlanTemplateItemValue object to represent the value associated with an action
 plan template item.
 The ActionPlanTemplateItemValue object and its fields are used by the Key Account Management and the Provider Engagement
 Compliance feature areas. This topic only lists the fields used in Key Account Management. To learn about the fields that are used in

@@ -189,8 +189,8 @@ function extractSkillNamesFromClaudeMd(content: string): string[] {
 
 /**
  * Extract command names from the Commands table in CLAUDE.md.
- * Lines look like: | `/afls:command-name` | Description |
- * Returns the part after `/afls:`, e.g., "setup-plugin".
+ * Lines look like: | `/lsc:command-name` | Description |
+ * Returns the part after `/lsc:`, e.g., "setup-plugin".
  */
 function extractCommandNamesFromClaudeMd(content: string): string[] {
   const commands: string[] = [];
@@ -218,7 +218,7 @@ function extractCommandNamesFromClaudeMd(content: string): string[] {
         continue;
       }
 
-      const match = line.match(/^\|\s*`\/afls:([^`]+)`\s*\|/);
+      const match = line.match(/^\|\s*`\/lsc:([^`]+)`\s*\|/);
       if (match) {
         commands.push(match[1]);
       }

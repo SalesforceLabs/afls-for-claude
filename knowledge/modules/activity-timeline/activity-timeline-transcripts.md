@@ -1,4 +1,4 @@
-- Hello everyone, I'm Rebecca Wang, a product manager for AFLS. In this video, I'll walk you through how to configure the **Activity Timeline** as an admin.
+- Hello everyone, I'm Rebecca Wang, a product manager for LSC. In this video, I'll walk you through how to configure the **Activity Timeline** as an admin.
 
 - The Activity Timeline is a chronological view of different types of interactions, giving users a clear, consolidated history of customer engagement.
 

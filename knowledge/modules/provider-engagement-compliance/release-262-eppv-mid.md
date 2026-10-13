@@ -20,7 +20,7 @@ Steps:
 3. **Update page layouts** — For Care Programs, Care Program Products, and Action Plan Templates to expose compliance tracking fields
 4. **Customize status mappings** — In Admin Console, map custom statuses to action plan states (Not Started, In Progress, etc.) and Care Program states
 5. **Configure assessment task** — Select record type and field set for EPPV/MID compliance activity capture during visits
-6. **Add compliance tab** — In AFLS App Builder for user visibility
+6. **Add compliance tab** — In Life Sciences Cloud (LSC) App Builder for user visibility
 7. **Configure quick action** — On visit page for capturing EPPV/MID assessment tasks
 
 ### Background Flows (4)

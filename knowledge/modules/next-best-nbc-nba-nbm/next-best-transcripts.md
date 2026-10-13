@@ -1,4 +1,4 @@
-- Hi, everyone, I'm Rebecca Wang and I'm a product manager of AFLS. In this video, I'll walk you through how to set up the Next Best Action and how to **create the underlying data**.
+- Hi, everyone, I'm Rebecca Wang and I'm a product manager of LSC. In this video, I'll walk you through how to set up the Next Best Action and how to **create the underlying data**.
 
 - First, make sure to check the prerequisites. Verify that the correct **permission set** and **Apex class access** are assigned to the target users. Also, confirm that the required **trigger handlers** as well as mobile Db Schemas for Next Best Action are enabled. You can find details on these in the user guide. These are important to make sure the NBA works as expected.
 
@@ -36,7 +36,7 @@
 
 Admin NBC
 
-- Hi, everyone, I'm Rebecca Wang and I'm a product manager of AFLS. In this video, I'll walk you through how to set up the Next Best Customer and how to **create the underlying data manually**.
+- Hi, everyone, I'm Rebecca Wang and I'm a product manager of LSC. In this video, I'll walk you through how to set up the Next Best Customer and how to **create the underlying data manually**.
 
 - In the video, we'll cover two main parts: the Next Best Customer configuration and setup, including the Top 5 NBC widget on the Home page and the predefined NBC filter, and then the manual data creation process.
 
@@ -94,7 +94,7 @@ Admin NBC
 
 Admin NBM
 
-- Hi everyone, I'm Rebecca Wang, a product manager for AFLS.
+- Hi everyone, I'm Rebecca Wang, a product manager for LSC.
 
 - In this video, I'll walk you through how to set up **Next Best Message (NBM)** and how to create the underlying data that powers the feature.
 

@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:fields-on-event-relation pages:1472-1473 -->
 # Fields on Event Relation
 
-AFLS Overview                                                                                                  Fields on Event Relation
+Life Sciences Cloud (LSC) Overview                                                                                                  Fields on Event Relation
 
 
 
@@ -47,12 +47,12 @@ Object Reference for the Salesforce Platform: Event
 
 ## Fields on Event Relation
 
-AFLS fields extend the standard Event Relation object to represent a person (a user, lead, or contact) or a resource (such
+LSC fields extend the standard Event Relation object to represent a person (a user, lead, or contact) or a resource (such
 as a conference room) invited to an event.
 
 <!-- page:1473 -->
 
-AFLS Overview                                                                                                 Fields on Event Relation
+LSC Overview                                                                                                 Fields on Event Relation
 
 
 

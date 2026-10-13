@@ -24,22 +24,22 @@ export default function App() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   useEffect(() => {
-    window.aflsApi?.listCommands().then(setCommands).catch(() => {});
-    window.aflsApi?.getSettings().then((s) => {
+    window.lscApi?.listCommands().then(setCommands).catch(() => {});
+    window.lscApi?.getSettings().then((s) => {
       if (s.model) setDefaultModel(s.model);
     }).catch(() => {});
   }, []);
 
   // Auto-connect: env vars first, then saved settings, then show setup
   useEffect(() => {
-    if (!window.aflsApi) {
+    if (!window.lscApi) {
       setAutoDetecting(false);
       return;
     }
     (async () => {
       try {
         // 1. Check for env-based credentials (Bedrock gateway, ANTHROPIC_API_KEY)
-        const env = await window.aflsApi.detectEnvProvider();
+        const env = await window.lscApi.detectEnvProvider();
         if (env.detected && env.providerType && env.credentials) {
           await engine.start(env.providerType, env.credentials);
           setAutoDetecting(false);
@@ -47,7 +47,7 @@ export default function App() {
         }
 
         // 2. Fall back to saved settings
-        const settings = await window.aflsApi.getSettings();
+        const settings = await window.lscApi.getSettings();
         if (settings.providerType === "api-key" && settings.apiKey) {
           await engine.start("api-key", { apiKey: settings.apiKey });
         } else if (
@@ -111,7 +111,7 @@ export default function App() {
         onConnect={async (providerType, credentials) => {
           const result = await engine.start(providerType, credentials);
           if (result.ok) {
-            await window.aflsApi.saveSettings({
+            await window.lscApi.saveSettings({
               providerType,
               ...(providerType === "api-key"
                 ? { apiKey: credentials.apiKey }
@@ -146,21 +146,21 @@ export default function App() {
         libraryCount={library.items.length}
         collapsed={sidebarCollapsed}
         onToggleCollapse={() => setSidebarCollapsed((c) => !c)}
-        onCommandClick={(name) => { chat.clear(); setLibraryPanelOpen(false); setPrefillInput(`/afls:${name} `); }}
+        onCommandClick={(name) => { chat.clear(); setLibraryPanelOpen(false); setPrefillInput(`/lsc:${name} `); }}
         onSettingsClick={() => setShowSettings(true)}
         onNewChat={() => chat.clear()}
         onLoadConversation={(id) => { setLibraryPanelOpen(false); chat.loadConversation(id); }}
         onDeleteConversation={async (id) => {
-          await window.aflsApi.deleteConversation(id);
+          await window.lscApi.deleteConversation(id);
           if (chat.conversationId === id) {
             chat.clear();
           }
         }}
         onRenameConversation={async (id, title) => {
-          await window.aflsApi.renameConversation(id, title);
+          await window.lscApi.renameConversation(id, title);
         }}
         onTogglePin={async (id) => {
-          await window.aflsApi.togglePinConversation(id);
+          await window.lscApi.togglePinConversation(id);
         }}
         onOpenLibrary={() => setLibraryPanelOpen(true)}
       />
@@ -197,7 +197,7 @@ export default function App() {
           onClose={() => setShowSettings(false)}
           onDisconnect={async () => {
             await engine.stop();
-            await window.aflsApi.saveSettings({ providerType: "" });
+            await window.lscApi.saveSettings({ providerType: "" });
             setShowSettings(false);
           }}
         />

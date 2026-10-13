@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:careprovidersearchconfig pages:1898-1900 -->
 # CareProviderSearchConfig
 
-AFLS Overview                                                                                                   CareProviderSearchConfig
+Life Sciences Cloud (LSC) Overview                                                                                                   CareProviderSearchConfig
 
 
 
@@ -52,7 +52,7 @@ terms to avoid any effect on customer implementations.
 
 <!-- page:1899 -->
 
-AFLS Overview                                                                                 CareProviderSearchConfig
+LSC Overview                                                                                 CareProviderSearchConfig
 
 
 
@@ -108,7 +108,7 @@ Defaulted on create, Filter, Group, Sort
 
 <!-- page:1900 -->
 
-AFLS Overview                                                                                CareProviderSearchConfig
+LSC Overview                                                                                CareProviderSearchConfig
 
 
 

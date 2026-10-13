@@ -4,7 +4,7 @@ description: Interactive wizard to configure and validate Briefings
 
 # Configure Briefings (Daily Podcasts)
 
-Interactive wizard to check and configure Briefings for the AFLS Mobile app.
+Interactive wizard to check and configure Briefings for the Life Sciences Cloud (LSC) Mobile app.
 
 $ARGUMENTS
 
@@ -19,7 +19,7 @@ Follow these steps sequentially to validate and configure Briefings.
 ### Step 1: Verify Org Connection
 
 ```
-Use check_afls_setup to verify org connection
+Use check_lsc_setup to verify org connection
 ```
 
 If not connected, guide the user through authentication.

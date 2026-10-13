@@ -1,17 +1,17 @@
 ---
-description: Get help on an AFLS topic by searching across all documentation
+description: Get help on an Life Sciences Cloud (LSC) topic by searching across all documentation
 ---
 
-# AFLS Help
+# LSC Help
 
-Search across all AFLS documentation for specific topics, features, or configuration guidance.
+Search across all LSC documentation for specific topics, features, or configuration guidance.
 
 $ARGUMENTS
 
 ## Steps
 
 1. If a topic was provided in arguments:
-   - Use `search_afls_knowledge` to find relevant documentation
+   - Use `search_lsc_knowledge` to find relevant documentation
    - Display results with excerpts and module references
 
 2. If no topic provided:
@@ -30,9 +30,9 @@ $ARGUMENTS
    - The citation block exactly as returned (lines starting with > 📖, > 🔗, > 📂) — do NOT rephrase, reformat, or omit these lines
 
 4. Offer to:
-   - Get full module docs with `get_afls_module_docs`
-   - Explain a specific concept with `explain_afls_concept`
-   - Get admin setup guide with `get_afls_admin_setup`
-   - Browse all documentation with `/afls:docs`
+   - Get full module docs with `get_lsc_module_docs`
+   - Explain a specific concept with `explain_lsc_concept`
+   - Get admin setup guide with `get_lsc_admin_setup`
+   - Browse all documentation with `/lsc:docs`
 
 Present results in order of relevance with clear excerpts. Always preserve citation blocks verbatim.

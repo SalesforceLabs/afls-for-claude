@@ -1,6 +1,6 @@
 # Search Before Create (SBC) — Part 2: External Search + Account Creation
 
-**Session:** AFLS4CE Value Chain Training — May 12, 2026 (Part 2 of 2)
+**Session:** LSC4CE Value Chain Training — May 12, 2026 (Part 2 of 2)
 **Audience:** Support engineers
 **Source:** Engineering training series (deck + Gemini transcript)
 **Presenter:** Saumya Sharma

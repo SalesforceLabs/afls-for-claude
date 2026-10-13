@@ -1,6 +1,6 @@
 # Module Selection Decision Tree
 
-## "Which AFLS modules do I need?"
+## "Which Life Sciences Cloud (LSC) modules do I need?"
 
 ### Start: What is your primary use case?
 

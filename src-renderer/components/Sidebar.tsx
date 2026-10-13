@@ -54,8 +54,8 @@ export default function Sidebar({
   const renameInputRef = useRef<HTMLInputElement>(null);
 
   const refreshHistory = useCallback(async () => {
-    if (!window.aflsApi) return;
-    const list = await window.aflsApi.listConversations();
+    if (!window.lscApi) return;
+    const list = await window.lscApi.listConversations();
     setConversations(list);
   }, []);
 
@@ -221,8 +221,8 @@ export default function Sidebar({
       <div className="sidebar-header">
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <img src="afls-logo-2026.png" alt="" className="sidebar-logo" />
-            <h1>AFLS Assistant</h1>
+            <img src="lsc-logo-2026.png" alt="" className="sidebar-logo" />
+            <h1>LSC Assistant</h1>
           </div>
           <button className="sidebar-collapse-btn" onClick={onToggleCollapse} title="Collapse sidebar">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -295,7 +295,7 @@ export default function Sidebar({
                   className="commands-modal-item"
                   onClick={() => { onCommandClick(cmd.name); setShowCommands(false); }}
                 >
-                  <span className="commands-modal-cmd">/afls:{cmd.name}</span>
+                  <span className="commands-modal-cmd">/lsc:{cmd.name}</span>
                   <span className="commands-modal-desc">{cmd.description}</span>
                 </button>
               ))}

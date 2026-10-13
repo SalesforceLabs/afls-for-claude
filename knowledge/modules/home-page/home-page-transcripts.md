@@ -1,4 +1,4 @@
-- Hello everyone, I'm Rebecca Wang and I'm a product manager of AFLS. Today I'll walk you through the **configuration and setup of the Home Page** module in the AFLS for Customer Engagement.
+- Hello everyone, I'm Rebecca Wang and I'm a product manager of LSC. Today I'll walk you through the **configuration and setup of the Home Page** module in the Life Sciences Cloud (LSC) for Customer Engagement.
 
 - Setting up the Home Page is straightforward --- it's all about customizing the components or widgets that are available for different apps and user profiles.
 
@@ -26,7 +26,7 @@
 
       - The 1st one is to send a reminder for a set number of minutes before a visit. For example, if you enter 10 minutes, the iPad user will receive a background notification 10 minutes before their visit reminding them to enable Do Not Disturb mode.
 
-      - The 2nd one is to send a reminder to the user before the visit starts. Tapping the iPad background notification takes the user directly into the AFLS4CE mobile app.
+      - The 2nd one is to send a reminder to the user before the visit starts. Tapping the iPad background notification takes the user directly into the LSC4CE mobile app.
 
 - In addition to these custom components, you can also add standard Salesforce components --- such as **Rich Text**, **Charts**, **Reports and Dashboards**, and the **Standard List View**. Simply search for the component name, drag it onto the page layout, and then choose the specific list or dashboard you want your users to see.
 
@@ -44,7 +44,7 @@ Mobile End User
 
 - Hello everyone. Today we'll look at **Home Page on mobile** through the lens of a pharma sales rep, Sasha, and see how Sasha starts her day from the Home Page - using it as her central hub to get quick insights, take action, and stay on top of her priorities.
 
-- At the top of the Home Page, Sasha sees the ***Agentforce Welcome Center***. This gives her instant access to Agentforce right from her AFLS mobile app homepage. Here, the home office has pre-configured five most frequently accessed utterances for end users --- so Sasha can benefit from here without having to type or search.
+- At the top of the Home Page, Sasha sees the ***Agentforce Welcome Center***. This gives her instant access to Agentforce right from her LSC mobile app homepage. Here, the home office has pre-configured five most frequently accessed utterances for end users --- so Sasha can benefit from here without having to type or search.
 
   - If Sasha has more questions, she can also start a new conversation by tapping the searching bar to open the chat window.
 

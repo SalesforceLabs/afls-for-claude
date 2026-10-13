@@ -10,7 +10,7 @@ as are other names and marks. Other marks appearing herein may be trademarks of 
 Administer Agentforce Life Sciences . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
 Set Up Customer Engagement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
 Set Up Customer Engagement Basics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
-Set Up the AFLS Mobile App . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+Set Up the Life Sciences Cloud (LSC) Mobile App . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
 Set Up Account Management Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
 Set Up Engagement Planning Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 171
 Set Up Engagement Execution Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 233
@@ -19,9 +19,9 @@ Set Up Product Management Features . . . . . . . . . . . . . . . . . . . . . . .
 Set Up Sample Management Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              443
 Set Up Common Customer Engagement Components . . . . . . . . . . . . . . . . . . . . . . . . . .                                 476
 Integrate Data 360 and Tableau Next with Customer Engagement . . . . . . . . . . . . . . . .                                     633
-Use AFLS for Customer Engagement Features . . . . . . . . . . . . . . . . . . . . .                               640
+Use LSC for Customer Engagement Features . . . . . . . . . . . . . . . . . . . . .                               640
 Leverage Customer Engagement Best Practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                    714
-AFLS for Customer Engagement Patch Releases. . . . . . . . . . . . . . . . . . . .                                729
+LSC for Customer Engagement Patch Releases. . . . . . . . . . . . . . . . . . . .                                729
 Set Up Clinical Engagement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 764
 Get Started with Clinical Engagement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .           765
 Sign Up for a Life Sciences Trial Org . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      766
@@ -35,7 +35,7 @@ Set Up Benefit Verification . . . . . . . . . . . . . . . . . . . . . . . . . . 
 Set Up Care Programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 973
 Set Up Financial Assistance Programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 990
 Set Up Patient Program Outcome Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1035
-Set Up Patient Support Programs Analytics for AFLS . . . . . . . . . . . . . . . 1060
+Set Up Patient Support Programs Analytics for LSC . . . . . . . . . . . . . . . 1060
 Set Up Pharmacy Benefits Verification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1079
 Set Up Provider Relationship Cards . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1148
 Set Up Provider Search for Life Sciences . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1148

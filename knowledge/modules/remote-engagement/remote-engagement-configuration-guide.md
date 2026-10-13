@@ -2,7 +2,7 @@
 
 ## Overview
 
-Remote Engagement in AFLS enables field teams to conduct virtual interactions with healthcare professionals (HCPs) through video calls, screen sharing, and digital content presentation. This complements in-person visits and extends reach to HCPs who prefer virtual meetings or are in hard-to-reach locations.
+Remote Engagement in Life Sciences Cloud (LSC) enables field teams to conduct virtual interactions with healthcare professionals (HCPs) through video calls, screen sharing, and digital content presentation. This complements in-person visits and extends reach to HCPs who prefer virtual meetings or are in hard-to-reach locations.
 
 ## Key Concepts
 
@@ -78,9 +78,9 @@ Create Quick Actions for reps to initiate remote visits:
 
 ## Mobile Considerations
 
-- Remote visits can be scheduled and logged from the AFLS Mobile app
+- Remote visits can be scheduled and logged from the LSC Mobile app
 - Video calls are typically launched via the device's native video app (Zoom, Teams, etc.)
-- The AFLS Mobile app can deep-link to video apps when the meeting URL is stored on the Visit/Event
+- The LSC Mobile app can deep-link to video apps when the meeting URL is stored on the Visit/Event
 - Product detailing and discussion tracking work the same as in-person visits on mobile
 
 ### DB Schema for Remote Engagement

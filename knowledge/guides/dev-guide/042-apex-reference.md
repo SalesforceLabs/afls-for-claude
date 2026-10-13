@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:apex-reference pages:1853-1853 -->
 # Apex Reference
 
-AFLS Overview                                                                                                          Apex Reference
+Life Sciences Cloud (LSC) Overview                                                                                                          Apex Reference
 
 
 
@@ -22,7 +22,7 @@ Integer>               corresponding lead times in days.
 
 ## Apex Reference
 
-This Apex reference goes into detail about the built-in Apex classes, interfaces, methods, or enums for AFLS.
+This Apex reference goes into detail about the built-in Apex classes, interfaces, methods, or enums for LSC.
 For Apex-related objects and SOAP API calls, see Objects and SOAP API Calls and Headers for Apex in the SOAP API Developer Guide.
 
 

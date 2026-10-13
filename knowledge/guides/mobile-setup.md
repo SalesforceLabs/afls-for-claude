@@ -1,4 +1,4 @@
-# AFLS Mobile Setup and Configuration Guide
+# Life Sciences Cloud (LSC) Mobile Setup and Configuration Guide
 
 *Converted from PDF documentation*
 
@@ -13,7 +13,7 @@ Mobile Setup & Config
 
 Started July 2025
 Last updated Jan 2026
-                           SE AFLS Mobile Setup and Configuration Guide
+                           SE LSC Mobile Setup and Configuration Guide
 
 This document is based on adhoc configuration notes and socialized knowledge. This is not official
 documentation steps or setup.
@@ -26,12 +26,12 @@ Key Resources
 
 
 Known Issues
-Please refer “What to Know About the LSDO!” Canvas: Known Issues (AFLS4CE)
+Please refer “What to Know About the LSDO!” Canvas: Known Issues (LSC4CE)
 
 
 
-Custom Mobile Apps on AFLS Mobile
-You can now create and download custom Lightning Apps to AFLS Mobile on the iPad.
+Custom Mobile Apps on LSC Mobile
+You can now create and download custom Lightning Apps to LSC Mobile on the iPad.
 
 Create your Lightning App following same guidelines as updating the provided Life Sciences Commercial App.​
 ​
@@ -51,10 +51,10 @@ Admin Console → Mobile → Profile Based App Settings
 
 
                                                                                                           1
-                             SE AFLS Mobile Setup and Configuration Guide
+                             SE LSC Mobile Setup and Configuration Guide
 
 Custom Lightning Web Components
-You can add custom lightning web components only to the following areas of AFLS Mobile:
+You can add custom lightning web components only to the following areas of LSC Mobile:
    ●​ Home Screen
    ●​ Record Page
    ●​ As a Quick Action
@@ -73,12 +73,12 @@ Older version: Link
 Home Page - Utterances
 
 These are provided by LWCs = homeAnnouncements and IsAgentforceWelcome. This is already setup on
-the lightning page = Home Page AFLS Default​
+the lightning page = Home Page LSC Default​
 ​
 These are no longer custom LWC. They are provided as part of the lsc4ce managed package.
 
 To modify the utterances:
-   ●​ Edit Page on the Home Page AFLS Default
+   ●​ Edit Page on the Home Page LSC Default
    ●​ Click the whitespace area above the Home Announcements LWC
    ●​ You should see IsAgnetforceWelcome displayed in right panel.
    ●​ Change the utterances you would like to see.
@@ -91,7 +91,7 @@ Home Page - Announcements
 
 
                                                                                                2
-                           SE AFLS Mobile Setup and Configuration Guide
+                           SE LSC Mobile Setup and Configuration Guide
 
 Announcements are App Alert records. If they don’t display - the Effective Date needs to be changed to the
 current date.
@@ -117,7 +117,7 @@ STEP 2 - To change or Remove Expiration Requirement
 
 
                                                                                                              3
-                            SE AFLS Mobile Setup and Configuration Guide
+                            SE LSC Mobile Setup and Configuration Guide
 
 
 
@@ -129,7 +129,7 @@ STEP 2 - To change or Remove Expiration Requirement
 
 Either remove the clause or change the expiration from 7 days to something further out.
                                                                                           4
-                            SE AFLS Mobile Setup and Configuration Guide
+                            SE LSC Mobile Setup and Configuration Guide
 
 
 
@@ -156,12 +156,12 @@ Activity Plans
 
 Overview of Activity Plans, What they Are:   Link
 
-AFLS Activity Plans Help Documentation - Setup of Activity Plans
+LSC Activity Plans Help Documentation - Setup of Activity Plans
                                                                                                                  5
-                             SE AFLS Mobile Setup and Configuration Guide
+                             SE LSC Mobile Setup and Configuration Guide
 
 
-DBSchema Setup for Activity Plans to work on AFLS Mobile - Add:
+DBSchema Setup for Activity Plans to work on LSC Mobile - Add:
 
    ●​   Activity Plan Territory (type = data)
    ●​   Provider Activity Goal (type = data)
@@ -184,7 +184,7 @@ https://docs.google.com/document/d/1V7McOBoZ3pybmMzuVx4lA6rgH-jYovfojtazXcx-sOg/
 
 Actual content to load:
 https://drive.google.com/drive/folders/18CsCFFP6uoxNY6UiYHCt3vBnzy1q7Fk_
-OCE Documentation is inline with AFLS experience
+OCE Documentation is inline with LSC experience
 Difference between Presentation and Pages
 Admin Screen
 
@@ -202,7 +202,7 @@ Setup Attachment support for PresentationPage:
 
 
                                                                                                       6
-                            SE AFLS Mobile Setup and Configuration Guide
+                            SE LSC Mobile Setup and Configuration Guide
 
 
 
@@ -242,12 +242,12 @@ Generating Cache in a new LSDO Org
 
 
                                                                                                              7
-                             SE AFLS Mobile Setup and Configuration Guide
+                             SE LSC Mobile Setup and Configuration Guide
 
 
 
 
-Check the Cache on iPad AFLS Mobile App
+Check the Cache on iPad LSC Mobile App
 
 On the mobile, click the circle with your user's initials (upper right corner) to access the Profile page. Then
 press Show Database. Make sure that the metadata version – will start with LSMMR - matches the latest
@@ -262,7 +262,7 @@ Run the synch from the mobile to try and download it again. As a last resort del
 
 
                                                                                                                   8
-                             SE AFLS Mobile Setup and Configuration Guide
+                             SE LSC Mobile Setup and Configuration Guide
 
 
 
@@ -294,7 +294,7 @@ If the Status is inactive check the LSMMR record to see the cache detail record.
      ●​ Look at the information in the Error Log field to see if there is any details on what is causing the issue.
 
                                                                                                                       9
-                             SE AFLS Mobile Setup and Configuration Guide
+                             SE LSC Mobile Setup and Configuration Guide
 
    ●​ If the Error Log field is blank or has error message similar to “"message":"Unknown error for
       parentMetadataRecordId 1KAKX0000008OYH4A2: Please retry the request." —-- Delete the LSMMR record and
@@ -327,14 +327,14 @@ This is usually a missing permission issue on profile, DBSchema, or missing perm
                  ■​ Health Cloud Starter
                  ■​ Life Science Core
                  ■​ Industries Visit
-                 ■​ Life Sciences permission set for your AFLS4CE persona – if there is not - use Life
+                 ■​ Life Sciences permission set for your LSC4CE persona – if there is not - use Life
                      Sciences Field Sales Representative
                  ■​ LSDO-All Life Science Commercial Users
                  ■​ There may be other permission sets to add, other LSDO permission sets for your
                      persona
 
                                                                                                                10
-                             SE AFLS Mobile Setup and Configuration Guide
+                             SE LSC Mobile Setup and Configuration Guide
 
    3.​ Login as the User - see if there are any error messages that appear in the browser to indicate the
        object/permissions that are missing
@@ -385,24 +385,24 @@ Custom LWC
 
 
                                                                                                                 11
-                            SE AFLS Mobile Setup and Configuration Guide
+                            SE LSC Mobile Setup and Configuration Guide
 
 
 
 
 Object Metadata Cache Config (DBSchema Records)
-The Object Metadata Cache Configuration controls the actual data that is synched to the AFLS Mobile app.
+The Object Metadata Cache Configuration controls the actual data that is synched to the LSC Mobile app.
 Setup as “DbSchema” records.
 
 There are 2 types of Cache Configuration records
-   ●​ Data - specifies the data that is synched to the AFLS Mobile - specify object, profile(s), and any data
+   ●​ Data - specifies the data that is synched to the LSC Mobile - specify object, profile(s), and any data
        filters (SOQL queries)
             ○​ If you setup a SOQL Filter Condition --- you must encase the statement with parenthesis ()
                     ■​ e.g. RecordType.DeveloperName = 'LSDO_Medical_Inquiry' --- should be
                        (RecordType.DeveloperName = 'LSDO_Medical_Inquiry')
                     ■​ If you do not do this, it could cause a SQLite or other error (edited)
 
-   ●​ Configuration - information that is not kept in sObject that needs to be synched to AFLS Mobile.
+   ●​ Configuration - information that is not kept in sObject that needs to be synched to LSC Mobile.
       Configuration records need to be made for the following:
          ○​ Ratings: PrvdClassificationLayout, PrvdClsfnLayoutAttribute, PrvdClsfnAttrDefinition
          ○​ Activity Plan: ProviderActivityMeasureType
@@ -422,21 +422,21 @@ English & French currently enabled
 
 
                                                                                                                12
-                            SE AFLS Mobile Setup and Configuration Guide
+                            SE LSC Mobile Setup and Configuration Guide
 
 
 
 
-Custom LWC – AFLS Apps (Account Page - Insights)
-AFLS Apps are framework for creating and deploying LWC to AFLS Mobile app. Example of this is the Insights
+Custom LWC – LSC Apps (Account Page - Insights)
+LSC Apps are framework for creating and deploying LWC to LSC Mobile app. Example of this is the Insights
 tab on the Account Page
 
-In order for the AFLS Apps to display:
+In order for the LSC Apps to display:
     -​ You must have the associated Quick Actions added to the object
     -​ The LWC must start with lscMobileInline
-    -​ You can only have one AFLS app on a page.
+    -​ You can only have one LSC app on a page.
 
-See Here for more information: AFLS Apps Guide
+See Here for more information: LSC Apps Guide
 
 Old - Original Document
 
@@ -450,7 +450,7 @@ Scroll down for information about the Insight information/metrics
 
 
                                                                                                          13
-                              SE AFLS Mobile Setup and Configuration Guide
+                              SE LSC Mobile Setup and Configuration Guide
 
 
 
@@ -459,8 +459,8 @@ Tiles:
 
  ●​ Account view / edit tile. This illustrates that the customer can create their own LWC tile.
  ●​ Tweets... I know not all HCP's tweet but for KOL data sets, seems to be a big selling point
- ●​ AgentForce Insights: they can be somewhere native, or it can be put here as a AFLS app.
- ●​ Competitive Analysis is a chart. Want to de-emphasize, but also show it's possible to do charts in AFLS apps.
+ ●​ AgentForce Insights: they can be somewhere native, or it can be put here as a LSC app.
+ ●​ Competitive Analysis is a chart. Want to de-emphasize, but also show it's possible to do charts in LSC apps.
  ●​ Referral Network: which can be sourced from claims data. It is important to show how influential the HCP is. Could
     be a primary care doc that refers to a specialist. So if you're a specialty rep, you want to know which HCP was
     upstream to drive more referrals.
@@ -475,18 +475,18 @@ The LWC pulls the account name into the tiles, so the tiles will look nice with 
 
 
                                                                                                                    14
-                            SE AFLS Mobile Setup and Configuration Guide
+                            SE LSC Mobile Setup and Configuration Guide
 
 Stories- Enable
-Stories is a custom pre-GA capability that was hard coded directly into the AFLS Mobile Demo version.   It will
+Stories is a custom pre-GA capability that was hard coded directly into the LSC Mobile Demo version.   It will
 not be GA until late 2026. For GA stories is demonstrated via Field Sales Rep Agent action.i
 
-Too setup - Enable Demo Mode on the iOS AFLS Dev application.
+Too setup - Enable Demo Mode on the iOS LSC Dev application.
 
 
  On your iPad - go to Settings → Apps
 
- AFLS Dev
+ LSC Dev
 
 
 
@@ -502,10 +502,10 @@ Too setup - Enable Demo Mode on the iOS AFLS Dev application.
 
 
                                                                                                              15
-                             SE AFLS Mobile Setup and Configuration Guide
+                             SE LSC Mobile Setup and Configuration Guide
 
 
- The next time you launch the AFLS Dev app on your
+ The next time you launch the LSC Dev app on your
  iPad you should see the Stories on the home page.
  (Icon bottom left)
 
@@ -534,7 +534,7 @@ Support for other objects is on the roadmap.
 
 
                                                                                                               16
-                           SE AFLS Mobile Setup and Configuration Guide
+                           SE LSC Mobile Setup and Configuration Guide
 
 Consent Setup
 Based on the NYWT demo setups, here is a list of data and configurations created.
@@ -558,7 +558,7 @@ Communication Subscriptions
 
 
                                                                                         17
-                   SE AFLS Mobile Setup and Configuration Guide
+                   SE LSC Mobile Setup and Configuration Guide
 
 Data Use Purpose
 
@@ -571,7 +571,7 @@ Communication Subscription Channel Types
 
 
                                                                  18
-                                 SE AFLS Mobile Setup and Configuration Guide
+                                 SE LSC Mobile Setup and Configuration Guide
 
 Engagement Channel Types
 
@@ -597,7 +597,7 @@ Terms & Conditions HTML:
         color: black;
 
                                                                                19
-                                 SE AFLS Mobile Setup and Configuration Guide
+                                 SE LSC Mobile Setup and Configuration Guide
 
         }
         </style>
@@ -653,7 +653,7 @@ needed are for:​
 
 
                                                                                                                                   20
-                                     SE AFLS Mobile Setup and Configuration Guide
+                                     SE LSC Mobile Setup and Configuration Guide
 
         Existing DBSchema records can be copied from another org - see info LifeScienceConfig Deployment via VS
         Code
@@ -691,7 +691,7 @@ Schema_OptAdministration                LifeSciConfigRecord              Adminis
 
 
                                                                                                                        21
-                    SE AFLS Mobile Setup and Configuration Guide
+                    SE LSC Mobile Setup and Configuration Guide
 
 
 
@@ -702,7 +702,7 @@ State Distributor Setup
 
 
                                                                   22
-                   SE AFLS Mobile Setup and Configuration Guide
+                   SE LSC Mobile Setup and Configuration Guide
 
 
 
@@ -713,7 +713,7 @@ DEA Number Setup
 
 
                                                                  23
-                           SE AFLS Mobile Setup and Configuration Guide
+                           SE LSC Mobile Setup and Configuration Guide
 
 Next Best Customer
 This is a custom LWC component
@@ -743,7 +743,7 @@ For customer, the PATS record would be generated by Agentforce or other customer
 
 
                                                                                                             24
-                           SE AFLS Mobile Setup and Configuration Guide
+                           SE LSC Mobile Setup and Configuration Guide
 
 The easiest way to do this is to clone an existing record - change the territory and user for your new user.
 
@@ -766,7 +766,7 @@ The easiest way to do this is to clone an existing record - change the territory
 
 
                                                                                                            25
-                              SE AFLS Mobile Setup and Configuration Guide
+                              SE LSC Mobile Setup and Configuration Guide
 
 
 
@@ -778,7 +778,7 @@ It might be a hack way to do it for Demos.
 You have to assign users to a Territory - including the Admin user
 
     ●​ Go to Setup → Territory Models
-    ●​ AFLS Territory Model — press View Hierarchy Link
+    ●​ LSC Territory Model — press View Hierarchy Link
     ●​ Drill down on RD-Midwest 20A
     ●​ Assigned Users - Manage Users
             ○​ Add Admin User and Evan Casto
@@ -788,13 +788,13 @@ You have to assign users to a Territory - including the Admin user
 
 
                                                                                                                      26
-SE AFLS Mobile Setup and Configuration Guide
+SE LSC Mobile Setup and Configuration Guide
 
 
 
 
                                               27
-                           SE AFLS Mobile Setup and Configuration Guide
+                           SE LSC Mobile Setup and Configuration Guide
 
 
 
@@ -812,7 +812,7 @@ IF($Profile.Name = 'Customer Facing Colleague', 'Responder', IF($Profile.Name = 
 Representative', 'Creator', ''))
 
                                                                                                     28
-                             SE AFLS Mobile Setup and Configuration Guide
+                             SE LSC Mobile Setup and Configuration Guide
 
 
 Updated Formula: ​
@@ -849,13 +849,13 @@ Setup a tab via the Admin Console -> Mobile -> UI
 The as the user, select metrics to follow from the Tableau Next app in Salesforce
 
                                                                                                                 29
-SE AFLS Mobile Setup and Configuration Guide
+SE LSC Mobile Setup and Configuration Guide
 
 
 
 
                                               30
-                            SE AFLS Mobile Setup and Configuration Guide
+                            SE LSC Mobile Setup and Configuration Guide
 
 
 
@@ -871,17 +871,17 @@ mobile app.
 
 
                                                                                                             31
-SE AFLS Mobile Setup and Configuration Guide
+SE LSC Mobile Setup and Configuration Guide
 
 
 
 
                                               32
-                           SE AFLS Mobile Setup and Configuration Guide
+                           SE LSC Mobile Setup and Configuration Guide
 
 Localize for Other Languages
 
-See: QRG: How to localize AFLS App to demo for other languages
+See: QRG: How to localize LSC App to demo for other languages
 
 
 
@@ -897,13 +897,13 @@ Setup Email Templates
 
 Follow instructions in document below
 
-AFLS Email Setup: GDoc
+LSC Email Setup: GDoc
 
 
 
 
                                                                          33
-                             SE AFLS Mobile Setup and Configuration Guide
+                             SE LSC Mobile Setup and Configuration Guide
 
 Visit Page Layout
 
@@ -951,7 +951,7 @@ Users start operating on inventory)
    ●​   Inventory Count Assessment- Gets created to capture Inventory Count.
    ●​   Inventory Count Product Batch Item- Gets created along with Inventory
                                                                                                      34
-                           SE AFLS Mobile Setup and Configuration Guide
+                           SE LSC Mobile Setup and Configuration Guide
 
    ●​ Count Assessment to capture Inventory Count details.
 
@@ -979,9 +979,9 @@ These are instructions for changing Tab that are part of the Life Science Manage
 
 
                                                                                             35
-                           SE AFLS Mobile Setup and Configuration Guide
+                           SE LSC Mobile Setup and Configuration Guide
 
-Since AFLS is core + managed package, you think you won't be able to modify a Tab - e.g. new 2nd
+Since LSC is core + managed package, you think you won't be able to modify a Tab - e.g. new 2nd
 Account Tab​
 ​
 If you use the translate feature (English to English), it actually doesn't show up there.
@@ -1006,7 +1006,7 @@ Activity Timeline Display Text Settings - Example: GDoc
 
 
 Setup Access to Admin Console
-If you need to setup profile that is not System Administrator for AFLS Commercial and the “Admin Console” tab​
+If you need to setup profile that is not System Administrator for LSC Commercial and the “Admin Console” tab​
 
    1.​ Setup - App Manager - Life Science Commercial — add the profile of the user to the app - e.g.
        Business Admin
@@ -1018,7 +1018,7 @@ Remote Engagement
 
 
                                                                                                                 36
-                            SE AFLS Mobile Setup and Configuration Guide
+                            SE LSC Mobile Setup and Configuration Guide
 
 Remote Engagement Setup Instructions: Link
 
@@ -1038,7 +1038,7 @@ Synchronization - Transactions will provide synch detail on Entity/Object ​
 
 
                                                                               37
-                            SE AFLS Mobile Setup and Configuration Guide
+                            SE LSC Mobile Setup and Configuration Guide
 
 
 Old Config Instructions
@@ -1056,7 +1056,7 @@ Home Page
 Visit Page
 Accounts Page
 Planner
-AFLS Apps
+LSC Apps
 Utterances
 StoriesGDoc
 Tableau
@@ -1066,15 +1066,15 @@ Territories
 
 (Old) Key Resources
 
-Release notes, instructions for setup - AFLS Learning Org April 2025
+Release notes, instructions for setup - LSC Learning Org April 2025
  – Don’t make any changes to this doc it is shared with customers Pfizer & LOreall
 
 Guidance for configuration can be found in previous OCE Personal documentation
 
-NYWT AFLS App Configuration Details- technical details on Page Layouts, Permissions, Data and other
+NYWT LSC App Configuration Details- technical details on Page Layouts, Permissions, Data and other
 configuration that were done to build the NYWT Demo
 
-AFLS Mobile App & Demo Builds - There are 2 “flavors” of AFLS Mobile App. This presentation lists differences
+LSC Mobile App & Demo Builds - There are 2 “flavors” of LSC Mobile App. This presentation lists differences
 between these, which one to setup and how to setup. it also provides setup tips for the Reflector imaging app.
 
 Key Account Management - Setup of Account Plans and Territory Plans
@@ -1088,7 +1088,7 @@ Update Page Layouts
 Add CommunicationSubscriptionConsent Related List to
    ●​ Account Layout — in Account - HCO Page Layout
                                                                                                              38
-                           SE AFLS Mobile Setup and Configuration Guide
+                           SE LSC Mobile Setup and Configuration Guide
 
    ●​ Person Account HCP Layout – in PersonAccount - Person Account HCP Layout
 
@@ -1116,10 +1116,10 @@ In AppSettingsService.swift override isDemoMode property to return true.
 
 
 
-AFLS Mobile - Supporting Multiple Profiles/Personas
+LSC Mobile - Supporting Multiple Profiles/Personas
 
-As on Sept 19 - Currently AFLS Mobile only supports downloading of one application = the app provided in the
-AFLS4CE package = Life Sciences Commercial.​
+As on Sept 19 - Currently LSC Mobile only supports downloading of one application = the app provided in the
+LSC4CE package = Life Sciences Commercial.​
 ​
 To support Multiple Profiles
     -​ Add the Page for the Profile to the Life Sciences Commercial application
@@ -1138,7 +1138,7 @@ Medical Sales Manager = Luke
 
 
                                                                                                           39
-SE AFLS Mobile Setup and Configuration Guide
+SE LSC Mobile Setup and Configuration Guide
 
 
 

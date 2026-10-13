@@ -1,9 +1,9 @@
 ---
-description: Interactive wizard to configure and validate AFLS Account Management
+description: Interactive wizard to configure and validate Life Sciences Cloud (LSC) Account Management
 arguments: "[check-type]"
 ---
 
-# Configure AFLS Account Management
+# Configure LSC Account Management
 
 Interactive wizard to check and configure Account Management for web and mobile.
 
@@ -20,7 +20,7 @@ Follow these steps sequentially to validate and configure account management.
 First, check if connected to a Salesforce org:
 
 ```
-Use check_afls_setup to verify org connection
+Use check_lsc_setup to verify org connection
 ```
 
 If not connected, guide the user through authentication.
@@ -58,7 +58,7 @@ WHERE SobjectType = 'Account' AND IsActive = true
 Report:
 - Active account record types
 - Whether PersonAccount types exist
-- **WARN if no PersonAccount types**: Most AFLS implementations require PersonAccount
+- **WARN if no PersonAccount types**: Most LSC implementations require PersonAccount
 
 ### Step 4: Check Healthcare Provider Records
 
@@ -116,7 +116,7 @@ FROM ProviderAffiliation ORDER BY AccountFrom.Name LIMIT 50
 Report:
 - Number of affiliation records
 - Roles being used
-- **INFO if none found**: Affiliations are optional but common in AFLS
+- **INFO if none found**: Affiliations are optional but common in LSC
 
 ### Step 8: Check DCR Configuration
 
@@ -252,25 +252,25 @@ Based on findings, offer to fix issues directly using programmatic tools:
 
 ## Example Usage
 
-User: `/afls:configure-accounts`
+User: `/lsc:configure-accounts`
 > Run full account management configuration check
 
-User: `/afls:configure-accounts addresses`
+User: `/lsc:configure-accounts addresses`
 > Focus on address configuration
 
-User: `/afls:configure-accounts affiliations`
+User: `/lsc:configure-accounts affiliations`
 > Focus on affiliation configuration and trigger handlers
 
-User: `/afls:configure-accounts licenses`
+User: `/lsc:configure-accounts licenses`
 > Focus on business license validation
 
-User: `/afls:configure-accounts dcr`
+User: `/lsc:configure-accounts dcr`
 > Focus on data change request configuration
 
-User: `/afls:configure-accounts search`
+User: `/lsc:configure-accounts search`
 > Focus on account search and SBC configuration
 
-User: `/afls:configure-accounts mobile`
+User: `/lsc:configure-accounts mobile`
 > Focus on mobile-specific account configuration
 
 ## Quick Validation Alternative
@@ -278,7 +278,7 @@ User: `/afls:configure-accounts mobile`
 For a faster automated check, suggest using the audit command:
 
 ```
-/afls:audit account-config-check
+/lsc:audit account-config-check
 ```
 
 This runs all account-specific validation rules automatically.

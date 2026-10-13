@@ -13,7 +13,7 @@ interface McpToolResult {
 }
 
 /**
- * MCP Client that spawns the existing AFLS MCP server as a child process
+ * MCP Client that spawns the existing LSC MCP server as a child process
  * using the official MCP SDK client and stdio transport.
  */
 export class McpClient {
@@ -37,7 +37,7 @@ export class McpClient {
     });
 
     this.client = new Client(
-      { name: "afls-assistant", version: "0.1.0" },
+      { name: "lsc-assistant", version: "0.1.0" },
       { capabilities: {} }
     );
 

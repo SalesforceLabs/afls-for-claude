@@ -1,4 +1,4 @@
-- Hello everyone, I'm Rebecca Wang and I'm a product manager of AFLS. Today I'll walk you through the **configuration and setup of the Lists & Filters** module in the AFLS for Customer Engagement.
+- Hello everyone, I'm Rebecca Wang and I'm a product manager of LSC. Today I'll walk you through the **configuration and setup of the Lists & Filters** module in the Life Sciences Cloud (LSC) for Customer Engagement.
 
 - For Lists & Filters, we have a dedicated admin tile which contains almost all of the configurations and settings. Clicking into it opens three tabs: **Account Lists**, **Filters**, and **Account List Actions**.
 

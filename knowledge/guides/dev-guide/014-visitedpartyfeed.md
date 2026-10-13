@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:visitedpartyfeed pages:1443-1447 -->
 # VisitedPartyFeed
 
-AFLS Overview                                                                                                  VisitedPartyFeed
+Life Sciences Cloud (LSC) Overview                                                                                                  VisitedPartyFeed
 
 
 
@@ -58,7 +58,7 @@ or LinkPost.
 
 <!-- page:1444 -->
 
-AFLS Overview                                                                                         VisitedPartyFeed
+LSC Overview                                                                                         VisitedPartyFeed
 
 
 
@@ -109,7 +109,7 @@ similar to this example: <img src="sfdc://069B0000000omjh"></img>
 
 <!-- page:1445 -->
 
-AFLS Overview                                                                                                 VisitedPartyFeed
+LSC Overview                                                                                                 VisitedPartyFeed
 
 
 
@@ -158,7 +158,7 @@ ID of the record that is tracked in the feed. The detail page for the record dis
 
 <!-- page:1446 -->
 
-AFLS Overview                                                                                      VisitedPartyFeed
+LSC Overview                                                                                      VisitedPartyFeed
 
 
 
@@ -208,7 +208,7 @@ a user shares a post.
 
 <!-- page:1447 -->
 
-AFLS Overview                                                                                                            VisitedPartyFeed
+LSC Overview                                                                                                            VisitedPartyFeed
 
 
 

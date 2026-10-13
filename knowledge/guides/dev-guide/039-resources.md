@@ -1,14 +1,14 @@
 <!-- guide:dev-guide section:resources pages:1607-1692 -->
 # Resources
 
-AFLS Overview                                                                                                                     Resources
+Life Sciences Cloud (LSC) Overview                                                                                                                     Resources
 
 
 
 
 ## Resources
 
-Use these resources of AFLS Business APIs to enhance your Salesforce implementation or integrate with other applications.
+Use these resources of LSC Business APIs to enhance your Salesforce implementation or integrate with other applications.
 
 
 
@@ -53,7 +53,7 @@ Use these resources to create practitioner or facility records, or update existi
 
 <!-- page:1608 -->
 
-AFLS Overview                                                                                                                    Resources
+LSC Overview                                                                                                                    Resources
 
 
 Sample Limits Validation (POST)
@@ -109,7 +109,7 @@ Request body for POST
 
 <!-- page:1609 -->
 
-AFLS Overview                                                                                                                   Resources
+LSC Overview                                                                                                                   Resources
 
 
 
@@ -168,7 +168,7 @@ Request body for POST
 
 <!-- page:1610 -->
 
-AFLS Overview                                                                                                        Resources
+LSC Overview                                                                                                        Resources
 
 
 
@@ -227,7 +227,7 @@ Request body for POST
 
 <!-- page:1611 -->
 
-AFLS Overview                                                                                                                Resources
+LSC Overview                                                                                                                Resources
 
 
 
@@ -287,7 +287,7 @@ license-based searches use fields from the business license entity.
 
 <!-- page:1612 -->
 
-AFLS Overview                                                                                                               Resources
+LSC Overview                                                                                                               Resources
 
 
 
@@ -346,7 +346,7 @@ Request body for POST
 
 <!-- page:1613 -->
 
-AFLS Overview                                                                                                                   Resources
+LSC Overview                                                                                                                   Resources
 
 
 
@@ -407,7 +407,7 @@ Available version
 
 <!-- page:1614 -->
 
-AFLS Overview                                               Resources
+LSC Overview                                               Resources
 
 
 
@@ -466,7 +466,7 @@ JSON example
 
 <!-- page:1615 -->
 
-AFLS Overview                                                                                                                  Resources
+LSC Overview                                                                                                                  Resources
 
 
 
@@ -521,7 +521,7 @@ Resource
 
 <!-- page:1616 -->
 
-AFLS Overview                                                                                                           Resources
+LSC Overview                                                                                                           Resources
 
 
 
@@ -579,7 +579,7 @@ contactTracingEncounters: [
 
 <!-- page:1617 -->
 
-AFLS Overview                                                                                                Resources
+LSC Overview                                                                                                Resources
 
 
 
@@ -639,7 +639,7 @@ in the org, an error message is returned. If the record
 
 <!-- page:1618 -->
 
-AFLS Overview                                                                                         Resources
+LSC Overview                                                                                         Resources
 
 
 
@@ -696,7 +696,7 @@ user interface. This field is used only when
 
 <!-- page:1619 -->
 
-AFLS Overview                                                                                             Resources
+LSC Overview                                                                                             Resources
 
 
 
@@ -760,7 +760,7 @@ participants.participantType is set to lead.
 
 <!-- page:1620 -->
 
-AFLS Overview                                                                                              Resources
+LSC Overview                                                                                              Resources
 
 
 
@@ -816,7 +816,7 @@ location.encounteraddress.state
 
 <!-- page:1621 -->
 
-AFLS Overview                                                                                            Resources
+LSC Overview                                                                                            Resources
 
 
 
@@ -878,7 +878,7 @@ JSON example
 
 <!-- page:1622 -->
 
-AFLS Overview                                                                                                             Resources
+LSC Overview                                                                                                             Resources
 
 
 
@@ -933,7 +933,7 @@ Note: For all Bulk APIs, provide the file input either as contentDocumentIdorfil
 
 <!-- page:1623 -->
 
-AFLS Overview                                                                      Resources
+LSC Overview                                                                      Resources
 
 
 
@@ -994,7 +994,7 @@ for subsequent PDF pages. Not needed for ZIP/PAGE.
 
 <!-- page:1624 -->
 
-AFLS Overview                                                                  Resources
+LSC Overview                                                                  Resources
 
 
 
@@ -1049,7 +1049,7 @@ PRESENTATION_PDF. */
 
 <!-- page:1625 -->
 
-AFLS Overview                                                                                                              Resources
+LSC Overview                                                                                                              Resources
 
 
 
@@ -1109,7 +1109,7 @@ or PRESENTATION_PAGE.
 
 <!-- page:1626 -->
 
-AFLS Overview                                                                     Resources
+LSC Overview                                                                     Resources
 
 
 
@@ -1170,7 +1170,7 @@ changing.
 
 <!-- page:1627 -->
 
-AFLS Overview                                                                                                   Resources
+LSC Overview                                                                                                   Resources
 
 
 
@@ -1228,7 +1228,7 @@ contentType is
 
 <!-- page:1628 -->
 
-AFLS Overview                                                                                               Resources
+LSC Overview                                                                                               Resources
 
 
 
@@ -1289,7 +1289,7 @@ Request body for POST
 
 <!-- page:1629 -->
 
-AFLS Overview                                                                                        Resources
+LSC Overview                                                                                        Resources
 
 
 
@@ -1348,7 +1348,7 @@ to process the existing document record. This
 
 <!-- page:1630 -->
 
-AFLS Overview                                                                                                   Resources
+LSC Overview                                                                                                   Resources
 
 
 
@@ -1407,7 +1407,7 @@ senderEmailFieldAPIName String          API name of the sender's email field.   
 
 <!-- page:1631 -->
 
-AFLS Overview                                                                                         Resources
+LSC Overview                                                                                         Resources
 
 
 
@@ -1466,7 +1466,7 @@ Request body for PATCH
 
 <!-- page:1632 -->
 
-AFLS Overview                                                                                  Resources
+LSC Overview                                                                                  Resources
 
 
 
@@ -1523,7 +1523,7 @@ are:
 
 <!-- page:1633 -->
 
-AFLS Overview                                                                                                     Resources
+LSC Overview                                                                                                     Resources
 
 
 
@@ -1584,7 +1584,7 @@ replyToEmailAddress String                Reply-to email address.               
 
 <!-- page:1634 -->
 
-AFLS Overview                                                                                                Resources
+LSC Overview                                                                                                Resources
 
 
 
@@ -1642,7 +1642,7 @@ Note: The PATCH request will delete the records.
 
 <!-- page:1635 -->
 
-AFLS Overview                                                                                                                 Resources
+LSC Overview                                                                                                                 Resources
 
 
 
@@ -1706,7 +1706,7 @@ Available version
 
 <!-- page:1636 -->
 
-AFLS Overview                                                                                                             Resources
+LSC Overview                                                                                                             Resources
 
 
 
@@ -1763,7 +1763,7 @@ the care system field mappings.
 
 <!-- page:1637 -->
 
-AFLS Overview                                                                                                       Resources
+LSC Overview                                                                                                       Resources
 
 
 
@@ -1823,7 +1823,7 @@ JSON example
 
 <!-- page:1638 -->
 
-AFLS Overview                                                                                                       Resources
+LSC Overview                                                                                                       Resources
 
 
 
@@ -1879,7 +1879,7 @@ Code                            search was performed.
 
 <!-- page:1639 -->
 
-AFLS Overview                                                                                                               Resources
+LSC Overview                                                                                                               Resources
 
 
 
@@ -1938,7 +1938,7 @@ POST
 
 <!-- page:1640 -->
 
-AFLS Overview                                                                                                     Resources
+LSC Overview                                                                                                     Resources
 
 
 
@@ -1997,7 +1997,7 @@ This is the content of the output from running the Verify Benefits API call.
 
 <!-- page:1641 -->
 
-AFLS Overview                                                                                                               Resources
+LSC Overview                                                                                                               Resources
 
 
 
@@ -2058,7 +2058,7 @@ CareProgramEnrollee, Lead, Opportunity, Visit, and custom objects.
 
 <!-- page:1642 -->
 
-AFLS Overview                                                                                                        Resources
+LSC Overview                                                                                                        Resources
 
 
 
@@ -2119,7 +2119,7 @@ Available version
 
 <!-- page:1643 -->
 
-AFLS Overview                                                                                     Resources
+LSC Overview                                                                                     Resources
 
 
 
@@ -2175,7 +2175,7 @@ document checklist item.
 
 <!-- page:1644 -->
 
-AFLS Overview                                                                                                Resources
+LSC Overview                                                                                                Resources
 
 
 
@@ -2237,7 +2237,7 @@ POST
 
 <!-- page:1645 -->
 
-AFLS Overview                                                                                       Resources
+LSC Overview                                                                                       Resources
 
 
 
@@ -2293,7 +2293,7 @@ process.
 
 <!-- page:1646 -->
 
-AFLS Overview                                                                                                Resources
+LSC Overview                                                                                                Resources
 
 
 
@@ -2354,7 +2354,7 @@ Root XML tag
 
 <!-- page:1647 -->
 
-AFLS Overview                                                                                       Resources
+LSC Overview                                                                                       Resources
 
 
 
@@ -2411,7 +2411,7 @@ you want to create or update a record.
 
 <!-- page:1648 -->
 
-AFLS Overview                                                                                                Resources
+LSC Overview                                                                                                Resources
 
 
 
@@ -2472,7 +2472,7 @@ JSON example for POST
 
 <!-- page:1649 -->
 
-AFLS Overview                                                                                       Resources
+LSC Overview                                                                                       Resources
 
 
 
@@ -2532,7 +2532,7 @@ recordTypeId String             ID of the record type of the target object. Opti
 
 <!-- page:1650 -->
 
-AFLS Overview                                                                                                         Resources
+LSC Overview                                                                                                         Resources
 
 
 
@@ -2591,7 +2591,7 @@ JSON example
 
 <!-- page:1651 -->
 
-AFLS Overview                                                                                                   Resources
+LSC Overview                                                                                                   Resources
 
 
 
@@ -2650,7 +2650,7 @@ Document Management Result
 
 <!-- page:1652 -->
 
-AFLS Overview                                                                                                                  Resources
+LSC Overview                                                                                                                  Resources
 
 
 
@@ -2768,7 +2768,7 @@ JSON example
 
 <!-- page:1654 -->
 
-AFLS Overview                                                                                           Resources
+LSC Overview                                                                                           Resources
 
 
 
@@ -2828,7 +2828,7 @@ Contacts are connected to patients using
 
 <!-- page:1655 -->
 
-AFLS Overview                                                                                            Resources
+LSC Overview                                                                                            Resources
 
 
 
@@ -2885,7 +2885,7 @@ field.
 
 <!-- page:1656 -->
 
-AFLS Overview                                                                                                               Resources
+LSC Overview                                                                                                               Resources
 
 
 
@@ -2946,7 +2946,7 @@ Provider Search Output on page 1845
 
 <!-- page:1657 -->
 
-AFLS Overview                                                                                                                    Resources
+LSC Overview                                                                                                                    Resources
 
 
 
@@ -3008,7 +3008,7 @@ approval decision.
 
 <!-- page:1658 -->
 
-AFLS Overview                                                                                                             Resources
+LSC Overview                                                                                                             Resources
 
 
 - When a new provider is added to the Health Plan Network, add its contact to the system so call center agent can direct patients
@@ -3060,7 +3060,7 @@ The Create provider API supports all standard and custom fields.
 
 <!-- page:1659 -->
 
-AFLS Overview                                                                                                                 Resources
+LSC Overview                                                                                                                 Resources
 
 
 Any field that is required in the object specification is required in JSON request bodies for this API.
@@ -3117,7 +3117,7 @@ CareProviderFacilitySpecialty                 No             Yes                
 
 <!-- page:1660 -->
 
-AFLS Overview                                                                                                     Resources
+LSC Overview                                                                                                     Resources
 
 
 
@@ -3180,7 +3180,7 @@ Sample Input: Create a Practitioner
 
 <!-- page:1661 -->
 
-AFLS Overview                                                         Resources
+LSC Overview                                                         Resources
 
 
 
@@ -3242,7 +3242,7 @@ Sample Input - Create a Practitioner as a Person Account
 
 <!-- page:1662 -->
 
-AFLS Overview                                                        Resources
+LSC Overview                                                        Resources
 
 
 
@@ -3304,7 +3304,7 @@ Note: To use the following code sample, ensure that the org has:
 
 <!-- page:1663 -->
 
-AFLS Overview                                                   Resources
+LSC Overview                                                   Resources
 
 
 
@@ -3363,7 +3363,7 @@ AFLS Overview                                                   Resources
 
 <!-- page:1664 -->
 
-AFLS Overview                                                Resources
+LSC Overview                                                Resources
 
 
 Sample Input - Create a Facility
@@ -3421,7 +3421,7 @@ Sample Input - Create a Facility from an Existing Account
 
 <!-- page:1665 -->
 
-AFLS Overview                                                                                                           Resources
+LSC Overview                                                                                                           Resources
 
 
 
@@ -3483,7 +3483,7 @@ Note: To use the following code sample, ensure that the org has a Specialty reco
 
 <!-- page:1666 -->
 
-AFLS Overview                                                                                                 Resources
+LSC Overview                                                                                                 Resources
 
 
 
@@ -3847,7 +3847,7 @@ Note: Before you use the code sample, create existing lookup records in your org
 
 <!-- page:1672 -->
 
-AFLS Overview                                            Resources
+LSC Overview                                            Resources
 
 
 
@@ -3908,7 +3908,7 @@ AFLS Overview                                            Resources
 
 <!-- page:1673 -->
 
-AFLS Overview                                           Resources
+LSC Overview                                           Resources
 
 
 
@@ -4029,7 +4029,7 @@ AFLS Overview                                           Resources
 
 <!-- page:1675 -->
 
-AFLS Overview                                                                 Resources
+LSC Overview                                                                 Resources
 
 
 
@@ -4390,7 +4390,7 @@ Sample Output Response - Partial Success
 
 <!-- page:1681 -->
 
-AFLS Overview                                                                                                                Resources
+LSC Overview                                                                                                                Resources
 
 
 
@@ -4448,7 +4448,7 @@ need to resubmit the failed providers, not the whole request.
 
 <!-- page:1682 -->
 
-AFLS Overview                                                                                                                    Resources
+LSC Overview                                                                                                                    Resources
 
 
 Response Codes
@@ -4510,7 +4510,7 @@ Use this API to support single record create (such as CAQH integration) for mult
 
 <!-- page:1683 -->
 
-AFLS Overview                                                                                                               Resources
+LSC Overview                                                                                                               Resources
 
 
 
@@ -4569,7 +4569,7 @@ Authorization: Bearer token
 
 <!-- page:1684 -->
 
-AFLS Overview                                                                                                                Resources
+LSC Overview                                                                                                                Resources
 
 
 
@@ -4634,7 +4634,7 @@ Here are some JSON samples you can use as a starting point for building request 
 
 <!-- page:1685 -->
 
-AFLS Overview                                                                                                                   Resources
+LSC Overview                                                                                                                   Resources
 
 
 You can create either a practitioner or a facility. A facility is always associated with an account. A practitioner can be associated with a
@@ -4690,7 +4690,7 @@ practice. (A solo practice is treated as a facility with a single practitioner a
 
 <!-- page:1686 -->
 
-AFLS Overview                                                                                                                  Resources
+LSC Overview                                                                                                                  Resources
 
 
 
@@ -4752,7 +4752,7 @@ section <section name>, field <JSON key>.
 
 <!-- page:1687 -->
 
-AFLS Overview                                                                                                                  Resources
+LSC Overview                                                                                                                  Resources
 
 
 
@@ -4813,7 +4813,7 @@ POST
 
 <!-- page:1688 -->
 
-AFLS Overview                                                              Resources
+LSC Overview                                                              Resources
 
 
 
@@ -4873,7 +4873,7 @@ JSON example
 
 <!-- page:1689 -->
 
-AFLS Overview                                                                Resources
+LSC Overview                                                                Resources
 
 
 
@@ -4934,7 +4934,7 @@ AFLS Overview                                                                Res
 
 <!-- page:1690 -->
 
-AFLS Overview                                                                                                                        Resources
+LSC Overview                                                                                                                        Resources
 
 
 
@@ -4993,7 +4993,7 @@ POST
 
 <!-- page:1691 -->
 
-AFLS Overview                                                                                                 Resources
+LSC Overview                                                                                                 Resources
 
 
 
@@ -5050,7 +5050,7 @@ Attributes Input[]   visit.
 
 <!-- page:1692 -->
 
-AFLS Overview                                                                                                                Resources
+LSC Overview                                                                                                                Resources
 
 
 

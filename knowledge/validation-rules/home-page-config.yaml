@@ -1,11 +1,11 @@
-# AFLS Home Page Configuration Validation Rules
+# LSC Home Page Configuration Validation Rules
 # =============================================
 # Rules to validate home page configuration for web and mobile apps.
 # Covers Lightning pages, announcements, quick actions, NBC, and metadata cache.
 #
 # Objects verified from documentation:
 #   - FlexiPage (standard Salesforce)
-#   - AppAlert (AFLS announcements)
+#   - AppAlert (LSC announcements)
 #   - QuickActionDefinition (standard Salesforce)
 #   - TerritoryAccountScore (NBC data)
 #   - LifeSciMobileMetadataRecord (mobile metadata cache)
@@ -14,7 +14,7 @@
 schema_version: "1.0"
 category_name: "Home Page Configuration"
 description: |
-  Validation rules for AFLS Home Page configuration on web and mobile.
+  Validation rules for LSC Home Page configuration on web and mobile.
   Covers Lightning App Builder setup, announcements, quick actions,
   Next Best Customer, activity plans, and metadata cache requirements.
 
@@ -26,7 +26,7 @@ rules:
   - id: homepage-001
     name: Default home page Lightning page exists
     description: |
-      Verifies that an AFLS-configured Home Page Lightning page exists.
+      Verifies that an LSC-configured Home Page Lightning page exists.
       The home page is configured using Lightning App Builder and serves
       as the central hub for sales reps. Without a properly configured
       home page, users will see the default Salesforce home.
@@ -43,14 +43,14 @@ rules:
       expect: "records.length > 0"
     symptoms:
       - "Home page is blank"
-      - "AFLS widgets not showing on home page"
-      - "Default Salesforce home page appearing instead of AFLS"
+      - "LSC widgets not showing on home page"
+      - "Default Salesforce home page appearing instead of LSC"
     resolution:
       steps:
         - "Navigate to Setup > Lightning App Builder"
         - "Create or edit a Home Page type Lightning page"
-        - "Add AFLS components (Announcements, NBC, Up Next, Activity Plan, etc.)"
-        - "Activate the page for the AFLS app and user profiles"
+        - "Add LSC components (Announcements, NBC, Up Next, Activity Plan, etc.)"
+        - "Activate the page for the LSC app and user profiles"
       ui_path: "Setup > Lightning App Builder"
     tags: [home-page, web, mobile, configuration]
 

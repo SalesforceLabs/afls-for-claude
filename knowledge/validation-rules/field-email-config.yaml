@@ -1,4 +1,4 @@
-# AFLS Field Email Configuration Validation Rules
+# LSC Field Email Configuration Validation Rules
 # ===================================================
 # Rules to validate Field Email configuration including
 # email templates, consent topics, consent records,
@@ -17,7 +17,7 @@
 schema_version: "1.0"
 category_name: "Field Email Configuration"
 description: |
-  Validation rules for AFLS Field Email configuration.
+  Validation rules for LSC Field Email configuration.
   Covers email templates, consent topics, consent records,
   contact point emails, fragments, attachments, and mobile cache requirements.
 
@@ -31,7 +31,7 @@ rules:
     description: |
       Verifies that at least one LifeSciEmailTemplate record exists.
       Email templates are required for field reps to send compliant, templated
-      emails to HCPs and HCOs. Templates are created outside AFLS as HTML ZIP
+      emails to HCPs and HCOs. Templates are created outside LSC as HTML ZIP
       files and uploaded to Admin Console > Email. Without templates, reps
       cannot send emails from the Send Email button on Account pages or mobile.
     category: configuration
@@ -266,7 +266,7 @@ rules:
       linked to email templates that reps can include in emails. Some attachments
       may be marked as mandatory and automatically included. Attachments enable
       reps to share product information, safety data sheets, or compliance
-      documents with HCPs. While not required, attachments are common in AFLS
+      documents with HCPs. While not required, attachments are common in LSC
       email implementations.
     category: configuration
     severity: info

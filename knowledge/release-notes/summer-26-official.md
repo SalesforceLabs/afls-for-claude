@@ -2,7 +2,7 @@
 
 Source: https://help.salesforce.com/s/articleView?id=release-notes.rn_lifesciences.htm&release=262&type=5
 
-> AFLS is now Agentforce Life Sciences. You may see references to AFLS in our application and documentation.
+> Life Sciences Cloud (LSC) is now Agentforce Life Sciences. You may see references to LSC in our application and documentation.
 
 ## Overview
 
@@ -26,7 +26,7 @@ Drive field agility and strategic planning by simplifying downtime entry workflo
 
 ## Engagement Execution
 
-Field reps can now log visits in the AFLS mobile app by using voice commands even while offline, and they can verify visit locations by using automated geolocation tagging. The mobile app and desktop site strengthen regulatory adherence by automating Massachusetts Controlled Substance Registration (MSCR) validation and dynamically displaying signature disclaimers based on a provider's language and country. Additionally, with optimized background synchronization, field teams have access to the latest data with improved performance. Enhance medical insight management with a custom web UI and hierarchical parent-child groupings. Simplify contact updates by allowing sales reps to add multiple communication channels directly from the consent management page.
+Field reps can now log visits in the LSC mobile app by using voice commands even while offline, and they can verify visit locations by using automated geolocation tagging. The mobile app and desktop site strengthen regulatory adherence by automating Massachusetts Controlled Substance Registration (MSCR) validation and dynamically displaying signature disclaimers based on a provider's language and country. Additionally, with optimized background synchronization, field teams have access to the latest data with improved performance. Enhance medical insight management with a custom web UI and hierarchical parent-child groupings. Simplify contact updates by allowing sales reps to add multiple communication channels directly from the consent management page.
 
 ## Institutional Doctor Accounts
 
@@ -48,7 +48,7 @@ Support Early Post-Marketing Phase Vigilance (EPPV) and Medical Information Deli
 
 LifeSciConfigRecord metadata files now use human-readable file names instead of org-specific profile IDs for profile-level and user-level configuration records in hierarchical categories.
 
-## New and Changed Connect REST API Resources in AFLS
+## New and Changed Connect REST API Resources in LSC
 
 Connect REST APIs help customers and partners integrate with Salesforce software and UIs.
 
@@ -58,4 +58,4 @@ New and changed Life Sciences objects available in this release.
 
 ## New and Changed Life Sciences Metadata Types
 
-New and changed metadata types of AFLS.
+New and changed metadata types of LSC.

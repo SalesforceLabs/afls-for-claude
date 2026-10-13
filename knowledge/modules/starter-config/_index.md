@@ -1,9 +1,9 @@
 # Starter Configuration (LSStarterConfig)
 
-**LSStarterConfig** is an open-source Salesforce Labs repository that bootstraps an AFLS4CE org with pre-built configurations — DB Schemas, application & feature settings, a sample profile, and trigger handler activations. It exists to short-circuit the manual config bootstrap that every new AFLS4CE org otherwise requires.
+**LSStarterConfig** is an open-source Salesforce Labs repository that bootstraps an LSC4CE org with pre-built configurations — DB Schemas, application & feature settings, a sample profile, and trigger handler activations. It exists to short-circuit the manual config bootstrap that every new LSC4CE org otherwise requires.
 
 - **Repo:** https://github.com/SalesforceLabs/LSStarterConfig
-- **Audience:** AFLS4CE (Customer Engagement) orgs — not Pharma
+- **Audience:** LSC4CE (Customer Engagement) orgs — not Pharma
 - **Status:** Open-source, GA
 
 ## Three Deployment Methods
@@ -16,6 +16,6 @@
 
 - [LSStarterConfig — Spring '26 Setup Guide](./release-260-lsstarter-config.md) — deployment methods, single-zip change, prerequisites, paid-org policy
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 - [LSStarterConfig — Support Engineering Training](./support-engineering-lsstarter-config.md) — live walkthrough, Heroku constraints, troubleshooting patterns, duplicate handling logic

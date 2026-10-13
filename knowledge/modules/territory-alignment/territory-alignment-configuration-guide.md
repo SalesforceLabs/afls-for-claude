@@ -2,7 +2,7 @@
 
 ## Overview
 
-Territory Alignment in AFLS extends Salesforce Enterprise Territory Management (ETM) to support commercial life sciences requirements. It manages the assignment of healthcare accounts (HCPs/HCOs) to sales territories and creates ProviderAcctTerritoryInfo records that store territory-specific information about accounts.
+Territory Alignment in Life Sciences Cloud (LSC) extends Salesforce Enterprise Territory Management (ETM) to support commercial life sciences requirements. It manages the assignment of healthcare accounts (HCPs/HCOs) to sales territories and creates ProviderAcctTerritoryInfo records that store territory-specific information about accounts.
 
 ## Key Objects
 
@@ -19,7 +19,7 @@ Territory Alignment in AFLS extends Salesforce Enterprise Territory Management (
 
 ## Prerequisites
 
-Before configuring AFLS territory alignment, standard Salesforce territory setup must be complete:
+Before configuring LSC territory alignment, standard Salesforce territory setup must be complete:
 
 1. **Enable Enterprise Territory Management** in Setup
 2. **Create Territory Types** (e.g., Region, District, Territory)
@@ -74,7 +74,7 @@ Automatic alignment of affiliated accounts based on ProviderAffiliation relation
 
 ## Batch Jobs
 
-Batch jobs are run from the **Territory Management Jobs** tab in the AFLS app.
+Batch jobs are run from the **Territory Management Jobs** tab in the LSC app.
 
 | Job | Processes | Trigger |
 |-----|-----------|---------|
@@ -97,7 +97,7 @@ Batch jobs are run from the **Territory Management Jobs** tab in the AFLS app.
 
 ## ProviderAcctTerritoryInfo
 
-This is the central record that links an account to a territory with AFLS-specific data:
+This is the central record that links an account to a territory with LSC-specific data:
 
 | Field | Description |
 |-------|-------------|

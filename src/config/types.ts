@@ -1,5 +1,5 @@
 /**
- * Shared types for the AFLS configuration export → diff → import pipeline.
+ * Shared types for the LSC configuration export → diff → import pipeline.
  *
  * A `ConfigSnapshot` is what `export_config` writes to disk and what
  * `import_config` reads. `collectConfig()` produces one from a live org; the

@@ -1,14 +1,14 @@
 <!-- guide:dev-guide section:fields-on-producttransfer pages:1475-1475 -->
 # Fields on ProductTransfer
 
-AFLS Overview                                                                                            Fields on ProductTransfer
+Life Sciences Cloud (LSC) Overview                                                                                            Fields on ProductTransfer
 
 
 
 
 ## Fields on ProductTransfer
 
-AFLS fields extend the standard ProductTransfer object to capture specific inventory and batch information.
+LSC fields extend the standard ProductTransfer object to capture specific inventory and batch information.
 
 
 

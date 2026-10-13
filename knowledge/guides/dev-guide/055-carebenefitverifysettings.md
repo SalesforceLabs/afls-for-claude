@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:carebenefitverifysettings pages:1889-1891 -->
 # CareBenefitVerifySettings
 
-AFLS Overview                                                                                                    CareBenefitVerifySettings
+Life Sciences Cloud (LSC) Overview                                                                                                    CareBenefitVerifySettings
 
 
 
@@ -64,7 +64,7 @@ are reflected in a subscriber’s organization. Label is Record Type Name. This 
 
 <!-- page:1890 -->
 
-AFLS Overview                                                                                  CareBenefitVerifySettings
+LSC Overview                                                                                  CareBenefitVerifySettings
 
 
 
@@ -115,7 +115,7 @@ Possible values are:
 
 <!-- page:1891 -->
 
-AFLS Overview                                                                                  CareBenefitVerifySettings
+LSC Overview                                                                                  CareBenefitVerifySettings
 
 
 

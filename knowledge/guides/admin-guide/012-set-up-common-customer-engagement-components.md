@@ -18,7 +18,7 @@ Custom Actions for smoother workflows. Visualize Sales Data for effective custom
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with Life Sciences Cloud (LSC), LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -30,7 +30,7 @@ Deliver in-app notifications to sales reps in their flow of work by using App Al
 assign them to specific territories to make sure that notifications reach the right sales reps. With App
 Alerts, enhance in-app communication, drive user engagement, and avoid missing opportunities.
 Dynamic Tree View Components for Life Sciences
-Configure a Dynamic Tree View component to show related AFLS for Customer
+Configure a Dynamic Tree View component to show related LSC for Customer
 Engagement data in an expandable hierarchy. Users can easily explore related records in one place
 without going to multiple pages, boosting visibility and saving time. For example, show the account
 hierarchy within a health system, or visualize how healthcare professionals (HCPs) and healthcare
@@ -41,14 +41,14 @@ with flexible license validity evaluations. License management in Life Sciences 
 makes sure that healthcare providers (HCPs) have the required license and authorization to receive
 pharmaceutical samples.
 Multi-Object Components for Life Sciences
-The AFLS for Customer Engagement multi-object components consolidate fields from
+The LSC for Customer Engagement multi-object components consolidate fields from
 several related objects onto a single record page, making it easier for users to view and manage data.
 Showing fields from multiple objects together helps users avoid going to multiple pages and simplifies
 the workflows for accounts, inquiries, and visits.
 Provider Bulk Sync
 Provider Bulk Sync helps organizations to effectively and efficiently manage their relationships with
 Healthcare Organizations (HCOs) and Healthcare Providers (HCPs). It allows organizations to integrate
-HCP and HCO data from IQVIA OneKey directly into the AFLS data model. This process
+HCP and HCO data from IQVIA OneKey directly into the LSC data model. This process
 helps organizations get verified HCP data, which helps users have the right information for their
 customer engagement plans and activities. The verified data can be used for territory planning and
 other processes.
@@ -60,7 +60,7 @@ other processes.
 
 ## Data 360 for Life Sciences Customer Engagement
 
-Integrate Data 360 with AFLS by using the Life Sciences Data Kit. When you deploy the
+Integrate Data 360 with LSC by using the Life Sciences Data Kit. When you deploy the
 Life Sciences Data Kit, you get access to prebuilt data mappings, data streams, and other features that
 unify and harmonize your Account Management data.
 Quick and Custom Action Management
@@ -68,14 +68,14 @@ To simplify user experiences in Salesforce and the Life Sciences for Customer En
 leverage quick actions and custom actions. These actions provide convenient access to essential
 information and common tasks, which streamlines user navigation and workflows.
 Related Lists for Life Sciences
-Records in Salesforce can include details and links to other related records. The AFLS for
+Records in Salesforce can include details and links to other related records. The LSC for
 Customer Engagement related list offers more customization and filtering options than standard
-related lists. If you create a AFLS for Customer Engagement workflow, you can also
+related lists. If you create a LSC for Customer Engagement workflow, you can also
 control the actions that users can take on related records based on the parent record’s status, user
 role, and other business rules. These related lists are supported both online and offline in the Life
 Sciences Cloud mobile app.
 Reports and Dashboards Administration
-Use reports and dashboards to deliver information to your AFLS mobile app users in the
+Use reports and dashboards to deliver information to your LSC mobile app users in the
 ways that work best for them.
 Run Batch Jobs
 Automate the processing of large record volumes by running Apex batch jobs from the Admin
@@ -83,11 +83,11 @@ Console.
 Trigger Handler Administration
 View and activate trigger handlers in the Life Sciences Customer Engagement Admin Console.
 Workflows for Life Sciences
-AFLS for Customer Engagement workflows automate your business processes and guide
+LSC for Customer Engagement workflows automate your business processes and guide
 users through their tasks with clear steps. Configure the permissions and actions for each step of the
 workflow based on the users' context and role. Implement custom validations to make sure that users
 follow business processes, and provide checklists to help users understand how to use the workflow.
-These workflows are supported both online and offline in the AFLS mobile app.
+These workflows are supported both online and offline in the LSC mobile app.
 
 
 App Alerts
@@ -102,7 +102,7 @@ enhance in-app communication, drive user engagement, and avoid missing opportuni
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -123,7 +123,7 @@ can take directly from the alert.
 Set Up App Alerts
 Send relevant and targeted notifications, recommendations, and guided actions to sales reps on web
 and mobile apps. Configure the trigger handlers, assign access to the Apex classes, and activate the
-AFLS for Customer Engagement app for the standard user profile. Add the Lightning
+LSC for Customer Engagement app for the standard user profile. Add the Lightning
 component to the record page to show Alerts to your sales reps.
 Create an App Alert
 App alerts are the broader, contextual notifications that appear in specific application areas. Choose a
@@ -138,7 +138,7 @@ a Territory where the alert is sent. Use App Alert Territories to associate an a
 territories so that only the users assigned to those territories see the message.
 Mobile App Configuration for App Alerts
 Configure the object schema for supported App Alerts objects and generate a metadata cache to
-make sure your sales reps receive timely alerts on the AFLS Mobile app.
+make sure your sales reps receive timely alerts on the LSC Mobile app.
 Create a Metadata Cache
 Package the object scheme configuration into a downloadable metadata cache that the mobile app
 can use. Create a metadata cache to make sure that the app consistently uses the latest metadata
@@ -157,7 +157,7 @@ missing opportunities.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 
 <!-- page:484 -->
 
@@ -273,7 +273,7 @@ take directly from the alert.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -427,7 +427,7 @@ This example demonstrates how tags are defined in JSON format.
 
 
 {
-"tags":[ "Agentforce", "What's New", "Next Gen AFLS"
+"tags":[ "Agentforce", "What's New", "Next Gen LSC"
 ]
 }
 
@@ -529,7 +529,7 @@ component to the record page to show Alerts to your sales reps.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -571,7 +571,7 @@ Representative or, optionally, through a custom profile created by you.
 - SystemController
 - TerritorySwitcherCmpController
 See Set Apex Class Access from Permission Sets and Set Apex Class Access from Profiles.
-4. Add the built-in Notifications List Lightning component to the AFLS for Customer
+4. Add the built-in Notifications List Lightning component to the LSC for Customer
 Engagement app.
 Add the Lightning component on a record, home, or app page.
 a. From the App Launcher, find and select Life Sciences Commercial.
@@ -579,12 +579,12 @@ b. Click the     icon, and then click Edit Page.
 c. In the Components section, find and select Notifications List in the search box.
 d. Drag the component to the canvas.
 e. Save your changes.
-5. If you selected Announcement as the type of alert, add the AFLS Home Announcement Lightning
-component to the AFLS for Customer Engagement app.
+5. If you selected Announcement as the type of alert, add the LSC Home Announcement Lightning
+component to the LSC for Customer Engagement app.
 Add the Lightning component on a record, home, or app page.
 a. From the App Launcher, find and select Life Sciences Commercial.
 b.   Click the   icon, and then click Edit Page.
-c.   In the Components section, find and select AFLS Home Announcements.
+c.   In the Components section, find and select LSC Home Announcements.
 d.   Drag the component to the canvas.
 e.   Save your changes.
 
@@ -609,7 +609,7 @@ context type to control where the alert appears: All, Object, and Tab.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -679,7 +679,7 @@ users. You can create a record alert manually or trigger it automatically using 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -705,7 +705,7 @@ so that only the users assigned to those territories see the message.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -734,7 +734,7 @@ Set Up App Alerts
 Mobile App Configuration for App Alerts
 
 Configure the object schema for supported App Alerts objects and generate a metadata cache to make
-sure your sales reps receive timely alerts on the AFLS Mobile app.
+sure your sales reps receive timely alerts on the LSC Mobile app.
 
 
 **REQUIRED EDITIONS**
@@ -742,7 +742,7 @@ sure your sales reps receive timely alerts on the AFLS Mobile app.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -789,7 +789,7 @@ i. Select how you want the conditions to be evaluated.
 
 ## See Also
 
-Customize the AFLS Mobile App
+Customize the LSC Mobile App
 Generate Metadata Cache
 
 
@@ -805,7 +805,7 @@ definitions, even when a network connection is unavailable.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS and the AFLS for
+Available in: Enterprise and Unlimited Editions with LSC and the LSC for
 Customer Engagement Add-On license
 
 
@@ -840,7 +840,7 @@ g. To save your changes, click Create New Cache.
 
 Dynamic Tree View Components for Life Sciences
 
-Configure a Dynamic Tree View component to show related AFLS for Customer
+Configure a Dynamic Tree View component to show related LSC for Customer
 Engagement data in an expandable hierarchy. Users can easily explore related records in one place
 without going to multiple pages, boosting visibility and saving time. For example, show the account
 hierarchy within a health system, or visualize how healthcare professionals (HCPs) and healthcare
@@ -853,19 +853,19 @@ component to a Lightning record page.
 
 ## Create Object Configurations for a Dynamic Tree View Component
 
-Configure the data that you want to show for each object in a AFLS for Customer
+Configure the data that you want to show for each object in a LSC for Customer
 Engagement Dynamic Tree View component.
 Configure a Dynamic Tree View Component
-Create a dynamic tree view component configuration to show AFLS for Customer
+Create a dynamic tree view component configuration to show LSC for Customer
 Engagement data for related objects in a hierarchical view.
 Add a Dynamic Tree View Component to a Record Page
 Use Lightning App Builder to add your Dynamic Tree View component to the parent object’s Lightning
-record page in AFLS for Customer Engagement.
+record page in LSC for Customer Engagement.
 
 
 Create Object Configurations for a Dynamic Tree View Component
 
-Configure the data that you want to show for each object in a AFLS for Customer
+Configure the data that you want to show for each object in a LSC for Customer
 Engagement Dynamic Tree View component.
 
 
@@ -874,7 +874,7 @@ Engagement Dynamic Tree View component.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -925,7 +925,7 @@ Create and Edit Field Sets
 
 Configure a Dynamic Tree View Component
 
-Create a dynamic tree view component configuration to show AFLS for Customer
+Create a dynamic tree view component configuration to show LSC for Customer
 Engagement data for related objects in a hierarchical view.
 
 
@@ -934,7 +934,7 @@ Engagement data for related objects in a hierarchical view.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -977,7 +977,7 @@ information to add your component to the parent object’s record page in Lightn
 Add a Dynamic Tree View Component to a Record Page
 
 Use Lightning App Builder to add your Dynamic Tree View component to the parent object’s Lightning
-record page in AFLS for Customer Engagement.
+record page in LSC for Customer Engagement.
 
 
 **REQUIRED EDITIONS**
@@ -985,7 +985,7 @@ record page in AFLS for Customer Engagement.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1031,7 +1031,7 @@ pharmaceutical samples.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1072,7 +1072,7 @@ status of HCP licenses.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1121,12 +1121,12 @@ company's specific needs.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-AFLS provides standard license validity formulas. With License Management, you can
+LSC provides standard license validity formulas. With License Management, you can
 configure flexible custom formulas for validity checks. You can also select where the validity indicators
 are shown and which profiles can see it.
 
@@ -1183,7 +1183,7 @@ before sharing product samples.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1221,7 +1221,7 @@ risk products, such as those categorized as dangerous drugs, has the necessary l
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1264,7 +1264,7 @@ tracking, and audit of controlled substances.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1296,7 +1296,7 @@ e. Save your changes.
 
 Multi-Object Components for Life Sciences
 
-The AFLS for Customer Engagement multi-object components consolidate fields from
+The LSC for Customer Engagement multi-object components consolidate fields from
 several related objects onto a single record page, making it easier for users to view and manage data.
 Showing fields from multiple objects together helps users avoid going to multiple pages and simplifies
 the workflows for accounts, inquiries, and visits.
@@ -1307,10 +1307,10 @@ the workflows for accounts, inquiries, and visits.
 With the multi-object Lightning components included with Life Sciences Customer Engagement, users
 can create, edit, and view records that include fields from multiple objects on a single page.
 Set Up the Multi-Object Create and Edit Components
-Assign overrides for standard Salesforce buttons to help users in AFLS for Customer
+Assign overrides for standard Salesforce buttons to help users in LSC for Customer
 Engagement create or edit records with fields from multiple objects.
 Set Up the Multi-Object Record View Component
-To help users in AFLS for Customer Engagement view fields from multiple objects on a
+To help users in LSC for Customer Engagement view fields from multiple objects on a
 single record page, add the Multi-Object Record View component to record pages.
 
 
@@ -1325,14 +1325,14 @@ can create, edit, and view records that include fields from multiple objects on 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
 Multi-Object Lightning Components
 
-The AFLS for Customer Engagement managed package includes these Lightning
+The LSC for Customer Engagement managed package includes these Lightning
 components that support multi-object layouts.
 
 - The MultiEntityCreateOverride component overrides the New action so users can populate fields and
@@ -1384,7 +1384,7 @@ at the top of the page rather than inline.
 
 Set Up the Multi-Object Create and Edit Components
 
-Assign overrides for standard Salesforce buttons to help users in AFLS for Customer
+Assign overrides for standard Salesforce buttons to help users in LSC for Customer
 Engagement create or edit records with fields from multiple objects.
 
 
@@ -1398,14 +1398,14 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
 USER PERMISSIONS NEEDED
 
-To access and work with AFLS for      Life Sciences Commercial Admin permission set
+To access and work with LSC for      Life Sciences Commercial Admin permission set
 Customer Engagement multi-object components:
 
 To override standard buttons:                        Customize Application
@@ -1433,12 +1433,12 @@ lsc4ce:MultiEntityCreateOverride from the dropdown.
 5. Similarly, assign the override for the Edit action. Select lsc4ce:MultiEntityEditOverride as the override
 for Lightning Experience.
 
-The overrides that you apply to Lightning Experience also apply to the AFLS mobile app.
+The overrides that you apply to Lightning Experience also apply to the LSC mobile app.
 
 
 Set Up the Multi-Object Record View Component
 
-To help users in AFLS for Customer Engagement view fields from multiple objects on a
+To help users in LSC for Customer Engagement view fields from multiple objects on a
 single record page, add the Multi-Object Record View component to record pages.
 
 
@@ -1447,7 +1447,7 @@ single record page, add the Multi-Object Record View component to record pages.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1458,14 +1458,14 @@ package.
 
 USER PERMISSIONS NEEDED
 
-To access and work with AFLS for      Life Sciences Commercial Admin permission set
+To access and work with LSC for      Life Sciences Commercial Admin permission set
 Customer Engagement multi-object components:
 
 To create and save Lightning pages in Lightning      Customize Application
 App Builder:
 
 
-When you install the AFLS for Customer Engagement managed package, the default
+When you install the LSC for Customer Engagement managed package, the default
 Lightning record pages for these objects include the Multi-Object Record View component:
 
 - Account
@@ -1492,7 +1492,7 @@ Provider Bulk Sync
 
 Provider Bulk Sync helps organizations to effectively and efficiently manage their relationships with
 Healthcare Organizations (HCOs) and Healthcare Providers (HCPs). It allows organizations to integrate
-HCP and HCO data from IQVIA OneKey directly into the AFLS data model. This process
+HCP and HCO data from IQVIA OneKey directly into the LSC data model. This process
 helps organizations get verified HCP data, which helps users have the right information for their
 customer engagement plans and activities. The verified data can be used for territory planning and other
 processes.
@@ -1503,7 +1503,7 @@ processes.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1514,9 +1514,9 @@ Set Up Provider Bulk Sync by Using Built-In MuleSoft Integration
 
 
 
-Integrate AFLS with IQVIA’s OneKey to import healthcare provider and organization
-information from an external system into Salesforce AFLS for Customer Engagement.
-AFLS offers a prebuilt suite of integrations apps, such as the Provider Bulk Sync API and
+Integrate LSC with IQVIA’s OneKey to import healthcare provider and organization
+information from an external system into Salesforce LSC for Customer Engagement.
+LSC offers a prebuilt suite of integrations apps, such as the Provider Bulk Sync API and
 the Onekey System API. These apps are deployed by using MuleSoft Direct to seamlessly integrate
 with and import healthcare provider information from various external data sources.
 Create a Copy of Healthcare Provider Address Records by Using Flows and Batch Jobs
@@ -1531,8 +1531,8 @@ triggered when a healthcare organization's address is added or updated.
 
 Set Up Provider Bulk Sync by Using Built-In MuleSoft Integration
 
-Integrate AFLS with IQVIA’s OneKey to import healthcare provider and organization
-information from an external system into Salesforce AFLS for Customer Engagement. Life
+Integrate LSC with IQVIA’s OneKey to import healthcare provider and organization
+information from an external system into Salesforce LSC for Customer Engagement. Life
 Sciences Cloud offers a prebuilt suite of integrations apps, such as the Provider Bulk Sync API and the
 Onekey System API. These apps are deployed by using MuleSoft Direct to seamlessly integrate with and
 import healthcare provider information from various external data sources.
@@ -1543,7 +1543,7 @@ import healthcare provider information from various external data sources.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1598,7 +1598,7 @@ organization's address is added or updated.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1645,7 +1645,7 @@ healthcare provider (HCP) address records from the affiliated healthcare organiz
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1721,7 +1721,7 @@ to create a copy of the Contact Point Addresses and Process Provider Affiliation
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -1849,7 +1849,7 @@ Contact Point Addresses batch job completes.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2028,7 +2028,7 @@ d. Click Done.
 
 Data 360 for Life Sciences Customer Engagement
 
-Integrate Data 360 with AFLS by using the Life Sciences Data Kit. When you deploy the Life
+Integrate Data 360 with LSC by using the Life Sciences Data Kit. When you deploy the Life
 Sciences Data Kit, you get access to prebuilt data mappings, data streams, and other features that unify
 and harmonize your Account Management data.
 
@@ -2038,26 +2038,26 @@ and harmonize your Account Management data.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, Data 360, and the Life Sciences Customer Engagement
 managed package.
 
 
 
-## Set Up Data 360 for AFLS for Customer Engagement
+## Set Up Data 360 for LSC for Customer Engagement
 
 Before you use the Life Sciences data kit, complete the basic configurations required to work in Data
-360. Set up Data 360, enable the required AFLS for Customer Engagement features,
+360. Set up Data 360, enable the required LSC for Customer Engagement features,
 connect Data 360 to your Salesforce CRM org, and verify the SSOT version.
 Deploy Life Sciences Data Kit
 Deploy Life Sciences Data Kit to access data streams, data lake objects, and data transforms built
 specifically for Life Sciences use cases.
 
 
-Set Up Data 360 for AFLS for Customer Engagement
+Set Up Data 360 for LSC for Customer Engagement
 
 Before you use the Life Sciences data kit, complete the basic configurations required to work in Data
-360. Set up Data 360, enable the required AFLS for Customer Engagement features,
+360. Set up Data 360, enable the required LSC for Customer Engagement features,
 connect Data 360 to your Salesforce CRM org, and verify the SSOT version.
 
 
@@ -2066,7 +2066,7 @@ connect Data 360 to your Salesforce CRM org, and verify the SSOT version.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, Data 360, and the Life Sciences Customer Engagement
 managed package.
 
@@ -2075,7 +2075,7 @@ USER PERMISSIONS NEEDED
 
 To use Data Cloud:                                   Data Cloud Architect permission set
 
-To set up AFLS for Customer           Life Sciences Commercial Admin permission set
+To set up LSC for Customer           Life Sciences Commercial Admin permission set
 Engagement features:
 
 
@@ -2089,14 +2089,14 @@ b. Manage Data 360 Users.
 
 c. About Data Spaces.
 d. Set Up a Salesforce Org CRM Connection.
-2. Enable the AFLS for Customer Engagement features required to access the data kits and
+2. Enable the LSC for Customer Engagement features required to access the data kits and
 their components.
 a. Go to Data Cloud Setup.
 If you don’t see this option, refresh your page, or log out and log back in with your admin user
 credentials.
 b. To enable Data Cloud, click Get Started.
 Setup can take a few minutes.
-c. Turn on AFLS for Customer Engagement features.
+c. Turn on LSC for Customer Engagement features.
 3. Connect Data 360 to your Salesforce CRM org.
 a. In Data Cloud, click Data Cloud Setup.
 b. In the Quick Find box, enter Salesforce CRM, then click Salesforce CRM.
@@ -2130,7 +2130,7 @@ specifically for Life Sciences use cases.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, Data 360, and the Life Sciences Customer Engagement
 managed package.
 
@@ -2171,7 +2171,7 @@ objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, Data 360, and the Life Sciences Customer Engagement
 managed package.
 
@@ -2247,7 +2247,7 @@ information and common tasks, which streamlines user navigation and workflows.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2372,11 +2372,11 @@ Quick Actions
 
 Related Lists for Life Sciences
 
-Records in Salesforce can include details and links to other related records. The AFLS for
+Records in Salesforce can include details and links to other related records. The LSC for
 Customer Engagement related list offers more customization and filtering options than standard related
-lists. If you create a AFLS for Customer Engagement workflow, you can also control the
+lists. If you create a LSC for Customer Engagement workflow, you can also control the
 actions that users can take on related records based on the parent record’s status, user role, and other
-business rules. These related lists are supported both online and offline in the AFLS mobile
+business rules. These related lists are supported both online and offline in the LSC mobile
 app.
 
 When you add the Customer Engagement related list to a record page, you can:
@@ -2388,7 +2388,7 @@ When you add the Customer Engagement related list to a record page, you can:
 Get Your Org Ready for Life Sciences Related Lists
 Before you create a Life Sciences Customer Engagement related list, complete these steps.
 Create Related Lists for Life Sciences
-Add a AFLS for Customer Engagement related list to the page layout for Life Sciences
+Add a LSC for Customer Engagement related list to the page layout for Life Sciences
 objects, standard Salesforce objects, and custom objects. The related list appears in Life Sciences
 Cloud on desktop and in the mobile app.
 
@@ -2403,7 +2403,7 @@ Before you create a Life Sciences Customer Engagement related list, complete the
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2435,7 +2435,7 @@ object.
 5. If needed, create custom Lightning web components for the New, Edit, and Delete actions, or other
 actions that you want to include in the related list.
 You can also create a custom component for the View All link on related lists on iOS.
-6. Set up the configurations for the related list to work in the AFLS mobile app.
+6. Set up the configurations for the related list to work in the LSC mobile app.
 a. Set up object metadata cache configurations for the related list objects.
 b. Generate a metadata cache to package the object schema configuration that the Life Sciences
 Cloud mobile app uses for online and offline access.
@@ -2443,8 +2443,8 @@ Cloud mobile app uses for online and offline access.
 
 Create Related Lists for Life Sciences
 
-Add a AFLS for Customer Engagement related list to the page layout for Life Sciences
-objects, standard Salesforce objects, and custom objects. The related list appears in AFLS
+Add a LSC for Customer Engagement related list to the page layout for Life Sciences
+objects, standard Salesforce objects, and custom objects. The related list appears in LSC
 on desktop and in the mobile app.
 
 
@@ -2453,21 +2453,21 @@ on desktop and in the mobile app.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
 USER PERMISSIONS NEEDED
 
-To configure the AFLS for Customer       Life Sciences Commercial Admin permission set
+To configure the LSC for Customer       Life Sciences Commercial Admin permission set
 Engagement related list:
 
 To create and save Lightning pages in Lightning         Customize Application
 App Builder:
 
 
-When you install the AFLS for Customer Engagement managed package, these default
+When you install the LSC for Customer Engagement managed package, these default
 Lightning record pages include some related lists automatically:
 
 - Account
@@ -2525,7 +2525,7 @@ Get Help for Lightning App Builder
 
 Reports and Dashboards Administration
 
-Use reports and dashboards to deliver information to your AFLS mobile app users in the
+Use reports and dashboards to deliver information to your LSC mobile app users in the
 ways that work best for them.
 
 <!-- page:526 -->
@@ -2538,14 +2538,14 @@ ways that work best for them.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
 Manage Reports and Dashboards Settings
 
-Define settings for the reports and dashboards shown to users on the AFLS mobile app.
+Define settings for the reports and dashboards shown to users on the LSC mobile app.
 
 
 **REQUIRED EDITIONS**
@@ -2570,10 +2570,10 @@ Customize Application
 5. Save the settings.
 
 
-Limitations for Charts and Dashboards in the AFLS Mobile
+Limitations for Charts and Dashboards in the LSC Mobile
 App
 
-Learn about the limitations for report charts and dashboards in the AFLS mobile app. Not
+Learn about the limitations for report charts and dashboards in the LSC mobile app. Not
 all chart types render correctly or are supported.
 
 After you set up reports and dashboards, you can add them to Lightning page components to help users
@@ -2582,7 +2582,7 @@ Builder, you can add these standard components to Lightning pages.
 
 - Dashboard: Supported on the home page
 - Report Chart: Supported on the home page and Lightning record pages
-You can also show reports or dashboards in separate tabs within the AFLS mobile app.
+You can also show reports or dashboards in separate tabs within the LSC mobile app.
 
 <!-- page:527 -->
 
@@ -2591,14 +2591,14 @@ You can also show reports or dashboards in separate tabs within the AFLS mobile 
 
 ## Limitations for Bar and Column Charts
 
-Standard bar charts and column charts are replaced with stacked charts in the AFLS
+Standard bar charts and column charts are replaced with stacked charts in the LSC
 mobile app.
 
 
 
 ## Unsupported Chart Types
 
-These chart types aren’t supported in the AFLS mobile app
+These chart types aren’t supported in the LSC mobile app
 
 - Funnel charts
 - Scatter charts
@@ -2618,7 +2618,7 @@ Automate the processing of large record volumes by running Apex batch jobs from 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2654,7 +2654,7 @@ View and activate trigger handlers in the Life Sciences Customer Engagement Admi
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -2743,7 +2743,7 @@ ActivityPlanTerritory, AppAlertTerritory, and AssessmentTask objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3003,7 +3003,7 @@ Expense, ExpenseParticipant, and GoalAssignment objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3379,7 +3379,7 @@ Presentation, PresentationForum, and PresentationLinkedPage objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3682,7 +3682,7 @@ MedicalInsight, UserReaction, Subject and SubjectAssignment objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -3824,7 +3824,7 @@ objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4027,7 +4027,7 @@ PrvdVstSmplLmtTransaction objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4407,7 +4407,7 @@ TerritoryUserDowntime, Visit, and Visitor objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4754,7 +4754,7 @@ the Visitors (employees).        afterDelete
 
 Workflows for Life Sciences
 
-AFLS for Customer Engagement workflows automate your business processes and guide
+LSC for Customer Engagement workflows automate your business processes and guide
 
 <!-- page:566 -->
 
@@ -4763,29 +4763,29 @@ AFLS for Customer Engagement workflows automate your business processes and guid
 users through their tasks with clear steps. Configure the permissions and actions for each step of the
 workflow based on the users' context and role. Implement custom validations to make sure that users
 follow business processes, and provide checklists to help users understand how to use the workflow.
-These workflows are supported both online and offline in the AFLS mobile app.
+These workflows are supported both online and offline in the LSC mobile app.
 
 
 ## Get Your Org Ready for Life Sciences Workflows
 
 Before you create a Life Sciences workflow, complete these steps.
 Understand Life Sciences Workflows
-AFLS for Customer Engagement workflows outline the journey of an object through
+LSC for Customer Engagement workflows outline the journey of an object through
 various stages and help you manage different statuses, actions, and record permissions. Get familiar
 with these terms, and understand how each part supports the overall workflow configuration.
 Prepare to Configure a Life Sciences Workflow
-AFLS for Customer Engagement workflows are a highly customizable way to streamline
+LSC for Customer Engagement workflows are a highly customizable way to streamline
 work for your field teams. To make sure your workflows function as expected, review these planning
 steps so you don't have to gather information or make decisions during setup.
 Manage Life Sciences Workflows
-To streamline your business processes, create tailored AFLS for Customer Engagement
+To streamline your business processes, create tailored LSC for Customer Engagement
 workflows.
 Considerations for Life Sciences Workflows
-When you configure a AFLS for Customer Engagement workflow, keep these
+When you configure a LSC for Customer Engagement workflow, keep these
 considerations in mind.
 Custom Scripts for Life Sciences
-Custom scripts are programmatic tools for data validation across AFLS for Customer
-Engagement on desktop and both online and offline in the AFLS mobile app. Custom
+Custom scripts are programmatic tools for data validation across LSC for Customer
+Engagement on desktop and both online and offline in the LSC mobile app. Custom
 scripts are used in Life Sciences workflow management and visit management.
 
 
@@ -4799,14 +4799,14 @@ Before you create a Life Sciences workflow, complete these steps.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
 USER PERMISSIONS NEEDED
 
-To access and work with AFLS for      Life Sciences Commercial Admin permission set
+To access and work with LSC for      Life Sciences Commercial Admin permission set
 Customer Engagement data:
 
 To update permission sets:                           View Setup and Configuration
@@ -4830,7 +4830,7 @@ Alternatively, share these records with each user manually.
 
 4. Activate the StagePathPermissionsHandler trigger handler for Life Sciences Customer Engagement
 workflows. See Trigger Handler Administration.
-5. Set up the configurations for the workflow to work in the AFLS mobile app.
+5. Set up the configurations for the workflow to work in the LSC mobile app.
 a. Set up object metadata cache configurations for all workflow objects.
 b. Generate a metadata cache to package the object schema configuration that the Life Sciences
 Cloud mobile app uses for online and offline access.
@@ -4838,7 +4838,7 @@ Cloud mobile app uses for online and offline access.
 
 Understand Life Sciences Workflows
 
-AFLS for Customer Engagement workflows outline the journey of an object through
+LSC for Customer Engagement workflows outline the journey of an object through
 various stages and help you manage different statuses, actions, and record permissions. Get familiar with
 these terms, and understand how each part supports the overall workflow configuration.
 
@@ -4848,7 +4848,7 @@ these terms, and understand how each part supports the overall workflow configur
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4917,7 +4917,7 @@ users understand the tasks to complete.
 
 Prepare to Configure a Life Sciences Workflow
 
-AFLS for Customer Engagement workflows are a highly customizable way to streamline
+LSC for Customer Engagement workflows are a highly customizable way to streamline
 work for your field teams. To make sure your workflows function as expected, review these planning
 steps so you don't have to gather information or make decisions during setup.
 
@@ -4931,7 +4931,7 @@ steps so you don't have to gather information or make decisions during setup.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -4975,7 +4975,7 @@ a record to the next stage.
 
 Manage Life Sciences Workflows
 
-To streamline your business processes, create tailored AFLS for Customer Engagement
+To streamline your business processes, create tailored LSC for Customer Engagement
 
 <!-- page:570 -->
 
@@ -4989,7 +4989,7 @@ workflows.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5042,7 +5042,7 @@ define the workflow path, you can assign these actions at each stage in the work
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5123,7 +5123,7 @@ record’s lifecycle, define user permissions and the actions that users can tak
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5211,7 +5211,7 @@ Update Record actions so that users can see the next steps to take.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5248,7 +5248,7 @@ apply to each stage object.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5262,7 +5262,7 @@ USER PERMISSIONS NEEDED
 To assign custom scripts to workflow objects:        Life Sciences Commercial Admin permission set
 
 
-Stage object records are created automatically after you create and save a AFLS for
+Stage object records are created automatically after you create and save a LSC for
 Customer Engagement workflow path. One stage object record is created for each object that has a
 workflow. Validations and checklists apply to all object types.
 
@@ -5284,7 +5284,7 @@ Custom Scripts for Life Sciences
 
 Considerations for Life Sciences Workflows
 
-When you configure a AFLS for Customer Engagement workflow, keep these
+When you configure a LSC for Customer Engagement workflow, keep these
 considerations in mind.
 
 
@@ -5293,7 +5293,7 @@ considerations in mind.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5369,8 +5369,8 @@ an inquiry.
 
 Custom Scripts for Life Sciences
 
-Custom scripts are programmatic tools for data validation across AFLS for Customer
-Engagement on desktop and both online and offline in the AFLS mobile app. Custom
+Custom scripts are programmatic tools for data validation across LSC for Customer
+Engagement on desktop and both online and offline in the LSC mobile app. Custom
 scripts are used in Life Sciences workflow management and visit management.
 
 
@@ -5379,7 +5379,7 @@ scripts are used in Life Sciences workflow management and visit management.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5392,11 +5392,11 @@ when users execute actions.
 
 You can create these types of custom scripts.
 
-- Checklist: Checklist custom scripts are used in AFLS for Customer Engagement
+- Checklist: Checklist custom scripts are used in LSC for Customer Engagement
 workflows. Checklist scripts help users understand all of the steps to take before they can move to the
 next stage in the workflow. These scripts are executed when a user clicks the info icon on Record
 Update actions.
--    Validation: Validation custom scripts are used in AFLS for Customer Engagement
+-    Validation: Validation custom scripts are used in LSC for Customer Engagement
 workflows. Validation scripts make sure that business rules are met before users can move a record to
 the next stage in a workflow. These scripts are executed when a user runs any workflow action.
 -    Visit Action Validation: Visit action validation custom scripts validate business rules before a user can
@@ -5405,17 +5405,17 @@ sign and submit a visit. These scripts are executed when a user runs an action t
 
 ## Understand the Format and Output for Life Sciences Custom Scripts
 
-Understand the format and output for custom scripts in AFLS for Customer
+Understand the format and output for custom scripts in LSC for Customer
 Engagement.
 Best Practices for Life Sciences Custom Scripts
-Follow these best practices when you create custom scripts for AFLS for Customer
+Follow these best practices when you create custom scripts for LSC for Customer
 Engagement.
 Test Custom Scripts for Life Sciences
 Because custom scripts aren’t typical Lightning web components, you can’t test them in the same way.
 Write custom Jest tests to test the Lightning web components that you create as custom scripts for
-workflows in AFLS for Customer Engagement.
+workflows in LSC for Customer Engagement.
 Troubleshoot Custom Scripts for Life Sciences
-To troubleshoot and debug custom scripts for AFLS for Customer Engagement workflow
+To troubleshoot and debug custom scripts for LSC for Customer Engagement workflow
 validation, use Chrome Developer Tools. The Console tab shows log information, while the Network
 
 <!-- page:578 -->
@@ -5428,12 +5428,12 @@ Visit Action Validation Custom Scripts help make sure that users follow business
 submitting a visit. These scripts run when the user selects the Sign or Submit action.
 Life Sciences Custom Scripts Reference
 Understand the available JavaScript classes, functions, and variables that you can include in a
-Lightning web component for custom scripts in AFLS for Customer Engagement.
+Lightning web component for custom scripts in LSC for Customer Engagement.
 
 
 Understand the Format and Output for Life Sciences Custom Scripts
 
-Understand the format and output for custom scripts in AFLS for Customer Engagement.
+Understand the format and output for custom scripts in LSC for Customer Engagement.
 
 
 **REQUIRED EDITIONS**
@@ -5441,7 +5441,7 @@ Understand the format and output for custom scripts in AFLS for Customer Engagem
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5547,7 +5547,7 @@ status: "success",
 
 Best Practices for Life Sciences Custom Scripts
 
-Follow these best practices when you create custom scripts for AFLS for Customer
+Follow these best practices when you create custom scripts for LSC for Customer
 Engagement.
 
 
@@ -5556,14 +5556,14 @@ Engagement.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
 Asynchronous Calls
 
-Database queries are synchronous on the AFLS mobile app but asynchronous on desktop.
+Database queries are synchronous on the LSC mobile app but asynchronous on desktop.
 To support asynchronous calls, enclose each validation in an async function.
 
 
@@ -5649,7 +5649,7 @@ returns a JavaScript error for the inaccessible field. If an error occurs but is
 block:
 
 - On desktop, users see only a field access error for checklist and validation scripts.
-- On the AFLS mobile app, users see a field access error for checklist scripts, but
+- On the LSC mobile app, users see a field access error for checklist scripts, but
 validation scripts fail.
 
 <!-- page:582 -->
@@ -5660,14 +5660,14 @@ validation scripts fail.
 Testing
 
 Because errors can sometimes occur in only one environment, we recommend testing custom scripts on
-both desktop and in the AFLS mobile app.
+both desktop and in the LSC mobile app.
 
 
 Test Custom Scripts for Life Sciences
 
 Because custom scripts aren’t typical Lightning web components, you can’t test them in the same way.
 Write custom Jest tests to test the Lightning web components that you create as custom scripts for
-workflows in AFLS for Customer Engagement.
+workflows in LSC for Customer Engagement.
 
 
 **REQUIRED EDITIONS**
@@ -5675,7 +5675,7 @@ workflows in AFLS for Customer Engagement.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5763,13 +5763,13 @@ status: 'success',
 
 ## Example Test Suite for Life Sciences Custom Scripts
 
-This example provides a test suite for a custom script in AFLS for Customer
+This example provides a test suite for a custom script in LSC for Customer
 Engagement.
 
 
 Example Test Suite for Life Sciences Custom Scripts
 
-This example provides a test suite for a custom script in AFLS for Customer Engagement.
+This example provides a test suite for a custom script in LSC for Customer Engagement.
 
 This example Jest test suite is designed to test the example custom script in Best Practices for Life
 Sciences Custom Scripts.
@@ -5929,7 +5929,7 @@ status: 'error',
 
 Troubleshoot Custom Scripts for Life Sciences
 
-To troubleshoot and debug custom scripts for AFLS for Customer Engagement workflow
+To troubleshoot and debug custom scripts for LSC for Customer Engagement workflow
 validation, use Chrome Developer Tools. The Console tab shows log information, while the Network tab
 helps monitor network requests, responses, and performance.
 
@@ -5939,7 +5939,7 @@ helps monitor network requests, responses, and performance.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -5989,7 +5989,7 @@ submitting a visit. These scripts run when the user selects the Sign or Submit a
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -7629,7 +7629,7 @@ return [validateVisit];
 Life Sciences Custom Scripts Reference
 
 Understand the available JavaScript classes, functions, and variables that you can include in a Lightning
-web component for custom scripts in AFLS for Customer Engagement.
+web component for custom scripts in LSC for Customer Engagement.
 
 
 **REQUIRED EDITIONS**
@@ -7637,7 +7637,7 @@ web component for custom scripts in AFLS for Customer Engagement.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -7645,23 +7645,23 @@ package.
 
 ## Classes for Life Sciences Custom Scripts
 
-AFLS for Customer Engagement supports various JavaScript classes in custom scripts.
+LSC for Customer Engagement supports various JavaScript classes in custom scripts.
 These classes enable you to create powerful and flexible logic within the script, particularly for
 constructing queries and managing data. Each class includes a description of its purpose, constructor
 details, parameters, methods, and examples.
 Variables for Life Sciences Custom Scripts
-Global variables in AFLS for Customer Engagement custom scripts provide access to
+Global variables in LSC for Customer Engagement custom scripts provide access to
 contextual information such as environment details, database interactions, current record data, and
 user information. Use these variables to develop dynamic, data-driven custom scripts.
 Functions for Life Sciences Custom Scripts
-Use functions to enhance the robustness and adaptability of your custom scripts in AFLS
+Use functions to enhance the robustness and adaptability of your custom scripts in LSC
 for Customer Engagement. These functions provide specific utilities, from error handling and
 namespace management to retrieving metadata about available fields.
 
 
 Classes for Life Sciences Custom Scripts
 
-AFLS for Customer Engagement supports various JavaScript classes in custom scripts.
+LSC for Customer Engagement supports various JavaScript classes in custom scripts.
 These classes enable you to create powerful and flexible logic within the script, particularly for
 constructing queries and managing data. Each class includes a description of its purpose, constructor
 details, parameters, methods, and examples.
@@ -7676,7 +7676,7 @@ details, parameters, methods, and examples.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -7727,7 +7727,7 @@ Builds a SOQL condition based on multiple nested conditions. Extends GroupCondit
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -7768,7 +7768,7 @@ An abstract class that serves as the foundation for all conditions and lacks a c
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -7803,7 +7803,7 @@ fields that are used in conditions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -7860,7 +7860,7 @@ current user has access to the fields that are used in the query conditions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -7921,7 +7921,7 @@ Builds a SOQL condition for a date field based on the specified operator. Extend
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -7978,7 +7978,7 @@ Builds a SOQL condition for a datetime field based on the specified operator. Ex
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -8034,7 +8034,7 @@ Builds a SOQL condition for a field based on the specified operator. Extends Ope
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -8091,7 +8091,7 @@ Builds a SOQL condition based on multiple nested conditions. Extends Condition.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -8171,7 +8171,7 @@ Extends the Condition class. Used as a super class for specific conditions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -8265,7 +8265,7 @@ build a complex WHERE clause, pass SetCondition to ConditionBuilder.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -8320,7 +8320,7 @@ getRequiredFields()
 
 Returns the required fields for a specified object type.
 
-This method is supported only on desktop and doesn’t work on the AFLS mobile app.
+This method is supported only on desktop and doesn’t work on the LSC mobile app.
 
 
 toSoql()
@@ -8361,7 +8361,7 @@ Builds a SOQL condition for a field whose value is in a specified range. Extends
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -8427,7 +8427,7 @@ new SetCondition(
 
 Variables for Life Sciences Custom Scripts
 
-Global variables in AFLS for Customer Engagement custom scripts provide access to
+Global variables in LSC for Customer Engagement custom scripts provide access to
 contextual information such as environment details, database interactions, current record data, and user
 information. Use these variables to develop dynamic, data-driven custom scripts.
 
@@ -8437,7 +8437,7 @@ information. Use these variables to develop dynamic, data-driven custom scripts.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -8449,7 +8449,7 @@ The environment (env) variable manages environment settings. You can retrieve or
 option values, get log information, and format labels for localization.
 Database Variable
 The db object provides access to the database to query records. All db functions are executed
-synchronously on the AFLS mobile app and asynchronously on desktop. In order to
+synchronously on the LSC mobile app and asynchronously on desktop. In order to
 query correctly, use await syntax.
 Record Variable
 The record variable represents the current record in the context of the custom script. You can retrieve
@@ -8475,7 +8475,7 @@ option values, get log information, and format labels for localization.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -8487,7 +8487,7 @@ Returns the value of the environment option. These options are set by default.
 - fromStatus:
 - On desktop, fromStatus is set to the current value of a controlling field for the workflow path. This is
 set only when a Record Update action runs.
-- On the AFLS for Customer Engagement mobile app, fromStatus is set to the current
+- On the LSC for Customer Engagement mobile app, fromStatus is set to the current
 value of the field to be updated by a Record Update action. This is set only when a Record Update
 action runs.
 -    toStatus: The new value of the field to be updated by a Record Update action. This is set only when a
@@ -8551,7 +8551,7 @@ labels.
 Database Variable
 
 The db object provides access to the database to query records. All db functions are executed
-synchronously on the AFLS mobile app and asynchronously on desktop. In order to query
+synchronously on the LSC mobile app and asynchronously on desktop. In order to query
 correctly, use await syntax.
 
 
@@ -8560,7 +8560,7 @@ correctly, use await syntax.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -8749,7 +8749,7 @@ string, number, boolean, or date field values, and you can set values for fields
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -8839,7 +8839,7 @@ user record fields.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -8907,7 +8907,7 @@ value                                Object                               The fi
 
 Functions for Life Sciences Custom Scripts
 
-Use functions to enhance the robustness and adaptability of your custom scripts in AFLS
+Use functions to enhance the robustness and adaptability of your custom scripts in LSC
 for Customer Engagement. These functions provide specific utilities, from error handling and namespace
 management to retrieving metadata about available fields.
 
@@ -8917,7 +8917,7 @@ management to retrieving metadata about available fields.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 

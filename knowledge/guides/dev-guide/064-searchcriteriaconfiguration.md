@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:searchcriteriaconfiguration pages:1930-1934 -->
 # SearchCriteriaConfiguration
 
-AFLS Overview                                                                                              SearchCriteriaConfiguration
+Life Sciences Cloud (LSC) Overview                                                                                              SearchCriteriaConfiguration
 
 
 
@@ -63,7 +63,7 @@ Nillable
 
 <!-- page:1931 -->
 
-AFLS Overview                                                                                SearchCriteriaConfiguration
+LSC Overview                                                                                SearchCriteriaConfiguration
 
 
 
@@ -114,7 +114,7 @@ Filter, Group, Nillable, Sort
 
 <!-- page:1932 -->
 
-AFLS Overview                                                                                  SearchCriteriaConfiguration
+LSC Overview                                                                                  SearchCriteriaConfiguration
 
 
 
@@ -166,7 +166,7 @@ Defaulted on create, Filter, Group, Sort
 
 <!-- page:1933 -->
 
-AFLS Overview                                                                               SearchCriteriaConfiguration
+LSC Overview                                                                               SearchCriteriaConfiguration
 
 
 
@@ -218,7 +218,7 @@ reference
 
 <!-- page:1934 -->
 
-AFLS Overview                                                                                SearchCriteriaConfiguration
+LSC Overview                                                                                SearchCriteriaConfiguration
 
 
 

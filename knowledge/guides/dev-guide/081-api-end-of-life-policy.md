@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:api-end-of-life-policy pages:1978-1978 -->
 # API End-of-Life Policy
 
-AFLS Overview                                                                                                 API End-of-Life Policy
+Life Sciences Cloud (LSC) Overview                                                                                                 API End-of-Life Policy
 
 
 

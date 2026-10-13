@@ -1,13 +1,13 @@
 # Mobile Sync Architecture — Support Engineering Training
 
-**Session:** AFLS4CE Value Chain Training — Feb 17, 2026
+**Session:** LSC4CE Value Chain Training — Feb 17, 2026
 **Audience:** Support engineers
 **Source:** Engineering training series (Gemini transcript + reference deck slides 56–61)
 **Presenter:** Hyderabad team
 
 ## Overview
 
-End-to-end walkthrough of what happens behind the scenes when a AFLS user logs into the mobile / iPad app, syncs data, and works offline. The model has two halves: **metadata** (defining what objects/fields are downloaded) and **data** (the actual records). The sync engine round-trips both via a two-stage transaction pattern.
+End-to-end walkthrough of what happens behind the scenes when a Life Sciences Cloud (LSC) user logs into the mobile / iPad app, syncs data, and works offline. The model has two halves: **metadata** (defining what objects/fields are downloaded) and **data** (the actual records). The sync engine round-trips both via a two-stage transaction pattern.
 
 ```
         ADMIN                                MOBILE/iPad USER
@@ -159,4 +159,4 @@ The generated metadata ZIPs live in **Files** (CMS). Navigate: Setup → Files �
 - **Programmatic metadata generation:** see [`programmatic-generation.md`](./programmatic-generation.md) in this module for the API path to generate metadata via Apex / SOAP (alternative to Admin Console clicks).
 - **Quotas / Throttling:** if you're seeing composite API failures on upload, check org-level API quotas — sync uses composite API and shares the quota pool with regular integrations.
 - **Idle Background Sync:** Spring '26 added the periodic background scheduler that triggers background syncs even when the app is foregrounded but idle — see release notes for 260.
-- **Reference deck slides:** Slides 56–61 of the Sync deck cover the architecture diagram, sync types, and metadata cache settings in visual form. The .pptx is available in the AFLS4CE Value Chain Training Drive folder (file `1-bn2827Goc7XjnVFTf6YIzGBB8E62Syw`).
+- **Reference deck slides:** Slides 56–61 of the Sync deck cover the architecture diagram, sync types, and metadata cache settings in visual form. The .pptx is available in the LSC4CE Value Chain Training Drive folder (file `1-bn2827Goc7XjnVFTf6YIzGBB8E62Syw`).

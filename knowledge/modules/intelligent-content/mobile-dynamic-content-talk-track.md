@@ -1,15 +1,15 @@
-Welcome to this video series on Content Management in AFLS.
+Welcome to this video series on Content Management in LSC.
 
-In this video, I'll guide you through how to work with content in AFLS and show you how to create a highly personalized and relevant experience --- one that adapts to each HCP's unique needs and profile, while maintaining full compliance with industry regulations and standards.
+In this video, I'll guide you through how to work with content in Life Sciences Cloud (LSC) and show you how to create a highly personalized and relevant experience --- one that adapts to each HCP's unique needs and profile, while maintaining full compliance with industry regulations and standards.
 
-AFLS supports two content types:
+LSC supports two content types:
 
 - HTML presentations, for more interactive content , supporting JavaScript functions , Embedded videos, images, animations, or dynamic capabilities.
 
 - PDF presentations
 
-Important note here is that content must follow the AFLS format before it is pushed into AFLS.\
-We are going to provide you with content guidelines for creating content supported in AFLS. These guidelines will outline the standards and best practices to ensure compatibility, and optimal performance across the platform.
+Important note here is that content must follow the LSC format before it is pushed into LSC.\
+We are going to provide you with content guidelines for creating content supported in LSC. These guidelines will outline the standards and best practices to ensure compatibility, and optimal performance across the platform.
 
 Content is stored directly in Salesforce's native file storage, ensuring a seamless and secure experience:
 
@@ -123,7 +123,7 @@ OPEN FEEDBACK PAGE:
 
 CONCLUSION:
 
-- All of this is possible because AFLS fully supports dynamic and interactive content capabilities.
+- All of this is possible because LSC fully supports dynamic and interactive content capabilities.
 
 - With dynamic variables, presentations can automatically pull in account details, HCP profiles, product data, and more, enabling real-time personalization. Content can even query the database to fetch the latest information and, when needed, update records instantly based on interactions during the call --- keeping data accurate and current.
 

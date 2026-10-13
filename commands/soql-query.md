@@ -1,16 +1,16 @@
 ---
-description: Run a SOQL query against your connected AFLS org
+description: Run a SOQL query against your connected Life Sciences Cloud (LSC) org
 ---
 
 # Run SOQL Query
 
-Execute a SOQL query against the connected Salesforce AFLS org.
+Execute a SOQL query against the connected Salesforce LSC org.
 
 $ARGUMENTS
 
 ## Steps
 
-1. First verify org connection with `check_afls_setup`
+1. First verify org connection with `check_lsc_setup`
 
 2. If a query was provided in arguments:
    - Execute it with `run_soql`
@@ -30,6 +30,6 @@ $ARGUMENTS
    - `SELECT Id, Name FROM Account LIMIT 10`
    - `SELECT Id, Name FROM Product2 LIMIT 10`
 
-Note: AFLS object API names vary by implementation. Always verify field names with `describe_sobject` before constructing complex queries.
+Note: LSC object API names vary by implementation. Always verify field names with `describe_sobject` before constructing complex queries.
 
 Present query results in a clean, readable format.

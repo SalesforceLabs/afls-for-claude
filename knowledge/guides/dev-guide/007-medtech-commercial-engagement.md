@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:medtech-commercial-engagement pages:1370-1429 -->
 # MedTech Commercial Engagement
 
-AFLS Overview                                                                                        MedTech Commercial Engagement
+Life Sciences Cloud (LSC) Overview                                                                                        MedTech Commercial Engagement
 
 
 
@@ -45,7 +45,7 @@ For more information, see TimelineObjectDefinitionLocalization.
 
 ## MedTech Commercial Engagement
 
-These objects are available for AFLS for MedTech Commercial Engagement.
+These objects are available for LSC for MedTech Commercial Engagement.
 
 
 
@@ -66,7 +66,7 @@ Unlimited Editions
 
 <!-- page:1371 -->
 
-AFLS Overview                                                                                       MedTech Commercial Engagement
+LSC Overview                                                                                       MedTech Commercial Engagement
 
 
 
@@ -98,7 +98,7 @@ automatically created by Intelligent Sales. This object is available in API vers
 
 <!-- page:1372 -->
 
-AFLS Overview                                                                                     MedTech Commercial Engagement
+LSC Overview                                                                                     MedTech Commercial Engagement
 
 
 
@@ -156,7 +156,7 @@ reference
 
 <!-- page:1373 -->
 
-AFLS Overview                                                           MedTech Commercial Engagement
+LSC Overview                                                           MedTech Commercial Engagement
 
 
 
@@ -207,7 +207,7 @@ Create, Filter, Group, Restricted picklist, Sort, Update
 
 <!-- page:1374 -->
 
-AFLS Overview                                                         MedTech Commercial Engagement
+LSC Overview                                                         MedTech Commercial Engagement
 
 
 
@@ -257,7 +257,7 @@ string
 
 <!-- page:1375 -->
 
-AFLS Overview                                                                                        MedTech Commercial Engagement
+LSC Overview                                                                                        MedTech Commercial Engagement
 
 
 
@@ -319,7 +319,7 @@ Possible values are:
 
 <!-- page:1376 -->
 
-AFLS Overview                                                                        MedTech Commercial Engagement
+LSC Overview                                                                        MedTech Commercial Engagement
 
 
 
@@ -370,7 +370,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:1377 -->
 
-AFLS Overview                                                                                     MedTech Commercial Engagement
+LSC Overview                                                                                     MedTech Commercial Engagement
 
 
 
@@ -423,7 +423,7 @@ create()delete()describeLayout()describeSObjects()getDeleted()getUpdated()query(
 
 <!-- page:1378 -->
 
-AFLS Overview                                                                MedTech Commercial Engagement
+LSC Overview                                                                MedTech Commercial Engagement
 
 
 Fields
@@ -471,7 +471,7 @@ value is false.
 
 <!-- page:1379 -->
 
-AFLS Overview                                                           MedTech Commercial Engagement
+LSC Overview                                                           MedTech Commercial Engagement
 
 
 
@@ -519,7 +519,7 @@ Create, Filter, Group, Sort, idLookup, Update
 
 <!-- page:1380 -->
 
-AFLS Overview                                                                                        MedTech Commercial Engagement
+LSC Overview                                                                                        MedTech Commercial Engagement
 
 
 
@@ -581,7 +581,7 @@ The following access checks must be enabled:
 
 <!-- page:1381 -->
 
-AFLS Overview                                                                                 MedTech Commercial Engagement
+LSC Overview                                                                                 MedTech Commercial Engagement
 
 
 
@@ -634,7 +634,7 @@ The address country.
 
 <!-- page:1382 -->
 
-AFLS Overview                                                           MedTech Commercial Engagement
+LSC Overview                                                           MedTech Commercial Engagement
 
 
 
@@ -685,7 +685,7 @@ Create, Filter, Nillable, Sort, Update
 
 <!-- page:1383 -->
 
-AFLS Overview                                                          MedTech Commercial Engagement
+LSC Overview                                                          MedTech Commercial Engagement
 
 
 
@@ -737,7 +737,7 @@ Parent
 
 <!-- page:1384 -->
 
-AFLS Overview                                                                                   MedTech Commercial Engagement
+LSC Overview                                                                                   MedTech Commercial Engagement
 
 
 
@@ -788,7 +788,7 @@ differentiate between the two by using System.Address for the field and Schema.A
 
 <!-- page:1385 -->
 
-AFLS Overview                                                                                        MedTech Commercial Engagement
+LSC Overview                                                                                        MedTech Commercial Engagement
 
 
 
@@ -809,7 +809,7 @@ Perform activities such as patient registration or order authorization to captur
 
 ## Special Access Rules
 
-In AFLS, standard and custom fields extend the standard AssessmentTask object to represent tasks to complete a provider
+In LSC, standard and custom fields extend the standard AssessmentTask object to represent tasks to complete a provider
 engagement compliance cycle.
 The AssessmentTask object and its fields are used by the Key Account Management and the Provider Engagement Compliance feature
 areas. This topic lists the fields used in both of these features.
@@ -849,7 +849,7 @@ AssignedTo
 
 <!-- page:1386 -->
 
-AFLS Overview                                                                       MedTech Commercial Engagement
+LSC Overview                                                                       MedTech Commercial Engagement
 
 
 
@@ -898,7 +898,7 @@ this record was referenced (LastReferencedDate) and not viewed.
 
 <!-- page:1387 -->
 
-AFLS Overview                                                                       MedTech Commercial Engagement
+LSC Overview                                                                       MedTech Commercial Engagement
 
 
 
@@ -949,7 +949,7 @@ Lookup
 
 <!-- page:1388 -->
 
-AFLS Overview                                                                       MedTech Commercial Engagement
+LSC Overview                                                                       MedTech Commercial Engagement
 
 
 
@@ -974,7 +974,7 @@ Properties
 Create, Filter, Group, idLookup, Nillable, Sort, Update
 Description
 The identifier of the record in the source system.
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 SourceSystemName         Type
@@ -983,7 +983,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 The name of the system from which data is loaded into this object. This field is available with
-the AFLS for Customer Engagement Add-on license in API version 65.0 and
+the LSC for Customer Engagement Add-on license in API version 65.0 and
 later.
 
 StartTime                Type
@@ -1000,7 +1000,7 @@ Create, Defaulted on create, Filter, Group, Restricted picklist, Sort, Update
 
 <!-- page:1389 -->
 
-AFLS Overview                                                                                        MedTech Commercial Engagement
+LSC Overview                                                                                        MedTech Commercial Engagement
 
 
 
@@ -1023,7 +1023,7 @@ Properties
 Create, Filter, Group, Restricted picklist, Sort
 Description
 Type of a task that the sales rep can perform during the visit.
-In AFLS, the task type must match the task type of the assessment task
+In LSC, the task type must match the task type of the assessment task
 definition.
 Possible values are:
 - ComponentTask—Component Task
@@ -1057,7 +1057,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:1390 -->
 
-AFLS Overview                                                                      MedTech Commercial Engagement
+LSC Overview                                                                      MedTech Commercial Engagement
 
 
 Fields
@@ -1108,7 +1108,7 @@ books.
 
 <!-- page:1391 -->
 
-AFLS Overview                                                                                      MedTech Commercial Engagement
+LSC Overview                                                                                      MedTech Commercial Engagement
 
 
 
@@ -1170,7 +1170,7 @@ reference
 
 <!-- page:1392 -->
 
-AFLS Overview                                                                    MedTech Commercial Engagement
+LSC Overview                                                                    MedTech Commercial Engagement
 
 
 
@@ -1222,7 +1222,7 @@ already exists, this boolean can’t be set to true unless the product item’s 
 
 <!-- page:1393 -->
 
-AFLS Overview                                                                    MedTech Commercial Engagement
+LSC Overview                                                                    MedTech Commercial Engagement
 
 
 
@@ -1273,7 +1273,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1394 -->
 
-AFLS Overview                                                                                     MedTech Commercial Engagement
+LSC Overview                                                                                     MedTech Commercial Engagement
 
 
 
@@ -1335,7 +1335,7 @@ Archived.
 
 <!-- page:1395 -->
 
-AFLS Overview                                                                     MedTech Commercial Engagement
+LSC Overview                                                                     MedTech Commercial Engagement
 
 
 
@@ -1387,7 +1387,7 @@ boolean
 
 <!-- page:1396 -->
 
-AFLS Overview                                                                                     MedTech Commercial Engagement
+LSC Overview                                                                                     MedTech Commercial Engagement
 
 
 
@@ -1452,7 +1452,7 @@ The date and time when the record was last referenced.
 
 <!-- page:1397 -->
 
-AFLS Overview                                                                   MedTech Commercial Engagement
+LSC Overview                                                                   MedTech Commercial Engagement
 
 
 
@@ -1502,7 +1502,7 @@ Location
 
 <!-- page:1398 -->
 
-AFLS Overview                                                                                        MedTech Commercial Engagement
+LSC Overview                                                                                        MedTech Commercial Engagement
 
 
 
@@ -1557,7 +1557,7 @@ Associates a business account and a product inventory with the responsible field
 
 <!-- page:1399 -->
 
-AFLS Overview                                                                        MedTech Commercial Engagement
+LSC Overview                                                                        MedTech Commercial Engagement
 
 
 
@@ -1609,7 +1609,7 @@ The location of the account the field rep visits.
 
 <!-- page:1400 -->
 
-AFLS Overview                                                                                        MedTech Commercial Engagement
+LSC Overview                                                                                        MedTech Commercial Engagement
 
 
 
@@ -1666,7 +1666,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:1401 -->
 
-AFLS Overview                                                                MedTech Commercial Engagement
+LSC Overview                                                                MedTech Commercial Engagement
 
 
 
@@ -1720,7 +1720,7 @@ in your inventory.
 
 <!-- page:1402 -->
 
-AFLS Overview                                                           MedTech Commercial Engagement
+LSC Overview                                                           MedTech Commercial Engagement
 
 
 
@@ -1768,7 +1768,7 @@ the Quantity on Hand must be 1.
 
 <!-- page:1403 -->
 
-AFLS Overview                                                                                    MedTech Commercial Engagement
+LSC Overview                                                                                    MedTech Commercial Engagement
 
 
 
@@ -1831,7 +1831,7 @@ Lookup
 
 <!-- page:1404 -->
 
-AFLS Overview                                                          MedTech Commercial Engagement
+LSC Overview                                                          MedTech Commercial Engagement
 
 
 
@@ -1881,7 +1881,7 @@ reference
 
 <!-- page:1405 -->
 
-AFLS Overview                                                          MedTech Commercial Engagement
+LSC Overview                                                          MedTech Commercial Engagement
 
 
 
@@ -1933,7 +1933,7 @@ This is a polymorphic relationship field.
 
 <!-- page:1406 -->
 
-AFLS Overview                                                           MedTech Commercial Engagement
+LSC Overview                                                           MedTech Commercial Engagement
 
 
 
@@ -1983,7 +1983,7 @@ The accuracy of the geocode for the shipping address.
 
 <!-- page:1407 -->
 
-AFLS Overview                                                         MedTech Commercial Engagement
+LSC Overview                                                         MedTech Commercial Engagement
 
 
 
@@ -2034,7 +2034,7 @@ The type of shipment. The picklist includes the following values by default:
 
 <!-- page:1408 -->
 
-AFLS Overview                                                         MedTech Commercial Engagement
+LSC Overview                                                         MedTech Commercial Engagement
 
 
 
@@ -2082,7 +2082,7 @@ WorkOrder
 
 <!-- page:1409 -->
 
-AFLS Overview                                                                             MedTech Commercial Engagement
+LSC Overview                                                                             MedTech Commercial Engagement
 
 
 
@@ -2139,7 +2139,7 @@ The last date and time this record was viewed.
 
 <!-- page:1410 -->
 
-AFLS Overview                                                                    MedTech Commercial Engagement
+LSC Overview                                                                    MedTech Commercial Engagement
 
 
 
@@ -2190,7 +2190,7 @@ The unit of the quantity requested.
 
 <!-- page:1411 -->
 
-AFLS Overview                                                                                 MedTech Commercial Engagement
+LSC Overview                                                                                 MedTech Commercial Engagement
 
 
 
@@ -2247,7 +2247,7 @@ Filter, Group, Nillable, Sort
 
 <!-- page:1412 -->
 
-AFLS Overview                                                                               MedTech Commercial Engagement
+LSC Overview                                                                               MedTech Commercial Engagement
 
 
 
@@ -2303,7 +2303,7 @@ arrives with the right equipment.
 
 <!-- page:1413 -->
 
-AFLS Overview                                                                                    MedTech Commercial Engagement
+LSC Overview                                                                                    MedTech Commercial Engagement
 
 
 Adding required products to work types saves you time and keeps your business processes consistent. Work orders and work order line
@@ -2363,7 +2363,7 @@ The date that the transfer is being requested for.
 
 <!-- page:1414 -->
 
-AFLS Overview                                                                    MedTech Commercial Engagement
+LSC Overview                                                                    MedTech Commercial Engagement
 
 
 
@@ -2413,7 +2413,7 @@ Autonumber, Defaulted on create, Filter, idLookup, Sort
 
 <!-- page:1415 -->
 
-AFLS Overview                                                                           MedTech Commercial Engagement
+LSC Overview                                                                           MedTech Commercial Engagement
 
 
 
@@ -2466,7 +2466,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:1416 -->
 
-AFLS Overview                                                                                      MedTech Commercial Engagement
+LSC Overview                                                                                      MedTech Commercial Engagement
 
 
 
@@ -2521,7 +2521,7 @@ Note: Access to the RecordAction object is determined by a user’s access to th
 
 <!-- page:1417 -->
 
-AFLS Overview                                                                                         MedTech Commercial Engagement
+LSC Overview                                                                                         MedTech Commercial Engagement
 
 
 
@@ -2578,7 +2578,7 @@ reference
 
 <!-- page:1418 -->
 
-AFLS Overview                                                                       MedTech Commercial Engagement
+LSC Overview                                                                       MedTech Commercial Engagement
 
 
 
@@ -2632,7 +2632,7 @@ reference
 
 <!-- page:1419 -->
 
-AFLS Overview                                                                       MedTech Commercial Engagement
+LSC Overview                                                                       MedTech Commercial Engagement
 
 
 
@@ -2684,7 +2684,7 @@ Contact, ContactRequest, Contract, CoverageBenefit, CoverageBenefitItem,
 
 <!-- page:1420 -->
 
-AFLS Overview                                                                                       MedTech Commercial Engagement
+LSC Overview                                                                                       MedTech Commercial Engagement
 
 
 
@@ -2740,7 +2740,7 @@ for Service Developer Guide.
 
 <!-- page:1421 -->
 
-AFLS Overview                                                                                    MedTech Commercial Engagement
+LSC Overview                                                                                    MedTech Commercial Engagement
 
 
 
@@ -2776,7 +2776,7 @@ This object has the following associated objects. Unless noted, they are availab
 
 <!-- page:1422 -->
 
-AFLS Overview                                                                                     MedTech Commercial Engagement
+LSC Overview                                                                                     MedTech Commercial Engagement
 
 
 
@@ -2839,7 +2839,7 @@ Filter, Nillable, Sort
 
 <!-- page:1423 -->
 
-AFLS Overview                                                                       MedTech Commercial Engagement
+LSC Overview                                                                       MedTech Commercial Engagement
 
 
 
@@ -2892,7 +2892,7 @@ Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort,
 
 <!-- page:1424 -->
 
-AFLS Overview                                                                                       MedTech Commercial Engagement
+LSC Overview                                                                                       MedTech Commercial Engagement
 
 
 
@@ -2920,7 +2920,7 @@ Track information related to a field rep’s visit to a health care provider.
 
 ## Special Access Rules
 
-In AFLS, Visit is used for Customer Engagement.
+In LSC, Visit is used for Customer Engagement.
 
 
 
@@ -2953,7 +2953,7 @@ Create, Defaulted on create, Filter, Group, Nillable, Restricted picklist, Sort,
 
 <!-- page:1425 -->
 
-AFLS Overview                                                                            MedTech Commercial Engagement
+LSC Overview                                                                            MedTech Commercial Engagement
 
 
 
@@ -2971,7 +2971,7 @@ Possible values are:
 - SMS
 - WeChat
 - WhatsApp
-The default value is In-Person. This field is available with the AFLS for
+The default value is In-Person. This field is available with the LSC for
 Customer Engagement Add-on license in API version 65.0 and later.
 
 ParentVisitId           Type
@@ -2980,7 +2980,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 If this visit is the child of a larger group visit, this field is used to provide a link to that visit.
-This field is a relationship field. This field is available with the AFLS for Customer
+This field is a relationship field. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 Relationship Name
 ParentVisit
@@ -3003,7 +3003,7 @@ dateTime
 
 <!-- page:1426 -->
 
-AFLS Overview                                                                           MedTech Commercial Engagement
+LSC Overview                                                                           MedTech Commercial Engagement
 
 
 
@@ -3025,7 +3025,7 @@ The type of the signature.
 Possible values are:
 - Digital
 - Physical
-This field is available with the AFLS for Customer Engagement Add-on license
+This field is available with the LSC for Customer Engagement Add-on license
 in API version 65.0 and later.
 
 Status                  Type
@@ -3045,7 +3045,7 @@ Properties
 Create, Filter, Group, Nillable, Sort, Update
 Description
 The ID of the terriory for this visit.
-This field is a relationship field. This field is available with the AFLS for Customer
+This field is a relationship field. This field is available with the LSC for Customer
 Engagement Add-on license in API version 65.0 and later.
 Relationship Name
 Territory
@@ -3054,7 +3054,7 @@ Territory2
 
 <!-- page:1427 -->
 
-AFLS Overview                                                                                     MedTech Commercial Engagement
+LSC Overview                                                                                     MedTech Commercial Engagement
 
 
 
@@ -3110,7 +3110,7 @@ string
 
 <!-- page:1428 -->
 
-AFLS Overview                                                                                         MedTech Commercial Engagement
+LSC Overview                                                                                         MedTech Commercial Engagement
 
 
 
@@ -3171,7 +3171,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:1429 -->
 
-AFLS Overview                                                                      MedTech Commercial Engagement
+LSC Overview                                                                      MedTech Commercial Engagement
 
 
 

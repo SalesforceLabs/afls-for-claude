@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:fields-on-contactpointaddress pages:1467-1469 -->
 # Fields on ContactPointAddress
 
-AFLS Overview                                                                                          Fields on ContactPointAddress
+Life Sciences Cloud (LSC) Overview                                                                                          Fields on ContactPointAddress
 
 
 
@@ -25,7 +25,7 @@ Possible values are:
 
 ## Fields on ContactPointAddress
 
-AFLS fields extend the standard Contact Point Address object to represent a contact’s billing or shipping address associated
+LSC fields extend the standard Contact Point Address object to represent a contact’s billing or shipping address associated
 with an individual or account. This object is available in API version 65.0 and later.
 
 
@@ -59,7 +59,7 @@ string
 
 <!-- page:1468 -->
 
-AFLS Overview                                                                            Fields on ContactPointAddress
+LSC Overview                                                                            Fields on ContactPointAddress
 
 
 
@@ -111,7 +111,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:1469 -->
 
-AFLS Overview                                                                                Fields on ContactPointAddress
+LSC Overview                                                                                Fields on ContactPointAddress
 
 
 

@@ -21,8 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Anonymous Apex:** `run_apex` tool for executing Apex code against the target org
 - **Bulk operations:** `bulk_create_records` and `bulk_update_records` for batch data loading
 - **Metadata tools:** `deploy_metadata` and `retrieve_metadata` wrapping SF CLI commands
-- **New commands:** `/afls:health-check`, `/afls:release-notes`, `/afls:export-config`, `/afls:import-config`, `/afls:status`, `/afls:diff-orgs`
-- **New skills:** `afls-health-check`, `afls-data-migration`, `afls-integration-patterns`
+- **New commands:** `/lsc:health-check`, `/lsc:release-notes`, `/lsc:export-config`, `/lsc:import-config`, `/lsc:status`, `/lsc:diff-orgs`
+- **New skills:** `lsc-health-check`, `lsc-data-migration`, `lsc-integration-patterns`
 - **Knowledge expansion:** Comprehensive docs for territory alignment, surveys, product management, medical inquiries, remote engagement
 - **CI/CD:** GitHub Actions workflows for CI (build + test) and release
 - **Dev configs:** ESLint flat config, Prettier config
@@ -45,5 +45,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release with 58 tools, 26 skills, 17 commands
 - 151 validation rules across 19 rule files
 - 456 tests
-- Knowledge base covering 28 AFLS modules
+- Knowledge base covering 28 Life Sciences Cloud (LSC) modules
 - MCP server with Salesforce org integration

@@ -5,7 +5,7 @@
  * Security model (this endpoint can write to a Salesforce org):
  *   - binds to 127.0.0.1 on an ephemeral port (never a public interface),
  *   - every request must carry an unguessable per-session token (query `t` or the
- *     `x-afls-token` header),
+ *     `x-lsc-token` header),
  *   - if an Origin header is present it must be our own origin (blocks drive-by
  *     requests from other local web pages / CSRF),
  *   - one active session at a time; a new session closes the previous server,
@@ -80,7 +80,7 @@ export async function startImportUiServer(opts: StartOptions): Promise<ImportUiS
   };
 
   const authOk = (req: http.IncomingMessage, url: URL): boolean => {
-    const t = url.searchParams.get("t") || (req.headers["x-afls-token"] as string) || "";
+    const t = url.searchParams.get("t") || (req.headers["x-lsc-token"] as string) || "";
     return !!t && tokensMatch(t, token);
   };
 

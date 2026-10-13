@@ -1,6 +1,6 @@
 Here is the transcription of the provided video excerpt \"Ratings-Final.MP4\":
 
-\"Let\'s walk through the ratings feature within the AFLS mobile app. A powerful tool designed to help fieldbased users better segment and engage their customers. **Ratings allow users like sales reps, MSLs, and key account managers to categorize and analyze ATCP data based on business relevant criteria**. Whether you\'re evaluating prescription volume, prior engagement, or influence, ratings help you focus is where it counts. Let\'s start by opening the profile for Dr. Morita and navigating to the ratings tab. At the top, you\'ll see three types of ratings. Let\'s explore them one by one.
+\"Let\'s walk through the ratings feature within the Life Sciences Cloud (LSC) mobile app. A powerful tool designed to help fieldbased users better segment and engage their customers. **Ratings allow users like sales reps, MSLs, and key account managers to categorize and analyze ATCP data based on business relevant criteria**. Whether you\'re evaluating prescription volume, prior engagement, or influence, ratings help you focus is where it counts. Let\'s start by opening the profile for Dr. Morita and navigating to the ratings tab. At the top, you\'ll see three types of ratings. Let\'s explore them one by one.
 
 **General ratings**. These are applied directly at the account level and are universal, meaning they\'re not tied to any specific territory or product. Some examples include digital engagement readiness or engagement level.
 

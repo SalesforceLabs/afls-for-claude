@@ -16,7 +16,7 @@
 - [release-260-same-address-attendees](./release-260-same-address-attendees.md)
 - [release-260-intelligent-content-in-web-visit](./release-260-intelligent-content-in-web-visit.md)
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 Deep-dive support engineering content from the Engineering → Support training series.
 

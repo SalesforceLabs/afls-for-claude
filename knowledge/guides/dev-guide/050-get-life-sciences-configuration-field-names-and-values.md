@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:get-life-sciences-configuration-field-names-and-values pages:1879-1880 -->
 # Get Life Sciences Configuration Field Names and Values
 
-AFLS Overview                                                              Get Life Sciences Configuration Field Names and Values
+Life Sciences Cloud (LSC) Overview                                                              Get Life Sciences Configuration Field Names and Values
 
 
 
@@ -50,7 +50,7 @@ configuration record for the specified user.
 
 <!-- page:1880 -->
 
-AFLS Overview                                                                Get Life Sciences Configuration Field Names and Values
+LSC Overview                                                                Get Life Sciences Configuration Field Names and Values
 
 
 

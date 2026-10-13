@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:actionplantemplateversion pages:1465-1465 -->
 # ActionPlanTemplateVersion
 
-AFLS Overview                                                                               ActionPlanTemplateVersion
+Life Sciences Cloud (LSC) Overview                                                                               ActionPlanTemplateVersion
 
 
 

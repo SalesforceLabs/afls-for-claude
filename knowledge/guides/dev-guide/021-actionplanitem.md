@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:actionplanitem pages:1461-1461 -->
 # ActionPlanItem
 
-AFLS Overview                                                                                                                ActionPlanItem
+Life Sciences Cloud (LSC) Overview                                                                                                                ActionPlanItem
 
 
 
@@ -18,7 +18,7 @@ Object Reference for the Salesforce Platform: ActionPlan
 
 ## ActionPlanItem
 
-AFLS fields extend the standard ActionPlanItem object to represent the instance of an action plan item.
+LSC fields extend the standard ActionPlanItem object to represent the instance of an action plan item.
 The ActionPlanItem object and its fields are used by the Key Account Management and the Provider Engagement Compliance feature
 areas. This topic only lists the fields used in Key Account Management. To learn about the fields that are used in Provider Engagement
 Compliance, see the ActionPlanItem object documentation in the Provider Engagement Compliance section.

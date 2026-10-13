@@ -1,4 +1,4 @@
-Welcome, everyone, to this series of recordings. My name is Eva Miguel, and in this video, I'll guide you through how to configure Presentation Settings in AFLS.
+Welcome, everyone, to this series of recordings. My name is Eva Miguel, and in this video, I'll guide you through how to configure Presentation Settings in LSC.
 
 It starts in the Admin Console - Intelligent Content Tile. I tap on it.
 
@@ -6,7 +6,7 @@ Now Let's navigate to the Presentation Settings tab on the left panel.
 
 On this page the Admin will be able to set different settings.
 
-In AFLS, all settings can be applied at different levels, giving customers flexibility in how they're managed:
+In Life Sciences Cloud (LSC), all settings can be applied at different levels, giving customers flexibility in how they're managed:
 
 - Organization level -- applies globally and is available to all users,
 
@@ -187,7 +187,7 @@ These options help tailor both the live presentation experience and how content 
 
 Next, let's go over the Tracking Settings.
 
-These settings define how presentation activity is captured and reported in AFLS.
+These settings define how presentation activity is captured and reported in LSC.
 
 First, we have Geolocation Tracking, which records where a presentation takes place.
 
@@ -243,9 +243,9 @@ Together, these settings give admins control over how content is tracked, secure
 
 Recommended and Targeted Content Presentations
 
-Lets take a look at Recommended and Targeted Presentations and how AFLS supports both approaches.
+Lets take a look at Recommended and Targeted Presentations and how LSC supports both approaches.
 
-AFLS provides a flexible framework to deliver the most relevant content to each account.\
+LSC provides a flexible framework to deliver the most relevant content to each account.\
 The key idea is that customers bring their own intelligence --- whether powered by AI models, LLMs, or rule-based logic --- to control how content is surfaced to reps and accounts.
 
 Customers know their markets, their HCPs, and their engagement strategies better than anyone else.\
@@ -273,9 +273,9 @@ Now, let's break down the difference between Recommended and Targeted Presentati
 
   - Used to enforce compliance and strictly control which content is visible to specific accounts or institutions.
 
-In short, recommendations empower personalization, while targeting ensures governance and compliance --- and with AFLS, customers can leverage both together to maximize impact.
+In short, recommendations empower personalization, while targeting ensures governance and compliance --- and with LSC, customers can leverage both together to maximize impact.
 
-There are several ways to load this data into AFLS:
+There are several ways to load this data into LSC:
 
 - Direct integration with an AI or LLM system to automatically inject recommendations,
 
@@ -284,7 +284,7 @@ There are several ways to load this data into AFLS:
 - Or, as I'll show you now, manual entry, which is helpful for demos or testing.
 
 For this example, I'll open the Provider Account Territory Information record.\
-This is where AFLS stores recommendation and targeting data for each account and territory.
+This is where LSC stores recommendation and targeting data for each account and territory.
 
 Let's look at *Aaron Morita* in the San Francisco territory.\
 Here, you'll see two key fields:

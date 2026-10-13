@@ -8,7 +8,7 @@
 
 - [release-260-quick-custom-actions](./release-260-quick-custom-actions.md) — Mar 6, 2026 (Srikant Chonnad). 3 action types (Standard / Quick / Custom), Dynamic Actions toggle, GoTo App actions for Visit Engagement, Custom Action sub-types (URL / App / Utterance) with Target Types (Inline / External / Internal), iPad URI schemes (slack://, photos-redirect://, calshow://, contacts://, mobilenotes://, tel://), live Photos-launch demo recipe (5 steps).
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 ### Key Concepts
 

@@ -1,8 +1,8 @@
-## **Demo Script: Administering and Using Account Affiliations in AFLS**
+## **Demo Script: Administering and Using Account Affiliations in Life Sciences Cloud (LSC)**
 
-**(Scene: An administrator\'s workstation, demonstrating Salesforce AFLS, then transitions to a field user\'s perspective.)**
+**(Scene: An administrator\'s workstation, demonstrating Salesforce LSC, then transitions to a field user\'s perspective.)**
 
-**Narrator:** \"Hello, and welcome to this demonstration of **Account Affiliations** within Salesforce AFLS. This crucial feature enables our organization to **strategically understand and leverage the intricate network of relationships** between Healthcare Professionals (HCPs) and Healthcare Organizations (HCOs). By providing comprehensive insights into these connections, Affiliations facilitate targeted engagement and improved outcomes, ensuring field teams have the full picture of their accounts.
+**Narrator:** \"Hello, and welcome to this demonstration of **Account Affiliations** within Salesforce LSC. This crucial feature enables our organization to **strategically understand and leverage the intricate network of relationships** between Healthcare Professionals (HCPs) and Healthcare Organizations (HCOs). By providing comprehensive insights into these connections, Affiliations facilitate targeted engagement and improved outcomes, ensuring field teams have the full picture of their accounts.
 
 ### **Part 1: Administrator Demo - Configuring Account Affiliations**
 
@@ -10,7 +10,7 @@
 
     - **Narrator**: \"Before configuring the core behavior, there are some specific custom fields and field sets on the Provider Affiliation and Account objects that need to be created. These will define what data is displayed and how relationships are visually represented. We'll talk about what the field sets here, but will not walk through the standard Salesforce process to create fields & field sets\"
 
-    - Note - This feature uses the AFLS Provider Affiliation object, not the Account Account Relation (AAR), Account Contact Relations (ACR), Contact Contact Relations objects or Actionable Relationship Center (ARC).
+    - Note - This feature uses the LSC Provider Affiliation object, not the Account Account Relation (AAR), Account Contact Relations (ACR), Contact Contact Relations objects or Actionable Relationship Center (ARC).
 
 2.  **Configure Core Affiliation Behavior (General Settings)**:
 
@@ -72,4 +72,4 @@
 
     - **Sales Rep Action**: \"If I discover a new relationship during my interactions, I can easily create a new affiliation directly from this tab by clicking **\'New\'** and filling in the details, such as the related account, their role, and the effective dates. The system will automatically suggest a reverse role based on the admin\'s mappings, ensuring data consistency.\"
 
-**Narrator:** \"By providing these flexible and dynamic views of account affiliations, AFLS empowers our field teams with invaluable insights. This comprehensive understanding of the healthcare ecosystem helps them prioritize engagement, tailor their strategies, and foster stronger, more informed relationships, acting like a **social network map for healthcare, revealing key connections and influence pathways**.\"
+**Narrator:** \"By providing these flexible and dynamic views of account affiliations, LSC empowers our field teams with invaluable insights. This comprehensive understanding of the healthcare ecosystem helps them prioritize engagement, tailor their strategies, and foster stronger, more informed relationships, acting like a **social network map for healthcare, revealing key connections and influence pathways**.\"

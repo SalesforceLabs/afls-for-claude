@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:carerequestconfiguration-2 pages:1943-1945 -->
 # CareRequestConfiguration
 
-AFLS Overview                                                                                           CareRequestConfiguration
+Life Sciences Cloud (LSC) Overview                                                                                           CareRequestConfiguration
 
 
 
@@ -65,7 +65,7 @@ careRequestConfigurations folder.
 
 <!-- page:1944 -->
 
-AFLS Overview                                                                                            CareRequestConfiguration
+LSC Overview                                                                                            CareRequestConfiguration
 
 
 
@@ -115,7 +115,7 @@ CareRequestConfiguration is created.
 
 <!-- page:1945 -->
 
-AFLS Overview                                                                                  CareRequestConfiguration
+LSC Overview                                                                                  CareRequestConfiguration
 
 
 

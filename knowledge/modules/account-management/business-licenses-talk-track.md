@@ -1,6 +1,6 @@
-## **Demo Script: Administering and Using Business Licenses (State License Numbers) in AFLS**
+## **Demo Script: Administering and Using Business Licenses (State License Numbers) in Life Sciences Cloud (LSC)**
 
-**Narrator:** \"Hello, and welcome to this demonstration of **Business License Management**, within Salesforce AFLS. This critical feature is designed to manage and validate the medical licenses of healthcare professionals (HCPs) and organizations. **Accurate license validation is paramount for compliance**, especially when it comes to activities like sample disbursement, ensuring that our field teams interact with licensed professionals in accordance with regulatory standards.
+**Narrator:** \"Hello, and welcome to this demonstration of **Business License Management**, within Salesforce LSC. This critical feature is designed to manage and validate the medical licenses of healthcare professionals (HCPs) and organizations. **Accurate license validation is paramount for compliance**, especially when it comes to activities like sample disbursement, ensuring that our field teams interact with licensed professionals in accordance with regulatory standards.
 
 Let's walk through the administrative setup of business licenses.
 
@@ -8,7 +8,7 @@ Let's walk through the administrative setup of business licenses.
 
 1.  **Permissions and Prerequisites**:
 
-    - **Administrator Action**: \"Starting in the Object Manager I find the Business License object and open the list of fields. The IsLicenseValidated formula fields contains an out-of-box formula that checks if the LicenseNumber is not blank and PeriodEnd is in the future. This formula field works in conjunction with the ComplianceScope field which defines the type license being validated. AFLS currently supports 3 license types:
+    - **Administrator Action**: \"Starting in the Object Manager I find the Business License object and open the list of fields. The IsLicenseValidated formula fields contains an out-of-box formula that checks if the LicenseNumber is not blank and PeriodEnd is in the future. This formula field works in conjunction with the ComplianceScope field which defines the type license being validated. LSC currently supports 3 license types:
 
       i.  Jurisdiction State for State License Valididation
 
@@ -56,4 +56,4 @@ Let's walk through the administrative setup of business licenses.
 
 2.  
 
-**Narrator:** \"In essence, the configuration of Business Licenses in AFLS acts as a **digital guardian for compliance**. By setting up precise validation rules and integrating them seamlessly into daily workflows like visit management and sample disbursement, administrators empower field teams to operate confidently and compliantly. This ensures that every interaction adheres to the highest standards.\"
+**Narrator:** \"In essence, the configuration of Business Licenses in LSC acts as a **digital guardian for compliance**. By setting up precise validation rules and integrating them seamlessly into daily workflows like visit management and sample disbursement, administrators empower field teams to operate confidently and compliantly. This ensures that every interaction adheres to the highest standards.\"

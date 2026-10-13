@@ -6,14 +6,14 @@ import { validateOrgConnection } from "../salesforce/auth.js";
 export function register(server: McpServer) {
   server.tool(
     "list_users",
-    "List active AFLS users with optional filters. Filter by profile, permission set, territory, or find users without territories or PSLs. CORRECT object names: User, PermissionSetAssignment, UserTerritory2Association.",
+    "List active LSC users with optional filters. Filter by profile, permission set, territory, or find users without territories or PSLs. CORRECT object names: User, PermissionSetAssignment, UserTerritory2Association.",
     {
       filterBy: z
         .enum(["all", "profile", "permission-set", "territory", "no-territory", "no-psl"])
         .optional()
         .default("all")
         .describe(
-          "Filter type: 'all' (default), 'profile', 'permission-set', 'territory', 'no-territory' (users without territory assignments), 'no-psl' (users without AFLS PSLs)"
+          "Filter type: 'all' (default), 'profile', 'permission-set', 'territory', 'no-territory' (users without territory assignments), 'no-psl' (users without LSC PSLs)"
         ),
       filterValue: z
         .string()
@@ -85,13 +85,13 @@ export function register(server: McpServer) {
             break;
 
           case "no-territory":
-            query = `SELECT Id, Name, Username, Profile.Name, UserRole.Name FROM User WHERE IsActive = true AND Id NOT IN (SELECT UserId FROM UserTerritory2Association) AND (Profile.Name LIKE '%Life Science%' OR Profile.Name LIKE '%AFLS%' OR Profile.Name LIKE '%Sales%') ORDER BY Profile.Name, Name LIMIT 200`;
+            query = `SELECT Id, Name, Username, Profile.Name, UserRole.Name FROM User WHERE IsActive = true AND Id NOT IN (SELECT UserId FROM UserTerritory2Association) AND (Profile.Name LIKE '%Life Science%' OR Profile.Name LIKE '%LSC%' OR Profile.Name LIKE '%Sales%') ORDER BY Profile.Name, Name LIMIT 200`;
             title = "# Active Users Without Territory Assignments";
             break;
 
           case "no-psl":
-            query = `SELECT Id, Name, Username, Profile.Name FROM User WHERE IsActive = true AND Id NOT IN (SELECT AssigneeId FROM PermissionSetLicenseAssign WHERE PermissionSetLicense.DeveloperName LIKE '%LifeScience%') AND (Profile.Name LIKE '%Life Science%' OR Profile.Name LIKE '%AFLS%' OR Profile.Name LIKE '%Sales%') ORDER BY Profile.Name, Name LIMIT 200`;
-            title = "# Active Users Without AFLS Permission Set Licenses";
+            query = `SELECT Id, Name, Username, Profile.Name FROM User WHERE IsActive = true AND Id NOT IN (SELECT AssigneeId FROM PermissionSetLicenseAssign WHERE PermissionSetLicense.DeveloperName LIKE '%LifeScience%') AND (Profile.Name LIKE '%Life Science%' OR Profile.Name LIKE '%LSC%' OR Profile.Name LIKE '%Sales%') ORDER BY Profile.Name, Name LIMIT 200`;
+            title = "# Active Users Without LSC Permission Set Licenses";
             break;
 
           default:
@@ -160,14 +160,14 @@ export function register(server: McpServer) {
 
   server.tool(
     "list_permission_sets",
-    "List AFLS permission sets and permission set licenses (PSLs) with assignment counts and capacity. Shows which permission sets exist, how many users are assigned, and PSL capacity (total vs used vs available).",
+    "List LSC permission sets and permission set licenses (PSLs) with assignment counts and capacity. Shows which permission sets exist, how many users are assigned, and PSL capacity (total vs used vs available).",
     {
       includeAllNamespaces: z
         .boolean()
         .optional()
         .default(false)
         .describe(
-          "If true, include all permission sets regardless of namespace. Default false = AFLS-related only."
+          "If true, include all permission sets regardless of namespace. Default false = LSC-related only."
         ),
       targetOrg: z
         .string()
@@ -185,7 +185,7 @@ export function register(server: McpServer) {
       }
 
       try {
-        let message = "# AFLS Permission Sets & Licenses\n\n";
+        let message = "# LSC Permission Sets & Licenses\n\n";
 
         // Permission Sets
         message += "## Permission Sets\n\n";
@@ -273,7 +273,7 @@ export function register(server: McpServer) {
       permissionSetName: z
         .string()
         .describe(
-          "Permission set label (e.g., 'AFLS User') or API name (e.g., 'lsc4ce__LifeSciencesCloudUser')"
+          "Permission set label (e.g., 'LSC User') or API name (e.g., 'lsc4ce__LifeSciencesCloudUser')"
         ),
       userIds: z
         .array(z.string())
@@ -442,7 +442,7 @@ export function register(server: McpServer) {
       permissionSetName: z
         .string()
         .describe(
-          "Permission set label (e.g., 'AFLS User') or API name (e.g., 'lsc4ce__LifeSciencesCloudUser')"
+          "Permission set label (e.g., 'LSC User') or API name (e.g., 'lsc4ce__LifeSciencesCloudUser')"
         ),
       userIds: z
         .array(z.string())

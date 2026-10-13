@@ -1,16 +1,16 @@
-## **Demo Script: Administering and Using Account Addresses in AFLS**
+## **Demo Script: Administering and Using Account Addresses in Life Sciences Cloud (LSC)**
 
-**Narrator:** \"Hello, and welcome to this demonstration of the **Account Address** feature within Salesforce AFLS. This capability is vital for managing addresses for diverse accounts, including **Healthcare Professionals (HCPs)** and **Healthcare Organizations (HCOs)**. Accurate address tracking is essential for effective engagement, compliance, logistics, and maintaining data integrity, especially since accounts often have multiple addresses for different purposes like billing or shipping.
+**Narrator:** \"Hello, and welcome to this demonstration of the **Account Address** feature within Salesforce LSC. This capability is vital for managing addresses for diverse accounts, including **Healthcare Professionals (HCPs)** and **Healthcare Organizations (HCOs)**. Accurate address tracking is essential for effective engagement, compliance, logistics, and maintaining data integrity, especially since accounts often have multiple addresses for different purposes like billing or shipping.
 
-Let's walk through the administrative setup of Address in AFLS.
+Let's walk through the administrative setup of Address in LSC.
 
 ### **Part 1: Administrator Demo - Configuring Account Addresses**
 
-**Narrator:** \"As an administrator, my role is to ensure our system is ready to effectively manage and display account addresses. The **Contact Point Address object** serves as the central entity for storing and managing **multiple addresses** in AFLS for both healthcare professionals (HCPs) and organizations (HCOs).
+**Narrator:** \"As an administrator, my role is to ensure our system is ready to effectively manage and display account addresses. The **Contact Point Address object** serves as the central entity for storing and managing **multiple addresses** in LSC for both healthcare professionals (HCPs) and organizations (HCOs).
 
 When multiple addresses exist for an HCP or HCO, it is possible to define the primary address for the account, as well as a preferred address for the current territory. Preferred addresses are stored on the Provider Account Territory Information object. When multiple addresses exist the account map view and the provider card have embedded logic to first display a preferred address if it is available, otherwise display primary address.
 
-Addresses are extensively leveraged across all features in AFLS such as Visit Management, Consent Management, and Account Summarization, etc. to ensure accurate and tailored engagement. Address usage & configuration inside of these feature areas will be covered in their respective enablement sessions.
+Addresses are extensively leveraged across all features in LSC such as Visit Management, Consent Management, and Account Summarization, etc. to ensure accurate and tailored engagement. Address usage & configuration inside of these feature areas will be covered in their respective enablement sessions.
 
 1.  **Creating Custom Formula Fields for Address Display**:
 

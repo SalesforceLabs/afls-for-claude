@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:clinical-engagement pages:7-146 -->
 # Clinical Engagement
 
-AFLS Overview                                                                                                     Clinical Engagement
+Life Sciences Cloud (LSC) Overview                                                                                                     Clinical Engagement
 
 
 
@@ -41,7 +41,7 @@ version 61.0 and later.
 
 <!-- page:8 -->
 
-AFLS Overview                                                                                                    Clinical Engagement
+LSC Overview                                                                                                    Clinical Engagement
 
 
 
@@ -98,7 +98,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:9 -->
 
-AFLS Overview                                                                                      Clinical Engagement
+LSC Overview                                                                                      Clinical Engagement
 
 
 
@@ -149,7 +149,7 @@ The timestamp for when the current user last viewed a record related to this rec
 
 <!-- page:10 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -211,7 +211,7 @@ Create, Filter, Group, Sort
 
 <!-- page:11 -->
 
-AFLS Overview                                                                                     Clinical Engagement
+LSC Overview                                                                                     Clinical Engagement
 
 
 
@@ -263,7 +263,7 @@ The code of the adverse incident cause.
 
 <!-- page:12 -->
 
-AFLS Overview                                                                                       Clinical Engagement
+LSC Overview                                                                                       Clinical Engagement
 
 
 
@@ -313,7 +313,7 @@ The name of the research study.
 
 <!-- page:13 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -373,7 +373,7 @@ reference
 
 <!-- page:14 -->
 
-AFLS Overview                                                                                    Clinical Engagement
+LSC Overview                                                                                    Clinical Engagement
 
 
 
@@ -424,7 +424,7 @@ dateTime
 
 <!-- page:15 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -482,7 +482,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:16 -->
 
-AFLS Overview                                                                     Clinical Engagement
+LSC Overview                                                                     Clinical Engagement
 
 
 Fields
@@ -531,7 +531,7 @@ ClinicalEncounter
 
 <!-- page:17 -->
 
-AFLS Overview                                                                    Clinical Engagement
+LSC Overview                                                                    Clinical Engagement
 
 
 
@@ -580,7 +580,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:18 -->
 
-AFLS Overview                                                                                       Clinical Engagement
+LSC Overview                                                                                       Clinical Engagement
 
 
 
@@ -630,7 +630,7 @@ CareProgramSite, HealthcareFacility
 
 <!-- page:19 -->
 
-AFLS Overview                                                                    Clinical Engagement
+LSC Overview                                                                    Clinical Engagement
 
 
 
@@ -680,7 +680,7 @@ reference
 
 <!-- page:20 -->
 
-AFLS Overview                                                                      Clinical Engagement
+LSC Overview                                                                      Clinical Engagement
 
 
 
@@ -731,7 +731,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:21 -->
 
-AFLS Overview                                                                           Clinical Engagement
+LSC Overview                                                                           Clinical Engagement
 
 
 
@@ -782,7 +782,7 @@ Account, CareProgramEnrollee, HealthcareProvider
 
 <!-- page:22 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -843,7 +843,7 @@ The parent adverse incident associated with the outcome.
 
 <!-- page:23 -->
 
-AFLS Overview                                                                                       Clinical Engagement
+LSC Overview                                                                                       Clinical Engagement
 
 
 
@@ -894,7 +894,7 @@ CodeSet, CodeSetBundle
 
 <!-- page:24 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -952,7 +952,7 @@ The timestamp for when the current user last viewed a record related to this rec
 
 <!-- page:25 -->
 
-AFLS Overview                                                                                       Clinical Engagement
+LSC Overview                                                                                       Clinical Engagement
 
 
 
@@ -1002,7 +1002,7 @@ Possible values are:
 
 <!-- page:26 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -1060,7 +1060,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:27 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -1115,7 +1115,7 @@ Supporting information relevant to the event. This object is available in API ve
 
 <!-- page:28 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -1168,7 +1168,7 @@ The name of the research study.
 
 <!-- page:29 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -1216,7 +1216,7 @@ History is available for tracked fields of the object.
 
 <!-- page:30 -->
 
-AFLS Overview                                                                                                      Clinical Engagement
+LSC Overview                                                                                                      Clinical Engagement
 
 
 
@@ -1254,7 +1254,7 @@ For more details and a larger image, visit the Data Model Gallery.
 
 <!-- page:31 -->
 
-AFLS Overview                                                                                                           Clinical Engagement
+LSC Overview                                                                                                           Clinical Engagement
 
 
 
@@ -1303,7 +1303,7 @@ Represents details of the research study protocol document. This object is avail
 
 <!-- page:32 -->
 
-AFLS Overview                                                                                                         Clinical Engagement
+LSC Overview                                                                                                         Clinical Engagement
 
 
 
@@ -1362,7 +1362,7 @@ in API version 64.0 and later when Site Management is enabled.
 
 <!-- page:33 -->
 
-AFLS Overview                                                                           Clinical Engagement
+LSC Overview                                                                           Clinical Engagement
 
 
 
@@ -1413,7 +1413,7 @@ A short description explaining the program.
 
 <!-- page:34 -->
 
-AFLS Overview                                                                                 Clinical Engagement
+LSC Overview                                                                                 Clinical Engagement
 
 
 
@@ -1464,7 +1464,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:35 -->
 
-AFLS Overview                                                                             Clinical Engagement
+LSC Overview                                                                             Clinical Engagement
 
 
 
@@ -1515,7 +1515,7 @@ ID of the system from which the record was sourced.
 
 <!-- page:36 -->
 
-AFLS Overview                                                                              Clinical Engagement
+LSC Overview                                                                              Clinical Engagement
 
 
 
@@ -1563,7 +1563,7 @@ available in API version 64.0 and later when Site Management is enabled.
 
 <!-- page:37 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -1620,7 +1620,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:38 -->
 
-AFLS Overview                                                                                      Clinical Engagement
+LSC Overview                                                                                      Clinical Engagement
 
 
 
@@ -1670,7 +1670,7 @@ The timestamp for when the current user last viewed a record related to this rec
 
 <!-- page:39 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -1731,7 +1731,7 @@ reference
 
 <!-- page:40 -->
 
-AFLS Overview                                                                                       Clinical Engagement
+LSC Overview                                                                                       Clinical Engagement
 
 
 
@@ -1783,7 +1783,7 @@ Filter, Nillable, Sort
 
 <!-- page:41 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -1835,7 +1835,7 @@ picklist
 
 <!-- page:42 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -1890,7 +1890,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:43 -->
 
-AFLS Overview                                                                                  Clinical Engagement
+LSC Overview                                                                                  Clinical Engagement
 
 
 Fields
@@ -1940,7 +1940,7 @@ ClinicalServiceRequest
 
 <!-- page:44 -->
 
-AFLS Overview                                                                            Clinical Engagement
+LSC Overview                                                                            Clinical Engagement
 
 
 
@@ -1990,7 +1990,7 @@ EnrolledAt
 
 <!-- page:45 -->
 
-AFLS Overview                                                                           Clinical Engagement
+LSC Overview                                                                           Clinical Engagement
 
 
 
@@ -2038,7 +2038,7 @@ FlowInterview
 
 <!-- page:46 -->
 
-AFLS Overview                                                                               Clinical Engagement
+LSC Overview                                                                               Clinical Engagement
 
 
 
@@ -2088,7 +2088,7 @@ viewed.
 
 <!-- page:47 -->
 
-AFLS Overview                                                                              Clinical Engagement
+LSC Overview                                                                              Clinical Engagement
 
 
 
@@ -2140,7 +2140,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:48 -->
 
-AFLS Overview                                                                            Clinical Engagement
+LSC Overview                                                                            Clinical Engagement
 
 
 
@@ -2190,7 +2190,7 @@ Possible values are:
 
 <!-- page:49 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -2251,7 +2251,7 @@ available in API version 64.0 and later when Site Management is enabled.
 
 <!-- page:50 -->
 
-AFLS Overview                                                                                          Clinical Engagement
+LSC Overview                                                                                          Clinical Engagement
 
 
 
@@ -2302,7 +2302,7 @@ API version 62.0 and later when Site Management is enabled.
 
 <!-- page:51 -->
 
-AFLS Overview                                                                                           Clinical Engagement
+LSC Overview                                                                                           Clinical Engagement
 
 
 
@@ -2354,7 +2354,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:52 -->
 
-AFLS Overview                                                                                             Clinical Engagement
+LSC Overview                                                                                             Clinical Engagement
 
 
 
@@ -2407,7 +2407,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:53 -->
 
-AFLS Overview                                                                                          Clinical Engagement
+LSC Overview                                                                                          Clinical Engagement
 
 
 
@@ -2460,7 +2460,7 @@ This field is a relationship field.
 
 <!-- page:54 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -2509,7 +2509,7 @@ Location
 
 <!-- page:55 -->
 
-AFLS Overview                                                                                         Clinical Engagement
+LSC Overview                                                                                         Clinical Engagement
 
 
 
@@ -2560,7 +2560,7 @@ field is available in API version 62.0 and later when Site Management is enabled
 
 <!-- page:56 -->
 
-AFLS Overview                                                                                           Clinical Engagement
+LSC Overview                                                                                           Clinical Engagement
 
 
 
@@ -2610,7 +2610,7 @@ Management is enabled.
 
 <!-- page:57 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -2660,7 +2660,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:58 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -2711,7 +2711,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:59 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -2761,7 +2761,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:60 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -2824,7 +2824,7 @@ Create, Filter, Group, Sort
 
 <!-- page:61 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -2875,7 +2875,7 @@ possible that this record was referenced (LastReferencedDate) and not viewed.
 
 <!-- page:62 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -2932,7 +2932,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:63 -->
 
-AFLS Overview                                                                         Clinical Engagement
+LSC Overview                                                                         Clinical Engagement
 
 
 Fields
@@ -2983,7 +2983,7 @@ viewed.
 
 <!-- page:64 -->
 
-AFLS Overview                                                                            Clinical Engagement
+LSC Overview                                                                            Clinical Engagement
 
 
 
@@ -3033,7 +3033,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:65 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -3096,7 +3096,7 @@ dateTime
 
 <!-- page:66 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -3147,7 +3147,7 @@ Specifies the status of the enrollee.
 
 <!-- page:67 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -3207,7 +3207,7 @@ CareProgramEligibilityRule
 
 <!-- page:68 -->
 
-AFLS Overview                                                                                     Clinical Engagement
+LSC Overview                                                                                     Clinical Engagement
 
 
 
@@ -3259,7 +3259,7 @@ Filter, Nillable, Sort
 
 <!-- page:69 -->
 
-AFLS Overview                                                                                       Clinical Engagement
+LSC Overview                                                                                       Clinical Engagement
 
 
 
@@ -3311,7 +3311,7 @@ Create, Filter, Group, Nillable, Restricted picklist, Sort, Update
 
 <!-- page:70 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -3373,7 +3373,7 @@ This field is a relationship field.
 
 <!-- page:71 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -3424,7 +3424,7 @@ Autonumber, Defaulted on create, Filter, idLookup, Sort
 
 <!-- page:72 -->
 
-AFLS Overview                                                                                                   Clinical Engagement
+LSC Overview                                                                                                   Clinical Engagement
 
 
 
@@ -3482,7 +3482,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:73 -->
 
-AFLS Overview                                                                                    Clinical Engagement
+LSC Overview                                                                                    Clinical Engagement
 
 
 
@@ -3535,7 +3535,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:74 -->
 
-AFLS Overview                                                                                 Clinical Engagement
+LSC Overview                                                                                 Clinical Engagement
 
 
 
@@ -3585,7 +3585,7 @@ dateTime
 
 <!-- page:75 -->
 
-AFLS Overview                                                                                   Clinical Engagement
+LSC Overview                                                                                   Clinical Engagement
 
 
 
@@ -3638,7 +3638,7 @@ string
 
 <!-- page:76 -->
 
-AFLS Overview                                                                        Clinical Engagement
+LSC Overview                                                                        Clinical Engagement
 
 
 
@@ -3691,7 +3691,7 @@ reference
 
 <!-- page:77 -->
 
-AFLS Overview                                                                                 Clinical Engagement
+LSC Overview                                                                                 Clinical Engagement
 
 
 
@@ -3742,7 +3742,7 @@ string
 
 <!-- page:78 -->
 
-AFLS Overview                                                                                   Clinical Engagement
+LSC Overview                                                                                   Clinical Engagement
 
 
 
@@ -3795,7 +3795,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:79 -->
 
-AFLS Overview                                                                                   Clinical Engagement
+LSC Overview                                                                                   Clinical Engagement
 
 
 
@@ -3846,7 +3846,7 @@ the diagnostic service.
 
 <!-- page:80 -->
 
-AFLS Overview                                                                                                       Clinical Engagement
+LSC Overview                                                                                                       Clinical Engagement
 
 
 
@@ -3906,7 +3906,7 @@ Change events are available for the object.
 
 <!-- page:81 -->
 
-AFLS Overview                                                                                                   Clinical Engagement
+LSC Overview                                                                                                   Clinical Engagement
 
 
 
@@ -3968,7 +3968,7 @@ Lookup
 
 <!-- page:82 -->
 
-AFLS Overview                                                                                                Clinical Engagement
+LSC Overview                                                                                                Clinical Engagement
 
 
 
@@ -4016,7 +4016,7 @@ The name of the digital verification record.
 
 <!-- page:83 -->
 
-AFLS Overview                                                                             Clinical Engagement
+LSC Overview                                                                             Clinical Engagement
 
 
 
@@ -4069,7 +4069,7 @@ HC24__EhrImmunizationReaction__c, HC24__EhrImmunization__c,
 
 <!-- page:84 -->
 
-AFLS Overview                                                                                 Clinical Engagement
+LSC Overview                                                                                 Clinical Engagement
 
 
 
@@ -4121,7 +4121,7 @@ The date and time when the verification of the related record was done.
 
 <!-- page:85 -->
 
-AFLS Overview                                                                                    Clinical Engagement
+LSC Overview                                                                                    Clinical Engagement
 
 
 
@@ -4171,7 +4171,7 @@ The user who performed the verification.
 
 <!-- page:86 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -4226,7 +4226,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:87 -->
 
-AFLS Overview                                                                                       Clinical Engagement
+LSC Overview                                                                                       Clinical Engagement
 
 
 Fields
@@ -4277,7 +4277,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:88 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -4340,7 +4340,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:89 -->
 
-AFLS Overview                                                                                           Clinical Engagement
+LSC Overview                                                                                           Clinical Engagement
 
 
 
@@ -4393,7 +4393,7 @@ date
 
 <!-- page:90 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -4445,7 +4445,7 @@ reference
 
 <!-- page:91 -->
 
-AFLS Overview                                                                                       Clinical Engagement
+LSC Overview                                                                                       Clinical Engagement
 
 
 
@@ -4496,7 +4496,7 @@ picklist
 
 <!-- page:92 -->
 
-AFLS Overview                                                                                          Clinical Engagement
+LSC Overview                                                                                          Clinical Engagement
 
 
 
@@ -4549,7 +4549,7 @@ date
 
 <!-- page:93 -->
 
-AFLS Overview                                                                                             Clinical Engagement
+LSC Overview                                                                                             Clinical Engagement
 
 
 
@@ -4602,7 +4602,7 @@ version 64.0 and later when Site Management is enabled.
 
 <!-- page:94 -->
 
-AFLS Overview                                                                                          Clinical Engagement
+LSC Overview                                                                                          Clinical Engagement
 
 
 
@@ -4652,7 +4652,7 @@ string
 
 <!-- page:95 -->
 
-AFLS Overview                                                                                      Clinical Engagement
+LSC Overview                                                                                      Clinical Engagement
 
 
 
@@ -4703,7 +4703,7 @@ This field is available in API version 64.0 and later when Site Management is en
 
 <!-- page:96 -->
 
-AFLS Overview                                                                             Clinical Engagement
+LSC Overview                                                                             Clinical Engagement
 
 
 
@@ -4753,7 +4753,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:97 -->
 
-AFLS Overview                                                                                   Clinical Engagement
+LSC Overview                                                                                   Clinical Engagement
 
 
 
@@ -4806,7 +4806,7 @@ textarea
 
 <!-- page:98 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -4861,7 +4861,7 @@ Sharing is available for the object.
 
 <!-- page:99 -->
 
-AFLS Overview                                                                                                   Clinical Engagement
+LSC Overview                                                                                                   Clinical Engagement
 
 
 
@@ -4917,7 +4917,7 @@ The timestamp for when the current user last viewed a record related to this rec
 
 <!-- page:100 -->
 
-AFLS Overview                                                                                         Clinical Engagement
+LSC Overview                                                                                         Clinical Engagement
 
 
 
@@ -4967,7 +4967,7 @@ Owner
 
 <!-- page:101 -->
 
-AFLS Overview                                                                            Clinical Engagement
+LSC Overview                                                                            Clinical Engagement
 
 
 
@@ -5016,7 +5016,7 @@ Create, Filter, Group, Nillable, Restricted picklist, Sort, Update
 
 <!-- page:102 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -5071,7 +5071,7 @@ Represents the details of a research study comparison group. This object is avai
 
 <!-- page:103 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -5124,7 +5124,7 @@ The name of the research study randomization comparison group.
 
 <!-- page:104 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -5177,7 +5177,7 @@ Otherwise, they’re available in the specified API version and later.
 
 <!-- page:105 -->
 
-AFLS Overview                                                                                                Clinical Engagement
+LSC Overview                                                                                                Clinical Engagement
 
 
 
@@ -5235,7 +5235,7 @@ Possible values are:
 
 <!-- page:106 -->
 
-AFLS Overview                                                      Clinical Engagement
+LSC Overview                                                      Clinical Engagement
 
 
 
@@ -5283,7 +5283,7 @@ AFLS Overview                                                      Clinical Enga
 
 <!-- page:107 -->
 
-AFLS Overview                                                                                       Clinical Engagement
+LSC Overview                                                                                       Clinical Engagement
 
 
 
@@ -5329,7 +5329,7 @@ ResearchStudy (the master object)
 
 <!-- page:108 -->
 
-AFLS Overview                                                                                                      Clinical Engagement
+LSC Overview                                                                                                      Clinical Engagement
 
 
 
@@ -5385,7 +5385,7 @@ RelatedResearchStudy
 
 <!-- page:109 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -5438,7 +5438,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:110 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 Fields
@@ -5486,7 +5486,7 @@ Create, Filter, Group, Sort, Update
 
 <!-- page:111 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -5541,7 +5541,7 @@ History is available for tracked fields of the object.
 
 <!-- page:112 -->
 
-AFLS Overview                                                                                                     Clinical Engagement
+LSC Overview                                                                                                     Clinical Engagement
 
 
 
@@ -5600,7 +5600,7 @@ Filter, Nillable, Sort
 
 <!-- page:113 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -5651,7 +5651,7 @@ Possible values are:
 
 <!-- page:114 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -5711,7 +5711,7 @@ CandidateAllocSource
 
 <!-- page:115 -->
 
-AFLS Overview                                                                                       Clinical Engagement
+LSC Overview                                                                                       Clinical Engagement
 
 
 
@@ -5763,7 +5763,7 @@ Owner
 
 <!-- page:116 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -5812,7 +5812,7 @@ Sharing is available for the object.
 
 <!-- page:117 -->
 
-AFLS Overview                                                                                                      Clinical Engagement
+LSC Overview                                                                                                      Clinical Engagement
 
 
 
@@ -5869,7 +5869,7 @@ Autonumber, Defaulted on create, Filter, idLookup, Sort
 
 <!-- page:118 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -5922,7 +5922,7 @@ Sharing is available for the object.
 
 <!-- page:119 -->
 
-AFLS Overview                                                                                                    Clinical Engagement
+LSC Overview                                                                                                    Clinical Engagement
 
 
 
@@ -5978,7 +5978,7 @@ Group Candidate record for candidates for the matching group.
 
 <!-- page:120 -->
 
-AFLS Overview                                                                                          Clinical Engagement
+LSC Overview                                                                                          Clinical Engagement
 
 
 
@@ -6029,7 +6029,7 @@ randomization.
 
 <!-- page:121 -->
 
-AFLS Overview                                                                               Clinical Engagement
+LSC Overview                                                                               Clinical Engagement
 
 
 
@@ -6079,7 +6079,7 @@ ResearchStudy
 
 <!-- page:122 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -6140,7 +6140,7 @@ The sequence number of the item in the research study randomization block.
 
 <!-- page:123 -->
 
-AFLS Overview                                                                                          Clinical Engagement
+LSC Overview                                                                                          Clinical Engagement
 
 
 
@@ -6191,7 +6191,7 @@ This field is a relationship field.
 
 <!-- page:124 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -6246,7 +6246,7 @@ Change events are available for the object.
 
 <!-- page:125 -->
 
-AFLS Overview                                                                                                  Clinical Engagement
+LSC Overview                                                                                                  Clinical Engagement
 
 
 
@@ -6306,7 +6306,7 @@ string
 
 <!-- page:126 -->
 
-AFLS Overview                                                                                   Clinical Engagement
+LSC Overview                                                                                   Clinical Engagement
 
 
 
@@ -6359,7 +6359,7 @@ dateTime
 
 <!-- page:127 -->
 
-AFLS Overview                                                                                       Clinical Engagement
+LSC Overview                                                                                       Clinical Engagement
 
 
 
@@ -6411,7 +6411,7 @@ This field is a polymorphic relationship field.
 
 <!-- page:128 -->
 
-AFLS Overview                                                                                Clinical Engagement
+LSC Overview                                                                                Clinical Engagement
 
 
 
@@ -6460,7 +6460,7 @@ string
 
 <!-- page:129 -->
 
-AFLS Overview                                                                  Clinical Engagement
+LSC Overview                                                                  Clinical Engagement
 
 
 
@@ -6513,7 +6513,7 @@ int
 
 <!-- page:130 -->
 
-AFLS Overview                                                                                                          Clinical Engagement
+LSC Overview                                                                                                          Clinical Engagement
 
 
 
@@ -6560,7 +6560,7 @@ for future site selection efforts.
 
 
 Available in: Lightning Experience
-Available in: Enterprise and Unlimited Editions with AFLS
+Available in: Enterprise and Unlimited Editions with LSC
 
 
 
@@ -6568,7 +6568,7 @@ The Site Management objects are available in API version 62.0 and later.
 
 <!-- page:131 -->
 
-AFLS Overview                                                                                                         Clinical Engagement
+LSC Overview                                                                                                         Clinical Engagement
 
 
 
@@ -6605,7 +6605,7 @@ retrieve(), search(), undelete(), update(), upsert()
 
 <!-- page:132 -->
 
-AFLS Overview                                                                                   Clinical Engagement
+LSC Overview                                                                                   Clinical Engagement
 
 
 Fields
@@ -6654,7 +6654,7 @@ Filter, Nillable, Sort
 
 <!-- page:133 -->
 
-AFLS Overview                                                                                                        Clinical Engagement
+LSC Overview                                                                                                        Clinical Engagement
 
 
 
@@ -6714,7 +6714,7 @@ Create, Filter, Group, Nillable, Sort, Update
 
 <!-- page:134 -->
 
-AFLS Overview                                                                                         Clinical Engagement
+LSC Overview                                                                                         Clinical Engagement
 
 
 
@@ -6767,7 +6767,7 @@ int
 
 <!-- page:135 -->
 
-AFLS Overview                                                                                         Clinical Engagement
+LSC Overview                                                                                         Clinical Engagement
 
 
 
@@ -6820,7 +6820,7 @@ The country where the healthcare facility is located.
 
 <!-- page:136 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -6869,7 +6869,7 @@ The type of the healthcare facility associated with the site investigator, such 
 
 <!-- page:137 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -6920,7 +6920,7 @@ Cardiology.
 
 <!-- page:138 -->
 
-AFLS Overview                                                                                             Clinical Engagement
+LSC Overview                                                                                             Clinical Engagement
 
 
 
@@ -6970,7 +6970,7 @@ boolean
 
 <!-- page:139 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -7022,7 +7022,7 @@ X-ray and blood tests.
 
 <!-- page:140 -->
 
-AFLS Overview                                                                                        Clinical Engagement
+LSC Overview                                                                                        Clinical Engagement
 
 
 
@@ -7073,7 +7073,7 @@ Create, Defaulted on create, Filter, Group, Sort, Update
 
 <!-- page:141 -->
 
-AFLS Overview                                                                                                    Clinical Engagement
+LSC Overview                                                                                                    Clinical Engagement
 
 
 
@@ -7126,7 +7126,7 @@ Represents the details of a party's publication. This object is available in API
 
 <!-- page:142 -->
 
-AFLS Overview                                                                                         Clinical Engagement
+LSC Overview                                                                                         Clinical Engagement
 
 
 
@@ -7178,7 +7178,7 @@ reference
 
 <!-- page:143 -->
 
-AFLS Overview                                                                  Clinical Engagement
+LSC Overview                                                                  Clinical Engagement
 
 
 
@@ -7229,7 +7229,7 @@ string
 
 <!-- page:144 -->
 
-AFLS Overview                                                                                                Clinical Engagement
+LSC Overview                                                                                                Clinical Engagement
 
 
 
@@ -7289,7 +7289,7 @@ Possible values are:
 
 <!-- page:145 -->
 
-AFLS Overview                                                      Clinical Engagement
+LSC Overview                                                      Clinical Engagement
 
 
 
@@ -7337,7 +7337,7 @@ AFLS Overview                                                      Clinical Enga
 
 <!-- page:146 -->
 
-AFLS Overview                                                                                       Clinical Engagement
+LSC Overview                                                                                       Clinical Engagement
 
 
 

@@ -3,7 +3,7 @@ import { z } from "zod";
 import { getModuleList, getModuleContent, searchKnowledge } from "../knowledge-loader.js";
 
 export function register(server: McpServer) {
-  server.resource("afls://modules", "List of all AFLS4CE modules with documentation", async () => {
+  server.resource("lsc://modules", "List of all LSC4CE modules with documentation", async () => {
     const modules = getModuleList();
 
     const moduleTable = modules
@@ -13,31 +13,31 @@ export function register(server: McpServer) {
     return {
       contents: [
         {
-          uri: "afls://modules",
+          uri: "lsc://modules",
           mimeType: "text/markdown",
-          text: `# AFLS4CE Modules
+          text: `# LSC4CE Modules
 
 | Module | Slug | Docs |
 |--------|------|------|
 ${moduleTable}
 
-Use the \`get_afls_module_docs\` tool with a slug to get detailed documentation.`,
+Use the \`get_lsc_module_docs\` tool with a slug to get detailed documentation.`,
         },
       ],
     };
   });
 
-  // Resource: AFLS Overview
-  server.resource("afls://overview", "Overview of AFLS for Customer Engagement", async () => ({
+  // Resource: LSC Overview
+  server.resource("lsc://overview", "Overview of LSC for Customer Engagement", async () => ({
     contents: [
       {
-        uri: "afls://overview",
+        uri: "lsc://overview",
         mimeType: "text/markdown",
-        text: `# AFLS for Customer Engagement (AFLS4CE)
+        text: `# LSC for Customer Engagement (LSC4CE)
 
 ## Overview
 
-AFLS for Customer Engagement is Salesforce's industry cloud solution for pharmaceutical, biotech, and medical device companies. It helps commercial teams effectively engage with healthcare providers (HCPs) and healthcare organizations (HCOs) while maintaining regulatory compliance.
+LSC for Customer Engagement is Salesforce's industry cloud solution for pharmaceutical, biotech, and medical device companies. It helps commercial teams effectively engage with healthcare providers (HCPs) and healthcare organizations (HCOs) while maintaining regulatory compliance.
 
 ## Key Modules
 
@@ -91,11 +91,11 @@ AFLS for Customer Engagement is Salesforce's industry cloud solution for pharmac
 ## Getting Help
 
 Use the tools provided:
-- \`list_afls_modules\` - See all available documentation
-- \`get_afls_module_docs\` - Get detailed module documentation
-- \`search_afls_knowledge\` - Search for specific topics
-- \`explain_afls_concept\` - Get explanations of AFLS concepts
-- \`get_afls_admin_setup\` - Get admin configuration guidance`,
+- \`list_lsc_modules\` - See all available documentation
+- \`get_lsc_module_docs\` - Get detailed module documentation
+- \`search_lsc_knowledge\` - Search for specific topics
+- \`explain_lsc_concept\` - Get explanations of LSC concepts
+- \`get_lsc_admin_setup\` - Get admin configuration guidance`,
       },
     ],
   }));
@@ -106,8 +106,8 @@ Use the tools provided:
 
   // Prompt: Implementation Checklist
   server.prompt(
-    "afls_implementation_checklist",
-    "Generate an implementation checklist for an AFLS module",
+    "lsc_implementation_checklist",
+    "Generate an implementation checklist for an LSC module",
     {
       module: z
         .enum([
@@ -121,7 +121,7 @@ Use the tools provided:
           "field-email",
           "full",
         ])
-        .describe("The AFLS module to generate a checklist for"),
+        .describe("The LSC module to generate a checklist for"),
     },
     async ({ module }) => {
       // Get the module documentation to include context
@@ -133,7 +133,7 @@ Use the tools provided:
             role: "user",
             content: {
               type: "text",
-              text: `Generate a detailed implementation checklist for the AFLS ${module} module.
+              text: `Generate a detailed implementation checklist for the LSC ${module} module.
 
 Here is the available documentation for this module:
 
@@ -158,8 +158,8 @@ Format as a structured checklist with clear categories and actionable items.`,
 
   // Prompt: Troubleshooting Guide
   server.prompt(
-    "afls_troubleshoot",
-    "Get help troubleshooting an AFLS issue",
+    "lsc_troubleshoot",
+    "Get help troubleshooting an LSC issue",
     {
       issue: z.string().describe("Description of the issue or error"),
       module: z.string().optional().describe("The module where the issue is occurring"),
@@ -183,7 +183,7 @@ Format as a structured checklist with clear categories and actionable items.`,
             role: "user",
             content: {
               type: "text",
-              text: `Help troubleshoot this AFLS issue:
+              text: `Help troubleshoot this LSC issue:
 
 **Issue:** ${issue}
 ${module ? `**Module:** ${module}` : ""}
@@ -194,7 +194,7 @@ ${moduleContent}
 **Search Results:**
 ${relevantContent}
 
-Based on the documentation and common AFLS patterns, please:
+Based on the documentation and common LSC patterns, please:
 1. Identify possible causes of this issue
 2. Suggest diagnostic steps
 3. Provide resolution steps

@@ -17,7 +17,7 @@ and create account manager targets.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or Life Sciences Cloud (LSC)
 
 
 Sales Agreements
@@ -101,7 +101,7 @@ Help Intelligent Sales users visualize the status of a sales agreement, so they 
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC
 
 
 USER PERMISSIONS NEEDED
@@ -143,7 +143,7 @@ configured and working in the org.
 
 ## Assign Permissions and Permission Sets for Record Conversion Users
 
-Assign the Health Cloud Starter (for AFLS) or Health Cloud Foundation (for Health
+Assign the Health Cloud Starter (for LSC) or Health Cloud Foundation (for Health
 
 <!-- page:1159 -->
 
@@ -165,7 +165,7 @@ Keep your users up to date about the status of their record conversion jobs by u
 
 Assign Permissions and Permission Sets for Record Conversion Users
 
-Assign the Health Cloud Starter (for AFLS) or Health Cloud Foundation (for Health Cloud)
+Assign the Health Cloud Starter (for LSC) or Health Cloud Foundation (for Health Cloud)
 permission set, and the Context Service Runtime and Manufacturing Sales Agreements permission sets
 to your users so that they can use record conversion. Users must also be assigned the Manage Flows and
 Run Flows permissions.
@@ -177,7 +177,7 @@ Run Flows permissions.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 ## See Also
@@ -197,7 +197,7 @@ uses a custom definition to map field relationships between records.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 The Convert Record flow uses the SalesAgreementQuotesConversion context definition to map data
@@ -234,7 +234,7 @@ To use the Convert Record flow, you must enable sales agreements and quotes in y
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -271,7 +271,7 @@ Quickly launch the Convert Record flow by using a quick action.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 If the convert record quick action isn’t visible to your users, add it to the page layouts assigned to them
@@ -293,7 +293,7 @@ Keep your users up to date about the status of their record conversion jobs by u
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Verify Notification Delivery Settings

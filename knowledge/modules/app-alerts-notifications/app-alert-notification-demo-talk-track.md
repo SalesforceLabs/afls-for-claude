@@ -1,6 +1,6 @@
 ### App Alerts Overview 📣
 
-App Alerts is a feature within the AFLS for Customer Engagement that provides
+App Alerts is a feature within the Life Sciences Cloud (LSC) for Customer Engagement that provides
 
 **timely, contextual, and actionable messages** to field users like sales reps and medical science liaisons, helping them stay informed and act efficiently within their daily workflows^111111111111111111111111111111111^. This framework helps to reduce missed opportunities and cognitive overload by delivering insights directly where users are working, whether on the web or mobile platforms^222222^.
 

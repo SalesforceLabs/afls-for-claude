@@ -496,8 +496,8 @@ export function registerIpcHandlers(mainWindow: BrowserWindow): void {
 
         const content = readFileSync(sectionPath, "utf-8");
 
-        // Build both a afls-local:// URL and the absolute file path for the PDF
-        const pdfUrl = `afls-local://file/documentation/${encodeURIComponent(manifest.pdfFileName)}`;
+        // Build both a lsc-local:// URL and the absolute file path for the PDF
+        const pdfUrl = `lsc-local://file/documentation/${encodeURIComponent(manifest.pdfFileName)}`;
         const pdfPath = path.join(__dirname, "..", "..", "documentation", manifest.pdfFileName);
 
         return {

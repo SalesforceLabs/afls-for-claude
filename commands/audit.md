@@ -1,9 +1,9 @@
 ---
-description: Audit AFLS mobile configuration to identify misconfigurations
+description: Audit Life Sciences Cloud (LSC) mobile configuration to identify misconfigurations
 arguments: "[group]"
 ---
 
-# AFLS Configuration Audit
+# LSC Configuration Audit
 
 Run a configuration audit against the connected Salesforce org to identify issues.
 
@@ -22,22 +22,22 @@ Run a configuration audit against the connected Salesforce org to identify issue
 
 ## Instructions
 
-1. First, check if the org is connected by calling `check_afls_setup`
+1. First, check if the org is connected by calling `check_lsc_setup`
 2. If an org is connected, run the audit using `audit_mobile_config` tool
-3. If a group argument was provided (e.g., `/afls:audit mobile-login-check`), use that group
+3. If a group argument was provided (e.g., `/lsc:audit mobile-login-check`), use that group
 4. Otherwise, default to `full-mobile-audit`
 5. Present the audit results clearly, highlighting any errors or warnings
 6. For each failed check, explain the issue and provide the resolution steps
 
 ## Example Usage
 
-User: `/afls:audit`
+User: `/lsc:audit`
 → Run full mobile audit
 
-User: `/afls:audit mobile-login-check`
+User: `/lsc:audit mobile-login-check`
 → Run only login-related checks
 
-User: `/afls:audit pre-deployment`
+User: `/lsc:audit pre-deployment`
 → Run pre-deployment validation checks
 
 ## Output Format

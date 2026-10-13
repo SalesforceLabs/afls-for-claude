@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:carebenefitverifysettings-2 pages:1939-1940 -->
 # CareBenefitVerifySettings
 
-AFLS Overview                                                                                                CareBenefitVerifySettings
+Life Sciences Cloud (LSC) Overview                                                                                                CareBenefitVerifySettings
 
 
 
@@ -14,7 +14,7 @@ their records' related events in a linear time-sorted view.
 UIObjectRelationConfig
 Represents the admin-created configuration of the object relation UI component.
 Customer Engagement Metadata Type
-Metadata API enables you to access some types and feature settings for Customer Engagement for AFLS that you can
+Metadata API enables you to access some types and feature settings for Customer Engagement for LSC that you can
 customize in the user interface.
 
 
@@ -64,7 +64,7 @@ string
 
 <!-- page:1940 -->
 
-AFLS Overview                                                                                CareBenefitVerifySettings
+LSC Overview                                                                                CareBenefitVerifySettings
 
 
 

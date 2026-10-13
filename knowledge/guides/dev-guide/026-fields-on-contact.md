@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:fields-on-contact pages:1466-1466 -->
 # Fields on Contact
 
-AFLS Overview                                                                                                              Fields on Contact
+Life Sciences Cloud (LSC) Overview                                                                                                              Fields on Contact
 
 
 
@@ -45,7 +45,7 @@ Object Reference for the Salesforce Platform: ActionPlanTemplateVersion
 
 ## Fields on Contact
 
-AFLS fields extend the standard Contact object to represent information about an individual.
+LSC fields extend the standard Contact object to represent information about an individual.
 
 
 

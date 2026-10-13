@@ -1,5 +1,5 @@
-appId: com.salesforce.afls-assistant
-productName: AFLS Assistant
+appId: com.salesforce.lsc-assistant
+productName: LSC Assistant
 directories:
   output: release
 files:

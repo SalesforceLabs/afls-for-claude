@@ -1,6 +1,6 @@
-### **1. Introduction to AFLS Workflow Management**
+### **1. Introduction to Life Sciences Cloud (LSC) Workflow Management**
 
-Life Sciences Commercial (AFLS) Workflow Management is a feature designed to automate business processes and guide users through their tasks with clear, step-by-step instructions. These workflows outline the journey of an object through various stages, helping users manage statuses, actions, and record permissions. The workflows are available both online and offline via the AFLS for Customer Engagement mobile app.
+Life Sciences Commercial (LSC) Workflow Management is a feature designed to automate business processes and guide users through their tasks with clear, step-by-step instructions. These workflows outline the journey of an object through various stages, helping users manage statuses, actions, and record permissions. The workflows are available both online and offline via the LSC for Customer Engagement mobile app.
 
 The key capabilities of the workflow management feature include:
 
@@ -36,7 +36,7 @@ The main components available for configuration are:
 
   - **Open Component**: Opens a lightning web component for the user to perform an action, such as a signature capture model.
 
-  - **Custom Action**: Calls a custom action, like opening an external URL or navigating to another AFLS component.
+  - **Custom Action**: Calls a custom action, like opening an external URL or navigating to another LSC component.
 
 - **Stage Objects**: This section lists the objects that have a workflow configured. Admins can associate validation and checklist scripts here.
 

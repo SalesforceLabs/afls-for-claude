@@ -1,8 +1,8 @@
-- Hello everyone, I'm Rebecca Wang, Product Manager for AFLS. Today, I'll walk you through the admin workflow for the admin **Segmentation** capability.
+- Hello everyone, I'm Rebecca Wang, Product Manager for LSC. Today, I'll walk you through the admin workflow for the admin **Segmentation** capability.
 
 - Segmentation is an **admin-only feature** that lets you assign or restrict the use of certain objects across a defined group of accounts. The goal is to streamline operations and ensure consistent alignment across functional modules.
 
-  - In AFLS, segmentation is built on the existing **Actionable List framework** --- so in this recording, when you hear segmentation or actionable list, they're actually the same concept.
+  - In Life Sciences Cloud (LSC), segmentation is built on the existing **Actionable List framework** --- so in this recording, when you hear segmentation or actionable list, they're actually the same concept.
 
   - And for 258, our first and only supported use case is **Sample Limit Assignments**, meaning that admins can define a segment of accounts and assign a sample limit template to that entire group, instead of account by account.
 
@@ -10,7 +10,7 @@
 
   - First is **segmentation creation**. Segmentation is built on the **Actionable List data model**, which has three main parts:
 
-    - **Actionable List Definition (ALD)**: this object represents the data source definition details associated with an actionable list built for AFLS workflows that can be used as segmentations.
+    - **Actionable List Definition (ALD)**: this object represents the data source definition details associated with an actionable list built for LSC workflows that can be used as segmentations.
 
     - **Actionable List (AL)**: this is the actual segmentation. The actionable list derives the **Type** from the associated Actionable list definition, which guarantees it flows correctly into downstream workflows.
 
@@ -20,7 +20,7 @@
 
 - After a segmentation is created, it needs to be tied to a business process. This is done through a flexible junction object called **Life Science Account Group Assignment**. This object acts as a **bridge** --- linking a segmentation to one or more entities. And within this junction entity:
 
-  - The **Assignment Reference Record field** connects to the specific AFLS use case, such as Provider Sample Limit.
+  - The **Assignment Reference Record field** connects to the specific LSC use case, such as Provider Sample Limit.
 
   - And in the future, as we will **expand segmentation into more workflows**, we will simply extend the Actionable List Type to include new use cases, and make sure the assignment logic is mapped correctly.
 
@@ -68,10 +68,10 @@
 
   - Then, just proceed with the same steps as standard Actionable List creation.
 
-- The important takeaway is: whichever path you choose, always remember to define the **Type** so the list is usable in AFLS workflows.
+- The important takeaway is: whichever path you choose, always remember to define the **Type** so the list is usable in LSC workflows.
 
-- Once segmentations are created, admins can apply them to sample limits. To do so, we go back to the AFLS sample limit console, and go to the sample limit jobs tab, and then initiate the new sample limit templates to account by segment.
+- Once segmentations are created, admins can apply them to sample limits. To do so, we go back to the LSC sample limit console, and go to the sample limit jobs tab, and then initiate the new sample limit templates to account by segment.
 
-- To summarize, the segmentation in AFLS reuses the existing industry AL framework. And segmentation provides admins with a structured way to group accounts and assign sample limits at scale.
+- To summarize, the segmentation in LSC reuses the existing industry AL framework. And segmentation provides admins with a structured way to group accounts and assign sample limits at scale.
 
 - That's all I have today for segmentation, thank you for watching.

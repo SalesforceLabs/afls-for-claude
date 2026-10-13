@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:searchresultactionconfig pages:1935-1937 -->
 # SearchResultActionConfig
 
-AFLS Overview                                                                                                 SearchResultActionConfig
+Life Sciences Cloud (LSC) Overview                                                                                                 SearchResultActionConfig
 
 
 
@@ -58,7 +58,7 @@ create(), delete(), describeSObjects(), query(), retrieve(), update(), upsert()
 
 <!-- page:1936 -->
 
-AFLS Overview                                                                                              SearchResultActionConfig
+LSC Overview                                                                                              SearchResultActionConfig
 
 
 
@@ -112,7 +112,7 @@ textarea
 
 <!-- page:1937 -->
 
-AFLS Overview                                                                                 SearchResultActionConfig
+LSC Overview                                                                                 SearchResultActionConfig
 
 
 

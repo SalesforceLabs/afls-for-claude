@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:assign-candidate-to-research-study-group-action pages:1871-1872 -->
 # Assign Candidate to Research Study Group Action
 
-AFLS Overview                                                                     Assign Candidate to Research Study Group Action
+Life Sciences Cloud (LSC) Overview                                                                     Assign Candidate to Research Study Group Action
 
 
 
@@ -27,7 +27,7 @@ This action is available in API version 61.0 and later.
 
 ## Special Access Rules
 
-The Assign Candidate to Research Study Group action is available in Enterprise and Unlimited Editions with AFLS and the
+The Assign Candidate to Research Study Group action is available in Enterprise and Unlimited Editions with LSC and the
 Participant Enrollment Add-On license. Additionally, the org must be enabled with Research Study Randomization.
 
 
@@ -55,7 +55,7 @@ group.
 
 <!-- page:1872 -->
 
-AFLS Overview                                                                 Assign Candidate to Research Study Group Action
+LSC Overview                                                                 Assign Candidate to Research Study Group Action
 
 
 

@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:standardobjectnameshare pages:1442-1442 -->
 # StandardObjectNameShare
 
-AFLS Overview                                                                                               StandardObjectNameShare
+Life Sciences Cloud (LSC) Overview                                                                                               StandardObjectNameShare
 
 
 

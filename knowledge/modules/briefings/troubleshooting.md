@@ -57,10 +57,10 @@ Running the scheduled flow multiple times per day creates duplicate records. The
 
 ## Diagnostic Checklist
 
-Run `/afls:diagnose-briefings` for an automated check, or manually verify:
+Run `/lsc:diagnose-briefings` for an automated check, or manually verify:
 
 1. ✅ Briefings toggle ON (PresentationContent accessible)
-2. ✅ 4 PSLs provisioned (Life Science Commercial, Health Cloud Starter, Agentforce for AFLS, Einstein Prompt Templates)
+2. ✅ 4 PSLs provisioned (Life Science Commercial, Health Cloud Starter, Agentforce for Life Sciences Cloud (LSC), Einstein Prompt Templates)
 3. ✅ Managed package `lsc4ce` installed
 4. ✅ Admin perm set with PermissionsStoriesAdmin = true + assigned
 5. ✅ User perm set with PermissionsStoriesUser = true + assigned

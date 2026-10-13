@@ -1,10 +1,10 @@
 ---
-description: View AFLS release notes by Salesforce release
+description: View Life Sciences Cloud (LSC) release notes by Salesforce release
 ---
 
 # Release Notes
 
-View AFLS release notes for a specific Salesforce release.
+View LSC release notes for a specific Salesforce release.
 
 ## Steps
 

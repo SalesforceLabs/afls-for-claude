@@ -39,7 +39,7 @@ medications, access to care, financial assistance, or remote monitoring.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or Life Sciences Cloud (LSC)
 
 
 Use the Life Sciences Program Management data model to define programs and manage relationships

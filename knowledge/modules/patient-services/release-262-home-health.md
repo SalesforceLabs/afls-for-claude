@@ -4,9 +4,9 @@ Presenter: Vishnu Preethi Gangarapu
 
 ## Overview
 
-In 262, a subset of Home Health features (from Health Cloud) has been enabled in AFLS for the **patient services** use case. This is specifically for the nurse ambassador program — connecting patients with nurses for home visits related to drug administration.
+In 262, a subset of Home Health features (from Health Cloud) has been enabled in Life Sciences Cloud (LSC) for the **patient services** use case. This is specifically for the nurse ambassador program — connecting patients with nurses for home visits related to drug administration.
 
-**Important limitations:** The entire Home Health feature set is NOT available in AFLS. Features like care management, med management, quotations, and home health agents are NOT enabled in 262.
+**Important limitations:** The entire Home Health feature set is NOT available in LSC. Features like care management, med management, quotations, and home health agents are NOT enabled in 262.
 
 ## Use Case: Nurse Ambassador Program
 

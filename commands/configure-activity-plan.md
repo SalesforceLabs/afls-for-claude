@@ -1,9 +1,9 @@
 ---
-description: Interactive wizard to configure and validate AFLS Activity Plan
+description: Interactive wizard to configure and validate Life Sciences Cloud (LSC) Activity Plan
 arguments: "[check-type]"
 ---
 
-# Configure AFLS Activity Plan
+# Configure LSC Activity Plan
 
 Interactive wizard to check and configure Activity Plans for web and mobile.
 
@@ -20,7 +20,7 @@ Follow these steps sequentially to validate and configure activity plans.
 First, check if connected to a Salesforce org:
 
 ```
-Use check_afls_setup to verify org connection
+Use check_lsc_setup to verify org connection
 ```
 
 If not connected, guide the user through authentication.
@@ -254,22 +254,22 @@ Based on findings, offer to fix issues directly using programmatic tools:
 
 ## Example Usage
 
-User: `/afls:configure-activity-plan`
+User: `/lsc:configure-activity-plan`
 > Run full activity plan configuration check
 
-User: `/afls:configure-activity-plan plans`
+User: `/lsc:configure-activity-plan plans`
 > Focus on activity plan and time period configuration
 
-User: `/afls:configure-activity-plan goals`
+User: `/lsc:configure-activity-plan goals`
 > Focus on provider activity goals and account targets
 
-User: `/afls:configure-activity-plan measures`
+User: `/lsc:configure-activity-plan measures`
 > Focus on goal measures and product goals
 
-User: `/afls:configure-activity-plan jobs`
+User: `/lsc:configure-activity-plan jobs`
 > Focus on batch job configuration and scheduling
 
-User: `/afls:configure-activity-plan mobile`
+User: `/lsc:configure-activity-plan mobile`
 > Focus on mobile-specific activity plan configuration
 
 ## Quick Validation Alternative
@@ -277,7 +277,7 @@ User: `/afls:configure-activity-plan mobile`
 For a faster automated check, suggest using the audit command:
 
 ```
-/afls:audit activity-plan-config-check
+/lsc:audit activity-plan-config-check
 ```
 
 This runs all activity plan-specific validation rules automatically.

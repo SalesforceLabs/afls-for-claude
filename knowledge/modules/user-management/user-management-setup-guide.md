@@ -1,8 +1,8 @@
-# AFLS User Management Setup Guide
+# Life Sciences Cloud (LSC) User Management Setup Guide
 
 ## Overview
 
-User management in AFLS involves layering multiple Salesforce licensing and access mechanisms to ensure reps, managers, and admins have the right permissions. The hierarchy is:
+User management in LSC involves layering multiple Salesforce licensing and access mechanisms to ensure reps, managers, and admins have the right permissions. The hierarchy is:
 
 ```
 Package License (org-level capacity)
@@ -12,15 +12,15 @@ Package License (org-level capacity)
                     └── User (assigned to roles and territories)
 ```
 
-Getting this wrong is one of the most common causes of "I can't see X" and "Feature Y isn't working" issues in AFLS implementations.
+Getting this wrong is one of the most common causes of "I can't see X" and "Feature Y isn't working" issues in LSC implementations.
 
 ---
 
-## AFLS Licensing Model
+## LSC Licensing Model
 
 ### Package Licenses
 
-Package licenses are consumed at the org level. Each active user with an AFLS-related PSL consumes one package license.
+Package licenses are consumed at the org level. Each active user with an LSC-related PSL consumes one package license.
 
 Check capacity with:
 ```sql
@@ -34,12 +34,12 @@ ORDER BY NamespacePrefix
 
 PSLs gate access to feature sets. A user must have the correct PSL before they can be assigned the corresponding permission set. PSLs have a total license count — if all are consumed, no more users can be assigned.
 
-Common AFLS PSLs:
+Common LSC PSLs:
 
 | DeveloperName | MasterLabel | Features Unlocked |
 |---------------|-------------|-------------------|
-| `LifeSciencesPsl` | AFLS | Core AFLS objects: Visit, ProviderVisit, ProviderAcctTerritoryInfo, etc. |
-| `LifeSciencesCLMPsl` | AFLS CLM | Intelligent Content / CLM (Presentation, PresentationPage, PresentationShare) |
+| `LifeSciencesPsl` | LSC | Core LSC objects: Visit, ProviderVisit, ProviderAcctTerritoryInfo, etc. |
+| `LifeSciencesCLMPsl` | LSC CLM | Intelligent Content / CLM (Presentation, PresentationPage, PresentationShare) |
 | `LifeSciencesSampleManagementPsl` | Life Sciences Sample Management | Sample Management (ProductDisbursement, InventoryOperation, ProductBatchItem) |
 | `HealthCloudPermissionSetLicense` | Health Cloud Permission Set License | Health Cloud foundation objects |
 | `IndustrySalesExcellencePsl` | Industry Sales Excellence | Activity Plans, Next Best, Segmentation |
@@ -58,12 +58,12 @@ ORDER BY DeveloperName
 
 Permission sets provide the actual object, field, and feature access. They must be assigned to users individually (or via permission set groups).
 
-Common AFLS Permission Sets:
+Common LSC Permission Sets:
 
 | Label | API Name / Namespace | What It Enables |
 |-------|---------------------|-----------------|
-| AFLS User | `lsc4ce__LifeSciencesCloudUser` | Core AFLS access — Visit, ProviderVisit, Account, Activity Plans |
-| AFLS Admin | `lsc4ce__LifeSciencesCloudAdmin` | Admin Console, trigger handlers, DB Schema management |
+| LSC User | `lsc4ce__LifeSciencesCloudUser` | Core LSC access — Visit, ProviderVisit, Account, Activity Plans |
+| LSC Admin | `lsc4ce__LifeSciencesCloudAdmin` | Admin Console, trigger handlers, DB Schema management |
 | Life Sciences CLM User | `lsc4ce__LifeSciencesCLMUser` | Presentation viewing and playback on mobile |
 | Life Sciences CLM Admin | `lsc4ce__LifeSciencesCLMAdmin` | Presentation upload, distribution, topic assignment |
 | Sample Management User | `lsc4ce__SampleManagementUser` | Sample disbursement, inventory, product requests |
@@ -88,19 +88,19 @@ ORDER BY Label
 
 | Role | Recommended Profile | Notes |
 |------|-------------------|-------|
-| Field Sales Rep | AFLS User (custom clone) | Custom profile cloned from standard; add AFLS page layouts and record types |
-| Key Account Manager | AFLS User (custom clone) | Same base; add KAM-specific page layouts |
-| Sales Manager | AFLS User (custom clone) | Add My Team access, activity plan admin |
-| Admin / Ops | System Administrator | Full access; add AFLS Admin permission sets |
+| Field Sales Rep | LSC User (custom clone) | Custom profile cloned from standard; add LSC page layouts and record types |
+| Key Account Manager | LSC User (custom clone) | Same base; add KAM-specific page layouts |
+| Sales Manager | LSC User (custom clone) | Add My Team access, activity plan admin |
+| Admin / Ops | System Administrator | Full access; add LSC Admin permission sets |
 | Integration User | Salesforce API Only | Minimal profile; add only needed permission sets |
 
-**Best Practice:** Clone the standard "AFLS User" profile and customize — never modify the managed profile directly.
+**Best Practice:** Clone the standard "LSC User" profile and customize — never modify the managed profile directly.
 
 ---
 
 ## Role Hierarchy Design
 
-The recommended role hierarchy for AFLS follows the territory structure:
+The recommended role hierarchy for LSC follows the territory structure:
 
 ```
 CEO / VP Sales
@@ -136,10 +136,10 @@ ORDER BY Name
 
 ## User Setup Checklist
 
-Follow this order when provisioning a new AFLS user:
+Follow this order when provisioning a new LSC user:
 
 ### 1. Create the User Record
-- Set Profile (custom clone of AFLS User)
+- Set Profile (custom clone of LSC User)
 - Set UserRole (matching their position in the hierarchy)
 - Set `IsActive = true`
 
@@ -181,7 +181,7 @@ Territory assignments are managed in Setup > Territory Models > [Model] > [Terri
 
 ### 5. Verify Access
 After setup, verify the user can:
-- Log in to the AFLS web app
+- Log in to the LSC web app
 - See accounts in their territory
 - Create visits (if applicable)
 - Access CLM presentations (if applicable)
@@ -222,7 +222,7 @@ After setup, verify the user can:
 **Cause:** Profile doesn't have mobile access, or metadata cache hasn't been generated for their profile.
 **Fix:**
 1. Verify the user's profile is included in the mobile metadata cache
-2. Regenerate cache: `/afls:generate-metadata-cache <profile-name>`
+2. Regenerate cache: `/lsc:generate-metadata-cache <profile-name>`
 3. Check DB Schema records include the profile
 
 ### "User sees wrong data / too much data"
@@ -294,7 +294,7 @@ LIMIT 200
 ## Best Practices
 
 1. **Assign PSLs before permission sets** — A permission set that requires a PSL will fail to assign if the PSL isn't assigned first
-2. **Clone profiles, don't modify managed** — Always clone the standard AFLS profile and customize the clone
+2. **Clone profiles, don't modify managed** — Always clone the standard LSC profile and customize the clone
 3. **Audit PSL capacity monthly** — Track used vs available PSLs to avoid hitting limits during onboarding
 4. **Match role hierarchy to territory hierarchy** — Keeps record visibility aligned with territory responsibility
 5. **Remove PSLs from deactivated users** — Deactivating a user does NOT free up the PSL; you must explicitly remove the PSL assignment

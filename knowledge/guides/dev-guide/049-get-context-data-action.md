@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:get-context-data-action pages:1876-1878 -->
 # Get Context Data Action
 
-AFLS Overview                                                                                             Get Context Data Action
+Life Sciences Cloud (LSC) Overview                                                                                             Get Context Data Action
 
 
 
@@ -57,7 +57,7 @@ JSON, XML
 
 <!-- page:1877 -->
 
-AFLS Overview                                                                             Get Context Data Action
+LSC Overview                                                                             Get Context Data Action
 
 
 
@@ -111,7 +111,7 @@ Sample Request
 
 <!-- page:1878 -->
 
-AFLS Overview                                                           Get Context Data Action
+LSC Overview                                                           Get Context Data Action
 
 
 

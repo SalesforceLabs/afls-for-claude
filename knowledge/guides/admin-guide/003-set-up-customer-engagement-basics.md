@@ -5,9 +5,9 @@
 
 
 
-Set Up AFLS for Customer Engagement Basics
+Set Up Life Sciences Cloud (LSC) for Customer Engagement Basics
 
-Complete tasks that impact your entire org before you install the AFLS for Customer
+Complete tasks that impact your entire org before you install the LSC for Customer
 Engagement managed package. Then install the managed package and complete post-installation tasks
 prior to setting up specific features.
 
@@ -17,7 +17,7 @@ prior to setting up specific features.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -31,24 +31,24 @@ your Home page. You can also create record types and page layouts for your healt
 (HCP) and healthcare organization (HCO) accounts.
 
 
-## Get Your Org Ready for the AFLS for Customer Engagement Package
+## Get Your Org Ready for the LSC for Customer Engagement Package
 
-Complete these tasks before you install the AFLS for Customer Engagement managed
+Complete these tasks before you install the LSC for Customer Engagement managed
 package in your org. The package installation process fails when you don’t complete these prerequisite
 tasks.
-Set Up Sales Territories for AFLS
+Set Up Sales Territories for LSC
 Create a territory type, create a territory model, then create a hierarchy of territories as you build the
 territory model. Activate the territory model, and then assign users to territories.
-Install the AFLS for Customer Engagement Package for Admin Users
-Install the AFLS for Customer Engagement managed package in your Salesforce org
+Install the LSC for Customer Engagement Package for Admin Users
+Install the LSC for Customer Engagement managed package in your Salesforce org
 before you set up Life Sciences Customer Engagement features. The package contains the Life
 Sciences Commercial app, which includes an Admin Console from where you can configure Customer
 Engagement features in one place.
-Create Custom Admin Profiles for AFLS Customer Engagement
+Create Custom Admin Profiles for LSC Customer Engagement
 Create custom profiles for business admins and mobile admins by cloning the system administrator
 profile. Then create users and assign them to the relevant profiles.
 Create Custom Standard User Profiles for Life Sciences Customer Engagement
 Create custom profiles for personas such as Field Sales Representative and Medical Science Liaison by
 cloning the Standard User profile.
-Assign AFLS for Customer Engagement Permission Sets
-To work with AFLS for Customer Engagement, users need the appropriate permission
+Assign LSC for Customer Engagement Permission Sets
+To work with LSC for Customer Engagement, users need the appropriate permission

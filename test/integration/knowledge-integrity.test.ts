@@ -59,18 +59,18 @@ function collectMdFiles(dir: string): string[] {
   return results;
 }
 
-/** Parse module names from the "AFLS4CE Modules (with Documentation)" table in CLAUDE.md. */
+/** Parse module names from the "LSC4CE Modules (with Documentation)" table in CLAUDE.md. */
 function parseModuleTable(): string[] {
   const lines = claudeMd.split('\n');
   const modules: string[] = [];
   let inTable = false;
 
   for (const line of lines) {
-    if (line.includes('AFLS4CE Modules (with Documentation)')) {
+    if (line.includes('LSC4CE Modules (with Documentation)')) {
       inTable = true;
       continue;
     }
-    if (inTable && line.startsWith('###') && !line.includes('AFLS4CE')) {
+    if (inTable && line.startsWith('###') && !line.includes('LSC4CE')) {
       break;
     }
     if (inTable) {
@@ -115,7 +115,7 @@ function parseCommandsTable(): string[] {
   let inTable = false;
 
   for (const line of lines) {
-    if (line.includes('### Commands (User-invoked with `/afls:command`)')) {
+    if (line.includes('### Commands (User-invoked with `/lsc:command`)')) {
       inTable = true;
       continue;
     }
@@ -123,8 +123,8 @@ function parseCommandsTable(): string[] {
       break;
     }
     if (inTable) {
-      // Rows like: | `/afls:setup-plugin` | ...
-      const match = line.match(/^\|\s*`\/afls:(.+?)`\s*\|/);
+      // Rows like: | `/lsc:setup-plugin` | ...
+      const match = line.match(/^\|\s*`\/lsc:(.+?)`\s*\|/);
       if (match) {
         commands.push(match[1]);
       }
@@ -157,9 +157,9 @@ const MODULE_NAME_TO_DIR: Record<string, string> = {
   'Key Account Management': 'key-account-management',
   'Segmentation': 'segmentation-admin-only',
   'Workflow Management': 'generic-workflow',
-  'Agentforce for AFLS': 'agentforce',
+  'Agentforce for LSC': 'agentforce',
   'Data Cloud/Singularity': 'data-cloud-singularity-and-tabnext-metrics',
-  'AFLS Apps': 'afls-apps',
+  'LSC Apps': 'lsc-apps',
   'Mobile Metadata Cache': 'mobile-metadata-cache',
   'Briefings (Daily Podcasts)': 'briefings',
 };

@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:generate-research-study-blocks-action pages:1874-1875 -->
 # Generate Research Study Blocks Action
 
-AFLS Overview                                                                                Generate Research Study Blocks Action
+Life Sciences Cloud (LSC) Overview                                                                                Generate Research Study Blocks Action
 
 
 
@@ -62,14 +62,14 @@ This action is available in API version 61.0 and later.
 
 <!-- page:1875 -->
 
-AFLS Overview                                                                              Generate Research Study Blocks Action
+LSC Overview                                                                              Generate Research Study Blocks Action
 
 
 
 
 ## Special Access Rules
 
-The Generate Research Study Blocks action is available in Enterprise and Unlimited Editions with AFLS and the Participant
+The Generate Research Study Blocks action is available in Enterprise and Unlimited Editions with LSC and the Participant
 Enrollment Add-On license. Additionally, the org must be enabled with Research Study Randomization.
 
 

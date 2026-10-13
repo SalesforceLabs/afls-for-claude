@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:assessmentconfiguration pages:1886-1888 -->
 # AssessmentConfiguration
 
-AFLS Overview                                                                                                 AssessmentConfiguration
+Life Sciences Cloud (LSC) Overview                                                                                                 AssessmentConfiguration
 
 
 
@@ -14,7 +14,7 @@ Represents a mapping from fields in external source systems to Salesforce target
 TimelineObjectDefinition
 Stores timeline configurations. This object is available in API version 55.0 and later.
 Customer Engagement Tooling API Objects
-These Tooling API objects are available for Customer Engagement for AFLS.
+These Tooling API objects are available for Customer Engagement for LSC.
 SearchableObjDataSyncInfo
 Represents information about the data synchronization for a search object, such as frequency of synchronization, status, and the
 date and time of the last synchronization. This object is available in API version 58.0 and later.
@@ -60,7 +60,7 @@ Create, Filter, Group, Restricted picklist, Sort, Update
 
 <!-- page:1887 -->
 
-AFLS Overview                                                                                  AssessmentConfiguration
+LSC Overview                                                                                  AssessmentConfiguration
 
 
 
@@ -112,7 +112,7 @@ Possible values are:
 
 <!-- page:1888 -->
 
-AFLS Overview                                                                                 AssessmentConfiguration
+LSC Overview                                                                                 AssessmentConfiguration
 
 
 

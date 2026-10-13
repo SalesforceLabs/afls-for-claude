@@ -9,7 +9,7 @@
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with Life Sciences Cloud (LSC), LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -52,13 +52,13 @@ for clients, partners, and professional services.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
 
-## Project Execution Best Practices for AFLS
+## Project Execution Best Practices for LSC
 
 Review project implementation best practices gathered by Salesforce from partners, clients, and
 professional services. Adopt these insights for your own implementation.
@@ -68,15 +68,15 @@ professional services. Adopt these insights for your own implementation.
 
 
 
-## Salesforce Platform Best Practices for AFLS
+## Salesforce Platform Best Practices for LSC
 
 Review Salesforce Platform best practices gathered by Salesforce from partners, clients, and
 professional services. Adopt these insights for your own implementation.
-Schema Management Best Practices for AFLS
+Schema Management Best Practices for LSC
 Review schema management best practices gathered by Salesforce from partners, clients, and
 professional services. Adopt these insights for your own implementation.
-Profile and Page Layout Best Practices for AFLS
-AFLS provides standard security profiles such as the System Administrator and the
+Profile and Page Layout Best Practices for LSC
+LSC provides standard security profiles such as the System Administrator and the
 Standard User profiles as a template to customize security profiles for your organization.
 Trigger Handler Best Practices during Data Migration
 Trigger handlers are important to maintain data sanity. However, keeping all trigger handlers enabled
@@ -84,7 +84,7 @@ during data migration can lead to slow performance or hit governor limits. Make 
 trigger handler documentation and understand the purpose of each trigger handler.
 
 
-Project Execution Best Practices for AFLS
+Project Execution Best Practices for LSC
 
 Review project implementation best practices gathered by Salesforce from partners, clients, and
 professional services. Adopt these insights for your own implementation.
@@ -95,7 +95,7 @@ professional services. Adopt these insights for your own implementation.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -114,7 +114,7 @@ regulations and standards. Some companies require heavy amounts of documentation
 compliance regulations.
 - Decide on your object naming and documentation standards before you start to implement any
 features.
--    Consider the AFLS release schedule and holidays when you plan the timeline for an
+-    Consider the LSC release schedule and holidays when you plan the timeline for an
 implementation project.
 -    Avoid development customizations as much as possible.This adds risks, extends timelines, and adds
 
@@ -133,7 +133,7 @@ Testing
 branch.
 -    Plan ahead to conduct integration tests well before the client UAT. Performing integration testing too
 close to UAT doesn't allow sufficient time to resolve any challenges that you encounter. Integration
-tests involve the AFLS mobile app and the AFLS org on the web. Increase
+tests involve the LSC mobile app and the LSC org on the web. Increase
 the API limits during Regression and UAT to avoid governor limit issues during testing.
 -    Conduct performance tests from within the customer network on a user's device from the start. This
 provides the best real experience for the customer to test from.
@@ -149,7 +149,7 @@ Support
 - Bandwidth, outdated browser versions, and network latency can degrade user experience.
 - Raise a case with the Salesforce support team as needed.
 
-Salesforce Platform Best Practices for AFLS
+Salesforce Platform Best Practices for LSC
 
 Review Salesforce Platform best practices gathered by Salesforce from partners, clients, and professional
 services. Adopt these insights for your own implementation.
@@ -160,7 +160,7 @@ services. Adopt these insights for your own implementation.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -249,7 +249,7 @@ Web Browser Considerations
 
 Use separate browser contexts when you access different Salesforce environments such as sandboxes or
 multiple production instances. Otherwise, cookies and session info can get mixed up and cause
-problems such as corruption issues with the organization and AFLS functionality. Examples
+problems such as corruption issues with the organization and LSC functionality. Examples
 of separate browser contexts include using different Chrome users/people, Firefox profiles, or browser
 extensions that create separate contexts.
 
@@ -258,7 +258,7 @@ window to separate from an org logged into a non-incognito/private window. Howev
 cookies when using multiple incognito/private windows for multiple org logins.
 
 
-Schema Management Best Practices for AFLS
+Schema Management Best Practices for LSC
 
 Review schema management best practices gathered by Salesforce from partners, clients, and
 professional services. Adopt these insights for your own implementation.
@@ -269,7 +269,7 @@ professional services. Adopt these insights for your own implementation.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -335,9 +335,9 @@ summary field.
 learn more, see Increase the maximum relationships allowed per object.
 
 
-Profile and Page Layout Best Practices for AFLS
+Profile and Page Layout Best Practices for LSC
 
-AFLS provides standard security profiles such as the System Administrator and the
+LSC provides standard security profiles such as the System Administrator and the
 Standard User profiles as a template to customize security profiles for your organization.
 
 
@@ -346,7 +346,7 @@ Standard User profiles as a template to customize security profiles for your org
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
@@ -385,14 +385,14 @@ Available in: Lightning Experience
 
 
 
-Available in: Enterprise and Unlimited Editions with AFLS, AFLS for
+Available in: Enterprise and Unlimited Editions with LSC, LSC for
 Customer Engagement Add-on license, and the Life Sciences Customer Engagement managed
 package.
 
 
-Bypass AFLS Trigger Handlers
+Bypass LSC Trigger Handlers
 
-There are two ways to bypass AFLS trigger handlers during data migration.
+There are two ways to bypass LSC trigger handlers during data migration.
 
 - Create a user with the Salesforce Integration license type. In the Permission Set License Assignments
 for the user, click Edit Assignments, and then grant the Salesforce API Integration permission set

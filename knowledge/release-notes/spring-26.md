@@ -1,8 +1,8 @@
-# Spring '26 Release Notes — AFLS
+# Spring '26 Release Notes — Life Sciences Cloud (LSC)
 
 ## Key Features
 
-### Agentforce for AFLS (GA)
+### Agentforce for LSC (GA)
 - Field Sales Agent now generally available
 - Pre-built topics and actions for common field rep workflows
 - Einstein Studio integration for custom agent configuration

@@ -22,7 +22,7 @@ Automation.
 
 
 
-Intelligent Document Reader for AFLS
+Intelligent Document Reader for Life Sciences Cloud (LSC)
 
 Use optical character recognition to automatically extract data with Amazon Textract using your AWS
 account. Specify the document type that can be associated with the document, upload the document,
@@ -33,7 +33,7 @@ To learn more, see Intelligent Document Reader.
 
 
 
-Life Events and Milestones in AFLS
+Life Events and Milestones in LSC
 
 With the Events and Milestones component, capture and track significant events in a patient’s life that
 may impact their healthcare.
@@ -45,7 +45,7 @@ may impact their healthcare.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS
+Available in: Enterprise and Unlimited Editions with LSC
 
 
 You can create custom life event types, activate or deactivate them, and make them unique. You also can

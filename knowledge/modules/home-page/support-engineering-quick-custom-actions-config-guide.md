@@ -6,7 +6,7 @@
 
 ## Overview
 
-This is the **canonical config reference** for Standard / Quick / Custom Actions in AFLS4CE — covers supported actions per location, labels, deletion procedure (via Tooling API), LWC component creation via Workbench Migration Deploy, action sorting, GoTo URI schemes, and four worked examples. Use this alongside `release-260-quick-custom-actions.md` (which covers the feature reveal).
+This is the **canonical config reference** for Standard / Quick / Custom Actions in LSC4CE — covers supported actions per location, labels, deletion procedure (via Tooling API), LWC component creation via Workbench Migration Deploy, action sorting, GoTo URI schemes, and four worked examples. Use this alongside `release-260-quick-custom-actions.md` (which covers the feature reveal).
 
 ## Supported Actions by Location
 
@@ -173,7 +173,7 @@ For an **Inline** Custom Action that opens an LWC modal:
 
 ### "URI scheme works on simulator but not on iPad"
 1. Verify the app for that scheme is installed on the device
-2. Check iOS allowed-URL-schemes config in the AFLS4CE app's Info.plist (may be missing)
+2. Check iOS allowed-URL-schemes config in the LSC4CE app's Info.plist (may be missing)
 3. Test the scheme outside Salesforce first (Notes app → tap link)
 
 ## Reference

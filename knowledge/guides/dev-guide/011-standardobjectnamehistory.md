@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:standardobjectnamehistory pages:1438-1439 -->
 # StandardObjectNameHistory
 
-AFLS Overview                                                                                               StandardObjectNameHistory
+Life Sciences Cloud (LSC) Overview                                                                                               StandardObjectNameHistory
 
 
 
@@ -56,7 +56,7 @@ version information, see the documentation for the standard object.
 
 <!-- page:1439 -->
 
-AFLS Overview                                                                                           StandardObjectNameHistory
+LSC Overview                                                                                           StandardObjectNameHistory
 
 
 

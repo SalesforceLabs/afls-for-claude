@@ -2,7 +2,7 @@
 
 ## Overview
 
-Medical Inquiries (also called Medical Information Requests) in AFLS enable field reps to capture and route medical questions from healthcare professionals (HCPs) to the Medical Affairs or Medical Information teams. This ensures compliance with regulatory requirements that prevent field reps from providing off-label or unsolicited medical information.
+Medical Inquiries (also called Medical Information Requests) in Life Sciences Cloud (LSC) enable field reps to capture and route medical questions from healthcare professionals (HCPs) to the Medical Affairs or Medical Information teams. This ensures compliance with regulatory requirements that prevent field reps from providing off-label or unsolicited medical information.
 
 ## Key Concepts
 

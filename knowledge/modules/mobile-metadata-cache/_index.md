@@ -1,6 +1,6 @@
 # Mobile Metadata Cache
 
-The Mobile Metadata Cache (also known as DB Schema or Object Metadata Cache) is a critical component for AFLS Mobile (iPad) app functionality. It defines which objects and fields are available for offline sync and determines the mobile app's data schema.
+The Mobile Metadata Cache (also known as DB Schema or Object Metadata Cache) is a critical component for Life Sciences Cloud (LSC) Mobile (iPad) app functionality. It defines which objects and fields are available for offline sync and determines the mobile app's data schema.
 
 ## Key Concepts
 
@@ -44,6 +44,6 @@ This is the UI-based approach for managing mobile metadata cache.
 - [Idle Background Sync](./release-262-idle-background-sync.md)
 - [LMR Offline](./release-262-lmr-offline.md)
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 - [Mobile Sync Architecture](./support-engineering-mobile-sync.md) — end-to-end sync flow, transaction lifecycle, six sync types, metadata cache settings, troubleshooting playbook

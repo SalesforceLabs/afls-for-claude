@@ -14,7 +14,7 @@ export function renderImportSpa(token: string, targetOrg: string, sourceOrg: str
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AFLS Config Import — ${escapeHtml(sourceOrg)} → ${escapeHtml(targetOrg)}</title>
+<title>LSC Config Import — ${escapeHtml(sourceOrg)} → ${escapeHtml(targetOrg)}</title>
 <style>
   :root { --bg:#14161c; --panel:#1c1f27; --panel2:#232733; --fg:#e6e6e6; --dim:#8b93a7;
           --line:#2a2f3a; --new:#7cc4a4; --chg:#e0b25a; --id:#5a6072; --tgt:#a06a9a;
@@ -65,7 +65,7 @@ export function renderImportSpa(token: string, targetOrg: string, sourceOrg: str
 </head>
 <body>
 <header>
-  <h1>AFLS Configuration Import</h1>
+  <h1>LSC Configuration Import</h1>
   <div class="sub">Source snapshot <b>${escapeHtml(sourceOrg)}</b> <span class="arrow">→</span> writes into target org <b>${escapeHtml(targetOrg)}</b> · create + update-only (safe) · target is auto-backed-up before apply</div>
   <div class="legend">Each field reads <span class="from">current in ${escapeHtml(targetOrg)}</span> <span class="arrow">→</span> <span class="to">value from ${escapeHtml(sourceOrg)} that will be applied</span>. &nbsp;<b>NEW</b> = create in ${escapeHtml(targetOrg)}; &nbsp;<b>CHANGED</b> = update ${escapeHtml(targetOrg)}.</div>
 </header>
@@ -201,7 +201,7 @@ document.getElementById("applyBtn").onclick=async ()=>{
   const addLog=(m)=>{ log.textContent+=m+"\\n"; log.scrollTop=log.scrollHeight; };
 
   const resp=await fetch("/apply?t="+encodeURIComponent(CFG.token),{
-    method:"POST", headers:{"content-type":"application/json","x-afls-token":CFG.token},
+    method:"POST", headers:{"content-type":"application/json","x-lsc-token":CFG.token},
     body:JSON.stringify({selection})
   });
   const reader=resp.body.getReader(); const dec=new TextDecoder(); let buf="";

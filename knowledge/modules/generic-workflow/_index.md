@@ -14,6 +14,6 @@ Generic Workflows is a configuration-driven system that controls what users can 
 
 - [workflow-mgmt-demo-talk-track](./workflow-mgmt-demo-talk-track.md)
 
-## Support Engineering Training (AFLS4CE Value Chain)
+## Support Engineering Training (LSC4CE Value Chain)
 
 - [support-engineering-generic-workflow](./support-engineering-generic-workflow.md) — May 5, 2026 session. Full 8-entity data model with ASCII tree, 6-step admin config, runtime execution order (page load + action click), the critical two-layer CRUD check pattern, conditions / priority resolution worked example, multi-level child operations setup, 7 troubleshooting patterns.

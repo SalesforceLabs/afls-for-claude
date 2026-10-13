@@ -2,7 +2,7 @@ import { describe, it, expect, beforeAll, afterAll } from "vitest";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 
 /**
- * Tool schema tests for the AFLS-for-Claude MCP server.
+ * Tool schema tests for the LSC-for-Claude MCP server.
  *
  * Strategy: Spy on McpServer.prototype.tool to capture every registration
  * call made by src/index.ts at import time. This gives us access to each
@@ -120,7 +120,7 @@ describe("tool-schemas", () => {
     it("input schemas are either undefined (no params) or an object with string keys", () => {
       for (const tool of capturedTools) {
         if (tool.inputSchema === undefined) {
-          // Tool takes no parameters — valid (e.g., list_afls_modules)
+          // Tool takes no parameters — valid (e.g., list_lsc_modules)
           continue;
         }
 
@@ -154,7 +154,7 @@ describe("tool-schemas", () => {
       for (const tool of capturedTools) {
         if (tool.inputSchema === undefined) continue;
         // Empty schema {} is valid — it means the tool takes no parameters.
-        // This is the MCP SDK convention (e.g., list_afls_modules passes {}).
+        // This is the MCP SDK convention (e.g., list_lsc_modules passes {}).
         const keys = Object.keys(tool.inputSchema);
         if (keys.length === 0) continue;
 
@@ -269,8 +269,8 @@ describe("tool-schemas", () => {
       // Most tools that accept parameters should have at least one required field.
       // Track exceptions here if any legitimately have all-optional params.
       const allOptionalAllowed = new Set([
-        "search_afls_knowledge", // maxResults is optional, query is required — should pass
-        "list_afls_actions",     // filters are optional
+        "search_lsc_knowledge", // maxResults is optional, query is required — should pass
+        "list_lsc_actions",     // filters are optional
         "list_trigger_handlers", // objectName filter is optional
         "list_admin_settings",  // category filter may be optional
         "list_db_schema",       // no required params

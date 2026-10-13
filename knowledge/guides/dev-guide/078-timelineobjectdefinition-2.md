@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:timelineobjectdefinition-2 pages:1965-1966 -->
 # TimelineObjectDefinition
 
-AFLS Overview                                                                                                  TimelineObjectDefinition
+Life Sciences Cloud (LSC) Overview                                                                                                  TimelineObjectDefinition
 
 
 
@@ -69,7 +69,7 @@ TimelineObjectDefinition components are available in API version 55.0 and later.
 
 <!-- page:1966 -->
 
-AFLS Overview                                                                                                                                                                                                                                                           TimelineObjectDefinition
+LSC Overview                                                                                                                                                                                                                                                           TimelineObjectDefinition
 
 
 

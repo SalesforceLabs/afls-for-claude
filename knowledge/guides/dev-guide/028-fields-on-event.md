@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:fields-on-event pages:1470-1471 -->
 # Fields on Event
 
-AFLS Overview                                                                                                                Fields on Event
+Life Sciences Cloud (LSC) Overview                                                                                                                Fields on Event
 
 
 
@@ -36,7 +36,7 @@ Object Reference for the Salesforce Platform: ContactPointAddress
 
 ## Fields on Event
 
-AFLS fields extend the standard Event object to represent an event in the calendar. In the user interface, event and task
+LSC fields extend the standard Event object to represent an event in the calendar. In the user interface, event and task
 records are collectively referred to as activities.
 
 
@@ -63,7 +63,7 @@ dateTime
 
 <!-- page:1471 -->
 
-AFLS Overview                                                                                               Fields on Event
+LSC Overview                                                                                               Fields on Event
 
 
 

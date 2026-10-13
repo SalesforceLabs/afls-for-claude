@@ -1,12 +1,12 @@
 # Consent Management — Support Engineering Training
 
-**Session:** AFLS4CE Value Chain Training — Jun 2026
+**Session:** LSC4CE Value Chain Training — Jun 2026
 **Audience:** Support engineers
 **Source:** Engineering training series (Consent Management deck)
 
 ## Overview
 
-Consent Management in AFLS4CE captures and stores **HCP / HCO communication consents** — opt-in/opt-out, channel preferences, signature/attachment proof — with strict territory- and account-share-based access. The feature uses the **LS Core PSL** (Permission Set License) and is configured via a Consent tab + custom LWC dropped on the account page. The cardinal rule: consent records must be **shared** in the Salesforce sense for the field rep to see them — territory edit access alone is not enough.
+Consent Management in LSC4CE captures and stores **HCP / HCO communication consents** — opt-in/opt-out, channel preferences, signature/attachment proof — with strict territory- and account-share-based access. The feature uses the **LS Core PSL** (Permission Set License) and is configured via a Consent tab + custom LWC dropped on the account page. The cardinal rule: consent records must be **shared** in the Salesforce sense for the field rep to see them — territory edit access alone is not enough.
 
 ## Setup
 

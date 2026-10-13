@@ -44,7 +44,7 @@ Managed Package Runtime if this setting is not already disabled.
 
 
 
-Assessments and Surveys in AFLS
+Assessments and Surveys in Life Sciences Cloud (LSC)
 
 Improve quality of care by gathering information that helps you manage your patients’ or members’
 health more efficiently. Whether it’s an industry standard screener or a member feedback survey, you

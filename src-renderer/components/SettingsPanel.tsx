@@ -47,7 +47,7 @@ export default function SettingsPanel({
     setOrgsLoading(true);
     setOrgsError("");
     try {
-      const result = await window.aflsApi.listSfOrgs();
+      const result = await window.lscApi.listSfOrgs();
       setOrgs(result.orgs || []);
       if (result.error) setOrgsError(result.error);
     } catch {
@@ -58,7 +58,7 @@ export default function SettingsPanel({
   }, []);
 
   useEffect(() => {
-    window.aflsApi.getSettings().then((s) => {
+    window.lscApi.getSettings().then((s) => {
       if (s.providerType) setProviderType(s.providerType);
       setModel(s.model || "claude-sonnet-5");
       if (s.sfTargetOrg) setSelectedOrg(s.sfTargetOrg);
@@ -69,18 +69,18 @@ export default function SettingsPanel({
   const handleOrgChange = async (value: string) => {
     setSelectedOrg(value);
     if (value) {
-      await window.aflsApi.setSfOrg(value);
+      await window.lscApi.setSfOrg(value);
     }
   };
 
   const handleLogin = async () => {
     const instanceUrl = isSandbox ? "https://test.salesforce.com" : undefined;
-    await window.aflsApi.loginSfOrg(loginAlias || undefined, instanceUrl);
+    await window.lscApi.loginSfOrg(loginAlias || undefined, instanceUrl);
     setLoginStarted(true);
   };
 
   const handleSave = async () => {
-    await window.aflsApi.saveSettings({ model });
+    await window.lscApi.saveSettings({ model });
     onClose();
   };
 

@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:store-hl7-v2-3-messages-in-salesforce-standard-objects pages:1588-1605 -->
 # Store HL7 v2.3 Messages in Salesforce Standard Objects
 
-AFLS Overview                                                            Store HL7 v2.3 Messages in Salesforce Standard Objects
+Life Sciences Cloud (LSC) Overview                                                            Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -63,7 +63,7 @@ These messages can be stored in Salesforce by mapping their constituent segments
 
 <!-- page:1589 -->
 
-AFLS Overview                                                    Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                    Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -118,7 +118,7 @@ DiagnosticSummary, and PatientMEdicalProcedure objects in Salesforce.
 
 <!-- page:1590 -->
 
-AFLS Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -177,7 +177,7 @@ AL1.5 - Allergy Reaction         PatientHealthReaction Lookup: CodeSetBundle    
 
 <!-- page:1591 -->
 
-AFLS Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -237,7 +237,7 @@ Request.RequesterId              Account, Asset
 
 <!-- page:1592 -->
 
-AFLS Overview                                                        Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                        Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -297,7 +297,7 @@ OBX.2 - Value Type              CareObservation.ObservedValueType Picklist      
 
 <!-- page:1593 -->
 
-AFLS Overview                                                 Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                 Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -349,7 +349,7 @@ Component.
 
 <!-- page:1594 -->
 
-AFLS Overview                                                      Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                      Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -401,7 +401,7 @@ Observation
 
 <!-- page:1595 -->
 
-AFLS Overview                                                        Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                        Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -463,7 +463,7 @@ IdentifierId
 
 <!-- page:1596 -->
 
-AFLS Overview                                                          Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                          Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -524,7 +524,7 @@ patient’s account record using
 
 <!-- page:1597 -->
 
-AFLS Overview                                                 Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                 Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -583,7 +583,7 @@ patient is represented as Contact
 
 <!-- page:1598 -->
 
-AFLS Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -647,7 +647,7 @@ AdmissionIdentifierId
 
 <!-- page:1599 -->
 
-AFLS Overview                                            Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                            Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -706,7 +706,7 @@ records that reference the
 
 <!-- page:1600 -->
 
-AFLS Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -770,7 +770,7 @@ Reason.ReasonCodeId
 
 <!-- page:1601 -->
 
-AFLS Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -832,7 +832,7 @@ Immunization record using their
 
 <!-- page:1602 -->
 
-AFLS Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -895,7 +895,7 @@ The Pharmacy Encoded Order Segment (RXE) HL7 segment maps primarily to the Medic
 
 <!-- page:1603 -->
 
-AFLS Overview                                                          Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                          Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -959,7 +959,7 @@ Salesforce Standard objects support the following data types defined in HL7 v2.3
 
 <!-- page:1604 -->
 
-AFLS Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 
@@ -1027,7 +1027,7 @@ Bundle
 
 <!-- page:1605 -->
 
-AFLS Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
+LSC Overview                                                         Store HL7 v2.3 Messages in Salesforce Standard Objects
 
 
 

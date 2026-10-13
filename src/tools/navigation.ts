@@ -51,7 +51,7 @@ export function register(server: McpServer) {
             content: [
               {
                 type: "text",
-                text: `# UISchema Category Not Found\n\nNo "UISchema" category in Admin Console. Available categories: ${available}\n\nEnsure AFLS is installed and the Mobile UI Settings feature is enabled.`,
+                text: `# UISchema Category Not Found\n\nNo "UISchema" category in Admin Console. Available categories: ${available}\n\nEnsure LSC is installed and the Mobile UI Settings feature is enabled.`,
               },
             ],
           };
@@ -190,7 +190,7 @@ export function register(server: McpServer) {
   // Tool: Add Navigation Tab
   server.tool(
     "add_navigation_tab",
-    "Add a new navigation tab to AFLS Mobile via Admin Console > Mobile > UI Settings. Creates a LifeSciConfigRecord of type Tab with field values and optional profile assignments.",
+    "Add a new navigation tab to LSC Mobile via Admin Console > Mobile > UI Settings. Creates a LifeSciConfigRecord of type Tab with field values and optional profile assignments.",
     {
       label: z
         .string()
@@ -244,7 +244,7 @@ export function register(server: McpServer) {
             content: [
               {
                 type: "text",
-                text: `# UISchema Category Not Found\n\nNo "UISchema" category in Admin Console. Available categories: ${available}\n\nEnsure AFLS is installed and the Mobile UI Settings feature is enabled.`,
+                text: `# UISchema Category Not Found\n\nNo "UISchema" category in Admin Console. Available categories: ${available}\n\nEnsure LSC is installed and the Mobile UI Settings feature is enabled.`,
               },
             ],
           };

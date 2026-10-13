@@ -27,4 +27,4 @@ In the Presentation Player menu: **Inquiry** captures a Medical Inquiry; **Surve
 
 ## Related
 
-Quick action setup in general: afls-quick-actions-configuration skill.
+Quick action setup in general: lsc-quick-actions-configuration skill.

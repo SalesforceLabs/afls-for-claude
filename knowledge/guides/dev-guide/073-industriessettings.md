@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:industriessettings pages:1950-1952 -->
 # IndustriesSettings
 
-AFLS Overview                                                                                                        IndustriesSettings
+Life Sciences Cloud (LSC) Overview                                                                                                        IndustriesSettings
 
 
 
@@ -24,7 +24,7 @@ summary of the data.
 
 ## IndustriesSettings
 
-Represents settings for AFLS.
+Represents settings for LSC.
 In the package manifest, all organization settings metadata types are accessed using the Settings name. See Settings for details.
 
 
@@ -43,11 +43,11 @@ IndustriesSettings are stored in a single file named Industries.settings in the 
 
 ## Version
 
-The settings for AFLS are available in API version 61.0 and later.
+The settings for LSC are available in API version 61.0 and later.
 
 
 
-## Fields for AFLS
+## Fields for LSC
 
 Field Name                                           Field         Description
 Type
@@ -64,7 +64,7 @@ enableCarePlansPreference                            boolean       Indicates whe
 
 <!-- page:1951 -->
 
-AFLS Overview                                                                                                  IndustriesSettings
+LSC Overview                                                                                                  IndustriesSettings
 
 
 
@@ -124,7 +124,7 @@ managing clinical trial or other sites in the life sciences industry.
 
 <!-- page:1952 -->
 
-AFLS Overview                                                                                    IndustriesSettings
+LSC Overview                                                                                    IndustriesSettings
 
 
 

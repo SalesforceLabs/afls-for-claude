@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:caresystemfieldmapping pages:1906-1909 -->
 # CareSystemFieldMapping
 
-AFLS Overview                                                                                            CareSystemFieldMapping
+Life Sciences Cloud (LSC) Overview                                                                                            CareSystemFieldMapping
 
 
 
@@ -63,7 +63,7 @@ Filter, Group, Nillable, Sort
 
 <!-- page:1907 -->
 
-AFLS Overview                                                                                 CareSystemFieldMapping
+LSC Overview                                                                                 CareSystemFieldMapping
 
 
 
@@ -114,7 +114,7 @@ Possible values are:
 
 <!-- page:1908 -->
 
-AFLS Overview                                                                                 CareSystemFieldMapping
+LSC Overview                                                                                 CareSystemFieldMapping
 
 
 
@@ -162,7 +162,7 @@ limit protects performance.
 
 <!-- page:1909 -->
 
-AFLS Overview                                                                                 CareSystemFieldMapping
+LSC Overview                                                                                 CareSystemFieldMapping
 
 
 

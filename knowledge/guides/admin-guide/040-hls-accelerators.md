@@ -10,7 +10,7 @@
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or Life Sciences Cloud (LSC)
 
 
 USER PERMISSIONS NEEDED
@@ -57,4 +57,4 @@ overall implementation efforts.
 
 Available in: Lightning Experience with OmniStudio
 
-Available in: Enterprise and Unlimited Editions with Health Cloud or AFLS
+Available in: Enterprise and Unlimited Editions with Health Cloud or LSC

@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:process-criteria-matching-response pages:1881-1882 -->
 # Process Criteria Matching Response
 
-AFLS Overview                                                                                  Process Criteria Matching Response
+Life Sciences Cloud (LSC) Overview                                                                                  Process Criteria Matching Response
 
 
 
@@ -24,7 +24,7 @@ This action is available in API version 62.0 and later.
 
 ## Special Access Rules
 
-The Assign Candidate to Research Study Group action is available in Enterprise and Unlimited Editions with AFLS and the
+The Assign Candidate to Research Study Group action is available in Enterprise and Unlimited Editions with LSC and the
 Participant Enrollment Add-On license. Additionally, the org must be enabled with Research Study Randomization.
 
 
@@ -57,7 +57,7 @@ GPT Response of PromptTemplate Invocable action will be input to this action.
 
 <!-- page:1882 -->
 
-AFLS Overview                                                          Process Criteria Matching Response
+LSC Overview                                                          Process Criteria Matching Response
 
 
 

@@ -1,6 +1,6 @@
 # Briefings (Daily Podcasts) Configuration Validation Rules
 # =========================================================
-# Rules for validating Briefings setup in an AFLS org.
+# Rules for validating Briefings setup in an LSC org.
 # Covers toggle, permissions, flows, content definitions, DB Schema, and mobile cache.
 
 schema_version: "1.0"
@@ -342,6 +342,6 @@ rules:
     resolution:
       steps:
         - "Verify the user's permission set grants read access to PresentationContent"
-        - "The base AFLS permission sets (Commercial Admin, Field Sales Rep) grant this by default"
+        - "The base LSC permission sets (Commercial Admin, Field Sales Rep) grant this by default"
         - "If using custom permission sets, add PresentationContent read access"
     tags: [briefings, permissions, object-access]

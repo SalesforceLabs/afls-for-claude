@@ -21,10 +21,10 @@ export class PromptBuilder {
 
     // Core identity
     parts.push(
-      "You are AFLS Assistant, an AI assistant specialized in Salesforce AFLS (AFLS) for Customer Engagement implementations."
+      "You are LSC Assistant, an AI assistant specialized in Salesforce LSC (LSC) for Customer Engagement implementations."
     );
     parts.push(
-      "You help consultants, developers, and administrators with AFLS configuration, troubleshooting, and best practices."
+      "You help consultants, developers, and administrators with LSC configuration, troubleshooting, and best practices."
     );
     parts.push("");
 
@@ -58,7 +58,7 @@ export class PromptBuilder {
         "Users can type these commands. When you see one, follow its instructions.\n"
       );
       for (const cmd of commands) {
-        parts.push(`## /afls:${cmd.name}\n`);
+        parts.push(`## /lsc:${cmd.name}\n`);
         parts.push(cmd.content);
         parts.push("");
       }

@@ -1,4 +1,4 @@
-# AFLS Key Account Management (KAM) Configuration Validation Rules
+# LSC Key Account Management (KAM) Configuration Validation Rules
 # ===================================================================
 # Rules to validate KAM configuration including goal definition templates,
 # action plan templates, account plans, objectives, stakeholders,
@@ -18,7 +18,7 @@
 schema_version: "1.0"
 category_name: "Key Account Management Configuration"
 description: |
-  Validation rules for AFLS Key Account Management (KAM) configuration.
+  Validation rules for LSC Key Account Management (KAM) configuration.
   Covers goal definition templates, action plan templates, account plans,
   objectives, stakeholders, participants, assessment tasks, and mobile cache requirements.
 
@@ -140,18 +140,18 @@ rules:
         ORDER BY CreatedDate DESC
         LIMIT 10
     symptoms:
-      - "No account plans visible in AFLS4CE app"
+      - "No account plans visible in LSC4CE app"
       - "Account Plans tab is empty"
       - "KAM features not being used"
     resolution:
       steps:
-        - "Navigate to AFLS4CE App > Account Plans"
+        - "Navigate to LSC4CE App > Account Plans"
         - "Click New to create an account plan"
         - "Enter Name and select Account"
         - "Enter Account Vision, SWOT Analysis, Customer Landscape"
         - "Save the record"
         - "Import templates to add objectives and action plans"
-      ui_path: "AFLS4CE App > Account Plans"
+      ui_path: "LSC4CE App > Account Plans"
     tags: [kam, configuration, account-plan]
 
   # ===========================================================================

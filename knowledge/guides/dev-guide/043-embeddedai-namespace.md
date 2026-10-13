@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:embeddedai-namespace pages:1854-1858 -->
 # embeddedai Namespace
 
-AFLS Overview                                                                                             embeddedai Namespace
+Life Sciences Cloud (LSC) Overview                                                                                             embeddedai Namespace
 
 
 
@@ -56,7 +56,7 @@ Initializes the ApexMap class.
 
 <!-- page:1855 -->
 
-AFLS Overview                                                                                         embeddedai Namespace
+LSC Overview                                                                                         embeddedai Namespace
 
 
 Signature
@@ -124,7 +124,7 @@ Returns a string representation of the ApexMap object.
 
 <!-- page:1856 -->
 
-AFLS Overview                                                                                               embeddedai Namespace
+LSC Overview                                                                                               embeddedai Namespace
 
 
 toString()
@@ -183,7 +183,7 @@ data. This constructor represents a structured record and its relationships for 
 
 <!-- page:1857 -->
 
-AFLS Overview                                                                                             embeddedai Namespace
+LSC Overview                                                                                             embeddedai Namespace
 
 
 
@@ -247,7 +247,7 @@ Stores the type of the object.
 
 <!-- page:1858 -->
 
-AFLS Overview                                                                                           embeddedai Namespace
+LSC Overview                                                                                           embeddedai Namespace
 
 
 

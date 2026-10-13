@@ -100,7 +100,7 @@ describe("auth.ts", () => {
       const status = await checkSetupStatus();
       expect(status.setupComplete).toBe(true);
       expect(status.nextStep).toBe("ready");
-      expect(getTargetOrg()).toBe("my-afls-org");
+      expect(getTargetOrg()).toBe("my-lsc-org");
     });
 
     it("returns select_default_org when multiple orgs and no default", async () => {
@@ -127,7 +127,7 @@ describe("auth.ts", () => {
     });
 
     it("returns ready when target org already set", async () => {
-      setTargetOrg("my-afls-org");
+      setTargetOrg("my-lsc-org");
       vi.mocked(isSfCliInstalled).mockResolvedValue(true);
       vi.mocked(getSfCliVersion).mockResolvedValue({
         success: true,
@@ -240,7 +240,7 @@ describe("auth.ts", () => {
   // ==========================================================================
   describe("validateOrgConnection()", () => {
     it("returns valid when target org is set", async () => {
-      setTargetOrg("my-afls-org");
+      setTargetOrg("my-lsc-org");
       vi.mocked(isSfCliInstalled).mockResolvedValue(true);
       vi.mocked(getSfCliVersion).mockResolvedValue({
         success: true,
@@ -253,7 +253,7 @@ describe("auth.ts", () => {
 
       const result = await validateOrgConnection();
       expect(result.valid).toBe(true);
-      expect(result.targetOrg).toBe("my-afls-org");
+      expect(result.targetOrg).toBe("my-lsc-org");
     });
 
     it("returns error with available orgs when no target selected", async () => {
@@ -300,7 +300,7 @@ describe("auth.ts", () => {
   describe("formatOrgList()", () => {
     it("formats org list with alias, username, and instance URL", () => {
       const output = formatOrgList([MOCK_ORG]);
-      expect(output).toContain("**my-afls-org**");
+      expect(output).toContain("**my-lsc-org**");
       expect(output).toContain("admin@example.com");
       expect(output).toContain("example.my.salesforce.com");
     });

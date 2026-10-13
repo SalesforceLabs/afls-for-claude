@@ -10,9 +10,9 @@ import type { ConfigSnapshot } from "./types.js";
 import { collectConfig } from "./collect.js";
 import type { ExportCategory } from "./types.js";
 
-/** Resolve the exports directory (override with AFLS_EXPORTS_DIR; else <cwd>/exports). */
+/** Resolve the exports directory (override with LSC_EXPORTS_DIR; else <cwd>/exports). */
 export function exportsDir(): string {
-  return process.env.AFLS_EXPORTS_DIR || path.resolve(process.cwd(), "exports");
+  return process.env.LSC_EXPORTS_DIR || path.resolve(process.cwd(), "exports");
 }
 
 async function ensureExportsDir(): Promise<string> {

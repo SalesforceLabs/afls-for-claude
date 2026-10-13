@@ -16,7 +16,7 @@ completion of a study.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with Life Sciences Cloud (LSC) or Health Cloud
 
 
 Study managers who are part of the research study sponsor's organization can get a list of sites and
@@ -177,7 +177,7 @@ The Site Management data model lays the foundation for the Site Management featu
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Site Management
@@ -481,7 +481,7 @@ org.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 To make the search results significant, enter values in the Participates in Research Study field on the
@@ -510,7 +510,7 @@ the Salesforce org.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -540,7 +540,7 @@ Configure site investigators as person accounts.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -565,7 +565,7 @@ Types.
 
 ## See Also
 
-Salesforce Help: Enable Person Accounts for Use in AFLS
+Salesforce Help: Enable Person Accounts for Use in LSC
 
 
 Assign Permission Set Licenses
@@ -580,7 +580,7 @@ features.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -635,7 +635,7 @@ Permission Sets column.
 
 ## See Also
 
-Salesforce Help: Assign Permission Sets for AFLS
+Salesforce Help: Assign Permission Sets for LSC
 
 
 Link a Contact to Multiple Accounts
@@ -649,7 +649,7 @@ investigators, specifically if an investigator is connected to several sites.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -683,7 +683,7 @@ With criteria-based search and filter, users can search for sites and investigat
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -718,7 +718,7 @@ relevant sites and investigators.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -761,7 +761,7 @@ transforms the data across the required objects and aggregates them into your se
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -817,7 +817,7 @@ the Site Selection Assistance topic.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -880,7 +880,7 @@ codeset, configure the object sharing rules feature on the Code Set Bundle objec
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -926,7 +926,7 @@ type the keywords, making the search faster.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -971,7 +971,7 @@ generated with their own tools.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:870 -->
 
@@ -1011,7 +1011,7 @@ for conducting a specific research study in the future.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1055,7 +1055,7 @@ functionalities in Site Management.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1069,7 +1069,7 @@ To install the Omnistudio package:                   Omnistudio Admin
 
 ## See Also
 
-Salesforce Help: Omnistudio for AFLS
+Salesforce Help: Omnistudio for LSC
 
 
 Enable Discovery Framework for Site Management
@@ -1084,7 +1084,7 @@ gets accurate results for your search.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1129,7 +1129,7 @@ Integration Procedures, and Omnistudio Data Mappers.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1164,7 +1164,7 @@ objects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1194,7 +1194,7 @@ of questions repeatedly.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1250,7 +1250,7 @@ permission set to the users.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1311,7 +1311,7 @@ each option in the questionnaire.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1359,7 +1359,7 @@ SiteManagementAssessmentDataVisualization Flexcard to the Research Study page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1401,7 +1401,7 @@ Set up Experience Cloud for users to configure site and investigator assessments
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:877 -->
 
@@ -1470,7 +1470,7 @@ portal within a specific date.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1510,7 +1510,7 @@ as Einstein Bots.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1559,7 +1559,7 @@ investigators search results page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1620,7 +1620,7 @@ resources, focusing on the most viable options for their projects.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1672,7 +1672,7 @@ comprehensive view of the record’s stage progress seamlessly on a record page.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 ## See Also
@@ -1695,7 +1695,7 @@ startup and site activation process.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 ## See Also
@@ -1718,7 +1718,7 @@ your products.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 Use the Criteria-Based Search and Filter capabilities to search for sites and investigators. Use the
@@ -1780,7 +1780,7 @@ process.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 By default, the Site Selection console app includes these items:
@@ -1810,7 +1810,7 @@ one place.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 <!-- page:884 -->
 
@@ -1843,7 +1843,7 @@ Use Criteria-Based Search and Filter to search for sites and investigators.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 By default, you can perform a search based on the investigator type, investigator therapeutic area,
@@ -1903,7 +1903,7 @@ and to streamline your site selection process.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -1965,7 +1965,7 @@ studies.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2011,7 +2011,7 @@ investigators at the site can respond to the questions in the feasibility assess
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2038,7 +2038,7 @@ total number of invitations, responses, and the minimum and maximum scores for a
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2084,7 +2084,7 @@ running smoothly.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2125,7 +2125,7 @@ participants.
 
 Available in: Lightning Experience
 
-Available in: Enterprise and Unlimited Editions with AFLS or Health Cloud
+Available in: Enterprise and Unlimited Editions with LSC or Health Cloud
 
 
 USER PERMISSIONS NEEDED
@@ -2182,7 +2182,7 @@ outcome level. Enhance care program efficacy and get clear insights into patient
 performance through Patient Program Outcome Management. Improve patient experience and
 adherence by building your customized assessments and logic to compute indicator results, and
 evaluate outcomes to refine patient service programs.
-Set Up Patient Support Programs Analytics for AFLS
+Set Up Patient Support Programs Analytics for LSC
 Patient Support Programs (PSP) Analytics provides a complete solution, including Tableau Einstein
 
 <!-- page:891 -->
@@ -2205,4 +2205,4 @@ that contain that information.
 Set Up Provider Search for Life Sciences
 Powered by the provider data model, Provider Search helps your users find healthcare providers based
 on criteria such as location, specialty, and whether the provider is accepting new patients. You can
-even see the location of each provider right in AFLS.
+even see the location of each provider right in LSC.

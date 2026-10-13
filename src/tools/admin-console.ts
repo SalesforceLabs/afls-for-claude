@@ -253,7 +253,7 @@ export function register(server: McpServer) {
               content: [
                 {
                   type: "text",
-                  text: `# Admin Console Categories\n\nNo categories found. Ensure AFLS is installed in the org.`,
+                  text: `# Admin Console Categories\n\nNo categories found. Ensure LSC is installed in the org.`,
                 },
               ],
             };

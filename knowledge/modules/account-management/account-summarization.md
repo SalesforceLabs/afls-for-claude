@@ -2,7 +2,7 @@ Of course. Here is the transcript formatted with clear sections and paragraphs f
 
 ### Introduction
 
-I\'m Nitin Agarwal, part of the AFLS product team. In this demo video, I am going to showcase how an admin can configure and set up for account summarization or smart summarization, the key capability that is coming out as part of our AFLS for CEQ, or Life Sciences for customer engagement in winter 26 release. So let\'s dive into the admin setup.
+I\'m Nitin Agarwal, part of the Life Sciences Cloud (LSC) product team. In this demo video, I am going to showcase how an admin can configure and set up for account summarization or smart summarization, the key capability that is coming out as part of our LSC for CEQ, or Life Sciences for customer engagement in winter 26 release. So let\'s dive into the admin setup.
 
 As an admin, I see that for setup for Life Sciences for customer engagement, I have an option where I can see what are the steps that I need to do to actually set up account summarization.
 

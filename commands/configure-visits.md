@@ -1,9 +1,9 @@
 ---
-description: Interactive wizard to configure and validate AFLS Visit Management
+description: Interactive wizard to configure and validate Life Sciences Cloud (LSC) Visit Management
 arguments: "[check-type]"
 ---
 
-# Configure AFLS Visit Management
+# Configure LSC Visit Management
 
 Interactive wizard to check and configure Visit Management for web and mobile.
 
@@ -20,7 +20,7 @@ Follow these steps sequentially to validate and configure visit management.
 First, check if connected to a Salesforce org:
 
 ```
-Use check_afls_setup to verify org connection
+Use check_lsc_setup to verify org connection
 ```
 
 If not connected, guide the user through authentication.
@@ -187,16 +187,16 @@ Based on findings, offer to fix issues directly using programmatic tools:
 
 ## Example Usage
 
-User: `/afls:configure-visits`
+User: `/lsc:configure-visits`
 > Run full visit management configuration check
 
-User: `/afls:configure-visits record-types`
+User: `/lsc:configure-visits record-types`
 > Focus on visit record type configuration
 
-User: `/afls:configure-visits signature`
+User: `/lsc:configure-visits signature`
 > Focus on signature and compliance statement configuration
 
-User: `/afls:configure-visits mobile`
+User: `/lsc:configure-visits mobile`
 > Focus on mobile-specific visit configuration
 
 ## Quick Validation Alternative
@@ -204,7 +204,7 @@ User: `/afls:configure-visits mobile`
 For a faster automated check, suggest using the audit command:
 
 ```
-/afls:audit visit-config-check
+/lsc:audit visit-config-check
 ```
 
 This runs all visit-specific validation rules automatically.

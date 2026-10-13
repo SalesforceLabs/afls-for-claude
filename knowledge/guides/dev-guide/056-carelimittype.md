@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:carelimittype pages:1892-1895 -->
 # CareLimitType
 
-AFLS Overview                                                                                                                 CareLimitType
+Life Sciences Cloud (LSC) Overview                                                                                                                 CareLimitType
 
 
 
@@ -62,7 +62,7 @@ DELETE, GET, HEAD, PATCH, POST, Query
 
 <!-- page:1893 -->
 
-AFLS Overview                                                                                              CareLimitType
+LSC Overview                                                                                              CareLimitType
 
 
 
@@ -114,7 +114,7 @@ Possible values are:
 
 <!-- page:1894 -->
 
-AFLS Overview                                                                                        CareLimitType
+LSC Overview                                                                                        CareLimitType
 
 
 
@@ -161,7 +161,7 @@ Possible values are:
 
 <!-- page:1895 -->
 
-AFLS Overview                                                                                              CareLimitType
+LSC Overview                                                                                              CareLimitType
 
 
 

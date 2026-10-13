@@ -1,6 +1,6 @@
 # Intelligent Content — Support Engineering Training
 
-**Session:** AFLS4CE Value Chain Training — May 19, 2026
+**Session:** LSC4CE Value Chain Training — May 19, 2026
 **Audience:** Support engineers
 **Source:** Engineering training series (deck + Gemini transcript)
 **Presenter:** Conor Fanlo
@@ -235,7 +235,7 @@ A 262 release feature lets sales reps create custom presentations by **reusing p
 
 ## Reference
 
-- **Source deck:** Intelligent Content in AFLS, Spring '26 — slide ID `1Y18bzl0_Jjd7AmRQDpx5DypvKeteWnu71tzMhy7j1gY`
+- **Source deck:** Intelligent Content in Life Sciences Cloud (LSC), Spring '26 — slide ID `1Y18bzl0_Jjd7AmRQDpx5DypvKeteWnu71tzMhy7j1gY`
 - **Source transcript:** Gemini, May 19, 2026 session — doc ID `1tx71Uv-2lqywAbDy0B43YIPDO-xSlMxB`
 - **Companion files in this module:** `admin-1-talk-track-for-content-management.md`, `admin-2-talk-track-for-presentation-settings.md` (PM-side baseline)
 - **Related — Visit sidebar:** see `visit-management/support-engineering-visit-engagement-side-menu.md` for how `TargetingContext` impacts the Presentations sidebar section during a Visit

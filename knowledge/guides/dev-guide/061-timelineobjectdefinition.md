@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:timelineobjectdefinition pages:1910-1910 -->
 # TimelineObjectDefinition
 
-AFLS Overview                                                                                                  TimelineObjectDefinition
+Life Sciences Cloud (LSC) Overview                                                                                                  TimelineObjectDefinition
 
 
 
@@ -33,7 +33,7 @@ For more information, see TimelineObjectDefinition.
 
 ## Customer Engagement Tooling API Objects
 
-These Tooling API objects are available for Customer Engagement for AFLS.
+These Tooling API objects are available for Customer Engagement for LSC.
 
 
 

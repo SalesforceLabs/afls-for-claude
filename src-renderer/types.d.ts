@@ -10,7 +10,7 @@ interface LibraryItem {
   updatedAt: string;
 }
 
-interface AflsApi {
+interface LscApi {
   // Settings
   getSettings(): Promise<{
     providerType: string;
@@ -143,7 +143,7 @@ interface AflsApi {
 
 declare global {
   interface Window {
-    aflsApi: AflsApi;
+    lscApi: LscApi;
   }
 }
 

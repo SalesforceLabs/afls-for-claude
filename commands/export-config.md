@@ -1,10 +1,10 @@
 ---
-description: Export AFLS org configuration as JSON
+description: Export Life Sciences Cloud (LSC) org configuration as JSON
 ---
 
 # Export Configuration
 
-Export the current org's AFLS configuration as a JSON snapshot.
+Export the current org's LSC configuration as a JSON snapshot.
 
 ## Progress reporting — IMPORTANT
 
@@ -15,7 +15,7 @@ and after each tool call** so the user always knows what is happening:
 1. **Before calling the tool**, print a one-line status telling the user:
    - which org you are exporting from (target org), and
    - which categories will be exported.
-   Example: `Exporting from org "my-afls-org" → trigger handlers, admin settings, DB Schema, actions…`
+   Example: `Exporting from org "my-lsc-org" → trigger handlers, admin settings, DB Schema, actions…`
 
 2. **If the tool call is waiting on a permission prompt**, say so explicitly — e.g.
    "Waiting for you to approve the `export_config` tool call above." A pending call is
@@ -40,11 +40,11 @@ Every export **saves two files by default** into the gitignored `exports/` direc
 at the repo root (create it if missing — it is listed in `.gitignore`, so nothing here
 is ever committed):
 
-- `exports/<name>.json` — the raw JSON snapshot (used by `import_config` / `/afls:diff-orgs`)
+- `exports/<name>.json` — the raw JSON snapshot (used by `import_config` / `/lsc:diff-orgs`)
 - `exports/<name>.html` — a self-contained, browsable HTML report
 
 Naming convention: `<categories-or-"config">-export-<org-alias>.json` (e.g.
-`db-schema-export-262-lsdo-pre.json`, or `config-export-my-afls-org.json` for a full export).
+`db-schema-export-262-lsdo-pre.json`, or `config-export-my-lsc-org.json` for a full export).
 
 After writing the JSON, always generate the HTML with the bundled generator:
 
@@ -75,4 +75,4 @@ file paths and offer to open the HTML (`open exports/<name>.html`).
    - Kept as a local backup (gitignored, never pushed)
    - Reviewed in a browser via the generated HTML report
    - Used with `import_config` to apply to another org
-   - Compared between orgs (see also `/afls:diff-orgs`)
+   - Compared between orgs (see also `/lsc:diff-orgs`)

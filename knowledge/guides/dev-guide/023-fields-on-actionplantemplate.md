@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:fields-on-actionplantemplate pages:1463-1463 -->
 # Fields on ActionPlanTemplate
 
-AFLS Overview                                                                                        Fields on ActionPlanTemplate
+Life Sciences Cloud (LSC) Overview                                                                                        Fields on ActionPlanTemplate
 
 
 
@@ -18,7 +18,7 @@ Object Reference for the Salesforce Platform: ActionPlanTemplateItemValue
 
 ## Fields on ActionPlanTemplate
 
-AFLS fields extend the standard ActionPlanTemplate object for integration with external systems.
+LSC fields extend the standard ActionPlanTemplate object for integration with external systems.
 
 
 

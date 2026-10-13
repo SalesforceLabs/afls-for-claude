@@ -2,7 +2,7 @@ Of course! Here\'s a transcription of the video, organized into clear sections a
 
 ### Introduction
 
-Hi, I am Nitin Agarwal, part of the AFLS product team. In this video, I\'m going to showcase the configuration and setup that is required to be done for displaying **Provider Card** onto the AFLS for CE mobile app by the admins. So, let\'s start.
+Hi, I am Nitin Agarwal, part of the Life Sciences Cloud (LSC) product team. In this video, I\'m going to showcase the configuration and setup that is required to be done for displaying **Provider Card** onto the LSC for CE mobile app by the admins. So, let\'s start.
 
 ### Provider Card and Actionable Relationship Center (ARC)
 

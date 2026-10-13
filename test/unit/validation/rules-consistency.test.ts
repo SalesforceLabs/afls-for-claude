@@ -637,7 +637,7 @@ describe("rule references", () => {
     expect(issues).toEqual([]);
   });
 
-  it("SOQL queries reference plausible object names (no __c custom objects for standard AFLS objects)", () => {
+  it("SOQL queries reference plausible object names (no __c custom objects for standard LSC objects)", () => {
     // These are known incorrect object names from the CLAUDE.md
     const WRONG_OBJECT_NAMES = [
       "Visit__c",

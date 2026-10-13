@@ -1,6 +1,6 @@
 # Metadata Import
 
-Promote AFLS **configuration** (not data records) from one org to another — Admin
+Promote Life Sciences Cloud (LSC) **configuration** (not data records) from one org to another — Admin
 Console settings, DB Schema, trigger handlers, and quick/custom actions. Import is
 **diff-driven** and **create + update-only (safe)**: it compares a snapshot against
 the live target, applies only what you select, and **never deletes, deactivates, or
@@ -8,7 +8,7 @@ blanks** anything that exists only in the target. The target org is **auto-backe
 before a single write.
 
 > For loading **data records** (accounts, HCPs, territory assignments) use
-> `afls-data-migration` instead. This page is about configuration metadata.
+> `lsc-data-migration` instead. This page is about configuration metadata.
 
 ---
 
@@ -56,7 +56,7 @@ mixed changeset, or call **`apply`** with an explicit selection for a small, wel
 
 `mode: "ui"` returns a `http://127.0.0.1:<port>/?t=<token>` URL. Open it in a browser:
 
-![The AFLS Configuration Import review UI](media/metadata-import-ui.png)
+![The LSC Configuration Import review UI](media/metadata-import-ui.png)
 
 ### Reading the screen
 
@@ -144,7 +144,7 @@ orgs therefore looks like a delete + create, not a rename.
 
 - Binds to **127.0.0.1** on an ephemeral port — never a public interface.
 - Every request must carry an **unguessable per-session token** (`?t=` or the
-  `x-afls-token` header); requests without it get `401`.
+  `x-lsc-token` header); requests without it get `401`.
 - If an `Origin` header is present it must match the server's own origin — foreign
   origins get `403` (blocks drive-by requests from other local pages / CSRF).
 - **One active session at a time**; starting a new one closes the previous server.
@@ -166,6 +166,6 @@ orgs therefore looks like a delete + create, not a rename.
 
 ## Related
 
-- `/afls:export-config`, `/afls:import-config`, `/afls:diff-orgs`
-- Skill: `afls-config-migration` (guides the export → diff → selective-import workflow)
-- Skill: `afls-data-migration` (for **data records**, not configuration)
+- `/lsc:export-config`, `/lsc:import-config`, `/lsc:diff-orgs`
+- Skill: `lsc-config-migration` (guides the export → diff → selective-import workflow)
+- Skill: `lsc-data-migration` (for **data records**, not configuration)

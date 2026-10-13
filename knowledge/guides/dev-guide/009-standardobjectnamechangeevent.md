@@ -1,7 +1,7 @@
 <!-- guide:dev-guide section:standardobjectnamechangeevent pages:1431-1432 -->
 # StandardObjectNameChangeEvent
 
-AFLS Overview                                                                                  StandardObjectNameChangeEvent
+Life Sciences Cloud (LSC) Overview                                                                                  StandardObjectNameChangeEvent
 
 
 - Any field whose value isn’t on the record and is derived from another record or from a formula, except roll-up summary fields, which
@@ -61,7 +61,7 @@ For more information about Change Data Capture, see Change Data Capture Develope
 
 <!-- page:1432 -->
 
-AFLS Overview                                              StandardObjectNameChangeEvent
+LSC Overview                                              StandardObjectNameChangeEvent
 
 
 

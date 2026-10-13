@@ -98,11 +98,11 @@ export function useChat() {
   }, []);
 
   useEffect(() => {
-    if (!window.aflsApi) return;
+    if (!window.lscApi) return;
     const cleanups: Array<() => void> = [];
 
     cleanups.push(
-      window.aflsApi.onTextDelta((text, _nonce, convId) => {
+      window.lscApi.onTextDelta((text, _nonce, convId) => {
         const bg = bgStreams.current.get(convId);
         if (!bg) return;
         const blocks = [...bg.msg.blocks];
@@ -118,7 +118,7 @@ export function useChat() {
     );
 
     cleanups.push(
-      window.aflsApi.onToolStart(({ id, name, convId }) => {
+      window.lscApi.onToolStart(({ id, name, convId }) => {
         const bg = bgStreams.current.get(convId);
         if (!bg) return;
         bg.msg = {
@@ -133,7 +133,7 @@ export function useChat() {
     );
 
     cleanups.push(
-      window.aflsApi.onToolResult(({ id, result, isError, convId }) => {
+      window.lscApi.onToolResult(({ id, result, isError, convId }) => {
         const bg = bgStreams.current.get(convId);
         if (!bg) return;
         bg.msg = {
@@ -148,10 +148,10 @@ export function useChat() {
       })
     );
 
-    cleanups.push(window.aflsApi.onToolEnd(() => {}));
+    cleanups.push(window.lscApi.onToolEnd(() => {}));
 
     cleanups.push(
-      window.aflsApi.onComplete((_nonce, convId) => {
+      window.lscApi.onComplete((_nonce, convId) => {
         const bg = bgStreams.current.get(convId);
         if (!bg) return;
 
@@ -169,7 +169,7 @@ export function useChat() {
     );
 
     cleanups.push(
-      window.aflsApi.onError((errMsg, _nonce, convId) => {
+      window.lscApi.onError((errMsg, _nonce, convId) => {
         const bg = bgStreams.current.get(convId);
         if (!bg) return;
         bg.msg = { ...bg.msg, isStreaming: false };
@@ -195,13 +195,13 @@ export function useChat() {
 
       let convId = conversationIdRef.current;
       if (!convId) {
-        const conv = await window.aflsApi.createConversation(text.trim());
+        const conv = await window.lscApi.createConversation(text.trim());
         convId = conv.id;
         setConversationId(convId);
         conversationIdRef.current = convId;
       }
 
-      await window.aflsApi.addConversationMessage(convId, "user", text.trim());
+      await window.lscApi.addConversationMessage(convId, "user", text.trim());
 
       const nonce = ++nonceCounter;
 
@@ -231,7 +231,7 @@ export function useChat() {
         payload = text.trim();
       }
 
-      const result = await window.aflsApi.sendMessage(payload, nonce, convId, model);
+      const result = await window.lscApi.sendMessage(payload, nonce, convId, model);
       if (!result.ok) {
         setError(result.error || "Failed to send message");
         bgStreams.current.delete(convId);
@@ -244,7 +244,7 @@ export function useChat() {
 
   /** Abort — only called from the explicit "Stop" button */
   const abort = useCallback(async () => {
-    await window.aflsApi.abortChat();
+    await window.lscApi.abortChat();
     const convId = conversationIdRef.current;
     if (convId) {
       const bg = bgStreams.current.get(convId);
@@ -273,7 +273,7 @@ export function useChat() {
 
       // Each session has its own engine — no need to clear anything.
       setError(null);
-      const stored = await window.aflsApi.getConversationMessages(id);
+      const stored = await window.lscApi.getConversationMessages(id);
       const loaded: ChatMessage[] = stored.map((m) => {
         if (m.role === "user") {
           return { id: m.id, role: m.role, text: m.text, blocks: [] };

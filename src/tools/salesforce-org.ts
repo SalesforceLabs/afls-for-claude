@@ -26,13 +26,13 @@ import {
 
 export function register(server: McpServer) {
   server.tool(
-    "check_afls_setup",
+    "check_lsc_setup",
     "Check if Salesforce CLI is installed and orgs are authenticated. Run this first to ensure everything is set up correctly.",
     {},
     async () => {
       const status = await checkSetupStatus();
 
-      let message = "# AFLS Plugin Setup Status\n\n";
+      let message = "# LSC Plugin Setup Status\n\n";
 
       // CLI Status
       message += `## Salesforce CLI\n`;
@@ -69,7 +69,7 @@ export function register(server: McpServer) {
           message += instructions.options.map((opt) => `- ${opt}`).join("\n");
         }
       } else {
-        message += `## Status: Ready ✓\n\nYou can now use AFLS tools to query and modify your Salesforce org.\n`;
+        message += `## Status: Ready ✓\n\nYou can now use LSC tools to query and modify your Salesforce org.\n`;
       }
 
       return {
@@ -104,7 +104,7 @@ export function register(server: McpServer) {
           content: [
             {
               type: "text",
-              text: `# Salesforce CLI Installed Successfully ✓\n\n${result.data}\n\nNext step: Authenticate to your org using:\n\`\`\`bash\n${getLoginCommand("my-afls-org")}\n\`\`\``,
+              text: `# Salesforce CLI Installed Successfully ✓\n\n${result.data}\n\nNext step: Authenticate to your org using:\n\`\`\`bash\n${getLoginCommand("my-lsc-org")}\n\`\`\``,
             },
           ],
         };
@@ -129,7 +129,7 @@ export function register(server: McpServer) {
         content: [
           {
             type: "text",
-            text: "Salesforce CLI is not installed. Run `check_afls_setup` for installation instructions.",
+            text: "Salesforce CLI is not installed. Run `check_lsc_setup` for installation instructions.",
           },
         ],
       };
@@ -155,7 +155,7 @@ export function register(server: McpServer) {
         content: [
           {
             type: "text",
-            text: `# No Authenticated Orgs\n\nAuthenticate to an org using:\n\`\`\`bash\n${getLoginCommand("my-afls-org")}\n\`\`\`\n\nFor sandbox:\n\`\`\`bash\nsf org login web --alias my-sandbox --instance-url https://test.salesforce.com\n\`\`\``,
+            text: `# No Authenticated Orgs\n\nAuthenticate to an org using:\n\`\`\`bash\n${getLoginCommand("my-lsc-org")}\n\`\`\`\n\nFor sandbox:\n\`\`\`bash\nsf org login web --alias my-sandbox --instance-url https://test.salesforce.com\n\`\`\``,
           },
         ],
       };
@@ -632,7 +632,7 @@ export function register(server: McpServer) {
   );
   server.tool(
     "generate_mobile_metadata_cache",
-    "Generate AFLS Mobile metadata cache programmatically. IMPORTANT: Always ASK the user which profiles to generate the cache for before calling this tool. Do not guess profile names.",
+    "Generate LSC Mobile metadata cache programmatically. IMPORTANT: Always ASK the user which profiles to generate the cache for before calling this tool. Do not guess profile names.",
     {
       profileNames: z
         .array(z.string())
